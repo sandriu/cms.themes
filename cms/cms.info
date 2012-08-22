@@ -1,0 +1,16 @@
+name = CMS
+description = Theme for the <a href="http://www.cms.int">CMS website</a>
+core = 7.x
+base theme = twitter_bootstrap
+version = 0.1
+
+regions[header]         = 'Top Bar'
+regions[highlighted]    = 'Highlighted'
+regions[help]           = 'Help'
+regions[content]        = 'Content'
+regions[sidebar_first]  = 'Primary'
+regions[sidebar_second] = 'Secondary'
+regions[footer]         = 'Footer'
+
+; 
+stylesheets[all][] = styles.css
