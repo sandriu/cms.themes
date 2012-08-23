@@ -1,5 +1,5 @@
 name = CMS_theme
-project = CMS
+project = CMS_theme
 description = Theme for the <a href="http://www.cms.int">CMS website</a>
 core = 7.x
 base theme = twitter_bootstrap
