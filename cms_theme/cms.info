@@ -1,4 +1,4 @@
-name = cms_theme
+name = CMS_theme
 project = CMS
 description = Theme for the <a href="http://www.cms.int">CMS website</a>
 core = 7.x
