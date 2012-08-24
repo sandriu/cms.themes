@@ -1,0 +1,16 @@
+
+/* Template styles */
+#site-name-slogan { text-align: center; font-size: 20px; font-weight: bold; }
+body { margin: 0; padding: 0; }
+body.toolbar-drawer { padding-top: 80px !important; }
+
+h1 { font-size: 20px; line-height: 20px; text-align: center;}
+h2 { font-size: 18px; }
+
+.breadcrumb { display: none; }
+.footer p { font-size: 10px; color: #999; }
+
+/* Admin enabled */
+#user-menu {  }
+
+/* Custom styles */
