@@ -5,6 +5,16 @@ function CMS_theme_js_alter(&$javascript) {
 }
 
 
+function CMS_theme_menu_link(&$variables) {
+  $element = $variables['element'];
+  $sub_menu = '';
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
+  }
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
+
 /**
  * Preprocess variables for page.tpl.php
  *
@@ -36,7 +46,8 @@ function CMS_theme_preprocess_page(&$variables) {
     $variables['primary_nav'] = theme('twitter_bootstrap_links', array(
       'links' => $variables['main_menu'],
       'attributes' => array(
-        'class' => 'nav nav-pills'
+        'class' => 'nav nav-pills',
+        'label' => 'Nav',
       ),
     ));
   }
