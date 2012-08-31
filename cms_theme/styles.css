@@ -16,3 +16,20 @@ h2 { font-size: 18px; }
 #user-menu {  }
 
 /* Custom styles */
+
+/* Style for table sorter plugin */
+th.header { 
+    background-image: url('images/bg.gif');
+    cursor: pointer; 
+    font-weight: bold; 
+    background-repeat: no-repeat; 
+    background-position: center right; 
+} 
+
+th.headerSortUp { 
+    background-image: url('images/asc.gif'); 
+}
+
+th.headerSortDown { 
+    background-image: url('images/desc.gif');
+}
