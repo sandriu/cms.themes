@@ -66,6 +66,7 @@
                             </div>
 
 			<?php endif; ?>
+                        <?php print render($page['submenu']); ?>
 			<?php print render($page['content']); ?>
 		</section>
 	</div>
