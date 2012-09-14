@@ -7,7 +7,9 @@
 		<div class="row">
 			<div class="span2 logo">
 				<?php if ($logo): ?>
-				<a class="brand" href="/index.html" alt="<?php print t('Home'); ?>" title="<?php print t('Home'); ?>"><img src="http://www.cms.int/images/layout/frame/cms_logo.jpg" width="130" height="79" alt="Click the CMS logo to return to the main entry page"></a>
+				<a class="brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+                                    <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+                                </a>
 				<?php endif; ?>
 			</a>
 			</div>
@@ -72,18 +74,7 @@
 	</div>
 	<footer class="footer">
 		<div class="row">
-			<div class="span9">
-				<?php print render($page['footer']); ?>
-				<p>&copy; 2004 UNEP / CMS Secretariat, Hermann-Ehlers-Str. 10, 53113 Bonn, Germany</p> 
-				<p>Tel. (+49 228) 815 2401 / 02 &#183;Fax. (+49 228) 815 2449 &#183; E-mail: secretariat@cms.int</p>
-			</div>
-			
-			<div class="span1">
-				<a href="#"><img src="http://www.cms.int/images/layout/unep_logosm.jpg" /></a>
-			</div>
-			<div class="span1">
-				<a href="#"><img src="http://www.cms.int/images/layout/cms_logosm.jpg" /></a>
-			</div>
+			<?php print render($page['footer']); ?>
 		</div>
 	</footer>
 </div><!-- /div.container -->
