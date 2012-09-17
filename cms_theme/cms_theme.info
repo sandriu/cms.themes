@@ -13,6 +13,7 @@ regions[sidebar_first]  = 'Primary'
 regions[sidebar_second] = 'Secondary'
 regions[footer]         = 'Footer'
 regions[submenu]        = 'Submenu'
+regions[promo]        = 'Promo'
 
 settings[toggle_name] = 1
 
