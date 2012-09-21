@@ -26,16 +26,18 @@
             ?>
 
             <?php if ($title): ?>
-            <h1>
-            <?php print $title; ?>
-            </h1>
+            <div class="page-header">
+                <h1>
+                    <?php print $title; ?>
+                </h1>
+            </div>
             <?php endif; ?>
 
             <?php print $messages; ?>
 
             <?php
             $match = FALSE;
-            $types = array('species');
+            $types = array('species', 'listing');
             if (arg(0) == 'node' && is_numeric(arg(1))) {
                 $nid = arg(1);
                 $node = node_load($nid);
@@ -43,6 +45,8 @@
                 if (in_array($type, $types)) {
                     $match = TRUE;
                 }
+            }elseif (in_array(arg(1), $types)) {
+                $match = TRUE;
             }
 
             if ($tabs and !$match) {
@@ -60,7 +64,6 @@
                 <div class="subnav">
                     <ul class="nav nav-pills action-links"><?php print render($action_links); ?></ul>
                 </div>
-
             <?php endif; ?>
 
             <?php print render($page['submenu']); ?>
