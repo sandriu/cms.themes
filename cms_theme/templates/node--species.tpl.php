@@ -1,3 +1,5 @@
+<button class="btn btn-mini btn-primary" type="button" onclick="history.go(-1); return true;">&laquo; Back</button>
+
 <div class="page-header">
     <h5>
         Taxonomy
