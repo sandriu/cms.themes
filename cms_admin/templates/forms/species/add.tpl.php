@@ -44,9 +44,8 @@
 
     <div class="fieldset-wrapper">
         <?php
-            echo drupal_render($form['field_species_appendix_1']);
+            echo drupal_render($form['field_species_appendix']);
             echo drupal_render($form['field_species_appendix_1_date']);
-            echo drupal_render($form['field_species_appendix_2']);
             echo drupal_render($form['field_species_appendix_2_date']);
         ?>
     </div>
