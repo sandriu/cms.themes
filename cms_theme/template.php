@@ -46,7 +46,7 @@ function CMS_theme_preprocess_page(&$variables) {
     $variables['primary_nav'] = theme('twitter_bootstrap_links', array(
       'links' => $variables['main_menu'],
       'attributes' => array(
-        'class' => 'nav nav-pills',
+        'class' => 'nav',
         'label' => 'Nav',
       ),
     ));
