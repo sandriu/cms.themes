@@ -200,30 +200,30 @@
 
 <?php
     $field = field_view_field('node', $node, 'field_species_range_states', array('label' => 'hidden',));
-    if ($field) {
+    dpm($field);
 ?>
 <div class="page-header">
     <h5>
-        <?php echo t('Geographic range'); ?>
+        <?php echo t('Range states'); ?>
     <h5>
 </div>
-
-<table class="table table-hover table-bordered">
-    <tbody>
+<table class="table table-hover table-bordered table-condensed table-striped species-factsheet-range-states">
+    <thead>
         <tr>
-            <th scope="row" class="span3"><?php print $field['#title']; ?></th>
-            <td>
-            <?php
-                //CMSWidget::multivalue2String($field['#items']);
-            ?>
-            </td>
+            <th><?php echo t('Country'); ?></th>
+            <th><?php echo t('Territories'); ?></th>
+            <th><?php echo t('Actions'); ?></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php echo SpeciesRangeStatedWidget::renderField($field); ?>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td><?php echo render($field['#suffix']); ?></td>
         </tr>
     </tbody>
 </table>
-<?php
-    }
-?>
-
 <?php
     if (($node->field_species_instruments && $node->field_species_instruments['und'][0]['value']) ||
         ($node->field_species_critical_sites && $node->field_species_critical_sites['und'][0]['value']) ||
@@ -242,9 +242,9 @@
         ?>
         <tr>
             <th scope="row" class="span3">
-                <?php
+            <?php
                 print $content['field_species_instruments']['#title'];
-                ?>
+            ?>
             </th>
 
             <td>

@@ -16,3 +16,10 @@ th.headerSortUp {
 th.headerSortDown { 
     background-image: url('images/desc.gif');
 }
+
+table.species-factsheet-range-states ul.field-collection-view-links { margin: 0; padding: 0 ; list-style-type: none; }
+table.species-factsheet-range-states ul.field-collection-view-links li { margin: 0; padding: 0 3px; display: inline; }
+
+table.species-factsheet-range-states ul.action-links-field-collection-add { margin: 0; padding: 0; list-style-type: none; }
+table.species-factsheet-range-states ul.action-links-field-collection-add li { margin: 0; padding: 0 3px; display: inline; }
+
