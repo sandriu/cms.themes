@@ -21,16 +21,14 @@
         <div class="span12">
             <?php
                 if ($breadcrumb) {
-                    #print $breadcrumb;
+                    print $breadcrumb;
                 }
             ?>
 
             <?php if ($title): ?>
-            <div class="page-header">
-                <h1>
-                    <?php print $title; ?>
-                </h1>
-            </div>
+            <h1>
+                <?php print $title; ?>
+            </h1>
             <?php endif; ?>
 
             <?php print $messages; ?>

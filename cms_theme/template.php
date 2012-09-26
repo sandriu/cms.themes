@@ -72,7 +72,7 @@ function CMS_theme_preprocess_page(&$variables) {
       ),
     ));
   }
-  
+
   // Replace tabs with dropw down version
   $variables['tabs']['#primary'] = _twitter_bootstrap_local_tasks($variables['tabs']['#primary']);
 }
@@ -90,4 +90,24 @@ function CMS_theme_preprocess_region(&$variables, $hook) {
 	// Me likes
 	if($variables['region'] == "sidebar_first")
 		unset ($variables['classes_array'][2]); // Remove 'well' coming from twitter_bootstrap
+}
+
+function CMS_theme_breadcrumb($variables) {
+  $breadcrumb = $variables['breadcrumb'];
+
+  $breadcrumbs = '<ul class="breadcrumb">';
+  $breadcrumbs .= '<li>' . t('You are here') . '</li>';
+  $breadcrumbs .= '<li class="divider">:</li>';
+
+  $count = count($breadcrumb) - 1;
+  foreach($breadcrumb as $key => $value) {
+    if($count != $key) {
+      $breadcrumbs .= '<li>'.$value.'<span class="divider">/</span></li>';
+    }else{
+      $breadcrumbs .= '<li>'.$value.'</li>';
+    }
+  }
+  $breadcrumbs .= '</ul>';
+  
+  return $breadcrumbs;
 }
