@@ -74,6 +74,14 @@
                 <th><?php echo t('Scientific name'); ?></th>
                 <td><?php echo $node->title; ?></td>
             </tr>
+            <?php
+                // IUCN status
+                $field = field_view_field('node', $node, 'field_species_iucn_status');
+                CMSHTableRowWidget::renderField($field);
+                // IUCN link
+                $field = field_view_field('node', $node, 'field_species_iucn_web_srv');
+                CMSHTableRowWidget::renderField($field);
+            ?>
         </table>
 
         <h3><?php echo t('Name'); ?></h3>
