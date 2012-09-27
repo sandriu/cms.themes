@@ -1,7 +1,18 @@
 <?php
 
+function CMS_theme_theme() {
+    return array(
+        'twitter_bootstrap_links' => array(
+            'variables' => array('links' => array(), 'attributes' => array(), 'heading' => NULL),
+        ),
+        'twitter_bootstrap_btn_dropdown' => array(
+            'variables' => array('links' => array(), 'attributes' => array(), 'type' => NULL),
+        ),
+    );
+}
+
 function CMS_theme_js_alter(&$javascript) {
-	$javascript['misc/jquery.js']['data'] = drupal_get_path('theme', 'CMS_theme').'/js/jquery-1.8.0.min.js';
+        $javascript['misc/jquery.js']['data'] = drupal_get_path('theme', 'CMS_theme').'/js/jquery-1.8.0.min.js';
 }
 
 
@@ -84,12 +95,12 @@ function CMS_theme_preprocess_page(&$variables) {
  * @see region.tpl.php
  */
 function CMS_theme_preprocess_region(&$variables, $hook) {
-	if ($variables['region'] == 'content') {
-		$variables['theme_hook_suggestions'][] = 'region__no_wrapper';
-	}
-	// Me likes
-	if($variables['region'] == "sidebar_first")
-		unset ($variables['classes_array'][2]); // Remove 'well' coming from twitter_bootstrap
+        if ($variables['region'] == 'content') {
+                $variables['theme_hook_suggestions'][] = 'region__no_wrapper';
+        }
+        // Me likes
+        if($variables['region'] == "sidebar_first")
+                unset ($variables['classes_array'][2]); // Remove 'well' coming from twitter_bootstrap
 }
 
 function CMS_theme_breadcrumb($variables) {
@@ -110,4 +121,42 @@ function CMS_theme_breadcrumb($variables) {
   $breadcrumbs .= '</ul>';
   
   return $breadcrumbs;
+}
+
+function CMS_theme_preprocess_twitter_bootstrap_btn_dropdown(&$variables) {
+  /**
+   * Remove class added by Twitter Bootstrap theme and set our own classes
+  */
+    unset($variables['attributes']['class']);
+    $variables['attributes']['class'][] = 'nav pull-right';
+
+    if(is_array($variables['links'])) {
+        $variables['links'] = theme('links', array(
+            'links' => $variables['links'],
+            'attributes' => array(
+                'class' => array('dropdown-menu'),
+            ),
+        ));
+    }
+}
+
+function CMS_theme_twitter_bootstrap_btn_dropdown($variables) {
+    $output = '<ul '. drupal_attributes($variables['attributes']) .'><li class="dropdown">';
+    if(is_array($variables['label'])) {
+        $output .= l($variables['label']['title'], $$variables['label']['href'], $variables['label']);
+    }
+
+    $output .= '<a class="dropdown-toggle" data-toggle="dropdown" href="#">';
+
+    if(is_string($variables['label'])) {
+        $output .= check_plain($variables['label']);
+    }
+
+    $output .= '
+    <b class="caret"></b>
+          </a>
+          ' . $variables['links'] . '
+    </li></ul>';
+
+    return $output;
 }
