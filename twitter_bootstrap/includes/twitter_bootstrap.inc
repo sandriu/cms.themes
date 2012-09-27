@@ -131,7 +131,7 @@ function twitter_bootstrap_twitter_bootstrap_btn_dropdown($variables) {
   
   // Ad as string if its not a link
   if(is_array($variables['label'])) {
-	$output .= l($variables['label']['title'], $$variables['label']['href'], $variables['label']);
+	$output .= l($variables['label']['title'], $variables['label']['href'], $variables['label']);
   }
   
   $output .= '<a class="btn'. $type_class .' dropdown-toggle" data-toggle="dropdown" href="#">';

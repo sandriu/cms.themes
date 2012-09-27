@@ -12,6 +12,31 @@
             </a>
 
             <div class="nav-collapse">
+                <?php
+                    if ($main_menu) {
+                ?>
+                <ul class="nav">
+                    <?php
+                    $type= '';
+                        if ((arg(0) == 'node') && (is_numeric(arg(1)))) {
+                            $node = node_load(arg(1));
+                            $type = $node->type;
+                        }
+
+                        foreach($main_menu as $menu_item) {
+                    ?>
+                    <li <?php if ((current_path() == $menu_item['href']) || ((isset($type)) && $type == strtolower($menu_item['title']))) { ?>class="active"<?php } ?>>
+                        <?php
+                            print l($menu_item['title'], $menu_item['href']);
+                        ?>
+                    </li>
+                    <?php
+                        }
+                    ?>
+                </ul>
+                <?php
+                    }
+                ?>
             <?php if ($primary_nav): ?>
                 <?php print $primary_nav; ?>
             <?php endif; ?>
