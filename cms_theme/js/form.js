@@ -4,3 +4,11 @@ jQuery(document).ready(function(){
         jQuery(order_select).change();
     });
 });
+
+jQuery.fn.resetForm = function() {
+    jQuery(this).each(function(){
+        jQuery('select', this).val('');
+        jQuery('input', this).val('');
+        this.submit();
+    });
+}

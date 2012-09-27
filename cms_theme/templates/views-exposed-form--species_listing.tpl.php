@@ -28,6 +28,9 @@
   ?>
 <?php endif;?>
 <div class="views-exposed-form well well-small">
+    <h4>
+        Taxonomy filters
+    </h4>
   <div class="views-exposed-widgets clearfix">
     <?php foreach ($widgets as $id => $widget): ?>
       <div id="<?php print $widget->id; ?>-wrapper" class="views-exposed-widget views-widget-<?php print $id; ?>">
@@ -74,7 +77,7 @@
 
     <?php if (!empty($reset_button)): ?>
       <div class="views-exposed-widget views-reset-button">
-        <?php print $reset_button; ?>
+        <a class="reset-link" id="edit-reset" name="op" onclick="jQuery('#views-exposed-form-species-admin-species-listing').resetForm();">Clear filters</a>
       </div>
     <?php endif; ?>
   </div>

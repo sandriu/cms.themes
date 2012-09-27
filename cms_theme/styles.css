@@ -23,3 +23,8 @@ table.two-rows-widget ul li { margin: 0; padding: 0 3px; display: inline; }
 table.two-rows-widget div { display: inline; }
 
 .ajax-progress { position: absolute; }
+
+.reset-link {
+    position: relative;
+    top: 28px;
+}
