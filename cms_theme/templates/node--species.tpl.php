@@ -1,4 +1,5 @@
 <div class="clear"></div>
+<?php if (node_access("update", $node) === TRUE): ?>
 <div class="pull-left">
     <div class="btn-toolbar">
         <div class="btn-group">
@@ -17,6 +18,7 @@
         </div>
     </div>
 </div>
+<?php endif; ?>
 <div class="clearfix"></div>
 
 <p>
