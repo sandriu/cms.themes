@@ -13,7 +13,15 @@
         <div class="btn-group">
             <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><?php echo t('Action'); ?><span class="caret"></span></a>
             <ul class="dropdown-menu">
-                <li class="disabled"><a href="#"><?php echo t('Update IUCN status'); ?></a></li>
+                <li>
+                    <?php
+                    drupal_add_library('system', 'drupal.ajax');
+                    drupal_add_library('system', 'jquery.form');
+
+                    $args = array($node->title, $node->nid);
+                    echo l(t('Update IUCN status'), 'species/nojs/update/' . implode("/", $args), array('attributes' => array('class' => array('use-ajax'))));
+                    ?>
+                </li>
             </ul>
         </div>
     </div>
