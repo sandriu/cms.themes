@@ -67,7 +67,7 @@
 
             <?php
             $match = FALSE;
-            $types = array('species', 'listing');
+            $types = array('species', 'parties', 'listing');
             if (arg(0) == 'node' && is_numeric(arg(1))) {
                 $nid = arg(1);
                 $node = node_load($nid);
@@ -99,6 +99,18 @@
             <?php print render($page['submenu']); ?>
 
             <?php print render($page['content']); ?>
+            <?php
+                if (in_array(arg(0), $types) && in_array(arg(1), $types)){
+            ?>
+            <a class="btn btn-small" href="/<?php echo $action_links[0]['#link']['href']; ?>">
+                <i class="icon-plus"></i>
+                <?php
+                echo t($action_links[0]['#link']['title']);
+                ?>
+            </a>
+            <?php
+                }
+            ?>
 
         </div>
     </div>
