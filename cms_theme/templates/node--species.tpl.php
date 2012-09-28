@@ -88,7 +88,21 @@
                 // IUCN status
                 $field = field_view_field('node', $node, 'field_species_iucn_status');
                 CMSHTableRowWidget::renderField($field);
+
+                // IUCN link
+                $field = field_view_field('node', $node, 'field_species_iucn_web_srv');
+                $widget = new CMSHTableRowWidget($field);
+                if($widget->is_valid) {
             ?>
+                <tr>
+                    <th>
+                        <?php echo $widget->getLabel(); ?>
+                    </th>
+                    <td>
+                        <a target="_blank" title="<?php t('Visit IUCN page for this species'); ?>" href="<?php echo $widget->getValue(); ?>"><?php echo $widget->getValue(); ?></a>
+                    </td>
+                </tr>
+            <?php } ?>
         </table>
 
         <h3><?php echo t('Name'); ?></h3>
