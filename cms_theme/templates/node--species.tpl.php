@@ -13,15 +13,17 @@
         <div class="btn-group">
             <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><?php echo t('Action'); ?><span class="caret"></span></a>
             <ul class="dropdown-menu">
-                <li>
+                <li class="disabled"><a href="#"><?php echo t('Update IUCN status'); ?></a></li>
+                <!-- li>
                     <?php
+                    /*
                     drupal_add_library('system', 'drupal.ajax');
                     drupal_add_library('system', 'jquery.form');
-
                     $args = array($node->title, $node->nid);
                     echo l(t('Update IUCN status'), 'species/nojs/update/' . implode("/", $args), array('attributes' => array('class' => array('use-ajax'))));
+                    */
                     ?>
-                </li>
+                </li -->
             </ul>
         </div>
     </div>
@@ -50,7 +52,8 @@
                 ?>
             </tr>
             <tr>
-                <th><?php CMSWidget::renderLabelFromContent('field_species_class', $content); ?></th>
+                <th>
+                <?php CMSWidget::renderLabelFromContent('field_species_class', $content); ?></th>
                 <?php
                     $field = field_view_field('node', $node, 'field_species_class');
                     CMSWidget::renderField($field,
@@ -187,13 +190,22 @@
 
 
     <div class="tab-pane fade" id="population">
-        <?php
-          $fpg = field_view_field('node', $node, 'field_species_pop_global');
-          $fpgd = field_view_field('node', $node, 'field_species_pop_global_date');
-          $pg = sprintf('<em>%s</em> (<em>%s</em>)', render($fpg), render($fpgd));
-          $show = isset($fpg['#items']) || isset($fpgd['#items']);
-          if($show) {
-        ?>
+    <?php
+        $fpg = field_view_field('node', $node, 'field_species_pop_global');
+        $fpg['#label_display'] = 'hidden';
+
+        $fpgd = field_view_field('node', $node, 'field_species_pop_global_date');
+        $fpg['#label_display'] = 'hidden';
+
+        $r_fpg = render($fpg);
+        $r_fpgd = render($fpgd);
+
+        #dpm($r_fpg);
+        #dpm($r_fpgf);
+        $show = !empty($r_fpg) || !empty($r_fpgd);
+        if($show) {
+            $pg = sprintf('<em>%s</em> (<em>%s</em>)', $r_fpg, $r_fpgd);
+    ?>
         <h3><?php echo t('Global population'); ?></h3>
         <table class="table table-condensed table-striped species-population-global">
             <tbody>
