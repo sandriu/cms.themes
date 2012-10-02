@@ -41,216 +41,87 @@
 
 <div id="speciesFactsheetTabContent" class="tab-content">
     <div class="tab-pane fade in active" id="general">
-        <table class="table table-condensed table-striped">
-            <tr>
-                <th><?php CMSWidget::renderLabelFromContent('field_species_scientific_order', $content); ?></th>
-                <?php
-                    $field = field_view_field('node', $node, 'field_species_scientific_order');
-                    CMSWidget::renderField($field,
-                        array('render_label' => FALSE, 'enclosure' => '%s', 'value_enclosure' => '<td>%s</td>')
-                    );
-                ?>
-            </tr>
-            <tr>
-                <th>
-                <?php CMSWidget::renderLabelFromContent('field_species_class', $content); ?></th>
-                <?php
-                    $field = field_view_field('node', $node, 'field_species_class');
-                    CMSWidget::renderField($field,
-                        array('render_label' => FALSE, 'enclosure' => '%s', 'value_enclosure' => '<td>%s</td>')
-                    );
-                ?>
-            </tr>
-            <tr>
-                <th><?php CMSWidget::renderLabelFromContent('field_species_order', $content); ?></th>
-                <?php
-                    $field = field_view_field('node', $node, 'field_species_order');
-                    CMSWidget::renderField($field,
-                        array('render_label' => FALSE, 'enclosure' => '%s', 'value_enclosure' => '<td>%s</td>')
-                    );
-                ?>
-            </tr>
-            <tr>
-                <th><?php CMSWidget::renderLabelFromContent('field_species_family', $content); ?></th>
-                <?php
-                    $field = field_view_field('node', $node, 'field_species_family');
-                    CMSWidget::renderField($field,
-                        array('render_label' => FALSE, 'enclosure' => '%s', 'value_enclosure' => '<td>%s</td>')
-                    );
-                ?>
-            </tr>
-            <?php
-                $field = field_view_field('node', $node, 'field_species_subspecies');
-                CMSHTableRowWidget::renderField($field);
-            ?>
+        <table class="table table-condensed table-hover">
+            <?php echo render($content['field_species_scientific_order']); ?>
+            <?php echo render($content['field_species_class']); ?>
+            <?php echo render($content['field_species_order']); ?>
+            <?php echo render($content['field_species_family']); ?>
+            <?php echo render($content['field_species_subspecies']); ?>
             <tr>
                 <th><?php echo t('Scientific name'); ?></th>
                 <td><?php echo $node->title; ?></td>
             </tr>
-            <?php
-                // IUCN status
-                $field = field_view_field('node', $node, 'field_species_iucn_status');
-                CMSHTableRowWidget::renderField($field);
-
-                // IUCN link
-                $field = field_view_field('node', $node, 'field_species_iucn_web_srv');
-                $widget = new CMSHTableRowWidget($field);
-                if($widget->is_valid) {
-            ?>
-                <tr>
-                    <th>
-                        <?php echo $widget->getLabel(); ?>
-                    </th>
-                    <td>
-                        <a target="_blank" title="<?php t('Visit IUCN page for this species'); ?>" href="<?php echo $widget->getValue(); ?>"><?php echo $widget->getValue(); ?></a>
-                    </td>
-                </tr>
-            <?php } ?>
+            <?php echo render($content['field_species_iucn_status']); ?>
+            <?php echo render($content['field_species_iucn_web_srv']); ?>
         </table>
 
         <h3><?php echo t('Name'); ?></h3>
-        <table class="table table-condensed table-striped">
+        <table class="table table-condensed table-hover">
             <tbody>
-            <?php
-                $field = field_view_field('node', $node, 'field_species_former_name');
-                CMSHTableRowWidget::renderField($field);
-
-                $field = field_view_field('node', $node, 'field_species_name_en');
-                CMSHTableRowWidget::renderField($field);
-
-                $field = field_view_field('node', $node, 'field_species_name_fr');
-                CMSHTableRowWidget::renderField($field);
-
-                $field = field_view_field('node', $node, 'field_species_name_es');
-                CMSHTableRowWidget::renderField($field);
-
-                $field = field_view_field('node', $node, 'field_species_name_de');
-                CMSHTableRowWidget::renderField($field);
-            ?>
+                <?php echo render($content['field_species_former_name']); ?>
+                <?php echo render($content['field_species_name_en']); ?>
+                <?php echo render($content['field_species_name_fr']); ?>
+                <?php echo render($content['field_species_name_es']); ?>
+                <?php echo render($content['field_species_name_de']); ?>
             </tbody>
         </table>
 
-        <?php
-            $field_c_action = field_view_field('node', $node, 'field_species_concerted_action');
-            $field_coop_action = field_view_field('node', $node, 'field_species_cooperative_action');
-        ?>
         <h3><?php echo t('Actions'); ?></h3>
-        <table class="table table-condensed table-striped">
+        <table class="table table-condensed table-hover">
             <tbody>
-            <?php
-                CMSHTableRowWidgetBoolean::renderField($field_c_action);
-                CMSHTableRowWidgetBoolean::renderField($field_coop_action);
-            ?>
+                <?php echo render($content['field_species_concerted_action']); ?>
+                <?php echo render($content['field_species_cooperative_action']); ?>
             </tbody>
         </table>
 
-        <?php
-            $field_species_appendix = field_view_field('node', $node, 'field_species_appendix');
-            $widget = new CMSHTableRowWidgetMultivalue($field_species_appendix);
-            $c = count($widget->getValues());
-            if($c > 0) {
-        ?>
         <h3><?php echo t('Appendices'); ?></h3>
-        <table class="table table-condensed table-striped">
+        <table class="table table-condensed table-hover">
             <tbody>
-            <?php
-                echo $widget->getField();
-
-                CMSHTableRowWidget::renderField(
-                    field_view_field('node', $node, 'field_species_appendix_1_date'),
-                    array(),
-                    $widget->valid() && $c >= 1
-                );
-                
-                CMSHTableRowWidget::renderField(
-                    field_view_field('node', $node, 'field_species_appendix_2_date'),
-                    array(),
-                    $widget->valid() && $c == 2
-                );
-            ?>
+                <?php echo render($content['field_species_appendix']); ?>
+                <?php echo render($content['field_species_appendix_1_date']); ?>
+                <?php echo render($content['field_species_appendix_2_date']); ?>
             </tbody>
         </table>
-        <?php
-            }
-        ?>
 
-        <?php
-            $field = field_view_field('node', $node, 'field_species_instruments');
-        ?>
-        <table class="table table-condensed table-striped">
+
+        <h3><?php echo t('Other informations'); ?></h3>
+        <table class="table table-condensed table-hover two-rows-widget">
             <tbody>
-                <?php echo LegalInstrumentsWidget::renderField($field, 'field_species_instruments', NULL); ?>
-                <?php
-                    $field = field_view_field('node', $node, 'field_species_notes');
-                    CMSHTableRowWidget::renderField($field);
-                ?>
+                <?php echo render($content['field_species_instruments']); ?>
             </tbody>
         </table>
     </div>
 
 
     <div class="tab-pane fade" id="population">
-    <?php
-        $fpg = field_view_field('node', $node, 'field_species_pop_global');
-        $fpg['#label_display'] = 'hidden';
+    <h3><?php echo t('Global population'); ?></h3>
+    <table class="table table-condensed table-hover species-population-global">
+        <tbody>
+            <?php echo render($content['field_species_pop_global']); ?>
+            <?php echo render($content['field_species_pop_global_date']); ?>
+            </tr>
+        </tbody>
+    </table>
 
-        $fpgd = field_view_field('node', $node, 'field_species_pop_global_date');
-        $fpg['#label_display'] = 'hidden';
-
-        $r_fpg = render($fpg);
-        $r_fpgd = render($fpgd);
-
-        #dpm($r_fpg);
-        #dpm($r_fpgf);
-        $show = !empty($r_fpg) || !empty($r_fpgd);
-        if($show) {
-            $pg = sprintf('<em>%s</em> (<em>%s</em>)', $r_fpg, $r_fpgd);
-    ?>
-        <h3><?php echo t('Global population'); ?></h3>
-        <table class="table table-condensed table-striped species-population-global">
-            <tbody>
-                <tr>
-                    <th scope="row" class="span3">
-                        <?php CMSWidget::renderLabelFromContent('field_species_pop_global', $content); ?>
-                    </th>
-                    <td><?php echo $pg; ?></td>
-                </tr>
-            </tbody>
-        </table>
-        <?php
-            }
-        ?>
-
-        <?php
-            $field = field_view_field('node', $node, 'field_species_pop');
-            if(!empty($field)) {
-        ?>
-        <h2><?php echo t('Population'); ?><h5>
-        <table class="table table-condensed table-striped two-rows-widget">
-            <thead>
-                <tr>
-                    <th>Legal instrument</th>
-                    <th>Population</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <?php echo TwoColumnValueWidget::renderField($field, 'field_species_pop_li', 'field_species_pop_v'); ?>
-                    <tr>
-                        <td colspan="3"><?php echo render($field['#suffix']); ?></td>
-                    </tr>
-                </tr>
-            </tbody>
-        </table>
-        <?php
-            }
-        ?>
+    <h3><?php echo t('Population'); ?></h3>
+    <table class="table table-condensed table-hover two-rows-widget">
+        <thead>
+            <tr>
+                <th>Legal instrument</th>
+                <th>Population</th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php echo render($content['field_species_pop']); ?>
+        </tbody>
+    </table>
 
         <?php
             $field = field_view_field('node', $node, 'field_species_pop_status');
         ?>
         <h3><?php echo t('Population status'); ?></h3>
-        <table class="table table-condensed table-striped two-rows-widget">
+        <table class="table table-condensed table-hover two-rows-widget">
             <thead>
                 <tr>
                     <th>Country</th>
@@ -271,7 +142,7 @@
             $field = field_view_field('node', $node, 'field_species_pop_trend');
         ?>
         <h3><?php echo t('Population trend'); ?></h3>
-        <table class="table table-condensed table-striped two-rows-widget">
+        <table class="table table-condensed table-hover two-rows-widget">
             <thead>
                 <tr>
                     <th>Country</th>
@@ -294,7 +165,7 @@
             $field = field_view_field('node', $node, 'field_species_range_states');
         ?>
         <h3><?php echo t('Range states'); ?></h3>
-        <table class="table table-condensed table-striped two-rows-widget">
+        <table class="table table-condensed table-hover two-rows-widget">
             <thead>
                 <tr>
                     <th><?php echo t('Country'); ?></th>
