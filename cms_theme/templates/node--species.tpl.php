@@ -60,7 +60,7 @@
         </div>
 
     <?php
-        if(!empty($content['field_species_name_en']['#items'])) {
+        if(check_display_field($content, 'field_species_name_en')) {
     ?>
         <table class="table table-condensed table-hover two-columns">
             <caption><?php echo t('Common names'); ?></caption>
@@ -87,10 +87,31 @@
                 <?php echo render($content['field_species_appendix_1_date']); ?>
                 <?php echo render($content['field_species_appendix_2_date']); ?>
                 <?php echo render($content['field_species_instruments']); ?>
+            <?php
+                if(check_display_field($content, 'field_species_pop_global', 'field_species_pop_global_date')) {
+            ?>
+                <tr>
+                    <th><?php echo t('Global population'); ?></th>
+                    <td>
+                        <?php
+                        if(!empty($content['field_species_pop_global']['#items'])) {
+                            echo render($content['field_species_pop_global']);
+                        }
+                        if(!empty($content['field_species_pop_global_date']['#items'])) {
+                            echo ' ('.render($content['field_species_pop_global_date']).')';
+                        }
+                        ?>
+                    </td>
+                </tr>
+            <?php
+                }
+            ?>
             </tbody>
         </table>
 
-
+    <?php
+        if(check_display_field($content, 'field_species_range_states')) {
+    ?>
         <table class="table table-condensed table-hover two-columns">
             <caption><?php echo t('Geographic range'); ?></caption>
             <tbody>
@@ -100,23 +121,72 @@
                 </tr>
             </tbody>
         </table>
+    <?php
+        }
+    ?>
 
-        <table class="table table-condensed table-hover species-population-global two-columns">
-            <caption><?php echo t('Global population'); ?></caption>
-            <tbody>
-                <tr>
-                    <th>Global population</th>
-                    <td>
-                        <?php echo render($content['field_species_pop_global']); ?>
-                        (
-                            <?php echo render($content['field_species_pop_global_date']); ?>
-                        )
-                    </td>
-                </tr>
-                
-                </tr>
-            </tbody>
-        </table>
+    <?php
+        if(check_display_field($content, 'field_species_pop')) {
+    ?>
+    <table class="table table-condensed table-hover two-columns">
+        <caption><?php echo t('Population per instrument'); ?></caption>
+        <thead>
+            <tr>
+                <th><?php echo t('Instrument'); ?></th>
+                <th><?php echo t('Size'); ?></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php echo render($content['field_species_pop']); ?>
+        </tbody>
+    </table>
+    <?php
+        }
+    ?>
+
+    <?php
+        if(check_display_field($content, 'field_species_pop_size')) {
+    ?>
+    <table class="table table-condensed table-hover two-columns">
+        <caption><?php echo t('Population size'); ?></caption>
+        <thead>
+            <tr>
+                <th><?php echo t('Region'); ?></th>
+                <th><?php echo t('Years'); ?></th>
+                <th><?php echo t('Quality'); ?></th>
+                <th><?php echo t('Estimate'); ?></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php echo render($content['field_species_pop_size']); ?>
+        </tbody>
+    </table>
+    <?php
+        }
+    ?>
+
+
+    <?php
+        if(check_display_field($content, 'field_species_pop_trend')) {
+    ?>
+    <table class="table table-condensed table-hover two-columns">
+        <caption><?php echo t('Population size'); ?></caption>
+        <thead>
+            <tr>
+                <th><?php echo t('Region'); ?></th>
+                <th><?php echo t('Years'); ?></th>
+                <th><?php echo t('Quality'); ?></th>
+                <th><?php echo t('Estimate'); ?></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php echo render($content['field_species_pop_size']); ?>
+        </tbody>
+    </table>
+    <?php
+        }
+    ?>
+
 
     <?php
         if(!empty($content['field_species_notes']['#items'])) {
@@ -135,25 +205,11 @@
 
     <div class="tab-pane fade" id="population">
 
-    <h3><?php echo t('Population'); ?></h3>
-    <table class="table table-condensed table-hover two-rows-widget two-columns">
-        <thead>
-            <tr>
-                <th>Legal instrument</th>
-                <th>Population</th>
-                <th>&nbsp;</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php echo render($content['field_species_pop']); ?>
-        </tbody>
-    </table>
-
         <?php
             $field = field_view_field('node', $node, 'field_species_pop_status');
         ?>
         <h3><?php echo t('Population status'); ?></h3>
-        <table class="table table-condensed table-hover two-rows-widget two-columns">
+        <table class="table table-condensed table-hover two-columns">
             <thead>
                 <tr>
                     <th>Country</th>
@@ -174,7 +230,7 @@
             $field = field_view_field('node', $node, 'field_species_pop_trend');
         ?>
         <h3><?php echo t('Population trend'); ?></h3>
-        <table class="table table-condensed table-hover two-rows-widget two-columns">
+        <table class="table table-condensed table-hover two-columns">
             <thead>
                 <tr>
                     <th>Country</th>

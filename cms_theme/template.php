@@ -159,3 +159,16 @@ function CMS_theme_twitter_bootstrap_btn_dropdown($variables) {
 
     return $output;
 }
+
+/**
+ */
+function check_display_field($object) {
+    $ret = FALSE;
+    $args = func_get_args();
+    array_shift($args);
+    foreach($args as $arg) {
+        if(!empty($object[$arg]['#items'])) {
+            return TRUE;
+        }
+    }
+}
