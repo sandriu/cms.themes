@@ -28,6 +28,7 @@ table.two-rows-widget div { display: inline; }
 .ajax-progress { position: absolute; }
 
 .reset-link {
+    cursor: pointer;
     position: relative;
     top: 28px;
 }
