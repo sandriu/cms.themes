@@ -22,7 +22,7 @@ th.headerSortDown {
 
 table.species-population-global div { display: inline; }
 table.two-columns th { width: 200px; }
-table.two-columns caption { text-align: left; font-weight: bold; font-size: 16px; padding: 5px; }
+table caption { text-align: left; font-weight: bold; font-size: 16px; padding: 5px; }
 table.two-columns div { display: inline; }
 
 div.gallery {

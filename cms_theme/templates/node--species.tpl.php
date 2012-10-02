@@ -29,20 +29,13 @@
                     echo l(t('Update IUCN status'), 'species/nojs/update/' . implode("/", $args), array('attributes' => array('class' => array('use-ajax'), 'id' => 'btnupdatespecies')));
                     ?>
                 </li>
+                <li class="disabled"><a href="#">Print</a></li>
             </ul>
         </div>
     </div>
 </div>
 <?php endif; ?>
 <div class="clearfix"></div>
-
-<p>
-    <ul class="nav nav-tabs">
-      <li class="active"><a href="#general" data-toggle="tab">General information</a></li>
-      <li><a href="#population" data-toggle="tab">Population</a></li>
-    </ul>
-</p>
-
 <div id="speciesFactsheetTabContent" class="tab-content">
     <div class="tab-pane fade in active" id="general">
         <div class="row">
@@ -170,7 +163,7 @@
     <?php
         if(check_display_field($content, 'field_species_pop')) {
     ?>
-    <table class="table table-condensed table-hover two-columns">
+    <table class="table table-condensed table-hover table-bordered">
         <caption><?php echo t('Population per instrument'); ?></caption>
         <thead>
             <tr>
@@ -189,14 +182,15 @@
     <?php
         if(check_display_field($content, 'field_species_pop_size')) {
     ?>
-    <table class="table table-condensed table-hover two-columns">
+    <table class="table table-condensed table-bordered table-hover">
         <caption><?php echo t('Population size'); ?></caption>
         <thead>
             <tr>
-                <th><?php echo t('Region'); ?></th>
-                <th><?php echo t('Years'); ?></th>
-                <th><?php echo t('Quality'); ?></th>
-                <th><?php echo t('Estimate'); ?></th>
+                <th class="span2"><?php echo t('Region'); ?></th>
+                <th class="span2"><?php echo t('Years'); ?></th>
+                <th class="span2"><?php echo t('Quality'); ?></th>
+                <th class="span2"><?php echo t('Estimate'); ?></th>
+                <th class="span4"><?php echo t('Notes'); ?></th>
             </tr>
         </thead>
         <tbody>
@@ -211,18 +205,19 @@
     <?php
         if(check_display_field($content, 'field_species_pop_trend')) {
     ?>
-    <table class="table table-condensed table-hover two-columns">
-        <caption><?php echo t('Population size'); ?></caption>
+    <table class="table table-condensed table-bordered table-hover">
+        <caption><?php echo t('Population trend'); ?></caption>
         <thead>
             <tr>
-                <th><?php echo t('Region'); ?></th>
-                <th><?php echo t('Years'); ?></th>
-                <th><?php echo t('Quality'); ?></th>
-                <th><?php echo t('Estimate'); ?></th>
+                <th class="span2"><?php echo t('Region'); ?></th>
+                <th class="span2"><?php echo t('Years'); ?></th>
+                <th class="span2"><?php echo t('Trend'); ?></th>
+                <th class="span2"><?php echo t('Estimate'); ?></th>
+                <th class="span4"><?php echo t('Notes'); ?></th>
             </tr>
         </thead>
         <tbody>
-            <?php echo render($content['field_species_pop_size']); ?>
+            <?php echo render($content['field_species_pop_trend']); ?>
         </tbody>
     </table>
     <?php
@@ -242,52 +237,6 @@
     <?php
         }
     ?>
-    </div>
-
-
-    <div class="tab-pane fade" id="population">
-
-        <?php
-            $field = field_view_field('node', $node, 'field_species_pop_status');
-        ?>
-        <h3><?php echo t('Population status'); ?></h3>
-        <table class="table table-condensed table-hover two-columns">
-            <thead>
-                <tr>
-                    <th>Country</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <?php echo TwoColumnValueWidget::renderField($field, 'field_species_pop_status_c', 'field_species_pop_status_v'); ?>
-                    <tr>
-                        <td colspan="3"><?php echo render($field['#suffix']); ?></td>
-                    </tr>
-                </tr>
-            </tbody>
-        </table>
-
-        <?php
-            $field = field_view_field('node', $node, 'field_species_pop_trend');
-        ?>
-        <h3><?php echo t('Population trend'); ?></h3>
-        <table class="table table-condensed table-hover two-columns">
-            <thead>
-                <tr>
-                    <th>Country</th>
-                    <th>Trend</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <?php echo TwoColumnValueWidget::renderField($field, 'field_species_pop_trend_c', 'field_species_pop_trend_v'); ?>
-                    <tr>
-                        <td colspan="3"><?php echo render($field['#suffix']); ?></td>
-                    </tr>
-                </tr>
-            </tbody>
-        </table>
     </div>
 </div>
 <?php
