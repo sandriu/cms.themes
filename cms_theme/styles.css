@@ -66,5 +66,22 @@ footer.footer span {
 .species-carousel {
     height: 150px;
     overflow: hidden;
+    margin-top: 28px;
     text-align: center;
+}
+
+@media print {
+    .btn,
+    .navbar,
+    .breadcrumb,
+    #block-system-powered-by,
+    .field-collection-view-links,
+    .action-links {
+        display: none;
+    }
+
+    .field-collection-view {
+        border: none;
+        margin: 0;
+    }
 }
