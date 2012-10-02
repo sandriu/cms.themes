@@ -48,3 +48,11 @@ a.navbar .brand span {
     position: relative;
     top: 28px;
 }
+
+footer.footer {
+    padding-top: 5px;
+}
+
+footer.footer span {
+    float: right;
+}
