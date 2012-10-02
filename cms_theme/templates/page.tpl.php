@@ -102,8 +102,7 @@
             <?php
                 if (in_array(arg(0), $types) && in_array(arg(1), $types) && $user->uid){
             ?>
-            <a class="btn btn-small" href="/<?php echo $action_links[0]['#link']['href']; ?>">
-                <i class="icon-plus"></i>
+            <a class="btn btn-primary" href="/<?php echo $action_links[0]['#link']['href']; ?>">
                 <?php
                 echo t($action_links[0]['#link']['title']);
                 ?>
