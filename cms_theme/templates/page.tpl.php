@@ -8,13 +8,13 @@
             </a>
 
             <a class="brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-                <?php print $site_name; ?>
+                <span><?php print $site_name; ?></span>
             </a>
 
-            <div class="nav-collapse">
-                <?php
-                    if ($main_menu) {
-                ?>
+            <div class="nav-collapse pull-right">
+            <?php
+                if ($main_menu) {
+            ?>
                 <ul class="nav">
                     <?php
                     $type= '';
@@ -34,9 +34,9 @@
                         }
                     ?>
                 </ul>
-                <?php
-                    }
-                ?>
+            <?php
+                }
+            ?>
             <?php if ($primary_nav): ?>
                 <?php print $primary_nav; ?>
             <?php endif; ?>
