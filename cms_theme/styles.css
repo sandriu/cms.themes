@@ -62,3 +62,9 @@ footer.footer {
 footer.footer span {
     float: right;
 }
+
+.species-carousel {
+    height: 150px;
+    overflow: hidden;
+    text-align: center;
+}

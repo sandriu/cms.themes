@@ -65,7 +65,7 @@
                 <?php
                     if (count($node->gallery)) {
                 ?>
-                <div id="myCarousel" class="carousel slide" style="height: 148px; overflow: hidden; text-align: center;">
+                <div id="myCarousel" class="carousel slide img-polaroid species-carousel">
                     <!-- Carousel items -->
                     <div class="carousel-inner">
                         <div class="active item">
