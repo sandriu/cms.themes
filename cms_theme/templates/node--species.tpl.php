@@ -128,14 +128,14 @@
                 <tr>
                     <th><?php echo t('Global population'); ?></th>
                     <td>
-                        <?php
-                        if(!empty($content['field_species_pop_global']['#items'])) {
+                    <?php
+                        if(check_display_field($content, 'field_species_pop_global')) {
                             echo render($content['field_species_pop_global']);
                         }
-                        if(!empty($content['field_species_pop_global_date']['#items'])) {
+                        if(check_display_field($content, 'field_species_pop_global_date')) {
                             echo ' ('.render($content['field_species_pop_global_date']).')';
                         }
-                        ?>
+                    ?>
                     </td>
                 </tr>
             <?php
@@ -151,8 +151,12 @@
             <caption><?php echo t('Geographic range'); ?></caption>
             <tbody>
                 <tr>
-                    <th>Countries</th>
+                    <th><?php echo t('Countries'); ?></th>
                     <td><?php echo render($content['field_species_range_states']); ?></td>
+                </tr>
+                <tr>
+                    <th><?php echo t('Notes'); ?></th>
+                    <td><?php echo render($content['field_species_range_states_notes']); ?></td>
                 </tr>
             </tbody>
         </table>
