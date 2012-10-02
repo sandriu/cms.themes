@@ -8,13 +8,13 @@
             </a>
 
             <a class="brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-                <?php print $site_name; ?>
+                <span><?php print $site_name; ?></span>
             </a>
 
-            <div class="nav-collapse">
-                <?php
-                    if ($main_menu) {
-                ?>
+            <div class="nav-collapse pull-right">
+            <?php
+                if ($main_menu) {
+            ?>
                 <ul class="nav">
                     <?php
                     $type= '';
@@ -34,9 +34,9 @@
                         }
                     ?>
                 </ul>
-                <?php
-                    }
-                ?>
+            <?php
+                }
+            ?>
             <?php if ($primary_nav): ?>
                 <?php print $primary_nav; ?>
             <?php endif; ?>
@@ -102,8 +102,7 @@
             <?php
                 if (in_array(arg(0), $types) && in_array(arg(1), $types) && $user->uid){
             ?>
-            <a class="btn btn-small" href="/<?php echo $action_links[0]['#link']['href']; ?>">
-                <i class="icon-plus"></i>
+            <a class="btn btn-primary" href="/<?php echo $action_links[0]['#link']['href']; ?>">
                 <?php
                 echo t($action_links[0]['#link']['title']);
                 ?>
