@@ -194,6 +194,7 @@
                 <th class="span2"><?php echo t('Years'); ?></th>
                 <th class="span2"><?php echo t('Quality'); ?></th>
                 <th class="span2"><?php echo t('Estimate'); ?></th>
+                <th class="span2"><?php echo t('Ref'); ?></th>
                 <th class="span4"><?php echo t('Notes'); ?></th>
             </tr>
         </thead>
@@ -217,6 +218,7 @@
                 <th class="span2"><?php echo t('Years'); ?></th>
                 <th class="span2"><?php echo t('Trend'); ?></th>
                 <th class="span2"><?php echo t('Estimate'); ?></th>
+                <th class="span2"><?php echo t('Ref'); ?></th>
                 <th class="span4"><?php echo t('Notes'); ?></th>
             </tr>
         </thead>
