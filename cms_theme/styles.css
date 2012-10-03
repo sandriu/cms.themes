@@ -70,6 +70,14 @@ footer.footer span {
     text-align: center;
 }
 
+.species-alert {
+    margin-top: 28px;
+}
+
+.popover {
+    width: 500px;
+}
+
 @media print {
     .btn,
     .navbar,

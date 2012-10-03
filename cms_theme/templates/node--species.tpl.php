@@ -1,4 +1,5 @@
 <div class="clear"></div>
+
 <?php if (node_access("update", $node) === TRUE): ?>
 <div class="pull-left">
     <div class="btn-toolbar">
@@ -83,9 +84,9 @@
                 <?php
                     } else {
                 ?>
-                <div class="alert alert-info">
+                <div class="alert alert-info species-alert">
                     <p>
-                        No pictures for <?php echo $node->title; ?>
+                        <?php echo t('No pictures for ') . $node->title; ?>
                     </p>
                 </div>
                 <?php
@@ -194,8 +195,8 @@
                 <th class="span2"><?php echo t('Years'); ?></th>
                 <th class="span2"><?php echo t('Quality'); ?></th>
                 <th class="span2"><?php echo t('Estimate'); ?></th>
-                <th class="span2"><?php echo t('Ref'); ?></th>
-                <th class="span4"><?php echo t('Notes'); ?></th>
+                <th class="span3"><?php echo t('Ref'); ?></th>
+                <th class="span3"><?php echo t('Notes'); ?></th>
             </tr>
         </thead>
         <tbody>
@@ -218,8 +219,8 @@
                 <th class="span2"><?php echo t('Years'); ?></th>
                 <th class="span2"><?php echo t('Trend'); ?></th>
                 <th class="span2"><?php echo t('Estimate'); ?></th>
-                <th class="span2"><?php echo t('Ref'); ?></th>
-                <th class="span4"><?php echo t('Notes'); ?></th>
+                <th class="span3"><?php echo t('Ref'); ?></th>
+                <th class="span3"><?php echo t('Notes'); ?></th>
             </tr>
         </thead>
         <tbody>
@@ -250,3 +251,6 @@
     hide($content['links']);
     hide($content['comments']);
 ?>
+<script type="text/javascript">
+    jQuery('a[rel="popover"]').popover();
+</script>
