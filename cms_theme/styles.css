@@ -76,7 +76,8 @@ footer.footer span {
     .breadcrumb,
     #block-system-powered-by,
     .field-collection-view-links,
-    .action-links {
+    .action-links,
+    .carousel-control {
         display: none;
     }
 
