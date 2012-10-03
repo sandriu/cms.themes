@@ -77,7 +77,8 @@ footer.footer span {
     #block-system-powered-by,
     .field-collection-view-links,
     .action-links,
-    .carousel-control {
+    .carousel-control,
+    .btn-toolbar {
         display: none;
     }
 
