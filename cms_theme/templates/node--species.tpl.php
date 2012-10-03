@@ -29,7 +29,7 @@
                     echo l(t('Update IUCN status'), 'species/nojs/update/' . implode("/", $args), array('attributes' => array('class' => array('use-ajax'), 'id' => 'btnupdatespecies')));
                     ?>
                 </li>
-                <li class="disabled"><a href="#">Print</a></li>
+                <li><a href="#" title="<?php echo t('Print') . ' ' . $node->title . ' ' . t('details'); ?>" onclick="window.print();">Print</a></li>
             </ul>
         </div>
     </div>
