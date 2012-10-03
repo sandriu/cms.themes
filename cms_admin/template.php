@@ -28,7 +28,7 @@ function cms_admin_form_alter(&$form, $form_state, $form_id) {
         /**
          * Hide additional settings such as Authoring, Comments...
         */
-        hide($form['additional_settings']);
+        // hide($form['additional_settings']);
 
         /**
          * Add Back button
