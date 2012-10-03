@@ -67,7 +67,7 @@
 
             <?php
             $match = FALSE;
-            $types = array('species', 'parties', 'listing');
+            $types = get_cms_types();
             if (arg(0) == 'node' && is_numeric(arg(1))) {
                 $nid = arg(1);
                 $node = node_load($nid);
@@ -99,17 +99,17 @@
             <?php print render($page['submenu']); ?>
 
             <?php print render($page['content']); ?>
-            <?php
-                if (in_array(arg(0), $types) && in_array(arg(1), $types) && $user->uid){
-            ?>
+    <?php
+        if (show_add_button()) {
+    ?>
             <a class="btn btn-primary" href="/<?php echo $action_links[0]['#link']['href']; ?>">
                 <?php
                 echo t($action_links[0]['#link']['title']);
                 ?>
             </a>
-            <?php
-                }
-            ?>
+    <?php
+        }
+    ?>
 
         </div>
     </div>

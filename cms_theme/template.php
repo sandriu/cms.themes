@@ -181,3 +181,12 @@ function check_display_field($object) {
         }
     }
 }
+
+function get_cms_types() {
+    return array('species', 'parties', 'listing');
+}
+
+function show_add_button() {
+    $types = get_cms_types();
+    return in_array(arg(0), $types) && in_array(arg(1), $types) && user_access(sprintf('add %s', arg(0)));
+}
