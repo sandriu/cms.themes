@@ -120,7 +120,7 @@ function CMS_theme_breadcrumb($variables) {
     }
 
     if (count($breadcrumb)) {
-        $breadcrumbs .= '<li class="active"><span class="divider">/</span> ' . $current_page_title;
+        $breadcrumbs .= '<li class="active"><span class="divider">/</span>' . $current_page_title;
     }else {
         $breadcrumbs .= '<li class="active">' . $current_page_title;
     }
