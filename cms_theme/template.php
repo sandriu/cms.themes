@@ -106,17 +106,26 @@ function CMS_theme_breadcrumb($variables) {
     $breadcrumb = $variables['breadcrumb'];
 
     $breadcrumbs = '<ul class="breadcrumb">';
-    $breadcrumbs .= '<li>' . t('You are here') . '</li>';
-    $breadcrumbs .= '<li class="divider">:</li>';
+    $breadcrumbs .= '<li>' . t('You are here') . ':&nbsp;</li>';
+
+    $current_page_title = drupal_get_title();
 
     $count = count($breadcrumb) - 1;
     foreach($breadcrumb as $key => $value) {
         if($count != $key) {
-          $breadcrumbs .= '<li>'.$value.'<span class="divider">/</span></li>';
+          $breadcrumbs .= '<li>'.$value.' <span class="divider">/</span></li>';
         } else {
           $breadcrumbs .= '<li>'.$value.'</li>';
         }
     }
+
+    if (count($breadcrumb)) {
+        $breadcrumbs .= '<li class="active"><span class="divider">/</span> ' . $current_page_title;
+    }else {
+        $breadcrumbs .= '<li class="active">' . $current_page_title;
+    }
+
+    $breadcrumbs .= '</li>';
     $breadcrumbs .= '</ul>';
 
     return $breadcrumbs;
