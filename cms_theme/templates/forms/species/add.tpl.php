@@ -244,7 +244,7 @@
 
 <legend  class="form-section-legend">
     <a href="javascript:void(0); " data-toggle="collapse" data-target="#additional-settings-fields"><i class="icon-plus-sign"></i></a>
-    <?php echo t('Addtitional settings'); ?>
+    <?php echo t('System settings'); ?>
 </legend>
 
 <div id="additional-settings-fields" class="collapse out">
