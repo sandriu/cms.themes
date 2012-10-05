@@ -8,6 +8,11 @@ function CMS_theme_theme() {
         'twitter_bootstrap_btn_dropdown' => array(
             'variables' => array('links' => array(), 'attributes' => array(), 'type' => NULL),
         ),
+        'species_node_form' => array(
+            'render element' => 'form',
+            'template' => 'templates/forms/species/add',
+            'path' => drupal_get_path('theme', 'cms_theme'),
+        ),
     );
 }
 

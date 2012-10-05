@@ -3,6 +3,10 @@ body {
     padding-bottom: 60px;
 }
 
+label {
+    font-weight: bold;
+}
+
 /* Style for table sorter plugin */
 th.header { 
     background-image: url('images/bg.gif');
@@ -76,6 +80,23 @@ footer.footer span {
 
 .popover {
     width: 500px;
+}
+
+.help-block {
+    clear: both;
+}
+
+.form-section-legend i {
+    opacity:  0.5;
+    margin-top: 6px;
+    transition: opacity .2s;
+    -moz-transition: opacity .2s; /* Firefox 4 */
+    -webkit-transition: opacity .2s; /* Safari and Chrome */
+    -o-transition: opacity .2s; /* Opera */
+}
+
+.form-section-legend i:hover {
+    opacity: 1;
 }
 
 @media print {
