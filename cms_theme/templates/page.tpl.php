@@ -99,17 +99,18 @@
             <?php print render($page['submenu']); ?>
 
             <?php print render($page['content']); ?>
-    <?php
-        if (show_add_button()) {
-    ?>
-            <a class="btn btn-primary" href="/<?php echo $action_links[0]['#link']['href']; ?>">
-                <?php
-                echo t($action_links[0]['#link']['title']);
-                ?>
-            </a>
-    <?php
-        }
-    ?>
+            <div class="clearfix">&nbsp;</div>
+            <?php
+                if (show_add_button()) {
+            ?>
+                    <a class="btn btn-primary" href="/<?php echo $action_links[0]['#link']['href']; ?>">
+                        <?php
+                        echo t($action_links[0]['#link']['title']);
+                        ?>
+                    </a>
+            <?php
+                }
+            ?>
 
         </div>
     </div>

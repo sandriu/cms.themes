@@ -117,13 +117,9 @@
 
     <div class="clearfix">&nbsp;</div>
 
-    
-
-
-    <div class="clearfix">&nbsp;</div>
     <div class="span4">
     <?php
-        echo drupal_render($form['field_species_pop_global_date']);
+    echo drupal_render($form['field_species_pop_global_date']);
     ?>
     </div>
     <div class="span4">
@@ -135,10 +131,8 @@
     ?>
     </div>
 
-
-
-    
     <div class="clearfix">&nbsp;</div>
+
     <div class="span4">
     <?php
         echo drupal_render($form['field_species_appendix_1_date']);

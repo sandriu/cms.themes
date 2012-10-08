@@ -13,6 +13,11 @@ function CMS_theme_theme() {
             'template' => 'templates/forms/species/add',
             'path' => drupal_get_path('theme', 'cms_theme'),
         ),
+        'publication_node_form' => array(
+            'render element' => 'form',
+            'template' => 'templates/forms/publications/add',
+            'path' => drupal_get_path('theme', 'cms_theme'),
+        ),
     );
 }
 
@@ -188,7 +193,7 @@ function check_display_field($object) {
 }
 
 function get_cms_types() {
-    return array('species', 'parties', 'listing');
+    return array('species', 'parties', 'publications', 'listing');
 }
 
 function show_add_button() {
