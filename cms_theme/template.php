@@ -193,7 +193,7 @@ function check_display_field($object) {
 }
 
 function get_cms_types() {
-    return array('species', 'parties', 'publications', 'listing');
+    return array('species', 'parties', 'publication', 'publications', 'listing');
 }
 
 function show_add_button() {

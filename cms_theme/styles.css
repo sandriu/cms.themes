@@ -99,6 +99,10 @@ footer.footer span {
     opacity: 1;
 }
 
+.text-center {
+    text-align: center;
+}
+
 @media print {
     .btn,
     .navbar,
