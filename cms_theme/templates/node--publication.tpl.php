@@ -20,9 +20,31 @@
 
 <div class=clearfix">&nbsp;</div>
 
-<div class="thumbnail span3 text-center">
+<div class="span3 pull-left">
     <?php
-    echo render($content['field_publication_image']);
+        if (count($node->field_publication_image[LANGUAGE_NONE])) {
+    ?>
+    <div id="myCarousel" class="carousel slide img-polaroid publication-carousel">
+        <!-- Carousel items -->
+        <?php
+        echo render($content['field_publication_image']);
+        ?>
+        <!-- Carousel nav -->
+        <?php if (count($node->field_publication_image[LANGUAGE_NONE]) > 1) { ?>
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+        <?php } ?>
+      </div>
+    <?php
+        } else {
+    ?>
+    <div class="alert alert-info species-alert">
+        <p>
+            <?php echo t('No pictures for ') . $node->title; ?>
+        </p>
+    </div>
+    <?php
+        }
     ?>
 </div>
 
@@ -50,20 +72,14 @@
 <div class="clearfix">&nbsp;</div>
 
 <div class="span11">
-    <?php
-        if(check_display_field($content, 'field_publication_author')) {
-    ?>
-        <table class="table table-condensed table-hover two-columns">
-            <caption><?php echo t('Bibliographic information'); ?></caption>
-            <?php echo render($content['field_publication_edition']); ?>
-            <?php echo render($content['field_publication_language']); ?>
-            <?php echo render($content['field_publication_type']); ?>
-            <?php echo render($content['field_publication_order_code']); ?>
-            <?php echo render($content['field_publication_co_authors']); ?>
-        </table>
-    <?php
-        }
-    ?>
+    <table class="table table-condensed table-hover two-columns">
+        <caption><?php echo t('Bibliographic information'); ?></caption>
+        <?php echo render($content['field_publication_edition']); ?>
+        <?php echo render($content['field_publication_language']); ?>
+        <?php echo render($content['field_publication_type']); ?>
+        <?php echo render($content['field_publication_order_code']); ?>
+        <?php echo render($content['field_publication_co_authors']); ?>
+    </table>
 </div>
 
 <?php
