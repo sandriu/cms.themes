@@ -97,7 +97,6 @@
         </div>
         <div class="pull-left span2">
     <?php
-        echo drupal_render($form['field_publication_instrument']);
     ?>
         </div>
     </div>
@@ -113,11 +112,18 @@
 
     <div class="span5">
     <?php
-        echo drupal_render($form['field_publication_order_code']);
+        echo drupal_render($form['field_publication_instrument']);
     ?>
     </div>
 
+
     <div class="clearfix">&nbsp;</div>
+
+    <div class="span5">
+    <?php
+        echo drupal_render($form['field_publication_order_code']);
+    ?>
+    </div>
 
     <div class="span5">
     <?php
