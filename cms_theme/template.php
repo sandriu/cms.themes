@@ -193,10 +193,24 @@ function check_display_field($object) {
 }
 
 function get_cms_types() {
-    return array('species', 'parties', 'publication', 'publications', 'listing');
+    return array('species', 'parties', 'publication', 'listing');
 }
 
 function show_add_button() {
     $types = get_cms_types();
     return in_array(arg(0), $types) && in_array(arg(1), $types) && user_access(sprintf('add %s', arg(0)));
+}
+
+function is_current_page($menu_item) {
+    if ((arg(0) == 'node') && (is_numeric(arg(1)))) {
+        $node = node_load(arg(1));
+        $type = $node->type;
+    }
+
+    if ((current_path() == $menu_item['href']) ||
+        ((isset($type)) && $type == strtolower($menu_item['title']))) {
+        return true;
+    }
+
+    return false;
 }

@@ -32,6 +32,7 @@
             <caption><?php echo t('Bibliographic information'); ?></caption>
             <?php echo render($content['field_publication_co_authors']); ?>
             <?php echo render($content['field_publication_order_code']); ?>
+            <?php echo render($content['field_publication_language']); ?>
         </table>
     <?php
         }

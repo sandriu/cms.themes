@@ -25,7 +25,7 @@
 
                         foreach($main_menu as $menu_item) {
                     ?>
-                    <li <?php if ((current_path() == $menu_item['href']) || ((isset($type)) && $type == strtolower($menu_item['title']))) { ?>class="active"<?php } ?>>
+                    <li <?php if(is_current_page($menu_item)) { ?>class="active"<?php } ?>>
                         <?php
                             print l($menu_item['title'], $menu_item['href']);
                         ?>
@@ -37,6 +37,7 @@
             <?php
                 }
             ?>
+
             <?php if ($primary_nav): ?>
                 <?php print $primary_nav; ?>
             <?php endif; ?>
