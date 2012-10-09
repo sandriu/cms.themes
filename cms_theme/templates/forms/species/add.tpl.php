@@ -253,5 +253,5 @@
 
 <?php
     $path = drupal_get_path('theme', 'cms_theme');
-    drupal_add_js("$path/js/species.js");
+    drupal_add_js("$path/js/theme.js");
 ?>

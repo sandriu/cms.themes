@@ -1,4 +1,4 @@
-<legend>
+<legend  class="form-section-legend">
     <a href="javascript:void(0); " data-toggle="collapse" data-target="#bibliographic-fields"><i class="icon-minus-sign"></i></a>
     <?php echo t('Bibliographic information'); ?>
 </legend>
@@ -52,7 +52,7 @@
 
 <div class="clearfix">&nbsp;</div>
 
-<legend>
+<legend  class="form-section-legend">
     <a href="javascript:void(0); " data-toggle="collapse" data-target="#files-fields"><i class="icon-minus-sign"></i></a>
     <?php echo t('Files'); ?>
 </legend>
@@ -73,7 +73,7 @@
 
 <div class="clearfix">&nbsp;</div>
 
-<legend>
+<legend  class="form-section-legend">
     <a href="javascript:void(0); " data-toggle="collapse" data-target="#details-fields"><i class="icon-minus-sign"></i></a>
     <?php echo t('Details'); ?>
 </legend>
@@ -136,4 +136,9 @@
 
 <?php
     echo drupal_render_children($form);
+?>
+
+<?php
+    $path = drupal_get_path('theme', 'cms_theme');
+    drupal_add_js("$path/js/theme.js");
 ?>
