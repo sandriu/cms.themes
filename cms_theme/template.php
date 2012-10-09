@@ -23,6 +23,7 @@ function CMS_theme_theme() {
 
 function CMS_theme_js_alter(&$javascript) {
         $javascript['misc/jquery.js']['data'] = drupal_get_path('theme', 'CMS_theme').'/js/jquery-1.8.0.min.js';
+        //$javascript['misc/jquery.form.js']['data'] = drupal_get_path('theme', 'CMS_theme').'/js/jquery.form.js';
 }
 
 

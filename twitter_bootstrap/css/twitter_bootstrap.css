@@ -78,7 +78,7 @@ input, textarea, select, .uneditable-input {
 
 /* throbber fix */
 html.js input.form-autocomplete {
-  background-position: 100% 7px; /* LTR */
+  background-position: 99% 8px; /* LTR */
   background-repeat: no-repeat;
 }
 html.js input.throbbing {

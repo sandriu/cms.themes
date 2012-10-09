@@ -27,16 +27,9 @@
 
     <div class="clearfix">&nbsp;</div>
 
-    <div class="span5">
-        <br />
-        <br />
+    <div class="span11">
     <?php
         echo drupal_render($form['field_publication_author']);
-    ?>
-    </div>
-
-    <div class="span5">
-    <?php
         echo drupal_render($form['field_publication_co_authors']);
     ?>
     </div>
@@ -44,7 +37,7 @@
     <div class="clearfix">&nbsp;</div>
     <br />
 
-    <div class="span5">
+    <div class="span3">
     <?php
         echo drupal_render($form['field_publication_edition']);
     ?>
