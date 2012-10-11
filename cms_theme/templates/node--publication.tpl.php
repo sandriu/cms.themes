@@ -39,7 +39,7 @@
 
 <div class="span3 pull-right">
     <?php
-        if (count($node->field_publication_image[LANGUAGE_NONE])) {
+        if (!empty($node->field_publication_image) && count($node->field_publication_image[LANGUAGE_NONE])) {
     ?>
     <div id="myCarousel" class="carousel slide img-polaroid publication-carousel">
         <!-- Carousel items -->
