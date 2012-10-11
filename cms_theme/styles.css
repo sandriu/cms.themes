@@ -76,7 +76,8 @@ footer.footer span {
 }
 
 .publication-carousel {
-    height: 250px;
+    height: 25
+    0px;
     margin-top: 0;
 }
 
@@ -107,6 +108,11 @@ footer.footer span {
 
 .text-center {
     text-align: center;
+}
+
+.container-inline-date .date-padding {
+    float: none;
+    padding: 0;
 }
 
 @media print {

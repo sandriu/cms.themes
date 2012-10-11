@@ -118,6 +118,11 @@
 
     <footer class="footer">
         <div class="row">
+        <?php
+            if(array_key_exists('system_powered-by', $page['footer'])) {
+                unset($page['footer']['system_powered-by']);
+            }
+        ?>
         <?php print render($page['footer']); ?>
         </div>
     </footer>

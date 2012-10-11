@@ -25,7 +25,6 @@ function CMS_theme_js_alter(&$javascript) {
         $javascript['misc/jquery.js']['data'] = drupal_get_path('theme', 'CMS_theme').'/js/jquery-1.8.0.min.js';
 }
 
-
 function CMS_theme_menu_link(&$variables) {
     $element = $variables['element'];
     $sub_menu = '';
@@ -214,3 +213,69 @@ function is_current_page($menu_item) {
 
     return false;
 }
+
+function cms_theme_filter_tips_more_info() {
+    return '';
+}
+
+function cms_theme_element_info_alter(&$type) {
+    if (isset($type['text_format']['#process'])) {
+        foreach ($type['text_format']['#process'] as &$callback) {
+            if ($callback === 'filter_process_format') {
+                $callback = 'cms_theme_process_format';
+            }
+        }
+    }
+}
+
+/**
+ * Hide Text formats option from Text with summary fields
+*/
+function cms_theme_process_format($element) {
+    /**
+     * Array of fields for which to hide the option
+    */
+    $fields = array(
+        'field_textarea',
+        'comment_body',
+        'body',
+    );
+
+    $element = filter_process_format($element);
+
+    /**
+     * Hide the 'Text format' pane below certain text area fields
+    */ 
+    if (isset($element['#field_name']) && in_array($element['#field_name'], $fields)){
+            $element['format']['#access'] = FALSE;
+    }
+
+    return $element;
+}
+
+/**
+ * Hide help texts for File/Image fields
+*/
+function cms_theme_file_upload_help(&$variables) {
+    return '';
+}
+
+function cms_theme_date_combo($variables) {
+    $element = $variables['element'];
+    $field = field_info_field($element['#field_name']);
+    $instance = field_info_instance($element['#entity_type'], $element['#field_name'], $element['#bundle']);
+   
+    // Group start/end items together in fieldset.
+    $fieldset = array(
+      '#title' => '',
+      '#value' => '',
+      '#description' => '',
+      '#attributes' => array(),
+      '#children' => $element['#children'],
+    );
+    return theme('form_element', array('element' => $fieldset));
+}
+
+//function cms_theme_fieldset($element) {
+//    
+//}

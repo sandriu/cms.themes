@@ -79,7 +79,6 @@
 </legend>
 
 <div id="details-fields" class="collapse in">
-
     <div class="span5">
     <?php
         echo drupal_render($form['field_publication_published']);
@@ -87,9 +86,6 @@
     </div>
 
     <div class="span5">
-        <br />
-        <br />
-        <br />
         <div class="pull-left">
     <?php
         echo drupal_render($form['field_publication_type']);

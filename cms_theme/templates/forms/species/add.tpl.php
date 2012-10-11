@@ -123,9 +123,6 @@
     ?>
     </div>
     <div class="span4">
-        <br />
-        <br />
-        <br />
     <?php
         echo drupal_render($form['field_species_pop_global']);
     ?>

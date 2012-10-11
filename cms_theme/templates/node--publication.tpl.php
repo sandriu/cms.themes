@@ -42,11 +42,10 @@
         if (!empty($node->field_publication_image) && count($node->field_publication_image[LANGUAGE_NONE])) {
     ?>
     <div id="myCarousel" class="carousel slide img-polaroid publication-carousel">
-        <!-- Carousel items -->
         <?php
         echo render($content['field_publication_image']);
         ?>
-        <!-- Carousel nav -->
+
         <?php if (count($node->field_publication_image[LANGUAGE_NONE]) > 1) { ?>
         <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
         <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
