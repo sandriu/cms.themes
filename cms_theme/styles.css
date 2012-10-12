@@ -141,6 +141,25 @@ footer.footer span {
     padding: 0;
 }
 
+.selected {
+    background: #DFDFDF;
+}
+
+#autocomplete {
+    border: none;
+}
+
+#autocomplete ul {
+    padding: 5px 0;
+    margin: 2px 0;
+}
+
+#autocomplete .dropdown-menu {
+    display: block;
+    position: static;
+    width: auto;
+}
+
 @media print {
     .btn,
     .navbar,

@@ -58,13 +58,13 @@
 </legend>
 
 <div id="files-fields" class="collapse in">
-    <div class="span5">
+    <div class="span11">
     <?php
         echo drupal_render($form['field_publication_attachment']);
     ?>
     </div>
 
-    <div class="span5">
+    <div class="span11">
     <?php
         echo drupal_render($form['field_publication_image']);
     ?>
