@@ -1,3 +1,11 @@
+<div id="demo-badge" class="alert alert-error">
+    <p>
+        <strong>
+            THIS IS A DEMO WEBSITE
+        </strong>
+    </p>
+</div>
+
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
