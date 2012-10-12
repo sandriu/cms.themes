@@ -6,13 +6,21 @@
     top: 0;
     bottom: 0;
     width: 35px;
+    background: #DD4814 !important;
+    color: #FFF !important;
 }
 
 #demo-badge p {
+    font-size: 16px;
     margin: 0;
     -webkit-transform: rotate(-90deg);
+    transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg); /* IE 9 */
+    -moz-transform:rotate(-90deg); /* Firefox */
+    -webkit-transform:rotate(-90deg); /* Safari and Chrome */
+    -o-transform:rotate(-90deg); /* Opera */
     position: fixed;
-    left: -92px;
+    left: -87px;
     top: 175px;
 }
 

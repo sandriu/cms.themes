@@ -1,7 +1,7 @@
 <div id="demo-badge" class="alert alert-error">
     <p>
         <strong>
-            WEBSITE UNDER DEVELOPMENT
+            Website under development!
         </strong>
     </p>
 </div>
