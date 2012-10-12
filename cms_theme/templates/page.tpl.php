@@ -1,7 +1,7 @@
 <div id="demo-badge" class="alert alert-error">
     <p>
         <strong>
-            THIS IS A DEMO WEBSITE
+            WEBSITE UNDER DEVELOPMENT
         </strong>
     </p>
 </div>
