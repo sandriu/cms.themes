@@ -1,6 +1,7 @@
 #demo-badge {
     text-align: center;
     padding: 3px;
+    margin-bottom: 0;
     position: fixed;
     left: 0;
     top: 0;
@@ -20,8 +21,8 @@
     -webkit-transform:rotate(-90deg); /* Safari and Chrome */
     -o-transform:rotate(-90deg); /* Opera */
     position: fixed;
-    left: -87px;
-    top: 175px;
+    left: -2px;
+    top: 75px;
 }
 
 body {
