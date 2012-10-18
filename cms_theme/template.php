@@ -181,6 +181,7 @@ function CMS_theme_twitter_bootstrap_btn_dropdown($variables) {
 /**
  */
 function check_display_field($object) {
+    
     $ret = FALSE;
     $args = func_get_args();
     array_shift($args);
@@ -260,6 +261,9 @@ function cms_theme_file_upload_help(&$variables) {
     return '';
 }
 
+/**
+ * Override how date fields are displayed
+*/
 function cms_theme_date_combo($variables) {
     $element = $variables['element'];
     $field = field_info_field($element['#field_name']);
@@ -276,6 +280,59 @@ function cms_theme_date_combo($variables) {
     return theme('form_element', array('element' => $fieldset));
 }
 
-//function cms_theme_fieldset($element) {
-//    
-//}
+/**
+ * 
+*/
+function get_available_tabs($node = NULL, $content_type = '') {
+    $tabs = array(
+        'current' => array(),
+        'available' => array()
+    );
+    $websites = get_all_websites();
+    $current_profile = get_current_profile();
+    $tabs['current'] = $current_profile;
+
+    if ($node != NULL) {
+        
+
+        switch ($content_type) {
+            case 'species':
+                $instruments = $node->field_species_instruments;
+                foreach ($instruments[LANGUAGE_NONE] as $instrument) {
+                    $species_instrument = entity_load('node', array($instrument['target_id']));
+                    $instrument_title = strtolower($species_instrument[$instrument['target_id']]->title);
+                    if ($instrument_title != $current_profile) {
+                        $tabs['available'][$instrument_title] = $websites[$instrument_title];
+                    }
+                }
+        }
+    }
+
+    return $tabs;
+}
+
+/**
+ * Render a speciefied slot
+ *
+ * @param       $node       object
+ * @param       $name       string
+ * @param       $type       string
+ * @param       $content    array
+ *
+ * @return      string
+*/
+function render_slot($node, $name, $type, $content = array()) {
+    $file = $type . DIRECTORY_SEPARATOR . $name . '.tpl.php';
+    $template_path = drupal_get_path('theme', 'cms_theme') . DIRECTORY_SEPARATOR . 'templates' . DIRECTORY_SEPARATOR . 'slots' . DIRECTORY_SEPARATOR . $file;
+    echo theme_render_template($template_path, array('node' => $node,
+                                                     'nid' => $node->nid,
+                                                     'content' => $content));
+}
+
+function render_family_tabs($tabs = array(), $type = '', $tabs_id = '', $field = '') {
+    $file = $type . DIRECTORY_SEPARATOR . 'family-tabs.tpl.php';
+    $template_path = drupal_get_path('theme', 'cms_theme') . DIRECTORY_SEPARATOR . 'templates' . DIRECTORY_SEPARATOR . 'slots' . DIRECTORY_SEPARATOR . $file;
+    echo theme_render_template($template_path, array('tabs' => $tabs,
+                                                     'tabs_id' => $tabs_id,
+                                                     'field' => $field));
+}
