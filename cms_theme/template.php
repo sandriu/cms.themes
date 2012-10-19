@@ -293,15 +293,13 @@ function get_available_tabs($node = NULL, $content_type = '') {
     $tabs['current'] = $current_profile;
 
     if ($node != NULL) {
-        
-
         switch ($content_type) {
             case 'species':
                 $instruments = $node->field_species_instruments;
                 foreach ($instruments[LANGUAGE_NONE] as $instrument) {
                     $species_instrument = entity_load('node', array($instrument['target_id']));
                     $instrument_title = strtolower($species_instrument[$instrument['target_id']]->title);
-                    if ($instrument_title != $current_profile) {
+                    if (($instrument_title != $current_profile) && (in_array($instrument_title, array_keys($websites)))) {
                         $tabs['available'][$instrument_title] = $websites[$instrument_title];
                     }
                 }
