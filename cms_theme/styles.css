@@ -65,7 +65,7 @@ div.gallery {
 .navbar .brand {
     display: block;
     padding: 10px 20px 0px 44px;
-    margin-left: -20px;
+    margin-left: 0px;
     font-size: 20px;
     font-weight: 200;
     color: rgb(41, 37, 98); /* #555 */
