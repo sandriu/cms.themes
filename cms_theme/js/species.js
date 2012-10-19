@@ -1,8 +1,6 @@
 (function($) {
     $(document).ready(function() {
-        if ( $('a[rel="popover"]').length > 0 ) {
-            $("a[rel='popover']").popover();
-        }
+        triggerPopovers($('body'));
 
         if ( $('#family-tabs').length > 0 ) {
             $("#family-tabs").tab();
@@ -30,10 +28,12 @@
                             loader.fadeOut('normal', function() {
                                 tab_pane.empty().append(data).addClass('loaded');
                             });
+                        },
+                        complete: function () {
+                            triggerPopovers(tab_pane);
                         }
                     });
                 }
-
             })
         }
     });
@@ -41,4 +41,12 @@
     $.fn.refresh_page = function() {
         location.reload();
     };
+
+    function triggerPopovers(holder) {
+        $('body').delegate('div', 'hover', function() {
+            if ( $('a[rel="popover"]').length > 0 ) {
+                $('a[rel="popover"]').popover();
+            }
+        });
+    }
 })(jQuery);
