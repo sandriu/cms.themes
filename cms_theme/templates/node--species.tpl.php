@@ -1,4 +1,3 @@
-
 <?php
     render_slot($node, 'node-buttons', 'general');
 ?>
@@ -17,20 +16,7 @@
     render_slot($node, 'population', 'species', $content);
     render_slot($node, 'population-size', 'species', $content);
     render_slot($node, 'population-trend', 'species', $content);
-    
-    if(!empty($content['field_species_notes']['#items'])) {
-?>
-
-<div class="row">
-    <strong><?php echo t('Notes'); ?></strong>
-
-    <div>
-        <?php echo render($content['field_species_notes']); ?>
-    </div>
-</div>
-
-<?php
-    }
+    render_slot($node, 'notes', 'species', $content);
 
     hide($content['links']);
     hide($content['comments']);
