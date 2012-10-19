@@ -1,5 +1,5 @@
 <?php
-    if($content['field_species_notes']['#items'][0]['value'] !== NULL) {
+    if(in_array('field_species_notes', array_keys($content)) && ($content['field_species_notes']['#items'][0]['value'] != NULL)) {
 ?>
 <strong><?php echo t('Notes'); ?></strong>
 
