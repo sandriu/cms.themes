@@ -78,6 +78,13 @@ a.navbar .brand span {
     padding-bottom: 10px;
 }
 
+.breadcrumb li {
+    max-width: 650px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .ajax-progress { position: absolute; }
 
 .reset-link {
