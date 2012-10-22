@@ -102,14 +102,13 @@ footer.footer span {
     text-align: center;
 }
 
-.publication-carousel {
-    height: 25
-    0px;
-    margin-top: 0;
-}
-
+.publication-carousel,
 .species-alert {
     margin-top: 28px;
+}
+
+.publication-carousel {
+    height: auto;
 }
 
 .popover {
