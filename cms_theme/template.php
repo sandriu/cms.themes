@@ -125,11 +125,14 @@ function CMS_theme_breadcrumb($variables) {
     $current_page_title = drupal_get_title();
 
     $count = count($breadcrumb) - 1;
-    $section = strip_tags($breadcrumb[$count]);
+    if ($count >= 0) {
+        $section = strip_tags($breadcrumb[$count]);
 
-    if (($current_page_title == $section) && (count(arg())) && (arg(0) == 'family')) {
-        $current_page_title = t('Family display');
+        if (($current_page_title == $section) && (count(arg())) && (arg(0) == 'family')) {
+            $current_page_title = t('Family display');
+        }
     }
+    
 
     foreach($breadcrumb as $key => $value) {
         if($count != $key) {
