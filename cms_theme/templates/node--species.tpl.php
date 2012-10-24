@@ -3,10 +3,10 @@
 ?>
 
 <div class="row">
-    <?php
-        render_slot($node, 'taxonomy', 'species', $content);
-        render_slot($node, 'gallery', 'species');
-    ?>
+<?php
+    render_slot($node, 'taxonomy', 'species', $content);
+    render_slot($node, 'gallery', 'species');
+?>
 </div>
 
 <?php

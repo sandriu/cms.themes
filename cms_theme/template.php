@@ -96,6 +96,11 @@ function CMS_theme_preprocess_page(&$variables) {
     $variables['tabs']['#primary'] = _twitter_bootstrap_local_tasks($variables['tabs']['#primary']);
 }
 
+function cms_theme_preprocess_taxonomy_term(&$variables) {
+    if ($variables['vocabulary_machine_name'] == 'languages') {
+        $variables['theme_hook_suggestions'][] = 'taxonomy_term__languages';
+    }
+}
 
 /**
  * Preprocess variables for region.tpl.php
@@ -288,8 +293,8 @@ function get_available_tabs($node = NULL, $content_type = '') {
         'current' => array(),
         'available' => array()
     );
-    $websites = get_all_websites();
-    $current_profile = get_current_profile();
+    $websites = CMSUtils::get_all_websites();
+    $current_profile = CMSUtils::get_current_profile();
     $tabs['current'] = $current_profile;
 
     if ($node != NULL) {
