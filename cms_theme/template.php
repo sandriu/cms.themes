@@ -221,14 +221,18 @@ function show_add_button() {
 }
 
 function is_current_page($menu_item) {
+    if (current_path() == $menu_item['href']) {
+        return true;
+    }
+
     if ((arg(0) == 'node') && (is_numeric(arg(1)))) {
         $node = node_load(arg(1));
         $type = $node->type;
-    }
-
-    if ((current_path() == $menu_item['href']) ||
-        ((isset($type)) && $type == strtolower($menu_item['title']))) {
-        return true;
+        $type_slug = CMSUtils::slug($type);
+        $menu_item_slug = CMSUtils::slug(strtolower($menu_item['title']));
+        if (($type_slug == $menu_item_slug) || (($type_slug . 's') == $menu_item_slug)) {
+            return true;
+        }
     }
 
     return false;
