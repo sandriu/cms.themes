@@ -207,7 +207,7 @@ function check_display_field($object) {
 }
 
 function get_cms_types() {
-    return array('species', 'parties', 'publication', 'listing');
+    return array('species', 'parties', 'publication', 'legal-instrument', 'listing');
 }
 
 function show_add_button() {
