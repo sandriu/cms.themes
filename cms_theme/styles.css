@@ -34,6 +34,10 @@ label {
     font-weight: bold;
 }
 
+.no-left-margin {
+    margin-left: 0;
+}
+
 /* Style for table sorter plugin */
 th.header { 
     background-image: url('images/bg.gif');

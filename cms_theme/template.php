@@ -18,6 +18,11 @@ function CMS_theme_theme() {
             'template' => 'templates/forms/publications/add',
             'path' => drupal_get_path('theme', 'cms_theme'),
         ),
+        'legal_instrument_node_form' => array(
+            'render element' => 'form',
+            'template' => 'templates/forms/legal_instrument/add',
+            'path' => drupal_get_path('theme', 'cms_theme'),
+        ),
     );
 }
 
@@ -207,7 +212,7 @@ function check_display_field($object) {
 }
 
 function get_cms_types() {
-    return array('species', 'parties', 'publication', 'legal-instrument', 'listing');
+    return array('species', 'parties', 'publication', 'legal_instrument', 'listing');
 }
 
 function show_add_button() {
