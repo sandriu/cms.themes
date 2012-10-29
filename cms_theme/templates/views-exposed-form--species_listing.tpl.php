@@ -68,12 +68,14 @@
       </div>
     <?php endif; ?>
 
-    <div class="views-exposed-widget views-submit-button">
+    <div class="clearfix"></div>
+
+    <div class="views-exposed-widget views-submit-button species-views-submit-button">
       <?php print $button; ?>
     </div>
 
     <?php if (!empty($reset_button)): ?>
-      <div class="views-exposed-widget views-reset-button">
+      <div class="views-exposed-widget views-reset-button species-views-reset-button">
         <a class="reset-link" id="edit-reset" name="op" onclick="jQuery('#views-exposed-form-species-admin-species-listing').resetForm();">Clear filters</a>
       </div>
     <?php endif; ?>
