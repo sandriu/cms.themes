@@ -68,8 +68,6 @@
       </div>
     <?php endif; ?>
 
-    <div class="clearfix"></div>
-
     <div class="views-exposed-widget views-submit-button species-views-submit-button">
       <?php print $button; ?>
     </div>

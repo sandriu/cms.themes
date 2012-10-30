@@ -130,14 +130,6 @@ footer.footer span {
     clear: both;
 }
 
-.species-views-submit-button button {
-    margin-top: 0 !important;
-}
-
-.species-views-reset-button a {
-    top: 6px;
-}
-
 .form-section-legend i {
     opacity:  0.5;
     margin-top: 6px;
