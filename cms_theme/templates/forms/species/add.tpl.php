@@ -154,7 +154,13 @@
 
 <legend  class="form-section-legend">
     <a href="javascript:void(0); " data-toggle="collapse" data-target="#geographic-range-fields"><i class="icon-minus-sign"></i></a>
-    <?php echo t('Geographic range'); ?>
+    <?php
+        if (CMSUtils::get_current_profile() == 'cms') {
+            echo t('Global geographic range');
+        }else {
+            echo t('Geographic range');
+        }
+    ?>
 </legend>
 
 <div id="geographic-range-fields" class="collapse in">
@@ -176,7 +182,7 @@
 
 <legend  class="form-section-legend">
     <a href="javascript:void(0); " data-toggle="collapse" data-target="#population-fields"><i class="icon-minus-sign"></i></a>
-    <?php echo t('Population per instrument'); ?>
+    <?php echo t('Population(s) per instrument'); ?>
 </legend>
 
 <div id="population-fields" class="collapse in">
