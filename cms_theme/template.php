@@ -260,7 +260,7 @@ function cms_theme_element_info_alter(&$type) {
 /**
  * Hide Text formats option from Text with summary fields
 */
-function cms_theme_process_format($element) {
+function cms_theme_process_format(&$element) {
     /**
      * Array of fields for which to hide the option
     */
@@ -276,7 +276,8 @@ function cms_theme_process_format($element) {
      * Hide the 'Text format' pane below certain text area fields
     */ 
     if (isset($element['#field_name']) && in_array($element['#field_name'], $fields)){
-            $element['format']['#access'] = FALSE;
+        $element['format']['format']['#default_value'] = 'full_html';
+        $element['format']['#access'] = FALSE;
     }
 
     return $element;
