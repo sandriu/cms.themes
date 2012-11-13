@@ -40,14 +40,14 @@
 
     <div class="span3 pull-right">
         <?php
-            if (!empty($node->field_publication_image) && count($node->field_publication_image[LANGUAGE_NONE])) {
+            if (!empty($node->field_publication_image) && count($node->field_publication_image[$node->language])) {
         ?>
         <div id="myCarousel" class="carousel slide img-polaroid publication-carousel">
             <?php
             echo render($content['field_publication_image']);
             ?>
     
-            <?php if (count($node->field_publication_image[LANGUAGE_NONE]) > 1) { ?>
+            <?php if (count($node->field_publication_image[$node->language]) > 1) { ?>
             <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
             <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
             <?php } ?>
