@@ -217,12 +217,12 @@ function check_display_field($object) {
 }
 
 function get_cms_types() {
-    return array('species', 'parties', 'publication', 'legal_instrument', 'countries', 'cms_country', 'listing');
+    return array('species', 'cms_party', 'publication', 'legal_instrument', 'countries', 'cms_country', 'listing');
 }
 
 function show_add_button() {
-    $types = get_cms_types();
-    return in_array(arg(0), $types) && in_array(arg(1), $types) && user_access(sprintf('add %s', arg(0)));
+    $type = arg(0);
+    return in_array($type, get_cms_types()) && user_access(sprintf('create %s content', $type));
 }
 
 function is_current_page($menu_item) {
