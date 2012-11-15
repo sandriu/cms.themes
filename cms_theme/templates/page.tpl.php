@@ -14,43 +14,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-
             <a class="brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
                 <span><?php print $site_name; ?></span>
             </a>
-
             <div class="nav-collapse pull-right">
-            <?php
-                if ($main_menu) {
-            ?>
-                <ul class="nav">
-                    <?php
-                    $type= '';
-                        if ((arg(0) == 'node') && (is_numeric(arg(1)))) {
-                            $node = node_load(arg(1));
-                            $type = $node->type;
-                        }
-
-                        foreach($main_menu as $menu_item) {
-                    ?>
-                    <li <?php if(is_current_page($menu_item)) { ?>class="active"<?php } ?>>
-                        <?php
-                            print l($menu_item['title'], $menu_item['href']);
-                        ?>
-                    </li>
-                    <?php
-                        }
-                    ?>
-                </ul>
-            <?php
-                }
-            ?>
-
-            <?php if ($primary_nav): ?>
+            <?php if($primary_nav): ?>
                 <?php print $primary_nav; ?>
             <?php endif; ?>
-
-            <?php if ($secondary_nav): ?>
+            <?php if($secondary_nav): ?>
                 <?php print $secondary_nav; ?>
             <?php endif; ?>
             </div>
@@ -110,7 +81,7 @@
             <?php print render($page['content']); ?>
             <div class="clearfix">&nbsp;</div>
             <?php
-                if (show_add_button()) {
+                if (show_add_button() && !empty($action_links)) {
             ?>
                     <a class="btn btn-primary" href="/<?php echo $action_links[0]['#link']['href']; ?>">
                         <?php
