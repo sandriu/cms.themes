@@ -1,3 +1,6 @@
+<?php
+    if (variable_get("state") != 'production') {
+?>
 <div id="demo-badge" class="alert alert-error">
     <p>
         <strong>
@@ -5,6 +8,9 @@
         </strong>
     </p>
 </div>
+<?php
+    }
+?>
 
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
