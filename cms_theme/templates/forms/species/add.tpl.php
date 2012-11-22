@@ -155,7 +155,7 @@
 <legend  class="form-section-legend">
     <a href="javascript:void(0); " data-toggle="collapse" data-target="#geographic-range-fields"><i class="icon-minus-sign"></i></a>
     <?php
-        if (CMSUtils::get_current_profile() == 'cms') {
+        if (CMSUtils::is_CMS()) {
             echo t('Global geographic range');
         }else {
             echo t('Geographic range');
