@@ -18,10 +18,10 @@
                 <span><?php print $site_name; ?></span>
             </a>
             <div class="nav-collapse pull-right">
-            <?php if($primary_nav): ?>
+            <?php if($primary_nav && !user_is_anonymous()): ?>
                 <?php print $primary_nav; ?>
             <?php endif; ?>
-            <?php if($secondary_nav): ?>
+            <?php if($secondary_nav && !user_is_anonymous()): ?>
                 <?php print $secondary_nav; ?>
             <?php endif; ?>
             </div>
