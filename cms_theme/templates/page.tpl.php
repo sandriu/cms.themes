@@ -87,15 +87,24 @@
             <?php print render($page['content']); ?>
             <div class="clearfix">&nbsp;</div>
             <?php
-                if (show_add_button() && !empty($action_links)) {
+                if (show_add_button() && arg(1) == 'listing') {
             ?>
-                    <a class="btn btn-primary" href="/<?php echo $action_links[0]['#link']['href']; ?>">
-                        <?php
-                        echo t($action_links[0]['#link']['title']);
-                        ?>
-                    </a>
+            <a class="btn btn-primary" href="/node/add/<?php echo arg(0); ?>">
+            Add <?php echo arg(0); ?>
+            </a>
             <?php
                 }
+            ?>
+            <?php
+                //if (show_add_button() && !empty($action_links)) {
+            ?>
+                    <!--<a class="btn btn-primary" href="/<?php #echo $action_links[0]['#link']['href']; ?>">-->
+                        <?php
+                        //echo t($action_links[0]['#link']['title']);
+                        ?>
+                    <!--</a>-->
+            <?php
+                //}
             ?>
 
         </div>
