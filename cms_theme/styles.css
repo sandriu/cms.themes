@@ -38,6 +38,10 @@ label {
     margin-left: 0;
 }
 
+.hidden {
+    display: none;
+}
+
 /* Style for table sorter plugin */
 th.header { 
     background-image: url('images/bg.gif');

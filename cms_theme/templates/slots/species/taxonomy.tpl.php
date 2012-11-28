@@ -2,16 +2,33 @@
     <table class="table table-condensed table-hover two-columns">
         <caption><?php echo t('Taxonomy'); ?></caption>
         <?php echo render($content['field_species_scientific_order']); ?>
+
+        <?php
+        if(check_display_field($content, 'field_species_class')) {
+            echo render($content['field_species_class']);
+        }
+        
+        if(check_display_field($content, 'field_species_order')) {
+            echo render($content['field_species_order']);
+        }
+        
+        if(check_display_field($content, 'field_species_family')) {
+            echo render($content['field_species_family']);
+        }
+        ?>
         <tr>
             <th><?php echo t('Scientific name'); ?></th>
             <td><?php echo $node->title; ?></td>
         </tr>
-        <?php echo render($content['field_species_class']); ?>
-        <?php echo render($content['field_species_order']); ?>
-        <?php echo render($content['field_species_genus']); ?>
-        <?php echo render($content['field_species_species']); ?>
-        <?php echo render($content['field_species_subspecies']); ?>
-        <?php echo render($content['field_species_author']); ?>
-        <?php echo render($content['field_species_standard_reference']); ?>
+        <?php
+        if(check_display_field($content, 'field_species_author')) {
+            echo render($content['field_species_author']);
+        }
+        
+        if(check_display_field($content, 'field_species_standard_reference')) {
+            echo render($content['field_species_standard_reference']);
+        }
+        
+        ?>
     </table>
 </div>

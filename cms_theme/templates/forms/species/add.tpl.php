@@ -12,6 +12,12 @@
 
     <div class="span4">
     <?php
+        echo drupal_render($form['field_species_genus']);
+    ?>
+    </div>
+
+    <div class="span3">
+    <?php
         echo drupal_render($form['field_species_scientific_order']);
     ?>
     </div>
@@ -24,7 +30,7 @@
 
     <div class="span4">
     <?php
-        echo drupal_render($form['title']);
+        echo drupal_render($form['field_species_species']);
     ?>
     </div>
 
@@ -42,18 +48,6 @@
 
     <div class="span4">
     <?php
-        echo drupal_render($form['field_species_genus']);
-    ?>
-    </div>
-
-    <div class="span4">
-    <?php
-        echo drupal_render($form['field_species_species']);
-    ?>
-    </div>
-
-    <div class="span4">
-    <?php
         echo drupal_render($form['field_species_author']);
     ?>
     </div>
@@ -61,6 +55,12 @@
     <div class="span4">
     <?php
         echo drupal_render($form['field_species_standard_reference']);
+    ?>
+    </div>
+
+    <div class="span4 hidden">
+    <?php
+        echo drupal_render($form['title']);
     ?>
     </div>
 </div>
