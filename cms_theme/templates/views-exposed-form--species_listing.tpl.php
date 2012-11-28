@@ -28,17 +28,6 @@
   ?>
 <?php endif;?>
 
-<?php
-    if (variable_get('state') == 'production') {
-?>
-<div class="alert alert-block">
-    <h4>Warning!</h4>
-    Species data will be reimported and updated!
-</div>
-<?php
-    }
-?>
-
 <div class="views-exposed-form well well-small">
   <div class="views-exposed-widgets clearfix">
     <?php foreach ($widgets as $id => $widget): ?>
