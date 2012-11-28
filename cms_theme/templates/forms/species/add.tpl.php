@@ -39,6 +39,30 @@
         echo drupal_render($form['field_species_subspecies']);
     ?>
     </div>
+
+    <div class="span4">
+    <?php
+        echo drupal_render($form['field_species_genus']);
+    ?>
+    </div>
+
+    <div class="span4">
+    <?php
+        echo drupal_render($form['field_species_species']);
+    ?>
+    </div>
+
+    <div class="span4">
+    <?php
+        echo drupal_render($form['field_species_author']);
+    ?>
+    </div>
+
+    <div class="span4">
+    <?php
+        echo drupal_render($form['field_species_standard_reference']);
+    ?>
+    </div>
 </div>
 
 <div class="clearfix">&nbsp;</div>
@@ -142,7 +166,7 @@
     ?>
     </div>
 
-        <div class="span4">
+    <div class="span4">
     <?php
         echo drupal_render($form['field_species_appendix']);
     ?>
