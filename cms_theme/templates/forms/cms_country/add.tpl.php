@@ -1,4 +1,12 @@
 <div class="row">
+    <div class="span12 no-left-margin">
+        <div class="span4">
+            <?php
+                echo drupal_render($form['title']);
+            ?>
+        </div>
+    </div>
+
     <div class="span12">
         <div class="span4 no-left-margin">
             <?php
