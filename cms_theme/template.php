@@ -302,6 +302,12 @@ function render_slot($node, $name, $type, $content = array()) {
                                                      'content' => $content));
 }
 
+function render_simple_slot($name, $type, $data = array()) {
+    $file = $type . DIRECTORY_SEPARATOR . $name . '.tpl.php';
+    $template_path = drupal_get_path('theme', 'cms_theme') . DIRECTORY_SEPARATOR . 'templates' . DIRECTORY_SEPARATOR . 'slots' . DIRECTORY_SEPARATOR . $file;
+    echo theme_render_template($template_path, array('data' => $data));
+}
+
 function render_family_tabs($tabs = array(), $type = '', $tabs_id = '', $field = '') {
     $file = $type . DIRECTORY_SEPARATOR . 'family-tabs.tpl.php';
     $template_path = drupal_get_path('theme', 'cms_theme') . DIRECTORY_SEPARATOR . 'templates' . DIRECTORY_SEPARATOR . 'slots' . DIRECTORY_SEPARATOR . $file;

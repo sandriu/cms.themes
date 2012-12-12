@@ -7,29 +7,32 @@ drupal_add_js(drupal_get_path('theme', 'cms_theme') . DIRECTORY_SEPARATOR . 'js'
 <table cellpadding="0" cellspacing="0" border="0" id="contacts-listing" class="cols-6 table table-striped table-hover table-bordered dataTable">
     <thead>
         <tr>
+            <!--<th width="1%">
+                <input type="checkbox" name="select-all" id="select-all" />
+            </th>-->
             <th>
                 <?php
-                    echo t('User ID');
+                    echo t('Full name');
                 ?>
             </th>
             <th>
                 <?php
-                    echo t('Organization');
-                ?>
-            </th>
-            <th>
-                <?php
-                    echo t('First name');
-                ?>
-            </th>
-            <th>
-                <?php
-                    echo t('Last name');
+                    echo t('Convention(s)');
                 ?>
             </th>
             <th>
                 <?php
                     echo t('Email');
+                ?>
+            </th>
+            <th>
+                <?php
+                    echo t('Country');
+                ?>
+            </th>
+            <th>
+                <?php
+                    echo t('City');
                 ?>
             </th>
             <th class="span1">
@@ -40,32 +43,23 @@ drupal_add_js(drupal_get_path('theme', 'cms_theme') . DIRECTORY_SEPARATOR . 'js'
         </tr>
     </thead>
 <?php
-    foreach ($users as $user) {
+    foreach ($users as $index => $user) {
 ?>
     <tr>
+<!--        <td>
+            <input type="checkbox" id="user<?php echo $index + 1; ?>" name="selected-users[]" />
+        </td>
+-->
         <td>
-            <a href="/contacts/user/<?php echo $user['uid'][0]; ?>/overview">
+            <a href="/contacts/item/<?php echo $user['uid'][0]; ?>/view">
             <?php
-                echo $user['uid'][0];
-            ?>
-            </a>
+                echo $user['sn'][0] . ' ' . $user['givenname'][0];
+            ?></a>
         </td>
 
         <td>
             <?php
                 echo $user['conventions'][0];
-            ?>
-        </td>
-
-        <td>
-            <?php
-                echo $user['sn'][0];
-            ?>
-        </td>
-
-        <td>
-            <?php
-                echo $user['givenname'][0];
             ?>
         </td>
 
@@ -102,10 +96,22 @@ drupal_add_js(drupal_get_path('theme', 'cms_theme') . DIRECTORY_SEPARATOR . 'js'
         </td>
 
         <td>
-            <a href="/contacts/user/<?php echo $user['uid'][0]; ?>/edit" rel="tooltip" title="<?php echo t('Edit'); ?>" data-placement="left">
+            <?php
+                echo countries_get_country($user['iso2'][0])->name;
+            ?>
+        </td>
+
+        <td>
+            <?php
+                echo $user['st'][0];
+            ?>
+        </td>
+
+        <td>
+            <a href="/contacts/item/<?php echo $user['uid'][0]; ?>/edit" rel="tooltip" title="<?php echo t('Edit'); ?>" data-placement="left">
                 <i class="icon-pencil"></i></a>
             &middot;
-            <a href="/contacts/user/<?php echo $user['uid'][0]; ?>/delete" rel="tooltip" title="<?php echo t('Delete'); ?>" data-placement="right">
+            <a href="/contacts/item/<?php echo $user['uid'][0]; ?>/delete" rel="tooltip" title="<?php echo t('Delete'); ?>" data-placement="right">
                 <i class="icon-trash"></i></a>
         </td>
     </tr>
@@ -113,3 +119,9 @@ drupal_add_js(drupal_get_path('theme', 'cms_theme') . DIRECTORY_SEPARATOR . 'js'
     }
 ?>
 </table>
+
+<div class="clear">&nbsp;</div>
+
+<a href="/contacts/add" class="btn btn-primary" title="<?php echo t('Add'); ?>">
+    Add new contact
+</a>
