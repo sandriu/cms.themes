@@ -25,6 +25,11 @@ function CMS_theme_theme() {
             'template' => 'templates/forms/cms_country/add',
             'path' => drupal_get_path('theme', 'cms_theme'),
         ),
+        'contacts_form' => array(
+            'render element' => 'form',
+            'template' => 'templates/forms/contacts/add',
+            'path' => drupal_get_path('theme', 'cms_theme'),
+        ),
     );
 }
 
@@ -253,6 +258,15 @@ function cms_theme_date_combo($variables) {
       '#children' => $element['#children'],
     );
     return theme('form_element', array('element' => $fieldset));
+}
+
+function cms_theme_form_required_marker() {
+    $t = get_t();
+    $attributes = array(
+      'class' => 'form-required required-label',
+      'title' => $t('This field is required.'),
+    );
+    return '<span' . drupal_attributes($attributes) . '>*</span>';
 }
 
 /**

@@ -34,8 +34,8 @@ label {
     font-weight: bold;
 }
 
-.no-left-margin {
-    margin-left: 0;
+.required-label {
+    color: #FF0000;
 }
 
 .hidden {

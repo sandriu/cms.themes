@@ -17,11 +17,6 @@ drupal_add_js(drupal_get_path('theme', 'cms_theme') . DIRECTORY_SEPARATOR . 'js'
             </th>
             <th>
                 <?php
-                    echo t('Convention(s)');
-                ?>
-            </th>
-            <th>
-                <?php
                     echo t('Email');
                 ?>
             </th>
@@ -33,11 +28,6 @@ drupal_add_js(drupal_get_path('theme', 'cms_theme') . DIRECTORY_SEPARATOR . 'js'
             <th>
                 <?php
                     echo t('City');
-                ?>
-            </th>
-            <th class="span1">
-                <?php
-                    echo t('Actions');
                 ?>
             </th>
         </tr>
@@ -59,12 +49,6 @@ drupal_add_js(drupal_get_path('theme', 'cms_theme') . DIRECTORY_SEPARATOR . 'js'
 
         <td>
             <?php
-                echo $user['conventions'][0];
-            ?>
-        </td>
-
-        <td>
-            <?php
                 if ($user['mail']['count'] > 1) {
             ?>
             <ul>
@@ -73,7 +57,7 @@ drupal_add_js(drupal_get_path('theme', 'cms_theme') . DIRECTORY_SEPARATOR . 'js'
                         if (is_numeric($index)) {
             ?>
                 <li>
-                    <a href="mailto:<?php echo $email; ?>" rel="tooltip" title="<?php echo t('Send email to') . ' ' . $email; ?>" data-placement="top">
+                    <a href="mailto:<?php echo $email; ?>" title="<?php echo t('Send email to') . ' ' . $email; ?>">
                     <?php echo $email; ?>
                     </a>
                 </li>
@@ -85,7 +69,7 @@ drupal_add_js(drupal_get_path('theme', 'cms_theme') . DIRECTORY_SEPARATOR . 'js'
             <?php
                 }else {
             ?>
-            <a href="mailto:<?php echo $user['mail'][0]; ?>" rel="tooltip" title="<?php echo t('Send email to') . ' ' . $user['mail'][0]; ?>" data-placement="top">
+            <a href="mailto:<?php echo $user['mail'][0]; ?>" title="<?php echo t('Send email to') . ' ' . $user['mail'][0]; ?>">
             <?php
                 echo $user['mail'][0];
             ?>
@@ -103,16 +87,8 @@ drupal_add_js(drupal_get_path('theme', 'cms_theme') . DIRECTORY_SEPARATOR . 'js'
 
         <td>
             <?php
-                echo $user['st'][0];
+                echo render($user['st'][0]);
             ?>
-        </td>
-
-        <td>
-            <a href="/contacts/item/<?php echo $user['uid'][0]; ?>/edit" rel="tooltip" title="<?php echo t('Edit'); ?>" data-placement="left">
-                <i class="icon-pencil"></i></a>
-            &middot;
-            <a href="/contacts/item/<?php echo $user['uid'][0]; ?>/delete" rel="tooltip" title="<?php echo t('Delete'); ?>" data-placement="right">
-                <i class="icon-trash"></i></a>
         </td>
     </tr>
 <?php
