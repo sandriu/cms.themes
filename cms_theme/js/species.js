@@ -4,7 +4,7 @@
 
         if ( $('#family-tabs').length > 0 ) {
             $("#family-tabs").tab();
-        
+
             $('#family-tabs a').click(function (e) {
                 e.preventDefault();
                 $this = $(this);

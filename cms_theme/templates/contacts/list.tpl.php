@@ -1,15 +1,41 @@
 <?php
-drupal_add_library('datatables', 'datatables');
-drupal_add_js(array('datatables' => array('#contacts-listing' => array())), 'setting');
-drupal_add_js(drupal_get_path('theme', 'cms_theme') . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR . 'contacts.js');
+    drupal_add_library('datatables', 'datatables');
+    drupal_add_js(array('datatables' => array('#contacts-listing' => array())), 'setting');
+    drupal_add_js(drupal_get_path('theme', 'cms_theme') . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR . 'contacts.js');
+?>
+
+<?php
+    if (!empty($instruments) && (CMSUtils::get_current_profile() == 'cms')) {
+?>
+<form class="form-inline" id="contacts-instrument-filter">
+    <label for="instrument">
+        <?php echo t('CMS Instrument'); ?>
+    </label>
+
+    <select name="instrument" id="instrument">
+        <?php
+            foreach ($instruments as $instrument) {
+                $instrument_key = CMSUtils::slug($instrument);
+        ?>
+        <option value="<?php echo $instrument_key; ?>" <?php echo (isset($_GET['instrument']) && ($_GET['instrument'] == $instrument_key)) ? 'selected="selected"' : ''; ?>>
+            <?php echo $instrument; ?>
+        </option>
+        <?php
+            }
+        ?>
+    </select>
+
+    <button type="submit" class="btn btn-primary btn-small"><?php echo t('Filter'); ?></button>
+</form>
+
+<hr />
+<?php
+    }
 ?>
 
 <table cellpadding="0" cellspacing="0" border="0" id="contacts-listing" class="cols-6 table table-striped table-hover table-bordered dataTable">
     <thead>
         <tr>
-            <!--<th width="1%">
-                <input type="checkbox" name="select-all" id="select-all" />
-            </th>-->
             <th>
                 <?php
                     echo t('Full name');
@@ -36,10 +62,6 @@ drupal_add_js(drupal_get_path('theme', 'cms_theme') . DIRECTORY_SEPARATOR . 'js'
     foreach ($users as $index => $user) {
 ?>
     <tr>
-<!--        <td>
-            <input type="checkbox" id="user<?php echo $index + 1; ?>" name="selected-users[]" />
-        </td>
--->
         <td>
             <a href="/contacts/item/<?php echo $user['uid'][0]; ?>/view">
             <?php
@@ -81,7 +103,30 @@ drupal_add_js(drupal_get_path('theme', 'cms_theme') . DIRECTORY_SEPARATOR . 'js'
 
         <td>
             <?php
-                echo countries_get_country($user['iso2'][0])->name;
+                if ($user['iso2']['count'] == 1) {
+                    $country = countries_get_country($user['iso2'][0]);
+                    if ($country) {
+                        echo $country->name;
+                    }
+                }else if($user['iso2']['count'] > 1) {
+            ?>
+            <ul>
+            <?php
+                    foreach ($user['iso2'] as $index => $country) {
+                        if (is_numeric($index)) {
+                            $country = countries_get_country($user['iso2'][$index]);
+                            if ($country) {
+            ?>
+            <li><?php echo $country->name; ?></li>
+            <?php
+                            }
+                        }
+                    }
+            ?>
+            </ul>
+            <?php
+                }
+                
             ?>
         </td>
 
@@ -99,5 +144,5 @@ drupal_add_js(drupal_get_path('theme', 'cms_theme') . DIRECTORY_SEPARATOR . 'js'
 <div class="clear">&nbsp;</div>
 
 <a href="/contacts/add" class="btn btn-primary" title="<?php echo t('Add'); ?>">
-    Add new contact
+    <?php echo t('Add new contact'); ?>
 </a>
