@@ -177,13 +177,13 @@
             <tr>
                 <th class="span2">
                     <?php
-                        echo t('Position');
+                        echo t('Organization');
                     ?>
                 </th>
 
                 <td>
                     <?php
-                        echo render($data['position'][0]);
+                        echo render($data['suborg'][0]);
                     ?>
                 </td>
             </tr>
@@ -191,13 +191,27 @@
             <tr>
                 <th class="span2">
                     <?php
-                        echo t('Department number');
+                        echo t('Department');
                     ?>
                 </th>
 
                 <td>
                     <?php
-                        echo render($data['departmentnumber'][0]);
+                        echo render($data['suborgdept'][0]);
+                    ?>
+                </td>
+            </tr>
+
+            <tr>
+                <th class="span2">
+                    <?php
+                        echo t('Position');
+                    ?>
+                </th>
+
+                <td>
+                    <?php
+                        echo render($data['position'][0]);
                     ?>
                 </td>
             </tr>

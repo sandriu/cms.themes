@@ -1,6 +1,5 @@
 <?php
     drupal_add_library('datatables', 'datatables');
-    //drupal_add_js(array('datatables' => array()), 'setting');
     drupal_add_js(drupal_get_path('theme', 'cms_theme') . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR . 'contacts.js');
 ?>
 

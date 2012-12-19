@@ -33,8 +33,8 @@
                 echo drupal_render($form['position']);
                 echo drupal_render($form['email']);
                 echo drupal_render($form['work_phone']);
-                //echo drupal_render($form['organization']);
-                echo drupal_render($form['department_number']);
+                echo drupal_render($form['organization']);
+                echo drupal_render($form['department']);
                 echo drupal_render($form['conventions']);
             ?>
         </fieldset>

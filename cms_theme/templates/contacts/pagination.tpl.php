@@ -1,6 +1,6 @@
 <?php
     $groups = array_keys(CMSUtils::get_all_websites());
-    
+
     if (CMSUtils::get_current_profile() == 'cms') {
         $instrument = isset($_GET['instrument']) && (in_array($_GET['instrument'], $groups)) ? $_GET['instrument'] : 'cms';
         $url = "/contacts/listing?instrument=$instrument&page=";
@@ -8,17 +8,8 @@
         $url = "/contacts/listing?page=";
     }
 
-    $start = $page - floor(5/2);
-    $end = $page + floor(5/2);
-    if ($start <= 0) {
-        $end += abs($start) + 1;
-        $start = 1;
-    }
-    if($end > $total_pages) {
-        $start -= $end - $total_pages;
-        $end = $total_pages;
-    }  
-
+    $start = (($page - 5) > 0) ? $page - 4 : 1;
+    $end   = (($page + 5) < $total_pages) ? $page + 5 : $total_pages;
 ?>
 
 <div class="pagination pull-right">
