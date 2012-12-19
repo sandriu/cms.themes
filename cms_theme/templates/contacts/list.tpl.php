@@ -1,6 +1,6 @@
 <?php
     drupal_add_library('datatables', 'datatables');
-    drupal_add_js(array('datatables' => array('#contacts-listing' => array())), 'setting');
+    //drupal_add_js(array('datatables' => array()), 'setting');
     drupal_add_js(drupal_get_path('theme', 'cms_theme') . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR . 'contacts.js');
 ?>
 
@@ -36,22 +36,22 @@
 <table cellpadding="0" cellspacing="0" border="0" id="contacts-listing" class="cols-6 table table-striped table-hover table-bordered dataTable">
     <thead>
         <tr>
-            <th>
+            <th class="span4">
                 <?php
                     echo t('Full name');
                 ?>
             </th>
-            <th>
+            <th class="span4">
                 <?php
                     echo t('Email');
                 ?>
             </th>
-            <th>
+            <th class="span2">
                 <?php
                     echo t('Country');
                 ?>
             </th>
-            <th>
+            <th class="span2">
                 <?php
                     echo t('City');
                 ?>
@@ -141,7 +141,9 @@
 ?>
 </table>
 
-<div class="clear">&nbsp;</div>
+<?php
+    echo $pagination;
+?>
 
 <a href="/contacts/add" class="btn btn-primary" title="<?php echo t('Add'); ?>">
     <?php echo t('Add new contact'); ?>
