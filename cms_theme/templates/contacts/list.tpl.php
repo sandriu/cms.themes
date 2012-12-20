@@ -58,6 +58,7 @@
         </tr>
     </thead>
 <?php
+if (!empty($users)) {
     foreach ($users as $index => $user) {
 ?>
     <tr>
@@ -137,6 +138,19 @@
     </tr>
 <?php
     }
+}else {
+?>
+
+    <tr class="odd">
+        <td valign="top" colspan="4">
+            <?php
+                echo t('No users found');
+            ?>
+        </td>
+    </tr>
+
+<?php
+}
 ?>
 </table>
 
