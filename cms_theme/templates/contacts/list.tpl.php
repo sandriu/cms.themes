@@ -69,7 +69,7 @@
         ?>
             <tr>
                 <td>
-                    <a href="/contacts/item/<?php echo $user['uid'][0]; ?>/view">
+                    <a href="/contacts/item/<?php echo $user['uid'][0]; ?>/<?php echo $instrument; ?>/view">
                     <?php
                         echo $user['sn'][0] . ' ' . $user['givenname'][0];
                     ?></a>
