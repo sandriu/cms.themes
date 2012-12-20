@@ -29,8 +29,7 @@
 
             <select name="instrument" id="instrument">
                 <?php
-                    foreach ($data['instruments'] as $instrument) {
-                        $instrument_key = CMSUtils::slug($instrument);
+                    foreach ($data['instruments'] as $instrument_key => $instrument) {
                 ?>
                 <option value="<?php echo $instrument_key; ?>" <?php echo (isset($_GET['instrument']) && ($_GET['instrument'] == $instrument_key)) ? 'selected="selected"' : ''; ?>>
                     <?php echo $instrument; ?>
