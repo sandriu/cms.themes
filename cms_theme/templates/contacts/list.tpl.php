@@ -144,7 +144,7 @@ if (!empty($users)) {
 ?>
 
     <tr class="odd">
-        <td valign="top" colspan="4">
+        <td valign="top" colspan="6">
             <?php
                 echo t('No contacts found');
             ?>
