@@ -121,6 +121,7 @@
 
                 <td>
                     <?php
+                    if (isset($user['iso2'])) {
                         if ($user['iso2']['count'] == 1) {
                             $country = countries_get_country($user['iso2'][0]);
                             if ($country) {
@@ -144,7 +145,7 @@
                     </ul>
                     <?php
                         }
-                        
+                    }
                     ?>
                 </td>
 
