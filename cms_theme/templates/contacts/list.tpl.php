@@ -8,7 +8,7 @@
 ?>
 <div class="row">
     <div class="span12">
-        <p class="lead"><?php echo t('Contacts from'); ?> <strong class="text-info"><?php echo $instruments[$_GET['instrument']]; ?></strong> <?php echo t('instrument'); ?>.</p>
+        <p class="lead"><?php echo t('Contacts from'); ?> <strong class="text-info"><?php echo $instruments[$instrument]; ?></strong> <?php echo t('instrument'); ?>.</p>
     </div>
 </div>
 
