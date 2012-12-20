@@ -1,10 +1,13 @@
 (function($) {
     $(document).ready(function() {
         $('a[rel="tooltip"]').tooltip();
-        
-        $('#contacts-instrument-filter').submit(function() {
+
+        $('#contacts-per-page, #instrument').change(function(){
+            per_page = $('#contacts-per-page').val();
+            page = $('#current-page').val();
             instrument = $('#instrument').val();
-            window.location = '/contacts/listing?instrument=' + instrument;
+            url = '/contacts/listing?instrument=' + instrument + '&page=' + page + '&per_page=' + per_page;
+            window.location = url;
         });
     });
 })(jQuery);

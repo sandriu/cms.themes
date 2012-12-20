@@ -12,13 +12,12 @@
     $end   = (($page + 2) < $total_pages) ? $page + 2 : $total_pages;
     $start_displayed = ($page * $per_page) - ($per_page - 1);
     $end_displayed = $start_displayed + $total_entries_displayed - 1;
-    //$end_displayed = $total_entries - $end_displayed + $start_displayed + $per_page -1;
 ?>
 
 <div class="row">
     <div class="span6">
         <div class="dataTables_info">
-            <?php echo t('Showing') . ' ' . $total_entries . ' ' . t('users') . ' (' . $start_displayed . ' to ' . $end_displayed . ')'; ?>
+            <?php echo t('Showing') . ' ' . $total_entries . ' ' . t('contacts') . ' (' . $start_displayed . ' to ' . $end_displayed . ')'; ?>
         </div>
     </div>
 

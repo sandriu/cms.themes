@@ -1,36 +1,56 @@
 <?php
-    drupal_add_library('datatables', 'datatables');
+    //drupal_add_library('datatables', 'datatables');
     drupal_add_js(drupal_get_path('theme', 'cms_theme') . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR . 'contacts.js');
 ?>
 
-<?php
-    if (!empty($instruments) && (CMSUtils::get_current_profile() == 'cms')) {
-?>
-<form class="form-inline" id="contacts-instrument-filter">
-    <label for="instrument">
-        <?php echo t('CMS Instrument'); ?>
-    </label>
+<div class="row">
+    <div class="span6">
+        <form class="form-inline">
+            <label>
+                <?php echo t('Display'); ?>
+            </label>
+            <input type="hidden" name="current-page" value="<?php echo $page; ?>" id="current-page" />
 
-    <select name="instrument" id="instrument">
-        <?php
-            foreach ($instruments as $instrument) {
-                $instrument_key = CMSUtils::slug($instrument);
-        ?>
-        <option value="<?php echo $instrument_key; ?>" <?php echo (isset($_GET['instrument']) && ($_GET['instrument'] == $instrument_key)) ? 'selected="selected"' : ''; ?>>
-            <?php echo $instrument; ?>
-        </option>
-        <?php
-            }
-        ?>
-    </select>
+            <select size="1" name="contacts-per-page" id="contacts-per-page">
+                <?php
+                    foreach ($per_page_options as $option) {
+                ?>
+                <option value="<?php echo $option?>"<?php echo (($per_page == $option)) ? ' selected="selected"' : ''; ?>><?php echo $option; ?></option>
+                <?php
+                    }
+                ?>
+            </select> <?php echo t('contacts'); ?>
+        </form>
+    </div>
 
-    <button type="submit" class="btn btn-primary btn-small"><?php echo t('Filter'); ?></button>
-</form>
+    <?php
+        if (!empty($instruments) && (CMSUtils::get_current_profile() == 'cms')) {
+    ?>
+    <div class="span6">
+        <form class="form-inline pull-right" id="contacts-instrument-filter">
+            <label for="instrument">
+                <?php echo t('CMS Instrument'); ?>
+            </label>
 
-<hr />
-<?php
-    }
-?>
+            <select name="instrument" id="instrument">
+                <?php
+                    foreach ($instruments as $instrument) {
+                        $instrument_key = CMSUtils::slug($instrument);
+                ?>
+                <option value="<?php echo $instrument_key; ?>" <?php echo (isset($_GET['instrument']) && ($_GET['instrument'] == $instrument_key)) ? 'selected="selected"' : ''; ?>>
+                    <?php echo $instrument; ?>
+                </option>
+                <?php
+                    }
+                ?>
+            </select>
+        </form>
+    </div>
+
+    <?php
+        }
+    ?>
+</div>
 
 <table cellpadding="0" cellspacing="0" border="0" id="contacts-listing" class="cols-6 table table-striped table-hover table-bordered dataTable">
     <thead>
@@ -144,7 +164,7 @@ if (!empty($users)) {
     <tr class="odd">
         <td valign="top" colspan="4">
             <?php
-                echo t('No users found');
+                echo t('No contacts found');
             ?>
         </td>
     </tr>
