@@ -31,7 +31,7 @@
                 <?php
                     foreach ($data['instruments'] as $instrument_key => $instrument) {
                 ?>
-                <option value="<?php echo $instrument_key; ?>" <?php echo (isset($data['current_group']) && ($data['current_group'] == $instrument_key)) ? 'selected="selected"' : ''; ?>>
+                <option value="<?php echo $instrument_key; ?>" <?php echo (isset($data['current_group']) && ($data['current_group']  == $instrument_key)) ? 'selected="selected"' : ''; ?>>
                     <?php echo $instrument; ?>
                 </option>
                 <?php

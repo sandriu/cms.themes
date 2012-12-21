@@ -225,7 +225,9 @@
 
                 <td>
                     <?php
+                    if (isset($data['iso2']) && !empty($data['iso2'])) {
                         echo countries_get_country($data['iso2'][0])->name;
+                    }
                     ?>
                 </td>
             </tr>

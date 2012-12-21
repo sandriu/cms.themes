@@ -1,5 +1,8 @@
 <?php
-    if (CMSUtils::get_current_profile() == $data['instrument']) {
+    global $user;
+
+    $current_profile = CMSUtils::get_current_profile();
+    if ((($current_profile == $data['instrument']) || ($current_profile == 'cms')) && (user_access('administer contacts content', $user))) {
 ?>
 <div class="row">
     <div class="span12">
