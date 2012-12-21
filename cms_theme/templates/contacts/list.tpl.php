@@ -3,25 +3,22 @@
     drupal_add_css(drupal_get_path('module', 'datatables') . '/dataTables/media/css/demo_table.css');
 ?>
 
-<?php
-    if (CMSUtils::get_current_profile() == 'cms') {
-?>
 <div class="row">
     <div class="span12">
-        <p class="lead"><?php echo t('Contacts from'); ?> <strong class="text-info"><?php echo $instruments[$instrument]; ?></strong> <?php echo t('instrument'); ?>.</p>
+        <p class="lead">
+            <?php echo t('Contacts from'); ?> <strong class="text-info"><?php echo $instruments[$instrument]; ?></strong> <?php echo t('instrument'); ?>.
+        </p>
     </div>
 </div>
 
 <div class="clearfix">&nbsp;</div>
-<?php
-    }
-?>
 
 <?php
     echo render_simple_slot('filters', 'contacts',
                             array('page' => $page,
                                   'per_page' => $per_page,
                                   'per_page_options' => $per_page_options,
+                                  'current_group' => $instrument,
                                   'instruments' => $instruments)
     );
 ?>

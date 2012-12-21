@@ -19,7 +19,7 @@
     </div>
 
     <?php
-        if (!empty($data['instruments']) && (CMSUtils::get_current_profile() == 'cms')) {
+        if (!empty($data['instruments'])) {
     ?>
     <div class="span6">
         <form class="form-inline pull-right" id="contacts-instrument-filter">
@@ -31,7 +31,7 @@
                 <?php
                     foreach ($data['instruments'] as $instrument_key => $instrument) {
                 ?>
-                <option value="<?php echo $instrument_key; ?>" <?php echo (isset($_GET['instrument']) && ($_GET['instrument'] == $instrument_key)) ? 'selected="selected"' : ''; ?>>
+                <option value="<?php echo $instrument_key; ?>" <?php echo (isset($data['current_group']) && ($data['current_group'] == $instrument_key)) ? 'selected="selected"' : ''; ?>>
                     <?php echo $instrument; ?>
                 </option>
                 <?php
