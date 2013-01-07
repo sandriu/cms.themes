@@ -68,11 +68,11 @@
 <div class="clearfix">&nbsp;</div>
 
 <legend  class="form-section-legend">
-    <a href="javascript:void(0); " data-toggle="collapse" data-target="#common-names-fields"><i class="icon-minus-sign"></i></a>
+    <a href="javascript:void(0); " data-toggle="collapse" data-target="#common-names-fields"><i class="icon-plus-sign"></i></a>
     <?php echo t('Common names'); ?>
 </legend>
 
-<div id="common-names-fields" class="collapse in">
+<div id="common-names-fields" class="collapse out">
     <div class="span4">
     <?php
         echo drupal_render($form['field_species_name_en']);
@@ -109,11 +109,11 @@
 <div class="clearfix">&nbsp;</div>
 
 <legend  class="form-section-legend">
-    <a href="javascript:void(0); " data-toggle="collapse" data-target="#assessment-information-fields"><i class="icon-minus-sign"></i></a>
+    <a href="javascript:void(0); " data-toggle="collapse" data-target="#assessment-information-fields"><i class="icon-plus-sign"></i></a>
     <?php echo t('Assessment information'); ?>
 </legend>
 
-<div id="assessment-information-fields" class="collapse in">
+<div id="assessment-information-fields" class="collapse out">
     <div class="span4">
     <?php
         echo drupal_render($form['field_species_iucn_status']);
@@ -177,7 +177,7 @@
 <div class="clearfix">&nbsp;</div>
 
 <legend  class="form-section-legend">
-    <a href="javascript:void(0); " data-toggle="collapse" data-target="#geographic-range-fields"><i class="icon-minus-sign"></i></a>
+    <a href="javascript:void(0); " data-toggle="collapse" data-target="#geographic-range-fields"><i class="icon-plus-sign"></i></a>
     <?php
         if (CMSUtils::is_CMS()) {
             echo t('Global geographic range');
@@ -187,7 +187,7 @@
     ?>
 </legend>
 
-<div id="geographic-range-fields" class="collapse in">
+<div id="geographic-range-fields" class="collapse out">
     <div class="span11">
     <?php
         echo drupal_render($form['field_species_range_states']);
@@ -205,11 +205,11 @@
 <div class="clearfix">&nbsp;</div>
 
 <legend  class="form-section-legend">
-    <a href="javascript:void(0); " data-toggle="collapse" data-target="#population-fields"><i class="icon-minus-sign"></i></a>
+    <a href="javascript:void(0); " data-toggle="collapse" data-target="#population-fields"><i class="icon-plus-sign"></i></a>
     <?php echo t('Population(s) per instrument'); ?>
 </legend>
 
-<div id="population-fields" class="collapse in">
+<div id="population-fields" class="collapse out">
     <div class="span11">
     <?php
         echo drupal_render($form['field_species_pop']);
@@ -220,11 +220,11 @@
 <div class="clearfix">&nbsp;</div>
 
 <legend  class="form-section-legend">
-    <a href="javascript:void(0); " data-toggle="collapse" data-target="#population-size-fields"><i class="icon-minus-sign"></i></a>
+    <a href="javascript:void(0); " data-toggle="collapse" data-target="#population-size-fields"><i class="icon-plus-sign"></i></a>
     <?php echo t('Population size'); ?>
 </legend>
 
-<div id="population-size-fields" class="collapse in">
+<div id="population-size-fields" class="collapse out">
     <div class="span11">
     <?php
         echo drupal_render($form['field_species_pop_size']);
@@ -235,11 +235,11 @@
 <div class="clearfix">&nbsp;</div>
 
 <legend  class="form-section-legend">
-    <a href="javascript:void(0); " data-toggle="collapse" data-target="#population-trend-fields"><i class="icon-minus-sign"></i></a>
+    <a href="javascript:void(0); " data-toggle="collapse" data-target="#population-trend-fields"><i class="icon-plus-sign"></i></a>
     <?php echo t('Population trend'); ?>
 </legend>
 
-<div id="population-trend-fields" class="collapse in">
+<div id="population-trend-fields" class="collapse out">
     <div class="span11">
     <?php
         echo drupal_render($form['field_species_pop_trend']);
@@ -250,11 +250,11 @@
 <div class="clearfix">&nbsp;</div>
 
 <legend  class="form-section-legend">
-    <a href="javascript:void(0); " data-toggle="collapse" data-target="#other-fields"><i class="icon-minus-sign"></i></a>
+    <a href="javascript:void(0); " data-toggle="collapse" data-target="#other-fields"><i class="icon-plus-sign"></i></a>
     <?php echo t('Other'); ?>
 </legend>
 
-<div id="other-fields" class="collapse in">
+<div id="other-fields" class="collapse out">
     <?php
         echo drupal_render($form['field_species_critical_sites']);
         echo drupal_render($form['field_species_notes']);
