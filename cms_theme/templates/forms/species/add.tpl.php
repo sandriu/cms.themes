@@ -263,18 +263,8 @@
 
 <div class="clearfix">&nbsp;</div>
 
-<legend  class="form-section-legend">
-    <a href="javascript:void(0); " data-toggle="collapse" data-target="#additional-settings-fields"><i class="icon-plus-sign"></i></a>
-    <?php echo t('System settings'); ?>
-</legend>
-
-<div id="additional-settings-fields" class="collapse out">
-    <?php
-        echo drupal_render($form['additional_settings']);
-    ?>
-</div>
-
 <?php
+    hide($form['additional_settings']);
     echo drupal_render_children($form);
 ?>
 
