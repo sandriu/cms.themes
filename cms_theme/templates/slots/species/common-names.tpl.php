@@ -1,16 +1,26 @@
- <?php
-    if(check_display_field($content, 'field_species_name_en')) {
-?>
-    <table class="table table-condensed table-hover two-columns">
-        <caption><?php echo t('Common names'); ?></caption>
-        <tbody>
-            <?php echo render($content['field_species_name_en']); ?>
-            <?php echo render($content['field_species_name_fr']); ?>
-            <?php echo render($content['field_species_name_es']); ?>
-            <?php echo render($content['field_species_name_de']); ?>
-            <?php echo render($content['field_species_former_name']); ?>
-        </tbody>
-    </table>
-<?php
-    }
-?>
+<table class="table table-condensed table-hover two-columns">
+    <caption><?php echo t('Common names'); ?></caption>
+    <tbody>
+        <?php
+            if(check_display_field($content, 'field_species_name_en')) {
+                echo render($content['field_species_name_en']);
+            }
+
+            if(check_display_field($content, 'field_species_name_fr')) {
+                echo render($content['field_species_name_fr']);
+            }
+
+            if(check_display_field($content, 'field_species_name_es')) {
+                echo render($content['field_species_name_es']);
+            }
+
+            if(check_display_field($content, 'field_species_name_de')) {
+                echo render($content['field_species_name_de']);
+            }
+
+            if(check_display_field($content, 'field_species_former_name')) {
+                echo render($content['field_species_former_name']);
+            }
+        ?>
+    </tbody>
+</table>
