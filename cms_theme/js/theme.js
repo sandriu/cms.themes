@@ -9,7 +9,7 @@ jQuery(document).ready(function(){
     });
 });
 
-
+if (Drupal.jsEnabled) {
 (function ($) {
     Drupal.behaviors.tableDrag = {
        attach: function (context, settings) {
@@ -133,3 +133,4 @@ jQuery(document).ready(function(){
         }
     };
 })(jQuery);
+}

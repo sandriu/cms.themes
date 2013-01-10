@@ -36,6 +36,10 @@
                 }
             })
         }
+
+        $("#edit-field-species-pop-size-und-0-field-species-pop-size-r-und-0-value").keyup(function(){
+            $("#edit-field-species-pop-trend-und-0-field-species-pop-trend-r-und-0-value").val(this.value);
+        });
     });
 
     $.fn.refresh_page = function() {
