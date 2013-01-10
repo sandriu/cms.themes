@@ -1,9 +1,11 @@
 <div class="row span7">
     <table class="table table-condensed table-hover two-columns">
         <caption><?php echo t('Taxonomy'); ?></caption>
-        <?php echo render($content['field_species_scientific_order']); ?>
-
         <?php
+        if(check_display_field($content, 'field_species_scientific_order')) {
+            echo render($content['field_species_scientific_order']);
+        }
+
         if(check_display_field($content, 'field_species_class')) {
             echo render($content['field_species_class']);
         }
