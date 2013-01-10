@@ -160,9 +160,15 @@ function check_display_field($object) {
     $args = func_get_args();
     array_shift($args);
     foreach($args as $arg) {
-        if((!empty($object[$arg]['#items'])) && (!empty($object[$arg]['#items'][0]['value'])) && ($object[$arg]['#items'][0]['value'] != NULL)) {
-            if (($object[$arg]['#field_type'] == 'date') && ($object[$arg]['#items'][0]['value'] == 1970)) {
+        if (!empty($object[$arg]['#items'])) {
+            if (($object[$arg]['#field_type'] == 'field_collection') && (empty($object[$arg]['#items']))){
                 return FALSE;
+            }
+
+            if ((!empty($object[$arg]['#items'][0]['value'])) && ($object[$arg]['#items'][0]['value'] != NULL)) {
+                if (($object[$arg]['#field_type'] == 'date') && ($object[$arg]['#items'][0]['value'] == 1970)) {
+                    return FALSE;
+                }
             }
 
             return TRUE;
