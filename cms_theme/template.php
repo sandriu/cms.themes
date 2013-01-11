@@ -165,8 +165,6 @@ function check_display_field($object) {
                 (($object[$arg]['#field_type'] == 'date') && ($object[$arg]['#items'][0]['value'] == '1970-01-01T00:00:00')) ||
                 (isset($object[$arg]['#items'][0]['value']) && (($object[$arg]['#items'][0]['value'] == "0")))) {
                 return FALSE;
-            }elseif(empty($object[$arg]['#items'][0]['value'])) {
-                return FALSE;
             }
 
             return TRUE;
