@@ -203,6 +203,10 @@ i.loading-image {
     vertical-align: middle;
 }
 
+#taxonomy-fields .form-autocomplete {
+    width: 250px;
+}
+
 @media print {
     .btn,
     .navbar,
