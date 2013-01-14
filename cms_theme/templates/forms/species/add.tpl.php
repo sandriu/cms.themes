@@ -221,7 +221,7 @@
 
 <legend  class="form-section-legend">
     <a href="javascript:void(0); " data-toggle="collapse" data-target="#population-size-fields"><i class="icon-plus-sign"></i></a>
-    <?php echo t('Population size'); ?>
+    <?php echo t('Population size and trend'); ?>
 </legend>
 
 <div id="population-size-fields" class="collapse out">
@@ -235,28 +235,20 @@
 <div class="clearfix">&nbsp;</div>
 
 <legend  class="form-section-legend">
-    <a href="javascript:void(0); " data-toggle="collapse" data-target="#population-trend-fields"><i class="icon-plus-sign"></i></a>
-    <?php echo t('Population trend'); ?>
-</legend>
-
-<div id="population-trend-fields" class="collapse out">
-    <div class="span11">
-    <?php
-        echo drupal_render($form['field_species_pop_trend']);
-    ?>
-    </div>
-</div>
-
-<div class="clearfix">&nbsp;</div>
-
-<legend  class="form-section-legend">
     <a href="javascript:void(0); " data-toggle="collapse" data-target="#other-fields"><i class="icon-plus-sign"></i></a>
     <?php echo t('Other'); ?>
 </legend>
 
 <div id="other-fields" class="collapse out">
     <?php
+        echo drupal_render($form['field_species_threats']);
+    ?>
+    <div class="clearfix">&nbsp;</div>
+    <?php
         echo drupal_render($form['field_species_critical_sites']);
+    ?>
+    <div class="clearfix">&nbsp;</div>
+    <?php
         echo drupal_render($form['field_species_notes']);
     ?>
 </div>
