@@ -1,13 +1,21 @@
-jQuery(document).ready(function(){
-    jQuery('.form-section-legend a').click(function(e){
-       $this = jQuery(this);
-       if ($this.parent().next('div.collapse').hasClass('in')) {
-            jQuery('i', $this).addClass('icon-plus-sign').removeClass('icon-minus-sign');
-       }else {
-            jQuery('i', $this).removeClass('icon-plus-sign').addClass('icon-minus-sign');
-       }
+(function ($) {
+    $(document).ready(function(){
+        $('.form-section-legend a').click(function(e){
+           $this = $(this);
+           if ($this.parent().next('div.collapse').hasClass('in')) {
+                $('i', $this).addClass('icon-plus-sign').removeClass('icon-minus-sign');
+           }else {
+                $('i', $this).removeClass('icon-plus-sign').addClass('icon-minus-sign');
+           }
+        });
+
+        $('#autocomplete ul li').live('focus', function() {
+            $(this).addClass('selected');
+        }).live('blur', function() {
+            $(this).removeClass('selected');
+        });
     });
-});
+})(jQuery);
 
 if (Drupal.jsEnabled) {
 (function ($) {
