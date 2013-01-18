@@ -8,16 +8,9 @@
                 $('i', $this).removeClass('icon-plus-sign').addClass('icon-minus-sign');
            }
         });
-
-        $('#autocomplete ul li').live('focus', function() {
-            $(this).addClass('selected');
-        }).live('blur', function() {
-            $(this).removeClass('selected');
-        });
     });
 })(jQuery);
 
-if (Drupal.jsEnabled) {
 (function ($) {
     Drupal.behaviors.tableDrag = {
        attach: function (context, settings) {
@@ -141,4 +134,3 @@ if (Drupal.jsEnabled) {
         }
     };
 })(jQuery);
-}

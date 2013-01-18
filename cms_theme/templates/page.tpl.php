@@ -89,8 +89,8 @@
             <?php
                 if (show_add_button() && arg(1) == 'listing') {
             ?>
-            <a class="btn btn-primary" href="/node/add/<?php echo arg(0); ?>">
-            Add <?php echo arg(0); ?>
+            <a class="btn btn-primary" href="/node/add/<?php echo CMSUtils::slug(arg(0)); ?>">
+            Add <?php echo node_type_get_name(arg(0)); ?>
             </a>
             <?php
                 }
