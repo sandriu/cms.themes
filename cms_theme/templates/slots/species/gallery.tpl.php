@@ -13,7 +13,7 @@
             foreach ($node->field_species_images[$node->language] as $index => $image) {
         ?>
             <div class="item">
-                <img src="<?php echo file_create_url($image['uri']); ?>" alt="" title="" />
+                <img src="<?php echo file_create_url($image['uri']); ?>" alt="" title="" class="species-custom-image" />
             </div>
         <?php
             }
