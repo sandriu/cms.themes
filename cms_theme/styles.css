@@ -214,6 +214,11 @@ i.loading-image {
     width: 250px;
 }
 
+img.species-custom-image {
+    max-height: 150px;
+    margin: 0 auto;
+}
+
 @media print {
     .btn,
     .navbar,

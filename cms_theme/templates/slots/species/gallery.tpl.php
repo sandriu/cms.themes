@@ -6,7 +6,7 @@
         <!-- Carousel items -->
         <div class="carousel-inner">
             <div class="active item">
-                <img src="<?php echo file_create_url($node->field_species_images[$node->language][0]['uri']); ?>" alt="" title="" />
+                <img src="<?php echo file_create_url($node->field_species_images[$node->language][0]['uri']); ?>" alt="" title="" class="species-custom-image" />
             </div>
         <?php
             unset($node->field_species_images[$node->language][0]);
