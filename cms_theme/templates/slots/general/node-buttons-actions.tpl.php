@@ -20,22 +20,6 @@
 
                 <li class="divider"></li>
 
-                <li>
-                    <?php
-                    drupal_add_library('system', 'drupal.ajax');
-                    drupal_add_library('system', 'jquery.form');
-                    $js = 'jQuery(document).ready(function($){
-                            $("#btnupdatespecies").click(function(){
-                                $(this).parent().parent().parent().removeClass("open");
-                            });
-                         }); 
-                        ';
-
-                    drupal_add_js($js, 'inline');
-                    $args = array($node->title, $node->nid);
-                    echo l(t('Update IUCN status'), 'species/nojs/update/' . implode("/", $args), array('attributes' => array('class' => array('use-ajax'), 'id' => 'btnupdatespecies')));
-                    ?>
-                </li>
                 <li><a href="#" title="<?php echo t('Print') . ' ' . $node->title . ' ' . t('details'); ?>" onclick="window.print();">Print</a></li>
             </ul>
         </div>
