@@ -1,17 +1,6 @@
-<?php if (node_access("update", $node) === TRUE): ?>
-<div class="btn-toolbar">
-    <div class="btn-group">
-    <?php print l(t('Edit'), 'node/' . $nid . '/edit', array('attributes' => array('class' => 'btn btn-primary'), 'query' => drupal_get_destination())); ?>
-    </div>
-    <div class="btn-group">
-    <?php print l(t('Delete'), 'node/' . $nid . '/delete',
-            array('attributes' => array('class' => 'btn btn-danger'))
-    ); ?>
-    </div>
-</div>
-<?php endif; ?>
-
-<div class=clearfix">&nbsp;</div>
+<?php
+    render_slot($node, 'node-buttons', 'general');
+?>
 
 <div class="row">
     <div class="span8">
