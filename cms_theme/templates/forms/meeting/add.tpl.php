@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" id="meeting-form">
     <div class="span6">
     <?php
         echo drupal_render($form['title']);
@@ -119,14 +119,13 @@
         echo drupal_render($form['field_meeting_address']);
     ?>
     </div>
+
+    <div class="clearfix">&nbsp;</div>
+    
+    <?php
+        echo drupal_render_children($form);
+    ?>
 </div>
-
-<div class="clearfix">&nbsp;</div>
-
-<?php
-    hide($form['additional_settings']);
-    echo drupal_render_children($form);
-?>
 
 <?php
     $path = drupal_get_path('theme', 'cms_theme');

@@ -1,3 +1,4 @@
+<div id="publication-form">
 <legend  class="form-section-legend">
     <a href="javascript:void(0); " data-toggle="collapse" data-target="#bibliographic-fields"><i class="icon-minus-sign"></i></a>
     <?php echo t('Bibliographic information'); ?>
@@ -126,19 +127,14 @@
         echo drupal_render($form['field_publication_source']);
     ?>
     </div>
-</div>
 
-<div class="clearfix">&nbsp;</div>
+    <div class="clearfix">&nbsp;</div>
 
-<div id="additional-settings-fields" class="collapse out">
     <?php
-        echo drupal_render($form['additional_settings']);
+        echo drupal_render_children($form);
     ?>
 </div>
-
-<?php
-    echo drupal_render_children($form);
-?>
+</div>
 
 <?php
     $path = drupal_get_path('theme', 'cms_theme');

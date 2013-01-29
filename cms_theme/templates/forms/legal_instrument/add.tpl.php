@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" id="legal-instrument-form">
     <div class="span7">
         <?php
             echo drupal_render($form['title']);
@@ -91,7 +91,6 @@
 
     <div class="span12">
         <?php
-            hide($form['additional_settings']);
             echo drupal_render_children($form);
         ?>
     </div>

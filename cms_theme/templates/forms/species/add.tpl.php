@@ -1,3 +1,4 @@
+<div id="species-form">
 <legend  class="form-section-legend">
     <a href="javascript:void(0); " data-toggle="collapse" data-target="#taxonomy-fields"><i class="icon-minus-sign"></i></a>
     <?php echo t('Taxonomy'); ?>
@@ -256,9 +257,9 @@
 <div class="clearfix">&nbsp;</div>
 
 <?php
-    hide($form['additional_settings']);
     echo drupal_render_children($form);
 ?>
+</div>
 
 <?php
     $path = drupal_get_path('theme', 'cms_theme');
