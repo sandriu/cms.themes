@@ -17,3 +17,37 @@
         render_slot('', 'notes', 'species', $content);
     }
 ?>
+
+<div class="row">
+    <div class="span5">
+        <?php
+            if ((isset($images)) && (!empty($images))) {
+        ?>
+        <div id="family-display-carousel" class="carousel slide img-polaroid species-carousel">
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+                <div class="active item">
+                    <img src="<?php echo $images[0]; ?>" alt="" title="" class="species-custom-image" />
+                </div>
+            <?php
+                unset($images[0]);
+                if (isset($images) && (!empty($images))) {
+                    foreach ($images as $index => $image) {
+            ?>
+                <div class="item">
+                    <img src="<?php echo $image; ?>" alt="" title="" class="species-custom-image" />
+                </div>
+            <?php
+                    }
+                }
+            ?>
+            </div>
+
+            <a class="carousel-control left" href="#family-display-carousel" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#family-display-carousel" data-slide="next">&rsaquo;</a>
+        </div>
+        <?php
+            }
+        ?>
+    </div>
+</div>

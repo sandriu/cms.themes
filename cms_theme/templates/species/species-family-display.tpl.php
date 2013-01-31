@@ -4,6 +4,10 @@
     ?>
 </h2>
 
+<a href="#" class="back-button btn btn-mini btn-info">&laquo; <?php echo t('Go back'); ?></a>
+
+<div class="clearfix">&nbsp;</div>
+
 <input type="hidden" name="scientific_name" id="scientific-name-holder" value="<?php echo $slug; ?>" />
 
 <div class="row">
@@ -54,6 +58,7 @@
         }
     ?>
 </div>
+
 <?php
     drupal_add_js(drupal_get_path('theme', 'cms_theme') . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR . 'species.js');
 ?>

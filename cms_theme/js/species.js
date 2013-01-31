@@ -40,6 +40,11 @@
         $("#edit-field-species-pop-size-und-0-field-species-pop-size-r-und-0-value").keyup(function(){
             $("#edit-field-species-pop-trend-und-0-field-species-pop-trend-r-und-0-value").val(this.value);
         });
+
+        $('a.back-button').click(function(){
+            parent.history.back();
+            return false;
+        });
     });
 
     $.fn.refresh_page = function() {
