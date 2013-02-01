@@ -117,62 +117,23 @@
 <div id="assessment-information-fields" class="collapse out">
     <div class="span4">
     <?php
-        echo drupal_render($form['field_species_iucn_status']);
-    ?>
-    </div>
-
-    <div class="span4">
-    <?php
-        echo drupal_render($form['field_species_iucn_web_srv']);
-    ?>
-    </div>
-
-    <div class="span4">
-    <?php
         echo drupal_render($form['field_species_instruments']);
     ?>
     </div>
 
     <div class="span4">
     <?php
+        echo drupal_render($form['field_species_iucn_status']);
+        echo drupal_render($form['field_species_iucn_web_srv']);
         echo drupal_render($form['field_species_concerted_action']);
         echo drupal_render($form['field_species_cooperative_action']);
-    ?>
-    </div>
-
-    <div class="clearfix">&nbsp;</div>
-
-    <div class="span4">
-    <?php
-    echo drupal_render($form['field_species_pop_global_date']);
-    ?>
-    </div>
-    <div class="span4">
-    <?php
+        echo drupal_render($form['field_species_pop_global_date']);
+        echo drupal_render($form['field_species_appendix_1_date']);
+        echo drupal_render($form['field_species_appendix_2_date']);
+        echo drupal_render($form['field_species_appendix']);
         echo drupal_render($form['field_species_pop_global']);
     ?>
     </div>
-
-    <div class="clearfix">&nbsp;</div>
-
-    <div class="span4">
-    <?php
-        echo drupal_render($form['field_species_appendix_1_date']);
-    ?>
-    </div>
-
-    <div class="span4">
-    <?php
-        echo drupal_render($form['field_species_appendix_2_date']);
-    ?>
-    </div>
-
-    <div class="span4">
-    <?php
-        echo drupal_render($form['field_species_appendix']);
-    ?>
-    </div>
-
 </div>
 
 <div class="clearfix">&nbsp;</div>
