@@ -300,11 +300,12 @@ function get_available_tabs($node = NULL, $content_type = '') {
         switch ($content_type) {
             case 'species':
                 $instruments = $node->field_species_instruments;
-                foreach ($instruments[$node->language] as $instrument) {
-                    $species_instrument = entity_load('node', array($instrument['target_id']));
-                    $instrument_title = strtolower($species_instrument[$instrument['target_id']]->title);
-                    if (($instrument_title != $current_profile) && (in_array($instrument_title, array_keys($websites)))) {
-                        $tabs['available'][$instrument_title] = $websites[$instrument_title];
+                foreach ($instruments[$node->language] as $value) {
+                    $ob = field_collection_item_load($value['value']);
+                    $instrument_id = cms_extract_single_value($ob->field_species_instrument, $node->language, 'target_id');
+                    $instrument = strtolower(CMSLegalInstrument::cms_instrument_title_by_id($instrument_id));
+                    if (($instrument != $current_profile) && (in_array($instrument, array_keys($websites)))) {
+                        $tabs['available'][$instrument] = $websites[$instrument];
                     }
                 }
         }
