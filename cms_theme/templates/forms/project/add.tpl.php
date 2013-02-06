@@ -18,6 +18,33 @@
     </div>
 
     <div class="span3">
+    <?php
+        echo drupal_render($form['field_project_endorsement_form']);
+    ?>
+    </div>
+
+    <div class="span3">
+    <?php
+        echo drupal_render($form['field_project_final_report']);
+    ?>
+    </div>
+
+    <div class="span3">
+    <?php
+        echo drupal_render($form['field_project_took_place']);
+    ?>
+    </div>
+
+    <div class="span3">
+    <?php
+        echo drupal_render($form['field_project_completed']);
+    ?>
+    </div>
+
+    <div class="clearfix">&nbsp;</div>
+    <br />
+
+    <div class="span3">
         <?php
             echo drupal_render($form['field_project_start_date']);
         ?>
