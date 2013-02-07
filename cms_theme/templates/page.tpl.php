@@ -1,18 +1,4 @@
-<?php
-    if (variable_get("state") != 'production') {
-?>
-<div id="demo-badge" class="alert alert-error">
-    <p>
-        <strong>
-            DEMO
-        </strong>
-    </p>
-</div>
-<?php
-    }
-?>
-
-<div class="navbar navbar-fixed-top">
+<div class="navbar navbar-fixed-top<?php echo (variable_get("state") != 'production') ? ' navbar-inverse' : ''; ?>">
     <div class="navbar-inner">
         <div class="container">
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
