@@ -123,8 +123,8 @@
 
     <div class="span4">
     <?php
-        echo drupal_render($form['field_species_iucn_status']);
-        echo drupal_render($form['field_species_iucn_web_srv']);
+        hide($form['field_species_iucn_status']);
+        hide($form['field_species_iucn_web_srv']);
         echo drupal_render($form['field_species_concerted_action']);
         echo drupal_render($form['field_species_cooperative_action']);
         echo drupal_render($form['field_species_pop_global_date']);
