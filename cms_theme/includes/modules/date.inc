@@ -111,9 +111,9 @@ function cms_theme_date_part_label_timezone($variables) {
  * Returns HTML for a date_select 'time' label.
  */
 function cms_theme_date_part_label_time($variables) {
-    if (isset($variables['element']) && isset($variables['element']['#date_title'])) {
-        return t($variables['element']['#date_title'], array(), array('context' => 'datetime'));
-    }
+    //if (isset($variables['element']) && isset($variables['element']['#date_title'])) {
+    //    return t($variables['element']['#date_title'], array(), array('context' => 'datetime'));
+    //}
 
     return t('Time', array(), array('context' => 'datetime'));
 }
