@@ -115,25 +115,34 @@
 </legend>
 
 <div id="assessment-information-fields" class="collapse out">
-    <div class="span4">
+    <div class="span11">
     <?php
         echo drupal_render($form['field_species_instruments']);
     ?>
+    <hr />
     </div>
 
-    <div class="span4">
+    <div class="span3">
     <?php
-        hide($form['field_species_iucn_status']);
-        hide($form['field_species_iucn_web_srv']);
-        echo drupal_render($form['field_species_concerted_action']);
-        echo drupal_render($form['field_species_cooperative_action']);
-        echo drupal_render($form['field_species_pop_global_date']);
-        echo drupal_render($form['field_species_appendix_1_date']);
-        echo drupal_render($form['field_species_appendix_2_date']);
-        echo drupal_render($form['field_species_appendix']);
         echo drupal_render($form['field_species_pop_global']);
+        echo drupal_render($form['field_species_pop_global_date']);
     ?>
     </div>
+
+    <div class="span3">
+    <?php
+        echo drupal_render($form['field_species_appendix_1_date']);
+        echo drupal_render($form['field_species_appendix_2_date']);
+    ?>
+    </div>
+
+    <div class="span2">
+    <?php
+        echo drupal_render($form['field_species_concerted_action']);
+        echo drupal_render($form['field_species_cooperative_action']);
+    ?>
+    </div>
+
 </div>
 
 <div class="clearfix">&nbsp;</div>
@@ -218,6 +227,8 @@
 <div class="clearfix">&nbsp;</div>
 
 <?php
+    hide($form['field_species_iucn_status']);
+    hide($form['field_species_iucn_web_srv']);
     echo drupal_render_children($form);
 ?>
 </div>
