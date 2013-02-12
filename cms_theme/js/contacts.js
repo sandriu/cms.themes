@@ -18,7 +18,6 @@
             "bProcessing": true,
             "bServerSide": true,
             "bFilter": true,
-            "oPagination": "bootstrap",
             "sPaginationType": "bootstrap",
             "sAjaxSource": "/contacts/datatables_listing?instrument=" + instrument,
             "aoColumns": [
