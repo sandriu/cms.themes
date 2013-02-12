@@ -1,27 +1,10 @@
 <div class="row">
-    <div class="span6">
-        <form class="form-inline">
-            <label>
-                <?php echo t('Display'); ?>
-            </label>
-            <input type="hidden" name="current-page" value="<?php echo $data['page']; ?>" id="current-page" />
-
-            <select size="1" name="contacts-per-page" id="contacts-per-page">
-                <?php
-                    foreach ($data['per_page_options'] as $option) {
-                ?>
-                <option value="<?php echo $option?>"<?php echo (($data['per_page'] == $option)) ? ' selected="selected"' : ''; ?>><?php echo $option; ?></option>
-                <?php
-                    }
-                ?>
-            </select> <?php echo t('contacts'); ?>
-        </form>
-    </div>
+    <input type="hidden" name="current-page" value="<?php echo $data['page']; ?>" id="current-page" />
 
     <?php
         if (!empty($data['instruments'])) {
     ?>
-    <div class="span6">
+    <div class="span12">
         <form class="form-inline pull-right" id="contacts-instrument-filter">
             <label for="instrument">
                 <?php echo t('CMS Instrument'); ?>
