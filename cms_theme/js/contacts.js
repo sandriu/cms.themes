@@ -28,22 +28,27 @@
             "bProcessing": true,
             "bServerSide": true,
             "bFilter": true,
-            "oPagination": "bootstrap",
             "sPaginationType": "bootstrap",
             "sAjaxSource": "/contacts/datatables_listing?instrument=" + instrument + "&country=" + country,
             "aoColumns": [
                 {
                     "bSearchable": false,
-                    "bVisible": false
+                    "bVisible": false,
+                    "sDefaultContent": ""
                 },
                 {
                     "fnRender": function (oObj)
                     {
                         return "<a href='/contacts/item/" + oObj.aData[0] + "/" + instrument + "/view'>" + oObj.aData[1] + "</a>";
-                    }
+                    },
+                    "sDefaultContent": ""
                 },
-                null,
-                null,
+                {
+                    "sDefaultContent": ""
+                },
+                {
+                    "sDefaultContent": ""
+                },
                 {
                     "fnRender": function (oObj) {
                         data = "";
@@ -53,10 +58,15 @@
                             }
                         });
                         return data;
-                    }
+                    },
+                    "sDefaultContent": ""
                 },
-                null,
-                null
+                {
+                    "sDefaultContent": ""
+                },
+                {
+                    "sDefaultContent": ""
+                },
             ]
         });
     });
