@@ -29,6 +29,7 @@
                                   'per_page' => $per_page,
                                   'per_page_options' => $per_page_options,
                                   'current_group' => $instrument,
+                                  'country' => $country,
                                   'instruments' => $instruments)
     );
 ?>

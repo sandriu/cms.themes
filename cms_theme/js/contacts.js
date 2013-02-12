@@ -5,6 +5,7 @@
         var per_page = $('#contacts-per-page').val();
         var page = $('#current-page').val();
         var instrument = $('#instrument').val();
+        var country = $('#country').val();
 
         $('#contacts-per-page, #instrument').change(function(){
             var per_page = $('#contacts-per-page').val();
@@ -14,12 +15,22 @@
             window.location = url;
         });
 
+        $('#country').change(function(){
+            var per_page = $('#contacts-per-page').val();
+            var page = $('#current-page').val();
+            var instrument = $('#instrument').val();
+            var country = $('#country').val();
+            url = '/contacts/listing?country=' + country + '&instrument=' + instrument + '&page=' + page + '&per_page=' + per_page;
+            window.location = url;
+        });
+
         $('#contacts-listing').dataTable({
             "bProcessing": true,
             "bServerSide": true,
             "bFilter": true,
+            "oPagination": "bootstrap",
             "sPaginationType": "bootstrap",
-            "sAjaxSource": "/contacts/datatables_listing?instrument=" + instrument,
+            "sAjaxSource": "/contacts/datatables_listing?instrument=" + instrument + "&country=" + country,
             "aoColumns": [
                 {
                     "bSearchable": false,
