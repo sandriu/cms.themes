@@ -29,31 +29,31 @@
         <table cellpadding="0" cellspacing="0" border="0" id="contacts-listing" class="cols-6 table table-striped table-hover table-bordered dataTable">
             <thead>
                 <tr>
-                    <th class="span2">
+                    <th>
                         <?php
                             echo t('User ID');
                         ?>
                     </th>
 
-                    <th class="span2">
+                    <th class="span3">
                         <?php
                             echo t('Full name');
                         ?>
                     </th>
 
-                    <th class="span2">
+                    <th class="span4">
                         <?php
                             echo t('Organization');
                         ?>
                     </th>
 
-                    <th class="span2">
+                    <th>
                         <?php
                             echo t('Department');
                         ?>
                     </th>
 
-                    <th class="span3">
+                    <th>
                         <?php
                             echo t('Email');
                         ?>
@@ -65,13 +65,13 @@
                         ?>
                     </th>
 
-                    <th class="span1">
+                    <th>
                         <?php
                             echo t('City');
                         ?>
                     </th>
 
-                    <th class="span2">
+                    <th class="span1">
                         <?php
                             echo t('Instrument(s)');
                         ?>
