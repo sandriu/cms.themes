@@ -13,16 +13,6 @@
     drupal_add_js(drupal_get_path('theme', 'cms_theme') . '/js/contacts.js');
 ?>
 
-<div class="row">
-    <div class="span12">
-        <p class="lead">
-            <?php echo t('Contacts from'); ?> <strong class="text-info"><?php echo $instruments[$instrument]; ?></strong> <?php echo t('instrument'); ?>.
-        </p>
-    </div>
-</div>
-
-<div class="clearfix">&nbsp;</div>
-
 <?php
     echo render_simple_slot('filters', 'contacts',
                             array('page' => $page,
@@ -44,34 +34,46 @@
                             echo t('User ID');
                         ?>
                     </th>
+
                     <th class="span2">
                         <?php
                             echo t('Full name');
                         ?>
                     </th>
+
                     <th class="span2">
                         <?php
                             echo t('Organization');
                         ?>
                     </th>
+
                     <th class="span2">
                         <?php
                             echo t('Department');
                         ?>
                     </th>
+
                     <th class="span3">
                         <?php
                             echo t('Email');
                         ?>
                     </th>
+
                     <th class="span2">
                         <?php
                             echo t('Country');
                         ?>
                     </th>
+
                     <th class="span1">
                         <?php
                             echo t('City');
+                        ?>
+                    </th>
+
+                    <th class="span2">
+                        <?php
+                            echo t('Instrument(s)');
                         ?>
                     </th>
                 </tr>

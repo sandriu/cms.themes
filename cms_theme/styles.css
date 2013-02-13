@@ -243,6 +243,10 @@ img.species-custom-image {
     display: none;
 }
 
+.dataTables_filter input {
+    width: 265px;
+}
+
 @media print {
     .btn,
     .navbar,
