@@ -166,11 +166,17 @@
                 </th>
 
                 <td>
+                    <?php
+                        if (isset($data['mail'])) {
+                    ?>
                     <a href="mailto:<?php echo $data['mail'][0]; ?>">
                     <?php
                         echo $data['mail'][0];
                     ?>
                     </a>
+                    <?php
+                        }
+                    ?>
                 </td>
             </tr>
 
