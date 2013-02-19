@@ -3,7 +3,7 @@
         <fieldset>
             <legend>
                 <?php
-                    echo t('Personal information');
+                    echo t('Personal details');
                 ?>
             </legend>
 
@@ -14,9 +14,8 @@
                 echo drupal_render($form['personal_email']);
                 echo drupal_render($form['home_phone']);
                 echo drupal_render($form['mobile']);
-                echo drupal_render($form['fax_number']);
                 echo drupal_render($form['skype']);
-                echo drupal_render($form['website']);
+                echo drupal_render($form['additional_emails']);
                 echo drupal_render($form['description']);
             ?>
         </fieldset>
@@ -33,16 +32,20 @@
                 echo drupal_render($form['position']);
                 echo drupal_render($form['email']);
                 echo drupal_render($form['work_phone']);
+                echo drupal_render($form['fax_number']);
                 echo drupal_render($form['organization']);
                 echo drupal_render($form['department']);
+                echo drupal_render($form['website']);
                 echo drupal_render($form['conventions']);
             ?>
         </fieldset>
+    </div>
 
+    <div class="span12">
         <fieldset>
             <legend>
                 <?php
-                    echo t('Geolocation');
+                    echo t('Address');
                 ?>
             </legend>
             <?php
@@ -52,9 +55,7 @@
                 echo drupal_render($form['address']);
             ?>
         </fieldset>
-    </div>
 
-    <div class="span12">
         <?php
             echo drupal_render_children($form);
         ?>
