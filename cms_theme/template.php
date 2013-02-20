@@ -203,7 +203,7 @@ function check_display_field($object) {
 }
 
 function get_cms_types() {
-    return array('species', 'cms_party', 'publication', 'legal_instrument', 'countries', 'cms_country', 'listing', 'decision', 'meeting', 'national_plan', 'national_report', 'project');
+    return array('species', 'cms_party', 'publication', 'legal_instrument', 'countries', 'cms_country', 'listing', 'decision', 'meeting', 'national_plan', 'national_report', 'project', 'document');
 }
 
 function show_add_button() {
