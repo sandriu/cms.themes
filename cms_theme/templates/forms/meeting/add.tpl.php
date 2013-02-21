@@ -126,16 +126,11 @@
     ?>
     </div>
 
-    <div class="span12">
-    <?php
-        echo drupal_render($form['field_meeting_document']);
-    ?>
-    </div>
-
     <div class="clearfix">&nbsp;</div>
 
     <div class="span12">
     <?php
+        hide($form['field_meeting_documents']);
         echo drupal_render_children($form);
     ?>
     </div>

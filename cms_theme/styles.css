@@ -247,6 +247,10 @@ img.species-custom-image {
     width: 310px;
 }
 
+.select-all-input {
+    width: 15px;
+}
+
 @media print {
     .btn,
     .navbar,

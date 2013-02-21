@@ -1,5 +1,5 @@
 <?php
-    render_slot($node, 'node-buttons', 'general');
+    render_slot($node, 'node-buttons', 'meeting');
 ?>
 
 <div class="row">
