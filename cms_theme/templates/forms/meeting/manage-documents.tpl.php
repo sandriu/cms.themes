@@ -74,7 +74,7 @@
 
                     <td>
                     <?php
-                        if (isset($documnet->field_document_number) && (!empty($documnet->field_document_number))) {
+                        if (isset($document->field_document_number) && (!empty($document->field_document_number))) {
                             echo $document->field_document_number[$document->language][0]['value'];
                         }
                     ?>
@@ -150,7 +150,7 @@
 
                     <td>
                     <?php
-                        if (isset($documnet->field_document_number) && (!empty($documnet->field_document_number))) {
+                        if (isset($document->field_document_number) && (!empty($document->field_document_number))) {
                             echo $document->field_document_number[$document->language][0]['value'];
                         }
                     ?>
