@@ -99,7 +99,9 @@
         <div class="clearfix">&nbsp;</div>
 
         <p>
-            <button class="btn btn-small btn-danger" type="button" id="delete-meeting-documents">Delete selected</button>
+            <button class="btn btn-small btn-danger" type="button" id="delete-meeting-documents">
+                <?php echo t('Remove selected'); ?>
+            </button>
         </p>
     </div>
 
@@ -176,7 +178,9 @@
         <div class="clearfix">&nbsp;</div>
 
         <p>
-            <button class="btn btn-small btn-primary" type="button" id="add-meeting-documents">Add selected</button>
+            <button class="btn btn-small btn-primary" type="button" id="add-meeting-documents">
+                <?php echo t('Add selected'); ?>
+            </button>
         </p>
     </div>
 </div>

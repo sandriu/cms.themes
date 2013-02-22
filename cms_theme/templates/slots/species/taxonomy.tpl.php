@@ -23,6 +23,9 @@
             <td><?php echo $node->title; ?></td>
         </tr>
         <?php
+        if(check_display_field($content, 'field_species_subspecies')) {
+            echo render($content['field_species_subspecies']);
+        }
         if(check_display_field($content, 'field_species_author')) {
             echo render($content['field_species_author']);
         }
