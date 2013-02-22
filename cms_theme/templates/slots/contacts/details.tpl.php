@@ -225,6 +225,32 @@
             <tr>
                 <th class="span2">
                     <?php
+                        echo t('CMS Instruments');
+                    ?>
+                </th>
+
+                <td>
+                    <?php
+                    $instruments_names = CMSLegalInstrument::cms_instruments_names();
+                    $instruments = '';
+                    foreach ($data['conventions'] as $index => $instrument) {
+                        if (is_numeric($index)) {
+                            if (array_key_exists(strtolower($instrument), $instruments_names)) {
+                                $instruments .= $instruments_names[strtolower($instrument)];
+                                if (($index + 1) < $data['conventions']['count']) {
+                                    $instruments .= ', ';
+                                }
+                            }
+                        }
+                    }
+                    echo $instruments;
+                    ?>
+                </td>
+            </tr>
+
+            <tr>
+                <th class="span2">
+                    <?php
                         echo t('Country');
                     ?>
                 </th>
