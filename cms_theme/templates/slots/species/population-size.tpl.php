@@ -5,7 +5,7 @@
     <caption><?php echo t('Population size and trend'); ?></caption>
     <thead>
         <tr>
-            <th class="span2" rowspan="2" style="vertical-align: middle;"><?php echo t('Region'); ?></th>
+            <th class="span2" rowspan="2" style="vertical-align: middle;"><?php echo t('Population'); ?></th>
             <th class="span2"><?php echo t('Size interval'); ?></th>
             <th class="span2"><?php echo t('Size quality'); ?></th>
             <th class="span2"><?php echo t('Estimated population size'); ?></th>
