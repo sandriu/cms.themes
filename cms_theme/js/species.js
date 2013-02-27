@@ -45,6 +45,13 @@
             parent.history.back();
             return false;
         });
+
+        if ( $('#country-status').length > 0 ) {
+            $('#country-status').dataTable({
+                "bFilter": true,
+                "sPaginationType": "bootstrap",
+            });
+        }
     });
 
     $.fn.refresh_page = function() {

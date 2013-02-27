@@ -1,4 +1,6 @@
 <?php
+    $current_profile = CMSUtils::get_current_profile();
+
     render_slot($node, 'node-buttons-actions', 'general');
 ?>
 
@@ -17,6 +19,11 @@
     render_slot($node, 'population-size', 'species', $content);
     render_slot($node, 'population-trend', 'species', $content);
     render_slot($node, 'notes', 'species', $content);
+
+    if ($current_profile == 'aewa') {
+        render_slot($node, 'country-status', 'species', $content);
+    }
+
 
     hide($content['links']);
     hide($content['comments']);
