@@ -1,3 +1,7 @@
+<?php
+    $current_profile = CMSUtils::get_current_profile();
+?>
+
 <div id="species-form">
 <legend  class="form-section-legend">
     <a href="javascript:void(0); " data-toggle="collapse" data-target="#taxonomy-fields"><i class="icon-minus-sign"></i></a>
@@ -204,6 +208,27 @@
 </div>
 
 <div class="clearfix">&nbsp;</div>
+
+<?php
+    if ($current_profile == 'aewa') {
+?>
+<legend  class="form-section-legend">
+    <a href="javascript:void(0); " data-toggle="collapse" data-target="#country-status"><i class="icon-plus-sign"></i></a>
+    <?php echo t('AEWA Country status'); ?>
+</legend>
+
+<div id="country-status" class="collapse out">
+    <?php
+        echo drupal_render($form['field_species_status_per_country']);
+    ?>
+</div>
+
+<div class="clearfix">&nbsp;</div>
+<?php
+    }else {
+        hide($form['field_species_status_per_country']);
+    }
+?>
 
 <legend  class="form-section-legend">
     <a href="javascript:void(0); " data-toggle="collapse" data-target="#other-fields"><i class="icon-plus-sign"></i></a>

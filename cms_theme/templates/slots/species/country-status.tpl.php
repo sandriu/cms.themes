@@ -29,7 +29,7 @@
 
         <br />
 
-        <table cellpadding="0" cellspacing="0" border="0" id="country-status" class="cols-2 table table-striped table-hover table-bordered dataTable">
+        <table cellpadding="0" cellspacing="0" border="0" id="country-status-listing" class="cols-2 table table-striped table-hover table-bordered dataTable">
             <thead>
                 <tr>
                     <th class="span2"><?php echo t('Country'); ?></th>

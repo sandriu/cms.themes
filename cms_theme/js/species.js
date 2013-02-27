@@ -46,8 +46,8 @@
             return false;
         });
 
-        if ( $('#country-status').length > 0 ) {
-            $('#country-status').dataTable({
+        if ( $('#country-status-listing').length > 0 ) {
+            $('#country-status-listing').dataTable({
                 "bFilter": true,
                 "sPaginationType": "bootstrap",
             });
