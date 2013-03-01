@@ -230,6 +230,27 @@
     }
 ?>
 
+<?php
+    if ($current_profile == 'aewa') {
+?>
+<legend  class="form-section-legend">
+    <a href="javascript:void(0); " data-toggle="collapse" data-target="#population-status"><i class="icon-plus-sign"></i></a>
+    <?php echo t('AEWA Population status'); ?>
+</legend>
+
+<div id="population-status" class="collapse out">
+    <?php
+        echo drupal_render($form['field_aewa_population_status']);
+    ?>
+</div>
+
+<div class="clearfix">&nbsp;</div>
+<?php
+    }else {
+        hide($form['field_aewa_population_status']);
+    }
+?>
+
 <legend  class="form-section-legend">
     <a href="javascript:void(0); " data-toggle="collapse" data-target="#other-fields"><i class="icon-plus-sign"></i></a>
     <?php echo t('Other'); ?>
