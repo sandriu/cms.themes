@@ -18,6 +18,7 @@
     render_slot($node, 'population', 'species', $content);
     render_slot($node, 'population-size', 'species', $content);
     render_slot($node, 'population-trend', 'species', $content);
+    render_slot($node, 'population-status', 'species', $content);
     render_slot($node, 'notes', 'species', $content);
 
     if ($current_profile == 'aewa') {
