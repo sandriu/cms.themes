@@ -37,6 +37,7 @@
                 echo drupal_render($form['department']);
                 echo drupal_render($form['website']);
                 echo drupal_render($form['conventions']);
+                echo drupal_render($form['country_post']);
             ?>
         </fieldset>
     </div>

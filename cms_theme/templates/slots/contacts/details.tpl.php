@@ -267,6 +267,22 @@
             <tr>
                 <th class="span2">
                     <?php
+                        echo t('Country post');
+                    ?>
+                </th>
+
+                <td>
+                    <?php
+                    if (isset($data['cpiso2']) && !empty($data['cpiso2'])) {
+                        echo countries_get_country($data['cpiso2'][0])->name;
+                    }
+                    ?>
+                </td>
+            </tr>
+
+            <tr>
+                <th class="span2">
+                    <?php
                         echo t('Town/City');
                     ?>
                 </th>
