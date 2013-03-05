@@ -142,6 +142,11 @@ footer.footer span {
     margin-top: 28px;
 }
 
+.species-carousel .carousel-inner a img,
+.publication-carousel .carousel-inner a img {
+    margin: 0 auto;
+}
+
 .publication-carousel {
     height: auto;
 }
