@@ -57,9 +57,11 @@
 
     <div class="clearfix">&nbsp;</div>
 
+    <div class="span12">
     <?php
         echo drupal_render_children($form);
     ?>
+    </div>
 </div>
 
 <?php
