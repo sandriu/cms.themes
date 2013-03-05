@@ -61,6 +61,15 @@
                 },
             ]
         });
+
+        $('#export-button').click(function(e){
+            e.preventDefault();
+            var search_query = $('.dataTables_filter input').val();
+            var instrument = $('#instrument').val();
+            var country = $('#country').val();
+
+            window.location.href = '/contacts/export?instrument=' + instrument + '&country=' + country + '&sSearch=' + search_query;
+        });
     });
 
     $.fn.resetForm = function() {
