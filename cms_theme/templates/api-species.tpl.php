@@ -16,6 +16,7 @@
         render_slot('', 'population-size', 'species', $content);
         render_slot('', 'population-trend', 'species', $content);
         render_slot('', 'country-status', 'species', $content);
+        render_slot('', 'threats', 'species', $content);
         render_slot('', 'notes', 'species', $content);
     }
 ?>

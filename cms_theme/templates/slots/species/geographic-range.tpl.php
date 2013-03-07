@@ -16,10 +16,7 @@
 
             if (check_display_field($content, 'field_species_range_states_notes')) {
         ?>
-        <tr>
-            <th><?php echo t('Notes'); ?></th>
-            <td><?php echo render($content['field_species_range_states_notes']); ?></td>
-        </tr>
+        <?php echo render($content['field_species_range_states_notes']); ?>
         <?php
             }
         ?>

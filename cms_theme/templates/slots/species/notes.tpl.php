@@ -1,11 +1,21 @@
 <?php
-    if(in_array('field_species_notes', array_keys($content)) && ($content['field_species_notes']['#items'][0]['value'] != NULL)) {
+    if(check_display_field($content, 'field_species_critical_sites') || check_display_field($content, 'field_species_notes')) {
 ?>
-<strong><?php echo t('Notes'); ?></strong>
 
-<div>
-    <?php echo render($content['field_species_notes']); ?>
-</div>
+<table class="table table-condensed table-hover two-columns">
+    <caption><?php echo t('Other details'); ?></caption>
+    <tbody>
+        <?php
+            if(check_display_field($content, 'field_species_critical_sites')) {
+                echo render($content['field_species_critical_sites']);
+            }
+
+            if(check_display_field($content, 'field_species_notes')) {
+                echo render($content['field_species_notes']);
+            }
+        ?>
+    </tbody>
+</table>
 <?php
     }
 ?>
