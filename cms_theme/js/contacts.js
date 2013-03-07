@@ -13,6 +13,7 @@
             "bFilter": true,
             "sPaginationType": "bootstrap",
             "sAjaxSource": "/contacts/datatables_listing?instrument=" + instrument + "&country=" + country,
+            "aaSorting": [ [1, "asc"] ],
             "aoColumns": [
                 {
                     "bSearchable": false,
