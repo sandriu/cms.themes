@@ -27,6 +27,11 @@
                     }
                 },
                 {
+                    "bSearchable": true,
+                    "bVisible": true,
+                    "sDefaultContent": ""
+                },
+                {
                     "sDefaultContent": ""
                 },
                 {

@@ -22,7 +22,13 @@
 
                     <th class="span3">
                         <?php
-                            echo t('Full name');
+                            echo t('First name');
+                        ?>
+                    </th>
+
+                    <th class="span3">
+                        <?php
+                            echo t('Last name');
                         ?>
                     </th>
 
