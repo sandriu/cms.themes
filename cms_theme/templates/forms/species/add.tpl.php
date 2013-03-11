@@ -1,5 +1,4 @@
 <?php
-    dsm($form['field_aewa_population_status']);
     $current_profile = CMSUtils::get_current_profile();
 ?>
 
