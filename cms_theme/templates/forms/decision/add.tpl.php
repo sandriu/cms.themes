@@ -36,7 +36,7 @@
     ?>
     </div>
 
-    <div class="span2">
+    <div class="span3">
     <?php
         echo drupal_render($form['field_decision_meeting']);
     ?>
