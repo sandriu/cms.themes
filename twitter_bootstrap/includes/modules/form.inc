@@ -197,7 +197,7 @@ function twitter_bootstrap_preprocess_button(&$vars) {
     $classes = array(
       //specifics
       t('Save and add') => 'btn-info',
-      t('Add another item') => 'btn-info',
+      t('Add another item') => 'btn-info btn-small',
       t('Add effect') => 'btn-primary',
       t('Add and configure') => 'btn-primary',
       t('Update style') => 'btn-primary',
@@ -217,7 +217,7 @@ function twitter_bootstrap_preprocess_button(&$vars) {
       t('Add') => 'btn-info',
       t('Update') => 'btn-info',
       t('Delete') => 'btn-danger',
-      t('Remove') => 'btn-danger',
+      t('Remove') => 'btn-danger btn-mini',
     );
     foreach ($classes as $search => $class) {
       if (strpos($vars['element']['#value'], $search) !== FALSE) {
