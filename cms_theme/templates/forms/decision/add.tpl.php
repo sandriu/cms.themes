@@ -24,7 +24,7 @@
     ?>
     </div>
 
-    <div class="span2">
+    <div class="span4">
     <?php
         echo drupal_render($form['field_decision_status']);
     ?>
@@ -36,7 +36,7 @@
     ?>
     </div>
 
-    <div class="span3">
+    <div class="span10">
     <?php
         echo drupal_render($form['field_decision_meeting']);
     ?>
