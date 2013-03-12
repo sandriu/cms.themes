@@ -1,5 +1,7 @@
 <?php
-    if(check_display_field($content, 'field_aewa_population_status')) {
+    if(isset($content['field_aewa_population_status']) &&
+       isset($content['field_aewa_population_status'][0]['field_aewa_pop_status_name']) &&
+       !empty($content['field_aewa_population_status'][0]['field_aewa_pop_status_name'])) {
 ?>
 <table class="table table-condensed table-bordered table-hover">
     <caption><?php echo t('AEWA Population status'); ?></caption>

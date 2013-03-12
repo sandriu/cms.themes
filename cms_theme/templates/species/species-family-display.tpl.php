@@ -23,6 +23,7 @@
 
     $tabs = get_available_tabs($node, 'species');
     render_family_tabs($tabs, 'species', 'family', '');
+    $current_profile = CMSUtils::get_current_profile();
 ?>
 <div class="tab-content">
     <div class="tab-pane active loaded" id="<?php echo $tabs['current']; ?>">
@@ -31,6 +32,7 @@
         (check_display_field($content, 'field_species_pop') == NULL) &&
         (check_display_field($content, 'field_species_pop_size') == NULL) &&
         (check_display_field($content, 'field_species_pop_trend') == NULL) &&
+        (check_display_field($content, 'field_aewa_population_status') == NULL) &&
         (check_display_field($content, 'field_species_pop_notes') == NULL)) {
     ?>
     <div class="alert alert-info">
@@ -42,6 +44,7 @@
             render_slot($node, 'population', 'species', $content);
             render_slot($node, 'population-size', 'species', $content);
             render_slot($node, 'population-trend', 'species', $content);
+            render_slot($node, 'population-status', 'species', $content);
             render_slot($node, 'country-status', 'species', $content);
             render_slot($node, 'threats', 'species', $content);
             render_slot($node, 'notes', 'species', $content);
