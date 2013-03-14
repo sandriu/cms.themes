@@ -30,7 +30,8 @@
                 echo render($content['field_project_region']);
                 echo render($content['field_project_country']);
                 echo render($content['field_project_instrument']);
-                echo render($content['field_project_funds_requested']);
+                echo render($content['field_project_funds_req_amount']);
+                echo render($content['field_project_funds_req_amount_c']);
                 echo render($content['field_project_cofunding']);
                 echo render($content['field_project_endorsement_form']);
                 echo render($content['field_project_taxonomic_group']);
