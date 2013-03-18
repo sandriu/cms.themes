@@ -1,5 +1,22 @@
 <?php
 
+/**
+ * We deny access to anonymous users to anything displayed by this theme (which is stands for administration purposes)
+ * The reason we implement this in theme is because anonymous are allowed to see content in other front-end themes
+ * @param $node Drupal node
+ * @return null
+ * @see http://api.drupal.org/api/drupal/modules!node!node.api.php/function/hook_node_access/7
+ */
+function cms_theme_node_access($node) {
+    // Ref: http://www.andypangus.com/drupal-7-simple-content-type-permission-and-access
+    if(user_is_anonymous()) {
+        drupal_access_denied();
+        drupal_exit();
+        exit();
+    }
+}
+
+
 include_once(drupal_get_path('theme', 'cms_theme') . '/includes/modules/date.inc');
 
 function CMS_theme_theme() {
