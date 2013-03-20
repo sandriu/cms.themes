@@ -12,7 +12,6 @@ function cms_theme_node_access($node) {
     if(user_is_anonymous()) {
         drupal_access_denied();
         drupal_exit();
-        exit();
     }
 }
 
