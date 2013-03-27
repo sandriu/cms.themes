@@ -49,6 +49,11 @@ function CMS_theme_theme() {
             'template' => 'templates/forms/contacts/add',
             'path' => drupal_get_path('theme', 'cms_theme'),
         ),
+        'organization_form' => array(
+            'render element' => 'form',
+            'template' => 'templates/forms/contacts/organizations/add',
+            'path' => drupal_get_path('theme', 'cms_theme'),
+        ),
         'decision_node_form' => array(
             'render element' => 'form',
             'template' => 'templates/forms/decision/add',

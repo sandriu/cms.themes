@@ -1,39 +1,13 @@
-<form class="form-inline" id="contacts-instrument-filter" method="GET" action="/contacts/listing">
+<form class="form-inline" id="contacts-instrument-filter" method="GET" action="/contacts/organizations/listing">
     <div class="views-exposed-form well well-small">
         <div class="views-exposed-widgets clearfix">
             <input type="hidden" name="current-page" value="<?php echo $data['page']; ?>" id="current-page" />
-
-            <div class="views-exposed-widget">
-                <label for="region">
-                    <?php echo t('Region'); ?>
-                </label>
-
-                <div class="views-widget">
-                    <div class="control-group form-type-select">
-                        <div class="controls">
-                            <select name="region" id="region">
-                                <option value=""><?php echo t('Any'); ?></option>
-                                <?php
-                                    $regions = CMSUtils::$contacts_regions;
-                                    foreach ($regions as $region_code => $region_name) {
-                                ?>
-                                <option value="<?php echo $region_code; ?>" <?php echo (isset($data['region']) && ($data['region']  == $region_code)) ? 'selected="selected"' : ''; ?>>
-                                    <?php echo $region_name; ?>
-                                </option>
-                                <?php
-                                    }
-                                ?>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <?php
                 if (!empty($data['instruments'])) {
             ?>
             <div class="views-exposed-widget">
-                <label for="country">
+                <label for="instrument">
                     <?php echo t('Country'); ?>
                 </label>
 

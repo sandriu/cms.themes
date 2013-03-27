@@ -1,69 +1,45 @@
 <?php
-    echo render_simple_slot('filters', 'contacts',
+    echo render_simple_slot('organizations/filters', 'contacts',
                             array('page' => $page,
                                   'per_page' => $per_page,
                                   'per_page_options' => $per_page_options,
                                   'current_group' => $instrument,
                                   'country' => $country,
-                                  'region' => $region,
                                   'instruments' => $instruments)
     );
 ?>
 
+
 <div class="row">
     <div class="span12">
-        <table cellpadding="0" cellspacing="0" border="0" id="contacts-listing" class="cols-6 table table-striped table-hover table-bordered dataTable">
+        <table cellpadding="0" cellspacing="0" border="0" id="organizations-listing" class="cols-6 table table-striped table-hover table-bordered dataTable">
             <thead>
                 <tr>
                     <th>
                         <?php
-                            echo t('User ID');
+                            echo t('Organization ID');
+                        ?>
+                    </th>
+
+                    <th class="span6">
+                        <?php
+                            echo t('Name');
                         ?>
                     </th>
 
                     <th class="span3">
-                        <?php
-                            echo t('First name');
-                        ?>
-                    </th>
-
-                    <th class="span3">
-                        <?php
-                            echo t('Last name');
-                        ?>
-                    </th>
-
-                    <th class="span4">
-                        <?php
-                            echo t('Organization');
-                        ?>
-                    </th>
-
-                    <th>
-                        <?php
-                            echo t('Department');
-                        ?>
-                    </th>
-
-                    <th>
-                        <?php
-                            echo t('Email');
-                        ?>
-                    </th>
-
-                    <th class="span2">
                         <?php
                             echo t('Country');
                         ?>
                     </th>
 
-                    <th>
+                    <th class="3">
                         <?php
                             echo t('City');
                         ?>
                     </th>
 
-                    <th class="span1">
+                    <th class="3">
                         <?php
                             echo t('Instrument(s)');
                         ?>
@@ -74,12 +50,8 @@
     </div>
 </div>
 
-<a href="/contacts/add" class="btn btn-primary" title="<?php echo t('Add'); ?>">
-    <?php echo t('Add contact'); ?>
-</a>
-
-<a href="javascript:void(0);" class="btn" title="<?php echo t('Export'); ?>" id="export-button">
-    <?php echo t('Export search result'); ?>
+<a href="/contacts/organizations/add" class="btn btn-primary" title="<?php echo t('Add'); ?>">
+    <?php echo t('Add organization'); ?>
 </a>
 
 <?php
@@ -94,5 +66,5 @@
 <script type="text/javascript" src="/<?php echo $DT_js_path; ?>"></script>
 <link type="text/css" rel="stylesheet" href="/<?php echo $css_path; ?>" />
 <?php
-    drupal_add_js(drupal_get_path('theme', 'cms_theme') . '/js/contacts.js');
+    drupal_add_js(drupal_get_path('theme', 'cms_theme') . '/js/organizations.js');
 ?>

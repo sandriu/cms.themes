@@ -1,3 +1,7 @@
+<?php
+    $regions = CMSUtils::$contacts_regions;
+?>
+
 <div class="row">
     <table class="table table-bordered span6">
         <caption>
@@ -16,7 +20,7 @@
 
                 <td>
                     <?php
-                        echo render($data['title'][0]);
+                        echo render($data['personaltitle'][0]);
                     ?>
                 </td>
             </tr>
@@ -189,7 +193,7 @@
 
                 <td>
                     <?php
-                        echo render($data['suborg'][0]);
+                        echo render($data['o'][0]);
                     ?>
                 </td>
             </tr>
@@ -203,7 +207,7 @@
 
                 <td>
                     <?php
-                        echo render($data['suborgdept'][0]);
+                        echo render($data['ou'][0]);
                     ?>
                 </td>
             </tr>
@@ -217,7 +221,7 @@
 
                 <td>
                     <?php
-                        echo render($data['position'][0]);
+                        echo render($data['title'][0]);
                     ?>
                 </td>
             </tr>
@@ -244,6 +248,22 @@
                         }
                     }
                     echo $instruments;
+                    ?>
+                </td>
+            </tr>
+
+            <tr>
+                <th class="span2">
+                    <?php
+                        echo t('Region');
+                    ?>
+                </th>
+
+                <td>
+                    <?php
+                    if (isset($data['region']) && !empty($data['region'])) {
+                        echo $regions[$data['region'][0]];
+                    }
                     ?>
                 </td>
             </tr>

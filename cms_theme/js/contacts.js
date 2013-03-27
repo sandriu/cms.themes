@@ -6,13 +6,14 @@
         var page = $('#current-page').val();
         var instrument = $('#instrument').val();
         var country = $('#country').val();
+        var region = $('#region').val();
 
         $('#contacts-listing').dataTable({
             "bProcessing": true,
             "bServerSide": true,
             "bFilter": true,
             "sPaginationType": "bootstrap",
-            "sAjaxSource": "/contacts/datatables_listing?instrument=" + instrument + "&country=" + country,
+            "sAjaxSource": "/contacts/datatables_listing?instrument=" + instrument + "&country=" + country + "&region=" + region,
             "aaSorting": [ [1, "asc"] ],
             "aoColumns": [
                 {
@@ -63,6 +64,34 @@
                 },
                 {
                     "bSearchable": true,
+                    "sDefaultContent": ""
+                },
+            ]
+        });
+
+        $('#organizations-listing').dataTable({
+            "bProcessing": true,
+            "bServerSide": true,
+            "bFilter": true,
+            "sPaginationType": "bootstrap",
+            "sAjaxSource": "/contacts/organizations_datatables_listing?country=" + country,
+            "aaSorting": [ [1, "asc"] ],
+            "aoColumns": [
+                {
+                    "bSearchable": false,
+                    "bVisible": false,
+                    "sDefaultContent": ""
+                },
+                {
+                    "bSearchable": true,
+                    "sDefaultContent": "",
+                    "fnRender": function (oObj) {
+                        return "<a href='/contacts/organization/" + oObj.aData[0] + "/view'>" + oObj.aData[1] + "</a>";
+                    }
+                },
+                {
+                    "bSearchable": true,
+                    "bVisible": true,
                     "sDefaultContent": ""
                 },
             ]

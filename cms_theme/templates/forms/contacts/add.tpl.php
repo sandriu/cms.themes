@@ -50,6 +50,7 @@
                 ?>
             </legend>
             <?php
+                echo drupal_render($form['region']);
                 echo drupal_render($form['country']);
                 echo drupal_render($form['city']);
                 echo drupal_render($form['zip_code']);
