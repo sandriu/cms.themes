@@ -271,6 +271,16 @@ img.species-custom-image {
     width: 200px;
 }
 
+.chzn-container-multi .chzn-choices .search-field input {
+    min-width: 190px;
+}
+
+.chzn-container .chzn-results li em {
+    background: #ffeaa6;
+    font-weight: bold;
+}
+
+
 /**
  * Specific multivalued form fields
 */
