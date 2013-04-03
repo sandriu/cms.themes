@@ -253,6 +253,39 @@
 
 <legend  class="form-section-legend">
     <a href="javascript:void(0); " data-toggle="collapse" data-target="#other-fields"><i class="icon-plus-sign"></i></a>
+    <?php echo t('Related content'); ?>
+</legend>
+
+<div id="other-fields" class="collapse out">
+    <?php
+        echo drupal_render($form['field_species_meetings']);
+    ?>
+    <div class="clearfix">&nbsp;</div>
+    <?php
+        echo drupal_render($form['field_species_publications']);
+    ?>
+    <div class="clearfix">&nbsp;</div>
+    <?php
+        echo drupal_render($form['field_species_projects']);
+    ?>
+    <div class="clearfix">&nbsp;</div>
+    <?php
+        echo drupal_render($form['field_species_decisions']);
+    ?>
+    <div class="clearfix">&nbsp;</div>
+    <?php
+        echo drupal_render($form['field_species_national_plans']);
+    ?>
+    <div class="clearfix">&nbsp;</div>
+    <?php
+        echo drupal_render($form['field_species_national_reports']);
+    ?>
+</div>
+
+<div class="clearfix">&nbsp;</div>
+
+<legend  class="form-section-legend">
+    <a href="javascript:void(0); " data-toggle="collapse" data-target="#other-fields"><i class="icon-plus-sign"></i></a>
     <?php echo t('Other'); ?>
 </legend>
 

@@ -376,3 +376,21 @@ function render_family_tabs($tabs = array(), $type = '', $tabs_id = '', $field =
                                                      'tabs_id' => $tabs_id,
                                                      'field' => $field));
 }
+
+function render_tab($title = '', $href = '', $class = '', $field_name = '', $show_counter = FALSE, $content = array()) {
+    $template_path = drupal_get_path('theme', 'cms_theme') . _DS_ . implode(_DS_, array(
+        'templates',
+        'slots',
+        'general',
+        'tab.tpl.php'
+    ));
+
+    echo theme_render_template($template_path, array(
+        'title' => $title,
+        'class' => $class,
+        'href' => $href,
+        'show_counter' => $show_counter,
+        'field_name' => $field_name,
+        'content' => $content,
+    ));
+}

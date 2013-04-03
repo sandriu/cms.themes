@@ -27,6 +27,8 @@
 
     render_slot($node, 'notes', 'species', $content);
 
+    render_slot($node, 'related-content', 'species', $content);
+
     hide($content['links']);
     hide($content['comments']);
 
