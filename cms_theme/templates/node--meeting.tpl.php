@@ -45,33 +45,10 @@
         
     </div>
 
-    <?php
-        if (isset($content['field_meeting_documents'])) {
-            $total_documents = count($content['field_meeting_documents']['#items']);
-    ?>
     <div class="span12">
-        <div class="accordion" id="accordion2">
-            <div class="accordion-group">
-                <div class="accordion-heading">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                        <?php
-                            echo t('Documents') . " (" . $total_documents .")";
-                        ?>
-                    </a>
-                </div>
-                <div id="collapseOne" class="accordion-body collapse in">
-                    <div class="accordion-inner">
-                        <?php
-                            echo render($content['field_meeting_documents']);
-                        ?>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php echo render_slot($node, 'related-content', 'meeting', $content); ?>
     </div>
-    <?php
-        }
-    ?>
+
 </div>
 
 <?php
