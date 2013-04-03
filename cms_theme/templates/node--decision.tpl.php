@@ -24,6 +24,8 @@
     ?>
     </div>
 
+    <div class="clearfix"></div>
+
     <div class="span12">
     <?php
         echo render_slot($node, 'related-content', 'decision', $content);

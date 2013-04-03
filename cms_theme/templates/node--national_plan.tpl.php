@@ -14,16 +14,19 @@
             ?>
             </tbody>
         </table>
-        <hr />
-
-        <?php
-            echo render($content['field_nat_plan_documents']);
-        ?>
     </div>
 
     <div class="span6">
     <?php
         echo render($content['field_nat_plan_remarks']);
+    ?>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="span12">
+    <?php
+        echo render_slot($node, 'related-content', 'national_plan', $content);
     ?>
     </div>
 </div>
