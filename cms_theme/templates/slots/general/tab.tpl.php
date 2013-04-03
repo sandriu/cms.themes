@@ -1,5 +1,5 @@
 <li class="<?php echo $class; ?>">
-    <a href="#<?php echo $href; ?>">
+    <a href="#<?php echo $href; ?>" data-toggle="tab">
     <?php
         echo $title;
     ?>

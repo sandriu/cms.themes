@@ -3,15 +3,6 @@
         triggerPopovers($('body'));
         triggerDataTables($('body'));
 
-        if ( $('#related-content-tabs').length > 0 ) {
-            $('#related-content-tabs').tab();
-
-            $('#related-content-tabs a').click(function(e){
-                e.preventDefault();
-                $(this).tab('show');
-            });
-        }
-
         if ( $('#family-tabs').length > 0 ) {
             $("#family-tabs").tab();
 

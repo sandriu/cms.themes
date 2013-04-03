@@ -48,6 +48,12 @@
     ?>
     </div>
 
+    <div class="span3">
+    <?php
+        echo drupal_render($form['field_decision_instrument']);
+    ?>
+    </div>
+
     <div class="span12">
     <hr />
     <?php
