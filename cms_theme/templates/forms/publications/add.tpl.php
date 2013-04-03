@@ -127,6 +127,21 @@
         echo drupal_render($form['field_publication_source']);
     ?>
     </div>
+</div>
+
+<div class="clearfix">&nbsp;</div>
+
+<legend  class="form-section-legend">
+    <a href="javascript:void(0); " data-toggle="collapse" data-target="#related-content-fields"><i class="icon-minus-sign"></i></a>
+    <?php echo t('Related content'); ?>
+</legend>
+
+<div id="related-content-fields" class="collapse in">
+    <div class="span11">
+    <?php
+        echo drupal_render($form['field_publication_species']);
+    ?>
+    </div>
 
     <div class="clearfix">&nbsp;</div>
 

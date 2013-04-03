@@ -17,30 +17,98 @@
 
 <div class="tab-content">
     <div class="tab-pane active loaded" id="related-content-meetings">
-        <?php echo render($content['field_species_meetings']); ?>
+        <?php
+            if (check_display_field($content, 'field_species_meetings')) {
+                echo render($content['field_species_meetings']);
+            }else {
+        ?>
+        <p class="text-warning">
+        <?php
+                echo t('No related meetings');
+        ?>
+        </p>
+        <?php
+            }
+        ?>
     </div>
 
     <div class="tab-pane" id="related-content-publications">
-        <?php echo render($content['field_species_publications']); ?>
+        <?php
+            if (check_display_field($content, 'field_species_publications')) {
+                echo render($content['field_species_publications']);
+            }else {
+        ?>
+        <p class="text-warning">
+        <?php
+                echo t('No related publications');
+        ?>
+        </p>
+        <?php
+            }
+        ?>
     </div>
 
     <div class="tab-pane" id="related-content-projects">
-        <?php echo render($content['field_species_projects']); ?>
+        <?php
+            if (check_display_field($content, 'field_species_projects')) {
+                echo render($content['field_species_projects']);
+            }else {
+        ?>
+        <p class="text-warning">
+        <?php
+                echo t('No related projects');
+        ?>
+        </p>
+        <?php
+            }
+        ?>
     </div>
 
     <div class="tab-pane" id="related-content-decisions">
-        <?php echo render($content['field_species_decisions']); ?>
+        <?php
+            if (check_display_field($content, 'field_species_decisions')) {
+                echo render($content['field_species_decisions']);
+            }else {
+        ?>
+        <p class="text-warning">
+        <?php
+                echo t('No related decisions');
+        ?>
+        </p>
+        <?php
+            }
+        ?>
     </div>
 
     <div class="tab-pane" id="related-content-national-plans">
-        <?php echo render($content['field_species_national_plans']); ?>
+        <?php
+            if (check_display_field($content, 'field_species_national_plans')) {
+                echo render($content['field_species_national_plans']);
+            }else {
+        ?>
+        <p class="text-warning">
+        <?php
+                echo t('No related national plans');
+        ?>
+        </p>
+        <?php
+            }
+        ?>
     </div>
 
     <div class="tab-pane" id="related-content-national-reports">
-        <?php echo render($content['field_species_national_reports']); ?>
-    </div>
-
-    <div class="tab-pane" id="related-content-publications">
-        <?php echo render($content['field_species_publications']); ?>
+        <?php
+            if (check_display_field($content, 'field_species_national_reports')) {
+                echo render($content['field_species_national_reports']);
+            }else {
+        ?>
+        <p class="text-warning">
+        <?php
+                echo t('No related national reports');
+        ?>
+        </p>
+        <?php
+            }
+        ?>
     </div>
 </div>

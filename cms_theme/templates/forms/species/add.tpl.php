@@ -252,11 +252,11 @@
 ?>
 
 <legend  class="form-section-legend">
-    <a href="javascript:void(0); " data-toggle="collapse" data-target="#other-fields"><i class="icon-plus-sign"></i></a>
+    <a href="javascript:void(0); " data-toggle="collapse" data-target="#related-content-fields"><i class="icon-plus-sign"></i></a>
     <?php echo t('Related content'); ?>
 </legend>
 
-<div id="other-fields" class="collapse out">
+<div id="related-content-fields" class="collapse out">
     <?php
         echo drupal_render($form['field_species_meetings']);
     ?>
