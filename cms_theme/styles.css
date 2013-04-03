@@ -261,6 +261,17 @@ img.species-custom-image {
 }
 
 /**
+ * Chosen specific rules
+*/
+.chzn-container {
+    max-width: 1024px;
+}
+
+.chzn-container .chzn-drop {
+    width: 200px;
+}
+
+/**
  * Specific multivalued form fields
 */
 #field-aewa-pop-status-col-a-values,
