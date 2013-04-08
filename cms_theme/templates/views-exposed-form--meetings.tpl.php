@@ -74,7 +74,7 @@
 
     <?php if (!empty($reset_button)): ?>
       <div class="views-exposed-widget views-reset-button">
-        <a class="reset-link" id="edit-reset" name="op" onclick="jQuery('#views-exposed-form-publications-admin-publication-listing').resetForm();">Clear filters</a>
+        <a class="reset-link" id="edit-reset" name="op" onclick="jQuery('#views-exposed-form-meetings-page').resetForm();">Clear filters</a>
       </div>
     <?php endif; ?>
   </div>
