@@ -1,5 +1,5 @@
 <?php
-    $regions = CMSUtils::$contacts_regions;
+    $regions  = CMSUtils::vocabulary_get_terms(VOC_CONTACTS_REGION);
 ?>
 
 <div class="row">
@@ -201,6 +201,29 @@
             <tr>
                 <th class="span2">
                     <?php
+                        echo t('Organization status');
+                    ?>
+                </th>
+
+                <td>
+                    <?php
+                    if (isset($data['organizationstatus']) && !empty($data['organizationstatus'])) {
+                        foreach ($data['organizationstatus'] as $index => $status) {
+                            if (is_numeric($index)) {
+                                echo $status;
+                    ?>
+                    <br />
+                    <?php
+                            }
+                        }
+                    }
+                    ?>
+                </td>
+            </tr>
+
+            <tr>
+                <th class="span2">
+                    <?php
                         echo t('Department');
                     ?>
                 </th>
@@ -222,6 +245,29 @@
                 <td>
                     <?php
                         echo render($data['title'][0]);
+                    ?>
+                </td>
+            </tr>
+
+            <tr>
+                <th class="span2">
+                    <?php
+                        echo t('Person status');
+                    ?>
+                </th>
+
+                <td>
+                    <?php
+                    if (isset($data['personstatus']) && !empty($data['personstatus'])) {
+                        foreach ($data['personstatus'] as $index => $status) {
+                            if (is_numeric($index)) {
+                                echo $status;
+                    ?>
+                    <br />
+                    <?php
+                            }
+                        }
+                    }
                     ?>
                 </td>
             </tr>
@@ -262,7 +308,7 @@
                 <td>
                     <?php
                     if (isset($data['region']) && !empty($data['region'])) {
-                        echo $regions[$data['region'][0]];
+                        echo (isset($regions[$data['region'][0]])) ? $regions[$data['region'][0]] : $data['region'][0];
                     }
                     ?>
                 </td>
@@ -366,6 +412,29 @@
                 <td>
                     <?php
                         echo render($data['facsimiletelephonenumber'][0]);
+                    ?>
+                </td>
+            </tr>
+
+            <tr>
+                <th class="span2">
+                    <?php
+                        echo t('Mailing lists');
+                    ?>
+                </th>
+
+                <td>
+                    <?php
+                    if (isset($data['cmsmailing']) && !empty($data['cmsmailing'])) {
+                        foreach ($data['cmsmailing'] as $index => $mailing_list) {
+                            if (is_numeric($index)) {
+                                echo $mailing_list;
+                    ?>
+                    <br />
+                    <?php
+                            }
+                        }
+                    }
                     ?>
                 </td>
             </tr>

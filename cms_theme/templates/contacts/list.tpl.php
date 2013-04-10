@@ -6,7 +6,10 @@
                                   'current_group' => $instrument,
                                   'country' => $country,
                                   'region' => $region,
-                                  'instruments' => $instruments)
+                                  'mailing_list' => $mailing_list,
+                                  'instruments' => $instruments,
+                                  'availability' => $availability,
+                                  'person_status' => $person_status)
     );
 ?>
 

@@ -7,13 +7,16 @@
         var instrument = $('#instrument').val();
         var country = $('#country').val();
         var region = $('#region').val();
+        var availability = $('#availability').val();
+        var mailing_list = $('#mailing').val();
+        var person_status = $('#person_status').val();
 
         $('#contacts-listing').dataTable({
             "bProcessing": true,
             "bServerSide": true,
             "bFilter": true,
             "sPaginationType": "bootstrap",
-            "sAjaxSource": "/contacts/datatables_listing?instrument=" + instrument + "&country=" + country + "&region=" + region,
+            "sAjaxSource": "/contacts/datatables_listing?instrument=" + instrument + "&country=" + country + "&region=" + region + "&availability=" + availability + "&mailing_list=" + mailing_list + "&person_status=" + person_status,
             "aaSorting": [ [1, "asc"] ],
             "aoColumns": [
                 {

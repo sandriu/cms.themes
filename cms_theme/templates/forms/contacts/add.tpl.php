@@ -8,6 +8,7 @@
             </legend>
 
             <?php
+                echo drupal_render($form['availability']);
                 echo drupal_render($form['personal_title']);
                 echo drupal_render($form['first_name']);
                 echo drupal_render($form['last_name']);
@@ -30,14 +31,17 @@
             </legend>
             <?php
                 echo drupal_render($form['position']);
+                echo drupal_render($form['person_status']);
                 echo drupal_render($form['email']);
                 echo drupal_render($form['work_phone']);
                 echo drupal_render($form['fax_number']);
                 echo drupal_render($form['organization']);
+                echo drupal_render($form['organization_status']);
                 echo drupal_render($form['department']);
                 echo drupal_render($form['website']);
                 echo drupal_render($form['conventions']);
                 echo drupal_render($form['country_post']);
+                echo drupal_render($form['mailing_list']);
             ?>
         </fieldset>
     </div>
