@@ -9,7 +9,9 @@
                                   'mailing_list' => $mailing_list,
                                   'instruments' => $instruments,
                                   'availability' => $availability,
-                                  'person_status' => $person_status)
+                                  'person_status' => $person_status,
+                                  'meeting' => $meeting,
+                                )
     );
 ?>
 
