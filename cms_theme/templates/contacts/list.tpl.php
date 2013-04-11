@@ -74,6 +74,12 @@
                             echo t('Instrument(s)');
                         ?>
                     </th>
+
+                    <th class="span1">
+                        <?php
+                            echo t('Main instrument');
+                        ?>
+                    </th>
                 </tr>
             </thead>
         </table>

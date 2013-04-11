@@ -28,7 +28,7 @@
                     "bSearchable": true,
                     "sDefaultContent": "",
                     "fnRender": function (oObj) {
-                        return "<a href='/contacts/item/" + oObj.aData[0] + "/" + instrument + "/view'>" + oObj.aData[1] + "</a>";
+                        return "<a href='/contacts/item/" + oObj.aData[0] + "/" + oObj.aData[9] + "/view'>" + oObj.aData[1] + "</a>";
                     }
                 },
                 {
@@ -69,6 +69,11 @@
                     "bSearchable": true,
                     "sDefaultContent": ""
                 },
+                {
+                    "bSearchable": false,
+                    "bVisible": false,
+                    "sDefaultContent": ""
+                }
             ]
         });
 
