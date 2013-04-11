@@ -48,7 +48,7 @@
                 </div>
 
                 <?php
-                    if ($current_profile == 'eurobats') {
+                    if ($current_profile != 'eurobats') {
                 ?>
                 <div class="views-exposed-widget">
                     <label for="region">
