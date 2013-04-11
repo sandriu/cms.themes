@@ -10,6 +10,7 @@
                                   'instruments' => $instruments,
                                   'availability' => $availability,
                                   'person_status' => $person_status,
+                                  'species' => $species,
                                   'meeting' => $meeting,
                                 )
     );
