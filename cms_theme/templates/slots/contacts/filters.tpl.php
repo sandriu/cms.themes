@@ -47,6 +47,9 @@
                     </div>
                 </div>
 
+                <?php
+                    if ($current_profile == 'eurobats') {
+                ?>
                 <div class="views-exposed-widget">
                     <label for="region">
                         <?php echo t('Region'); ?>
@@ -72,6 +75,13 @@
                         </div>
                     </div>
                 </div>
+                <?php
+                    }else {
+                ?>
+                <input type="hidden" name="region" id="region" disabled="disabled" />
+                <?php
+                    }
+                ?>
 
                 <div class="views-exposed-widget">
                     <label for="country">
@@ -209,9 +219,6 @@
                     </div>
                 </div>
 
-                <?php
-                    if ($current_profile != 'eurobats') {
-                ?>
                 <div class="clearfix"></div>
 
                 <div class="views-exposed-widget">
@@ -239,13 +246,6 @@
                         </div>
                     </div>
                 </div>
-                <?php
-                    }else {
-                ?>
-                <input type="hidden" name="meeting" id="meeting" value="" disabled="disabled" />
-                <?php
-                    }
-                ?>
 
                 <div class="clearfix"></div>
 
