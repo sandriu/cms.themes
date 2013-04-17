@@ -298,6 +298,10 @@ img.species-custom-image {
     display: none;
 }
 
+#edit_field_species_experts_chzn, #edit_field_species_experts_chzn .chzn-drop {
+    width: 260px !important;
+}
+
 @media print {
     .btn,
     .navbar,

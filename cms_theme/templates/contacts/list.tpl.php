@@ -11,6 +11,11 @@
                                   'availability' => $availability,
                                   'person_status' => $person_status,
                                   'species' => $species,
+                                  'species_options' => $species_options,
+                                  'region_options' => $region_options,
+                                  'mailing_options' => $mailing_options,
+                                  'org_status_options' => $org_status_options,
+                                  'person_status_options' => $person_status_options,
                                   'meeting' => $meeting,
                                 )
     );
