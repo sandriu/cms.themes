@@ -39,6 +39,12 @@
     ?>
     </div>
 
+    <div class="span3">
+    <?php
+        echo drupal_render($form['field_species_experts']);
+    ?>
+    </div>
+
     <div class="span4">
     <?php
         echo drupal_render($form['field_species_family']);
@@ -60,6 +66,12 @@
     <div class="span4">
     <?php
         echo drupal_render($form['field_species_standard_reference']);
+    ?>
+    </div>
+
+    <div class="span7">
+    <?php
+        echo drupal_render($form['field_species_synonyms']);
     ?>
     </div>
 

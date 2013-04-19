@@ -113,6 +113,12 @@
 
             window.location.href = '/contacts/export?instrument=' + instrument + '&country=' + country + '&sSearch=' + search_query;
         });
+
+        $('#instrument').on('change', function(){
+            //$('#contacts-instrument-filter select, #contacts-instrument-filter input').attr('disabled', 'disabled');
+            //$("#contacts-instrument-filter select").attr('disabled', true).trigger("liszt:updated");
+            $('#contacts-instrument-filter').submit();
+        });
     });
 
     $.fn.resetForm = function() {

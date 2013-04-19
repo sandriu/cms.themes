@@ -146,7 +146,7 @@
                                                 <?php
                                                     foreach ($data['mailing_options'] as $id => $list_name) {
                                                 ?>
-                                                <option value="<?php echo $id; ?>" <?php echo (isset($data['mailing']) && ($data['mailing']  == $id)) ? 'selected="selected"' : ''; ?>>
+                                                <option value="<?php echo $id; ?>" <?php echo (isset($data['mailing_list']) && ($data['mailing_list']  == $id)) ? 'selected="selected"' : ''; ?>>
                                                     <?php echo $list_name; ?>
                                                 </option>
                                                 <?php
