@@ -534,6 +534,7 @@
 
       this.$element[dimension](0)
       this.transition('addClass', $.Event('show'), 'shown')
+      this.$element.css('overflow', 'visible');
       $.support.transition && this.$element[dimension](this.$element[0][scroll])
     }
 
@@ -544,6 +545,7 @@
       this.reset(this.$element[dimension]())
       this.transition('removeClass', $.Event('hide'), 'hidden')
       this.$element[dimension](0)
+      this.$element.css('overflow', 'hidden');
     }
 
   , reset: function (size) {
