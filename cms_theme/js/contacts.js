@@ -10,13 +10,20 @@
         var availability = $('#availability').val();
         var mailing_list = $('#mailing').val();
         var person_status = $('#person_status').val();
+        var organization_status = $('#organization_status').val();
+        var species = $('#species').val();
+        var meeting = $('#meeting').val();
 
         $('#contacts-listing').dataTable({
             "bProcessing": true,
             "bServerSide": true,
             "bFilter": true,
             "sPaginationType": "bootstrap",
-            "sAjaxSource": "/contacts/datatables_listing?instrument=" + instrument + "&country=" + country + "&region=" + region + "&availability=" + availability + "&mailing_list=" + mailing_list + "&person_status=" + person_status,
+            "sAjaxSource": "/contacts/datatables_listing?instrument=" + instrument
+            + "&country=" + country + "&region=" + region + "&availability="
+            + availability + "&mailing_list=" + mailing_list + "&person_status="
+            + person_status + "&organization_status=" + organization_status
+            + "&species=" + species + "&meeting=" + meeting,
             "aaSorting": [ [1, "asc"] ],
             "aoColumns": [
                 {
@@ -118,6 +125,13 @@
             //$('#contacts-instrument-filter select, #contacts-instrument-filter input').attr('disabled', 'disabled');
             //$("#contacts-instrument-filter select").attr('disabled', true).trigger("liszt:updated");
             $('#contacts-instrument-filter').submit();
+        });
+        $('.accordion-toggle').each(function(){
+            toggle = $(this);
+            if (toggle.data('toggle') == 'collapse') {
+                holder = toggle.attr('href');
+                $(holder).css('overflow', 'visible');
+            }
         });
     });
 

@@ -9,15 +9,15 @@
     $current_profile = CMSUtils::get_current_profile();
 ?>
 
-<div class="accordion" id="accordion2">
+<div class="accordion" id="contacts-filters">
     <div class="accordion-group">
         <div class="accordion-heading">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#contacts-filters" href="#contacts-filters-holder" id="contacts-filters-toggle">
                 <i class="icon-filter"></i> Show/Hide filters
             </a>
         </div>
 
-        <div id="collapseOne" class="accordion-body collapse in">
+        <div id="contacts-filters-holder" class="accordion-body collapse in">
             <div class="accordion-inner">
                 <form class="form-inline" id="contacts-instrument-filter" method="GET" action="/contacts/listing">
                     <div class="views-exposed-form well well-small">
@@ -228,10 +228,10 @@
                                             <select name="species" id="species">
                                                 <option value=""><?php echo t('Any'); ?></option>
                                                 <?php
-                                                    foreach ($data['species_options'] as $uuid => $species_name) {
+                                                    foreach ($data['species_options'] as $uuid => $species) {
                                                 ?>
                                                 <option value="<?php echo $uuid; ?>" <?php echo (isset($data['species']) && ($data['species']  == $uuid)) ? 'selected="selected"' : ''; ?>>
-                                                    <?php echo $species_name; ?>
+                                                    <?php echo $species->title_with_website; ?>
                                                 </option>
                                                 <?php
                                                     }
@@ -246,7 +246,7 @@
 
                             <div class="views-exposed-widget">
                                 <label for="meeting" class="text-error">
-                                    <?php echo t('Meeting (not implemented)'); ?>
+                                    <?php echo t('Meeting (Not yet implemented)'); ?>
                                 </label>
 
                                 <div class="views-widget">
@@ -255,8 +255,7 @@
                                             <select name="meeting" id="meeting">
                                                 <option value=""><?php echo t('Any'); ?></option>
                                                 <?php
-                                                    $meetings = CMSMeeting::get_mapped_content(CMSMeeting::$bundle);
-                                                    foreach ($meetings as $uuid => $meeting) {
+                                                    foreach ($data['meeting_options'] as $uuid => $meeting) {
                                                 ?>
                                                 <option value="<?php echo $uuid; ?>" <?php echo (isset($data['meeting']) && ($data['meeting']  == $uuid)) ? 'selected="selected"' : ''; ?>>
                                                     <?php echo $meeting; ?>

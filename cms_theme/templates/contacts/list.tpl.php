@@ -10,12 +10,14 @@
                                   'instruments' => $instruments,
                                   'availability' => $availability,
                                   'person_status' => $person_status,
-                                  'species' => $species,
+                                  'organization_status' => $organization_status,
                                   'species_options' => $species_options,
+                                  'meeting_options' => $meeting_options,
                                   'region_options' => $region_options,
                                   'mailing_options' => $mailing_options,
                                   'org_status_options' => $org_status_options,
                                   'person_status_options' => $person_status_options,
+                                  'species' => $species,
                                   'meeting' => $meeting,
                                 )
     );
