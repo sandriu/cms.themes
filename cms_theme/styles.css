@@ -145,13 +145,15 @@ footer.footer span {
     text-align: center;
 }
 
-.publication-carousel,
-.species-alert {
+.publication-alert,
+.species-alert,
+.project-alert {
     margin-top: 28px;
 }
 
 .species-carousel .carousel-inner a img,
-.publication-carousel .carousel-inner a img {
+.publication-carousel .carousel-inner a img,
+.project-carousel .carousel-inner a img {
     margin: 0 auto;
 }
 
@@ -240,7 +242,8 @@ i.loading-image {
     width: 250px;
 }
 
-img.species-custom-image {
+img.species-custom-image,
+img.project-custom-image {
     max-height: 150px;
     margin: 0 auto;
 }

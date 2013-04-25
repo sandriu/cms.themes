@@ -7,7 +7,7 @@
 <br />
 
 <div class="row">
-    <div class="span12">
+    <div class="span6">
         <table class="table table-condensed table-hover two-columns">
             <tbody>
             <?php
@@ -43,6 +43,12 @@
             ?>
             </tbody>
         </table>
+    </div>
+
+    <div class="span6">
+    <?php
+        render_slot($node, 'gallery', 'project');
+    ?>
     </div>
 
     <div class="span12">
