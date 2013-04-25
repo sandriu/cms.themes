@@ -6,20 +6,20 @@
 
 <ul class="nav nav-tabs" id="related-content-tabs">
     <?php
-        render_tab(t('Meetings'), 'related-content-meetings', 'active', 'field_species_meetings', TRUE, $content);
-        render_tab(t('Publications'), 'related-content-publications', '', 'field_species_publications', TRUE, $content);
-        render_tab(t('Projects'), 'related-content-projects', '', 'field_species_projects', TRUE, $content);
-        render_tab(t('Decisions'), 'related-content-decisions', '', 'field_species_decisions', TRUE, $content);
-        render_tab(t('National plans'), 'related-content-national-plans', '', 'field_species_national_plans', TRUE, $content);
-        render_tab(t('National reports'), 'related-content-national-reports', '', 'field_species_national_reports', TRUE, $content);
+        render_tab(t('Meetings'), 'related-content-meetings', 'active', 'field_species_meeting', TRUE, $content);
+        render_tab(t('Publications'), 'related-content-publications', '', 'field_species_publication', TRUE, $content);
+        render_tab(t('Projects'), 'related-content-projects', '', 'field_species_project', TRUE, $content);
+        render_tab(t('Decisions'), 'related-content-decisions', '', 'field_species_decision', TRUE, $content);
+        render_tab(t('National plans'), 'related-content-national-plans', '', 'field_species_national_plan', TRUE, $content);
+        render_tab(t('National reports'), 'related-content-national-reports', '', 'field_species_national_report', TRUE, $content);
     ?>
 </ul>
 
 <div class="tab-content">
     <div class="tab-pane active loaded" id="related-content-meetings">
         <?php
-            if (check_display_field($content, 'field_species_meetings')) {
-                echo render($content['field_species_meetings']);
+            if (check_display_field($content, 'field_species_meeting')) {
+                echo render($content['field_species_meeting']);
             }else {
         ?>
         <p class="text-warning">
@@ -34,8 +34,8 @@
 
     <div class="tab-pane" id="related-content-publications">
         <?php
-            if (check_display_field($content, 'field_species_publications')) {
-                echo render($content['field_species_publications']);
+            if (check_display_field($content, 'field_species_publication')) {
+                echo render($content['field_species_publication']);
             }else {
         ?>
         <p class="text-warning">
@@ -50,8 +50,8 @@
 
     <div class="tab-pane" id="related-content-projects">
         <?php
-            if (check_display_field($content, 'field_species_projects')) {
-                echo render($content['field_species_projects']);
+            if (check_display_field($content, 'field_species_project')) {
+                echo render($content['field_species_project']);
             }else {
         ?>
         <p class="text-warning">
@@ -66,8 +66,8 @@
 
     <div class="tab-pane" id="related-content-decisions">
         <?php
-            if (check_display_field($content, 'field_species_decisions')) {
-                echo render($content['field_species_decisions']);
+            if (check_display_field($content, 'field_species_decision')) {
+                echo render($content['field_species_decision']);
             }else {
         ?>
         <p class="text-warning">
@@ -82,8 +82,8 @@
 
     <div class="tab-pane" id="related-content-national-plans">
         <?php
-            if (check_display_field($content, 'field_species_national_plans')) {
-                echo render($content['field_species_national_plans']);
+            if (check_display_field($content, 'field_species_national_plan')) {
+                echo render($content['field_species_national_plan']);
             }else {
         ?>
         <p class="text-warning">
@@ -98,8 +98,8 @@
 
     <div class="tab-pane" id="related-content-national-reports">
         <?php
-            if (check_display_field($content, 'field_species_national_reports')) {
-                echo render($content['field_species_national_reports']);
+            if (check_display_field($content, 'field_species_national_report')) {
+                echo render($content['field_species_national_report']);
             }else {
         ?>
         <p class="text-warning">

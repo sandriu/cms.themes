@@ -270,27 +270,27 @@
 
 <div id="related-content-fields" class="collapse out">
     <?php
-        echo drupal_render($form['field_species_meetings']);
+        echo drupal_render($form['field_species_meeting']);
     ?>
     <div class="clearfix">&nbsp;</div>
     <?php
-        echo drupal_render($form['field_species_publications']);
+        echo drupal_render($form['field_species_publication']);
     ?>
     <div class="clearfix">&nbsp;</div>
     <?php
-        echo drupal_render($form['field_species_projects']);
+        echo drupal_render($form['field_species_project']);
     ?>
     <div class="clearfix">&nbsp;</div>
     <?php
-        echo drupal_render($form['field_species_decisions']);
+        echo drupal_render($form['field_species_decision']);
     ?>
     <div class="clearfix">&nbsp;</div>
     <?php
-        echo drupal_render($form['field_species_national_plans']);
+        echo drupal_render($form['field_species_national_plan']);
     ?>
     <div class="clearfix">&nbsp;</div>
     <?php
-        echo drupal_render($form['field_species_national_reports']);
+        echo drupal_render($form['field_species_national_report']);
     ?>
 </div>
 
