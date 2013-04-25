@@ -130,9 +130,40 @@
 
     <div class="span12">
     <?php
-        hide($form['field_meeting_documents']);
-        echo drupal_render_children($form);
+        echo drupal_render($form['field_meeting_url']);
     ?>
+    </div>
+
+    <div class="span12">
+        <h3 class="muted"><?php echo t('Related content'); ?></h3>
+
+        <div class="span3 no-left-margin">
+        <?php
+            echo drupal_render($form['field_meeting_species']);
+        ?>
+        </div>
+        <div class="span3">
+        <?php
+            echo drupal_render($form['field_meeting_decision']);
+        ?>
+        </div>
+        <div class="span3">
+        <?php
+            echo drupal_render($form['field_meeting_publication']);
+        ?>
+        </div>
+        <div class="span3">
+        <?php
+            echo drupal_render($form['field_meeting_threats']);
+        ?>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <?php
+            hide($form['field_meeting_documents']);
+            echo drupal_render_children($form);
+        ?>
     </div>
 </div>
 
