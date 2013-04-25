@@ -292,6 +292,10 @@
     <?php
         echo drupal_render($form['field_species_national_report']);
     ?>
+    <div class="clearfix">&nbsp;</div>
+    <?php
+        echo drupal_render($form['field_species_document']);
+    ?>
 </div>
 
 <div class="clearfix">&nbsp;</div>

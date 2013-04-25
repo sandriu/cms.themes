@@ -12,6 +12,7 @@
         render_tab(t('Decisions'), 'related-content-decisions', '', 'field_species_decision', TRUE, $content);
         render_tab(t('National plans'), 'related-content-national-plans', '', 'field_species_national_plan', TRUE, $content);
         render_tab(t('National reports'), 'related-content-national-reports', '', 'field_species_national_report', TRUE, $content);
+        render_tab(t('Documents'), 'related-content-species', '', 'field_species_document', TRUE, $content);
     ?>
 </ul>
 
@@ -105,6 +106,22 @@
         <p class="text-warning">
         <?php
                 echo t('No related national reports');
+        ?>
+        </p>
+        <?php
+            }
+        ?>
+    </div>
+
+    <div class="tab-pane" id="related-content-species">
+        <?php
+            if (check_display_field($content, 'field_species_document')) {
+                echo render($content['field_species_document']);
+            }else {
+        ?>
+        <p class="text-warning">
+        <?php
+                echo t('No related documents');
         ?>
         </p>
         <?php

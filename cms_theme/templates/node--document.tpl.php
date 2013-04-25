@@ -23,6 +23,12 @@
         echo render($content['field_document_files']);
     ?>
     </div>
+
+    <div class="span12">
+    <?php
+        render_slot($node, 'related-content', 'document', $content);
+    ?>
+    </div>
 </div>
 
 <?php
