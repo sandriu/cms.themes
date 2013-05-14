@@ -9,8 +9,8 @@
 <table class="table table-condensed table-hover two-columns">
     <caption><?php echo t('Details'); ?></caption>
     <tbody>
-        <?php echo render($content['title']); ?>
         <?php echo render($content['field_instrument_name']); ?>
+        <?php echo render($content['field_instrument_type']); ?>
         <?php echo render($content['field_instrument_host_country']); ?>
         <?php echo render($content['field_instrument_depository']); ?>
         <?php echo render($content['field_instrument_secretariat']); ?>

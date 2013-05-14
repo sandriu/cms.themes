@@ -143,6 +143,42 @@
     ?>
     </div>
 
+    <div class="span11">
+    <?php
+        echo drupal_render($form['field_publication_threats']);
+    ?>
+    </div>
+
+    <div class="span11">
+    <?php
+        echo drupal_render($form['field_publication_meetings']);
+    ?>
+    </div>
+
+    <div class="span11">
+    <?php
+        echo drupal_render($form['field_publication_decisions']);
+    ?>
+    </div>
+
+    <div class="span11">
+    <?php
+        echo drupal_render($form['field_publication_species']);
+    ?>
+    </div>
+
+    <div class="span11">
+    <?php
+        echo drupal_render($form['field_publication_nat_plan']);
+    ?>
+    </div>
+
+    <div class="span11">
+    <?php
+        echo drupal_render($form['field_publication_regions']);
+    ?>
+    </div>
+
     <div class="clearfix">&nbsp;</div>
 
     <?php
