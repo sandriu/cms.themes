@@ -34,6 +34,10 @@
             echo render($content['field_species_standard_reference']);
         }
         
+        if(check_display_field($content, 'field_species_synonyms')) {
+            echo render($content['field_species_synonyms']);
+        }
+
         ?>
     </table>
 </div>

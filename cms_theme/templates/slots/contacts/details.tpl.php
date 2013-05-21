@@ -1,5 +1,6 @@
 <?php
-    $regions  = CMSUtils::vocabulary_get_terms(VOC_CONTACTS_REGION);
+    $regions = CMSUtils::vocabulary_get_terms(VOC_CONTACTS_REGION);
+    $languages = CMSUtils::vocabulary_get_terms(VOC_LANGUAGES);
 ?>
 
 <div class="row">
@@ -438,6 +439,50 @@
                     ?>
                 </td>
             </tr>
+
+            <tr>
+                <th class="span2">
+                    <?php
+                        echo t('Preferred language');
+                    ?>
+                </th>
+
+                <td>
+                    <?php
+                    if (isset($data['preferredlanguage']) && !empty($data['preferredlanguage'])) {
+                        echo (isset($languages[$data['preferredlanguage'][0]])) ? $languages[$data['preferredlanguage'][0]] : $data['preferredlanguage'][0];
+                    }
+                    ?>
+                </td>
+            </tr>
         </tbody>
     </table>
+
+    <h3 class="muted">
+        <?php
+            echo t('Species');
+        ?>
+    </h3>
+
+    <div>
+    <?php
+        if ($data['species']) {
+    ?>
+    <ul>
+    <?php
+        foreach($data['species'] as $index => $species) {
+    ?>
+        <li>
+            <?php
+            echo l($species->title, "node/" . $species->nid . "");
+            ?>
+        </li>
+    <?php
+        }
+    ?>
+    </ul>
+    <?php
+        }
+    ?>
+    </div>
 </div>

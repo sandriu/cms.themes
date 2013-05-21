@@ -18,11 +18,11 @@
             <?php echo render($content['field_publication_edition']); ?>
             <?php echo render($content['field_publication_order_code']); ?>
             <?php echo render($content['field_publication_instrument']); ?>
+            <?php echo render($content['field_publication_source']); ?>
             </tbody>
         </table>
 
         <div class="clearfix">&nbsp;</div>
-        <?php echo render($content['field_publication_source']); ?>
 
         <?php echo render($content['body']); ?>
 
