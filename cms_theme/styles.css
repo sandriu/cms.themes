@@ -267,6 +267,11 @@ img.project-custom-image {
     width: 15px;
 }
 
+#contacts-form label.radio,
+#organization-form label.radio {
+    width: auto;
+}
+
 /**
  * Chosen specific rules
 */

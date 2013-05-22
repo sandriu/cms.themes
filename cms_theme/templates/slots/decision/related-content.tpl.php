@@ -8,7 +8,7 @@
     <?php
         render_tab(t('Species'), 'related-content-species', 'active', 'field_decision_species', TRUE, $content);
         render_tab(t('Documents'), 'related-content-documents', '', 'field_decision_documents', TRUE, $content);
-        render_tab(t('Meetings'), 'related-content-meetings', '', 'field_decision_meetings', TRUE, $content);
+        render_tab(t('Meetings'), 'related-content-meetings', '', 'field_decision_meeting', TRUE, $content);
         render_tab(t('Threats'), 'related-content-threats', '', 'field_decision_threats', TRUE, $content);
     ?>
 </ul>

@@ -142,6 +142,29 @@
             <tr>
                 <th class="span2">
                     <?php
+                        echo t('Additional emails');
+                    ?>
+                </th>
+
+                <td>
+                    <?php
+                    if (isset($data['additionalemails']) && !empty($data['additionalemails'])) {
+                        foreach ($data['additionalemails'] as $index => $additional_email) {
+                            if (is_numeric($index)) {
+                    ?>
+                    <a href="mailto:<?php echo $additional_email; ?>" title="<?php echo t('Send mail to') . ' ' . $additional_email; ?>"><?php echo $additional_email; ?></a>
+                    <br />
+                    <?php
+                            }
+                        }
+                    }
+                    ?>
+                </td>
+            </tr>
+
+            <tr>
+                <th class="span2">
+                    <?php
                         echo t('Description');
                     ?>
                 </th>

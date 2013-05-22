@@ -11,7 +11,6 @@
                 echo render($content['field_decision_type']);
                 echo render($content['field_decision_status']);
                 echo render($content['field_decision_number']);
-                echo render($content['field_decision_meeting']);
             ?>
             </tbody>
         </table>
