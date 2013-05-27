@@ -296,13 +296,15 @@ img.project-custom-image {
 /**
  * Specific multivalued form fields
 */
+
 #field-aewa-pop-status-col-a-values,
 #field-aewa-pop-status-col-b-values,
 #field-aewa-pop-status-col-c-values {
     background: none;
 }
 
-#field-aewa-population-status-values .delta-order select {
+#field-aewa-population-status-values .delta-order select,
+.tabledrag-toggle-weight {
     display: none;
 }
 
