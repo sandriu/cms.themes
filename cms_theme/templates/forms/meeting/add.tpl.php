@@ -35,12 +35,6 @@
 
     <div class="span2">
     <?php
-        echo drupal_render($form['field_meeting_access']);
-    ?>
-    </div>
-
-    <div class="span2">
-    <?php
         echo drupal_render($form['field_meeting_status']);
     ?>
     </div>
