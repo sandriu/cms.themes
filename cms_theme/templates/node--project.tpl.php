@@ -54,7 +54,7 @@
     <div class="span12">
     <?php
         render_slot($node, 'activity', 'project', $content);
-        echo render($content['field_project_document']);
+        echo render($content['field_project_file']);
         render_slot($node, 'related-content', 'project', $content);
     ?>
     </div>

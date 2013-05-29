@@ -155,7 +155,7 @@
         <div class="clearfix"></div>
 
         <?php
-            hide($form['field_meeting_documents']);
+            hide($form['field_meeting_document']);
             echo drupal_render_children($form);
         ?>
     </div>
