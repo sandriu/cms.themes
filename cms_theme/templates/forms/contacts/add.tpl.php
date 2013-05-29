@@ -42,6 +42,7 @@
                 echo drupal_render($form['conventions']);
                 echo drupal_render($form['country_post']);
                 echo drupal_render($form['mailing_list']);
+                echo drupal_render($form['preferred_language']);
             ?>
         </fieldset>
     </div>

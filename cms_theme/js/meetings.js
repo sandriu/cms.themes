@@ -15,6 +15,11 @@
                 {
                     "bSearchable": true,
                     "sDefaultContent": "",
+
+                },
+                {
+                    "bSearchable": true,
+                    "sDefaultContent": "",
                    
                 },
                 {
@@ -32,7 +37,7 @@
                 [10, 25, 50, 100, -1],
                 [10, 25, 50, 100, "All"],
             ],
-            "aaSorting": [ [1, "asc"] ]
+            "aaSorting": [ [4, "desc"] ]
         });
 
         $('#all-document-listing').dataTable({
@@ -48,6 +53,11 @@
                 {
                     "bSearchable": true,
                     "sDefaultContent": "",
+
+                },
+                {
+                    "bSearchable": true,
+                    "sDefaultContent": "",
                    
                 },
                 {
@@ -65,7 +75,7 @@
                 [10, 25, 50, 100, -1],
                 [10, 25, 50, 100, "All"],
             ],
-            "aaSorting": [ [1, "asc"] ]
+            "aaSorting": [ [4, "desc"] ]
         });
 
         $('a.back-button').click(function(){

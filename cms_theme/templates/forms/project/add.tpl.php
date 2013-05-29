@@ -90,7 +90,8 @@
 
     <div class="span6">
     <?php
-        echo drupal_render($form['field_project_funds_requested']);
+        echo drupal_render($form['field_project_funds_req_amount']);
+        echo drupal_render($form['field_project_funds_req_amount_c']);
     ?>
     </div>
 
@@ -153,8 +154,61 @@
 
     <div class="span12">
     <?php
-        echo drupal_render($form['field_project_document']);
+        echo drupal_render($form['field_project_file']);
     ?>
+    </div>
+
+    <div class="span12">
+    <?php
+        echo drupal_render($form['field_project_images']);
+    ?>
+    </div>
+
+    <div class="clearfix">&nbsp;</div>
+
+    <div class="span12">
+    <legend  class="form-section-legend">
+        <a href="javascript:void(0); " data-toggle="collapse" data-target="#related-content-fields"><i class="icon-minus-sign"></i></a>
+        <?php echo t('Related content'); ?>
+    </legend>
+
+    <div id="related-content-fields" class="collapse in">
+        <div class="span11">
+        <?php
+            echo drupal_render($form['field_project_decision']);
+        ?>
+        </div>
+
+        <div class="span11">
+        <?php
+            echo drupal_render($form['field_project_nat_plan']);
+        ?>
+        </div>
+
+            <div class="span11">
+        <?php
+            echo drupal_render($form['field_project_document']);
+        ?>
+        </div>
+
+            <div class="span11">
+        <?php
+            echo drupal_render($form['field_project_meeting']);
+        ?>
+        </div>
+
+        <div class="span11">
+        <?php
+            echo drupal_render($form['field_project_publication']);
+        ?>
+        </div>
+
+        <div class="span11">
+        <?php
+            echo drupal_render($form['field_project_species']);
+        ?>
+        </div>
+    </div>
     </div>
 
     <div class="clearfix">&nbsp;</div>

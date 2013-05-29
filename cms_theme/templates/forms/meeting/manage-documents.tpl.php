@@ -52,6 +52,12 @@
                             echo t('Published');
                         ?>
                     </th>
+
+                    <th class="span2">
+                        <?php
+                            echo t('Created');
+                        ?>
+                    </th>
                 </tr>
             </thead>
 
@@ -86,7 +92,13 @@
                             $publish_date = strtotime($document->field_document_publish_date[$document->language][0]['value']);
                             echo date("d/m/Y", $publish_date);
                         }
-                        
+
+                    ?>
+                    </td>
+
+                    <td>
+                    <?php
+                            echo date("d/m/Y", $document->created);
                     ?>
                     </td>
                 </tr>
@@ -129,6 +141,12 @@
                             echo t('Published');
                         ?>
                     </th>
+
+                    <th class="span2">
+                        <?php
+                            echo t('Created');
+                        ?>
+                    </th>
                 </tr>
             </thead>
 
@@ -164,7 +182,13 @@
                             $publish_date = strtotime($document->field_document_publish_date[$document->language][0]['value']);
                             echo date("d/m/Y", $publish_date);
                         }
-                        
+
+                    ?>
+                    </td>
+
+                    <td>
+                    <?php
+                            echo date("d/m/Y", $document->created);
                     ?>
                     </td>
                 </tr>

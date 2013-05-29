@@ -15,7 +15,6 @@
                 echo render($content['field_meeting_instrument']);
                 echo render($content['field_meeting_type']);
                 echo render($content['field_meeting_kind']);
-                echo render($content['field_meeting_access']);
                 echo render($content['field_meeting_status']);
                 echo render($content['field_meeting_languages']);
                 

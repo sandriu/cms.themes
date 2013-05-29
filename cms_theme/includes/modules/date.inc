@@ -1,13 +1,13 @@
 <?php
 
 /**
- * Override how date fields are displayed
+ * Overwrite how date fields are displayed
 */
 function cms_theme_date_combo($variables) {
     $element = $variables['element'];
     $field = field_info_field($element['#field_name']);
     $instance = field_info_instance($element['#entity_type'], $element['#field_name'], $element['#bundle']);
-   
+
     // Group start/end items together in fieldset.
     $fieldset = array(
       '#title' => '',
@@ -16,15 +16,23 @@ function cms_theme_date_combo($variables) {
       '#attributes' => array(),
       '#children' => $element['#children'],
     );
+
     return theme('form_element', array('element' => $fieldset));
 }
 
 function cms_theme_date_part_label_date($variables){
     if (isset($variables['element']) && isset($variables['element']['#date_title'])) {
-        return t($variables['element']['#date_title'], array(), array('context' => 'datetime'));
+        $element = $variables['element'];
+        $label = $element['#date_title'];
+        if ($element['#required']) {
+            $label = $label . ' <span class="form-required required-label">*</span>';
+        }
+        $title = t($label, array(), array('context' => 'datetime'));
+    }else {
+        $title = t('Date', array(), array('context' => 'datetime'));
     }
 
-    return t('Date', array(), array('context' => 'datetime'));
+    return $title;
 }
 
 /**
@@ -32,17 +40,35 @@ function cms_theme_date_part_label_date($variables){
  */
 function cms_theme_date_part_label_year($variables) {
     if (isset($variables['element']) && isset($variables['element']['#date_title'])) {
-        return t($variables['element']['#date_title'], array(), array('context' => 'datetime'));
+        $element = $variables['element'];
+        $label = $element['#date_title'];
+        if ($element['#required']) {
+            $label = $label . ' <span class="form-required required-label">*</span>';
+        }
+        $title = t($label, array(), array('context' => 'datetime'));
+    }else {
+        $title = t('Year', array(), array('context' => 'datetime'));
     }
 
-    return t('Year', array(), array('context' => 'datetime'));
+    return $title;
 }
 
 /**
  * Returns HTML for a date_select 'month' label.
  */
 function cms_theme_date_part_label_month($variables) {
-  return t('Month', array(), array('context' => 'datetime'));
+  if (isset($variables['element']) && isset($variables['element']['#date_title'])) {
+        $element = $variables['element'];
+        $label = $element['#date_title'];
+        if ($element['#required']) {
+            $label = $label . ' <span class="form-required required-label">*</span>';
+        }
+        $title = t($label, array(), array('context' => 'datetime'));
+    }else {
+        $title = t('Month', array(), array('context' => 'datetime'));
+    }
+
+    return $title;
 }
 
 /**
@@ -50,10 +76,17 @@ function cms_theme_date_part_label_month($variables) {
  */
 function cms_theme_date_part_label_day($variables) {
     if (isset($variables['element']) && isset($variables['element']['#date_title'])) {
-        return t($variables['element']['#date_title'], array(), array('context' => 'datetime'));
+        $element = $variables['element'];
+        $label = $element['#date_title'];
+        if ($element['#required']) {
+            $label = $label . ' <span class="form-required required-label">*</span>';
+        }
+        $title = t($label, array(), array('context' => 'datetime'));
+    }else {
+        $title = t('Day', array(), array('context' => 'datetime'));
     }
 
-    return t('Day', array(), array('context' => 'datetime'));
+    return $title;
 }
 
 /**
@@ -111,9 +144,16 @@ function cms_theme_date_part_label_timezone($variables) {
  * Returns HTML for a date_select 'time' label.
  */
 function cms_theme_date_part_label_time($variables) {
-    //if (isset($variables['element']) && isset($variables['element']['#date_title'])) {
-    //    return t($variables['element']['#date_title'], array(), array('context' => 'datetime'));
-    //}
+    if (isset($variables['element']) && isset($variables['element']['#date_title'])) {
+        $element = $variables['element'];
+        $label = $element['#date_title'];
+        if ($element['#required']) {
+            $label = $label . ' <span class="form-required required-label">*</span>';
+        }
+        $title = t($label, array(), array('context' => 'datetime'));
+    }else {
+        $title = t('Time', array(), array('context' => 'datetime'));
+    }
 
-    return t('Time', array(), array('context' => 'datetime'));
+    return $title;
 }

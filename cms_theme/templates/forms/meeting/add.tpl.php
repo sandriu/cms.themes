@@ -35,12 +35,6 @@
 
     <div class="span2">
     <?php
-        echo drupal_render($form['field_meeting_access']);
-    ?>
-    </div>
-
-    <div class="span2">
-    <?php
         echo drupal_render($form['field_meeting_status']);
     ?>
     </div>
@@ -161,7 +155,7 @@
         <div class="clearfix"></div>
 
         <?php
-            hide($form['field_meeting_documents']);
+            hide($form['field_meeting_document']);
             echo drupal_render_children($form);
         ?>
     </div>

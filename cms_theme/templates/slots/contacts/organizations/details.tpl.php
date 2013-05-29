@@ -1,3 +1,8 @@
+<?php
+    $regions = CMSUtils::vocabulary_get_terms(VOC_CONTACTS_REGION);
+    $languages = CMSUtils::vocabulary_get_terms(VOC_LANGUAGES);
+?>
+
 <div class="row">
     <table class="table table-bordered span6">
         <tbody>
@@ -11,6 +16,221 @@
                 <td>
                     <?php
                         echo render($data['o'][0]);
+                    ?>
+                </td>
+            </tr>
+
+            <tr>
+                <th class="span2">
+                    <?php
+                        echo t('Department');
+                    ?>
+                </th>
+
+                <td>
+                    <?php
+                        echo render($data['ou'][0]);
+                    ?>
+                </td>
+            </tr>
+
+            <tr>
+                <th class="span2">
+                    <?php
+                        echo t('Organization status');
+                    ?>
+                </th>
+
+                <td>
+                    <?php
+                    if (isset($data['organizationstatus']) && !empty($data['organizationstatus'])) {
+                        foreach ($data['organizationstatus'] as $index => $status) {
+                            if (is_numeric($index)) {
+                                echo $status;
+                    ?>
+                    <br />
+                    <?php
+                            }
+                        }
+                    }
+                    ?>
+                </td>
+            </tr>
+
+            <tr>
+                <th class="span2">
+                    <?php
+                        echo t('Website');
+                    ?>
+                </th>
+
+                <td>
+                    <?php
+                    if (isset($data['website'][0]) && (!empty($data['website'][0]))) {
+                    ?>
+                    <a href="<?php echo $data['website'][0]; ?>" taget="_blank">
+                    <?php
+                        echo $data['website'][0];
+                    ?>
+                    </a>
+                    <?php
+                    }
+                    ?>
+                </td>
+            </tr>
+
+            <tr>
+                <th class="span2">
+                    <?php
+                        echo t('Email');
+                    ?>
+                </th>
+
+                <td>
+                    <?php
+                        if (isset($data['mail'][0])) {
+                    ?>
+                    <a href="mailto:<?php echo $data['mail'][0]; ?>" title="<?php echo t('Send mail to') . ' ' . $data['mail'][0]; ?>">
+                    <?php
+                        echo $data['mail'][0];
+                    ?>
+                    </a>
+                    <?php
+                        }
+                    ?>
+                </td>
+            </tr>
+
+            <tr>
+                <th class="span2">
+                    <?php
+                        echo t('Phone');
+                    ?>
+                </th>
+
+                <td>
+                    <?php
+                        echo render($data['telephonenumber'][0]);
+                    ?>
+                </td>
+            </tr>
+
+            <tr>
+                <th class="span2">
+                    <?php
+                        echo t('Mobile');
+                    ?>
+                </th>
+
+                <td>
+                    <?php
+                        echo render($data['mobile'][0]);
+                    ?>
+                </td>
+            </tr>
+
+            <tr>
+                <th class="span2">
+                    <?php
+                        echo t('Fax');
+                    ?>
+                </th>
+
+                <td>
+                    <?php
+                        echo render($data['facsimiletelephonenumber'][0]);
+                    ?>
+                </td>
+            </tr>
+
+            <tr>
+                <th class="span2">
+                    <?php
+                        echo t('Skype ID');
+                    ?>
+                </th>
+
+                <td>
+                    <?php
+                        echo render($data['skype'][0]);
+                    ?>
+                </td>
+            </tr>
+
+            <tr>
+                <th class="span2">
+                    <?php
+                        echo t('Additional emails');
+                    ?>
+                </th>
+
+                <td>
+                    <?php
+                    if (isset($data['additionalemails']) && !empty($data['additionalemails'])) {
+                        foreach ($data['additionalemails'] as $index => $additional_email) {
+                            if (is_numeric($index)) {
+                    ?>
+                    <a href="mailto:<?php echo $additional_email; ?>" title="<?php echo t('Send mail to') . ' ' . $additional_email; ?>"><?php echo $additional_email; ?></a>
+                    <br />
+                    <?php
+                            }
+                        }
+                    }
+                    ?>
+                </td>
+            </tr>
+
+            <tr>
+                <th class="span2">
+                    <?php
+                        echo t('Mailing lists');
+                    ?>
+                </th>
+
+                <td>
+                    <?php
+                    if (isset($data['cmsmailing']) && !empty($data['cmsmailing'])) {
+                        foreach ($data['cmsmailing'] as $index => $mailing_list) {
+                            if (is_numeric($index)) {
+                                echo $mailing_list;
+                    ?>
+                    <br />
+                    <?php
+                            }
+                        }
+                    }
+                    ?>
+                </td>
+            </tr>
+
+            <tr>
+                <th class="span2">
+                    <?php
+                        echo t('Preferred language');
+                    ?>
+                </th>
+
+                <td>
+                    <?php
+                    if (isset($data['preferredlanguage']) && !empty($data['preferredlanguage'])) {
+                        echo (isset($languages[$data['preferredlanguage'][0]])) ? $languages[$data['preferredlanguage'][0]] : $data['preferredlanguage'][0];
+                    }
+                    ?>
+                </td>
+            </tr>
+
+            <tr>
+                <th class="span2">
+                    <?php
+                        echo t('Region');
+                    ?>
+                </th>
+
+                <td>
+                    <?php
+                    if (isset($data['region']) && !empty($data['region'])) {
+                        echo (isset($regions[$data['region'][0]])) ? $regions[$data['region'][0]] : $data['region'][0];
+                    }
                     ?>
                 </td>
             </tr>
@@ -34,6 +254,22 @@
             <tr>
                 <th class="span2">
                     <?php
+                        echo t('Country post');
+                    ?>
+                </th>
+
+                <td>
+                    <?php
+                    if (isset($data['cpiso2']) && !empty($data['cpiso2'])) {
+                        echo countries_get_country($data['cpiso2'][0])->name;
+                    }
+                    ?>
+                </td>
+            </tr>
+
+            <tr>
+                <th class="span2">
+                    <?php
                         echo t('Town/City');
                     ?>
                 </th>
@@ -45,20 +281,6 @@
                 </td>
             </tr>
 
-
-            <tr>
-                <th class="span2">
-                    <?php
-                        echo t('Phone');
-                    ?>
-                </th>
-
-                <td>
-                    <?php
-                        echo render($data['telephonenumber'][0]);
-                    ?>
-                </td>
-            </tr>
 
             <tr>
                 <th class="span2">
@@ -124,20 +346,6 @@
                 <td>
                     <?php
                         echo render($data['street'][0]);
-                    ?>
-                </td>
-            </tr>
-
-            <tr>
-                <th class="span2">
-                    <?php
-                        echo t('Fax');
-                    ?>
-                </th>
-
-                <td>
-                    <?php
-                        echo render($data['facsimiletelephonenumber'][0]);
                     ?>
                 </td>
             </tr>

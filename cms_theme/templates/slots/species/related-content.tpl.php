@@ -13,6 +13,7 @@
         render_tab(t('National plans'), 'related-content-national-plans', '', 'field_species_national_plan', TRUE, $content);
         render_tab(t('National reports'), 'related-content-national-reports', '', 'field_species_national_report', TRUE, $content);
         render_tab(t('Documents'), 'related-content-species', '', 'field_species_document', TRUE, $content);
+        render_tab(t('Contacts'), 'related-content-contacts', '', 'field_species_experts', TRUE, $content);
     ?>
 </ul>
 
@@ -122,6 +123,27 @@
         <p class="text-warning">
         <?php
                 echo t('No related documents');
+        ?>
+        </p>
+        <?php
+            }
+        ?>
+    </div>
+
+    <div class="tab-pane" id="related-content-contacts">
+        <?php
+            if (isset($node->experts)) {
+                foreach ($node->experts as $expert) {
+                    echo '<a href="/contacts/item/' . $expert['uid'][0] . '/' . $expert['conventions'][0] . '/view">' . $expert['cn'][0]  . '</a>';
+                    echo '<br />';
+                }
+        ?>
+        <?php
+            }else {
+        ?>
+        <p class="text-warning">
+        <?php
+                echo t('No experts');
         ?>
         </p>
         <?php
