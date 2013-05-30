@@ -481,13 +481,13 @@
         </tbody>
     </table>
 
+    <div class="span12">
     <h3 class="muted">
         <?php
             echo t('Species');
         ?>
     </h3>
 
-    <div>
     <?php
         if ($data['species']) {
     ?>
@@ -505,7 +505,53 @@
     ?>
     </ul>
     <?php
+        }else {
+    ?>
+    <p class="text-warning">
+        <?php
+        echo t('The contact is not assigned to any species.');
+        ?>
+    </p>
+    <?php
         }
     ?>
+    </div>
+
+    <hr />
+
+    <div class="span12">
+        <h3 class="muted">
+            <?php
+                echo t('Meetings');
+            ?>
+        </h3>
+
+        <?php
+            if ($data['meetings']) {
+        ?>
+        <ul>
+        <?php
+            foreach($data['meetings'] as $index => $meeting) {
+        ?>
+            <li>
+                <?php
+                echo l($meeting->title, "node/" . $meeting->nid . "");
+                ?>
+            </li>
+        <?php
+            }
+        ?>
+        </ul>
+        <?php
+            }else {
+        ?>
+        <p class="text-warning">
+            <?php
+            echo t('The contact is not participant to any meeting.');
+            ?>
+        </p>
+        <?php
+            }
+        ?>
     </div>
 </div>

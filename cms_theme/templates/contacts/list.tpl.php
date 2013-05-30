@@ -4,8 +4,8 @@
                                   'per_page' => $per_page,
                                   'per_page_options' => $per_page_options,
                                   'current_group' => $instrument,
-                                  'country' => $country,
-                                  'region' => $region,
+                                  'countries' => $countries,
+                                  'regions' => $regions,
                                   'mailing_list' => $mailing_list,
                                   'instruments' => $instruments,
                                   'availability' => $availability,
@@ -67,6 +67,12 @@
                     <th class="span2">
                         <?php
                             echo t('Country');
+                        ?>
+                    </th>
+
+                    <th class="span2">
+                        <?php
+                            echo t('Country post');
                         ?>
                     </th>
 
