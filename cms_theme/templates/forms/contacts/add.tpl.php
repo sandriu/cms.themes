@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="span12">
+    <div class="span8">
         <fieldset>
             <legend>
                 <?php
