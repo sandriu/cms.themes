@@ -2,7 +2,7 @@
     if (isset($user['lastmodifiedby']) && isset($user['lastmodifiedtime'])) {
 ?>
 <p class="muted">
-    <small><?php echo t('Last modified by'); ?> <strong><?php echo $user['lastmodifiedby'][0]; ?></strong> on <strong><?php echo date('dS M Y H:i:s', $user['lastmodifiedtime'][0]); ?></strong></small>
+    <small><?php echo t('Last modified by'); ?> <strong class="text-warning"><?php echo $user['lastmodifiedby'][0]; ?></strong> on <strong class="text-warning"><?php echo date('dS M Y H:i:s', $user['lastmodifiedtime'][0]); ?></strong></small>
 </p>
 <?php
     }
