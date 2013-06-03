@@ -247,6 +247,10 @@
 
 <div id="population-status" class="collapse out">
     <?php
+        render_simple_slot('population_status_legend', 'species');
+    ?>
+
+    <?php
         echo drupal_render($form['field_aewa_population_status']);
     ?>
 </div>
