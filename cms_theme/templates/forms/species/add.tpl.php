@@ -133,6 +133,12 @@
 <div id="assessment-information-fields" class="collapse out">
     <div class="span11">
     <?php
+        echo drupal_render($form['field_species_iucn_web_srv']);
+    ?>
+    </div>
+
+    <div class="span11">
+    <?php
         echo drupal_render($form['field_species_instruments']);
     ?>
     <hr />
@@ -323,7 +329,6 @@
 
 <?php
     hide($form['field_species_iucn_status']);
-    hide($form['field_species_iucn_web_srv']);
     echo drupal_render_children($form);
 ?>
 </div>
