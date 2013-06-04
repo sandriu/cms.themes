@@ -19,7 +19,7 @@
         <?php
             if (check_display_field($content, 'field_meeting_species')) {
                 echo render($content['field_meeting_species']);
-            }else {
+            } else {
         ?>
         <p class="text-warning">
         <?php
