@@ -19,6 +19,8 @@
     </tbody>
 </table>
 <?php
+    render_simple_slot('population_status_legend', 'species');
+
     }
 ?>
 

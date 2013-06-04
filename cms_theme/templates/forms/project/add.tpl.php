@@ -102,14 +102,6 @@
     ?>
     </div>
 
-    <div class="span12">
-    <hr />
-    <?php
-        echo drupal_render($form['field_project_activity']);
-    ?>
-    <hr />
-    </div>
-
     <div class="span6">
     <?php
         echo drupal_render($form['field_project_summary']);
@@ -150,7 +142,7 @@
     ?>
     </div>
 
-    <div class="clearfix"></div>
+    <div class="clearfix">&nbsp;</div>
 
     <div class="span12">
     <?php
@@ -167,12 +159,27 @@
     <div class="clearfix">&nbsp;</div>
 
     <div class="span12">
+        <legend  class="form-section-legend">
+            <a href="javascript:void(0); " data-toggle="collapse" data-target="#project-activity"><i class="icon-plus-sign"></i></a>
+            <?php echo t('Activity'); ?>
+        </legend>
+
+        <div id="project-activity" class="collapse out">
+            <?php
+                echo drupal_render($form['field_project_activity']);
+            ?>
+        </div>
+    </div>
+
+    <div class="clearfix">&nbsp;</div>
+
+    <div class="span12">
     <legend  class="form-section-legend">
-        <a href="javascript:void(0); " data-toggle="collapse" data-target="#related-content-fields"><i class="icon-minus-sign"></i></a>
+        <a href="javascript:void(0); " data-toggle="collapse" data-target="#related-content-fields"><i class="icon-plus-sign"></i></a>
         <?php echo t('Related content'); ?>
     </legend>
 
-    <div id="related-content-fields" class="collapse in">
+    <div id="related-content-fields" class="collapse out">
         <div class="span11">
         <?php
             echo drupal_render($form['field_project_decision']);

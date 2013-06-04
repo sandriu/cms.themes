@@ -1,6 +1,6 @@
 <?php
     $expanded = FALSE;
-    if (!empty($data['region']) || !empty($data['country']) || !empty($data['instrument']) ||
+    if (!empty($data['regions']) || !empty($data['countries']) || !empty($data['instrument']) ||
         !empty($data['mailing_list']) || !empty($data['availability']) || !empty($data['person_status']) ||
         !empty($data['meeting']) || !empty($data['organization_status'])) {
         $expanded = TRUE;
@@ -32,12 +32,12 @@
                                 <div class="views-widget">
                                     <div class="control-group form-type-select">
                                         <div class="controls">
-                                        <select name="instrument" id="instrument">
+                                        <select name="instrument[]" id="instrument" multiple="multiple">
                                             <option value=""><?php echo t('Any'); ?></option>
                                             <?php
                                                 foreach ($data['instruments'] as $instrument_key => $instrument) {
                                             ?>
-                                            <option value="<?php echo $instrument_key; ?>" <?php echo (isset($data['current_group']) && ($data['current_group']  == $instrument_key)) ? 'selected="selected"' : ''; ?>>
+                                            <option value="<?php echo $instrument_key; ?>" <?php echo (isset($data['current_group']) && in_array($instrument_key, $data['current_group'])) ? 'selected="selected"' : ''; ?>>
                                                 <?php echo $instrument; ?>
                                             </option>
                                             <?php
@@ -60,12 +60,12 @@
                                 <div class="views-widget">
                                     <div class="control-group form-type-select">
                                         <div class="controls">
-                                            <select name="region" id="region">
+                                            <select name="region[]" id="region" multiple="multiple">
                                                 <option value=""><?php echo t('Any'); ?></option>
                                                 <?php
                                                     foreach ($data['region_options'] as $uuid => $region_name) {
                                                 ?>
-                                                <option value="<?php echo $uuid; ?>" <?php echo (isset($data['region']) && ($data['region']  == $uuid)) ? 'selected="selected"' : ''; ?>>
+                                                <option value="<?php echo $uuid; ?>" <?php echo (isset($data['regions']) && in_array($uuid, $data['regions'])) ? 'selected="selected"' : ''; ?>>
                                                     <?php echo $region_name; ?>
                                                 </option>
                                                 <?php
@@ -92,13 +92,13 @@
                                 <div class="views-widget">
                                     <div class="control-group form-type-select">
                                         <div class="controls">
-                                            <select name="country" id="country">
+                                            <select name="country[]" id="country" multiple="multiple">
                                                 <option value=""><?php echo t('Any'); ?></option>
                                                 <?php
                                                     $countries = countries_get_countries();
                                                     foreach ($countries as $iso2 => $country) {
                                                 ?>
-                                                <option value="<?php echo $iso2; ?>" <?php echo (isset($data['country']) && ($data['country']  == $iso2)) ? 'selected="selected"' : ''; ?>>
+                                                <option value="<?php echo $iso2; ?>" <?php echo (isset($data['countries']) && in_array($iso2, $data['countries'])) ? 'selected="selected"' : ''; ?>>
                                                     <?php echo $country->name; ?>
                                                 </option>
                                                 <?php
@@ -141,12 +141,12 @@
                                 <div class="views-widget">
                                     <div class="control-group form-type-select">
                                         <div class="controls">
-                                            <select name="mailing_list" id="mailing">
+                                            <select name="mailing_list[]" id="mailing" multiple="multiple">
                                                 <option value=""><?php echo t('Any'); ?></option>
                                                 <?php
                                                     foreach ($data['mailing_options'] as $id => $list_name) {
                                                 ?>
-                                                <option value="<?php echo $id; ?>" <?php echo (isset($data['mailing_list']) && ($data['mailing_list']  == $id)) ? 'selected="selected"' : ''; ?>>
+                                                <option value="<?php echo $id; ?>" <?php echo (isset($data['mailing_list']) && in_array($id, $data['mailing_list'])) ? 'selected="selected"' : ''; ?>>
                                                     <?php echo $list_name; ?>
                                                 </option>
                                                 <?php
@@ -173,12 +173,12 @@
                                 <div class="views-widget">
                                     <div class="control-group form-type-select">
                                         <div class="controls">
-                                            <select name="person_status" id="person_status">
+                                            <select name="person_status[]" id="person_status" multiple="multiple">
                                                 <option value=""><?php echo t('Any'); ?></option>
                                                 <?php
                                                     foreach ($data['person_status_options'] as $id => $status) {
                                                 ?>
-                                                <option value="<?php echo $id; ?>" <?php echo (isset($data['person_status']) && ($data['person_status']  == $id)) ? 'selected="selected"' : ''; ?>>
+                                                <option value="<?php echo $id; ?>" <?php echo (isset($data['person_status']) && in_array($id, $data['person_status'])) ? 'selected="selected"' : ''; ?>>
                                                     <?php echo $status; ?>
                                                 </option>
                                                 <?php
@@ -198,12 +198,12 @@
                                 <div class="views-widget">
                                     <div class="control-group form-type-select">
                                         <div class="controls">
-                                            <select name="organization_status" id="organization_status">
+                                            <select name="organization_status[]" id="organization_status" multiple="multiple">
                                                 <option value=""><?php echo t('Any'); ?></option>
                                                 <?php
                                                     foreach ($data['org_status_options'] as $id => $status) {
                                                 ?>
-                                                <option value="<?php echo $id; ?>" <?php echo (isset($data['organization_status']) && ($data['organization_status']  == $id)) ? 'selected="selected"' : ''; ?>>
+                                                <option value="<?php echo $id; ?>" <?php echo (isset($data['organization_status']) && in_array($id, $data['organization_status'])) ? 'selected="selected"' : ''; ?>>
                                                     <?php echo $status; ?>
                                                 </option>
                                                 <?php
@@ -225,7 +225,7 @@
                                 <div class="views-widget">
                                     <div class="control-group form-type-select">
                                         <div class="controls">
-                                            <select name="species" id="species">
+                                            <select name="species[]" id="species" multiple="multiple">
                                                 <option value=""><?php echo t('Any'); ?></option>
                                                 <?php
                                                     foreach ($data['species_options'] as $uuid => $species) {
@@ -252,7 +252,7 @@
                                 <div class="views-widget">
                                     <div class="control-group form-type-select">
                                         <div class="controls">
-                                            <select name="meeting" id="meeting">
+                                            <select name="meeting[]" id="meeting" multiple="multiple">
                                                 <option value=""><?php echo t('Any'); ?></option>
                                                 <?php
                                                     foreach ($data['meeting_options'] as $uuid => $meeting) {

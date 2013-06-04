@@ -14,7 +14,7 @@
                 <div class="views-widget">
                     <div class="control-group form-type-select">
                         <div class="controls">
-                            <select name="country" id="country">
+                            <select name="country[]" id="country" multiple="multiple">
                                 <option value=""><?php echo t('Any'); ?></option>
                                 <?php
                                     $countries = countries_get_countries();
@@ -40,7 +40,7 @@
                 <div class="views-widget">
                     <div class="control-group form-type-select">
                         <div class="controls">
-                        <select name="instrument" id="instrument">
+                        <select name="instrument[]" id="instrument" multiple="multiple">
                             <option value=""><?php echo t('Any'); ?></option>
                             <?php
                                 foreach ($data['instruments'] as $instrument_key => $instrument) {

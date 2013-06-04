@@ -195,15 +195,16 @@
 
                 <td>
                     <?php
-                        if (isset($data['mail'])) {
+                    if (isset($data['mail']) && !empty($data['mail'])) {
+                        foreach ($data['mail'] as $index => $work_email) {
+                            if (is_numeric($index)) {
                     ?>
-                    <a href="mailto:<?php echo $data['mail'][0]; ?>">
+                    <a href="mailto:<?php echo $work_email; ?>" title="<?php echo t('Send mail to') . ' ' . $work_email; ?>"><?php echo $work_email; ?></a>
+                    <br />
                     <?php
-                        echo $data['mail'][0];
-                    ?>
-                    </a>
-                    <?php
+                            }
                         }
+                    }
                     ?>
                 </td>
             </tr>
@@ -473,7 +474,20 @@
                 <td>
                     <?php
                     if (isset($data['preferredlanguage']) && !empty($data['preferredlanguage'])) {
-                        echo (isset($languages[$data['preferredlanguage'][0]])) ? $languages[$data['preferredlanguage'][0]] : $data['preferredlanguage'][0];
+                    ?>
+                    <ol>
+                    <?php
+                        $preferred_languages = explode(',', $data['preferredlanguage'][0]);
+                        foreach ($preferred_languages as $language) {
+                    ?>
+                        <li>
+                            <?php echo $language; ?>
+                        </li>
+                    <?php
+                        }
+                    ?>
+                    </ol>
+                    <?php
                     }
                     ?>
                 </td>
@@ -481,13 +495,13 @@
         </tbody>
     </table>
 
+    <div class="span12">
     <h3 class="muted">
         <?php
             echo t('Species');
         ?>
     </h3>
 
-    <div>
     <?php
         if ($data['species']) {
     ?>
@@ -505,7 +519,53 @@
     ?>
     </ul>
     <?php
+        }else {
+    ?>
+    <p class="text-warning">
+        <?php
+        echo t('The contact is not assigned to any species.');
+        ?>
+    </p>
+    <?php
         }
     ?>
+    </div>
+
+    <hr />
+
+    <div class="span12">
+        <h3 class="muted">
+            <?php
+                echo t('Meetings');
+            ?>
+        </h3>
+
+        <?php
+            if ($data['meetings']) {
+        ?>
+        <ul>
+        <?php
+            foreach($data['meetings'] as $index => $meeting) {
+        ?>
+            <li>
+                <?php
+                echo l($meeting->title, "node/" . $meeting->nid . "");
+                ?>
+            </li>
+        <?php
+            }
+        ?>
+        </ul>
+        <?php
+            }else {
+        ?>
+        <p class="text-warning">
+            <?php
+            echo t('The contact is not participant to any meeting.');
+            ?>
+        </p>
+        <?php
+            }
+        ?>
     </div>
 </div>

@@ -35,7 +35,7 @@
                     "bSearchable": true,
                     "sDefaultContent": "",
                     "fnRender": function (oObj) {
-                        return "<a href='/contacts/item/" + oObj.aData[0] + "/" + oObj.aData[9] + "/view'>" + oObj.aData[1] + "</a>";
+                        return "<a href='/contacts/item/" + oObj.aData[0] + "/" + oObj.aData[10].toLowerCase() + "/view'>" + oObj.aData[1] + "</a>";
                     }
                 },
                 {
@@ -65,6 +65,11 @@
                     "sDefaultContent": ""
                 },
                 {
+                    "sDefaultContent": ""
+                },
+                {
+                    "bSearchable": true,
+                    "bVisible": true,
                     "sDefaultContent": ""
                 },
                 {
@@ -121,11 +126,11 @@
             window.location.href = '/contacts/export?instrument=' + instrument + '&country=' + country + '&sSearch=' + search_query;
         });
 
-        $('#instrument').on('change', function(){
-            //$('#contacts-instrument-filter select, #contacts-instrument-filter input').attr('disabled', 'disabled');
-            //$("#contacts-instrument-filter select").attr('disabled', true).trigger("liszt:updated");
-            $('#contacts-instrument-filter').submit();
-        });
+        //$('#instrument').on('change', function(){
+        //    //$('#contacts-instrument-filter select, #contacts-instrument-filter input').attr('disabled', 'disabled');
+        //    //$("#contacts-instrument-filter select").attr('disabled', true).trigger("liszt:updated");
+        //    $('#contacts-instrument-filter').submit();
+        //});
         $('.accordion-toggle').each(function(){
             toggle = $(this);
             if (toggle.data('toggle') == 'collapse') {

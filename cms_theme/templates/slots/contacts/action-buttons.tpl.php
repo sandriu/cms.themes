@@ -2,7 +2,7 @@
     global $user;
 
     $current_profile = CMSUtils::get_current_profile();
-    if ((($current_profile == $data['instrument']) || ($current_profile == 'cms')) && (user_access('administer contacts content', $user))) {
+    if ((($current_profile == $data['instrument']) || ($current_profile == 'cms') || (in_array($current_profile, $data['conventions']))) && (user_access('create contacts content', $user))) {
 ?>
 <div class="row">
     <div class="span12">
@@ -33,7 +33,6 @@
                 ?>
             </a>
         </div>
-
     </div>
 </div>
 <?php
