@@ -76,13 +76,8 @@
                 if (show_add_button() && arg(1) == 'listing') {
                     $node_type = arg(0);
 
-                    if ($node_type == 'parties') {
-                        $node_type_name = node_type_get_name('cms_party');
-                        $node_add_link = 'cms-party';
-                    }else {
-                        $node_type_name = node_type_get_name($node_type);
-                        $node_add_link = CMSUtils::slug(arg(0));
-                    }
+                    $node_type_name = node_type_get_name($node_type);
+                    $node_add_link = CMSUtils::slug(arg(0));
             ?>
             <a class="btn btn-primary" href="/node/add/<?php echo $node_add_link; ?>">
                 <?php
