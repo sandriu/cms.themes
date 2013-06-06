@@ -7,7 +7,7 @@
 <ul class="nav nav-tabs" id="related-content-tabs">
     <?php
         render_tab(t('Species'), 'related-content-species', 'active', 'field_publication_species', TRUE, $content);
-        render_tab(t('Meetings'), 'related-content-meetings', '', 'field_publication_meetings', TRUE, $content);
+        render_tab(t('Meetings'), 'related-content-meetings', '', 'field_publication_meeting', TRUE, $content);
         render_tab(t('Decisions'), 'related-content-decisions', '', 'field_publication_decisions', TRUE, $content);
         render_tab(t('Regions'), 'related-content-regions', '', 'field_publication_regions', TRUE, $content);
         render_tab(t('Threats'), 'related-content-threats', '', 'field_publication_threats', TRUE, $content);
@@ -33,8 +33,8 @@
     </div>
     <div class="tab-pane loaded" id="related-content-meetings">
         <?php
-            if (check_display_field($content, 'field_publication_meetings')) {
-                echo render($content['field_publication_meetings']);
+            if (check_display_field($content, 'field_publication_meeting')) {
+                echo render($content['field_publication_meeting']);
             }else {
         ?>
         <p class="text-warning">
