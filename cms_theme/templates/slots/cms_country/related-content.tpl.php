@@ -8,7 +8,7 @@
     <?php
         render_tab(t('Meetings'), 'related-content-meetings', 'active', 'field_country_meetings', TRUE, $content);
         render_tab(t('Projects'), 'related-content-projects', '', 'field_country_projects', TRUE, $content);
-        render_tab(t('National Reports'), 'related-content-national-reports', '', 'field_country_national_reports', TRUE, $content);
+        render_tab(t('National Reports'), 'related-content-national-reports', '', 'country_national_reports', TRUE, $content);
         render_tab(t('Contacts'), 'related-content-contacts', '', 'field_country_contacts', TRUE, $content);
         render_tab(t('Ratification status'), 'ratification-status', '', 'field_country_instrument_status', FALSE, $content);
     ?>
@@ -48,19 +48,15 @@
     </div>
 
     <div class="tab-pane" id="related-content-national-reports">
-        <?php
-            if (check_display_field($content, 'field_country_national_reports')) {
-                echo render($content['field_country_national_reports']);
-            }else {
-        ?>
+    <?php
+        if (check_display_field($content, 'country_national_reports')):
+                echo render($content['country_national_reports']);
+        else:
+    ?>
         <p class="text-warning">
-        <?php
-                echo t('No related national reports');
-        ?>
+        <?php echo t('There are no national reports for this country'); ?>
         </p>
-        <?php
-            }
-        ?>
+    <?php endif; ?>
     </div>
 
     <div class="tab-pane" id="related-content-contacts">
@@ -87,7 +83,7 @@
         ?>
         <p class="text-warning">
         <?php
-                echo t('No ratification data available');
+                echo t('No ratification available');
         ?>
         </p>
         <?php
