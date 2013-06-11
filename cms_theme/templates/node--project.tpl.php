@@ -43,6 +43,7 @@
                 echo render($content['field_project_contract_type']);
                 echo render($content['field_project_sgp']);
                 echo render($content['field_project_funds_req_amount']);
+                echo render($content['field_project_funds_req_amount_c']);
                 echo render($content['field_project_cofundig']);
                 echo render($content['field_project_encumbrance_number']);
                 echo render($content['field_project_obmo']);
