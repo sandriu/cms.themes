@@ -10,6 +10,7 @@
         render_tab(t('Projects'), 'related-content-projects', '', 'field_country_projects', TRUE, $content);
         render_tab(t('National Reports'), 'related-content-national-reports', '', 'field_country_national_reports', TRUE, $content);
         render_tab(t('Contacts'), 'related-content-contacts', '', 'field_country_contacts', TRUE, $content);
+        render_tab(t('Ratification status'), 'ratification-status', '', 'field_country_instrument_status', FALSE, $content);
     ?>
 </ul>
 
@@ -71,6 +72,22 @@
         <p class="text-warning">
         <?php
                 echo t('No related contacts');
+        ?>
+        </p>
+        <?php
+            }
+        ?>
+    </div>
+
+    <div class="tab-pane" id="ratification-status">
+        <?php
+            if (check_display_field($content, 'field_country_instrument_status')) {
+                echo render($content['field_country_instrument_status']);
+            }else {
+        ?>
+        <p class="text-warning">
+        <?php
+                echo t('No ratification data available');
         ?>
         </p>
         <?php
