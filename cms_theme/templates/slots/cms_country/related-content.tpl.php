@@ -7,7 +7,7 @@
 <ul class="nav nav-tabs" id="related-content-tabs">
     <?php
         render_tab(t('Meetings'), 'related-content-meetings', 'active', 'field_country_meetings', TRUE, $content);
-        render_tab(t('Projects'), 'related-content-projects', '', 'field_country_projects', TRUE, $content);
+        render_tab(t('Projects'), 'related-content-projects', '', 'projects', TRUE, $content);
         render_tab(t('National Reports'), 'related-content-national-reports', '', 'national_reports', TRUE, $content);
         render_tab(t('Contacts'), 'related-content-contacts', '', 'field_country_contacts', TRUE, $content);
         render_tab(t('Ratification status'), 'ratification-status', '', 'field_country_instrument_status', FALSE, $content);
@@ -32,31 +32,11 @@
     </div>
 
     <div class="tab-pane" id="related-content-projects">
-        <?php
-            if (check_display_field($content, 'field_country_projects')) {
-                echo render($content['field_country_projects']);
-            }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related projects');
-        ?>
-        </p>
-        <?php
-            }
-        ?>
+        <?php echo render($content['projects']); ?>
     </div>
 
     <div class="tab-pane" id="related-content-national-reports">
-    <?php
-        if (check_display_field($content, 'national_reports')):
-            echo render($content['national_reports']);
-        else:
-    ?>
-        <p class="text-warning">
-        <?php echo t('There are no national reports for this country'); ?>
-        </p>
-    <?php endif; ?>
+        <?php echo render($content['national_reports']); ?>
     </div>
 
     <div class="tab-pane" id="related-content-contacts">
