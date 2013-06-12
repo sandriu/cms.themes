@@ -227,6 +227,9 @@
 
 <div class="clearfix">&nbsp;</div>
 
+<?php
+    if ($current_profile == 'aewa') {
+?>
 <legend  class="form-section-legend">
     <a href="javascript:void(0); " data-toggle="collapse" data-target="#country-status"><i class="icon-plus-sign"></i></a>
     <?php echo t('Country status'); ?>
@@ -239,7 +242,15 @@
 </div>
 
 <div class="clearfix">&nbsp;</div>
+<?php
+    }else {
+        hide($form['field_species_status_per_country']);
+    }
+?>
 
+<?php
+    if ($current_profile == 'aewa') {
+?>
 <legend  class="form-section-legend">
     <a href="javascript:void(0); " data-toggle="collapse" data-target="#population-status"><i class="icon-plus-sign"></i></a>
     <?php echo t('Population status'); ?>
@@ -256,6 +267,11 @@
 </div>
 
 <div class="clearfix">&nbsp;</div>
+<?php
+    }else {
+        hide($form['field_aewa_population_status']);
+    }
+?>
 
 <legend  class="form-section-legend">
     <a href="javascript:void(0); " data-toggle="collapse" data-target="#related-content-fields"><i class="icon-plus-sign"></i></a>
