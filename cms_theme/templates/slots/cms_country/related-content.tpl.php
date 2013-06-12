@@ -9,7 +9,7 @@
         render_tab(t('Meetings'), 'related-content-meetings', 'active', 'meetings', TRUE, $content);
         render_tab(t('Projects'), 'related-content-projects', '', 'projects', TRUE, $content);
         render_tab(t('National Reports'), 'related-content-national-reports', '', 'national_reports', TRUE, $content);
-        render_tab(t('Contacts'), 'related-content-contacts', '', 'field_country_contacts', TRUE, $content);
+        render_tab(t('National Focal Points'), 'related-content-nfp', '', 'national_focal_points', TRUE, $content);
         render_tab(t('Ratification status'), 'ratification-status', '', 'field_country_instrument_status', FALSE, $content);
         render_tab(t('Species'), 'related-content-species', '', 'species', TRUE, $content);
     ?>
@@ -28,20 +28,8 @@
         <?php echo render($content['national_reports']); ?>
     </div>
 
-    <div class="tab-pane" id="related-content-contacts">
-        <?php
-            if (check_display_field($content, 'field_country_contacts')) {
-                echo render($content['field_country_contacts']);
-            }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related contacts');
-        ?>
-        </p>
-        <?php
-            }
-        ?>
+    <div class="tab-pane" id="related-content-nfp">
+        <?php echo render($content['national_focal_points']); ?>
     </div>
 
     <div class="tab-pane" id="ratification-status">
