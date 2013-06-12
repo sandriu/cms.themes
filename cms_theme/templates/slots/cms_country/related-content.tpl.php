@@ -6,29 +6,18 @@
 
 <ul class="nav nav-tabs" id="related-content-tabs">
     <?php
-        render_tab(t('Meetings'), 'related-content-meetings', 'active', 'field_country_meetings', TRUE, $content);
+        render_tab(t('Meetings'), 'related-content-meetings', 'active', 'meetings', TRUE, $content);
         render_tab(t('Projects'), 'related-content-projects', '', 'projects', TRUE, $content);
         render_tab(t('National Reports'), 'related-content-national-reports', '', 'national_reports', TRUE, $content);
         render_tab(t('Contacts'), 'related-content-contacts', '', 'field_country_contacts', TRUE, $content);
         render_tab(t('Ratification status'), 'ratification-status', '', 'field_country_instrument_status', FALSE, $content);
+        render_tab(t('Species'), 'related-content-species', '', 'species', TRUE, $content);
     ?>
 </ul>
 
 <div class="tab-content">
     <div class="tab-pane active loaded" id="related-content-meetings">
-        <?php
-            if (check_display_field($content, 'field_country_meetings')) {
-                echo render($content['field_country_meetings']);
-            }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related meetings');
-        ?>
-        </p>
-        <?php
-            }
-        ?>
+        <?php echo render($content['meetings']); ?>
     </div>
 
     <div class="tab-pane" id="related-content-projects">
@@ -69,5 +58,8 @@
         <?php
             }
         ?>
+    </div>
+    <div class="tab-pane" id="related-content-species">
+        <?php echo render($content['species']); ?>
     </div>
 </div>
