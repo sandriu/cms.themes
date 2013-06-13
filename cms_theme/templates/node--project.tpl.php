@@ -21,7 +21,23 @@
             <?php
                 echo render($content['field_project_id']);
                 echo render($content['field_project_impl_agency']);
-                echo render($content['field_project_agency_contact']);
+
+                if (property_exists($node, 'contacts') && !empty($node->contacts)) {
+            ?>
+            <tr>
+                <th><?php echo t('Implementing Agency contact'); ?></th>
+                <td>
+                    <?php
+                        foreach ($node->contacts as $contact) {
+                            echo '<a href="/contacts/item/' . $contact['uid'][0] . '/' . $contact['conventions'][0] . '/view">' . $contact['cn'][0]  . '</a>';
+                            echo '<br />';
+                        }
+                    ?>
+                </td>
+            </tr>
+            <?php
+                }
+
                 echo render($content['field_project_ia_no_id']);
                 echo render($content['field_project_collab_agency']);
                 echo render($content['field_project_start_date']);
