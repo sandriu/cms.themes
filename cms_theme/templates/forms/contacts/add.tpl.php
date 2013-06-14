@@ -40,7 +40,7 @@
         </fieldset>
     </div>
 
-    <div class="span12">
+    <div class="span12" id="related-content-fields">
         <fieldset>
             <legend>
                 <?php

@@ -128,7 +128,7 @@
     ?>
     </div>
 
-    <div class="span12">
+    <div class="span12" id="related-content-fields">
         <h3 class="muted"><?php echo t('Related content'); ?></h3>
 
         <div class="span3 no-left-margin">

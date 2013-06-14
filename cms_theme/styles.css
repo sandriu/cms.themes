@@ -292,6 +292,10 @@ img.project-custom-image {
     font-weight: bold;
 }
 
+#related-content-fields .chzn-container .chzn-drop {
+    width: 750px;
+}
+
 
 /**
  * Specific multivalued form fields
