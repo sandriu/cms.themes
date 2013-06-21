@@ -20,3 +20,4 @@
 <?php
     }
 ?>
+<?php echo render($content['countries']); ?>
