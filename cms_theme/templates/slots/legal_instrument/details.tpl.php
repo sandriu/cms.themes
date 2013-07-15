@@ -30,13 +30,14 @@
         <?php echo render($content['field_instrument_description']); ?>
         <?php echo render($content['field_instrument_species_ex']); ?>
         <?php echo render($content['field_instrument_other']); ?>
+        <?php echo render($content['field_instrument_amendments']); ?>
         <?php echo render($content['field_instrument_international_init']); ?>
         <?php echo render($content['field_working_groups']); ?>
         <?php echo render($content['field_member_of_big']); ?>
-        <?php echo render($content['field_instrument_amendments']); ?>
     </tbody>
 </table>
 <?php
     }
 ?>
+
 <?php echo render($content['countries']); ?>

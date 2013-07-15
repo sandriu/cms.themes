@@ -6,8 +6,13 @@
 
     <?php
         if ($show_counter && !empty($field_name) && isset($content[$field_name])) {
+            if (array_key_exists('#items', $content[$field_name])) {
+                $total = count($content[$field_name]['#items']);
+            }else {
+                $total = count($content[$field_name]);
+            }
     ?>
-        (<?php echo count($content[$field_name]['#items']); ?>)
+        (<?php echo $total; ?>)
     <?php
         }
     ?>
