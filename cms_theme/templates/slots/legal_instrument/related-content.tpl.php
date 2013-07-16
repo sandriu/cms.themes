@@ -6,7 +6,8 @@
 
 <ul class="nav nav-tabs" id="related-content-tabs">
     <?php
-        render_tab(t('Meetings'), 'related-content-meetings', 'active', 'meetings', TRUE, $content);
+        render_tab(t('Species'), 'related-content-species', 'active', 'species', TRUE, $content);
+        render_tab(t('Meetings'), 'related-content-meetings', '', 'meetings', TRUE, $content);
         render_tab(t('Projects'), 'related-content-projects', '', 'projects', TRUE, $content);
         render_tab(t('Publications'), 'related-content-publications', '', 'publications', TRUE, $content);
         render_tab(t('National reports'), 'related-content-national-reports', '', 'national_reports', TRUE, $content);
@@ -17,7 +18,11 @@
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane active loaded" id="related-content-meetings">
+    <div class="tab-pane active loaded" id="related-content-species">
+        <?php echo render($content['species']); ?>
+    </div>
+
+    <div class="tab-pane" id="related-content-meetings">
         <?php echo render($content['meetings']); ?>
     </div>
 
