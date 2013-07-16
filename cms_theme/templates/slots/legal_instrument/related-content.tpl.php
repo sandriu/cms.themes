@@ -5,16 +5,15 @@
 </h3>
 
 <ul class="nav nav-tabs" id="related-content-tabs">
-    <?php
-        render_tab(t('Species'), 'related-content-species', 'active', 'species', TRUE, $content);
-        render_tab(t('Meetings'), 'related-content-meetings', '', 'meetings', TRUE, $content);
-        render_tab(t('Projects'), 'related-content-projects', '', 'projects', TRUE, $content);
-        render_tab(t('Publications'), 'related-content-publications', '', 'publications', TRUE, $content);
-        render_tab(t('National reports'), 'related-content-national-reports', '', 'national_reports', TRUE, $content);
-        render_tab(t('Plans'), 'related-content-plans', '', 'plans', TRUE, $content);
-        render_tab(t('Contacts'), 'related-content-contacts', '', 'contacts', TRUE, $content);
-
-    ?>
+<?php
+    render_tab(t('Species'), 'related-content-species', 'active', 'species', TRUE, $content);
+    render_tab(t('Meetings'), 'related-content-meetings', '', 'meetings', TRUE, $content);
+    render_tab(t('Projects'), 'related-content-projects', '', 'projects', TRUE, $content);
+    render_tab(t('Publications'), 'related-content-publications', '', 'publications', TRUE, $content);
+    render_tab(t('National reports'), 'related-content-national-reports', '', 'national_reports', TRUE, $content);
+    render_tab(t('Plans'), 'related-content-plans', '', 'plans', TRUE, $content);
+    render_tab(t('Contacts'), 'related-content-contacts', '', 'contacts', TRUE, $content);
+?>
 </ul>
 
 <div class="tab-content">

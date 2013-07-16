@@ -51,19 +51,19 @@ label {
 }
 
 /* Style for table sorter plugin */
-th.header { 
+th.header {
     background-image: url('images/bg.gif');
-    cursor: pointer; 
-    font-weight: bold; 
-    background-repeat: no-repeat; 
-    background-position: center right; 
-} 
+    cursor: pointer;
+    font-weight: bold;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
 
-th.headerSortUp { 
+th.headerSortUp {
     background-image: url('images/asc.gif');
 }
 
-th.headerSortDown { 
+th.headerSortDown {
     background-image: url('images/desc.gif');
 }
 
@@ -244,8 +244,14 @@ i.loading-image {
 
 img.species-custom-image,
 img.project-custom-image {
-    max-height: 150px;
+    max-height: 130px;
     margin: 0 auto;
+}
+
+.species-custom-image-author {
+    font-size: 11px;
+    margin: 5px 0 0 0;
+    padding: 0;
 }
 
 #meeting-form .vertical-tabs,
@@ -257,6 +263,11 @@ img.project-custom-image {
 #species-form .vertical-tabs,
 #decision-form .vertical-tabs {
     display: none;
+}
+
+.dataTables_processing {
+    position: absolute;
+    top: 5% !important;
 }
 
 .dataTables_filter input {

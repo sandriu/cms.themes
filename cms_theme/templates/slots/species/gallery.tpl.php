@@ -10,6 +10,9 @@
                     if (isset($node->field_species_images) && (!empty($node->field_species_images))) {
                 ?>
                 <img src="<?php echo file_create_url($node->field_species_images[$node->language][0]['uri']); ?>" alt="" title="" class="species-custom-image" />
+                <p class="species-custom-image-author">
+                    <?php echo $node->field_species_images[$node->language][0]['title']; ?>
+                </p>
                 <?php
                     unset($node->field_species_images[$node->language][0]);
                     }elseif (count($node->gallery)) {
@@ -24,6 +27,9 @@
         ?>
             <div class="item">
                 <img src="<?php echo file_create_url($image['uri']); ?>" alt="" title="" class="species-custom-image" />
+                <p class="species-custom-image-author">
+                    <?php echo $image['title']; ?>
+                </p>
             </div>
         <?php
                 }

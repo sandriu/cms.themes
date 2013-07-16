@@ -95,21 +95,21 @@
         echo drupal_render($form['field_species_name_en']);
     ?>
     </div>
-    
+
     <div class="span4">
     <?php
         echo drupal_render($form['field_species_name_fr']);
     ?>
     </div>
-    
+
     <div class="clearfix">&nbsp;</div>
-    
+
     <div class="span4">
     <?php
         echo drupal_render($form['field_species_name_es']);
     ?>
     </div>
-    
+
     <div class="span4">
     <?php
         echo drupal_render($form['field_species_name_de']);
@@ -310,24 +310,15 @@
 
 <div class="clearfix">&nbsp;</div>
 
-<legend  class="form-section-legend">
-    <a href="javascript:void(0); " data-toggle="collapse" data-target="#other-fields"><i class="icon-plus-sign"></i></a>
-    <?php echo t('Other'); ?>
-</legend>
+<?php echo drupal_render($form['field_species_threats']); ?>
 
-<div id="other-fields" class="collapse out">
-    <?php
-        echo drupal_render($form['field_species_threats']);
-    ?>
-    <div class="clearfix">&nbsp;</div>
-    <?php
-        echo drupal_render($form['field_species_critical_sites']);
-    ?>
-    <div class="clearfix">&nbsp;</div>
-    <?php
-        echo drupal_render($form['field_species_notes']);
-    ?>
-</div>
+<div class="clearfix">&nbsp;</div>
+
+<?php echo drupal_render($form['field_species_critical_sites']); ?>
+
+<div class="clearfix">&nbsp;</div>
+
+<?php echo drupal_render($form['field_species_notes']); ?>
 
 <div class="clearfix">&nbsp;</div>
 
