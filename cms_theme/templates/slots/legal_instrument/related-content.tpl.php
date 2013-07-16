@@ -29,7 +29,7 @@
     </div>
 
     <div class="tab-pane" id="related-content-documents">
-        <?php #echo render($content['documents']); ?>
+        <?php echo render($content['documents']); ?>
     </div>
 
     <div class="tab-pane" id="related-content-species">
