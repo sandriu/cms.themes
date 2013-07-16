@@ -9,7 +9,8 @@
         render_tab(t('Meetings'), 'related-content-meetings', 'active', 'meetings', TRUE, $content);
         render_tab(t('Projects'), 'related-content-projects', '', 'projects', TRUE, $content);
         render_tab(t('Publications'), 'related-content-publications', '', 'publications', TRUE, $content);
-        render_tab(t('Documents'), 'related-content-documents', '', 'documents', TRUE, $content);
+        render_tab(t('National reports'), 'related-content-national-reports', '', 'national_reports', TRUE, $content);
+        render_tab(t('Plans'), 'related-content-plans', '', 'plans', TRUE, $content);
         render_tab(t('Contacts'), 'related-content-contacts', '', 'contacts', TRUE, $content);
 
     ?>
@@ -28,8 +29,12 @@
         <?php echo render($content['publications']); ?>
     </div>
 
-    <div class="tab-pane" id="related-content-documents">
-        <?php echo render($content['documents']); ?>
+    <div class="tab-pane" id="related-content-national-reports">
+        <?php echo render($content['national_reports']); ?>
+    </div>
+
+    <div class="tab-pane" id="related-content-plans">
+        <?php echo render($content['plans']); ?>
     </div>
 
     <div class="tab-pane" id="related-content-species">
