@@ -40,4 +40,39 @@
     }
 ?>
 
+<hr />
+
+<?php
+    if(check_display_field($content, 'field_instrument_signed_by')) {
+?>
+<h4>
+    <?php echo t('Signed by'); ?>
+</h4>
+<br />
+
+<table class="table table-condensed table-hover table-bordered table-striped dataTable">
+
+    <thead>
+        <tr>
+            <th><?php echo t('Country'); ?></th>
+            <th><?php echo t('Date'); ?></th>
+            <th><?php echo t('Status'); ?></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php echo render($content['field_instrument_signed_by']); ?>
+    </tbody>
+</table>
+<?php
+    }
+?>
+
+<div class="clear">&nbsp;</div>
+<hr />
+
+<h4>
+    <?php echo t('Countries'); ?>
+</h4>
+<br />
+
 <?php echo render($content['countries']); ?>
