@@ -9,10 +9,10 @@
         render_tab(t('Meetings'), 'related-content-meetings', 'active', 'field_species_meeting', TRUE, $content);
         render_tab(t('Publications'), 'related-content-publications', '', 'field_species_publication', TRUE, $content);
         render_tab(t('Projects'), 'related-content-projects', '', 'field_species_project', TRUE, $content);
-        render_tab(t('Decisions'), 'related-content-decisions', '', 'field_species_decision', TRUE, $content);
-        render_tab(t('National plans'), 'related-content-national-plans', '', 'field_species_national_plan', TRUE, $content);
+        render_tab(t('National plans'), 'related-content-national-plans', '', 'field_species_plans', TRUE, $content);
         render_tab(t('National reports'), 'related-content-national-reports', '', 'field_species_national_report', TRUE, $content);
-        render_tab(t('Documents'), 'related-content-species', '', 'field_species_document', TRUE, $content);
+        render_tab(t('Other Documents'), 'related-content-species', '', 'field_species_document', TRUE, $content);
+        render_tab(t('Threats'), 'related-content-threats', '', 'field_species_threats', TRUE, $content);
         render_tab(t('Contacts'), 'related-content-contacts', '', 'field_species_experts', TRUE, $content);
     ?>
 </ul>
@@ -66,26 +66,10 @@
         ?>
     </div>
 
-    <div class="tab-pane" id="related-content-decisions">
-        <?php
-            if (check_display_field($content, 'field_species_decision')) {
-                echo render($content['field_species_decision']);
-            }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related decisions');
-        ?>
-        </p>
-        <?php
-            }
-        ?>
-    </div>
-
     <div class="tab-pane" id="related-content-national-plans">
         <?php
-            if (check_display_field($content, 'field_species_national_plan')) {
-                echo render($content['field_species_national_plan']);
+            if (check_display_field($content, 'field_species_plans')) {
+                echo render($content['field_species_plans']);
             }else {
         ?>
         <p class="text-warning">
@@ -123,6 +107,36 @@
         <p class="text-warning">
         <?php
                 echo t('No related documents');
+        ?>
+        </p>
+        <?php
+            }
+        ?>
+    </div>
+
+    <div class="tab-pane" id="related-content-threats">
+        <?php
+            if (check_display_field($content, 'field_species_threats')) {
+        ?>
+        <table class="table table-condensed table-hover table-bordered table-striped">
+            <caption><?php echo t('Threats'); ?></caption>
+            <thead>
+                <tr>
+                    <th><?php echo t('Threat'); ?></th>
+                    <th><?php echo t('Notes'); ?></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <?php echo render($content['field_species_threats']); ?>
+            </tbody>
+        </table>
+        <?php
+            }else {
+        ?>
+        <p class="text-warning">
+        <?php
+                echo t('No related threats');
         ?>
         </p>
         <?php

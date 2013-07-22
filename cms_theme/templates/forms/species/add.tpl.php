@@ -296,7 +296,7 @@
     ?>
     <div class="clearfix">&nbsp;</div>
     <?php
-        echo drupal_render($form['field_species_national_plan']);
+        echo drupal_render($form['field_species_plans']);
     ?>
     <div class="clearfix">&nbsp;</div>
     <?php
