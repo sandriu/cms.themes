@@ -157,7 +157,7 @@
 
     <div class="span11">
     <?php
-        echo drupal_render($form['field_publication_decisions']);
+        echo drupal_render($form['field_publication_project']);
     ?>
     </div>
 
@@ -169,7 +169,13 @@
 
     <div class="span11">
     <?php
-        echo drupal_render($form['field_publication_nat_plan']);
+        echo drupal_render($form['field_publication_plans']);
+    ?>
+    </div>
+
+    <div class="span11">
+    <?php
+        echo drupal_render($form['field_publication_nat_report']);
     ?>
     </div>
 
