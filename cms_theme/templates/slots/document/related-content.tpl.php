@@ -7,7 +7,7 @@
 <ul class="nav nav-tabs" id="related-content-tabs">
     <?php
         render_tab(t('Species'), 'related-content-species', 'active', 'field_document_species', TRUE, $content);
-        render_tab(t('Decisions'), 'related-content-decision', '', 'field_document_decision', TRUE, $content);
+        render_tab(t('Publications'), 'related-content-publication', '', 'field_document_publication', TRUE, $content);
         render_tab(t('Meetings'), 'related-content-meeting', '', 'field_document_meeting', TRUE, $content);
         render_tab(t('Projects'), 'related-content-project', '', 'field_document_project', TRUE, $content);
         render_tab(t('Threats'), 'related-content-threats', '', 'field_document_threats', TRUE, $content);
@@ -30,15 +30,15 @@
             }
         ?>
     </div>
-    <div class="tab-pane" id="related-content-decision">
+    <div class="tab-pane" id="related-content-publication">
         <?php
-            if (check_display_field($content, 'field_document_decision')) {
-                echo render($content['field_document_decision']);
+            if (check_display_field($content, 'field_document_publication')) {
+                echo render($content['field_document_publication']);
             }else {
         ?>
         <p class="text-warning">
         <?php
-                echo t('No related decisions');
+                echo t('No related publications');
         ?>
         </p>
         <?php
