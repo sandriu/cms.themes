@@ -282,35 +282,41 @@
     <?php
         echo drupal_render($form['field_species_meeting']);
     ?>
+
     <div class="clearfix">&nbsp;</div>
     <?php
         echo drupal_render($form['field_species_publication']);
     ?>
+
     <div class="clearfix">&nbsp;</div>
     <?php
         echo drupal_render($form['field_species_project']);
     ?>
+
     <div class="clearfix">&nbsp;</div>
     <?php
         echo drupal_render($form['field_species_decision']);
     ?>
+
     <div class="clearfix">&nbsp;</div>
     <?php
         echo drupal_render($form['field_species_plans']);
     ?>
+
     <div class="clearfix">&nbsp;</div>
     <?php
         echo drupal_render($form['field_species_national_report']);
     ?>
+
     <div class="clearfix">&nbsp;</div>
     <?php
         echo drupal_render($form['field_species_document']);
     ?>
+
+    <div class="clearfix">&nbsp;</div>
+
+    <?php echo drupal_render($form['field_species_threats']); ?>
 </div>
-
-<div class="clearfix">&nbsp;</div>
-
-<?php echo drupal_render($form['field_species_threats']); ?>
 
 <div class="clearfix">&nbsp;</div>
 
