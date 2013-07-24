@@ -254,23 +254,23 @@
 
         <div class="span11">
         <?php
-            echo drupal_render($form['field_project_decision']);
+            echo drupal_render($form['field_project_nat_plan']);
         ?>
         </div>
 
         <div class="span11">
         <?php
-            echo drupal_render($form['field_project_nat_plan']);
+            echo drupal_render($form['field_project_national_reports']);
         ?>
         </div>
 
-            <div class="span11">
+        <div class="span11">
         <?php
             echo drupal_render($form['field_project_document']);
         ?>
         </div>
 
-            <div class="span11">
+        <div class="span11">
         <?php
             echo drupal_render($form['field_project_meeting']);
         ?>

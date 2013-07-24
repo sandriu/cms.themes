@@ -8,8 +8,8 @@
     <?php
         render_tab(t('Species'), 'related-content-species', 'active', 'field_project_species', TRUE, $content);
         render_tab(t('Documents'), 'related-content-documents', '', 'field_project_document', TRUE, $content);
-        render_tab(t('Decisions'), 'related-content-decisions', '', 'field_project_decision', TRUE, $content);
         render_tab(t('National Plans'), 'related-content-national-plans', '', 'field_project_nat_plan', TRUE, $content);
+        render_tab(t('National Reports'), 'related-content-national-reports', '', 'field_project_national_reports', TRUE, $content);
         render_tab(t('Publications'), 'related-content-publications', '', 'field_project_publication', TRUE, $content);
         render_tab(t('Meetings'), 'related-content-meetings', '', 'field_project_meeting', TRUE, $content);
     ?>
@@ -48,22 +48,6 @@
         ?>
     </div>
 
-    <div class="tab-pane" id="related-content-decisions">
-        <?php
-            if (check_display_field($content, 'field_project_decision')) {
-                echo render($content['field_project_decision']);
-            }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related decisions');
-        ?>
-        </p>
-        <?php
-            }
-        ?>
-    </div>
-
     <div class="tab-pane" id="related-content-national-plans">
         <?php
             if (check_display_field($content, 'field_project_nat_plan')) {
@@ -73,6 +57,22 @@
         <p class="text-warning">
         <?php
                 echo t('No related national plans');
+        ?>
+        </p>
+        <?php
+            }
+        ?>
+    </div>
+
+    <div class="tab-pane" id="related-content-national-reports">
+        <?php
+            if (check_display_field($content, 'field_project_national_reports')) {
+                echo render($content['field_project_national_reports']);
+            }else {
+        ?>
+        <p class="text-warning">
+        <?php
+                echo t('No related national_reports');
         ?>
         </p>
         <?php
