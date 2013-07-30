@@ -75,7 +75,7 @@
 
     <?php if (!empty($reset_button)): ?>
       <div class="views-exposed-widget views-reset-button species-views-reset-button">
-        <a class="reset-link" id="edit-reset" name="op" onclick="jQuery('#views-exposed-form-countries-page').resetForm();">Clear filters</a>
+        <a class="reset-link" id="edit-reset" name="op" onclick="jQuery('#views-exposed-form-view-countries-page').resetForm();">Clear filters</a>
       </div>
     <?php endif; ?>
   </div>
