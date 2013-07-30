@@ -149,7 +149,7 @@ function cms_theme_breadcrumb($variables) {
             $current_page_title = t('Family display');
         }
     }
-    
+
 
     foreach($breadcrumb as $key => $value) {
         if($count != $key) {
@@ -290,7 +290,7 @@ function cms_theme_process_format(&$element) {
 
     /**
      * Hide the 'Text format' pane below certain text area fields
-    */ 
+    */
     if (isset($element['#field_name']) && in_array($element['#field_name'], $fields)){
         $element['format']['format']['#default_value'] = 'full_html';
         $element['format']['#access'] = FALSE;
@@ -388,7 +388,7 @@ function cms_theme_field_multiple_value_form($variables) {
 }
 
 /**
- * 
+ *
 */
 function get_available_tabs($node = NULL, $content_type = '') {
     $tabs = array(
@@ -403,14 +403,19 @@ function get_available_tabs($node = NULL, $content_type = '') {
         switch ($content_type) {
             case 'species':
                 $instruments = $node->field_species_instruments;
-                foreach ($instruments[$node->language] as $value) {
-                    $ob = field_collection_item_load($value['value']);
-                    $instrument_id = cms_extract_single_value($ob->field_species_instrument, $node->language, 'target_id');
-                    $instrument = strtolower(CMSLegalInstrument::cms_instrument_title_by_id($instrument_id));
-                    if (($instrument != $current_profile) && (in_array($instrument, array_keys($websites)))) {
-                        $tabs['available'][$instrument] = $websites[$instrument];
+                if (array_key_exists($node->language, $instruments)) {
+                    foreach ($instruments[$node->language] as $value) {
+                        $ob = field_collection_item_load($value['value']);
+                        $instrument_id = cms_extract_single_value($ob->field_species_instrument, $node->language, 'target_id');
+                        $instrument = strtolower(CMSLegalInstrument::cms_instrument_title_by_id($instrument_id));
+                        if (($instrument != $current_profile) && (in_array($instrument, array_keys($websites)))) {
+                            $tabs['available'][$instrument] = $websites[$instrument];
+                        }
                     }
                 }
+
+                break;
+            default: break;
         }
     }
 

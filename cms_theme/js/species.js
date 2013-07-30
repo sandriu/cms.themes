@@ -1,5 +1,22 @@
 (function($) {
     $(document).ready(function() {
+        //$('.chzn-choices input').autocomplete({
+        //    source: function( request, response ) {
+        //        $.ajax({
+        //            url: "/search_contact/" + request.term + "/",
+        //            dataType: "json",
+        //            beforeSend: function(){$('ul.chzn-results').empty();},
+        //            success: function( data ) {
+        //                response( $.map( data, function( item ) {
+        //                    $('ul.chzn-results').append('<li class="active-result">' + item.name + '</li>');
+        //                }));
+        //            }
+        //        });
+        //    },
+        //    delay: 500,
+        //    minLength: 3,
+        //});
+
         triggerPopovers($('body'));
         triggerDataTables($('body'));
 
