@@ -20,17 +20,17 @@
                 {
                     "bSearchable": true,
                     "sDefaultContent": "",
-                   
+
                 },
                 {
                     "bSearchable": true,
                     "sDefaultContent": "",
-                   
+
                 },
                 {
                     "bSearchable": true,
                     "sDefaultContent": "",
-                   
+
                 }
             ],
             "aLengthMenu": [
@@ -58,24 +58,26 @@
                 {
                     "bSearchable": true,
                     "sDefaultContent": "",
-                   
+
                 },
                 {
                     "bSearchable": true,
                     "sDefaultContent": "",
-                   
+
                 },
                 {
                     "bSearchable": true,
                     "sDefaultContent": "",
-                   
+
                 }
             ],
             "aLengthMenu": [
                 [10, 25, 50, 100, -1],
                 [10, 25, 50, 100, "All"],
             ],
-            "aaSorting": [ [4, "desc"] ]
+            "aaSorting": [ [4, "desc"] ],
+            "fnDrawCallback": function(oSettings) {
+            }
         });
 
         $('a.back-button').click(function(){
@@ -83,22 +85,48 @@
             return false;
         });
 
-        $('#select-all').click(function() {
+        $('#select-all').click(function(e) {
+            e.stopPropagation();
             var oTable = $('#meeting-document-listing').dataTable();
-            if ( $(this).prop('checked') ) {
-                $('input[type="checkbox"]', oTable.fnGetNodes()).prop('checked', $(this).prop('checked'));
-            }else {
-                $('input[type="checkbox"]', oTable.fnGetNodes()).prop('checked', false);
+            oSettings = oTable.fnSettings();
+            var anRows = [];
+            for ( var i=0, iLen=oSettings.aiDisplay.length ; i<iLen ; i++ ) {
+                var nRow = oSettings.aoData[ oSettings.aiDisplay[i] ].nTr;
+                anRows.push( nRow );
             }
+
+            $('input[type="checkbox"]', anRows).prop('checked', true);
+
+            return false;
         });
 
-        $('#documents-select-all').click(function() {
+        $('#documents-select-all').click(function(e) {
+            e.stopPropagation();
             var oTable = $('#all-document-listing').dataTable();
-            if ( $(this).prop('checked') ) {
-                $('input[type="checkbox"]', oTable.fnGetNodes()).prop('checked', $(this).prop('checked'));
-            }else {
-                $('input[type="checkbox"]', oTable.fnGetNodes()).prop('checked', false);
+            oSettings = oTable.fnSettings();
+            var anRows = [];
+            for ( var i=0, iLen=oSettings.aiDisplay.length ; i<iLen ; i++ ) {
+                var nRow = oSettings.aoData[ oSettings.aiDisplay[i] ].nTr;
+                anRows.push( nRow );
             }
+
+            $('input[type="checkbox"]', anRows).prop('checked', true);
+
+            return false;
+        });
+
+        $('#deselect-all').click(function(e){
+            e.stopPropagation();
+            var oTable = $('#meeting-document-listing').dataTable();
+            $('input[type="checkbox"]', oTable.fnGetNodes()).prop('checked', false);
+            return false;
+        });
+
+        $('#documents-deselect-all').click(function(e){
+            e.stopPropagation();
+            var oTable = $('#all-document-listing').dataTable();
+            $('input[type="checkbox"]', oTable.fnGetNodes()).prop('checked', false);
+            return false;
         });
 
         $('#meeting-documents-tabs a').click(function (e) {

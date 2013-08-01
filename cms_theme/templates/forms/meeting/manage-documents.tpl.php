@@ -28,11 +28,22 @@
 
 <div class="tab-content">
     <div class="tab-pane active" id="manage">
+        <button class="btn btn-small btn-inverse" type="button" id="select-all">
+            <?php echo t('Select all'); ?>
+        </button>
+
+        <button class="btn btn-small btn-inverse" type="button" id="deselect-all">
+            <?php echo t('Deselect all'); ?>
+        </button>
+
+        <div class="clearfix"></div>
+        <br />
+
         <table class="table table-bordered table-striped table-hover dataTables" id="meeting-document-listing">
             <thead>
                 <tr>
                     <th class="select-all-input">
-                        <input type="checkbox" name="select_all" id="select-all" />
+                        <!--<input type="checkbox" name="select_all" id="select-all" />-->
                     </th>
 
                     <th>
@@ -118,11 +129,22 @@
     </div>
 
     <div class="tab-pane" id="add-more">
+        <button class="btn btn-small btn-inverse" type="button" id="documents-select-all">
+            <?php echo t('Select all'); ?>
+        </button>
+
+        <button class="btn btn-small btn-inverse" type="button" id="documents-deselect-all">
+            <?php echo t('Deselect all'); ?>
+        </button>
+
+        <div class="clearfix"></div>
+        <br />
+
         <table class="table table-bordered table-striped table-hover dataTables" id="all-document-listing">
             <thead>
                 <tr>
                     <th class="select-all-input">
-                        <input type="checkbox" name="documents_elect_all" id="documents-select-all" />
+                        <!--<input type="checkbox" name="documents_select_all" id="documents-select-all" />-->
                     </th>
                     <th>
                         <?php
