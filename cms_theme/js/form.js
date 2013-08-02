@@ -38,6 +38,10 @@
                 $(family_select).html(html);
             });
         });
+
+        $('.dataTables_paginate a').live('click', function(){
+            $("html, body").animate({ scrollTop: 0 }, "fast");
+        });
     });
 
     $.fn.resetForm = function() {
