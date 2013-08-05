@@ -37,7 +37,7 @@
             <tr>
                 <th class="span2">
                     <?php
-                        echo t('Organization status');
+                        echo t('Status organization');
                     ?>
                 </th>
 

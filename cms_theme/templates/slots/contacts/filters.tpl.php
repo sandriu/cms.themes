@@ -167,7 +167,7 @@
 
                             <div class="views-exposed-widget">
                                 <label for="person_status">
-                                    <?php echo t('Person status'); ?>
+                                    <?php echo t('Status person'); ?>
                                 </label>
 
                                 <div class="views-widget">
@@ -192,7 +192,7 @@
 
                             <div class="views-exposed-widget">
                                 <label for="organization_status">
-                                    <?php echo t('Organization status'); ?>
+                                    <?php echo t('Status organization'); ?>
                                 </label>
 
                                 <div class="views-widget">

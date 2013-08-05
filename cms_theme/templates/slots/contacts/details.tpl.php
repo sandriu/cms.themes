@@ -226,7 +226,7 @@
             <tr>
                 <th class="span2">
                     <?php
-                        echo t('Organization status');
+                        echo t('Status organization');
                     ?>
                 </th>
 
@@ -277,7 +277,7 @@
             <tr>
                 <th class="span2">
                     <?php
-                        echo t('Person status');
+                        echo t('Status person');
                     ?>
                 </th>
 
