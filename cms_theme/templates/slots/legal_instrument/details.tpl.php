@@ -46,6 +46,66 @@
 <h4>
     <?php echo t('Countries'); ?>
 </h4>
-<br />
 
-<?php echo render($content['countries']); ?>
+<?php
+    foreach ($content['countries_by_status'] as $status => $countries) {
+?>
+<h5>
+    <?php
+        echo $status;
+    ?>
+</h5>
+
+<table class="table table-bordered table-striped table-hover dataTable">
+    <thead>
+        <tr>
+            <th>
+                <?php echo t('Country'); ?>
+            </th>
+
+            <th>
+                <?php echo t('Status'); ?>
+            </th>
+
+            <th>
+                <?php echo t('Date'); ?>
+            </th>
+
+            <th>
+                <?php echo t('Notes'); ?>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+<?php
+        foreach ($countries as $index => $data) {
+?>
+        <tr>
+            <td>
+                <?php echo $data['country'];?>
+            </td>
+
+            <td>
+                <?php echo $data['status'];?>
+            </td>
+
+            <td>
+                <?php echo $data['date'];?>
+            </td>
+
+            <td>
+                <?php echo $data['notes'];?>
+            </td>
+        </tr>
+<?php
+        }
+?>
+    </tbody>
+</table>
+
+<div class="clearfix">&nbsp;</div>
+<br />
+<hr />
+<?php
+    }
+?>

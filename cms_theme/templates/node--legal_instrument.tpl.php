@@ -1,9 +1,10 @@
 <?php
-    render_slot($node, 'node-buttons', 'general');
+    $content['contacts'] = $node->contacts;
+    $content['countries_by_status'] = $node->countries_by_status;
 
+    render_slot($node, 'node-buttons', 'general');
     render_slot($node, 'details', 'legal_instrument', $content);
     render_slot($node, 'attachments', 'legal_instrument', $content);
-    $content['contacts'] = $node->contacts;
     render_slot($node, 'related-content', 'legal_instrument', $content);
 
     hide($content['links']);
