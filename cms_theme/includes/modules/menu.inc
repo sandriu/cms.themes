@@ -3,7 +3,7 @@
 /**
  * Returns HTML for primary and secondary local tasks.
  */
-function twitter_bootstrap_menu_local_tasks(&$vars) {
+function cms_theme_menu_local_tasks(&$vars) {
   $output = '';
 
   if ( !empty($vars['primary']) ) {
@@ -27,7 +27,7 @@ function twitter_bootstrap_menu_local_tasks(&$vars) {
  *
  * @ingroup themeable
  */
-function twitter_bootstrap_menu_local_task($variables) {
+function cms_theme_menu_local_task($variables) {
   $link = $variables['element']['#link'];
   $link_text = $link['title'];
   $classes = array();
@@ -63,17 +63,17 @@ function twitter_bootstrap_menu_local_task($variables) {
   }
 }
 
-function twitter_bootstrap_menu_tree(&$variables) {
+function cms_theme_menu_tree(&$variables) {
   return '<ul class="menu nav nav-tabs nav-stacked">' . $variables['tree'] . '</ul>';
 }
 
-function twitter_bootstrap_menu_link(array $variables) {
+function cms_theme_menu_link(array $variables) {
   $element = $variables['element'];
   $sub_menu = '';
-  
+
   // Sanitize title
   $element['#title'] = check_plain($element['#title']);
-  
+
   if ($element['#below']) {
 	// Ad our own wrapper
 	unset($element['#below']['#theme_wrappers']);
@@ -84,11 +84,11 @@ function twitter_bootstrap_menu_link(array $variables) {
 	//$element['#attributes']['class'][] = 'dropdown';
 	$element['#localized_options']['html'] = TRUE;
 	//$element['#title'] .= '<b class="caret"></b>';
-	
+
 	// auch
 	$element['#href'] = "";
   }
-  
+
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
@@ -96,13 +96,13 @@ function twitter_bootstrap_menu_link(array $variables) {
 /**
 * Get all primary tasks including subsets
 */
-function _twitter_bootstrap_local_tasks($tabs = FALSE) {
+function _cms_theme_local_tasks($tabs = FALSE) {
   if($tabs == '')
 	return $tabs;
-  
+
   if(!$tabs)
 	$tabs = menu_primary_local_tasks();
-  
+
   foreach($tabs as $key => $element) {
 	$result = db_select('menu_router', NULL, array('fetch' => PDO::FETCH_ASSOC))
 	  ->fields('menu_router')
@@ -112,21 +112,21 @@ function _twitter_bootstrap_local_tasks($tabs = FALSE) {
 	  ->orderBy('weight')
 	  ->orderBy('title')
 	  ->execute();
-  
+
 	$router_item = menu_get_item($element['#link']['path']);
 	$map = $router_item['original_map'];
-  
+
 	$i = 0;
 	foreach ($result as $item) {
 	  _menu_translate($item, $map, TRUE);
-  
+
 	  //only add items that we have access to
 	  if ($item['tab_parent'] && $item['access']) {
 		//set path to that of parent for the first item
 		if ($i === 0) {
 		  $item['href'] = $item['tab_parent'];
 		}
-  
+
 		if (current_path() == $item['href']) {
 		  $tabs[$key][] = array(
 			'#theme' => 'menu_local_task',
@@ -140,12 +140,12 @@ function _twitter_bootstrap_local_tasks($tabs = FALSE) {
 			'#link' => $item,
 		  );
 		}
-  
+
 		//only count items we have access to.
 		$i++;
 	  }
 	}
   }
-  
+
   return $tabs;
 }

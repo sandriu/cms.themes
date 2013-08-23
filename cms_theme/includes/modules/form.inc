@@ -5,7 +5,7 @@ function twitter_bootstrap_button(&$vars) {
   $element = $vars['element'];
   $element['#attributes']['type'] = 'submit';
   element_set_attributes($element, array('id', 'name', 'value'));
-  
+
   $element['#attributes']['class'][] = 'btn'; // Add bootstrap class
   $element['#attributes']['class'][] = 'form-' . $element['#button_type'];
   if (!empty($element['#attributes']['disabled'])) {
@@ -24,17 +24,17 @@ function twitter_bootstrap_button(&$vars) {
  *     Properties used: #action, #method, #attributes, #children
  *
  * @ingroup themeable
- 
+
 
 function twitter_bootstrap_preprocess_form(&$variables) {
-}  
+}
 
 function twitter_bootstrap_form($variables) {
   $element = $variables['element'];
   if (isset($element['#action'])) {
     $element['#attributes']['action'] = drupal_strip_dangerous_protocols($element['#action']);
   }
-  
+
   element_set_attributes($element, array('method', 'id'));
   if (empty($element['#attributes']['accept-charset'])) {
     $element['#attributes']['accept-charset'] = "UTF-8";
@@ -47,7 +47,7 @@ function twitter_bootstrap_form($variables) {
 /**
  * Implements hook_form_alter().
  */
-function twitter_bootstrap_form_alter(&$form, &$form_state, $form_id) {
+function cms_theme_form_alter(&$form, &$form_state, $form_id) {
   // Id's of forms that should be ignored
   // Make this configurable?
   $form_ids = array(
@@ -55,16 +55,16 @@ function twitter_bootstrap_form_alter(&$form, &$form_state, $form_id) {
     'system_site_information_settings',
     'user_profile_form',
   );
-  
+
   // Only wrap in container for certain form
   if(isset($form['#form_id']) && !in_array($form['#form_id'], $form_ids) && !isset($form['#node_edit_form']))
     $form['actions']['#theme_wrappers'] = array();
-}  
+}
 
 /**
  * Returns HTML for a form element.
  */
-function twitter_bootstrap_form_element(&$variables) {
+function cms_theme_form_element(&$variables) {
   $element = &$variables['element'];
   // This is also used in the installer, pre-database setup.
   $t = get_t();
@@ -141,7 +141,7 @@ function twitter_bootstrap_form_element(&$variables) {
 /**
  * Returns HTML for a form element label and required marker.
  */
-function twitter_bootstrap_form_element_label(&$variables) {
+function cms_theme_form_element_label(&$variables) {
   $element = $variables['element'];
   // This is also used in the installer, pre-database setup.
   $t = get_t();
@@ -190,7 +190,7 @@ function twitter_bootstrap_form_element_label(&$variables) {
 /**
  * Preprocessor for theme('button').
  */
-function twitter_bootstrap_preprocess_button(&$vars) {
+function cms_theme_preprocess_button(&$vars) {
   $vars['element']['#attributes']['class'][] = 'btn';
 
   if (isset($vars['element']['#value'])) {
@@ -231,7 +231,7 @@ function twitter_bootstrap_preprocess_button(&$vars) {
 /**
  * Returns HTML for a button form element.
  */
-function twitter_bootstrap_button($variables) {
+function cms_theme_button($variables) {
   $element = $variables['element'];
   $label = check_plain($element['#value']);
   element_set_attributes($element, array('id', 'name', 'value', 'type'));
