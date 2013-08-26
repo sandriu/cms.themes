@@ -8,10 +8,10 @@
 /**
  * Display a view as a table style.
  */
-function twitter_bootstrap_preprocess_views_view_table(&$vars) {
+function cms_theme_preprocess_views_view_table(&$vars) {
   $vars['classes_array'][] = 'table table-bordered table-striped table-hover';
 }
 
-function twitter_bootstrap_preprocess_views_view_grid(&$vars) {
+function cms_theme_preprocess_views_view_grid(&$vars) {
   $vars['class'] .= ' table';
 }

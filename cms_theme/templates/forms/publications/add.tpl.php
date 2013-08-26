@@ -131,66 +131,59 @@
 
 <div class="clearfix">&nbsp;</div>
 
-<legend  class="form-section-legend">
-    <a href="javascript:void(0); " data-toggle="collapse" data-target="#related-content-fields"><i class="icon-minus-sign"></i></a>
-    <?php echo t('Related content'); ?>
-</legend>
-
-<div id="related-content-fields" class="collapse in">
-    <div class="span11">
-    <?php
-        echo drupal_render($form['field_publication_species']);
-    ?>
-    </div>
-
-    <div class="span11">
-    <?php
-        echo drupal_render($form['field_publication_threats']);
-    ?>
-    </div>
-
-    <div class="span11">
-    <?php
-        echo drupal_render($form['field_publication_meeting']);
-    ?>
-    </div>
-
-    <div class="span11">
-    <?php
-        echo drupal_render($form['field_publication_project']);
-    ?>
-    </div>
-
-    <div class="span11">
-    <?php
-        echo drupal_render($form['field_publication_species']);
-    ?>
-    </div>
-
-    <div class="span11">
-    <?php
-        echo drupal_render($form['field_publication_plans']);
-    ?>
-    </div>
-
-    <div class="span11">
-    <?php
-        echo drupal_render($form['field_publication_nat_report']);
-    ?>
-    </div>
-
-    <div class="span11">
-    <?php
-        echo drupal_render($form['field_publication_regions']);
-    ?>
-    </div>
-
-    <div class="clearfix">&nbsp;</div>
-
-    <?php
-        echo drupal_render_children($form);
-    ?>
+<div class="span11">
+<?php
+    echo drupal_render($form['field_publication_species']);
+?>
 </div>
+
+<div class="span11">
+<?php
+    echo drupal_render($form['field_publication_threats']);
+?>
+</div>
+
+<div class="span11">
+<?php
+    echo drupal_render($form['field_publication_meeting']);
+?>
+</div>
+
+<div class="span11">
+<?php
+    echo drupal_render($form['field_publication_project']);
+?>
+</div>
+
+<div class="span11">
+<?php
+    echo drupal_render($form['field_publication_species']);
+?>
+</div>
+
+<div class="span11">
+<?php
+    echo drupal_render($form['field_publication_plans']);
+?>
+</div>
+
+<div class="span11">
+<?php
+    echo drupal_render($form['field_publication_nat_report']);
+?>
+</div>
+
+<div class="span11">
+<?php
+    echo drupal_render($form['field_publication_regions']);
+?>
+</div>
+
+<div class="clearfix">&nbsp;</div>
+
+<?php
+    echo drupal_render_children($form);
+?>
 </div>
 
 <?php
