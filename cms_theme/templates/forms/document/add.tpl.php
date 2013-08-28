@@ -50,36 +50,44 @@
     </div>
 
     <div class="clearfix">&nbsp;</div>
-    <br />
 
-    <div class="span11">
-    <?php
-        echo drupal_render($form['field_document_species']);
-    ?>
-    </div>
+    <div class="span12">
+        <legend  class="form-section-legend">
+            <a href="javascript:void(0); " data-toggle="collapse" data-target="#related-content-fields"><i class="icon-minus-sign"></i></a>
+            <?php echo t('Related content'); ?>
+        </legend>
 
-    <div class="span11">
-    <?php
-        echo drupal_render($form['field_document_meeting']);
-    ?>
-    </div>
+        <div id="related-content-fields" class="collapse in">
+            <div class="span11">
+            <?php
+                echo drupal_render($form['field_document_species']);
+            ?>
+            </div>
 
-    <div class="span11">
-    <?php
-        echo drupal_render($form['field_document_project']);
-    ?>
-    </div>
+            <div class="span11">
+            <?php
+                echo drupal_render($form['field_document_meeting']);
+            ?>
+            </div>
 
-    <div class="span11">
-    <?php
-        echo drupal_render($form['field_document_threats']);
-    ?>
-    </div>
+            <div class="span11">
+            <?php
+                echo drupal_render($form['field_document_project']);
+            ?>
+            </div>
 
-    <div class="span11">
-    <?php
-        echo drupal_render($form['field_document_publication']);
-    ?>
+            <div class="span11">
+            <?php
+                echo drupal_render($form['field_document_threats']);
+            ?>
+            </div>
+
+            <div class="span11">
+            <?php
+                echo drupal_render($form['field_document_publication']);
+            ?>
+            </div>
+        </div>
     </div>
 
     <div class="clearfix">&nbsp;</div>
