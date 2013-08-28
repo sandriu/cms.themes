@@ -1,22 +1,5 @@
 <?php
 
-include_once(drupal_get_path('theme', 'cms_theme') . '/includes/cms_theme.inc');
-include_once(drupal_get_path('theme', 'cms_theme') . '/includes/modules/theme.inc');
-include_once(drupal_get_path('theme', 'cms_theme') . '/includes/modules/pager.inc');
-include_once(drupal_get_path('theme', 'cms_theme') . '/includes/modules/form.inc');
-include_once(drupal_get_path('theme', 'cms_theme') . '/includes/modules/admin.inc');
-include_once(drupal_get_path('theme', 'cms_theme') . '/includes/modules/menu.inc');
-
-
-// Load module include files
-$modules = module_list();
-
-foreach ($modules as $module) {
-  if (is_file(drupal_get_path('theme', 'cms_theme') . '/includes/modules/' . str_replace('_', '-', $module) . '.inc')) {
-    include_once(drupal_get_path('theme', 'cms_theme') . '/includes/modules/' . str_replace('_', '-', $module) . '.inc');
-  }
-}
-
 /**
  * We deny access to anonymous users to anything displayed by this theme (which is stands for administration purposes)
  * The reason we implement this in theme is because anonymous are allowed to see content in other front-end themes
@@ -37,9 +20,6 @@ include_once(drupal_get_path('theme', 'cms_theme') . '/includes/modules/date.inc
 
 function CMS_theme_theme() {
     return array(
-        'twitter_bootstrap_links' => array(
-            'variables' => array('links' => array(), 'attributes' => array(), 'heading' => NULL),
-        ),
         'twitter_bootstrap_btn_dropdown' => array(
             'variables' => array('links' => array(), 'attributes' => array(), 'type' => NULL),
         ),
@@ -106,74 +86,22 @@ function CMS_theme_theme() {
     );
 }
 
-/**
- * Preprocess variables for html.tpl.php
- *
- * @see system_elements()
- * @see html.tpl.php
- */
-function cms_theme_preprocess_html(&$variables) {
-   // Try to load the library
-  if (module_exists('twitter_bootstrap_ui')){
-    $library = libraries_load('twitter_bootstrap', 'minified');
-  }
-}
-
-/**
- * Preprocess variables for node.tpl.php
- *
- * @see node.tpl.php
- */
-function cms_theme_preprocess_node(&$variables) {
-  if($variables['teaser'])
-    $variables['classes_array'][] = 'row-fluid';
-}
-
-/**
- * Preprocess variables for block.tpl.php
- *
- * @see block.tpl.php
- */
-function cms_theme_preprocess_block(&$variables, $hook) {
-  //$variables['classes_array'][] = 'row';
-  // Use a bare template for the page's main content.
-  if ($variables['block_html_id'] == 'block-system-main') {
-    $variables['theme_hook_suggestions'][] = 'block__no_wrapper';
-  }
-  $variables['title_attributes_array']['class'][] = 'block-title';
-}
-
-/**
- * Override or insert variables into the block templates.
- *
- * @param $variables
- *   An array of variables to pass to the theme template.
- * @param $hook
- *   The name of the template being rendered ("block" in this case.)
- */
-function cms_theme_process_block(&$variables, $hook) {
-  // Drupal 7 should use a $title variable instead of $block->subject.
-  $variables['title'] = $variables['block']->subject;
-}
-
 function cms_theme_js_alter(&$javascript) {
-    $excludes = _cms_theme_alter(cms_theme_theme_get_info('exclude'), 'js');
-    $js = array_diff_key($js, $excludes);
     $javascript['misc/jquery.js']['data'] = drupal_get_path('theme', 'cms_theme').'/js/jquery-1.8.0.min.js';
     if(array_key_exists('misc/jquery.form.js', $javascript)) {
         $javascript['misc/jquery.form.js']['data'] = drupal_get_path('theme', 'cms_theme').'/js/jquery.form.js';
     }
 }
-#
-#function cms_theme_menu_link(&$variables) {
-#    $element = $variables['element'];
-#    $sub_menu = '';
-#    if ($element['#below']) {
-#      $sub_menu = drupal_render($element['#below']);
-#    }
-#    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-#    return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>ssss\n";
-#}
+
+function cms_theme_menu_link(&$variables) {
+    $element = $variables['element'];
+    $sub_menu = '';
+    if ($element['#below']) {
+      $sub_menu = drupal_render($element['#below']);
+    }
+    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+    return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>ssss\n";
+}
 
 /**
  * Preprocess variables for page.tpl.php
@@ -181,90 +109,8 @@ function cms_theme_js_alter(&$javascript) {
  * @see page.tpl.php
  */
 function cms_theme_preprocess_page(&$variables) {
-    // Add information about the number of sidebars.
-  if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
-    $variables['columns'] = 3;
-  }
-  elseif (!empty($variables['page']['sidebar_first'])) {
-    $variables['columns'] = 2;
-  }
-  elseif (!empty($variables['page']['sidebar_second'])) {
-    $variables['columns'] = 2;
-  }
-  else {
-    $variables['columns'] = 1;
-  }
-
-  // Primary nav
-  $variables['primary_nav'] = FALSE;
-  if($variables['main_menu']) {
-    // Build links
-    $tree = menu_tree_page_data(variable_get('menu_main_links_source', 'main-menu'));
-    $variables['main_menu'] = cms_theme_menu_navigation_links($tree);
-
-    // Build list
-    $variables['primary_nav'] = theme('twitter_bootstrap_links', array(
-      'links' => $variables['main_menu'],
-      'attributes' => array(
-        'id' => 'main-menu',
-        'class' => array('nav'),
-      ),
-      'heading' => array(
-        'text' => t('Main menu'),
-        'level' => 'h2',
-        'class' => array('element-invisible'),
-      ),
-    ));
-  }
-
-  // Secondary nav
-  $variables['secondary_nav'] = FALSE;
-  if($variables['secondary_menu']) {
-    $secondary_menu = menu_load(variable_get('menu_secondary_links_source', 'user-menu'));
-
-    // Build links
-    $tree = menu_tree_page_data($secondary_menu['menu_name']);
-    $variables['secondary_menu'] = cms_theme_menu_navigation_links($tree);
-
-    // Build list
-    $variables['secondary_nav'] = theme('twitter_bootstrap_btn_dropdown', array(
-      'links' => $variables['secondary_menu'],
-      'label' => $secondary_menu['title'],
-      'type' => 'success',
-      'attributes' => array(
-        'id' => 'user-menu',
-        'class' => array('pull-right'),
-      ),
-      'heading' => array(
-        'text' => t('Secondary menu'),
-        'level' => 'h2',
-        'class' => array('element-invisible'),
-      ),
-    ));
-  }
-
-  // Replace tabs with dropw down version
-  $variables['tabs']['#primary'] = _cms_theme_local_tasks($variables['tabs']['#primary']);
-}
-
-function _cms_theem_search_form($form, &$form_state) {
-  // Get custom search form for now
-  $form = search_form($form, $form_state);
-
-  // Cleanup
-  $form['#attributes']['class'][] = 'navbar-search';
-  $form['#attributes']['class'][] = 'pull-left';
-  $form['basic']['keys']['#title'] = '';
-  $form['basic']['keys']['#attributes']['class'][] = 'search-query';
-  $form['basic']['keys']['#attributes']['class'][] = 'span2';
-  $form['basic']['keys']['#attributes']['placeholder'] = t('Search');
-  unset($form['basic']['submit']);
-  unset($form['basic']['#type']);
-  unset($form['basic']['#attributes']);
-  $form += $form['basic'];
-  unset($form['basic']);
-
-  return $form;
+    // Replace tabs with dropw down version
+    $variables['tabs']['#primary'] = _twitter_bootstrap_local_tasks($variables['tabs']['#primary']);
 }
 
 function cms_theme_preprocess_taxonomy_term(&$variables) {
@@ -325,28 +171,11 @@ function cms_theme_breadcrumb($variables) {
     return $breadcrumbs;
 }
 
-/**
- * Returns the correct span class for a region
- */
-function _cms_theme_content_span($columns = 1) {
-  $class = FALSE;
-
-  switch($columns) {
-    case 1:
-      $class = 'span12';
-      break;
-    case 2:
-      $class = 'span9';
-      break;
-    case 3:
-      $class = 'span6';
-      break;
-  }
-
-  return $class;
-}
-
 function cms_theme_preprocess_twitter_bootstrap_btn_dropdown(&$variables) {
+  /**
+   * Remove class added by Twitter Bootstrap theme and set our own classes
+  */
+    unset($variables['attributes']['class']);
     $variables['attributes']['class'][] = 'nav pull-right';
 
     if(is_array($variables['links'])) {

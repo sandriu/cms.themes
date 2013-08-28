@@ -50,12 +50,7 @@
     </div>
 
     <div class="clearfix">&nbsp;</div>
-
-    <div class="span11">
-        <h4>
-            <?php echo t('Related content'); ?>
-        </h4>
-    </div>
+    <br />
 
     <div class="span11">
     <?php

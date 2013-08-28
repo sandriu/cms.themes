@@ -1,6 +1,6 @@
 <?php
 
-function cms_theme_item_list($variables) {
+function twitter_bootstrap_item_list($variables) {
   $items = $variables['items'];
   $title = $variables['title'];
   $type = $variables['type'];
@@ -48,7 +48,7 @@ function cms_theme_item_list($variables) {
     }
     $output .= "</$type>";
   }
-
+ 
   return $output;
 }
 
@@ -56,7 +56,7 @@ function cms_theme_item_list($variables) {
  * Returns HTML for status and/or error messages, grouped by type.
  *
  */
-function cms_theme_status_messages($vars) {
+function twitter_bootstrap_status_messages($vars) {
   $display = $vars['display'];
   $output = '';
 
@@ -86,17 +86,22 @@ function cms_theme_status_messages($vars) {
   return $output;
 }
 
-function cms_theme_css_alter(&$css) {
+function twitter_bootstrap_css_alter(&$css) {
   //global $theme_key;
   //$theme_path = drupal_get_path('theme', $theme_key);
-
-  $excludes = _cms_theme_alter(cms_theme_theme_get_info('exclude'), 'css');
+  
+  $excludes = _twitter_bootstrap_alter(twitter_bootstrap_theme_get_info('exclude'), 'css');
   $css = array_diff_key($css, $excludes);
 }
+ 
+function twitter_bootstrap_js_alter(&$js) {
+  $excludes = _twitter_bootstrap_alter(twitter_bootstrap_theme_get_info('exclude'), 'js');
+  $js = array_diff_key($js, $excludes);
+}
 
-function _cms_theme_alter($files, $type) {
+function _twitter_bootstrap_alter($files, $type) {
   $output = array();
-
+  
   foreach($files as $key => $value) {
     if(isset($files[$key][$type])) {
 	  foreach($files[$key][$type] as $file => $name) {
@@ -110,7 +115,7 @@ function _cms_theme_alter($files, $type) {
 /**
  * Returns HTML for a set of links.
  */
-function cms_theme_twitter_bootstrap_links($variables) {
+function twitter_bootstrap_twitter_bootstrap_links($variables) {
   $links = $variables['links'];
   $attributes = $variables['attributes'];
   $heading = $variables['heading'];
@@ -122,7 +127,7 @@ function cms_theme_twitter_bootstrap_links($variables) {
   if (count($links) > 0) {
     $output = '';
     $output .= '<ul' . drupal_attributes($attributes) . '>';
-
+    
     // Treat the heading first if it is present to prepend it to the
     // list of links.
     if (!empty($heading)) {
@@ -131,7 +136,7 @@ function cms_theme_twitter_bootstrap_links($variables) {
         // is a string.
         $heading = array(
           'text' => $heading,
-          // Set the default level of the heading.
+          // Set the default level of the heading. 
           'level' => 'li',
         );
       }
@@ -144,14 +149,14 @@ function cms_theme_twitter_bootstrap_links($variables) {
 
     $num_links = count($links);
     $i = 1;
-
+	
     foreach ($links as $key => $link) {
       $children = array();
       if(isset($link['below']))
         $children = $link['below'];
-
+      
 	  $attributes = array('class' => array($key));
-
+	  
 	  // Add first, last and active classes to the list of links to help out themers.
       if ($i == 1) {
         $attributes['class'][] = 'first';
@@ -163,21 +168,21 @@ function cms_theme_twitter_bootstrap_links($variables) {
            && (empty($link['language']) || $link['language']->language == $language_url->language)) {
         $attributes['class'][] = 'active';
       }
-
+	  
 	  if(count($children) > 0) {
 		$attributes['class'][] = 'dropdown';
 		$link['attributes']['data-toggle'] = 'dropdown';
 		$link['attributes']['class'][] = 'dropdown-toggle';
       }
-
+	  
 	  if(!isset($link['attributes']))
 		$link['attributes'] = array();
-
+		
 	  $class = (count($children) > 0) ? 'dropdown' : NULL;
 	  $output .= '<li' . drupal_attributes(array('class' => array($class))) . '>';
-
+	  
 	  if (isset($link['href'])) {
-		if(count($children) > 0) {
+		if(count($children) > 0) { 
 		  $link['html'] = TRUE;
 		  $link['title'] .= '<b class="caret"></b>';
 		  $output .=  '<a' . drupal_attributes($link['attributes']) . ' href="#">'. $link['title'] .'</a>';
@@ -197,17 +202,17 @@ function cms_theme_twitter_bootstrap_links($variables) {
 	   }
 	   $output .= '<span' . $span_attributes . '>' . $link['title'] . '</span>';
 	  }
-
+	  
 	  $i++;
-
+	  
 	  if(count($children) > 0) {
 		$attributes = array();
         $attributes['class'] = array('dropdown-menu');
-
+		
 		$output .= theme('twitter_bootstrap_links', array('links' => $children, 'attributes' => $attributes));
 	  }
-
-	  $output .= "</li>\n";
+	  
+	  $output .= "</li>\n";	
     }
 
     $output .= '</ul>';
@@ -216,7 +221,7 @@ function cms_theme_twitter_bootstrap_links($variables) {
   return $output;
 }
 
-function cms_theme_preprocess_table(&$variables) {
+function twitter_bootstrap_preprocess_table(&$variables) {
   $variables['attributes']['class'][] = 'table';
   $variables['attributes']['class'][] = 'table-striped';
 }
