@@ -62,11 +62,11 @@
 
                 <td>
                     <?php
-                        if (isset($data['mail'][1])) {
+                        if (isset($data['personalemail'][0])) {
                     ?>
-                    <a href="mailto:<?php echo $data['mail'][1]; ?>">
+                    <a href="mailto:<?php echo $data['personalemail'][0]; ?>">
                     <?php
-                        echo $data['mail'][1];
+                        echo $data['personalemail'][0];
                     ?>
                     </a>
                     <?php
@@ -98,7 +98,13 @@
 
                 <td>
                     <?php
-                        echo render($data['mobile'][0]);
+                    if (isset($data['mobilephonenumbers']) && !empty($data['mobilephonenumbers'])) {
+                        foreach ($data['mobilephonenumbers'] as $index => $number) {
+                            if (is_numeric($index)) {
+                                echo $number . "<br />";
+                            }
+                        }
+                    }
                     ?>
                 </td>
             </tr>
@@ -126,14 +132,18 @@
 
                 <td>
                     <?php
-                    if (isset($data['website'][0]) && (!empty($data['website'][0]))) {
+                    if (isset($data['websites']) && !empty($data['websites'])) {
+                        foreach ($data['websites'] as $index => $website) {
+                            if (is_numeric($index)) {
+                                if (!CMSUtils::starts_with('http', $website)) {
+                                    $website = 'http://' . $website;
+                                }
                     ?>
-                    <a href="<?php echo $data['website'][0]; ?>" taget="_blank">
+                    <a href="<?php echo $website; ?>" target="_blank" title="<?php echo t('Visit') . ' ' . $website; ?>"><?php echo $website; ?></a>
+                    <br />
                     <?php
-                        echo $data['website'][0];
-                    ?>
-                    </a>
-                    <?php
+                            }
+                        }
                     }
                     ?>
                 </td>
@@ -232,8 +242,8 @@
 
                 <td>
                     <?php
-                    if (isset($data['organizationstatus']) && !empty($data['organizationstatus'])) {
-                        foreach ($data['organizationstatus'] as $index => $status) {
+                    if (isset($data['statusorganization']) && !empty($data['statusorganization'])) {
+                        foreach ($data['statusorganization'] as $index => $status) {
                             if (is_numeric($index)) {
                                 echo $status;
                     ?>
@@ -283,8 +293,8 @@
 
                 <td>
                     <?php
-                    if (isset($data['personstatus']) && !empty($data['personstatus'])) {
-                        foreach ($data['personstatus'] as $index => $status) {
+                    if (isset($data['statusperson']) && !empty($data['statusperson'])) {
+                        foreach ($data['statusperson'] as $index => $status) {
                             if (is_numeric($index)) {
                                 echo $status;
                     ?>
@@ -422,7 +432,13 @@
 
                 <td>
                     <?php
-                        echo render($data['workphone'][0]);
+                    if (isset($data['workphonenumbers']) && !empty($data['workphonenumbers'])) {
+                        foreach ($data['workphonenumbers'] as $index => $number) {
+                            if (is_numeric($index)) {
+                                echo $number . "<br />";
+                            }
+                        }
+                    }
                     ?>
                 </td>
             </tr>
@@ -436,7 +452,13 @@
 
                 <td>
                     <?php
-                        echo render($data['facsimiletelephonenumber'][0]);
+                    if (isset($data['faxnumbers']) && !empty($data['faxnumbers'])) {
+                        foreach ($data['faxnumbers'] as $index => $number) {
+                            if (is_numeric($index)) {
+                                echo $number . "<br />";
+                            }
+                        }
+                    }
                     ?>
                 </td>
             </tr>
@@ -450,8 +472,8 @@
 
                 <td>
                     <?php
-                    if (isset($data['cmsmailing']) && !empty($data['cmsmailing'])) {
-                        foreach ($data['cmsmailing'] as $index => $mailing_list) {
+                    if (isset($data['mailinglists']) && !empty($data['mailinglists'])) {
+                        foreach ($data['mailinglists'] as $index => $mailing_list) {
                             if (is_numeric($index)) {
                                 echo $mailing_list;
                     ?>
@@ -473,21 +495,12 @@
 
                 <td>
                     <?php
-                    if (isset($data['preferredlanguage']) && !empty($data['preferredlanguage'])) {
-                    ?>
-                    <ol>
-                    <?php
-                        $preferred_languages = explode(',', $data['preferredlanguage'][0]);
-                        foreach ($preferred_languages as $language) {
-                    ?>
-                        <li>
-                            <?php echo $language; ?>
-                        </li>
-                    <?php
+                    if (isset($data['preferredlanguages']) && !empty($data['preferredlanguages'])) {
+                        foreach ($data['preferredlanguages'] as $index => $language) {
+                            if (is_numeric($index)) {
+                                echo $language . "<br />";
+                            }
                         }
-                    ?>
-                    </ol>
-                    <?php
                     }
                     ?>
                 </td>
