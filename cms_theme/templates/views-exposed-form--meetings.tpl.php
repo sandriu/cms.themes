@@ -24,7 +24,7 @@
     // This ensures that, if clean URLs are off, the 'q' is added first so that
     // it shows up first in the URL.
     print $q;
-    
+
   ?>
 <?php endif;?>
 <div class="views-exposed-form well well-small">
@@ -79,3 +79,15 @@
     <?php endif; ?>
   </div>
 </div>
+
+
+<?php
+    /**
+     * Get query string and pass it to the export link
+     * in order to export only the results after a filter was applied
+    */
+    $query_string = http_build_query(drupal_get_query_parameters());
+?>
+<a class="btn" href="export<?php echo ($query_string) ? '?' . $query_string : ''; ?>" title="<?php echo t('Export results in XLS format'); ?>" name="export-button" id="export-button">
+    <i class="icon-download-alt"></i> <?php echo t('Export filter results'); ?>
+</a>
