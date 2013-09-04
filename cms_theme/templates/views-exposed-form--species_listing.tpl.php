@@ -24,7 +24,7 @@
     // This ensures that, if clean URLs are off, the 'q' is added first so that
     // it shows up first in the URL.
     print $q;
-    
+
   ?>
 <?php endif;?>
 
@@ -75,8 +75,19 @@
 
     <?php if (!empty($reset_button)): ?>
       <div class="views-exposed-widget views-reset-button species-views-reset-button">
-        <a class="reset-link" id="edit-reset" name="op" onclick="jQuery('#views-exposed-form-species-admin-species-listing').resetForm();">Clear filters</a>
+        <a class="reset-link" id="edit-reset" name="op" onclick="jQuery('#views-exposed-form-species-admin-species-listing').resetForm();"><?php echo t('Clear'); ?></a>
       </div>
     <?php endif; ?>
   </div>
 </div>
+
+<?php
+    /**
+     * Get query string and pass it to the export link
+     * in order to export only the results after a filter was applied
+    */
+    $query_string = http_build_query(drupal_get_query_parameters());
+?>
+<a class="btn" href="export<?php echo ($query_string) ? '?' . $query_string : ''; ?>" title="<?php echo t('Export results in CSV format'); ?>" name="export-button" id="export-button">
+    <i class="icon-download-alt"></i> <?php echo t('Export filter results'); ?>
+</a>
