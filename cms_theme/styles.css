@@ -330,7 +330,13 @@ img.project-custom-image {
 #edit_field_species_experts_chzn, #edit_field_species_experts_chzn .chzn-drop {
     width: 260px !important;
 }
-
+#related-content-fields.collapse.in{
+	overflow: visible;
+	height:auto;
+}
+#related-content-fields.collapse.out{
+	overflow: hidden;
+}
 @media print {
     .btn,
     .navbar,
