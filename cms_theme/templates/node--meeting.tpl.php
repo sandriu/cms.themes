@@ -17,10 +17,13 @@
                 echo render($content['field_meeting_kind']);
                 echo render($content['field_meeting_status']);
                 echo render($content['field_meeting_languages']);
+                echo render($content['field_meeting_url']);
                 
             ?>
             </tbody>
         </table>
+        <div class="clearfix">&nbsp;</div>
+        <?php echo render($content['field_meeting_description']); ?>
     </div>
 
     <div class="span4">

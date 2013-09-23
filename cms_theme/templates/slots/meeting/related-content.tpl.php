@@ -8,7 +8,6 @@
     <?php
         render_tab(t('Species'), 'related-content-species', 'active', 'field_meeting_species', TRUE, $content);
         render_tab(t('Documents'), 'related-content-documents', '', 'field_meeting_document', TRUE, $content);
-        render_tab(t('Decisions'), 'related-content-decisions', '', 'field_meeting_decision', TRUE, $content);
         render_tab(t('Publications'), 'related-content-publications', '', 'field_meeting_publication', TRUE, $content);
         render_tab(t('Threats'), 'related-content-threats', '', 'field_meeting_threats', TRUE, $content);
         render_tab(t('Participants'), 'related-content-participants', '', 'field_meeting_participants', TRUE, $content);
@@ -48,21 +47,6 @@
         ?>
     </div>
 
-    <div class="tab-pane" id="related-content-decisions">
-        <?php
-            if (check_display_field($content, 'field_meeting_decision')) {
-                echo render($content['field_meeting_decision']);
-            }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related decisions');
-        ?>
-        </p>
-        <?php
-            }
-        ?>
-    </div>
 
     <div class="tab-pane" id="related-content-publications">
         <?php
