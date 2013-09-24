@@ -12,6 +12,7 @@
         render_tab(t('National Reports'), 'related-content-national-reports', '', 'field_project_national_reports', TRUE, $content);
         render_tab(t('Publications'), 'related-content-publications', '', 'field_project_publication', TRUE, $content);
         render_tab(t('Meetings'), 'related-content-meetings', '', 'field_project_meeting', TRUE, $content);
+        render_tab(t('Threats'), 'related-content-threats', '', 'field_project_threat', TRUE, $content);
     ?>
 </ul>
 
@@ -111,4 +112,20 @@
             }
         ?>
     </div>
+        <div class="tab-pane" id="related-content-threats">
+        <?php
+            if (check_display_field($content, 'field_project_threat')) {
+                echo render($content['field_project_threat']);
+            }else {
+        ?>
+        <p class="text-warning">
+        <?php
+                echo t('No related threats');
+        ?>
+        </p>
+        <?php
+            }
+        ?>
+    </div>
+
 </div>
