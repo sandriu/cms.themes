@@ -99,11 +99,12 @@
     </div>
 </div>
 
-<a href="/contacts/add" class="btn btn-primary" title="<?php echo t('Add'); ?>">
+<a href="/contacts/add" class="btn btn-primary" title="<?php echo t('Add new contact'); ?>">
     <?php echo t('Add contact'); ?>
 </a>
 
-<a href="javascript:void(0);" class="btn" title="<?php echo t('Export'); ?>" id="export-button">
+<a href="javascript:void(0);" class="btn" title="<?php echo t('Export'); ?> results in CSV format" id="export-button">
+    <i class="icon-download-alt"></i>
     <?php echo t('Export search result'); ?>
 </a>
 
