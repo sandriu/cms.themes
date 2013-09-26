@@ -4,6 +4,7 @@
 
         var per_page = $('#contacts-per-page').val();
         var page = $('#current-page').val();
+        var operator = $('#operator').val();
         var instrument = $('#instrument').val();
         var country = $('#country').val();
         var region = $('#region').val();
@@ -23,7 +24,7 @@
             + "&country=" + country + "&region=" + region + "&availability="
             + availability + "&mailing_list=" + mailing_list + "&person_status="
             + person_status + "&organization_status=" + organization_status
-            + "&species=" + species + "&meeting=" + meeting,
+            + "&species=" + species + "&meeting=" + meeting + "&operator=" + operator,
             "aaSorting": [ [1, "asc"] ],
             "aoColumns": [
                 {

@@ -7,6 +7,7 @@
                                   'countries' => $countries,
                                   'regions' => $regions,
                                   'mailing_list' => $mailing_list,
+                                  'operator' => $operator,
                                   'instruments' => $instruments,
                                   'availability' => $availability,
                                   'person_status' => $person_status,
