@@ -39,6 +39,23 @@
                                 </div>
                             </div>
 
+                            <div class="views-exposed-widget">
+                                <label for="per_field_operator">
+                                    <?php echo t('Per field operator'); ?>
+                                </label>
+
+                                <div class="views-widget">
+                                    <div class="control-group form-type-select">
+                                        <div class="controls">
+                                            <select name="per_field_operator" id="per_field_operator">
+                                                <option value="is_all_of" <?php echo ($data['per_field_operator'] == 'is_all_of') ? 'selected="selected"' : ''; ?>><?php echo t('Is all of'); ?></option>
+                                                <option value="is_one_of" <?php echo ($data['per_field_operator'] == 'is_one_of') ? 'selected="selected"' : ''; ?>><?php echo t('Is one of'); ?></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="clearfix"></div>
 
                             <input type="hidden" name="current-page" value="<?php echo $data['page']; ?>" id="current-page" />
