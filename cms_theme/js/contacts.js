@@ -124,7 +124,8 @@
             var instrument = $('#instrument').val();
             var country = $('#country').val();
 
-            window.location.href = '/contacts/export?instrument=' + instrument + '&country=' + country + '&sSearch=' + search_query;
+            //
+            window.location.href = "/contacts/export?instrument=" + instrument + "&country=" + country + "&region=" + region + "&availability=" + availability + "&mailing_list=" + mailing_list + "&person_status=" + person_status + "&organization_status=" + organization_status + "&species=" + species + "&meeting=" + meeting + "&operator=" + operator;
         });
 
         //$('#instrument').on('change', function(){
