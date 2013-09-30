@@ -34,7 +34,7 @@
 
                 <td>
                     <?php
-                        echo render($data['sn'][0]);
+                        echo render($data['givenname'][0]);
                     ?>
                 </td>
             </tr>
@@ -48,7 +48,7 @@
 
                 <td>
                     <?php
-                        echo render($data['givenname'][0]);
+                        echo render($data['sn'][0]);
                     ?>
                 </td>
             </tr>
