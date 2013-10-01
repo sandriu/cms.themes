@@ -64,7 +64,33 @@
             parent.history.back();
             return false;
         });
+
+        /**
+         * Hide 'Date of entry' field if selected instrument is CMS
+        */
+        $('select[id^="edit-field-species-instruments-und-"]').each(function(){
+            $(this).hide_instrument_date($(this), 'CMS');
+        });
+
+        $( document ).ajaxComplete(function(e) {
+            $('select[id^="edit-field-species-instruments-und-"]').each(function(){
+                $(this).hide_instrument_date($(this), 'CMS');
+            });
+        });
+
+        $('body').on('change', 'select[id^="edit-field-species-instruments-und-"]', function(){
+            $(this).hide_instrument_date($(this), 'CMS');
+        });
     });
+
+    $.fn.hide_instrument_date = function(select, instrument) {
+        var selected_instrument = $('option:selected', select).text();
+        if ( selected_instrument == instrument ) {
+            $('div.field-name-field-species-instrument-date', select.closest('td')).hide();
+        }
+
+        return false;
+    }
 
     $.fn.refresh_page = function() {
         location.reload();

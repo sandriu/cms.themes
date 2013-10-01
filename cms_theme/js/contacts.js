@@ -4,6 +4,8 @@
 
         var per_page = $('#contacts-per-page').val();
         var page = $('#current-page').val();
+        var operator = $('#operator').val();
+        var per_field_operator = $('#per_field_operator').val();
         var instrument = $('#instrument').val();
         var country = $('#country').val();
         var region = $('#region').val();
@@ -23,7 +25,7 @@
             + "&country=" + country + "&region=" + region + "&availability="
             + availability + "&mailing_list=" + mailing_list + "&person_status="
             + person_status + "&organization_status=" + organization_status
-            + "&species=" + species + "&meeting=" + meeting,
+            + "&species=" + species + "&meeting=" + meeting + "&operator=" + operator + "&per_field_operator=" + per_field_operator,
             "aaSorting": [ [1, "asc"] ],
             "aoColumns": [
                 {
@@ -123,7 +125,8 @@
             var instrument = $('#instrument').val();
             var country = $('#country').val();
 
-            window.location.href = '/contacts/export?instrument=' + instrument + '&country=' + country + '&sSearch=' + search_query;
+            //
+            window.location.href = "/contacts/export?instrument=" + instrument + "&country=" + country + "&region=" + region + "&availability=" + availability + "&mailing_list=" + mailing_list + "&person_status=" + person_status + "&organization_status=" + organization_status + "&species=" + species + "&meeting=" + meeting + "&operator=" + operator + "&per_field_operator=" + per_field_operator;
         });
 
         //$('#instrument').on('change', function(){
