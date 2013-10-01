@@ -154,8 +154,13 @@
 
         <div class="clearfix"></div>
 
+        <div class="span12 hide">
         <?php
-            hide($form['field_meeting_document']);
+            echo drupal_render($form['field_meeting_document']);
+        ?>
+        </div>
+
+        <?php
             echo drupal_render_children($form);
         ?>
     </div>
