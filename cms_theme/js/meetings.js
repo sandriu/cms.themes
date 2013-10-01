@@ -35,6 +35,7 @@
                 {
                     "bSearchable": false,
                     "sDefaultContent": "",
+                    "bSortable": false
 
                 }
             ],
@@ -78,6 +79,7 @@
                 {
                     "bSearchable": false,
                     "sDefaultContent": "",
+                    "bSortable": false
 
                 }
             ],

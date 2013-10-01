@@ -69,7 +69,7 @@
                             echo t('Created');
                         ?>
                     </th>
-                    <th class="span2">
+                    <th class="span1">
                         <?php
                             echo t('Status');
                         ?>
@@ -178,7 +178,7 @@
                         ?>
                     </th>
 
-                    <th class="span2">
+                    <th class="span1">
                         <?php
                             echo t('Status');
                         ?>
