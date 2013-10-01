@@ -31,6 +31,11 @@
                     "bSearchable": true,
                     "sDefaultContent": "",
 
+                },
+                {
+                    "bSearchable": false,
+                    "sDefaultContent": "",
+
                 }
             ],
             "aLengthMenu": [
@@ -67,6 +72,11 @@
                 },
                 {
                     "bSearchable": true,
+                    "sDefaultContent": "",
+
+                },
+                {
+                    "bSearchable": false,
                     "sDefaultContent": "",
 
                 }

@@ -69,6 +69,11 @@
                             echo t('Created');
                         ?>
                     </th>
+                    <th class="span2">
+                        <?php
+                            echo t('Status');
+                        ?>
+                    </th>
                 </tr>
             </thead>
 
@@ -111,6 +116,9 @@
                     <?php
                             echo date("d/m/Y", $document->created);
                     ?>
+                    </td>
+                    <td>
+                        <span class='<?php echo ($document->status == 1) ? "published" : "unpublished"; ?>-icon'></span>                    
                     </td>
                 </tr>
                 <?php
@@ -169,6 +177,12 @@
                             echo t('Created');
                         ?>
                     </th>
+
+                    <th class="span2">
+                        <?php
+                            echo t('Status');
+                        ?>
+                    </th>
                 </tr>
             </thead>
 
@@ -212,6 +226,9 @@
                     <?php
                             echo date("d/m/Y", $document->created);
                     ?>
+                    </td>
+                    <td>
+                        <span class='<?php echo ($document->status == 1) ? "published" : "unpublished"; ?>-icon'></span>
                     </td>
                 </tr>
                 <?php

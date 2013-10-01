@@ -6,7 +6,7 @@
     <thead>
         <tr>
             <th><?php echo t('Instrument'); ?></th>
-            <th><?php echo t('Size'); ?></th>
+            <th><?php echo t('Population name'); ?></th>
         </tr>
     </thead>
     <tbody>

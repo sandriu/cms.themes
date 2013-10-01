@@ -278,6 +278,19 @@ img.project-custom-image {
     width: 15px;
 }
 
+.dataTables_wrapper span.published-icon,
+.dataTables_wrapper span.unpublished-icon{
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin: 0 auto;
+}
+.dataTables_wrapper span.published-icon{
+	background-image: url(images/icon_ok.gif);
+}
+.dataTables_wrapper span.unpublished-icon{
+	background-image: url(images/icon_no.gif);
+}
 #contacts-form label.radio,
 #organization-form label.radio {
     width: auto;
