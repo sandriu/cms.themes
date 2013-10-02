@@ -71,7 +71,7 @@
                     </th>
                     <th class="span1">
                         <?php
-                            echo t('Status');
+                            echo t('Published');
                         ?>
                     </th>
                 </tr>
@@ -118,7 +118,7 @@
                     ?>
                     </td>
                     <td>
-                        <span class='<?php echo ($document->status == 1) ? "published" : "unpublished"; ?>-icon'></span>                    
+                        <span class='<?php echo ($document->status == 1) ? "published" : "unpublished"; ?>-icon'></span>
                     </td>
                 </tr>
                 <?php
@@ -180,7 +180,7 @@
 
                     <th class="span1">
                         <?php
-                            echo t('Status');
+                            echo t('Published');
                         ?>
                     </th>
                 </tr>
