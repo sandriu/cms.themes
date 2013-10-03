@@ -286,10 +286,10 @@ img.project-custom-image {
 	margin: 0 auto;
 }
 .dataTables_wrapper span.published-icon{
-	background-image: url(images/icon_ok.gif);
+	background: url(images/icon_ok.gif) center no-repeat;
 }
 .dataTables_wrapper span.unpublished-icon{
-	background-image: url(images/icon_no.gif);
+	background: url(images/icon_no.gif) center no-repeat;
 }
 #contacts-form label.radio,
 #organization-form label.radio {
