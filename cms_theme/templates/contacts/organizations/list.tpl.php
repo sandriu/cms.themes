@@ -4,8 +4,21 @@
                                   'per_page' => $per_page,
                                   'per_page_options' => $per_page_options,
                                   'current_group' => $instrument,
-                                  'country' => $country,
-                                  'instruments' => $instruments)
+                                  'countries' => $countries,
+                                  'regions' => $regions,
+                                  'mailing_list' => $mailing_list,
+                                  'operator' => $operator,
+                                  'per_field_operator' => $per_field_operator,
+                                  'instruments' => $instruments,
+                                  'availability' => $availability,
+                                  'person_status' => $person_status,
+                                  'organization_status' => $organization_status,
+                                  'species_options' => $species_options,
+                                  'meeting_options' => $meeting_options,
+                                  'region_options' => $region_options,
+                                  'mailing_options' => $mailing_options,
+                                  'org_status_options' => $org_status_options,
+                                  'person_status_options' => $person_status_options,)
     );
 ?>
 

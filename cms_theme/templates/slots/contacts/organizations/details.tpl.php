@@ -43,8 +43,8 @@
 
                 <td>
                     <?php
-                    if (isset($data['organizationstatus']) && !empty($data['organizationstatus'])) {
-                        foreach ($data['organizationstatus'] as $index => $status) {
+                    if (isset($data['statusorganization']) && !empty($data['statusorganization'])) {
+                        foreach ($data['statusorganization'] as $index => $status) {
                             if (is_numeric($index)) {
                                 echo $status;
                     ?>
@@ -66,9 +66,9 @@
 
                 <td>
                     <?php
-                    if (isset($data['website'][0]) && (!empty($data['website'][0]))) {
+                    if (isset($data['websites'][0]) && (!empty($data['websites'][0]))) {
                     ?>
-                    <a href="<?php echo $data['website'][0]; ?>" taget="_blank">
+                    <a href="<?php echo $data['websites'][0]; ?>" taget="_blank">
                     <?php
                         echo $data['website'][0];
                     ?>
