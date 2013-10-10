@@ -38,9 +38,9 @@ function CMS_theme_theme() {
             'template' => 'templates/forms/legal_instrument/add',
             'path' => drupal_get_path('theme', 'cms_theme'),
         ),
-        'cms_country_node_form' => array(
+        'country_node_form' => array(
             'render element' => 'form',
-            'template' => 'templates/forms/cms_country/add',
+            'template' => 'templates/forms/country/add',
             'path' => drupal_get_path('theme', 'cms_theme'),
         ),
         'contacts_form' => array(
