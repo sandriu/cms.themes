@@ -343,7 +343,8 @@ img.project-custom-image {
 #edit_field_species_experts_chzn, #edit_field_species_experts_chzn .chzn-drop {
     width: 260px !important;
 }
-#related-content-fields.collapse.in{
+#related-content-fields.collapse.in,
+#contacts-filters-holder{
 	overflow: visible;
 	height:auto;
 }
