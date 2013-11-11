@@ -10,12 +10,12 @@
                 <span><?php print $site_name; ?></span>
             </a>
             <div class="nav-collapse pull-right">
-            <?php if($primary_nav && !user_is_anonymous()): ?>
-                <?php print $primary_nav; ?>
-            <?php endif; ?>
-            <?php if($secondary_nav && !user_is_anonymous()): ?>
-                <?php print $secondary_nav; ?>
-            <?php endif; ?>
+                <?php if($primary_nav && !user_is_anonymous()): ?>
+                    <?php print $primary_nav; ?>
+                <?php endif; ?>
+                <?php if($secondary_nav && !user_is_anonymous()): ?>
+                    <?php print $secondary_nav; ?>
+                <?php endif; ?>
             </div>
         </div>
     </div>
@@ -23,16 +23,16 @@
 
 <div class="container">
     <?php
-        if ($breadcrumb) {
-            print $breadcrumb;
-        }
+    if ($breadcrumb) {
+        print $breadcrumb;
+    }
     ?>
     <div class="row">
         <div class="span12">
             <?php if ($title): ?>
-            <h1>
-                <?php print $title; ?>
-            </h1>
+                <h1>
+                    <?php print $title; ?>
+                </h1>
             <?php endif; ?>
 
             <?php print $messages; ?>
@@ -56,10 +56,10 @@
             }
             ?>
 
-            <?php if ($page['help']): ?> 
-            <div class="well">
-                <?php print render($page['help']); ?>
-            </div>
+            <?php if ($page['help']): ?>
+                <div class="well">
+                    <?php print render($page['help']); ?>
+                </div>
             <?php endif; ?>
 
             <?php if ($action_links and !$match): ?>
@@ -73,31 +73,15 @@
             <?php print render($page['content']); ?>
             <div class="clearfix">&nbsp;</div>
             <?php
-                if (show_add_button() && arg(1) == 'listing') {
-                    $node_type = arg(0);
-
-                    $node_type_name = node_type_get_name($node_type);
-                    $node_add_link = CMSUtils::slug(arg(0));
-            ?>
-            <a class="btn btn-primary" href="/node/add/<?php echo $node_add_link; ?>">
-                <?php
-
+            if (show_add_button() && !empty($action_links)) {
                 ?>
-                <?php echo t('Add') . ' ' . $node_type_name; ?>
-            </a>
+                <a class="btn btn-primary" href="/<?php echo $action_links[0]['#link']['href']; ?>">
+                    <?php
+                    echo t($action_links[0]['#link']['title']);
+                    ?>
+                </a>
             <?php
-                }
-            ?>
-            <?php
-                //if (show_add_button() && !empty($action_links)) {
-            ?>
-                    <!--<a class="btn btn-primary" href="/<?php #echo $action_links[0]['#link']['href']; ?>">-->
-                        <?php
-                        //echo t($action_links[0]['#link']['title']);
-                        ?>
-                    <!--</a>-->
-            <?php
-                //}
+            }
             ?>
 
         </div>
@@ -105,12 +89,12 @@
 
     <footer class="footer">
         <div class="row">
-        <?php
+            <?php
             if(array_key_exists('system_powered-by', $page['footer'])) {
                 unset($page['footer']['system_powered-by']);
             }
-        ?>
-        <?php print render($page['footer']); ?>
+            ?>
+            <?php print render($page['footer']); ?>
         </div>
     </footer>
 </div><!-- /div.container -->
