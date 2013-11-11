@@ -35,7 +35,7 @@
                     "bSearchable": true,
                     "sDefaultContent": "",
                     "fnRender": function (oObj) {
-                        return "<a href='/contacts/organization/" + oObj.aData[0] + "/" + oObj.aData[5].toLowerCase() + "/view'>" + oObj.aData[1] + "</a>";
+                        return "<a href='/" + administration_path + "contacts/organization/" + oObj.aData[0] + "/" + oObj.aData[5].toLowerCase() + "/view'>" + oObj.aData[1] + "</a>";
                     }
                 },
                 {

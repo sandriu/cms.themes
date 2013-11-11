@@ -7,13 +7,13 @@
 <div class="row">
     <div class="span12">
         <div class="btn-toolbar">
-            <a href="/contacts/organization/<?php echo $data['oid'][0]; ?>/<?php echo $data['instrument']; ?>/edit" class="btn btn-primary">
+            <a href="/<?php echo ADMINISTRATION_PATH; ?>contacts/organization/<?php echo $data['oid'][0]; ?>/<?php echo $data['instrument']; ?>/edit" class="btn btn-primary">
                 <?php
                     echo t('Edit');
                 ?>
             </a>
 
-            <a href="/contacts/organization/<?php echo $data['oid'][0]; ?>/<?php echo $data['instrument']; ?>/delete" class="btn btn-danger">
+            <a href="/<?php echo ADMINISTRATION_PATH; ?>contacts/organization/<?php echo $data['oid'][0]; ?>/<?php echo $data['instrument']; ?>/delete" class="btn btn-danger">
                 <?php
                     echo t('Delete');
                 ?>

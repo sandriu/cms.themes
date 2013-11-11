@@ -63,7 +63,7 @@
     </div>
 </div>
 
-<a href="/contacts/organizations/add" class="btn btn-primary" title="<?php echo t('Add'); ?>">
+<a href="/<?php echo ADMINISTRATION_PATH; ?>contacts/organizations/add" class="btn btn-primary" title="<?php echo t('Add'); ?>">
     <?php echo t('Add organization'); ?>
 </a>
 
@@ -78,6 +78,9 @@
 <script type="text/javascript" src="/<?php echo $js_path; ?>"></script>
 <script type="text/javascript" src="/<?php echo $DT_js_path; ?>"></script>
 <link type="text/css" rel="stylesheet" href="/<?php echo $css_path; ?>" />
+<script type="text/javascript">
+    var administration_path = '<?php echo ADMINISTRATION_PATH; ?>';
+</script>
 <?php
     drupal_add_js(drupal_get_path('theme', 'cms_theme') . '/js/organizations.js');
 ?>
