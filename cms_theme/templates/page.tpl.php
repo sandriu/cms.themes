@@ -73,7 +73,7 @@
             <?php print render($page['content']); ?>
             <div class="clearfix">&nbsp;</div>
             <?php
-            if (show_add_button() && !empty($action_links)) {
+            if (!empty($action_links)) {
                 ?>
                 <a class="btn btn-primary" href="/<?php echo $action_links[0]['#link']['href']; ?>">
                     <?php
