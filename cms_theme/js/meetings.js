@@ -157,7 +157,7 @@
 
             $.ajax({
                 type: 'POST',
-                url: '/meeting/' + meeting_id + '/add_documents',
+                url: '/' + administration_path + 'meeting/' + meeting_id + '/add_documents',
                 async: true,
                 data: 'documents=' + documents,
                 dataType: 'JSON',
@@ -183,7 +183,7 @@
 
             $.ajax({
                 type: 'POST',
-                url: '/meeting/' + meeting_id + '/delete_documents',
+                url: '/' + administration_path + 'meeting/' + meeting_id + '/delete_documents',
                 async: true,
                 data: 'documents=' + documents,
                 dataType: 'JSON',
