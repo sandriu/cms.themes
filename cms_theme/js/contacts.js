@@ -22,10 +22,10 @@
             "bFilter": true,
             "sPaginationType": "bootstrap",
             "sAjaxSource": "/contacts/datatables_listing?instrument=" + instrument
-            + "&country=" + country + "&region=" + region + "&availability="
-            + availability + "&mailing_list=" + mailing_list + "&person_status="
-            + person_status + "&organization_status=" + organization_status
-            + "&species=" + species + "&meeting=" + meeting + "&operator=" + operator + "&per_field_operator=" + per_field_operator,
+                + "&country=" + country + "&region=" + region + "&availability="
+                + availability + "&mailing_list=" + mailing_list + "&person_status="
+                + person_status + "&organization_status=" + organization_status
+                + "&species=" + species + "&meeting=" + meeting + "&operator=" + operator + "&per_field_operator=" + per_field_operator,
             "aaSorting": [ [1, "asc"] ],
             "aoColumns": [
                 {
@@ -89,6 +89,15 @@
             var country = $('#country').val();
 
             window.location.href = "/contacts/export?instrument=" + instrument + "&country=" + country + "&region=" + region + "&availability=" + availability + "&mailing_list=" + mailing_list + "&person_status=" + person_status + "&organization_status=" + organization_status + "&species=" + species + "&meeting=" + meeting + "&operator=" + operator + "&per_field_operator=" + per_field_operator;
+        });
+
+        $('#xls-export-button').click(function(e){
+            e.preventDefault();
+            var search_query = $('.dataTables_filter input').val();
+            var instrument = $('#instrument').val();
+            var country = $('#country').val();
+
+            window.location.href = "/contacts/xls_export?instrument=" + instrument + "&country=" + country + "&region=" + region + "&availability=" + availability + "&mailing_list=" + mailing_list + "&person_status=" + person_status + "&organization_status=" + organization_status + "&species=" + species + "&meeting=" + meeting + "&operator=" + operator + "&per_field_operator=" + per_field_operator;
         });
 
         $('.accordion-toggle').each(function(){
