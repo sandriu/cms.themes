@@ -19,7 +19,7 @@
 
         <div id="contacts-filters-holder" class="accordion-body collapse in">
             <div class="accordion-inner">
-                <form class="form-inline" id="contacts-instrument-filter" method="GET" action="/<?php echo ADMINISTRATION_PATH; ?>/contacts/listing">
+                <form class="form-inline" id="contacts-instrument-filter" method="GET" action="/<?php echo ADMINISTRATION_PATH; ?>contacts/listing">
                     <div class="views-exposed-form well well-small">
                         <div class="views-exposed-widgets clearfix">
                             <div class="views-exposed-widget">
