@@ -18,3 +18,10 @@ settings[toggle_name] = 1
 
 ;
 stylesheets[all][] = styles.css
+
+; Information added by fserver
+core = "7.x"
+datestamp = "1384876119"
+project = "cms_theme"
+project status url = "http://fserver.eaudeweb.ro/fserver"
+version = "7.x-2.1"

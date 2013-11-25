@@ -22,10 +22,10 @@
             "bFilter": true,
             "sPaginationType": "bootstrap",
             "sAjaxSource": "/contacts/datatables_listing?instrument=" + instrument
-                + "&country=" + country + "&region=" + region + "&availability="
-                + availability + "&mailing_list=" + mailing_list + "&person_status="
-                + person_status + "&organization_status=" + organization_status
-                + "&species=" + species + "&meeting=" + meeting + "&operator=" + operator + "&per_field_operator=" + per_field_operator,
+            + "&country=" + country + "&region=" + region + "&availability="
+            + availability + "&mailing_list=" + mailing_list + "&person_status="
+            + person_status + "&organization_status=" + organization_status
+            + "&species=" + species + "&meeting=" + meeting + "&operator=" + operator + "&per_field_operator=" + per_field_operator,
             "aaSorting": [ [1, "asc"] ],
             "aoColumns": [
                 {
