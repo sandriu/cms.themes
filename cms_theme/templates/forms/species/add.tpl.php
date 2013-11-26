@@ -21,7 +21,7 @@
         ?>
         </div>
 
-        <div class="span3">
+        <div class="span3 hidden">
         <?php
             echo drupal_render($form['field_species_scientific_order']);
         ?>
