@@ -14,7 +14,7 @@
             <ul class="dropdown-menu">
                 <li>
                     <?php
-                        echo l(t('Family display'), 'family/species/' . $node->nid);
+                        echo l(t('Family display'), ADMINISTRATION_PATH . 'family/species/' . $node->nid);
                     ?>
                 </li>
 
