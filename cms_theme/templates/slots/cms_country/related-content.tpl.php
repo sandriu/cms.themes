@@ -6,9 +6,25 @@
 
 <ul class="nav nav-tabs" id="related-content-tabs">
     <?php
+        $total_reports = 0;
+        $submmiter = taxonomy_get_term_by_name($node->title, VOC_DOCUMENT_SUBMITTER);
+        if ($submmiter) {
+            $country_term_id = key($submmiter);
+            $total_reports = count(views_get_view_result('related_national_reports_country', 'page', $country_term_id));
+        }
+
         render_tab(t('Meetings'), 'related-content-meetings', 'active', 'meetings', TRUE, $content);
         render_tab(t('Projects'), 'related-content-projects', '', 'projects', TRUE, $content);
-        render_tab(t('National Reports'), 'related-content-national-reports', '', 'national_reports', TRUE, $content);
+    ?>
+    <li class="">
+        <a href="#related-content-national-reports" data-toggle="tab">
+            <?php
+                echo t('National Reports');
+            ?>
+            (<?php echo $total_reports; ?>)
+        </a>
+    </li>
+    <?php
         render_tab(t('National Focal Points'), 'related-content-nfp', '', 'national_focal_points', TRUE, $content);
         render_tab(t('Ratification status'), 'ratification-status', '', 'field_country_instrument_status', FALSE, $content);
         render_tab(t('Species'), 'related-content-species', '', 'species', TRUE, $content);
@@ -25,7 +41,13 @@
     </div>
 
     <div class="tab-pane" id="related-content-national-reports">
-        <?php echo render($content['national_reports']); ?>
+        <?php
+            if ($submmiter) {
+                echo views_embed_view('related_national_reports_country', 'page', $country_term_id);
+            }else {
+                echo t('No National reports available');
+            }
+        ?>
     </div>
 
     <div class="tab-pane" id="related-content-nfp">
