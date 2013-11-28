@@ -32,19 +32,27 @@
     </div>
 
     <div class="tab-pane" id="related-content-documents">
-        <?php
-            if (check_display_field($content, 'field_meeting_document')) {
-                echo render($content['field_meeting_document']);
-            }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related documents');
-        ?>
-        </p>
-        <?php
+    <?php
+    if (!empty($node->field_meeting_document[$node->language])) {
+        $types = array();
+        foreach ($node->field_meeting_document[$node->language] as $document) {
+            if ($document['entity']->status == 1) {
+                foreach ($document['entity']->field_document_type[$node->language] as $term) {
+                    if(!in_array($term['tid'], $types)) {
+                        $types []= $term['tid'];
+                    }
+                }
             }
-        ?>
+        }
+        foreach ($types as $tid) {
+            $type_term = taxonomy_term_load($tid);
+    ?>
+            <h4><?php echo $type_term->name; ?></h4>
+    <?php
+            print views_embed_view('meeting_documents_list_reorder','m_d_list', $node->nid, $tid);
+        }
+    }
+    ?>
     </div>
 
 

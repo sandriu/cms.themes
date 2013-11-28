@@ -24,6 +24,13 @@
             ?>
         </a>
     </li>
+    <li>
+        <a href="#reorder-docs">
+            <?php
+            echo t('Reorder documents');
+            ?>
+        </a>
+    </li>
 </ul>
 
 <div class="tab-content">
@@ -245,6 +252,24 @@
             <?php echo t('Add selected'); ?>
         </button>
     </p>
+</div>
+<div class="tab-pane" id="reorder-docs">
+    <?php
+        $types = array();
+        foreach ($meeting_documents as $document_id => $document) {
+            foreach ($document->field_document_type[$node->language] as $term) {
+                if(!in_array($term['tid'], $types)) {
+                    $types []= $term['tid'];
+                }
+            }
+        }
+        foreach ($types as $tid) {
+            $type_term = taxonomy_term_load($tid);
+    ?>
+            <h4><?php echo $type_term->name; ?></h4>
+    <?php   print views_embed_view('meeting_documents_list_reorder','m_d_reorder', $node->nid, $tid);
+        }
+    ?>
 </div>
 </div>
 
