@@ -20,97 +20,37 @@
 <div class="tab-content">
     <div class="tab-pane active loaded" id="related-content-meetings">
         <?php
-            if (check_display_field($content, 'field_species_meeting')) {
-                echo render($content['field_species_meeting']);
-            }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related meetings');
-        ?>
-        </p>
-        <?php
-            }
+            echo views_embed_view('meetings', 'species_meetings', $node->nid);
         ?>
     </div>
 
     <div class="tab-pane" id="related-content-publications">
         <?php
-            if (check_display_field($content, 'field_species_publication')) {
-                echo render($content['field_species_publication']);
-            }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related publications');
-        ?>
-        </p>
-        <?php
-            }
+            echo views_embed_view('publications_admin', 'species_publications', $node->nid);
         ?>
     </div>
 
     <div class="tab-pane" id="related-content-projects">
         <?php
-            if (check_display_field($content, 'field_species_project')) {
-                echo render($content['field_species_project']);
-            }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related projects');
-        ?>
-        </p>
-        <?php
-            }
+        echo views_embed_view('project_admin', 'species_projects', $node->nid);
         ?>
     </div>
 
     <div class="tab-pane" id="related-content-national-plans">
         <?php
-            if (check_display_field($content, 'field_species_plans')) {
-                echo render($content['field_species_plans']);
-            }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related national plans');
-        ?>
-        </p>
-        <?php
-            }
+            echo views_embed_view('documents', 'species_plans', $node->nid);
         ?>
     </div>
 
     <div class="tab-pane" id="related-content-national-reports">
         <?php
-            if (check_display_field($content, 'field_species_national_report')) {
-                echo render($content['field_species_national_report']);
-            }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related national reports');
-        ?>
-        </p>
-        <?php
-            }
+            echo views_embed_view('documents', 'species_national_reports', $node->nid);
         ?>
     </div>
 
     <div class="tab-pane" id="related-content-species">
         <?php
-            if (check_display_field($content, 'field_species_document')) {
-                echo render($content['field_species_document']);
-            }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related documents');
-        ?>
-        </p>
-        <?php
-            }
+            echo views_embed_view('documents', 'species_other_documents', $node->nid);
         ?>
     </div>
 
@@ -147,10 +87,10 @@
     <div class="tab-pane" id="related-content-contacts">
         <?php
             if (isset($node->experts) && (!empty($node->experts))) {
-                foreach ($node->experts as $expert) {
-                    echo '<a href="/' . ADMINISTRATION_PATH . 'contacts/item/' . $expert['uid'][0] . '/' . $expert['conventions'][0] . '/view">' . $expert['cn'][0]  . '</a>';
-                    echo '<br />';
-                }
+//                foreach ($node->experts as $expert) {
+//                    echo '<a href="/' . ADMINISTRATION_PATH . 'contacts/item/' . $expert['uid'][0] . '/' . $expert['conventions'][0] . '/view">' . $expert['cn'][0]  . '</a>';
+//                    echo '<br />';
+//                }
         ?>
         <?php
             }else {

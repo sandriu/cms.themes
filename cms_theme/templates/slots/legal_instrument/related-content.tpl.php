@@ -18,27 +18,39 @@
 
 <div class="tab-content">
     <div class="tab-pane active loaded" id="related-content-species">
-        <?php echo render($content['species']); ?>
+        <?php
+            echo views_embed_view('species_admin', 'instrument_species', $node->nid);
+        ?>
     </div>
 
     <div class="tab-pane" id="related-content-meetings">
-        <?php echo render($content['meetings']); ?>
+        <?php
+            echo views_embed_view('meetings', 'instrument_meetings', $node->nid);
+        ?>
     </div>
 
     <div class="tab-pane" id="related-content-projects">
-        <?php echo render($content['projects']); ?>
+        <?php
+            echo views_embed_view('project_admin', 'instrument_projects', $node->nid);
+        ?>
     </div>
 
     <div class="tab-pane" id="related-content-publications">
-        <?php echo render($content['publications']); ?>
+        <?php
+            echo views_embed_view('publications_admin', 'instrument_publications', $node->nid);
+        ?>
     </div>
 
     <div class="tab-pane" id="related-content-national-reports">
-        <?php echo render($content['national_reports']); ?>
+        <?php
+            echo views_embed_view('documents', 'instrument_national_reports', $node->nid);
+        ?>
     </div>
 
     <div class="tab-pane" id="related-content-plans">
-        <?php echo render($content['plans']); ?>
+        <?php
+            echo views_embed_view('documents', 'instrument_plans', $node->nid);
+        ?>
     </div>
 
     <div class="tab-pane" id="related-content-species">

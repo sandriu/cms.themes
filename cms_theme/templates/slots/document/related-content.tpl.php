@@ -17,64 +17,33 @@
 <div class="tab-content">
     <div class="tab-pane active loaded" id="related-content-species">
         <?php
-            if (check_display_field($content, 'field_document_species')) {
-                echo render($content['field_document_species']);
-            }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related species');
-        ?>
-        </p>
-        <?php
-            }
+            echo views_embed_view('species_admin', 'plan_species', $node->nid);
+            echo views_embed_view('species_admin', 'national_report_species', $node->nid);
+            echo views_embed_view('species_admin', 'other_document_species', $node->nid);
         ?>
     </div>
+
     <div class="tab-pane" id="related-content-publication">
         <?php
-            if (check_display_field($content, 'field_document_publication')) {
-                echo render($content['field_document_publication']);
-            }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related publications');
-        ?>
-        </p>
-        <?php
-            }
+            echo views_embed_view('publications_admin', 'plan_publications', $node->nid);
+            echo views_embed_view('publications_admin', 'national_report_publications', $node->nid);
         ?>
     </div>
+
     <div class="tab-pane" id="related-content-meeting">
         <?php
-            if (check_display_field($content, 'field_document_meeting')) {
-                echo render($content['field_document_meeting']);
-            }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related meetings');
-        ?>
-        </p>
-        <?php
-            }
+            echo views_embed_view('meetings', 'document_meetings', $node->nid);
         ?>
     </div>
+
     <div class="tab-pane" id="related-content-project">
         <?php
-            if (check_display_field($content, 'field_document_project')) {
-                echo render($content['field_document_project']);
-            }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related projects');
-        ?>
-        </p>
-        <?php
-            }
+            echo views_embed_view('project_admin', 'plan_projects', $node->nid);
+            echo views_embed_view('project_admin', 'national_report_projects', $node->nid);
+            echo views_embed_view('project_admin', 'other_document_projects', $node->nid);
         ?>
     </div>
+
     <div class="tab-pane" id="related-content-threats">
         <?php
             if (check_display_field($content, 'field_document_threats')) {

@@ -17,50 +17,20 @@
 <div class="tab-content">
     <div class="tab-pane active loaded" id="related-content-species">
         <?php
-            if (check_display_field($content, 'field_meeting_species')) {
-                echo render($content['field_meeting_species']);
-            } else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related species');
-        ?>
-        </p>
-        <?php
-            }
+            echo views_embed_view('species_admin', 'meeting_species', $node->nid);
         ?>
     </div>
 
     <div class="tab-pane" id="related-content-documents">
         <?php
-            if (check_display_field($content, 'field_meeting_document')) {
-                echo render($content['field_meeting_document']);
-            }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related documents');
-        ?>
-        </p>
-        <?php
-            }
+            echo views_embed_view('documents', 'meeting_documents', $node->nid);
         ?>
     </div>
 
 
     <div class="tab-pane" id="related-content-publications">
         <?php
-            if (check_display_field($content, 'field_meeting_publication')) {
-                echo render($content['field_meeting_publication']);
-            }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related publications');
-        ?>
-        </p>
-        <?php
-            }
+            echo views_embed_view('publications_admin', 'meeting_publications', $node->nid);
         ?>
     </div>
 

@@ -33,17 +33,21 @@
 
 <div class="tab-content">
     <div class="tab-pane active loaded" id="related-content-meetings">
-        <?php echo render($content['meetings']); ?>
+        <?php
+            echo views_embed_view('meetings', 'country_meetings', $node->nid);
+        ?>
     </div>
 
     <div class="tab-pane" id="related-content-projects">
-        <?php echo render($content['projects']); ?>
+        <?php
+            echo views_embed_view('project_admin', 'country_projects', $node->nid);
+        ?>
     </div>
 
     <div class="tab-pane" id="related-content-national-reports">
         <?php
             if ($submmiter) {
-                echo views_embed_view('related_national_reports_country', 'page', $country_term_id);
+                echo views_embed_view('documents', 'country_national_reports', $country_term_id);
             }else {
                 echo t('No National reports available');
             }

@@ -19,79 +19,34 @@
 <div class="tab-content">
     <div class="tab-pane active loaded" id="related-content-species">
         <?php
-            if (check_display_field($content, 'field_publication_species')) {
-                echo render($content['field_publication_species']);
-            }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related species');
-        ?>
-        </p>
-        <?php
-            }
+            echo views_embed_view('species_admin', 'publication_species', $node->nid);
         ?>
     </div>
+
     <div class="tab-pane loaded" id="related-content-meetings">
         <?php
-            if (check_display_field($content, 'field_publication_meeting')) {
-                echo render($content['field_publication_meeting']);
-            }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related meetings');
-        ?>
-        </p>
-        <?php
-            }
+            echo views_embed_view('meetings', 'publication_meetings', $node->nid);
         ?>
     </div>
+
     <div class="tab-pane loaded" id="related-content-plans">
         <?php
-            if (check_display_field($content, 'field_publication_plans')) {
-                echo render($content['field_publication_plans']);
-            }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related plans');
-        ?>
-        </p>
-        <?php
-            }
+            echo views_embed_view('documents', 'publication_plans', $node->nid);
         ?>
     </div>
+
     <div class="tab-pane loaded" id="related-content-national-reports">
         <?php
-            if (check_display_field($content, 'field_publication_nat_report')) {
-                echo render($content['field_publication_nat_report']);
-            }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related national reports');
-        ?>
-        </p>
-        <?php
-            }
+            echo views_embed_view('documents', 'publication_national_reports', $node->nid);
         ?>
     </div>
+
     <div class="tab-pane loaded" id="related-content-projects">
         <?php
-            if (check_display_field($content, 'field_publication_project')) {
-                echo render($content['field_publication_project']);
-            }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related projects');
-        ?>
-        </p>
-        <?php
-            }
+            echo views_embed_view('project_admin', 'publication_projects', $node->nid);
         ?>
     </div>
+
     <div class="tab-pane loaded" id="related-content-regions">
         <?php
             if (check_display_field($content, 'field_publication_regions')) {

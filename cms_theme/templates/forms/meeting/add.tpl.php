@@ -154,7 +154,7 @@
 
         <div class="clearfix"></div>
 
-        <div class="span12 hide">
+        <div class="span12">
         <?php
             echo drupal_render($form['field_meeting_document']);
         ?>
