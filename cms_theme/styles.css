@@ -299,24 +299,24 @@ img.project-custom-image {
 /**
  * Chosen specific rules
 */
-.chzn-container {
+.chosen-container {
     max-width: 1024px;
 }
 
-.chzn-container .chzn-drop {
+.chosen-container .chosen-drop {
     width: 200px;
 }
 
-.chzn-container-multi .chzn-choices .search-field input {
+.chosen-container-multi .chosen-choices .search-field input {
     min-width: 190px;
 }
 
-.chzn-container .chzn-results li em {
+.chosen-container .chosen-results li em {
     background: #ffeaa6;
     font-weight: bold;
 }
 
-#related-content-fields .chzn-container .chzn-drop {
+#related-content-fields .chosen-container .chosen-drop {
     width: 750px;
 }
 
@@ -340,7 +340,7 @@ img.project-custom-image {
     display: none;
 }
 
-#edit_field_species_experts_chzn, #edit_field_species_experts_chzn .chzn-drop {
+#edit_field_species_experts_chosen, #edit_field_species_experts_chosen .chosen-drop {
     width: 260px !important;
 }
 #related-content-fields.collapse.in,
