@@ -8,5 +8,13 @@
                 $('i', $this).removeClass('icon-plus-sign').addClass('icon-minus-sign');
            }
         });
+
+        // timepicker for meeting start time
+        if ($.fn.timepicker) {
+            $('#edit-field-meeting-start-time input[type=text]').timepicker();
+        }
     });
+
+
+
 })(jQuery);
