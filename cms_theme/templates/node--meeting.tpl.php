@@ -8,6 +8,7 @@
             <tbody>
             <?php
                 echo render($content['field_meeting_start']);
+                echo render($content['field_meeting_start_time']);
                 echo render($content['field_meeting_end']);
                 echo render($content['field_meeting_reg_deadline']);
                 echo render($content['field_meeting_organizer']);
@@ -18,7 +19,7 @@
                 echo render($content['field_meeting_status']);
                 echo render($content['field_meeting_languages']);
                 echo render($content['field_meeting_url']);
-                
+
             ?>
             </tbody>
         </table>
@@ -44,7 +45,7 @@
                 </table>
             </div>
         </div>
-        
+
     </div>
 
     <div class="span12">

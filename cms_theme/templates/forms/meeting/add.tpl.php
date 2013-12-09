@@ -57,6 +57,12 @@
 
     <div class="span3">
     <?php
+        echo drupal_render($form['field_meeting_start_time']);
+    ?>
+    </div>
+
+    <div class="span3">
+    <?php
         echo drupal_render($form['field_meeting_end']);
     ?>
     </div>
