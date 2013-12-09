@@ -82,7 +82,9 @@
 ?>
         <tr>
             <td>
-                <?php echo $data['country'];?>
+                <a href="<?php echo base_path().ADMINISTRATION_PATH.'node'._DS_.$data['nid']; ?>" target="_blank">
+                    <?php echo $data['country'];?>
+                </a>
             </td>
 
             <td>
