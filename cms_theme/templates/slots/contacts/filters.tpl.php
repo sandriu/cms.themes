@@ -71,6 +71,16 @@
                                         <select name="instrument[]" id="instrument" multiple="multiple">
                                             <option value=""><?php echo t('Any'); ?></option>
                                             <?php
+                                            if(empty($data['current_group'])) {
+                                                $current_profile = CMSUtils::get_current_profile();
+                                                foreach ($data['instruments'] as $id => $name) {
+                                                    if (strtolower($name) == $current_profile) {
+                                                        $current_instrument_id = $id;
+                                                    }
+                                                }
+                                                $data['current_group'] []= $current_instrument_id;
+                                            }
+
                                                 foreach ($data['instruments'] as $instrument_key => $instrument) {
                                             ?>
                                             <option value="<?php echo $instrument_key; ?>" <?php echo (isset($data['current_group']) && in_array($instrument_key, $data['current_group'])) ? 'selected="selected"' : ''; ?>>
