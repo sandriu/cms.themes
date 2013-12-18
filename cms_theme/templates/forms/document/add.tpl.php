@@ -43,6 +43,12 @@
     ?>
     </div>
 
+    <div class="span6">
+        <?php
+        echo drupal_render($form['field_document_country']);
+        ?>
+    </div>
+
     <div class="span12">
     <?php
         echo drupal_render($form['field_document_files']);

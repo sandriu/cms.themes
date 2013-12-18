@@ -73,18 +73,18 @@
                                             <?php
                                             if(empty($data['current_group'])) {
                                                 $current_profile = CMSUtils::get_current_profile();
-                                                foreach ($data['instruments'] as $id => $name) {
+                                                foreach ($data['instruments'] as $uuid => $name) {
                                                     if (strtolower($name) == $current_profile) {
-                                                        $current_instrument_id = $id;
+                                                        $current_instrument_uuid = $uuid;
                                                     }
                                                 }
-                                                $data['current_group'] []= $current_instrument_id;
+                                                $data['current_group'][] = $current_instrument_uuid;
                                             }
 
-                                                foreach ($data['instruments'] as $instrument_key => $instrument) {
+                                                foreach ($data['instruments'] as $uuid => $name) {
                                             ?>
-                                            <option value="<?php echo $instrument_key; ?>" <?php echo (isset($data['current_group']) && in_array($instrument_key, $data['current_group'])) ? 'selected="selected"' : ''; ?>>
-                                                <?php echo $instrument; ?>
+                                            <option value="<?php echo $uuid; ?>" <?php echo (isset($data['current_group']) && in_array($uuid, $data['current_group'])) ? 'selected="selected"' : ''; ?>>
+                                                <?php echo $name; ?>
                                             </option>
                                             <?php
                                                 }
