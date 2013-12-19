@@ -13,6 +13,7 @@
                 echo render($content['field_document_status']);
                 echo render($content['field_document_publish_date']);
                 echo render($content['field_document_submitted_by']);
+                echo render($content['field_document_country']);
             ?>
             </tbody>
         </table>
