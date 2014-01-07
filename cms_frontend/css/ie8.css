@@ -1,0 +1,243 @@
+/* FIXES for Internet Explorer 8 */
+
+/* IE8 does not support HTML5 and media queries, 
+so the interface will be UNresponsive 
+and optimised for 1024x768px */
+
+
+/* HEADER */
+.container {
+max-width: 970px;
+}
+
+.container .col-md-4 {
+width: 323px;
+}
+
+.container .col-md-5 {
+width: 404px;
+}
+
+.container .col-md-7 {
+width: 566px;
+}
+
+.container .col-md-8 {
+width: 647px;
+}
+
+.site-identity,
+.subscribe-social .col-md-4,
+.disclaimers .col-md-8 {
+float: left;
+}
+
+.top-right-header,
+.disclaimers .col-md-4 {
+float: right;
+}
+
+.global-menu.menu.nav.navbar-nav {
+margin: 0;
+}
+
+.global-menu.menu.nav.navbar-nav li {
+display: inline-block;
+}
+
+.global-menu.menu.nav.navbar-nav h2 {
+display: inline-block;
+margin-top: 15px;
+}
+
+.global-menu.menu.nav.navbar-nav a {
+color: #fff;
+}
+
+.global-menu.menu.nav.navbar-nav a:hover {
+color: #ddd;
+}
+
+.global-menu.menu.nav.navbar-nav .ecomm a {
+color: #555;
+}
+
+.submenu .navbar-header,
+button.navbar-toggle {  /* hide button for Bootstrap collapsable menu */
+display: none;
+}
+
+.region-secondary-menu {
+width: 955px;
+}
+
+
+
+/* Introduction page CONTENT */
+.center-column.col-md-9 {
+width: 728px;
+float: left;
+}
+
+.center-column.col-md-6 {
+width: 485px;
+float: left;
+}
+
+.region-sidebar-second.well,
+.region-sidebar-first.well {
+width: 213px;
+}
+
+.region-sidebar-first {
+float: left;
+}
+
+.region-sidebar-second {
+float: right;
+}
+
+.panel {
+padding: 5px;
+}
+
+.region-sidebar-second .block-title {  /* horizontal line for separating various portlets; section tags are not seen by IE8 */
+border-top: 1px solid #ddd;
+padding-top:10px;
+}
+
+
+
+/* PRACTICAL EXAMPLES page */
+.view-practice-examples .col-md-3.views-exposed-widget {
+width: 172px;
+}
+
+.view-practice-examples .search-button.form-group {
+margin-top: 0px;
+}
+
+
+
+/* article page content TO VERIFY !!!!!!!!!!!!!!!!!!!!!!*/
+.article-date {
+display: inline-block;
+width: 80%;
+margin-bottom: 50px;
+}
+
+.rating {
+display: inline-block;
+width: 20%;
+}
+
+.rating .progress {
+width: 120px;
+height: 5px;
+}
+
+.rating .vote-buttons {
+width: 120px;
+}
+
+
+
+
+/* filters */
+ul.no-padding {
+list-style-type: none;
+}
+
+.chapter {
+font-weight: bold;
+}
+
+.generic-pagination .col-md-3 {
+width: 179px;
+}
+
+.generic-pagination .col-md-6 {
+width: 358px;
+float: right;
+}
+
+.total-items {
+float: left;
+}
+
+
+/* TRAINING EVENTS,
+    FUNDING PROGRAMMES  */
+.views-exposed-widget.col-md-12 {
+width: 688px;
+}
+
+.views-exposed-widget.col-md-8 {
+width: 458px;
+}
+
+.views-exposed-form .col-md-4 {
+width: 229px;
+float: right;
+margin-top: 0px;
+}
+
+
+/* COMMENTS */
+.comment {
+width: 698px;
+}
+
+.indented .comment {
+width: 673px;
+}
+
+.indented .indented .comment {
+width: 648px;
+}
+
+.indented .indented .indented .comment {
+width: 623px;
+}
+
+.comment .attribution.col-md-2 {
+width: 16.618%;
+}
+
+.comment .comment-text.col-md-10 {
+width: 83.381%;
+}
+
+
+/* CHANGES for integrating the old header 
+    - PLEASE MAKE MERGE WITH THE REST OF CSS IF THE BRANCH IS APPLIED -
+*/
+.container .col-md-7.left-header {
+width: 566px;
+float: left;
+}
+
+.container .col-md-5.right-header {
+width: 404px;
+float: right;
+}
+
+.search-area {
+float: right;
+}
+
+.small-logos {
+padding-right: 4px;
+}
+
+.ecomm {
+vertical-align: bottom;
+}
+
+.global-menu {
+width: 101.6%;
+}
+
+.navbar-nav.nav.menu.global-menu h2 {
+margin-top: 10px;
+}

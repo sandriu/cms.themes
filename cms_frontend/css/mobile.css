@@ -1,0 +1,45 @@
+/* MOBILE DEVICES */
+
+
+@media (max-width: 480px) {
+
+.global-menu-bar,
+.site-identity,
+.breadcrumb  {
+  display: none;
+}
+
+.navbar-brand.mobile {
+display: block;
+background: url("../images/CMS_logo_50x66px.png") 0% 0% no-repeat;
+padding-left: 50px;
+}
+
+.navbar-inverse.submenu {
+/*background-color: rgb(0,56,112);*/
+background-color: rgb(32, 81, 130);
+border-color: #fff;
+}
+
+.navbar-inverse.submenu .navbar-toggle {
+border-color: #fff;
+}
+
+body .navbar-default .navbar-brand {
+color: #fff;
+}
+
+#views-exposed-form-funding-programmes-page .views-exposed-widget label, 
+#views-exposed-form-training-events-view-page-4 .views-exposed-widget label {
+text-align: left;
+}
+
+#funding-programmes-filters .help-block, 
+#training-events-filters .help-block {
+margin-top: -53px;
+margin-left: 90px;
+position: absolute;
+}
+
+
+}
