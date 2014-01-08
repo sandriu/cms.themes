@@ -20,9 +20,11 @@
               <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
             </a>
             <?php endif; ?>  
-            
-            <h1 class="portal-title navbar-brand">CMS Family NFP e-community</h1>
-            
+                          
+            <?php if (!empty($site_slogan)): ?>
+              <h1 class="portal-title navbar-brand"><?php print $site_slogan; ?></h1>
+            <?php endif; ?>
+                          
             <!--.btn-navbar is used as the toggle for collapsed navbar content -->
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
               <span class="sr-only">Toggle navigation</span>
