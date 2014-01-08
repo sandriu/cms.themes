@@ -7,7 +7,7 @@
 /**
  * Overrides theme_menu_link().
  */
-function cms_ecommunity_theme_menu_link(array $variables) {
+function cms_frontend_menu_link(array $variables) {
   $element = $variables['element'];
   $sub_menu = '';
   
@@ -58,7 +58,7 @@ function cms_ecommunity_theme_menu_link(array $variables) {
 /*
  * Block Contact Menu link
  */
-function cms_ecommunity_theme_menu_link__menu_block__menu_contact(array $variables){  
+function cms_frontend_menu_link__menu_block__menu_contact(array $variables){  
   $link_content = '';
   $element = $variables['element'];  
   
@@ -70,7 +70,7 @@ function cms_ecommunity_theme_menu_link__menu_block__menu_contact(array $variabl
 /*
  * List members link
  */
-function cms_ecommunity_theme_menu_link__menu_block__menu_members(array $variables){  
+function cms_frontend_menu_link__menu_block__menu_members(array $variables){  
   $link_content = '';
   $element = $variables['element'];  
   

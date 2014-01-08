@@ -1,4 +1,4 @@
 cms.ecommunity.theme
 ======================
 
-Customized CMS e-community bootstrap theme
+Customized CMS Frontend bootstrap theme

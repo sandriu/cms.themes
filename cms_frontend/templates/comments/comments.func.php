@@ -3,7 +3,7 @@
 /*
  * Recent comments theme
  */
-function cms_ecommunity_theme_comment_block() {  
+function cms_frontend_comment_block() {  
   $number = variable_get('comment_block_count', 10); 
   $items = cms_ecommunity_theme_comment_get_recent($number);
   
@@ -30,7 +30,7 @@ function cms_ecommunity_theme_comment_block() {
 /*
  * Get recent comments
  */
-function cms_ecommunity_theme_comment_get_recent($number = 10) {
+function cms_frontend_comment_get_recent($number = 10) {
   $query = db_select('comment', 'c');
   $query->innerJoin('node', 'n', 'n.nid = c.nid');
   $query->addTag('node_access');
@@ -53,7 +53,7 @@ function cms_ecommunity_theme_comment_get_recent($number = 10) {
 /*
  * Get some user profile values in comments
  */
-function cms_ecommunity_theme_preprocess_comment(&$variables) {
+function cms_frontend_preprocess_comment(&$variables) {
   $account = $variables['elements']['#comment'];
     
   //get user profile values

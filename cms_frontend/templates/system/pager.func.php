@@ -7,7 +7,7 @@
 /**
  * Overrides theme_pager().
  */
-function cms_ecommunity_theme_pager($variables) {
+function cms_frontend_pager($variables) {
   $output = "";
   $items = array();
   $tags = $variables['tags'];

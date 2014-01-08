@@ -38,8 +38,8 @@
           <?php print render($page['header']); ?>
           
           <div class="small-logos">
-            <a href="http://www.unep.org/" class="UNEP-logo"><?php print theme('image', array('path'=>drupal_get_path('theme', 'cms_ecommunity_theme').'/images/UNEP_white_logo_32x34.png', 'alt'=>'UNEP logo')); ?></a>
-            <a href="http://www.cms.int/" class="CMS-logo-small"><?php print theme('image', array('path'=>drupal_get_path('theme', 'cms_ecommunity_theme').'/images/CMS_white_logo_32x34.png', 'alt'=>'CMS logo')); ?></a>
+            <a href="http://www.unep.org/" class="UNEP-logo"><?php print theme('image', array('path'=>drupal_get_path('theme', 'cms_frontend').'/images/UNEP_white_logo_32x34.png', 'alt'=>'UNEP logo')); ?></a>
+            <a href="http://www.cms.int/" class="CMS-logo-small"><?php print theme('image', array('path'=>drupal_get_path('theme', 'cms_frontend').'/images/CMS_white_logo_32x34.png', 'alt'=>'CMS logo')); ?></a>
           </div>
         </div>
       
@@ -47,14 +47,11 @@
     </div>
    </div> <!-- end div.container -->    
         
-    <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
+    <?php if (!empty($page['primary_menu'])): ?>
       <div class="global-menu-bar">
-        <nav role="navigation">
-          <?php if (!empty($primary_nav)): ?>
-            <?php print render($primary_nav); ?>
-          <?php endif; ?>          
-          <?php if (!empty($page['navigation'])): ?>
-            <?php print render($page['navigation']); ?>
+        <nav role="navigation">                   
+          <?php if (!empty($page['primary_menu'])): ?>
+            <?php print render($page['primary_menu']); ?>
           <?php endif; ?>
         </nav>
       </div>

@@ -13,7 +13,7 @@
  *   Whether the breadcrumb still needs to be set or not.
  */
 
-function cms_ecommunity_theme_menu_position_rule_alter(&$rule, &$context, &$rule_matches, &$set_breadcrumb) {  
+function cms_frontend_menu_position_rule_alter(&$rule, &$context, &$rule_matches, &$set_breadcrumb) {  
   //set breadcrumb for nfp pages
   nfp_set_breadcrumbs($rule, $context, $rule_matches, $set_breadcrumb);    
   
