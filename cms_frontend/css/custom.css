@@ -32,11 +32,10 @@ width: 100%;
 margin-top: 0;
 margin-bottom: 0;
 padding: 0;
-width: 70px;
 display: inline-block;
 float: left;
 overflow: hidden;
-padding: 5px;
+padding: 10px 20px 0px;
 }
 
 .down-area,
@@ -165,7 +164,7 @@ margin-top: 10px;
 
 .global-menu {
 overflow: hidden;
-padding-left: 86px;
+padding-left: 95px;
 width: 100%;
 border-bottom: 3px solid rgb(102, 135, 168);
 }
