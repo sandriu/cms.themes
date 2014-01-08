@@ -1,0 +1,1323 @@
+
+/* GENERAL */
+body,
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+font-family: 'Lato', sans-serif;
+}
+
+body {
+font-size: 15px;
+}
+
+a.external {
+background: url("../images/external.png") 100% 40% no-repeat;
+padding-right: 16px;
+}
+
+.no-style {
+list-style-type: none;
+}
+
+.no-padding {
+padding-left: 0px;
+}
+
+.medium-padding {
+padding-left: 20px;
+}
+
+.no-padding ul ul {
+padding-left: 40px;
+}
+
+.caret.text-muted {
+border-top: 4px solid #888;
+}
+
+.no-decoration a,
+.no-decoration a:hover {
+text-decoration: none;
+}
+
+.bold {
+font-weight: bold;
+}
+
+.square {
+list-style-type: square;
+}
+
+h5 .glyphicon {
+font-size: 12px;
+}
+
+.bottom-border {
+border-bottom: 1px solid #ddd;
+min-height: 20px;
+}
+
+.size-128 {
+width: 128px;
+}
+
+.size-64 {
+width: 64px;
+}
+
+.size-76 {
+width: 76px;
+}
+
+.middle-align {
+vertical-align: middle;
+}
+
+.display-inline {
+display: inline-block;
+}
+
+.white {
+padding-bottom: 10px;
+margin-top: 10px;
+}
+
+.top-border {
+border-top: 1px solid #ddd;
+}
+
+.bottom-border {
+border-bottom: 1px solid #ddd;
+}
+
+.green {
+color: green;
+}
+
+.italic {
+font-style: italic;
+}
+
+
+
+/*  HEADER */
+body .navbar-default .navbar-brand {
+color: #555;
+}
+
+.site-identity {
+margin-top: 5px;
+}
+
+.logo {
+width: 70px;
+display: inline-block;
+float: left;
+overflow: hidden;
+padding: 5px;
+}
+
+.portal-title {
+font-size: 25px;
+font-weight: 700;
+margin-top: 26px;
+}
+
+.language-menu,
+.user-menu {
+list-style-type: none;
+display: inline-block;
+vertical-align: top;
+}
+
+.language-menu {
+padding-left: 0px;
+padding-top: 0px;
+}
+
+.user-menu {
+padding-left: 20px;
+padding-top: 6px;
+}
+
+.user-menu li {
+display: inline-block;
+padding-right: 8px;
+}
+
+.UNEP-logo {
+display: inline-block;
+}
+
+.top-right-header {
+height: 100%;
+}
+
+body .input-group.search-area  .form-control {
+border-radius: 3px;
+width: 235px;
+margin-top: 5px;
+}
+
+.language-menu .btn-default {
+border: 0px;
+}
+
+.language-menu .dropdown-menu {
+max-width: 40px;
+min-width: 10px;
+box-shadow: 0px 0px 0px;
+font-size: 12px;
+}
+
+.language-menu .dropdown-menu>li>a {
+padding: 3px 9px;
+}
+
+.language-menu .btn-default:hover,
+.language-menu .btn-default:focus,
+.language-menu .open .dropdown-toggle.btn-default {
+background-color: #fff;
+}
+
+.language-menu .dropdown-menu>li>a:hover {
+background: #fff;
+color: #888;
+}
+
+
+/* GLOBAL MENU */
+.navbar-default {
+background-color: #fff;
+border: 0px;
+}
+
+.global-menu-bar {
+background: rgb(0,56,112);
+}
+
+.global-menu {
+overflow: hidden;
+padding-left: 10px;
+width: 100%;
+}
+
+.global-menu li {
+list-style-type: none;
+height: 45px;
+text-transform: uppercase;
+padding: 0px 15px;
+}
+
+.navbar-default .navbar-nav>li> h2 a {
+color: #fff;
+}
+
+.navbar-default .navbar-nav>li> h2 a:hover {
+color: rgb(251, 176, 52);
+}
+
+.navbar-brand.mobile {
+display: none;
+}
+
+.top-right-header div {
+float: right;
+}
+
+.top-right-header .language-menu {
+float: left;
+}
+
+.global-menu h2 {
+font-size: 13px;
+font-weight: 900;
+margin-top: 16px;
+}
+
+.global-menu h2 a:hover {
+text-decoration: none;
+color: #555;
+}
+
+
+/* GLOBAL SUBMENU */
+.navbar-inverse.submenu {
+background-color: #fff;
+border: 0px;
+margin-bottom: 0px;
+}
+
+.submenu .navbar-collapse {
+background-color: rgb(32, 81, 130);
+}
+
+.navbar-default .navbar-nav>li.active-trail> h2 a,
+.region-secondary-menu .active a,
+.region-secondary-menu .active-trail a {
+color: rgb(251, 176, 52);
+}
+
+.navbar-default .navbar-nav>li.ecomm>h2>a {
+color: #555;
+}
+
+.submenu h3 {
+font-size: 14px;
+margin-top: 15px;
+margin-bottom: 13px;
+}
+
+.submenu li {
+padding: 0px 10px;
+}
+
+.submenu a {
+color: #fff;
+}
+
+.submenu a:hover {
+text-decoration: none;
+color: rgb(251, 176, 52);
+}
+
+
+/* BREADCRUMBS */
+.breadcrumb {
+background-color: #fff;
+padding: 0px;
+}
+
+.breadcrumb li {
+font-size: 13px;
+}
+
+
+/*  CENTER COLUMN */
+.center-column {
+margin-bottom: 20px; /* useful for the last portlets */
+}
+
+.center-column .page-header {
+font-size: 30px;
+font-weight: 700;
+color: rgb(68,68,68);
+margin-top: 5px;
+border-bottom: 0px;
+}
+
+#intro-text {
+font-size: 16px;
+}
+
+.well.white {
+background-color: #fff;
+border: 0px;
+box-shadow: 0px 0px 0px;
+padding: 5px 19px 5px 0px;
+margin-bottom: 0px;
+}
+
+.white .panel {
+padding: 5px;
+/*font-size: 12px;  TOO little for Lato font*/
+margin-bottom: 8px;
+box-shadow: 0px 0px 0px;
+}
+
+.block-title {
+font-weight: bold;
+color: #555;
+}
+
+
+
+/* RIGHT COLUMN */
+#feedback .btn,
+.right-column #members .btn {
+width: 100%;
+font-weight: 900;
+font-size: 13px;
+text-transform: uppercase;
+}
+
+.right-column section {
+padding-bottom: 15px;
+padding-top: 15px;
+border-bottom: 1px solid #ddd;
+}
+
+.right-column .last {
+border-bottom: 0px;
+}
+
+.right-column .first {
+padding-top: 0px;
+}
+
+
+/* FOOTER */
+.well-footer {
+padding: 20px;
+}
+
+.subscribe-social {
+background: rgb(238, 238, 238);
+}
+
+.form-control.email-input,
+.simplenews-subscribe .form-text {
+width: 60%;
+float: left;
+margin-right: 5px;
+}
+
+.subscribe-social a {
+margin-right: 10px;
+display: inline-block;
+vertical-align: bottom;
+}
+
+.disclaimers {
+background: rgb(68, 68, 68);
+color: #eee;
+padding-top: 30px;
+padding-bottom: 30px;
+font-size: 12px;
+font-family: Arial,sans-serif; /* Lato font looks creepy on small size text */
+}
+
+.well-footer .block h2.block-title {
+font-weight: normal;
+}
+
+.subscribe-social .on-the-web {
+margin-right: 5px;
+}
+
+.subscribe-social .on-the-web img {
+display: none; /* hide plugin icons for Twitter, Facebook and Youtube, since they're not the official icons */
+}
+
+.subscribe-social .otw-twitter a {
+background: url("../images/twitter_logo_25x25.png") no-repeat;
+width: 25px;
+height: 25px;
+}
+
+.subscribe-social .otw-facebook a {
+background: url("../images/facebook_logo_25x25.png") no-repeat;
+width: 25px;
+height: 25px;
+}
+
+.subscribe-social .otw-youtube a {
+background: url("../images/youtube_logo_69x25.png") no-repeat;
+width: 69px;
+height: 25px;
+}
+
+.disclaimers h2 {
+font-size: 12px;
+margin-top: 0px;
+}
+
+.menu-name-menu-footer-menu a {
+color: #fff;
+}
+
+.menu-name-menu-footer-menu li {
+display: inline-block;
+margin-right: 5px;
+}
+
+.simplenews-subscribe label {
+display: none;
+}
+
+.simplenews-subscribe .btn-default {
+color: #ffffff;
+background-color: #428bca;
+border-color: #357ebd;
+font-weight: 900;
+font-size: 13px;
+text-transform: uppercase;
+}
+
+.simplenews-subscribe .btn-default:hover {
+color: #fff;
+background-color: #3276b1;
+border-color: #285e8e;
+}
+
+.menu-name-menu-footer-menu .first.last {
+background: none; /* delete this block if Sitemap link becomes public */
+}
+
+.menu-name-menu-footer-menu .first {
+background: url("../images/white_middle_point.png") 48px 4px no-repeat;
+padding-right: 10px;
+}
+
+.region-footer-second-row-right {
+text-align: right;
+}
+
+
+/*  e-community HOMEPAGE */
+#most-rated-articles li,
+#upcoming-training-events li {
+margin-bottom: 5px;
+}
+
+.node-article.node-promoted h2 {
+font-size: 30px;
+font-weight: 700;
+}
+
+.node-article.node-promoted h2 a {
+color: rgb(68,68,68);
+}
+
+.block h2.block-title {
+font-size: 20px;
+font-weight: 700;
+color: rgb(68, 68, 68);
+}
+
+/*#block-user-online,*/
+#block-user-login,
+#block-block-7,
+#block-block-6,
+#block-block-5,
+#block-block-4,
+#block-block-3,
+#block-block-2,
+#block-menu-block-4 {
+border-bottom: 0px;
+padding-bottom: 0;
+}
+
+#block-user-login {
+margin-top: 15px;
+padding-top: 15px;
+border-top: 1px solid rgb(221, 221, 221);
+}
+
+.block-forum ul {
+list-style-type: square;
+color: #999;
+}
+
+.region-content .block {
+margin-bottom: 20px;
+}
+
+.menu-name-menu-members h2 {
+font-size: 18px;
+}
+
+
+
+/* FAQ */
+.view-faq ul {
+list-style-type: none;
+color: #999;
+padding-left: 0px;
+}
+
+.view-faq .field-content {
+color: #333;
+}
+
+.view-faq ul li {
+border-top: 1px solid rgb(211, 211, 211);
+padding: 17px 0px 0px 10px;
+}
+
+.view-faq .field-content a {
+display: block;
+background: url("../images/arrow_collapse.png") 0px 8px no-repeat;
+padding-left: 34px;
+}
+
+.view-faq .field-content a.collapsed {
+display: block;
+background: url("../images/arrow_expand.png") 0px 1px no-repeat;
+padding-left: 34px;
+}
+
+.view-faq .medium-padding.collapse {
+display: none;
+}
+
+.view-faq .medium-padding {
+padding: 10px 10px 10px 35px;  /* otherwise the div is left-aligned during collapse */
+}
+
+.bootstrap-collapse-processed {
+font-size: 20px;
+font-weight: 700;
+color: rgb(68, 68, 68);
+}
+
+
+
+/* FILTERS */
+#funding-programmes-filters .form-control,
+#practical-examples-filters .form-control,
+#training-events-filters .form-control {
+display: inline-block;
+width: 200px;
+margin-left:5px;
+}
+
+.normalised-label {
+ display: inline-block;
+ width: 130px;
+ }
+
+#funding-programmes h5 {
+font-size: 17px;
+margin-top: 10px;
+}
+
+.generic-pagination {
+font-size: 12px;
+padding: 5px;
+margin-top: 5px;
+}
+
+.generic-pagination .form-control {
+display: inline-block;
+height: 31px;
+}
+
+.generic-pagination .pagination {
+margin: 0;
+}
+
+.total-items {
+margin-top: 7px;
+}
+
+#practical-examples h5 {
+margin-top: 3px;
+font-size: 17px;
+}
+
+.practical-example-brief {
+margin-bottom: 9px;
+}
+
+#practical-examples .field {
+margin-right: 20px;
+font-size: 12px;
+display: block;
+}
+
+#practical-examples-filters .search-button {
+padding-right: 54px;
+text-align: right;
+}
+
+#practical-examples-filters button,
+#funding-programmes-filters button,
+#training-events-filters button,
+#training-events .text-right {
+margin-right:5px;
+}
+
+#training-events .media {
+border-top: 1px solid #ddd;
+}
+
+#training-events .media.first {
+border-top: 0px;
+}
+
+
+
+/* ARTICLES */
+.article-body .glyphicon-zoom-in {
+font-size: 30px;
+color: #F5F2F2;
+top: 90px;
+left: -47px;
+background: rgba(65, 65, 65, 0.58);
+padding-left: 5px;
+padding-top: 2px;
+padding-bottom: 10px;
+width: 44px;
+}
+
+.rate-widget {
+overflow: hidden;
+}
+
+.rate-widget-thumbs_up_down ul {
+float: right;
+margin-bottom: 0;
+}
+
+.rate-widget-thumbs_up_down ul li {
+margin-left: 10px;
+}
+
+.rate-widget .rate-button,
+body .rate-widget-thumbs_up_down .thumb-up a {  /* second selector should be deleted after thumbs up button is either <span> or <a> on both PE article and FP article */
+float: left;
+opacity: 0.9;
+}
+
+.rate-widget-thumbs_up_down .percent {
+color: #999;
+}
+
+.rate-widget .rate-button:hover {
+opacity: 1;
+}
+
+.rate-thumbs-up-down-btn-up,
+.rate-user .rate-thumbs-up-down-btn-up.rate-voted,
+.rate-user .rate-thumbs-up-down-btn-up {
+background: url("../images/like-icon.png") no-repeat;
+}
+
+.rate-thumbs-up-down-btn-down,
+.rate-user .rate-thumbs-up-down-btn-down.rate-voted,
+.rate-user .rate-thumbs-up-down-btn-down {
+background: url("../images/dislike-icon.png") no-repeat;
+}
+
+.rate-widget-thumbs_up_down ul li {
+width: 66px; /* override */
+}
+
+.rate-widget .rate-info {
+float: right;
+color: rgb(0, 128, 0);
+width: 150px;
+text-align: center;
+}
+
+.region-tag a,
+.instrument-tag a {
+color: #fff;
+text-decoration: none;
+}
+
+#article-tags li {
+margin-bottom: 10px;
+margin-right: 5px;
+}
+
+.glossary-term,
+.glossary-term:hover {
+background: #eee;
+color: rgb(233,94,39);
+/*color: rgb(197,0,73);*/
+}
+
+#rating-and-date .author {
+margin-left: 64px;
+}
+
+.author-date .media-heading {
+margin-top: 5px;
+}
+
+.article-photo,
+.article-photo:hover {
+text-decoration: none;
+}
+
+.article-body img.article-photo-magnifier {
+width: 18px;
+position: absolute;
+left: 16px;
+background: rgba(112, 112, 112, 0.62);
+}
+
+.article-body img.article-photo-magnifier:hover {
+background: rgba(66, 65, 65, 0.62);
+}
+
+.node-nfp-manual .field,
+.node-community-checklist .field,
+.node-practice-example .field,
+.field-name-field-article-tag-regions,
+.field-name-field-article-tag-treat-agr-mou {
+margin-bottom: 20px;
+}
+
+.node-article.node-promoted .field-name-field-article-tag-regions {
+margin-top: 20px;
+}
+
+
+
+/* COMMENTS */
+.comment {
+margin-bottom: 15px;
+}
+
+.comment .comment-text { /* partially from DRUPAL */
+border: 1px solid #d3d7d9;
+padding: 10px 25px; /* do NOT uncomment */
+}
+
+.comment .comment-arrow { /* partially from DRUPAL */
+background: url(../images/comment-arrow.png) no-repeat 0 center transparent;
+height: 40px;
+margin-left: -45px;
+margin-top: 10px;
+position: absolute;
+width: 20px;
+}
+
+.comment-time {
+font-size: 10px;
+margin-bottom: 0;
+}
+
+.commenter-name {
+font-style: normal;
+font-weight: bold;
+margin-bottom: 0px;
+}
+
+.comment-text .links li {
+margin-right: 5px;
+}
+
+.comment h3,
+.comment-wrapper h2  {
+font-size: 18px;
+}
+
+#block-comment-recent .media-body a,
+#block-comment-recent .media-body span {
+font-size: 13px;
+}
+
+
+
+/* FIXES for ecommunity.edw.ro */
+.region-secondary-menu {
+background-color: rgb(52,96,141);
+}
+
+.region-secondary-menu .menu.nav {
+padding-left: 12px;
+}
+
+.region-secondary-menu .menu.nav li {
+display: inline-block;
+}
+
+.region-secondary-menu .menu.nav li h2 {
+font-size: 15px;
+margin-top: 15px;
+margin-bottom: 15px;
+}
+
+.global-menu-bar .active-trail .caret {
+display: none; /* hide the dropdown arrow */
+}
+
+#block-comment-recent ul {
+list-style-type: none;
+}
+
+#block-user-online ul,
+#block-views-training-events-view-block-2 ul {
+list-style-type: square;
+color: #999;
+}
+
+.center-column .view-id-training_events_view {
+padding-left: 20px;
+}
+
+.panel {
+padding: 5px;
+}
+
+.block-title {
+font-size: 22px;
+}
+
+.region-sidebar-second.well,
+.region-sidebar-first.well {
+margin-top: 30px; /* because breadcrumbs belong to center-column, not to header */
+}
+
+.region-sidebar-second ul,
+.region-sidebar-first ul {
+list-style-type: square;
+color: #999;
+padding-left: 20px;
+}
+
+.indented{
+margin-left: 25px;
+}
+
+.form-group {
+margin-bottom: 10px;
+}
+
+.field-collection-view {
+background: #eee; /* override from field_collection.theme.css */
+padding-left: 15px;
+}
+
+.field-collection-container {
+margin-top: 10px;
+}
+
+.article-body p {
+overflow: hidden;
+}
+
+
+/* PRACTICAL EXAMPLES page,
+   FUNDING PROGRAMMES page,
+   TRAINING EVENTS page,
+   MEMBERS page   */
+.view-practice-examples ul,
+.view-funding-programmes ul,
+.center-column .view-training-events-view ul,
+.view-members ul {
+list-style-type: none;
+padding-left: 5px;
+}
+
+.region-sidebar-second .view-training-events-view ul,
+.view-nfp-manual-chapters ul,
+.view-checklists ul {
+list-style-type: none;
+margin-bottom: 0px; /* override from style.css */
+padding-left: 0;
+}
+
+.region-sidebar-second .views-field-title-field,
+.view-nfp-manual-chapters .views-field,
+.view-checklists .views-field {
+background: url("../images/gray_square.png") 0px 6px no-repeat;
+padding-left: 18px;
+}
+
+.region-sidebar-second .views-field-event-calendar-date {
+padding-left: 18px;
+font-size: 13px;
+}
+
+.view-practice-examples ul li,
+.center-column .view-training-events-view ul li,
+.view-resource-area ul li,
+.view-members ul li {
+padding-bottom: 10px;
+border-bottom: 1px solid #ddd;
+margin-bottom: 20px;
+}
+
+.view-practice-examples ul li.views-row-last,
+.view-training-events-view ul li.views-row-last,
+.view-resource-area ul li.views-row-last {
+border-bottom: 0px;
+}
+
+.view-funding-programmes ul li {
+margin-bottom: 20px;
+}
+
+.view-practice-examples .views-field-field-practice-ex-images,
+.view-funding-programmes .views-field-nothing,
+.view-members .views-field-field-profile-picture {
+display: inline-block;
+width: 100px;
+float: left;
+}
+
+.view-practice-examples .views-field-title-field,
+.view-funding-programmes .views-field-title-field {
+display: inline-block;
+vertical-align: top;
+margin-left: 10px;
+}
+
+.view-practice-examples .views-field-body {
+margin-left: 112px;
+margin-bottom: 10px;
+}
+
+.view-practice-examples .views-field-field-practice-ex-treat-agr-mous,
+.view-practice-examples .views-field-field-practice-ex-regions,
+.view-funding-programmes .views-field-field-funding-institution,
+.view-funding-programmes .views-field-field-fund-prog-regions,
+.view-funding-programmes .views-field-field-prog-deadline-proposals {
+margin-left: 112px;
+font-size: 12px;
+}
+
+.views-label,
+.form-item-items-per-page label,
+.form-type-date-text label {
+color: #999;
+}
+
+.views-field .field-content {
+display:inline-block;
+}
+
+body .views-exposed-form .views-exposed-widget {
+padding: 0px 15px;
+}
+
+.view-id-funding_programmes .views-field-title a {
+font-size: 17px;
+font-weight: bold;
+}
+
+.view-funding-programmes .views-field-field-prog-deadline-proposals {
+color: rgb(228, 101, 56);
+}
+
+#views-exposed-form-funding-programmes-page .views-exposed-widget label,
+#views-exposed-form-training-events-view-page-4 .views-exposed-widget label {
+display: inline-block;
+width: 200px;
+text-align: right;
+}
+
+#views-exposed-form-funding-programmes-page .views-exposed-widget .views-widget,
+#views-exposed-form-training-events-view-page-4 .views-exposed-widget .views-widget {
+display: inline-block;
+}
+
+#views-exposed-form-funding-programmes-page .views-exposed-widget .views-widget>div,
+#views-exposed-form-training-events-view-page-4 .views-exposed-widget .views-widget>div {
+width: 200px;
+display: inline-block;
+margin-right: 10px;
+}
+
+.view-training-events-view .views-label {
+text-align: right;
+display: inline-block;
+width: 100px;
+margin-right: 10px;
+}
+
+#funding-programmes-filters .help-block,
+#training-events-filters .help-block {
+margin-top: -22px;
+margin-left: 216px;
+position: absolute;
+}
+
+#practical-examples-filters input,
+#practical-examples-filters button,
+#practical-examples-filters select,
+#funding-programmes-filters input,
+#funding-programmes-filters button,
+#funding-programmes-filters select,
+#training-events-filters input,
+#training-events-filters button,
+#training-events-filters select,
+.subscribe-social input,
+.subscribe-social button,
+#members select,
+#members input,
+#members button,
+#edit-search-block-form--2 {
+height: 30px;
+padding: 5px 10px;
+font-size: 12px;
+line-height: 1.5;
+}
+
+#practical-examples-filters button,
+#funding-programmes-filters button,
+#training-events-filters button,
+.comment-form button,
+#members button {
+font-weight: 900;
+font-size: 13px;
+text-transform: uppercase;
+}
+
+.center-column .view-training-events-view .views-field-event-calendar-date .field-content {
+color: green;
+}
+
+.node-funding-programme .field,
+.node-event-calendar .field {
+margin-bottom: 20px;
+}
+
+.node-funding-programme .field-label,
+.node-funding-programme .field-items,
+.node-event-calendar .field-label,
+.node-event-calendar .field-items {
+display: inline-block;
+}
+
+.node-funding-programme .field-name-field-fund-prog-contact .field-label {
+vertical-align: top;
+}
+
+
+
+/* PRACTICAL EXAMPLES article */
+.field-type-taxonomy-term-reference .field-item {
+display: inline-block;
+background: #ddd;
+margin: 5px;
+padding: 2px 5px;
+font-size: 12px;
+border-radius: 3px;
+}
+
+.field-type-taxonomy-term-reference .field-item:hover {
+background: #ccc;
+}
+
+.field-type-taxonomy-term-reference a:hover {
+text-decoration: none;
+}
+
+
+/* CHECKLISTS,
+    NFP MANUAL */
+.view-checklists ul ul,
+.view-nfp-manual-chapters ul ul,
+.view-resource-area ul {
+list-style-type: square;
+color: #999;
+font-weight: bold;
+}
+
+.view-nfp-manual-chapters .views-field-name-field,
+.view-resource-area .views-field-title-field,
+.view-practice-examples .views-field-title-field {
+font-size: 16px;
+font-weight: bold;
+}
+
+.view-resource-area .views-field-body {
+margin-bottom: 10px;
+}
+
+.view-resource-area ul li > div {
+color: #333;
+font-weight: normal;
+}
+
+.views-field-field-nfp-manual-regions,
+.views-field-field-nfp-man-treaty-agrs-mous {
+font-size: 12px;
+}
+
+
+/* USER PROFILE */
+.profile2-nfp-profile .field .field-label,
+.field-name-field-practice-ex-contact-person .field-label {
+display: inline-block;
+width: 120px;
+}
+
+.profile2-nfp-profile .field-items,
+.field-name-field-practice-ex-contact-person .field-items {
+display: inline-block;
+}
+
+.field-name-field-practice-ex-contact-person > .field-label {
+vertical-align: top;
+}
+
+.profile2-nfp-profile .field {
+padding: 10px;
+}
+
+/* FIXES FOR articles content text */
+.view-resource-area ul ul {
+list-style-type: disc;
+color: rgb(51, 51, 51);
+font-weight: normal;
+}
+
+.view-resource-area ul ul li {
+padding-bottom: 0;
+border-bottom: 0px;
+margin-bottom: 0;
+}
+
+/* arrange Training Events and Funding Programmes
+   article fields */
+.node-event-calendar .article-body .field,
+.field-name-field-funding-institution,
+.field-name-field-prog-deadline-proposals,
+.field-name-field-fund-prog-link,
+.field-name-field-fund-prog-contact {
+display: inline-block;
+width: 50%;
+vertical-align: top;
+}
+
+.node-event-calendar .article-body .field-name-body,
+.node-event-calendar .article-body .field-name-field-event-regions {
+display: block;
+width: 100%;
+}
+
+.node-event-calendar .article-body .field-name-body,
+.node-funding-programme .article-body .field-name-body {
+border-top: 1px solid #ddd;
+padding-top: 20px;
+}
+
+.field-name-field-prog-eligibility-funding {
+border-bottom: 1px solid #ddd;
+padding-bottom: 20px;
+}
+
+.field-name-field-fund-prog-link {
+vertical-align: top;
+}
+/* end arrange Training Events and F.P. article fields */
+
+
+/* arrange Members page */
+#members .search-button {
+margin-top: 26px;
+}
+
+.view-members .views-field-field-instrument,
+.view-members .views-field-field-country,
+.view-members .views-field-field-region {
+margin-left:100px;
+font-size: 12px;
+}
+
+/* arrange Members button on forum pages and Introduction page */
+.forum-node-create-links-top {
+padding-top: 0px;
+}
+
+.menu-name-menu-members ul {
+padding-left: 0;
+}
+
+/* CHANGES for integrating the old header
+    - PLEASE MAKE MERGE WITH THE REST OF CSS IF THE BRANCH IS APPLIED -
+*/
+.site-identity {
+margin-top: 0;
+}
+
+.global-menu-bar {
+background: #fff;
+}
+
+.global-menu {
+padding-left: 86px;
+border-bottom: 3px solid rgb(99, 99, 99);
+}
+
+.global-menu li {
+background: rgb(0, 56, 112);
+background: rgb(99, 99, 99);
+background: rgb(68, 68, 68);
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+margin-right: 2px;
+height: 38px;
+min-width: 104px;
+text-align: center;
+text-transform: none;
+}
+
+.global-menu >.active-trail {
+background: rgb(68, 68, 68) url("../images/arrow_hex999.png") 49% 122% no-repeat;
+}
+
+.global-menu li.ecomm {
+background-color: rgb(251, 176, 52);
+border: 1px solid rgb(190, 190, 190);
+border-bottom: 0px;
+}
+
+.global-menu h2 {
+font-size: 15px;
+font-weight: 400;
+margin-top: 11px;
+}
+
+.region-secondary-menu .menu.nav li h2 {
+margin-top: 9px;
+margin-bottom: 12px;
+}
+
+.region-secondary-menu {
+background-color: rgb(136, 136, 136);
+background: rgb(99, 99, 99);
+}
+/* end refactoring the global menu */
+
+.right-header {
+background: url("../images/header_wave_ecommunity.png") 78% 0% no-repeat;
+height: 69px;
+text-align: right;
+}
+
+.top-user-menu {
+width: 100%;
+text-align: right;
+}
+
+.site-identity {
+width: 100%;
+}
+
+.logo {
+margin-top: 0;
+margin-bottom: 0;
+padding: 0;
+}
+
+.portal-title {
+margin-top: 6px;
+}
+
+.user-menu {
+margin-bottom: 0;
+}
+
+.region-header {
+width: 245px;
+display: inline-block;
+}
+
+.small-logos {
+width: 80px;
+display: inline-block;
+float: right;
+padding-right: 10px;
+padding-top: 5px;
+}
+
+@media screen and (max-width: 1152px) {
+  .right-header {
+    background-position: 312% 0%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .right-header {
+    background-position: 312% 0%;
+  }
+}
+
+/* end integrating the old header */
