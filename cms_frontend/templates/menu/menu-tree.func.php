@@ -22,7 +22,7 @@ function cms_frontend_menu_tree__menu_contact(&$variables) {
  * Bootstrap theme wrapper function for the primary menu links.
  */
 function cms_frontend_menu_tree__menu_frontend_main_menu(&$variables) {
-  return '<div class="container"><ul class="global-menu menu nav navbar-nav">' . $variables['tree'] . '</ul></div>';
+  return '<div class="container"><ul class="menu nav navbar-nav">' . $variables['tree'] . '</ul></div>';
 }
 
 /**
