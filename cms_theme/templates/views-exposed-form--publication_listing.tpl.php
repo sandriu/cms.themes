@@ -87,6 +87,3 @@
     */
     $query_string = http_build_query(drupal_get_query_parameters());
 ?>
-<a class="btn" href="export<?php echo ($query_string) ? '?' . $query_string : ''; ?>" title="<?php echo t('Export results in XLS format'); ?>" name="export-button" id="export-button">
-    <i class="icon-download-alt"></i> <?php echo t('Export filter results'); ?>
-</a>
