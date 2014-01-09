@@ -237,7 +237,7 @@ function cms_theme_process_format(&$element) {
         'field_nat_report_remarks',
         'field_meeting_description',
         'comment_body',
-        'body',
+        //'body',
     );
 
     $element = filter_process_format($element);
