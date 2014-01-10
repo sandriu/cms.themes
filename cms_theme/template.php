@@ -230,15 +230,7 @@ function cms_theme_process_format(&$element) {
     /**
      * Array of fields for which to hide the option
     */
-    $fields = array(
-        'field_textarea',
-        'field_decision_summary',
-        'field_nat_plan_remarks',
-        'field_nat_report_remarks',
-        'field_meeting_description',
-        'comment_body',
-        //'body',
-    );
+    $fields = array();
 
     $element = filter_process_format($element);
 
