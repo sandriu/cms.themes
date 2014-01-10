@@ -17,12 +17,6 @@ padding-right: 16px;
 
 
 /*  HEADER */
-
-/*.left-header,
-.right-header {
-outline: 1px solid green;
-} */
-
 .site-identity {
 margin-top: 5px;
 width: 100%;
@@ -38,26 +32,24 @@ overflow: hidden;
 padding: 10px 20px 0px;
 }
 
-.down-area,
-.up-area {
-overflow: hidden;
-}
-
 .down-area {
 margin-top: -17px;
-/*outline: 1px solid rgb(255, 165, 0); */
 }
 
-.search-area {
-width: 40%;
+.search-area-and-logos {
+width: 50%;
 height: 69px;
 float: right;
-background: url("../images/header_wave_cms.png") 0% 0% no-repeat;
+background: url("../images/header_wave_cms.png") 100% 0% no-repeat;
 }
 
 .region-header {
-width: 245px;
+width: 80%;
 display: inline-block;
+}
+
+#search-block-form {
+float: right;
 }
 
 .small-logos {
@@ -68,30 +60,19 @@ padding-right: 10px;
 padding-top: 5px;
 }
 
-@media screen and (max-width: 1152px) {
-  .right-header {
-    background-position: 312% 0%;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .right-header {
-    background-position: 312% 0%;
-  }
-}
 body .navbar-default .navbar-brand {
 color: #555;
 }
 
 .portal-title {
-font-size: 18px;
+font-size: 25px;
 padding: 0;
-margin-top: 0;
-/* font-weight: 700; */
+margin-top: 13px;
+font-weight: 700; 
 }
 
 .top-user-menu {
-width: 60%;
+width: 50%;
 text-align: right;
 float: left;
 }
@@ -240,8 +221,6 @@ float: right;
 .top-right-header .language-menu {
 float: left;
 }
-
-
 
 
 /* GLOBAL SUBMENU */

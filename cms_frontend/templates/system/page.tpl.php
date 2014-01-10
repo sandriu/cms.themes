@@ -37,7 +37,7 @@
               ?>    
             </div>  
             
-            <div class="search-area">
+            <div class="search-area-and-logos">
               <?php print render($page['header']); ?>
               <div class="small-logos">
                 <a href="http://www.unep.org/" class="UNEP-logo"><?php print theme('image', array('path'=>drupal_get_path('theme', 'cms_frontend').'/images/UNEP_white_logo_32x34.png', 'alt'=>'UNEP logo')); ?></a>
