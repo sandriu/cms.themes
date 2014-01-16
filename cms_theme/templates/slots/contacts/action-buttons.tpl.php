@@ -2,7 +2,7 @@
     global $user;
 
     $current_profile = CMSUtils::get_current_profile();
-    if ((($current_profile == $data['instrument']) || ($current_profile == 'cms') || (in_array($current_profile, $data['conventions']))) && (user_access('create contacts content', $user))) {
+    if (user_access('create contacts content', $user)) {
 ?>
 <div class="row">
     <div class="span12">
@@ -21,13 +21,13 @@
 
     <div class="span12">
         <div class="btn-toolbar">
-            <a href="/<?php echo ADMINISTRATION_PATH; ?>contacts/item/<?php echo $data['uid'][0]; ?>/<?php echo $data['instrument']; ?>/edit" class="btn btn-primary">
+            <a href="/<?php echo ADMINISTRATION_PATH; ?>contacts/item/<?php echo $data['uid'][0]; ?>/edit" class="btn btn-primary">
                 <?php
                     echo t('Edit');
                 ?>
             </a>
 
-            <a href="/<?php echo ADMINISTRATION_PATH; ?>contacts/item/<?php echo $data['uid'][0]; ?>/<?php echo $data['instrument']; ?>/delete" class="btn btn-danger">
+            <a href="/<?php echo ADMINISTRATION_PATH; ?>contacts/item/<?php echo $data['uid'][0]; ?>/delete" class="btn btn-danger">
                 <?php
                     echo t('Delete');
                 ?>

@@ -89,14 +89,61 @@
                             echo t('Instrument(s)');
                         ?>
                     </th>
-
-                    <th class="span1">
-                        <?php
-                            echo t('Main instrument');
-                        ?>
-                    </th>
                 </tr>
             </thead>
+            <tbody>
+                <?php
+                    foreach ($users as $index => $user) {
+                ?>
+                <tr>
+                    <td>
+                        <?php echo (is_array($user) && array_key_exists('uid', $user) && isset($user['uid'][0])) ? $user['uid'][0] : ''; ?>
+                    </td>
+
+                    <td>
+                        <a href="/<?php echo ADMINISTRATION_PATH; ?>contacts/item/<?php echo $user['uid'][0]; ?>/view">
+                            <?php echo (is_array($user) && array_key_exists('givenname', $user) && isset($user['givenname'][0])) ? $user['givenname'][0] : ''; ?>
+                        </a>
+
+
+                    </td>
+
+                    <td>
+                        <?php echo (is_array($user) && array_key_exists('sn', $user) && isset($user['sn'][0])) ? $user['sn'][0] : ''; ?>
+                    </td>
+
+                    <td>
+                        <?php echo (is_array($user) && array_key_exists('o', $user) && isset($user['o'][0])) ? $user['o'][0] : ''; ?>
+                    </td>
+
+                    <td>
+
+                    </td>
+
+                    <td>
+                        <?php echo (is_array($user) && array_key_exists('mail', $user) && isset($user['mail'][0])) ? $user['mail'][0] : ''; ?>
+                    </td>
+
+                    <td>
+                        <?php echo $user['countries'] ?>
+                    </td>
+
+                    <td>
+                        <?php echo $user['countries_post']; ?>
+                    </td>
+
+                    <td>
+                        <?php echo (is_array($user) && array_key_exists('st', $user) && isset($user['st'][0])) ? $user['st'][0] : ''; ?>
+                    </td>
+
+                    <td>
+                        <?php echo $user['instruments']; ?>
+                    </td>
+                </tr>
+                <?php
+                    }
+                ?>
+            </tbody>
         </table>
     </div>
 </div>
