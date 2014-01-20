@@ -82,7 +82,7 @@
 <div id="details-fields" class="collapse in">
     <div class="span5">
     <?php
-        echo drupal_render($form['field_publication_published']);
+        echo drupal_render($form['field_publication_published_date']);
     ?>
     </div>
 
