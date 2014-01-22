@@ -9,7 +9,7 @@
             <tbody>
             <?php echo render($content['field_publication_author']); ?>
             <?php echo render($content['field_publication_co_authors']); ?>
-            <?php echo render($content['field_publication_published']); ?>
+            <?php echo render($content['field_publication_published_date']); ?>
             <?php echo render($content['field_publication_language']); ?>
             <?php echo render($content['field_publication_publisher']); ?>
             <?php echo render($content['field_publication_city']); ?>
