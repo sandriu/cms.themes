@@ -559,6 +559,11 @@ margin-bottom: 20px;
 margin-top: 20px;
 }
 
+#node-3916 dd,
+.node-page dd {
+margin-left: 40px;
+}
+
 
 
 /* COMMENTS */
