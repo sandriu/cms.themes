@@ -59,12 +59,21 @@ AmCharts.ready(function() {
 
     var legend = {
         width: 110 * Drupal.settings.cms_country.status_types.length,
+<<<<<<< HEAD
         backgroundAlpha: 1,
         backgroundColor: "#FFFFFF",
         borderColor: "#666666",
         borderAlpha: 1,
         bottom: 20,
         left: 20,
+=======
+        backgroundAlpha: 0.9,
+        backgroundColor: "#FFFFFF",
+        borderColor: "#666666",
+        borderAlpha: 1,
+        bottom: 15,
+        left: 15,
+>>>>>>> a8d8c6adf91c03c737da9f88cb2839543e7c6d59
         horizontalGap: 10,
         data: (function () {
             var legend_data = new Array();
@@ -74,14 +83,25 @@ AmCharts.ready(function() {
                     color: status_colors[type]
                 });
             });
+<<<<<<< HEAD
             return legend_data;
         })()
     };
         console.log(legend);
+=======
+            console.log(legend_data);
+            return legend_data;
+        })()
+    };
+>>>>>>> a8d8c6adf91c03c737da9f88cb2839543e7c6d59
 
     // write the map to container div
     map.addLegend(legend);
     map.write("states_ammap");
     map.zoomIn();
 
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> a8d8c6adf91c03c737da9f88cb2839543e7c6d59
