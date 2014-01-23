@@ -6,7 +6,7 @@ AmCharts.ready(function() {
     map.pathToImages = Drupal.settings.cms_country.ammapPath + '/images/';
 
     //define range of colors because no of statuses is variable
-    var range_colors = ['rgb(0,56,113)', '#e8d173', '#ac31d1', '#87a391', '#dcfa23', '#122fe4'];
+    var range_colors = ['#6A9519', '#003871', '#C50049', '#F5A200', '#34B7C4'];
     //index by status name an array of colors
     var status_colors = new Array();
     jQuery.each(Drupal.settings.cms_country.status_types, function (index, type){
