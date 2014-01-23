@@ -59,12 +59,12 @@ AmCharts.ready(function() {
 
     var legend = {
         width: 110 * Drupal.settings.cms_country.status_types.length,
-        backgroundAlpha: 0.9,
+        backgroundAlpha: 1,
         backgroundColor: "#FFFFFF",
         borderColor: "#666666",
         borderAlpha: 1,
-        bottom: 15,
-        left: 15,
+        bottom: 20,
+        left: 20,
         horizontalGap: 10,
         data: (function () {
             var legend_data = new Array();
@@ -74,10 +74,10 @@ AmCharts.ready(function() {
                     color: status_colors[type]
                 });
             });
-            console.log(legend_data);
             return legend_data;
         })()
     };
+        console.log(legend);
 
     // write the map to container div
     map.addLegend(legend);

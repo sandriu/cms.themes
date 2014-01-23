@@ -47,7 +47,7 @@
     </div>
 <?php endif; ?>
 
-<div id="states_ammap"></div></div>
+<div id="states_ammap" style="height: 480px;"></div></div>
 
 <?php
 echo views_embed_view('front_end_countries', 'party_range_states_list');
