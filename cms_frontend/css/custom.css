@@ -1,4 +1,4 @@
-/* theme for CMS portal */
+/* generic theme for CMS portals */
 
 /* GENERAL */
 body,
@@ -40,7 +40,6 @@ margin-top: -17px;
 width: 50%;
 height: 69px;
 float: right;
-background: url("../images/header_wave_cms.png") 100% 0% no-repeat;
 }
 
 .region-header {
@@ -58,10 +57,6 @@ display: inline-block;
 float: right;
 padding-right: 10px;
 padding-top: 5px;
-}
-
-body .navbar-default .navbar-brand {
-color: #555;
 }
 
 .portal-title {
@@ -147,7 +142,6 @@ margin-top: 10px;
 overflow: hidden;
 padding-left: 95px;
 width: 100%;
-border-bottom: 3px solid rgb(102, 135, 168);
 }
 
 .global-menu li {
@@ -155,8 +149,6 @@ list-style-type: none;
 height: 45px;
 text-transform: uppercase;
 padding: 0px 15px;
-
-background: rgb(0,56,113);
 border-top-left-radius: 10px;
 border-top-right-radius: 10px;
 margin-right: 2px;
@@ -164,11 +156,6 @@ height: 38px;
 min-width: 104px;
 text-align: center;
 text-transform: none;
-}
-
-.global-menu > .active-trail {
-background: rgb(0,56,113) url("../images/arrow_hex6687A8.png") 49% 122% no-repeat;
-color: rgb(255, 210, 23);
 }
 
 body ul.secondary {
@@ -183,7 +170,6 @@ margin-top: 11px;
 
 .global-menu h2 a:hover {
 text-decoration: none;
-color: #555;
 }
 
 .region-secondary-menu h2 {
@@ -191,23 +177,11 @@ margin-top: 9px;
 margin-bottom: 12px;
 font-size: 15px;
 }
-
-.region-secondary-menu {
-background-color: rgb(102,135,168);
-}
 /* end refactoring the global menu */
 
 .navbar-default {
 background-color: #fff;
 border: 0px;
-}
-
-.navbar-default .navbar-nav>li> h2 a {
-color: #fff;
-}
-
-.navbar-default .navbar-nav>li> h2 a:hover {
-color: rgb(255, 210, 23);
 }
 
 .navbar-brand.mobile {
@@ -230,16 +204,6 @@ border: 0px;
 margin-bottom: 0px;
 }
 
-.submenu .navbar-collapse {
-background-color: rgb(32, 81, 130);
-}
-
-.navbar-default .navbar-nav>li.active-trail> h2 a,
-.region-secondary-menu .active a,
-.region-secondary-menu .active-trail a {
-color: rgb(255, 210, 23);
-}
-
 .submenu h3 {
 font-size: 14px;
 margin-top: 15px;
@@ -250,13 +214,8 @@ margin-bottom: 13px;
 padding: 0px 8px;
 }
 
-.submenu a {
-color: #fff;
-}
-
 .submenu a:hover {
 text-decoration: none;
-color: rgb(255, 210, 23);
 }
 
 
@@ -611,7 +570,7 @@ font-size: 13px;
 }
 
 
-/* FIXES for ecommunity.edw.ro */
+/* FIXES */
 .region-secondary-menu .menu.nav {
 padding-left: 12px;
 }
@@ -644,7 +603,7 @@ color: #999;
 padding-left: 20px;
 }
 
-.indented{
+.indented {
 margin-left: 25px;
 }
 
@@ -692,3 +651,44 @@ padding: 10px;
     height: 480px;
     margin: 0 auto 2em auto;
 }
+
+
+/* Colour theme for CMS portal.
+    To be moved in a different stylesheet */
+/* HEADER */
+.search-area-and-logos {
+background: url("../images/header_wave_cms.png") 100% 0% no-repeat;
+}
+
+.global-menu {
+border-bottom: 3px solid #6687A8;
+}
+
+.global-menu li {
+background: #003871;
+}
+
+.global-menu a {
+color: #FFF;
+}
+
+.global-menu > .active-trail {
+background: #003871 url("../images/arrow_hex6687A8.png") 49% 122% no-repeat;
+color: #FFD217;
+}
+
+.region-secondary-menu {
+background-color: #6687A8;
+}
+
+.submenu a {
+color: #FFF;
+}
+
+.global-menu .active-trail a,
+.global-menu a:hover,
+.submenu .active-trail a,
+.submenu a:hover {
+color: #FFD217;
+}
+/* end colour theme for CMS portal */
