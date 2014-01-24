@@ -415,56 +415,6 @@ padding-bottom: 10px;
 width: 44px;
 }
 
-.rate-widget {
-overflow: hidden;
-}
-
-.rate-widget-thumbs_up_down ul {
-float: right;
-margin-bottom: 0;
-}
-
-.rate-widget-thumbs_up_down ul li {
-margin-left: 10px;
-}
-
-.rate-widget .rate-button,
-body .rate-widget-thumbs_up_down .thumb-up a {  /* second selector should be deleted after thumbs up button is either <span> or <a> on both PE article and FP article */
-float: left;
-opacity: 0.9;
-}
-
-.rate-widget-thumbs_up_down .percent {
-color: #999;
-}
-
-.rate-widget .rate-button:hover {
-opacity: 1;
-}
-
-.rate-thumbs-up-down-btn-up,
-.rate-user .rate-thumbs-up-down-btn-up.rate-voted,
-.rate-user .rate-thumbs-up-down-btn-up {
-background: url("../images/like-icon.png") no-repeat;
-}
-
-.rate-thumbs-up-down-btn-down,
-.rate-user .rate-thumbs-up-down-btn-down.rate-voted,
-.rate-user .rate-thumbs-up-down-btn-down {
-background: url("../images/dislike-icon.png") no-repeat;
-}
-
-.rate-widget-thumbs_up_down ul li {
-width: 66px; /* override */
-}
-
-.rate-widget .rate-info {
-float: right;
-color: rgb(0, 128, 0);
-width: 150px;
-text-align: center;
-}
-
 .region-tag a,
 .instrument-tag a {
 color: #fff;
@@ -480,10 +430,6 @@ margin-right: 5px;
 .glossary-term:hover {
 background: #eee;
 color: rgb(233,94,39);
-}
-
-#rating-and-date .author {
-margin-left: 64px;
 }
 
 .author-date .media-heading {
