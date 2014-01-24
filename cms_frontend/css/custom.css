@@ -620,7 +620,7 @@ padding-left: 12px;
 display: inline-block;
 }
 
-.global-menu-bar .active-trail .caret {
+.global-menu-bar .caret {
 display: none; /* hide the dropdown arrow */
 }
 
