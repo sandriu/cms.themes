@@ -86,7 +86,7 @@
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>  
   <?php if(!$teaser): ?>
   <div class="row">    
-    <div class="author-date pull-left col-md-8">                   
+    <div class="author-date pull-left col-md-12">                   
       <div class="media">
         <span class="pull-left"><?php print $user_picture; ?></span>        
         <div class="media-body">
@@ -99,10 +99,7 @@
           <span class="text-muted">Published on <?php print format_date($created,'custom','d F Y'); ?></span>
         </div>
       </div>
-    </div>
-    <div class="rating pull-right col-md-4">
-      <?php print isset($node->rate_rate['#markup'])? $node->rate_rate['#markup']:''; ?>
-    </div>
+    </div>    
   </div>  
   <?php endif; ?>
 
