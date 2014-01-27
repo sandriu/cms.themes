@@ -1,0 +1,38 @@
+/* Colour theme for CMS portal */
+
+/* HEADER */
+.search-area-and-logos {
+background: url("../images/header_wave_cms.png") 100% 0% no-repeat;
+}
+
+.global-menu {
+border-bottom: 3px solid #6687A8;
+}
+
+.global-menu li {
+background: #003871;
+}
+
+.global-menu a {
+color: #FFF;
+}
+
+.global-menu > .active-trail {
+background: #003871 url("../images/arrow_hex6687A8.png") 49% 122% no-repeat;
+color: #FFD217;
+}
+
+.region-secondary-menu {
+background-color: #6687A8;
+}
+
+.submenu a {
+color: #FFF;
+}
+
+.global-menu .active-trail a,
+.global-menu a:hover,
+.submenu .active-trail a,
+.submenu a:hover {
+color: #FFD217;
+}

@@ -1,0 +1,40 @@
+/* Colour theme for ASCOBANS portal */
+
+/* HEADER */
+.search-area-and-logos {
+background: url("../images/header_wave_ascobans.png") 100% 0% no-repeat;
+}
+
+.global-menu {
+border-bottom: 3px solid #FEF1D8;
+}
+
+.global-menu li {
+background: #00B9F0;
+}
+
+.global-menu a {
+color: #FFF;
+}
+
+.global-menu > .active-trail {
+background: #00B9F0 url("../images/arrow_hexFEF1D8.png") 49% 122% no-repeat;
+color: #444;
+}
+
+.region-secondary-menu {
+background-color: #FEF1D8;
+border: 1px solid #C6B099;
+border-top: 0;
+}
+
+.submenu a {
+color: #00ADED;
+}
+
+.global-menu .active-trail a,
+.global-menu a:hover,
+.submenu .active-trail a,
+.submenu a:hover {
+color: #444;
+}

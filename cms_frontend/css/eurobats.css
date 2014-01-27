@@ -1,0 +1,38 @@
+/* Colour theme for EUROBATS portal */
+
+/* HEADER */
+.search-area-and-logos {
+background: url("../images/header_wave_eurobats.png") 100% 0% no-repeat;
+}
+
+.global-menu {
+border-bottom: 3px solid #79A5D6;
+}
+
+.global-menu li {
+background: #0F235B;
+}
+
+.global-menu a {
+color: #79A5D6;
+}
+
+.global-menu > .active-trail {
+background: #0F235B url("../images/arrow_hex6687A8.png") 49% 122% no-repeat;
+color: #FFF;
+}
+
+.region-secondary-menu {
+background-color: #79A5D6;
+}
+
+.submenu a,
+.global-menu .active-trail a,
+.global-menu a:hover {
+color: #FFF;
+}
+
+.submenu .active-trail a,
+.submenu a:hover {
+color: #0F235B;
+}

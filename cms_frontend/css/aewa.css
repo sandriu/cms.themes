@@ -1,0 +1,38 @@
+/* Colour theme for AEWA portal */
+
+/* HEADER */
+.search-area-and-logos {
+background: url("../images/header_wave_aewa.png") 100% 0% no-repeat;
+}
+
+.global-menu {
+border-bottom: 3px solid #FDDFAF;
+}
+
+.global-menu li {
+background: #FBAF38;
+}
+
+.global-menu a {
+color: #FFF;
+}
+
+.global-menu > .active-trail {
+background: #FBAF38 url("../images/arrow_hex6687A8.png") 49% 122% no-repeat;
+color: #4D4D4D;
+}
+
+.region-secondary-menu {
+background-color: #FDDFAF;
+}
+
+.submenu a {
+color: #B07B27;
+}
+
+.global-menu .active-trail a,
+.global-menu a:hover,
+.submenu .active-trail a,
+.submenu a:hover {
+color: #4D4D4D;
+}
