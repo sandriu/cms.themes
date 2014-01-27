@@ -40,9 +40,10 @@ function cms_frontend_preprocess_block(&$variables) {
 function cms_frontend_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'search_block_form') {    
     // Prevent user from searching the default text
-    $form['#attributes']['onsubmit'] = "if(this.search_block_form.value=='Search on e-community'){ alert('Please enter a search'); return false; }";
+    $form['#attributes']['onsubmit'] = 
+            "if(this.search_block_form.value=='".t('Search on this site')."'){ alert('".t('Please enter a search')."'); return false; }";
     // Alternative (HTML5) placeholder attribute instead of using the javascript
-    $form['search_block_form']['#attributes']['placeholder'] = t('Search on e-community');
+    $form['search_block_form']['#attributes']['placeholder'] = t('Search on this site');
     $form['search_block_form']['#attributes']['class'][] = 'italic';
   }
 }
