@@ -6,6 +6,7 @@ base theme = bootstrap
 ; Regions
 regions[primary_menu]     = 'Primary Menu'
 regions[secondary_menu] = 'Secondary Menu'
+regions[tertiary_menu] = 'Tertiary Menu'
 regions[header]         = 'Top Bar'
 regions[highlighted]    = 'Highlighted'
 regions[help]           = 'Help'
