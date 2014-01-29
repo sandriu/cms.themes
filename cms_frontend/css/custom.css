@@ -298,8 +298,51 @@ padding-top: 0px;
 padding: 20px;
 }
 
-.subscribe-social {
+.subscribe-social,
+.footer-menu {
 background: rgb(238, 238, 238);
+}
+
+.footer-menu ul li {
+width: 18%;
+display: inline-block;
+vertical-align: top;
+margin-right: 15px;
+}
+
+.footer-menu h2 {
+font-size: 20px;
+margin-bottom: 0;
+}
+
+.footer-menu h2 a {
+color: #444;
+}
+
+.footer-menu ul ul {
+display: block;
+}
+
+.footer-menu ul ul li {
+outline: 0px;
+width: 100%;
+}
+
+.footer-menu ul ul h2 {
+font-size: 15px;
+margin: 6px 0px;
+}
+
+.footer-menu ul ul h2 a {
+color: #0066C0;
+}
+
+/* this block for dropdown-menu to be removed if we remove the class */
+.footer-menu .dropdown-menu {
+position: relative;
+background: rgb(238, 238, 238);
+border: 0px;
+box-shadow: none;
 }
 
 .form-control.email-input,
@@ -307,6 +350,10 @@ background: rgb(238, 238, 238);
 width: 60%;
 float: left;
 margin-right: 5px;
+}
+
+.subscribe-social {
+border-top: 1px solid #DDD;
 }
 
 .subscribe-social a {
@@ -467,6 +514,10 @@ margin-top: 20px;
 #node-3916 dd,
 .node-page dd {
 margin-left: 40px;
+}
+
+#node-3916 dt {
+padding: 5px 0px;
 }
 
 

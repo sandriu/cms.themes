@@ -139,7 +139,7 @@
 </div>
 
 <footer>
-  <div class="well-footer subscribe-social">
+  <div class="well-footer footer-menu">
     <div class="container">
       <div class="row">        
         <div class="col-md-12">
