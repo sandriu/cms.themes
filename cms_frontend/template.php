@@ -210,5 +210,5 @@ function cms_frontend_preprocess_page(&$variables, $hook){
     //set theme for primary and secondary menu
     $variables['page']['primary_menu']['menu_menu-frontend-main-menu']['#theme_wrappers'] = array('menu_tree__menu_frontend_main_menu');
     $variables['page']['secondary_menu']['menu_block_1']['#content']['#theme_wrappers'] = array('menu_tree__menu_frontend_main_menu_secondary');    
-    $variables['page']['tertiary_menu']['menu_block_2']['#content']['#theme_wrappers'] = array('menu_tree__menu_frontend_main_menu_tertiary');    
+    $variables['page']['tertiary_menu']['menu_block_3']['#content']['#theme_wrappers'] = array('menu_tree__menu_frontend_main_menu_tertiary');    
 }
