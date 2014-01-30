@@ -33,7 +33,7 @@ function cms_frontend_menu_link(array $variables) {
         // Generate as standard dropdown.
         $element['#attributes']['class'][] = 'dropdown';
         $element['#localized_options']['html'] = TRUE;
-        $element['#title'] .= ' <span class="caret"></span>';
+        //$element['#title'] .= ' <span class="caret"></span>';
       }
 
       // Set dropdown trigger element to # to prevent inadvertant page loading
@@ -48,7 +48,8 @@ function cms_frontend_menu_link(array $variables) {
   }  
   
   //add a css class for dropdown parent item
-  if(in_array('dropdown', $element['#attributes']['class']) || ($element['#original_link']['link_title'] == 'E-Community'))
+  if(in_array('dropdown', $element['#attributes']['class']) 
+          && ($element['#original_link']['menu_name'] == 'menu-frontend-main-menu'))
     $element['#attributes']['class'][] = 'ecomm';       
   
   $output = '<h2>'.l($element['#title'], $element['#href'], $element['#localized_options']).'</h2>';
