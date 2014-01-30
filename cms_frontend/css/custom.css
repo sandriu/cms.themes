@@ -215,7 +215,7 @@ text-decoration: none;
 
 /* GLOBAL SUBMENU level 2 */
 .navbar.submenu {
-min-height: 37px;
+min-height: 0;
 }
 
 .submenu .active-trail.dropdown-submenu {
@@ -240,7 +240,7 @@ color: #FFE473;
 /* BREADCRUMBS */
 .breadcrumb {
 background-color: #fff;
-padding: 0px;
+padding: 8px 15px 8px 6px;
 }
 
 .breadcrumb li {
