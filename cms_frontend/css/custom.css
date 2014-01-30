@@ -171,12 +171,6 @@ margin-top: 11px;
 .global-menu h2 a:hover {
 text-decoration: none;
 }
-
-.region-secondary-menu h2 {
-margin-top: 9px;
-margin-bottom: 12px;
-font-size: 15px;
-}
 /* end refactoring the global menu */
 
 .navbar-default {
@@ -197,17 +191,17 @@ float: left;
 }
 
 
-/* GLOBAL SUBMENU */
+/* GLOBAL SUBMENU level 1 */
 .navbar-inverse.submenu {
 background-color: #fff;
 border: 0px;
 margin-bottom: 0px;
 }
 
-.submenu h3 {
-font-size: 14px;
-margin-top: 15px;
-margin-bottom: 13px;
+.submenu h2 {
+margin-top: 9px;
+margin-bottom: 12px;
+font-size: 15px;
 }
 
 .submenu li {
@@ -216,6 +210,30 @@ padding: 0px 8px;
 
 .submenu a:hover {
 text-decoration: none;
+}
+
+
+/* GLOBAL SUBMENU level 2 */
+.navbar.submenu {
+min-height: 37px;
+}
+
+.submenu .active-trail.dropdown-submenu {
+background: #6687A8 url("../images/arrow_hex99AFC6.png") 49% 106% no-repeat;
+}
+
+.region-tertiary-menu {
+background-color: rgb(153, 175, 198);
+}
+
+.region-tertiary-menu ul {
+padding-left: 12px;
+}
+
+.submenu .region-tertiary-menu .active-trail a,
+.submenu .region-tertiary-menu a:hover {
+color: #FFD217; /* 'CMS yellow' colour does not offer enough contrast on a rgb(153, 175, 198) background  */
+color: #FFE473;
 }
 
 
@@ -678,7 +696,7 @@ color: #FFF;
 }
 
 .global-menu > .active-trail {
-background: #003871 url("../images/arrow_hex6687A8.png") 49% 122% no-repeat;
+background: #003871 url("../images/arrow_hex6687A8.png") 49% 106% no-repeat;
 color: #FFD217;
 }
 
