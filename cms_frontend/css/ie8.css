@@ -32,7 +32,6 @@ width: 647px;
 float: left;
 }
 
-.top-right-header,
 .disclaimers .col-md-4 {
 float: right;
 }
@@ -50,27 +49,15 @@ display: inline-block;
 margin-top: 15px;
 }
 
-.global-menu.menu.nav.navbar-nav a {
-color: #fff;
-}
-
-.global-menu.menu.nav.navbar-nav a:hover {
-color: #ddd;
-}
-
-.global-menu.menu.nav.navbar-nav .ecomm a {
-color: #555;
-}
-
 .submenu .navbar-header,
 button.navbar-toggle {  /* hide button for Bootstrap collapsable menu */
 display: none;
 }
 
-.region-secondary-menu {
+.region-secondary-menu,
+.region-tertiary-menu {
 width: 955px;
 }
-
 
 
 /* Introduction page CONTENT */
@@ -107,14 +94,12 @@ padding-top:10px;
 }
 
 
-
 /* article page content */
 .article-date {
 display: inline-block;
 width: 80%;
 margin-bottom: 50px;
 }
-
 
 
 /* filters */
@@ -138,7 +123,6 @@ float: right;
 .total-items {
 float: left;
 }
-
 
 
 /* COMMENTS */
@@ -167,17 +151,16 @@ width: 83.381%;
 }
 
 
-/* CHANGES for integrating the old header 
-    - PLEASE MAKE MERGE WITH THE REST OF CSS IF THE BRANCH IS APPLIED -
-*/
-.container .col-md-7.left-header {
-width: 566px;
+/* CHANGES for integrating the old header */
+.left-header {
+width: 81px;
 float: left;
 }
 
-.container .col-md-5.right-header {
-width: 404px;
+.right-header {
+width: 889px;
 float: right;
+padding-right: 0;
 }
 
 .search-area {
@@ -194,4 +177,17 @@ width: 101.6%;
 
 .navbar-nav.nav.menu.global-menu h2 {
 margin-top: 10px;
+}
+
+
+/* fixes for menu level 3 */
+.submenu .secondary,
+.submenu .tertiary {
+margin-top: 0;
+margin-left: 0;
+}
+
+.submenu,
+.region-tertiary-menu {
+max-height: 38px;
 }
