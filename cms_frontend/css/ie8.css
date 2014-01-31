@@ -108,38 +108,12 @@ padding-top:10px;
 
 
 
-/* PRACTICAL EXAMPLES page */
-.view-practice-examples .col-md-3.views-exposed-widget {
-width: 172px;
-}
-
-.view-practice-examples .search-button.form-group {
-margin-top: 0px;
-}
-
-
-
-/* article page content TO VERIFY !!!!!!!!!!!!!!!!!!!!!!*/
+/* article page content */
 .article-date {
 display: inline-block;
 width: 80%;
 margin-bottom: 50px;
 }
-
-.rating {
-display: inline-block;
-width: 20%;
-}
-
-.rating .progress {
-width: 120px;
-height: 5px;
-}
-
-.rating .vote-buttons {
-width: 120px;
-}
-
 
 
 
@@ -165,22 +139,6 @@ float: right;
 float: left;
 }
 
-
-/* TRAINING EVENTS,
-    FUNDING PROGRAMMES  */
-.views-exposed-widget.col-md-12 {
-width: 688px;
-}
-
-.views-exposed-widget.col-md-8 {
-width: 458px;
-}
-
-.views-exposed-form .col-md-4 {
-width: 229px;
-float: right;
-margin-top: 0px;
-}
 
 
 /* COMMENTS */
@@ -228,10 +186,6 @@ float: right;
 
 .small-logos {
 padding-right: 4px;
-}
-
-.ecomm {
-vertical-align: bottom;
 }
 
 .global-menu {
