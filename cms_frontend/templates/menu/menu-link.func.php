@@ -45,12 +45,7 @@ function cms_frontend_menu_link(array $variables) {
   // @see https://drupal.org/node/1896674
   if (($element['#href'] == $_GET['q'] || ($element['#href'] == '<front>' && drupal_is_front_page())) && (empty($element['#localized_options']['language']))) {
     $element['#attributes']['class'][] = 'active';    
-  }  
-  
-  //add a css class for dropdown parent item
-  if(in_array('dropdown', $element['#attributes']['class']) 
-          && ($element['#original_link']['menu_name'] == 'menu-frontend-main-menu'))
-    $element['#attributes']['class'][] = 'ecomm';       
+  }           
   
   $output = '<h2>'.l($element['#title'], $element['#href'], $element['#localized_options']).'</h2>';
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
