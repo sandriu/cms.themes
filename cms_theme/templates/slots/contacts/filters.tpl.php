@@ -1,7 +1,7 @@
 <?php
     $expanded = FALSE;
     if (!empty($data['regions']) || !empty($data['countries']) || !empty($data['instrument']) ||
-        !empty($data['mailing_list']) || !empty($data['availability']) || !empty($data['person_status']) ||
+        !empty($data['availability']) || !empty($data['person_status']) ||
         !empty($data['meeting']) || !empty($data['organization_status'])) {
         $expanded = TRUE;
     }
@@ -165,42 +165,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <?php
-                                if ($current_profile != 'eurobats') {
-                            ?>
-                            <div class="views-exposed-widget">
-                                <label for="mailing">
-                                    <?php echo t('Mailing list'); ?>
-                                </label>
-
-                                <div class="views-widget">
-                                    <div class="control-group form-type-select">
-                                        <div class="controls">
-                                            <select name="mailing_list[]" id="mailing" multiple="multiple">
-                                                <option value=""><?php echo t('Any'); ?></option>
-                                                <?php
-                                                    foreach ($data['mailing_options'] as $id => $list_name) {
-                                                ?>
-                                                <option value="<?php echo $id; ?>" <?php echo (isset($data['mailing_list']) && in_array($id, $data['mailing_list'])) ? 'selected="selected"' : ''; ?>>
-                                                    <?php echo $list_name; ?>
-                                                </option>
-                                                <?php
-                                                    }
-                                                ?>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <?php
-                                }else {
-                            ?>
-                            <input type="hidden" name="mailing_list" id="mailing" value="" disabled="disabled" />
-                            <?php
-                                }
-                            ?>
-
                             <div class="views-exposed-widget">
                                 <label for="person_status">
                                     <?php echo t('Status person'); ?>
