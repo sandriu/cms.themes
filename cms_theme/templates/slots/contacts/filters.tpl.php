@@ -214,34 +214,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="clearfix"></div>
-
-                            <div class="views-exposed-widget">
-                                <label for="species">
-                                    <?php echo t('Species'); ?>
-                                </label>
-
-                                <div class="views-widget">
-                                    <div class="control-group form-type-select">
-                                        <div class="controls">
-                                            <select name="species[]" id="species" multiple="multiple">
-                                                <option value=""><?php echo t('Any'); ?></option>
-                                                <?php
-                                                    foreach ($data['species_options'] as $uuid => $species) {
-                                                ?>
-                                                <option value="<?php echo $uuid; ?>" <?php echo (isset($data['species']) && ($data['species']  == $uuid)) ? 'selected="selected"' : ''; ?>>
-                                                    <?php echo $species->title_with_website; ?>
-                                                </option>
-                                                <?php
-                                                    }
-                                                ?>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                             <div class="clearfix"></div>
 
                             <div class="views-exposed-widget">
