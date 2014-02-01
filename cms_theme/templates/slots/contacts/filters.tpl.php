@@ -99,9 +99,9 @@
                                             <select name="region[]" id="region" multiple="multiple">
                                                 <option value=""><?php echo t('Any'); ?></option>
                                                 <?php
-                                                    foreach ($data['region_options'] as $uuid => $region_name) {
+                                                    foreach ($data['region_options'] as $value => $region_name) {
                                                 ?>
-                                                <option value="<?php echo $uuid; ?>" <?php echo (isset($data['regions']) && in_array($uuid, $data['regions'])) ? 'selected="selected"' : ''; ?>>
+                                                <option value="<?php echo $value; ?>" <?php echo (isset($data['regions']) && in_array($value, $data['regions'])) ? 'selected="selected"' : ''; ?>>
                                                     <?php echo $region_name; ?>
                                                 </option>
                                                 <?php
