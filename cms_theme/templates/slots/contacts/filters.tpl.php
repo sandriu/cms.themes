@@ -216,33 +216,6 @@
                             </div>
                             <div class="clearfix"></div>
 
-                            <div class="views-exposed-widget">
-                                <label for="meeting" class="text-error">
-                                    <?php echo t('Meeting (Not yet implemented)'); ?>
-                                </label>
-
-                                <div class="views-widget">
-                                    <div class="control-group form-type-select">
-                                        <div class="controls">
-                                            <select name="meeting[]" id="meeting" multiple="multiple">
-                                                <option value=""><?php echo t('Any'); ?></option>
-                                                <?php
-                                                    foreach ($data['meeting_options'] as $uuid => $meeting) {
-                                                ?>
-                                                <option value="<?php echo $uuid; ?>" <?php echo (isset($data['meeting']) && ($data['meeting']  == $uuid)) ? 'selected="selected"' : ''; ?>>
-                                                    <?php echo $meeting; ?>
-                                                </option>
-                                                <?php
-                                                    }
-                                                ?>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="clearfix"></div>
-
                             <div class="views-exposed-widget views-submit-button">
                                 <button class="btn btn-primary form-submit" name="" value="Search" type="submit">Search</button>
                             </div>
