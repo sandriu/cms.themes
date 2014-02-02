@@ -1,66 +1,64 @@
 <?php
 render_simple_slot('filters', 'contacts',
-                            array('page' => $page,
-                                  'per_page' => $per_page,
-                                  'per_page_options' => $per_page_options,
-                                  'current_group' => $instrument,
-                                  'countries' => $countries,
-                                  'regions' => $regions,
-                                  'operator' => $operator,
-                                  'per_field_operator' => $per_field_operator,
-                                  'instruments' => $instruments,
-                                  'availability' => $availability,
-                                  'person_status' => $person_status,
-                                  'organization_status' => $organization_status,
-                                  'species_options' => $species_options,
-                                  'meeting_options' => $meeting_options,
-                                  'region_options' => $region_options,
-                                  'org_status_options' => $org_status_options,
-                                  'person_status_options' => $person_status_options,
-                                  'species' => $species,
-                                  'meeting' => $meeting,
-                                )
-    );
-?>
+    array(
+        'current_group' => $instrument,
+        'countries' => $countries,
+        'regions' => $regions,
+        'operator' => $operator,
+        'per_field_operator' => $per_field_operator,
+        'instruments' => $instruments,
+        'availability' => $availability,
+        'person_status' => $person_status,
+        'organization_status' => $organization_status,
+        'species_options' => $species_options,
+        'meeting_options' => $meeting_options,
+        'region_options' => $region_options,
+        'org_status_options' => $org_status_options,
+        'person_status_options' => $person_status_options,
+        'species' => $species,
+        'meeting' => $meeting,
+    )
+); ?>
+
+<div class="btn-toolbar">
+    <div class="btn-group">
+        <a href="/<?php echo ADMINISTRATION_PATH; ?>contacts/add"
+           class="btn"
+           title="<?php echo t('Add new contact'); ?>">
+            <?php echo t('Add contact'); ?>
+        </a>
+    </div>
+
+    <div class="btn-group pull-right">
+        <a href="javascript:void(0);" class="btn disabled" title="<?php echo t('Export'); ?> results in CSV format" id="export-button">
+            <i class="icon-download-alt"></i>
+            <?php echo t('Export search result'); ?>
+        </a>
+        <a href="javascript:void(0);" class="btn disabled" title="<?php echo t('Export results in Microsoft Excel format'); ?>" id="xls-export-button">
+            <i class="icon-download-alt"></i>
+            <?php echo t('Export to XLS'); ?>
+        </a>
+    </div>
+</div>
+
 <div class="row">
-<div class="span12">
-<table id="contacts-listing" class="cols-6 table table-striped table-hover table-bordered dataTable">
-<thead>
-<tr>
-    <th class="span3"><?php echo t('First name'); ?></th>
-    <th class="span3"><?php echo t('Last name'); ?></th>
-    <th class="span3"><?php echo t('Organization'); ?></th>
-    <th class="span2"><?php echo t('Country'); ?></th>
-    <th class="span2"><?php echo t('Country post'); ?></th>
-    <th class="span2"><?php echo t('Instruments'); ?></th>
-    <th class="span2"><?php echo t('Actions'); ?></th>
-</tr>
-</thead>
-<tbody>
-    <?php foreach ($users as $index => $user) { ?>
-    <tr>
-        <td><?php echo $user['rendered_link']; ?></td>
-        <td><?php echo $user['rendered_sn']; ?></td>
-        <td>&nbsp;</td>
-        <td><?php echo $user['countries'] ?></td>
-        <td><?php echo $user['instruments']; ?></td>
-    </tr>
-    <?php } ?>
-</tbody>
-</table>
+    <div class="span12">
+        <table id="contacts-listing" class="cols-6 table table-striped table-hover table-bordered dataTable">
+            <thead>
+                <tr>
+                    <th class="span3"><?php echo t('First name'); ?></th>
+                    <th class="span3"><?php echo t('Last name'); ?></th>
+                    <th class="span3"><?php echo t('Organization'); ?></th>
+                    <th class="span2"><?php echo t('Country'); ?></th>
+                    <th class="span2"><?php echo t('Country post'); ?></th>
+                    <th class="span2"><?php echo t('Instruments'); ?></th>
+                    <th class="span2"><?php echo t('Actions'); ?></th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
 </div>
-</div>
-<a href="/<?php echo ADMINISTRATION_PATH; ?>contacts/add" class="btn btn-primary" title="<?php echo t('Add new contact'); ?>">
-    <?php echo t('Add contact'); ?>
-</a>
-<a href="javascript:void(0);" class="btn" title="<?php echo t('Export'); ?> results in CSV format" id="export-button">
-    <i class="icon-download-alt"></i>
-    <?php echo t('Export search result'); ?>
-</a>
-<a href="javascript:void(0);" class="btn" title="<?php echo t('Export to XLS file'); ?> results in XLS format" id="xls-export-button">
-    <i class="icon-download-alt"></i>
-    <?php echo t('Export to XLS'); ?>
-</a>
 <?php
 /**
  * drupal_add_js and drupal_add_css not working here

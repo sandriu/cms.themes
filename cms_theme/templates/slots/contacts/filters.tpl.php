@@ -5,7 +5,6 @@
         !empty($data['meeting']) || !empty($data['organization_status'])) {
         $expanded = TRUE;
     }
-
     $current_profile = CMSUtils::get_current_profile();
 ?>
 
@@ -38,11 +37,7 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="clearfix"></div>
-
-                            <input type="hidden" name="current-page" value="<?php echo $data['page']; ?>" id="current-page" />
-
                             <div id="edit-tid-wrapper" class="views-exposed-widget">
                                 <label for="instrument">
                                     <?php echo t('CMS Instrument'); ?>
