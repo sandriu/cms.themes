@@ -80,7 +80,7 @@
                 dt.fnFilter($(this).val());
             });
 
-
+        /*
         $('#export-button').click(function(e){
             e.preventDefault();
             var search_query = $('.dataTables_filter input').val();
@@ -98,6 +98,7 @@
 
             window.location.href = "/contacts/xls_export?instrument=" + instrument + "&country=" + country + "&region=" + region + "&availability=" + availability + "&mailing_list=" + mailing_list + "&person_status=" + person_status + "&organization_status=" + organization_status + "&species=" + species + "&meeting=" + meeting + "&operator=" + operator + "&per_field_operator=" + per_field_operator;
         });
+        */
 
         $('.accordion-toggle').each(function(){
             var toggle = $(this);
