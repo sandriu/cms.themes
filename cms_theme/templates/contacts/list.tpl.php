@@ -17,6 +17,7 @@ render_simple_slot('filters', 'contacts',
         'person_status_options' => $person_status_options,
         'species' => $species,
         'meeting' => $meeting,
+        'form_reset_url' => $form_reset_url
     )
 ); ?>
 

@@ -199,7 +199,7 @@
                             </div>
 
                             <div class="views-exposed-widget views-reset-button">
-                                <a class="reset-link" id="edit-reset" name="op" onclick="jQuery('#contacts-instrument-filter').resetForm();">Clear filters</a>
+                                <a class="reset-link" id="edit-reset" name="op" href="<?php echo $data['form_reset_url']; ?>">Clear filters</a>
                             </div>
                         </div>
                     </div>
