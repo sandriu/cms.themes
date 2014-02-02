@@ -31,14 +31,24 @@ render_simple_slot('filters', 'contacts',
     </div>
 
     <div class="btn-group pull-right">
-        <a href="javascript:void(0);" class="btn disabled" title="<?php echo t('Export'); ?> results in CSV format" id="export-button">
-            <i class="icon-download-alt"></i>
-            <?php echo t('Export search result'); ?>
+        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+            Export
+            <span class="caret"></span>
         </a>
-        <a href="javascript:void(0);" class="btn disabled" title="<?php echo t('Export results in Microsoft Excel format'); ?>" id="xls-export-button">
-            <i class="icon-download-alt"></i>
-            <?php echo t('Export to XLS'); ?>
-        </a>
+        <ul class="dropdown-menu">
+            <li>
+                <a href="javascript:void(0);" class="disabled" title="<?php echo t('Export results in Microsoft Excel format'); ?>" id="xls-export-button">
+                    <i class="icon-download-alt"></i>
+                    <?php echo t('Microsoft Excel'); ?>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" class="disabled" title="<?php echo t('Export results in CSV format'); ?>" id="export-button">
+                    <i class="icon-download-alt"></i>
+                    <?php echo t('CSV table'); ?>
+                </a>
+            </li>
+        </ul>
     </div>
 </div>
 
