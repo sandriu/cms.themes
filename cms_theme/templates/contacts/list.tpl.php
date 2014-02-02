@@ -68,24 +68,6 @@ render_simple_slot('filters', 'contacts',
                     <th class="span1"><?php echo t('Actions'); ?></th>
                 </tr>
             </thead>
-            <tbody></tbody>
         </table>
     </div>
 </div>
-<?php
-/**
- * drupal_add_js and drupal_add_css not working here
- */
-    $js_path = drupal_get_path('module', 'datatables') . '/dataTables/media/js/jquery.dataTables.min.js';
-    $DT_js_path = drupal_get_path('module', 'datatables') . '/js/DT_bootstrap.js';
-    $css_path = drupal_get_path('module', 'datatables') . '/dataTables/media/css/demo_table.css';
-?>
-<script type="text/javascript" src="/<?php echo $js_path; ?>"></script>
-<script type="text/javascript" src="/<?php echo $DT_js_path; ?>"></script>
-<link type="text/css" rel="stylesheet" href="/<?php echo $css_path; ?>" />
-<script type="text/javascript">
-    var administration_path = '<?php echo ADMINISTRATION_PATH; ?>';
-</script>
-<?php
-    drupal_add_js(drupal_get_path('theme', 'cms_theme') . '/js/contacts.js');
-?>
