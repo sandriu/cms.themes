@@ -1,20 +1,8 @@
 (function($) {
     $(document).ready(function() {
         $('a[rel="tooltip"]').tooltip();
-        var operator = $('#operator').val();
-        var per_field_operator = $('#per_field_operator').val();
-        var instrument = $('#instrument').val();
-        var country = $('#country').val();
-        var region = $('#region').val();
-        var availability = $('#availability').val();
-        var person_status = $('#person_status').val();
-        var organization_status = $('#organization_status').val();
-        var species = $('#species').val();
-        var meeting = $('#meeting').val();
-
         var defaultSortCol = jQuery('#iSortCol_0').val();
         var defaultSortDir = jQuery('#sSortDir_0').val();
-
         var dt = $('#contacts-listing').dataTable({
             "bProcessing": true,
             "bServerSide": true,
@@ -100,12 +88,4 @@
             }
         });
     });
-
-    $.fn.resetForm = function() {
-        $(this).each(function(){
-            $('select', this).val('');
-            $('input', this).val('');
-            this.submit();
-        });
-    }
 })(jQuery);
