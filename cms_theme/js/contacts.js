@@ -24,6 +24,7 @@
             "sPaginationType": "bootstrap",
             "aaSorting": [ [1, "asc"] ],
             "aoColumns": [
+                { "bVisible": true, "sDefaultContent": "", "bSortable": false },
                 { "bVisible": true, "sDefaultContent": "" },
                 { "bVisible": true, "sDefaultContent": "" },
                 { "bVisible": true, "sDefaultContent": "" },
