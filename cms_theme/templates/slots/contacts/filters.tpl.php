@@ -19,6 +19,10 @@
         <div id="contacts-filters-holder" class="accordion-body collapse in">
             <div class="accordion-inner">
                 <form class="form-inline" id="contacts-instrument-filter" method="GET" action="/<?php echo ADMINISTRATION_PATH; ?>contacts/listing">
+                    <?php if(!empty($data['sort'][0])) : ?>
+                    <input type="hidden" id="iSortCol_0" name="iSortCol_0" value="<?php echo $data['sort'][0]['column']; ?>" />
+                    <input type="hidden" id="sSortDir_0" name="sSortDir_0" value="<?php echo $data['sort'][0]['direction']; ?>" />
+                    <?php endif; ?>
                     <div class="views-exposed-form well well-small">
                         <div class="views-exposed-widgets clearfix">
                             <div class="views-exposed-widget">

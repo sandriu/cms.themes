@@ -1,19 +1,19 @@
 (function($) {
     $(document).ready(function() {
         $('a[rel="tooltip"]').tooltip();
-        var per_page = $('#contacts-per-page').val();
-        var page = $('#current-page').val();
         var operator = $('#operator').val();
         var per_field_operator = $('#per_field_operator').val();
         var instrument = $('#instrument').val();
         var country = $('#country').val();
         var region = $('#region').val();
         var availability = $('#availability').val();
-        var mailing_list = $('#mailing').val();
         var person_status = $('#person_status').val();
         var organization_status = $('#organization_status').val();
         var species = $('#species').val();
         var meeting = $('#meeting').val();
+
+        var defaultSortCol = jQuery('#iSortCol_0').val();
+        var defaultSortDir = jQuery('#sSortDir_0').val();
 
         var dt = $('#contacts-listing').dataTable({
             "bProcessing": true,
@@ -22,7 +22,7 @@
             "bDeferRender": true,
             "bFilter": true,
             "sPaginationType": "bootstrap",
-            "aaSorting": [ [1, "asc"] ],
+            "aaSorting": [ [defaultSortCol, defaultSortDir] ],
             "aoColumns": [
                 { "bVisible": true, "sDefaultContent": "", "bSortable": false },
                 { "bVisible": true, "sDefaultContent": "" },
@@ -70,6 +70,17 @@
                 }
                 aoData.push({ 'name' : 'per_field_operator', 'value' : jQuery('#per_field_operator').val()});
                 aoData.push({ 'name' : 'operator', 'value' : jQuery('#operator').val()});
+
+                // Save the sorting column and direction on the filtering form for future reference
+                for(var key in aoData) {
+                    var o = aoData[key];
+                    if(o.name == 'iSortCol_0') {
+                        jQuery('#iSortCol_0').val(o.value);
+                    }
+                    if(o.name == 'sSortDir_0') {
+                        jQuery('#sSortDir_0').val(o.value);
+                    }
+                }
             }
         });
 
@@ -80,26 +91,6 @@
                 if ($(this).val().length < 3 && e.keyCode != 13) return;
                 dt.fnFilter($(this).val());
             });
-
-        /*
-        $('#export-button').click(function(e){
-            e.preventDefault();
-            var search_query = $('.dataTables_filter input').val();
-            var instrument = $('#instrument').val();
-            var country = $('#country').val();
-
-            window.location.href = "/contacts/export?instrument=" + instrument + "&country=" + country + "&region=" + region + "&availability=" + availability + "&mailing_list=" + mailing_list + "&person_status=" + person_status + "&organization_status=" + organization_status + "&species=" + species + "&meeting=" + meeting + "&operator=" + operator + "&per_field_operator=" + per_field_operator;
-        });
-
-        $('#xls-export-button').click(function(e){
-            e.preventDefault();
-            var search_query = $('.dataTables_filter input').val();
-            var instrument = $('#instrument').val();
-            var country = $('#country').val();
-
-            window.location.href = "/contacts/xls_export?instrument=" + instrument + "&country=" + country + "&region=" + region + "&availability=" + availability + "&mailing_list=" + mailing_list + "&person_status=" + person_status + "&organization_status=" + organization_status + "&species=" + species + "&meeting=" + meeting + "&operator=" + operator + "&per_field_operator=" + per_field_operator;
-        });
-        */
 
         $('.accordion-toggle').each(function(){
             var toggle = $(this);
