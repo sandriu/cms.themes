@@ -242,16 +242,7 @@
 
                 <td>
                     <?php
-                    if (isset($data['statusorganization']) && !empty($data['statusorganization'])) {
-                        foreach ($data['statusorganization'] as $index => $status) {
-                            if (is_numeric($index)) {
-                                echo $status;
-                    ?>
-                    <br />
-                    <?php
-                            }
-                        }
-                    }
+                    echo $data['statusorganization'];
                     ?>
                 </td>
             </tr>
@@ -293,16 +284,7 @@
 
                 <td>
                     <?php
-                    if (isset($data['statusperson']) && !empty($data['statusperson'])) {
-                        foreach ($data['statusperson'] as $index => $status) {
-                            if (is_numeric($index)) {
-                                echo $status;
-                    ?>
-                    <br />
-                    <?php
-                            }
-                        }
-                    }
+                    echo $data['statusperson'];
                     ?>
                 </td>
             </tr>
@@ -316,19 +298,7 @@
 
                 <td>
                     <?php
-                    $instruments_names = CMSLegalInstrument::cms_instruments_names();
-                    $instruments = '';
-                    foreach ($data['conventions'] as $index => $instrument) {
-                        if (is_numeric($index)) {
-                            if (array_key_exists(strtolower($instrument), $instruments_names)) {
-                                $instruments .= $instruments_names[strtolower($instrument)];
-                                if (($index + 1) < $data['conventions']['count']) {
-                                    $instruments .= ', ';
-                                }
-                            }
-                        }
-                    }
-                    echo $instruments;
+                    echo $data['conventions'];
                     ?>
                 </td>
             </tr>
@@ -472,16 +442,7 @@
 
                 <td>
                     <?php
-                    if (isset($data['mailinglists']) && !empty($data['mailinglists'])) {
-                        foreach ($data['mailinglists'] as $index => $mailing_list) {
-                            if (is_numeric($index)) {
-                                echo $mailing_list;
-                    ?>
-                    <br />
-                    <?php
-                            }
-                        }
-                    }
+                    echo $data['mailinglists'];
                     ?>
                 </td>
             </tr>
