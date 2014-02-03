@@ -206,8 +206,8 @@ function cms_frontend_preprocess_page(&$variables, $hook){
     //remove user picture from account page
     if (arg(0)=="user" || arg(0)=="users" )
         unset ($variables['page']['content']['system_main']['user_picture']); 
-    
-    //set theme for primary and secondary menu
+            
+    //set theme for primary and secondary menu    
     $variables['page']['primary_menu']['menu_menu-frontend-main-menu']['#theme_wrappers'] = 
             array('menu_tree__menu_frontend_main_menu');
     $variables['page']['secondary_menu']['menu_block_1']['#content']['#theme_wrappers'] = 
