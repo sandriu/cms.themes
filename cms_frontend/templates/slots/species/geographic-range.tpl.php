@@ -13,12 +13,11 @@
         </tr>
         <?php
             }
-
-            if (check_display_field($content, 'field_species_range_states_notes')) {
-        ?>
-        <?php echo render($content['field_species_range_states_notes']); ?>
-        <?php
-            }
+        /*
+        if (check_display_field($content, 'field_species_range_states_notes')) {
+            echo render($content['field_species_range_states_notes']); ?>
+        }
+	*/
         ?>
     </tbody>
 </table>

@@ -1,10 +1,13 @@
-<h3 class="muted">
-    <?php
-        echo t('Related content');
-    ?>
-</h3>
+<table class="table table-condensed table-hover two-columns">
+    <caption><?php echo t('Publications'); ?></caption>
+    <tbody>
+      <?php
+            echo views_embed_view('publications_admin', 'species_publications', $node->nid);
+        ?>
+    </tbody>
+</table>
 
-<ul class="nav nav-tabs" id="related-content-tabs">
+<!--ul class="nav nav-tabs" id="related-content-tabs">
     <?php
         render_tab(t('Meetings'), 'related-content-meetings', 'active', 'field_species_meeting', TRUE, $content);
         render_tab(t('Publications'), 'related-content-publications', '', 'field_species_publication', TRUE, $content);
@@ -15,9 +18,9 @@
         render_tab(t('Threats'), 'related-content-threats', '', 'field_species_threats', TRUE, $content);
         render_tab(t('Contacts'), 'related-content-contacts', '', 'field_species_experts', TRUE, $content);
     ?>
-</ul>
+</ul-->
 
-<div class="tab-content">
+<!--div class="tab-content">
     <div class="tab-pane active loaded" id="related-content-meetings">
         <?php
             echo views_embed_view('meetings', 'species_meetings', $node->nid);
@@ -104,4 +107,4 @@
             }
         ?>
     </div>
-</div>
+</div-->

@@ -1,4 +1,4 @@
-<div class="row span7">
+
     <table class="table table-condensed table-hover two-columns">
         <caption><?php echo t('Taxonomy'); ?></caption>
         <?php
@@ -40,4 +40,3 @@
 
         ?>
     </table>
-</div>

@@ -1,4 +1,4 @@
-<table class="table table-condensed table-hover two-columns">
+<table class="table table-condensed table-hover two-columns common-name">
     <caption><?php echo t('Common names'); ?></caption>
     <tbody>
         <?php
