@@ -676,6 +676,72 @@ table.views-table > caption {
     text-align: left;
 }
 
+
+/* SPECIES PROFILE */
+.species-left-column .table tbody > tr > th,
+.species-left-column .table tbody > tr > td,
+.species-right-column .table tbody > tr > th,
+.species-right-column .table tbody > tr > td {
+border-top: 0px;
+}
+
+.species-left-column .table tbody > tr > th,
+.species-right-column .table tbody > tr > th {
+color: #aaa;
+font-weight: normal;
+width: 130px;
+}
+
+.species-left-column caption,
+.species-right-column caption {
+font-size: 20px;
+font-weight: bold;
+text-align: left;
+}
+
+.species-left-column tbody {
+margin-top: 10px;
+display: block;
+}
+
+.table tbody > tr > th,
+.table tbody > tr > td {
+line-height: 1.2;
+}
+
+.species-right-column caption {
+border-top: 1px solid #ddd;
+padding-top: 15px;
+}
+
+body .carousel-inner {
+display: inline-block;
+width: 76%;
+margin-left: 12%;
+}
+
+.carousel-inner div {
+width: 170px;
+margin: 0 auto;
+}
+
+.carousel-control {
+top: 50px;
+width: 32px;
+height: 32px;
+display: inline-block;
+opacity: 1;
+}
+
+.carousel-control.left {
+background: url("../images/gallery_previous.png") no-repeat;
+}
+
+.carousel-control.right {
+background: url("../images/gallery_next.png") no-repeat;
+}
+
+
 /* Colour theme for CMS portal.
     To be moved in a different stylesheet */
 /* HEADER */

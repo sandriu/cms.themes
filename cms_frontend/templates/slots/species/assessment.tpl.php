@@ -2,7 +2,11 @@
     <caption><?php echo t('Assessment information'); ?></caption>
     <tbody>
     <?php
-        if (check_display_field($content, 'field_species_iucn_status')) {
+        if (check_display_field($content, 'field_species_instruments')) {
+            echo render($content['field_species_instruments']);
+        }
+
+       if (check_display_field($content, 'field_species_iucn_status')) {
             echo render($content['field_species_iucn_status']);
         }
 
@@ -10,8 +14,8 @@
             echo render($content['field_species_iucn_web_srv']);
         }
 
-        if (check_display_field($content, 'field_species_concerted_action')) {
-            echo render($content['field_species_concerted_action']);
+       /* if (check_display_field($content, 'field_species_concerted_action')) {
+           echo render($content['field_species_concerted_action']);
         }
 
         if (check_display_field($content, 'field_species_cooperative_action')) {
@@ -30,11 +34,7 @@
             echo render($content['field_species_appendix_2_date']);
         }
 
-        if (check_display_field($content, 'field_species_instruments')) {
-            echo render($content['field_species_instruments']);
-        }
-
-        if(check_display_field($content, 'field_species_pop_global', 'field_species_pop_global_date')) {
+       if(check_display_field($content, 'field_species_pop_global', 'field_species_pop_global_date')) {
     ?>
         <tr>
             <th><?php echo t('Global population'); ?></th>
@@ -50,7 +50,7 @@
             </td>
         </tr>
     <?php
-        }
+        } */
     ?>
     </tbody>
 </table>
