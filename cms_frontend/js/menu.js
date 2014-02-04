@@ -7,24 +7,26 @@
      * function to position the submenu
      * @param $ul - the jQuery obj that represents the submenu
      */
-    function positionate_menu($ul) {
-        var $container = $('.region-primary-menu .menu-block-wrapper .container');
-        var container_offset = $container.offset();
-        var parent_li_offset = $ul.parent().offset();
-        var margin_left = container_offset.left - parent_li_offset.left + parseInt($container.css('padding-left'));
-        $ul.css(
-            {
-                'position': 'absolute',
-                'margin-left': margin_left,
-                'width': $container.width()
-            });
+    function position_menu($ul) {
+        if ($ul.length > 0) {
+            var $container = $('.global-menu-bar .container');
+            var container_offset = $container.offset();
+            var parent_li_offset = $ul.parent().offset();
+            var margin_left = container_offset.left - parent_li_offset.left + parseInt($container.css('padding-left'));
+            $ul.css(
+                {
+                    'position': 'absolute',
+                    'margin-left': margin_left,
+                    'width': $container.width()
+                });
+        }
         //return object for chainability
         return $ul;
     }
 
     $(document).ready(function(){
         var $global_menu = $('.global-menu');
-        var $container = $('.region-primary-menu .menu-block-wrapper .container');
+        var $container = $('.global-menu-bar .container');
         //get li parents of the active link
         $li_parents = $('.global-menu a.active').parents('li').addClass('active');
 
@@ -51,17 +53,19 @@
         var $first_level_li_active = $('.global-menu > li.active:first');
         var $second_level_li_active = $('.global-menu > li > ul > li.active:first');
 
-        //positionate current menus - these menus are displayed untill hover effect
-        positionate_menu($first_level_li_active.children('ul')).show();
-        $second_level_li_active.children('ul').width($container.width()).show();
-
+        //position current menus - these menus are displayed until hover effect
+        if ($first_level_li_active.length > 0) {
+            position_menu($first_level_li_active.children('ul')).show();
+        }
+        if ($second_level_li_active.length > 0) {
+            $second_level_li_active.children('ul').width($container.width()).show();
+        }
         //Submenu hover effect (show/hide level2)
         $('.global-menu > li').not($first_level_li_active).hover(function() {
             $first_level_li_active.removeClass('active-trail').children('ul').hide();
             $(this).addClass('active-trail');
-            if ($(this).children('ul').length > 0) {
-                positionate_menu($(this).children('ul')).show();
-            }
+            position_menu($(this).children('ul')).show();
+
         }, function() {
             $first_level_li_active.addClass('active-trail').children('ul').show();
             $(this).removeClass('active-trail');
@@ -75,8 +79,7 @@
             $second_level_li_active.removeClass('active-trail').children('ul').hide();
             $(this).addClass('active-trail');
             if ($(this).children('ul').length > 0) {
-                $(this).children('ul').width($container.width()).stop(true,true).show();
-                //positionate_menu($(this).children('ul')).show();
+                $(this).children('ul').width($container.width()).show();
             }
         }, function() {
             $second_level_li_active.addClass('active-trail').children('ul').show();
