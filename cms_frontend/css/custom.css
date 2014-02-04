@@ -780,7 +780,7 @@ background: url("../images/gallery_next.png") no-repeat;
 
 
 /* TABLES for listings */
-.views-table.table-bordered {
+.views-table {
 border: 0;
 border-bottom: 1px solid #DDD;
 }
