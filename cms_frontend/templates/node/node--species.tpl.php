@@ -4,7 +4,7 @@
     #render_slot($node, 'node-buttons-actions', 'general');
 ?>
 
-<div class="species-left-column col-md-8">
+<div class="species-left-column profile col-md-8">
 <?php
     render_slot($node, 'assessment', 'species', $content);
     render_slot($node, 'geographic-range', 'species', $content);
@@ -12,7 +12,7 @@
 ?>
 </div>
 
-<div class="species-right-column well col-md-4">
+<div class="species-right-column profile well col-md-4">
 <?php
     render_slot($node, 'gallery', 'species');
     render_slot($node, 'common-names', 'species', $content);
