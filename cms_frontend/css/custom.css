@@ -717,23 +717,20 @@ table.views-table > caption {
 }
 
 
-/* SPECIES PROFILE */
-.species-left-column .table tbody > tr > th,
-.species-left-column .table tbody > tr > td,
-.species-right-column .table tbody > tr > th,
-.species-right-column .table tbody > tr > td {
+/* SPECIES PROFILE and
+  COUNTRY PROFILE */
+.profile .table tbody > tr > th,
+.profile .table tbody > tr > td {
 border-top: 0px;
 }
 
-.species-left-column .table tbody > tr > th,
-.species-right-column .table tbody > tr > th {
+.profile .table tbody > tr > th {
 color: #aaa;
 font-weight: normal;
 width: 130px;
 }
 
-.species-left-column caption,
-.species-right-column caption {
+.profile caption {
 font-size: 20px;
 font-weight: bold;
 text-align: left;
@@ -744,8 +741,8 @@ margin-top: 10px;
 display: block;
 }
 
-.table tbody > tr > th,
-.table tbody > tr > td {
+.profile .table tbody > tr > th,
+.profile .table tbody > tr > td {
 line-height: 1.2;
 }
 
