@@ -779,6 +779,45 @@ background: url("../images/gallery_next.png") no-repeat;
 }
 
 
+/* TABLES for listings */
+.views-table.table-bordered {
+border: 0;
+border-bottom: 1px solid #DDD;
+}
+
+.views-table thead {
+background: #F2F2F2;
+border-bottom: 2px solid #aaa;
+color: #888;
+}
+
+.views-table.table-bordered > tbody > tr > td,
+.views-table.table-bordered > thead > tr > th {
+border: 0;
+}
+
+.views-table th.header {
+background-image: url('../images/sort.png'); /* replaces bg.gif from Bootstrap 2 */
+cursor: pointer;
+font-weight: bold;
+background-repeat: no-repeat;
+background-position: center right;
+vertical-align: middle;
+}
+
+.views-table th.headerSortDown {
+background-image: url('../images/desc.png'); /* replaces desc.gif from Bootstrap 2 */
+}
+
+.views-table th.headerSortUp {
+background-image: url('../images/asc.png'); /* replaces asc.gif from Bootstrap 2 */
+}
+
+.views-table.table > tbody > tr > td.active {
+background-color: #fff;
+}
+
+
 /* Colour theme for CMS portal.
     To be moved in a different stylesheet */
 /* HEADER */
