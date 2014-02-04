@@ -7,7 +7,7 @@
 /**
  * Overrides theme_pager().
  */
-function cms_frontend_pager($variables) {
+function default_cms_frontend_pager($variables) {
   $output = "";
   $items = array();
   $tags = $variables['tags'];
@@ -162,7 +162,7 @@ function pager_container($items, $items_per_page = 0, $pager_first, $pager_last)
   $output .= '<div class="generic-pagination container well"><div class="row">';    
   
   //diplay number of items per page and the pages interval
-  $output .= '<div class="text-muted total-items col-md-3">';
+  $output .= '<div>';
   if(!empty($items_per_page)):
     $output .= '<span class="">Showing '.$items_per_page.' items ('.$pager_first.' to '.$pager_last.')</span>';
   endif;
