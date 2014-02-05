@@ -1,4 +1,4 @@
-<div class="span5">
+
     <?php
         if (isset($node->field_project_images) && !empty($node->field_project_images)) {
     ?>
@@ -42,4 +42,4 @@
     <?php
         }
     ?>
-</div>
+
