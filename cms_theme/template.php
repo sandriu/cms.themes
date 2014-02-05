@@ -83,6 +83,11 @@ function CMS_theme_theme() {
             'template' => 'templates/forms/project/add',
             'path' => drupal_get_path('theme', 'cms_theme'),
         ),
+        'working_group_node_form' => array(
+            'render element' => 'form',
+            'template' => 'templates/forms/working_group/add',
+            'path' => drupal_get_path('theme', 'cms_theme'),
+        ),
     );
 }
 
