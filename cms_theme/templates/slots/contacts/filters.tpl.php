@@ -41,7 +41,9 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="clearfix"></div>
+
                             <div id="edit-tid-wrapper" class="views-exposed-widget">
                                 <label for="instrument">
                                     <?php echo t('CMS Instrument'); ?>
@@ -196,14 +198,18 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="clearfix"></div>
-
-                            <div class="views-exposed-widget views-submit-button">
-                                <button class="btn btn-primary form-submit" name="" value="Search" type="submit">Search</button>
-                            </div>
-
-                            <div class="views-exposed-widget views-reset-button">
-                                <a class="reset-link" id="edit-reset" name="op" href="<?php echo $data['form_reset_url']; ?>">Clear filters</a>
+                            <div class="btn-toolbar">
+                                    <button class="btn btn-primary form-submit" name="" value="Search" type="submit">
+                                        Search
+                                    </button>
+                                    <a class="btn" id="edit-reset" name="op" href="<?php echo $data['form_reset_url']; ?>">Clear filters</a>
+                                    <button class="btn btn-danger form-submit pull-right" name="clear_cache"
+                                            title="WARNING: Really slow! Bypass cache and refresh from LDAP server. Use it if you suspect data is stale (Data was edited from another website)"
+                                            value="Search" type="submit">
+                                        Clear cache
+                                    </button>
                             </div>
                         </div>
                     </div>
