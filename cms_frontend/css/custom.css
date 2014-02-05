@@ -196,6 +196,7 @@ text-decoration: none;
 
 .global-menu .dropdown-menu {
 box-shadow: none;
+padding-left: 11px;
 }
 /* end refactoring the global menu */
 
