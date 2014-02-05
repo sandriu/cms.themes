@@ -1,3 +1,41 @@
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                <i class="icon icon-question-sign"></i> Help
+            </a>
+        </div>
+        <div id="collapseOne" class="accordion-body collapse">
+            <div class="accordion-inner">
+                The form below works with the contact located on the LDAP server. LDAP is a central database management interface for all CMS family websites.
+                <br />
+                <strong>Important notes</strong>
+                <ul>
+                    <li>The field <em>"Per field operator"</em> applies only to <strong>CMS Instrument</strong>,
+                        <strong>Region</strong>, <strong>Status person</strong> and <strong>Status organization</strong>
+                    </li>
+                    <li>
+                        The <em>"Per field operator"</em> applies to multiple values inside a single field:
+                        <ul>
+                            <li><em>Is all of</em> - means that contact has to have <strong>ALL</strong> the values</li>
+                            <li><em>Is one of</em> - means that contact has to have <strong>AT LEAST ONE</strong> value among filtered</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>
+                    <strong>Technical note</strong><br />
+                    Due to performance issues, the listing is caching the data for
+                    <strong><?php echo CMS_CONTACTS_CACHE_LIFETIME / 60; ?></strong> minutes, so if others change a contact
+                    this listing form would not pick them up.
+                    <br />
+                    You need to clear the cache to get the updates. However, the edit form is loading the latest data from
+                    the server to ensure you are editing the newest data.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
 <?php
 render_simple_slot('filters', 'contacts',
     array(

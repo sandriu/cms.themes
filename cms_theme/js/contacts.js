@@ -79,13 +79,5 @@
                 if ($(this).val().length < 3 && e.keyCode != 13) return;
                 dt.fnFilter($(this).val());
             });
-
-        $('.accordion-toggle').each(function(){
-            var toggle = $(this);
-            if (toggle.data('toggle') == 'collapse') {
-                holder = toggle.attr('href');
-                $(holder).css('overflow', 'visible');
-            }
-        });
     });
 })(jQuery);
