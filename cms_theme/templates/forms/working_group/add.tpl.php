@@ -8,6 +8,6 @@
 ?>
 <h3>Reorder related documents</h3>
 <?php
-    print views_embed_view('meeting_documents_list_reorder','wg_doc_reorder', $node_id);
+    print views_embed_view('working_group_documents_reorder','wg_doc_reorder', $node_id);
 
 ?>
