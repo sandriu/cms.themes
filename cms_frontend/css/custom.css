@@ -718,8 +718,9 @@ table.views-table > caption {
 
 /* SPECIES PROFILE,
   COUNTRY PROFILE,
-  PROJECT PROFILE and 
-  MEETING PROFILE */
+  PROJECT PROFILE,
+  MEETING PROFILE and 
+  INSTRUMENT PROFILE */
 .profile .table tbody > tr > th,
 .profile .table tbody > tr > td {
 border-top: 0px;
@@ -798,6 +799,10 @@ font-weight: bold;
 
 .meeting-left .field-label {
 display: none;
+}
+
+.instrument-full-width tr.odd {
+background: transparent;
 }
 
 
