@@ -796,6 +796,10 @@ font-size: 20px;
 font-weight: bold;
 }
 
+.meeting-left .field-label {
+display: none;
+}
+
 
 /* TABLES for listings */
 .views-table {
