@@ -717,8 +717,9 @@ table.views-table > caption {
 
 
 /* SPECIES PROFILE,
-  COUNTRY PROFILE and
-  PROJECT PROFILE */
+  COUNTRY PROFILE,
+  PROJECT PROFILE and 
+  MEETING PROFILE */
 .profile .table tbody > tr > th,
 .profile .table tbody > tr > td {
 border-top: 0px;
@@ -788,6 +789,11 @@ border-color: #ddd;
 .threats .field-item {
 background: url("../images/gray_square.png") 0px 6px no-repeat;
 padding-left: 18px;
+}
+
+.meeting-full-width h4 {
+font-size: 20px;
+font-weight: bold;
 }
 
 
