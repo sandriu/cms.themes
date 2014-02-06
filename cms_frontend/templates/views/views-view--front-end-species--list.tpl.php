@@ -26,7 +26,7 @@
 * @ingroup views_templates
 */
 ?>
-<div class="<?php print $classes; ?>">
+<div class="container <?php print $classes; ?>">
     <?php print render($title_prefix); ?>
     <?php if ($title): ?>
         <?php print $title; ?>
@@ -34,18 +34,19 @@
 
     <?php print render($title_suffix); ?>
 
-    <?php if ($exposed): ?>
-        <div class="view-filters col-md-6 well">
-            <?php print $exposed; ?>
-        </div>
-    <?php endif; ?>
+    <div class="row">
+      <?php if ($exposed): ?>
+          <div class="view-filters col-md-6 well">
+              <?php print $exposed; ?>
+          </div>
+      <?php endif; ?>
 
-    <?php if ($header): ?>
-        <div class="view-header col-md-6">
-            <?php print $header; ?>
-        </div>
-    <?php endif; ?>
-
+      <?php if ($header): ?>
+          <div class="view-header col-md-6">
+              <?php print $header; ?>
+          </div>
+      <?php endif; ?>
+    </div>
 
     <?php if ($attachment_before): ?>
         <div class="attachment attachment-before">
@@ -54,9 +55,11 @@
     <?php endif; ?>
 
     <?php if ($rows): ?>
-        <div class="view-content">
+      <div class="row">
+        <div class="view-content col-md-12">
             <?php print $rows; ?>
         </div>
+      </div>
     <?php elseif ($empty): ?>
         <div class="view-empty">
             <?php print $empty; ?>
