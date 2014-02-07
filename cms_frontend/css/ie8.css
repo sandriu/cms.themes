@@ -167,15 +167,26 @@ max-height: 38px;
 }
 
 
-/* fixes for Species List page */
+/* fixes for Species List page,
+  Species profile */
 .view-front-end-species .col-md-6 {
 width: 470px;
 }
 
-.view-front-end-species .view-filters {
+.view-front-end-species .view-filters,
+.species-left-column {
 float: left;
 }
 
-.view-front-end-species .view-header {
+.view-front-end-species .view-header,
+.species-right-column {
 float: right;
+}
+
+.container .col-md-8.species-left-column {
+width: 627px;
+}
+
+.container .col-md-4.species-right-column {
+width: 313px;
 }
