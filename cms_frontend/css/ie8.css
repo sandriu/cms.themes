@@ -125,32 +125,6 @@ float: left;
 }
 
 
-/* COMMENTS */
-.comment {
-width: 698px;
-}
-
-.indented .comment {
-width: 673px;
-}
-
-.indented .indented .comment {
-width: 648px;
-}
-
-.indented .indented .indented .comment {
-width: 623px;
-}
-
-.comment .attribution.col-md-2 {
-width: 16.618%;
-}
-
-.comment .comment-text.col-md-10 {
-width: 83.381%;
-}
-
-
 /* CHANGES for integrating the old header */
 .left-header {
 width: 81px;
