@@ -9,7 +9,7 @@
  * Overrides theme_menu_tree().
  */
 function cms_frontend_menu_tree(&$variables) {
-    return '<div class="container"><ul class="global-menu menu nav navbar-nav">' . $variables['tree'] . '</ul></div>';
+    return '<ul class="menu nav">' . $variables['tree'] . '</ul>';
 }
 
 /*
