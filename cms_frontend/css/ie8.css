@@ -125,32 +125,6 @@ float: left;
 }
 
 
-/* COMMENTS */
-.comment {
-width: 698px;
-}
-
-.indented .comment {
-width: 673px;
-}
-
-.indented .indented .comment {
-width: 648px;
-}
-
-.indented .indented .indented .comment {
-width: 623px;
-}
-
-.comment .attribution.col-md-2 {
-width: 16.618%;
-}
-
-.comment .comment-text.col-md-10 {
-width: 83.381%;
-}
-
-
 /* CHANGES for integrating the old header */
 .left-header {
 width: 81px;
@@ -190,4 +164,49 @@ margin-left: 0;
 .submenu,
 .region-tertiary-menu {
 max-height: 38px;
+}
+
+
+/* fixes for Species List page,
+  Species profile,
+  Project profile,
+  Country profile,
+  Instrument profile,
+  Meeting profile */
+.view-front-end-species .col-md-6 {
+width: 470px;
+}
+
+.view-front-end-species .view-filters,
+.species-left-column,
+.project-profile-left,
+.country-profile-left,
+.instrument-left,
+.meeting-left {
+float: left;
+}
+
+.view-front-end-species .view-header,
+.species-right-column,
+.project-profile-right,
+.country-profile-right,
+.instrument-right,
+.meeting-right {
+float: right;
+}
+
+.container .col-md-8.species-left-column,
+.container .col-md-8.project-profile-left,
+.container .col-md-8.country-profile-left,
+.container .col-md-8.instrument-left,
+.container .col-md-8.meeting-left {
+width: 627px;
+}
+
+.container .col-md-4.species-right-column,
+.container .col-md-4.project-profile-right,
+.container .col-md-4.country-profile-right,
+.container .col-md-4.instrument-right,
+.container .col-md-4.meeting-right {
+width: 313px;
 }
