@@ -170,7 +170,8 @@ max-height: 38px;
 /* fixes for Species List page,
   Species profile,
   Project profile,
-  Country profile */
+  Country profile,
+  Instrument profile */
 .view-front-end-species .col-md-6 {
 width: 470px;
 }
@@ -178,25 +179,29 @@ width: 470px;
 .view-front-end-species .view-filters,
 .species-left-column,
 .project-profile-left,
-.country-profile-left {
+.country-profile-left,
+.instrument-left {
 float: left;
 }
 
 .view-front-end-species .view-header,
 .species-right-column,
 .project-profile-right,
-.country-profile-right {
+.country-profile-right,
+.instrument-right {
 float: right;
 }
 
 .container .col-md-8.species-left-column,
 .container .col-md-8.project-profile-left,
-.container .col-md-8.country-profile-left {
+.container .col-md-8.country-profile-left,
+.container .col-md-8.instrument-left {
 width: 627px;
 }
 
 .container .col-md-4.species-right-column,
 .container .col-md-4.project-profile-right,
-.container .col-md-4.country-profile-right {
+.container .col-md-4.country-profile-right,
+.container .col-md-4.instrument-right {
 width: 313px;
 }
