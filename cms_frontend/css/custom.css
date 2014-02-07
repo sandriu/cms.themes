@@ -15,6 +15,10 @@ background: url("../images/external.png") 100% 40% no-repeat;
 padding-right: 16px;
 }
 
+a {
+color: #0066C0;
+}
+
 
 /*  HEADER */
 .site-identity {
@@ -803,6 +807,16 @@ display: none;
 
 .instrument-full-width tr.odd {
 background: transparent;
+}
+
+.profile #related-content-tabs a {
+font-weight: bold;
+text-transform: uppercase;
+color: #0066C0;
+}
+
+.profile #related-content-tabs .active a {
+color: #444;
 }
 
 
