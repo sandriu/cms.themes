@@ -560,18 +560,6 @@ background: rgba(112, 112, 112, 0.62);
 background: rgba(66, 65, 65, 0.62);
 }
 
-.node-nfp-manual .field,
-.node-community-checklist .field,
-.node-practice-example .field,
-.field-name-field-article-tag-regions,
-.field-name-field-article-tag-treat-agr-mou {
-margin-bottom: 20px;
-}
-
-.node-article.node-promoted .field-name-field-article-tag-regions {
-margin-top: 20px;
-}
-
 #node-3916 dd,
 .node-page dd {
 margin-left: 40px;
@@ -613,10 +601,6 @@ margin-top: 30px; /* because breadcrumbs belong to center-column, not to header 
 list-style-type: square;
 color: #999;
 padding-left: 20px;
-}
-
-.indented {
-margin-left: 25px;
 }
 
 .form-group {
@@ -712,6 +696,10 @@ line-height: 1.2;
 .species-right-column caption {
 border-top: 1px solid #ddd;
 padding-top: 15px;
+}
+
+.view-front-end-species .col-md-12 {
+margin-top: 30px;
 }
 
 body .carousel-inner {
