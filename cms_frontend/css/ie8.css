@@ -165,3 +165,17 @@ margin-left: 0;
 .region-tertiary-menu {
 max-height: 38px;
 }
+
+
+/* fixes for Species List page */
+.view-front-end-species .col-md-6 {
+width: 470px;
+}
+
+.view-front-end-species .view-filters {
+float: left;
+}
+
+.view-front-end-species .view-header {
+float: right;
+}
