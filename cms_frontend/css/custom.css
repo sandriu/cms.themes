@@ -698,6 +698,10 @@ border-top: 1px solid #ddd;
 padding-top: 15px;
 }
 
+.view-front-end-species .col-md-12 {
+margin-top: 30px;
+}
+
 body .carousel-inner {
 display: inline-block;
 width: 76%;
