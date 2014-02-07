@@ -582,52 +582,6 @@ padding: 5px 0px;
 }
 
 
-
-/* COMMENTS */
-.comment {
-margin-bottom: 15px;
-}
-
-.comment .comment-text { /* partially from DRUPAL */
-border: 1px solid #d3d7d9;
-padding: 10px 25px; /* do NOT uncomment */
-}
-
-.comment .comment-arrow { /* partially from DRUPAL */
-background: url(../images/comment-arrow.png) no-repeat 0 center transparent;
-height: 40px;
-margin-left: -45px;
-margin-top: 10px;
-position: absolute;
-width: 20px;
-}
-
-.comment-time {
-font-size: 10px;
-margin-bottom: 0;
-}
-
-.commenter-name {
-font-style: normal;
-font-weight: bold;
-margin-bottom: 0px;
-}
-
-.comment-text .links li {
-margin-right: 5px;
-}
-
-.comment h3,
-.comment-wrapper h2  {
-font-size: 18px;
-}
-
-#block-comment-recent .media-body a,
-#block-comment-recent .media-body span {
-font-size: 13px;
-}
-
-
 /* FIXES */
 .region-secondary-menu .menu.nav {
 padding-left: 12px;
