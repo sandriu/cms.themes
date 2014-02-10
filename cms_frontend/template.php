@@ -199,6 +199,7 @@ function cms_frontend_preprocess_node(&$variables){
  * Preprocess page load
  */
 function cms_frontend_preprocess_page(&$variables, $hook){
+    
     //use page--forum template for content type forum
     if (isset($variables['node']) && $variables['node']->type == 'forum')
         $variables['theme_hook_suggestions'][] = 'page__forum';
@@ -206,15 +207,15 @@ function cms_frontend_preprocess_page(&$variables, $hook){
     //remove user picture from account page
     if (arg(0)=="user" || arg(0)=="users" ) {
         unset ($variables['page']['content']['system_main']['user_picture']);
-    }
-
-    //set theme for primary and secondary menu
+    }        
+    
+    //set theme for primary menu
+    $variables['page']['primary_menu']['domain_menu_block_main_menu']['#content']['#theme_wrappers'] = 
+            array('menu_tree__menu_frontend_main_menu');
     $variables['page']['primary_menu']['menu_menu-frontend-main-menu']['#theme_wrappers'] =
             array('menu_tree__menu_frontend_main_menu');
-    $variables['page']['secondary_menu']['menu_block_1']['#content']['#theme_wrappers'] =
-            array('menu_tree__menu_frontend_main_menu_secondary');
-    $variables['page']['tertiary_menu']['menu_block_3']['#content']['#theme_wrappers'] =
-            array('menu_tree__menu_frontend_main_menu_tertiary');
+    
+    //set theme for footer menu
     $variables['page']['footer_menu']['menu_block_2']['#content']['#theme_wrappers'] =
             array('menu_tree__menu_front_end_footer_menu');
 }
