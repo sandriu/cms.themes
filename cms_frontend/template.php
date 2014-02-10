@@ -210,7 +210,7 @@ function cms_frontend_preprocess_page(&$variables, $hook){
     }        
     
     //set theme for primary menu
-    $variables['page']['primary_menu']['domain_menu_block_main_menu']['#content']['#theme_wrappers'] = 
+    $variables['page']['primary_menu']['domain_menu_block_front_end_main_menus']['#content']['#theme_wrappers'] = 
             array('menu_tree__menu_frontend_main_menu');
     $variables['page']['primary_menu']['menu_menu-frontend-main-menu']['#theme_wrappers'] =
             array('menu_tree__menu_frontend_main_menu');
