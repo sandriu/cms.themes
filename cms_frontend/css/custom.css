@@ -661,8 +661,9 @@ table.views-table > caption {
 /* SPECIES PROFILE,
   COUNTRY PROFILE,
   PROJECT PROFILE,
-  MEETING PROFILE and 
-  INSTRUMENT PROFILE */
+  MEETING PROFILE, 
+  INSTRUMENT PROFILE and
+  PUBLICATION PROFILE */
 .profile .table tbody > tr > th,
 .profile .table tbody > tr > td {
 border-top: 0px;
@@ -729,7 +730,7 @@ background: url("../images/gallery_previous.png") no-repeat;
 background: url("../images/gallery_next.png") no-repeat;
 }
 
-.project-profile-right hr {
+.profile hr {
 border-color: #ddd;
 }
 
