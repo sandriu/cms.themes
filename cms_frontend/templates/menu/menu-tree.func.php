@@ -33,3 +33,10 @@ function cms_frontend_menu_tree__menu_frontend_main_menu(&$variables) {
 function cms_frontend_menu_tree__menu_front_end_footer_menu(&$variables) {
     return '<ul class="menu nav">' . $variables['tree'] . '</ul>';
 }
+
+/**
+ * Bootstrap theme wrapper function for the footer menu links.
+ */
+function cms_frontend_menu_tree__menu_footer_second_menu(&$variables) {
+    return '<ul class="menu nav">' . $variables['tree'] . '</ul>';
+}

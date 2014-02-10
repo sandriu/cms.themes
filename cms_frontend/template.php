@@ -218,4 +218,7 @@ function cms_frontend_preprocess_page(&$variables, $hook){
     //set theme for footer menu
     $variables['page']['footer_menu']['menu_block_2']['#content']['#theme_wrappers'] =
             array('menu_tree__menu_front_end_footer_menu');
+    
+    $variables['page']['footer_second_row_right']['menu_menu-footer-second-menu']['#theme_wrappers'] = 
+            array('menu_tree__menu_footer_second_menu');
 }
