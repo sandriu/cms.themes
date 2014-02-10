@@ -4,7 +4,6 @@ require_once dirname(__FILE__)."/templates/system/pager.func.php";
 require_once dirname(__FILE__)."/templates/menu/menu-tree.func.php";
 require_once dirname(__FILE__)."/templates/menu/menu-link.func.php";
 require_once dirname(__FILE__)."/templates/menu/menu-position.func.php";
-require_once dirname(__FILE__)."/templates/comments/comments.func.php";
 require_once dirname(__FILE__)."/templates/profile2/profile.func.php";
 
 /*
