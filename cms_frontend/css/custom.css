@@ -741,6 +741,31 @@ font-size: 20px;
 font-weight: bold;
 }
 
+.meeting-full-width li {
+list-style-type: none;
+}
+
+.meeting-full-width .sticky-table th {
+display: none;
+border-bottom: 0;
+}
+
+.meeting-full-width .views-table tr {
+border-bottom: 1px solid #ddd;
+}
+
+.meeting-full-width .views-table ul {
+padding-left: 0;
+}
+
+.meeting-full-width .sticky-table.table {
+margin-bottom: 0;
+}
+
+.meeting-full-width .field-collection-view {
+background: #fff;
+}
+
 .meeting-left .field-label {
 display: none;
 }
@@ -799,6 +824,10 @@ border-bottom: 1px solid #DDD;
 background: #F2F2F2;
 border-bottom: 2px solid #aaa;
 color: #888;
+}
+
+.meeting-full-width .views-table thead {
+border: 0;
 }
 
 .views-table.table-bordered > tbody > tr > td,
