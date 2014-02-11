@@ -463,17 +463,8 @@ height: 25px;
 }
 
 .disclaimers h2 {
-font-size: 12px;
+font-size: 13px;
 margin-top: 0px;
-}
-
-.menu-name-menu-footer-menu a {
-color: #fff;
-}
-
-.menu-name-menu-footer-menu li {
-display: inline-block;
-margin-right: 5px;
 }
 
 .simplenews-subscribe label {
@@ -495,19 +486,24 @@ background-color: #3276b1;
 border-color: #285e8e;
 }
 
-.menu-name-menu-footer-menu .first.last {
-background: none; /* delete this block if Sitemap link becomes public */
-}
-
-.menu-name-menu-footer-menu .first {
-background: url("../images/white_middle_point.png") 48px 4px no-repeat;
-padding-right: 10px;
-}
-
 .region-footer-second-row-right {
 text-align: right;
 }
 
+.region-footer-second-row-right ul .leaf {
+display: inline-block;
+padding-left: 2px;
+background: url("../images/white_middle_point.png") 53px 5px no-repeat;
+padding-right: 10px;
+}
+
+.region-footer-second-row-right a {
+color: #fff;
+}
+
+.region-footer-second-row-right ul .last {
+background: none;
+}
 
 
 /* ARTICLES */
