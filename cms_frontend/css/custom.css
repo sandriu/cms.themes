@@ -756,6 +756,7 @@ border-bottom: 1px solid #ddd;
 
 .meeting-full-width .views-table ul {
 padding-left: 0;
+margin-bottom: 0;
 }
 
 .meeting-full-width .sticky-table.table {
@@ -764,6 +765,10 @@ margin-bottom: 0;
 
 .meeting-full-width .field-collection-view {
 background: #fff;
+}
+
+.meeting-full-width .views-table tr tr {
+border-bottom: 0;
 }
 
 .meeting-left .field-label {
