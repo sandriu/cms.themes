@@ -3,7 +3,7 @@
   <div class="row">
     <div class="meeting-left profile col-md-8">
       <?php echo render($content['field_meeting_description']); ?>
-      <label>[Please insert physical map here]</label>
+      <div id="gmap" style="height: 300px;"></div>
     </div>
 
     <div class="meeting-right well profile col-md-4">
