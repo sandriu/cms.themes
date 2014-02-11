@@ -782,6 +782,12 @@ display: none; /* temporary */
 padding-bottom: 6px;
 }
 
+body .document-right tr:first-of-type th,
+body .document-right tr:first-of-type td {
+font-weight: bold;
+font-size: 16px;
+}
+
 
 /* TABLES for listings */
 .views-table {
