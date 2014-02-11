@@ -662,8 +662,9 @@ table.views-table > caption {
   COUNTRY PROFILE,
   PROJECT PROFILE,
   MEETING PROFILE, 
-  INSTRUMENT PROFILE and
-  PUBLICATION PROFILE */
+  INSTRUMENT PROFILE,
+  PUBLICATION PROFILE and 
+  DOCUMENT PROFILE*/
 .profile .table tbody > tr > th,
 .profile .table tbody > tr > td {
 border-top: 0px;
@@ -760,6 +761,29 @@ color: #0066C0;
 
 .profile #related-content-tabs .active a {
 color: #444;
+}
+
+.document-left .field-collection-container {
+border-bottom: 0;
+}
+
+.document-left .field-collection-view {
+background: #FFF;
+padding-left: 0;
+border-bottom: 0;
+margin-left: 0;
+}
+
+.document-left .sticky-table {
+width: 100%;
+}
+
+.document-left thead {
+display: none; /* temporary */
+}
+
+.document-left .field_document_file_language div {
+padding-bottom: 6px;
 }
 
 
