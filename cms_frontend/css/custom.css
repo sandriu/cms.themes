@@ -820,7 +820,8 @@ border: 0;
 border-bottom: 1px solid #DDD;
 }
 
-.views-table thead {
+.views-table thead,
+.publication-left .sticky-table thead {
 background: #F2F2F2;
 border-bottom: 2px solid #aaa;
 color: #888;
