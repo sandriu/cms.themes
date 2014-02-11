@@ -18,10 +18,10 @@ if(check_display_field($content, 'field_species_range_states') || check_display_
             echo render($content['field_species_range_states_notes']); ?>
         }
 	    */
-        $data = CMSSpecies::get_range_states_for_ammap($node);
+
         ?>
         <tr>
-            <td colspan="2"><?php echo drupal_ammap_render_map($data, array('legend'=>false)); ?></td>
+            <td colspan="2"><?php echo drupal_ammap_render_map($node->ammap_data, array('legend'=>false)); ?></td>
         </tr>
 
         </tbody>
