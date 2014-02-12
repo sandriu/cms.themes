@@ -506,6 +506,123 @@ background: none;
 }
 
 
+/* HOMEPAGE slideshow */
+.front .center-column {
+margin-top: 40px; /* temporary, until we hide submenu on this page */
+}
+
+#block-views-news-slideshow-block {
+margin-bottom: 20px;
+}
+
+.view-news-slideshow .image-field-caption {
+display: none; /* remove if images have external copyright */
+}
+
+.view-news-slideshow img {
+width: 750px;
+height: 390px; /*455px;*/
+border-radius: 6px;
+}
+
+.view-news-slideshow .views-field-title {
+background-image: -webkit-linear-gradient(top, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
+background-image: -moz-linear-gradient(top, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
+background-image: -o-linear-gradient(top, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
+background-image: linear-gradient(to bottom, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
+display: block;
+position: absolute;
+top: 236px;
+width: 750px;
+height: 112px;
+padding: 0px 20px;
+}
+
+.jcarousel-skin-default .jcarousel-navigation {
+background: rgba(0, 56, 113, 0.7);
+position: absolute;
+bottom: 0px;
+width: 100%;
+height: 42px;
+border-bottom-left-radius: 6px;
+border-bottom-right-radius: 6px;
+padding-top: 12px;
+padding-right: 20px;
+text-align: right;
+}
+
+.view-news-slideshow .views-field-title a {
+font-size: 30px; /* as in the HTML proposal */
+font-size: 23px; /* fallback size in case news item has a very long title - avoid displaying it on 3 rows */
+font-weight: bold;
+line-height: 32px;
+color: #fff;
+display: block;
+width: 100%;
+margin-top: 40px;
+padding-bottom: 6px;
+border-bottom: 1px solid #FFF;
+text-align: left;
+min-height: 71px;
+}
+
+.view-news-slideshow .views-field-title a:hover {
+text-decoration: none;
+color: #FFD116;
+}
+
+.jcarousel-skin-default .jcarousel-navigation a {
+color: #fff;
+}
+
+.views-slideshow-slide-counter {
+padding: 0px 20px;
+}
+
+.jcarousel-skin-default .jcarousel-item {
+border: 0;
+}
+
+.jcarousel-skin-default .jcarousel-container-horizontal {
+width: 100%;
+height: 390px;
+padding: 0;
+}
+
+.jcarousel-skin-default .jcarousel-clip-horizontal,
+.jcarousel-skin-default .jcarousel-item {
+width: 100%;
+height: 390px;
+}
+
+body .jcarousel-item,
+.jcarousel-skin-default .jcarousel-item-horizontal {
+margin: 0;
+width: 100%;
+}
+
+.jcarousel-skin-default .jcarousel-next,
+.jcarousel-skin-default .jcarousel-prev,
+.jcarousel-skin-default .jcarousel-navigation li span {
+display: none;
+}
+
+.jcarousel-skin-default .jcarousel-navigation li {
+padding: 0px 16px 0px 0px;
+}
+
+.jcarousel-skin-default .jcarousel-navigation li a {
+background: url("../images/slide-non-active.png") no-repeat;
+display: inline-block;
+width: 16px;
+height: 16px;
+}
+
+.jcarousel-skin-default .jcarousel-navigation li.active a {
+background: url("../images/slide-active.png") no-repeat;
+}
+
+
 /* ARTICLES */
 .article-body .glyphicon-zoom-in {
 font-size: 30px;
