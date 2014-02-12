@@ -696,7 +696,8 @@ border-top: 1px solid #ddd;
 padding-top: 15px;
 }
 
-.view-front-end-species .col-md-12 {
+.view-front-end-species .col-md-12,
+.view-front-end-projects .col-md-12 {
 margin-top: 30px;
 }
 
