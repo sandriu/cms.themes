@@ -2,7 +2,7 @@
 /*
  * Get profile user values
  */
-function get_user_profile($uid, $profile = 'nfp_profile'){
+function get_user_profile($uid, $profile = 'main'){
   $user_profile = profile2_load_by_user($uid, $profile);
   $user_values = array();    
   
@@ -28,7 +28,7 @@ function get_user_profile($uid, $profile = 'nfp_profile'){
 /*
  * Get user image path from profile
  */
-function get_profile_user_image($uid, $profile = 'nfp_profile'){
+function get_profile_user_image($uid, $profile = 'main'){
   $profile=profile2_load_by_user($uid, $profile);
   if(is_object($profile)){
       //Showing 'profile2' image field picture instead of drupal default user image
