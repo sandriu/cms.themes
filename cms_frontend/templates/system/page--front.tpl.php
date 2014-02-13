@@ -43,7 +43,8 @@
 
   <div class="row">
       <?php if (!empty($page['slide_instruments'])): ?>
-        <div class="region col-md-12 center-column">        
+        <div class="region col-md-12 center-column instruments-slideshow">
+          <h3>CMS instruments</h3>
             <?php print render($page['slide_instruments']); ?>          
         </div>
     <?php endif; ?>
