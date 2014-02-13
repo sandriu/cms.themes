@@ -38,18 +38,16 @@
       </div>
     </aside>  
     <?php endif; ?>
-    
-    <?php if (!empty($page['slide_instruments'])): ?>
-    <div class="container">
-      <div class="row">
+
+  </div>
+
+  <div class="row">
+      <?php if (!empty($page['slide_instruments'])): ?>
         <div class="region col-md-12 center-column">        
             <?php print render($page['slide_instruments']); ?>          
         </div>
-      </div>
-    </div>
     <?php endif; ?>
-
-  </div>  
+  </div>
 </div>
 
 <!-- page footer -->
