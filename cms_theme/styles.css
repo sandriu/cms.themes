@@ -254,17 +254,6 @@ img.project-custom-image {
     padding: 0;
 }
 
-#meeting-form .vertical-tabs,
-#legal-instrument-form .vertical-tabs,
-#cms-country-form .vertical-tabs,
-#national-plan-form .vertical-tabs,
-#publication-form .vertical-tabs,
-#national-report-form .vertical-tabs,
-#species-form .vertical-tabs,
-#decision-form .vertical-tabs {
-    display: none;
-}
-
 .dataTables_processing {
     position: absolute;
     top: 5% !important;
