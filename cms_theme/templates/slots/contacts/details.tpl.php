@@ -285,6 +285,15 @@
                 <td>
                     <?php
                     echo $data['statusperson'];
+                    if ($data['countries_nfp']) {
+                    ?>
+                    <br />
+                    <br />
+                    <strong>NFP</strong> (<?php echo t('National Focal point'); ?>):
+                    <br />
+                    <?php
+                        echo $data['countries_nfp'];
+                    }
                     ?>
                 </td>
             </tr>
