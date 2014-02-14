@@ -538,7 +538,7 @@ height: 112px;
 padding: 0px 20px;
 }
 
-.jcarousel-skin-default .jcarousel-navigation {
+.view-news-slideshow .jcarousel-skin-default .jcarousel-navigation {
 background: rgba(0, 56, 113, 0.7);
 position: absolute;
 bottom: 0px;
@@ -629,218 +629,93 @@ padding-bottom: 10px;
 }
 
 .instruments-slideshow .jcarousel-container-horizontal,
-.instruments-slideshow .jcarousel-clip-horizontal,
-.instruments-slideshow .jcarousel-item {
-height: 120px;
+.instruments-slideshow .jcarousel-clip-horizontal {
+height: 126px;
 }
 
 .instruments-slideshow .jcarousel-next,
-.instruments-slideshow .jcarousel-prev,
-.instruments-slideshow .jcarousel-navigation li span {
+.instruments-slideshow .jcarousel-prev {
 display: inline-block;
+z-index: 4;
 }
 
 body .instruments-slideshow .jcarousel-item {
-width: 120px !important;
-height: 120px;
+width: 120px;
+height: 126px;
 padding: 0;
-border: 1px solid #ddd;
 border-radius: 6px;
 margin-right: 20px;
+border: 1px solid #DDD;
 }
 
-body .instruments-slideshow .jcarousel-item:hover {
-border: 1px solid #0066C0;
+.instruments-slideshow .jcarousel-item:hover {
+border: 1px solid #888; /*#0066C0;*/
 }
 
 .instruments-slideshow .jcarousel-item span {
 display: block;
-padding: 80px 5px 5px 5px;
+padding: 5px;
 font-size: 12px;
 }
 
-.instruments-slideshow .jcarousel-item:first-of-type {
-margin-left: 40px; /* TEMPORARY */
- }
-
-body .instruments-slideshow .jcarousel-item-1 { /* collection of instruments with logo */
-padding: 10px;
+.instruments-slideshow .jcarousel-item .views-field-title {
+position: absolute;
+top: 70px;
+width: 120px;
+height: 55px;
+background: #FFF;
+z-index: 2;
+border-bottom-left-radius: 6px;
+border-bottom-right-radius: 6px;
+border-right: 1px solid #DDD;
 }
 
-.instruments-slideshow .jcarousel-item-1 span {
+.instruments-slideshow .jcarousel-item .views-field-field-picture {
+position: absolute;
+top: 1px;
+width: 120px;
+height: 74px;
+border-top-left-radius: 6px;
+border-top-right-radius: 6px;
+}
+
+.instruments-slideshow .jcarousel-item img {
+border-top-left-radius: 6px;
+border-top-right-radius: 6px;
+}
+
+.instruments-slideshow .jcarousel-navigation {
 display: none;
 }
 
-/* TODO: assign to each sprite image an item-x */
-.instruments-slideshow .jcarousel-item div,
-.IOSEA, .Marine-Turtles, .Mediterranean-Monk-Seal, .Pacific-Islands-Cetaceans, .RAPTORS, .Ruddy-headed-Goose, .Saiga-Antelope, .Sharks, .Siberian_Crane, .Slender-billed-Curlew, .South-Andean-Huemul, .Wadden-Sea-Seals, .West-African-Elephants, .Western-African-Aquatic-Mammals, .ACAP, .ACCOBAMS, .AEWA, .Aquatic-Warbler, .ASCOBANS, .Bukhara-Deer, .Dugong, .EUROBATS, .Gorilla, .Grassland-Birds, .Great-Bustard, .High-Andean-Flamingos{
-	background: url("../images/instruments-slideshow-sprites.png") no-repeat;
-  max-height: 76px;
+.instruments-slideshow .jcarousel-skin-default .jcarousel-next,
+.instruments-slideshow .jcarousel-skin-default .jcarousel-prev {
+display: block;
+width: 30px;
+height: 100px;
+margin-top: -42px;
+background-repeat: no-repeat;
+background-color: #0066C0;
+background-position: 50%;
+opacity: 0.9;
 }
 
-body .instruments-slideshow .jcarousel-item-1 div { /* collection of instruments with logo */
-max-height: 100px;
+.instruments-slideshow .jcarousel-skin-default .jcarousel-next:hover,
+.instruments-slideshow .jcarousel-skin-default .jcarousel-prev:hover {
+text-decoration: none;
+background-color: #FFD116;
 }
 
-.IOSEA{
-	background-position: -406px -421px ;
-	width: 78px;
-	height: 100px;
+.instruments-slideshow .jcarousel-skin-default .jcarousel-next {
+background-image: url("../images/instruments-slideshow-next.png");
+border-top-right-radius: 6px;
+border-bottom-right-radius: 6px;
 }
 
-.Marine-Turtles{
-	background-position: -698px -428px ;
-	width: 120px;
-	height: 87px;
-}
-
-.Mediterranean-Monk-Seal{
-	background-position: -850px -435px ;
-	width: 120px;
-	height: 76px;
-}
-
-.Pacific-Islands-Cetaceans,
-.instruments-slideshow .jcarousel-item-3 div {
-	background-position: -377px -286px ;
-	width: 120px;
-	height: 90px;
-}
-
-.RAPTORS{
-	background-position: -547px -421px ;
-	width: 88px;
-	height: 100px;
-}
-
-.Ruddy-headed-Goose,
-.instruments-slideshow .jcarousel-item-4 div {
-	background-position: -197px -538px ;
-	width: 120px;
-	height: 76px;
-}
-
-.Saiga-Antelope,
-.instruments-slideshow .jcarousel-item-2 div {
-	background-position: -195px -415px ;
-	width: 120px;
-	height: 82px;
-}
-
-.Sharks{
-	background-position: 0 -541px ;
-	width: 100px;
-	height: 68px;
-}
-
-.Siberian_Crane{
-	background-position: 0 -415px ;
-	width: 120px;
-	height: 84px;
-}
-
-.Slender-billed-Curlew{
-	background-position: -538px -288px ;
-	width: 120px;
-	height: 84px;
-}
-
-.South-Andean-Huemul{
-	background-position: -697px -284px ;
-	width: 120px;
-	height: 82px;
-}
-
-.Wadden-Sea-Seals{
-	background-position: -847px -282px ;
-	width: 100px;
-	height: 100px;
-}
-
-.West-African-Elephants{
-	background-position: -188px -283px ;
-	width: 120px;
-	height: 84px;
-}
-
-.Western-African-Aquatic-Mammals{
-	background-position: -850px -148px ;
-	width: 120px;
-	height: 86px;
-}
-
-.ACAP{
-	background-position: 0 -271px ;
-	width: 82px;
-	height: 100px;
-}
-
-.ACCOBAMS{
-	background-position: -697px -152px ;
-	width: 100px;
-	height: 51px;
-}
-
-.AEWA,
-.instruments-slideshow .jcarousel-item-1 div {
-	background-position: -548px -138px ;
-  width: 100px;
-	height: 100px;
-}
-
-.Aquatic-Warbler{
-	background-position: -381px -134px ;
-	width: 120px;
-	height: 82px;
-}
-
-.ASCOBANS{
-	background-position: -195px -131px ;
-	width: 100px;
-	height: 80px;
-}
-
-.Bukhara-Deer{
-	background-position: 0 -133px ;
-	width: 120px;
-	height: 84px;
-}
-
-.Dugong{
-	background-position: -841px 0;
-	width: 87px;
-	height: 100px;
-}
-
-.EUROBATS{
-	background-position: -701px 0;
-	width: 87px;
-	height: 100px;
-}
-
-.Gorilla{
-	background-position: -543px 0;
-	width: 100px;
-	height: 100px;
-}
-
-.Grassland-Birds,
-.instruments-slideshow .jcarousel-item-5 div{
-	background-position: -380px 0;
-	width: 120px;
-	height: 82px;
-}
-
-.Great-Bustard{
-	background-position: -189px -1px ;
-	width: 120px;
-	height: 82px;
-}
-
-.High-Andean-Flamingos{
-	background-position: 0 0;
-	width: 120px;
-	height: 86px;
+.instruments-slideshow .jcarousel-skin-default .jcarousel-prev {
+background-image: url("../images/instruments-slideshow-prev.png");
+border-top-left-radius: 6px;
+border-bottom-left-radius: 6px;
 }
 /* end instruments slideshow */
 
