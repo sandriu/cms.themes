@@ -229,6 +229,7 @@ function cms_frontend_preprocess_page(&$variables, $hook){
 function cms_frontend_cms_project_activity_formatter($variables) {
     extract($variables); // $item
     $ret = '';
+    $in = '';
     if(!empty($item['#items'])) {        
         foreach($item['#items'] as $idx => $st) {
             $ob = $item[$idx];
@@ -237,6 +238,8 @@ function cms_frontend_cms_project_activity_formatter($variables) {
             $end_date = $ob['end_date'];
             $responsibility = $ob['responsibility'];
             $output = $reference = $ob['output'];
+            
+            $in = $idx == 0? 'in':'';
 
             $body = '<table>';
             $body .= sprintf('<tr><td>'.t('Description').':</td><td>%s</td></tr>',$description);
@@ -255,11 +258,11 @@ function cms_frontend_cms_project_activity_formatter($variables) {
                         </h4>
                      </div>', ++$idx, $idx);
             
-            $ret .= sprintf('<div id="collapse%d" class="panel-collapse collapse">            
+            $ret .= sprintf('<div id="collapse%d" class="panel-collapse collapse %s">            
                         <div class="panel-body">
                             %s
                         </div>
-                    </div>', $idx, $body);
+                    </div>', $idx, $in, $body);
             $ret .= '</div>';            
         }
         return $ret;
