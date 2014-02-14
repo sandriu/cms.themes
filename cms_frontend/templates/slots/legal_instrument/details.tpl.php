@@ -12,68 +12,12 @@
     }
 ?>
 
+<?php if ($node->ammap_data) { ?>
 <h4>
     <?php echo t('Countries'); ?>
 </h4>
-
 <?php
-    foreach ($content['countries_by_status'] as $status => $countries) {
-?>
-<h5>
-    <?php
-        echo $status;
-    ?>
-</h5>
-
-<table class="table table-bordered table-striped table-hover dataTable">
-    <thead>
-        <tr>
-            <th>
-                <?php echo t('Country'); ?>
-            </th>
-
-            <th>
-                <?php echo t('Status'); ?>
-            </th>
-
-            <th>
-                <?php echo t('Date'); ?>
-            </th>
-
-            <th>
-                <?php echo t('Notes'); ?>
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-<?php
-        foreach ($countries as $index => $data) {
-?>
-        <tr>
-            <td>
-                <a href="<?php echo base_path().ADMINISTRATION_PATH.'node'._DS_.$data['nid']; ?>" target="_blank">
-                    <?php echo $data['country'];?>
-                </a>
-            </td>
-
-            <td>
-                <?php echo $data['status'];?>
-            </td>
-
-            <td>
-                <?php echo $data['date'];?>
-            </td>
-
-            <td>
-                <?php echo $data['notes'];?>
-            </td>
-        </tr>
-<?php
-        }
-?>
-    </tbody>
-</table>
-
-<?php
-    }
+    echo drupal_ammap_render_map($node->ammap_data, array('legend' => true));
+    echo views_embed_view('front_end_countries', 'instrument_list', $node->nid);
+}
 ?>
