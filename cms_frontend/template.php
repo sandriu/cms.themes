@@ -222,3 +222,46 @@ function cms_frontend_preprocess_page(&$variables, $hook){
     $variables['page']['footer_second_row_right']['menu_menu-footer-second-menu']['#theme_wrappers'] = 
             array('menu_tree__menu_footer_second_menu');
 }
+
+/*
+ * Format Projects Activity output
+ */
+function cms_frontend_cms_project_activity_formatter($variables) {
+    extract($variables); // $item
+    $ret = '';
+    if(!empty($item['#items'])) {        
+        foreach($item['#items'] as $idx => $st) {
+            $ob = $item[$idx];
+            $description = $ob['description'];
+            $start_date = $ob['start_date'];
+            $end_date = $ob['end_date'];
+            $responsibility = $ob['responsibility'];
+            $output = $reference = $ob['output'];
+
+            $body = '<table>';
+            $body .= sprintf('<tr><td>'.t('Description').':</td><td>%s</td></tr>',$description);
+            $body .= sprintf('<tr><td>'.t('Start date').':</td><td>%s</td></tr>',$start_date);
+            $body .= sprintf('<tr><td>'.t('End date').':</td><td>%s</td></tr>',$end_date);
+            $body .= sprintf('<tr><td>'.t('Responsability').':</td><td>%s</td></tr>',$responsibility);
+            $body .= sprintf('<tr><td>'.t('Output').':</td><td>%s</td></tr>',$output);
+            $body .= '</table>';
+            
+            $ret .= '<div class="panel panel-default">';
+            $ret .= sprintf('<div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse%d">
+                                Activity %d
+                            </a>
+                        </h4>
+                     </div>', ++$idx, $idx);
+            
+            $ret .= sprintf('<div id="collapse%d" class="panel-collapse collapse">            
+                        <div class="panel-body">
+                            %s
+                        </div>
+                    </div>', $idx, $body);
+            $ret .= '</div>';            
+        }
+        return $ret;
+    }
+}
