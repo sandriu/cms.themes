@@ -875,8 +875,9 @@ background: #eee;
 color: rgb(233,94,39);
 }
 
-.author-date .media-heading {
-margin-top: 5px;
+.author-date .media-heading,
+.author-date .user-picture {
+display: none;
 }
 
 .article-photo,
