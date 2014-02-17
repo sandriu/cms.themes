@@ -659,7 +659,7 @@ padding-bottom: 10px;
 
 .instruments-slideshow .jcarousel-container-horizontal,
 .instruments-slideshow .jcarousel-clip-horizontal {
-height: 126px;
+height: 140px;
 }
 
 .instruments-slideshow .jcarousel-next,
@@ -669,8 +669,8 @@ z-index: 4;
 }
 
 body .instruments-slideshow .jcarousel-item {
-width: 120px;
-height: 126px;
+width: 136px;
+height: 140px;
 padding: 0;
 border-radius: 6px;
 margin-right: 20px;
@@ -685,12 +685,13 @@ border: 1px solid #888; /*#0066C0;*/
 display: block;
 padding: 5px;
 font-size: 12px;
+line-height: 15px;
 }
 
 .instruments-slideshow .jcarousel-item .views-field-title {
 position: absolute;
-top: 70px;
-width: 120px;
+top: 83px;
+width: 136px;
 height: 55px;
 background: #FFF;
 z-index: 2;
@@ -702,8 +703,7 @@ border-right: 1px solid #DDD;
 .instruments-slideshow .jcarousel-item .views-field-field-picture {
 position: absolute;
 top: 1px;
-width: 120px;
-height: 74px;
+width: 136px;
 border-top-left-radius: 6px;
 border-top-right-radius: 6px;
 }
@@ -721,8 +721,8 @@ display: none;
 .instruments-slideshow .jcarousel-skin-default .jcarousel-prev {
 display: block;
 width: 30px;
-height: 100px;
-margin-top: -42px;
+height: 118px;
+margin-top: -44px;
 background-repeat: no-repeat;
 background-color: #0066C0;
 background-position: 50%;
