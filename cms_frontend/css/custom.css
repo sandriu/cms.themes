@@ -622,6 +622,35 @@ height: 16px;
 background: url("../images/slide-active.png") no-repeat;
 }
 
+@media screen and (max-width: 1200px) {
+  .view-news-slideshow img {
+  width: 613px;
+  height: 319px;
+  }
+
+  .jcarousel-skin-default .jcarousel-container-horizontal,
+  .jcarousel-skin-default .jcarousel-clip-horizontal,
+  .jcarousel-skin-default .jcarousel-item  {
+  height: 319px;
+  }
+
+  .view-news-slideshow .views-field-title {
+  width: 616px;
+  top: 176px;
+  height: 101px;
+  }
+
+  .view-news-slideshow .views-field-title a {
+  font-size: 19px;
+  line-height: 26px;
+  min-height: 60px;
+  }
+
+  .jcarousel-skin-default .jcarousel-item {
+  border-radius: 6px;
+  }
+}
+
 
 /* INSTRUMENTS slideshow, skin Default */
 .instruments-slideshow {
