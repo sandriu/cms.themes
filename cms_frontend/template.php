@@ -221,6 +221,10 @@ function cms_frontend_preprocess_page(&$variables, $hook){
     
     $variables['page']['footer_second_row_right']['menu_menu-footer-second-menu']['#theme_wrappers'] = 
             array('menu_tree__menu_footer_second_menu');
+    
+    //remove frontpage message that appear when there is not content
+    if(drupal_is_front_page())
+        unset($variables['page']['content']['system_main']['default_message']);
 }
 
 /*
