@@ -749,6 +749,77 @@ border-bottom-left-radius: 6px;
 /* end instruments slideshow */
 
 
+/* TABBED MENU on homepage */
+#block-quicktabs-homepage-tabs {
+margin-bottom: 10px;
+}
+
+.quicktabs_main.quicktabs-style-basic {
+border: 1px solid #E3E3E3;
+border-bottom-left-radius: 6px;
+border-bottom-right-radius: 6px;
+}
+
+ul.quicktabs-tabs.quicktabs-style-basic {
+height: 50px;
+background: #F9F9F9;
+border: 1px solid #E3E3E3;
+border-bottom: 0px;
+border-top-left-radius: 6px;
+border-top-right-radius: 6px;
+}
+
+ul.quicktabs-tabs li {
+display: inline-block;
+}
+
+ul.quicktabs-tabs.quicktabs-style-basic li {
+padding: 12px 20px 15px;
+border: 0;
+}
+
+ul.quicktabs-tabs.quicktabs-style-basic a {
+color: #515866;
+text-transform: uppercase;
+font-size: 15px !important; /* overrides basic.css */
+font-family: Lato !important; /* overrides basic.css */
+}
+
+ul.quicktabs-tabs.quicktabs-style-basic li.active,
+ul.quicktabs-tabs.quicktabs-style-basic li.active:hover {
+border: 1px solid #E3E3E3;
+border-top: 4px solid #FFD116;
+border-bottom: 0px;
+border-top-left-radius: 6px;
+border-top-right-radius: 6px;
+}
+
+ul.quicktabs-tabs.quicktabs-style-basic li.active.first {
+border-left: 0;
+}
+
+ul.quicktabs-tabs.quicktabs-style-basic li:hover {
+border: 0;
+}
+
+ul.quicktabs-tabs.quicktabs-style-basic li a:hover {
+color: #444;
+}
+
+ul.quicktabs-tabs.quicktabs-style-basic li.active a {
+color: #444;
+}
+
+.quicktabs_main.quicktabs-style-basic {
+padding: 30px;
+}
+
+.quicktabs_main.quicktabs-style-basic h2 {
+font-size: 20px;
+margin-top: 0;
+}
+
+
 /* ARTICLES */
 .article-body .glyphicon-zoom-in {
 font-size: 30px;
