@@ -761,7 +761,6 @@ border-bottom-right-radius: 6px;
 
 ul.quicktabs-tabs.quicktabs-style-basic {
 height: 50px;
-background: #F9F9F9;
 border: 1px solid #E3E3E3;
 border-bottom: 0px;
 border-top-left-radius: 6px;
@@ -787,7 +786,6 @@ font-family: Lato !important; /* overrides basic.css */
 ul.quicktabs-tabs.quicktabs-style-basic li.active,
 ul.quicktabs-tabs.quicktabs-style-basic li.active:hover {
 border: 1px solid #E3E3E3;
-border-top: 4px solid #FFD116;
 border-bottom: 0px;
 border-top-left-radius: 6px;
 border-top-right-radius: 6px;
@@ -1299,6 +1297,16 @@ background-image: linear-gradient(to bottom, rgba(0, 56, 113, 0), rgba(0, 56, 11
 
 .view-news-slideshow .jcarousel-skin-default .jcarousel-navigation {
 background: rgba(0, 56, 113, 0.7);
+}
+
+/* TABBED MENU on homepage */
+ul.quicktabs-tabs.quicktabs-style-basic {
+background: #F9F9F9;
+}
+
+ul.quicktabs-tabs.quicktabs-style-basic li.active,
+ul.quicktabs-tabs.quicktabs-style-basic li.active:hover {
+border-top: 4px solid #FFD116;
 }
 /* end colour theme for CMS portal */
 
