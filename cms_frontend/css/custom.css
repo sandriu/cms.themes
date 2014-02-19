@@ -705,19 +705,11 @@ position: absolute;
 top: 83px;
 width: 136px;
 height: 55px;
-background: #FFF;
 z-index: 2;
-border-bottom-left-radius: 6px;
-border-bottom-right-radius: 6px;
-border-right: 1px solid #DDD;
 }
 
 .instruments-slideshow .jcarousel-item .views-field-field-picture {
-position: absolute;
-top: 1px;
 width: 136px;
-border-top-left-radius: 6px;
-border-top-right-radius: 6px;
 }
 
 .instruments-slideshow .jcarousel-item img {
