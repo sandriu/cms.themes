@@ -824,6 +824,82 @@ margin-top: 0;
 }
 
 
+/* CALENDAR on homepage */
+.view-calendar.view .date-nav-wrapper .date-nav {
+height: 0px;
+min-height: 70px;
+}
+
+.view-calendar.view .date-nav-wrapper .date-nav {
+margin-bottom: -26px;
+}
+
+.view-calendar.view .date-nav-wrapper .date-heading h3 {
+font-size: 15px;
+font-weight: bold;
+}
+
+.view-calendar.view .date-nav-wrapper .date-heading h3 a {
+color: #444;
+}
+
+.view-calendar.view .date-nav-wrapper .date-prev,
+.view-calendar.view .date-nav-wrapper .date-next {
+background: none;
+}
+
+.view-calendar .pager li > a {
+border: 1px solid #ddd;
+background-color: transparent;
+width: 22px;
+height: 24px;
+border-radius: 0;
+padding: 0px 6px 0px 0px;
+}
+
+.view-calendar .pager li > a:hover {
+background-color: #ddd;
+border: 1px solid #aaa;
+color: #aaa;
+}
+
+.view-calendar.view .date-nav-wrapper .date-prev a {
+margin-left: 0;
+}
+
+.view-calendar.view .date-nav-wrapper .date-prev a,
+.view-calendar.view .date-nav-wrapper .date-next a {
+font-size: 15px;
+}
+
+.calendar-calendar td,
+.calendar-calendar table.mini td.empty {
+background-color: #F5F5F5;
+text-align: center;
+}
+
+.calendar-calendar th.days {
+border: 0;
+background-color: #F5F5F5;
+color: #444;
+}
+
+.view-calendar table .mini-day-on a {
+text-decoration: none;
+border: 2px solid #ddd;
+border-radius: 16px;
+padding: 4px;
+}
+
+.view-calendar table .mini-day-on a:hover {
+border: 2px solid #FFD116;
+}
+
+.view-calendar table td.mini {
+padding: 5px;
+}
+
+
 /* ARTICLES */
 .article-body .glyphicon-zoom-in {
 font-size: 30px;
