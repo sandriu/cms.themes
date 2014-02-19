@@ -109,7 +109,7 @@
   <?php endif; ?>
   <?php print render($title_suffix); ?>  
 
-  <div class="content well white article-body"<?php print $content_attributes; ?>>
+  <div class="content article-body"<?php print $content_attributes; ?>>
     <?php
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);
