@@ -526,10 +526,6 @@ border-radius: 6px;
 }
 
 .view-news-slideshow .views-field-title {
-background-image: -webkit-linear-gradient(top, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
-background-image: -moz-linear-gradient(top, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
-background-image: -o-linear-gradient(top, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
-background-image: linear-gradient(to bottom, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
 display: block;
 position: absolute;
 top: 236px;
@@ -539,7 +535,6 @@ padding: 0px 20px;
 }
 
 .view-news-slideshow .jcarousel-skin-default .jcarousel-navigation {
-background: rgba(0, 56, 113, 0.7);
 position: absolute;
 bottom: 0px;
 width: 100%;
@@ -1292,6 +1287,18 @@ color: #FFF;
 .submenu .active-trail a,
 .submenu a:hover {
 color: #FFD217;
+}
+
+/* NEWS slideshow */
+.view-news-slideshow .views-field-title {
+background-image: -webkit-linear-gradient(top, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
+background-image: -moz-linear-gradient(top, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
+background-image: -o-linear-gradient(top, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
+background-image: linear-gradient(to bottom, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
+}
+
+.view-news-slideshow .jcarousel-skin-default .jcarousel-navigation {
+background: rgba(0, 56, 113, 0.7);
 }
 /* end colour theme for CMS portal */
 

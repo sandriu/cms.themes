@@ -38,3 +38,16 @@ color: #00ADED;
 .submenu a:hover {
 color: #444;
 }
+
+
+/* NEWS slideshow */
+.view-news-slideshow .views-field-title {
+background-image: -webkit-linear-gradient(top, rgba(141, 216, 247, 0), rgba(141, 216, 247, 0.7));
+background-image: -moz-linear-gradient(top, rgba(141, 216, 247, 0), rgba(141, 216, 247, 0.7));
+background-image: -o-linear-gradient(top, rgba(141, 216, 247, 0), rgba(141, 216, 247, 0.7));
+background-image: linear-gradient(to bottom, rgba(141, 216, 247, 0), rgba(141, 216, 247, 0.7));
+}
+
+.view-news-slideshow .jcarousel-skin-default .jcarousel-navigation {
+background: rgba(141, 216, 247, 0.7);
+}
