@@ -51,3 +51,14 @@ background-image: linear-gradient(to bottom, rgba(141, 216, 247, 0), rgba(141, 2
 .view-news-slideshow .jcarousel-skin-default .jcarousel-navigation {
 background: rgba(141, 216, 247, 0.7);
 }
+
+
+/* TABBED MENU on homepage */
+ul.quicktabs-tabs.quicktabs-style-basic {
+background: #FEF1D8;
+}
+
+ul.quicktabs-tabs.quicktabs-style-basic li.active,
+ul.quicktabs-tabs.quicktabs-style-basic li.active:hover {
+border-top: 4px solid #42C7F3;
+}
