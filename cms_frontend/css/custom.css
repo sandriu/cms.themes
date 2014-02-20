@@ -526,10 +526,6 @@ border-radius: 6px;
 }
 
 .view-news-slideshow .views-field-title {
-background-image: -webkit-linear-gradient(top, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
-background-image: -moz-linear-gradient(top, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
-background-image: -o-linear-gradient(top, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
-background-image: linear-gradient(to bottom, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
 display: block;
 position: absolute;
 top: 236px;
@@ -539,7 +535,6 @@ padding: 0px 20px;
 }
 
 .view-news-slideshow .jcarousel-skin-default .jcarousel-navigation {
-background: rgba(0, 56, 113, 0.7);
 position: absolute;
 bottom: 0px;
 width: 100%;
@@ -705,19 +700,11 @@ position: absolute;
 top: 83px;
 width: 136px;
 height: 55px;
-background: #FFF;
 z-index: 2;
-border-bottom-left-radius: 6px;
-border-bottom-right-radius: 6px;
-border-right: 1px solid #DDD;
 }
 
 .instruments-slideshow .jcarousel-item .views-field-field-picture {
-position: absolute;
-top: 1px;
 width: 136px;
-border-top-left-radius: 6px;
-border-top-right-radius: 6px;
 }
 
 .instruments-slideshow .jcarousel-item img {
@@ -774,7 +761,6 @@ border-bottom-right-radius: 6px;
 
 ul.quicktabs-tabs.quicktabs-style-basic {
 height: 50px;
-background: #F9F9F9;
 border: 1px solid #E3E3E3;
 border-bottom: 0px;
 border-top-left-radius: 6px;
@@ -800,7 +786,6 @@ font-family: Lato !important; /* overrides basic.css */
 ul.quicktabs-tabs.quicktabs-style-basic li.active,
 ul.quicktabs-tabs.quicktabs-style-basic li.active:hover {
 border: 1px solid #E3E3E3;
-border-top: 4px solid #FFD116;
 border-bottom: 0px;
 border-top-left-radius: 6px;
 border-top-right-radius: 6px;
@@ -829,6 +814,82 @@ padding: 30px;
 .quicktabs_main.quicktabs-style-basic h2 {
 font-size: 20px;
 margin-top: 0;
+}
+
+
+/* CALENDAR on homepage */
+.view-calendar.view .date-nav-wrapper .date-nav {
+height: 0px;
+min-height: 70px;
+}
+
+.view-calendar.view .date-nav-wrapper .date-nav {
+margin-bottom: -26px;
+}
+
+.view-calendar.view .date-nav-wrapper .date-heading h3 {
+font-size: 15px;
+font-weight: bold;
+}
+
+.view-calendar.view .date-nav-wrapper .date-heading h3 a {
+color: #444;
+}
+
+.view-calendar.view .date-nav-wrapper .date-prev,
+.view-calendar.view .date-nav-wrapper .date-next {
+background: none;
+}
+
+.view-calendar .pager li > a {
+border: 1px solid #ddd;
+background-color: transparent;
+width: 22px;
+height: 24px;
+border-radius: 0;
+padding: 0px 6px 0px 0px;
+}
+
+.view-calendar .pager li > a:hover {
+background-color: #ddd;
+border: 1px solid #aaa;
+color: #aaa;
+}
+
+.view-calendar.view .date-nav-wrapper .date-prev a {
+margin-left: 0;
+}
+
+.view-calendar.view .date-nav-wrapper .date-prev a,
+.view-calendar.view .date-nav-wrapper .date-next a {
+font-size: 15px;
+}
+
+.calendar-calendar td,
+.calendar-calendar table.mini td.empty {
+background-color: #F5F5F5;
+text-align: center;
+}
+
+.calendar-calendar th.days {
+border: 0;
+background-color: #F5F5F5;
+color: #444;
+}
+
+.view-calendar table .mini-day-on a {
+text-decoration: none;
+border: 2px solid #ddd;
+border-radius: 16px;
+padding: 4px;
+}
+
+.view-calendar table .mini-day-on a:hover {
+border: 2px solid #FFD116;
+}
+
+.view-calendar table td.mini {
+padding: 5px;
 }
 
 
@@ -1224,6 +1285,28 @@ color: #FFF;
 .submenu .active-trail a,
 .submenu a:hover {
 color: #FFD217;
+}
+
+/* NEWS slideshow */
+.view-news-slideshow .views-field-title {
+background-image: -webkit-linear-gradient(top, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
+background-image: -moz-linear-gradient(top, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
+background-image: -o-linear-gradient(top, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
+background-image: linear-gradient(to bottom, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
+}
+
+.view-news-slideshow .jcarousel-skin-default .jcarousel-navigation {
+background: rgba(0, 56, 113, 0.7);
+}
+
+/* TABBED MENU on homepage */
+ul.quicktabs-tabs.quicktabs-style-basic {
+background: #F9F9F9;
+}
+
+ul.quicktabs-tabs.quicktabs-style-basic li.active,
+ul.quicktabs-tabs.quicktabs-style-basic li.active:hover {
+border-top: 4px solid #FFD116;
 }
 /* end colour theme for CMS portal */
 

@@ -36,3 +36,23 @@ color: #B07B27;
 .submenu a:hover {
 color: #4D4D4D;
 }
+
+
+/* NEWS slideshow */
+.view-news-slideshow .views-field-title {
+background-image: -webkit-linear-gradient(top, rgba(29, 93, 145, 0), rgba(29, 93, 145, 0.7));
+background-image: -moz-linear-gradient(top, rgba(29, 93, 145, 0), rgba(29, 93, 145, 0.7));
+background-image: -o-linear-gradient(top, rgba(29, 93, 145, 0), rgba(29, 93, 145, 0.7));
+background-image: linear-gradient(to bottom, rgba(29, 93, 145, 0), rgba(29, 93, 145, 0.7));
+}
+
+.view-news-slideshow .jcarousel-skin-default .jcarousel-navigation {
+background: rgba(29, 93, 145, 0.7);
+}
+
+
+/* TABBED MENU on homepage */
+ul.quicktabs-tabs.quicktabs-style-basic li.active,
+ul.quicktabs-tabs.quicktabs-style-basic li.active:hover {
+border-top: 4px solid #FBAF38;
+}
