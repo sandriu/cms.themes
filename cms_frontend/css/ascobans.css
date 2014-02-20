@@ -67,6 +67,15 @@ background-image: linear-gradient(to bottom, rgba(141, 216, 247, 0), rgba(141, 2
 background: rgba(141, 216, 247, 0.7);
 }
 
+.view-news-slideshow .jcarousel-skin-default .jcarousel-navigation li a:hover {
+background: url("../images/ascobans_news_hover.png") no-repeat;
+}
+
+.view-news-slideshow .views-field-title a:hover,
+.view-news-slideshow .view-footer a:hover {
+color: #575859;
+}
+
 
 /* TABBED MENU on homepage */
 ul.quicktabs-tabs.quicktabs-style-basic {
@@ -91,7 +100,7 @@ border-bottom: 1px solid #C6B099;
 
 
 /* homepage CALENDAR */
-body .calendar-calendar td, 
+body .calendar-calendar td,
 body .calendar-calendar table.mini td.empty,
 body .calendar-calendar th.days {
 background-color: #FEF1D8;
