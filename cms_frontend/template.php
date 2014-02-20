@@ -20,12 +20,17 @@ function cms_frontend_preprocess_html(&$variables) {
   drupal_add_css(path_to_theme() . '/css/ie9.css', array('media'=>'screen','group' => CSS_THEME, 'browsers' => array('IE' => 'IE 9', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
   // Add conditional CSS for IE10
   drupal_add_css(path_to_theme() . '/css/ie10.css', array('media'=>'screen','group' => CSS_THEME, 'browsers' => array('IE' => 'IE 10', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
+  
   //Ierarhic menu 
   drupal_add_js(path_to_theme() . '/js/menu.js');
+  
+  //Custom css that override default style.css
+  drupal_add_css(path_to_theme(). '/css/custom.css', array('weight'=>'10'));
+  
   //Domain specific css
   $domain_css = theme_get_setting('scheme');    
   if(!empty($domain_css))
-      drupal_add_css(path_to_theme(). '/css/'. $domain_css);
+      drupal_add_css(path_to_theme(). '/css/'. $domain_css, array('weight'=>'999'));  
 }
 
 /*
