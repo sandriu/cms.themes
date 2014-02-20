@@ -870,10 +870,6 @@ border-radius: 16px;
 padding: 4px;
 }
 
-.view-calendar table .mini-day-on a:hover {
-border: 2px solid #FFD116;
-}
-
 .view-calendar table td.mini {
 padding: 5px;
 }

@@ -78,3 +78,9 @@ ul.quicktabs-tabs.quicktabs-style-basic li.active,
 ul.quicktabs-tabs.quicktabs-style-basic li.active:hover {
 border-top: 4px solid #FFD116;
 }
+
+
+/* homepage CALENDAR  */
+.view-calendar table .mini-day-on a:hover {
+border: 2px solid #FFD116;
+}

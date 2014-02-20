@@ -18,7 +18,7 @@ color: #FFF;
 }
 
 .global-menu > .active-trail {
-background: #FBAF38 url("../images/arrow_hex6687A8.png") 49% 122% no-repeat;
+background: #FBAF38 url("../images/arrow_hexFDCF88.png") 49% 110% no-repeat;
 color: #4D4D4D;
 }
 
@@ -26,15 +26,27 @@ color: #4D4D4D;
 background-color: #FDDFAF;
 }
 
-.submenu a {
+.global-menu .dropdown-menu a {
 color: #B07B27;
 }
 
 .global-menu .active-trail,
 .global-menu a:hover,
-.submenu .active-trail a,
+.global-menu .dropdown-menu .active-trail,
 .submenu a:hover {
 color: #4D4D4D;
+}
+
+.global-menu > li > ul {
+background-color: #FDCF88;
+}
+
+.global-menu > li > ul > li > ul {
+background-color: #FDDFAF;
+}
+
+.global-menu > li > ul .active-trail.dropdown-submenu {
+background: #FDCF88 url("../images/arrow_hexFDDFAF.png") 49% 110% no-repeat;
 }
 
 
@@ -55,4 +67,10 @@ background: rgba(29, 93, 145, 0.7);
 ul.quicktabs-tabs.quicktabs-style-basic li.active,
 ul.quicktabs-tabs.quicktabs-style-basic li.active:hover {
 border-top: 4px solid #FBAF38;
+}
+
+
+/* homepage CALENDAR  */
+.view-calendar table .mini-day-on a:hover {
+border: 2px solid #00BCE4;
 }
