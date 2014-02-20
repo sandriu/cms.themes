@@ -9,7 +9,7 @@ background: url("../images/header_wave_cms.png") 100% 0% no-repeat;
 border-bottom: 3px solid #6687A8;
 }
 
-.global-menu li {
+.global-menu > li {
 background: #003871;
 }
 
@@ -30,7 +30,7 @@ background-color: #6687A8;
 color: #FFF;
 }
 
-.global-menu .active-trail a,
+.global-menu .active-trail,
 .global-menu a:hover,
 .submenu .active-trail a,
 .submenu a:hover {
