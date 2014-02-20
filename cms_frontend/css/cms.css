@@ -18,7 +18,7 @@ color: #FFF;
 }
 
 .global-menu > .active-trail {
-background: #003871 url("../images/arrow_hex6687A8.png") 49% 122% no-repeat;
+background: #003871 url("../images/arrow_hex6687A8.png") 49% 110% no-repeat;
 color: #FFD217;
 }
 
@@ -35,6 +35,24 @@ color: #FFF;
 .submenu .active-trail a,
 .submenu a:hover {
 color: #FFD217;
+}
+
+.global-menu > li > ul {
+background-color: rgb(102,135,168);
+}
+
+.global-menu > li > ul > li > ul {
+background-color: rgb(153, 175, 198);
+}
+
+.global-menu > li > ul .active-trail.dropdown-submenu {
+background: #6687A8 url("../images/arrow_hex99AFC6.png") 49% 106% no-repeat;
+}
+
+.submenu .region-tertiary-menu .active-trail a,
+.submenu .region-tertiary-menu a:hover {
+color: #FFD217; /* 'CMS yellow' colour does not offer enough contrast on a rgb(153, 175, 198) background  */
+color: #FFE473;
 }
 
 
