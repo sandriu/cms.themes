@@ -18,23 +18,34 @@ color: #79A5D6;
 }
 
 .global-menu > .active-trail {
-background: #0F235B url("../images/arrow_hex6687A8.png") 49% 122% no-repeat;
+background: #0F235B url("../images/arrow_hex79A5D6.png") 49% 110% no-repeat;
 color: #FFF;
 }
 
-.region-secondary-menu {
-background-color: #79A5D6;
+.global-menu .dropdown-menu a {
+color: #FFF;
 }
 
-.submenu a,
 .global-menu .active-trail,
 .global-menu a:hover {
 color: #FFF;
 }
 
-.submenu .active-trail a,
-.submenu a:hover {
+.global-menu .dropdown-menu .active-trail,
+.global-menu .dropdown-menu a:hover {
 color: #0F235B;
+}
+
+.global-menu > li > ul {
+background-color: #79A5D6;
+}
+
+.global-menu > li > ul > li > ul {
+background-color: #A2BEE3;
+}
+
+.global-menu > li > ul .active-trail.dropdown-submenu {
+background: #79A5D6 url("../images/arrow_hexA2BEE3.png") 49% 110% no-repeat;
 }
 
 
@@ -59,4 +70,64 @@ background: #ddd;
 ul.quicktabs-tabs.quicktabs-style-basic li.active,
 ul.quicktabs-tabs.quicktabs-style-basic li.active:hover {
 border-top: 4px solid #0F235B;
+}
+
+
+/* RIGHT COLUMN */
+body .well {
+background-color: #ddd;
+border: 0;
+}
+
+body .right-column section {
+border-bottom: 1px solid #AAA;
+}
+
+
+/* homepage CALENDAR */
+body .calendar-calendar td,
+body .calendar-calendar table.mini td.empty,
+body .calendar-calendar th.days {
+background-color: #DDD;
+}
+
+body .view-calendar table .mini-day-on a {
+border: 2px solid #037CC1;
+}
+
+body .view-calendar table .mini-day-on a:hover {
+border: 2px solid #221F20;
+}
+
+
+/* FOOTER */
+body .subscribe-social,
+body .footer-menu,
+body .disclaimers,
+body .footer-menu .dropdown-menu {
+background: #0F235B;
+}
+
+.subscribe-social {
+border-top: 0;
+}
+
+.footer-menu .container,
+.subscribe-social .container {
+border-bottom: 1px solid #A1BDE2;
+padding-bottom: 25px;
+}
+
+.disclaimers {
+padding-top: 0;
+color: #A1BDE2;
+}
+
+.footer-menu h2 a,
+.subscribe-social h2 {
+color: #A1BDE2;
+}
+
+.region-footer-second-row-right a {
+color: #0066C0;
 }
