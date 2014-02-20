@@ -9,7 +9,7 @@ background: url("../images/header_wave_eurobats.png") 100% 0% no-repeat;
 border-bottom: 3px solid #79A5D6;
 }
 
-.global-menu li {
+.global-menu > li {
 background: #0F235B;
 }
 
@@ -27,7 +27,7 @@ background-color: #79A5D6;
 }
 
 .submenu a,
-.global-menu .active-trail a,
+.global-menu .active-trail,
 .global-menu a:hover {
 color: #FFF;
 }
