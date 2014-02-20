@@ -9,7 +9,7 @@ background: url("../images/header_wave_aewa.png") 100% 0% no-repeat;
 border-bottom: 3px solid #FDDFAF;
 }
 
-.global-menu li {
+.global-menu > li {
 background: #FBAF38;
 }
 
@@ -30,7 +30,7 @@ background-color: #FDDFAF;
 color: #B07B27;
 }
 
-.global-menu .active-trail a,
+.global-menu .active-trail,
 .global-menu a:hover,
 .submenu .active-trail a,
 .submenu a:hover {
