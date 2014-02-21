@@ -92,3 +92,11 @@ border-top: 4px solid #FFD116;
 .view-calendar table .mini-day-on a:hover {
 border: 2px solid #FFD116;
 }
+
+
+/* "LEARN ABOUT" section */
+#block-menu-block-3 .btn-primary:hover {
+background-color: #FFD116;
+border-color: #FFD116;
+color: #444;
+}

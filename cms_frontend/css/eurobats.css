@@ -135,3 +135,15 @@ color: #A1BDE2;
 .region-footer-second-row-right a {
 color: #0066C0;
 }
+
+
+/* "LEARN ABOUT" section */
+#block-menu-block-3 .btn-primary {
+background-color: #037CC1;
+border-color: #037CC1;
+}
+
+#block-menu-block-3 .btn-primary:hover {
+background-color: #0F235B;
+border-color: #0F235B;
+}

@@ -875,6 +875,25 @@ padding: 5px;
 }
 
 
+/* "LEARN ABOUT" section */
+#block-block-3,
+#block-menu-block-3 {
+border-bottom: 0;
+padding-bottom: 0;
+}
+
+#block-menu-block-3 .menu {
+padding-left: 0;
+}
+
+#block-menu-block-3 .menu a {
+width: 100%;
+text-transform: uppercase;
+font-size: 13px;
+font-weight: bold;
+}
+
+
 /* BASIC PAGES */
 .article-body .glyphicon-zoom-in {
 font-size: 30px;
