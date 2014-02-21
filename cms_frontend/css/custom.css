@@ -875,7 +875,7 @@ padding: 5px;
 }
 
 
-/* ARTICLES */
+/* BASIC PAGES */
 .article-body .glyphicon-zoom-in {
 font-size: 30px;
 color: #F5F2F2;
@@ -933,6 +933,12 @@ margin-left: 40px;
 
 #node-3916 dt {
 padding: 5px 0px;
+}
+
+.node .text-muted {
+display: block;
+margin-top: 20px;
+font-size: 13px;
 }
 
 
