@@ -875,7 +875,7 @@ padding: 5px;
 }
 
 
-/* ARTICLES */
+/* BASIC PAGES */
 .article-body .glyphicon-zoom-in {
 font-size: 30px;
 color: #F5F2F2;
@@ -888,31 +888,9 @@ padding-bottom: 10px;
 width: 44px;
 }
 
-.region-tag a,
-.instrument-tag a {
-color: #fff;
-text-decoration: none;
-}
-
-#article-tags li {
-margin-bottom: 10px;
-margin-right: 5px;
-}
-
-.glossary-term,
-.glossary-term:hover {
-background: #eee;
-color: rgb(233,94,39);
-}
-
 .author-date .media-heading,
 .author-date .user-picture {
 display: none;
-}
-
-.article-photo,
-.article-photo:hover {
-text-decoration: none;
 }
 
 .article-body img.article-photo-magnifier {
@@ -933,6 +911,12 @@ margin-left: 40px;
 
 #node-3916 dt {
 padding: 5px 0px;
+}
+
+.node .text-muted {
+display: block;
+margin-top: 20px;
+font-size: 13px;
 }
 
 
