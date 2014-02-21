@@ -95,8 +95,7 @@
             <?php print !empty($uid)? l($name,'user/'.$uid,array('attributes'=>array('class'=>array('bold')),'html'=>TRUE)):
               $name; ?>
             <?php print (!empty($country))? ' - '.$country:''; ?>
-          </h6>
-          <span class="text-muted">Published on <?php print format_date($created,'custom','d F Y'); ?></span>
+          </h6>          
         </div>
       </div>
     </div>    
@@ -114,8 +113,9 @@
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);
       hide($content['links']);
-      print render($content);
+      print render($content);      
     ?>
+      <span class="text-muted">Last updated on <?php print format_date($node->changed,'custom','d F Y'); ?></span>
   </div>
 
   <?php print render($content['links']); ?>
