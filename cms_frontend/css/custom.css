@@ -235,7 +235,6 @@ padding-top: 0;
 margin-bottom: 0;
 border-radius: 0;
 border: 0;
-background-color: rgb(102,135,168);
 }
 
 .global-menu > li > ul li {
@@ -252,6 +251,7 @@ text-decoration: none;
 .navbar.submenu {
 min-height: 0;
 }
+
 .global-menu > li > ul > li > ul {
 margin-top: 0;
 margin-bottom: 0;
@@ -259,24 +259,10 @@ padding-bottom: 0;
 padding-top: 0;
 border-radius: 0;
 border: 0;
-background-color: rgb(153, 175, 198);
-}
-.global-menu > li > ul .active-trail.dropdown-submenu {
-background: #6687A8 url("../images/arrow_hex99AFC6.png") 49% 106% no-repeat;
-}
-
-.region-tertiary-menu {
-background-color: rgb(153, 175, 198);
 }
 
 .region-tertiary-menu ul {
 padding-left: 12px;
-}
-
-.submenu .region-tertiary-menu .active-trail a,
-.submenu .region-tertiary-menu a:hover {
-color: #FFD217; /* 'CMS yellow' colour does not offer enough contrast on a rgb(153, 175, 198) background  */
-color: #FFE473;
 }
 
 
@@ -884,10 +870,6 @@ border-radius: 16px;
 padding: 4px;
 }
 
-.view-calendar table .mini-day-on a:hover {
-border: 2px solid #FFD116;
-}
-
 .view-calendar table td.mini {
 padding: 5px;
 }
@@ -1250,63 +1232,3 @@ background-image: url('../images/asc.png'); /* replaces asc.gif from Bootstrap 2
 .views-table.table > tbody > tr > td.active {
 background-color: #fff;
 }
-
-
-/* Colour theme for CMS portal.
-    To be moved in a different stylesheet */
-/* HEADER */
-.search-area-and-logos {
-background: url("../images/header_wave_cms.png") 100% 0% no-repeat;
-}
-
-.global-menu > li {
-background: #003871;
-}
-
-.global-menu a {
-color: #FFF;
-}
-
-.global-menu > .active-trail {
-background: #003871 url("../images/arrow_hex6687A8.png") 49% 106% no-repeat;
-color: #FFD217;
-}
-
-.region-secondary-menu {
-background-color: #6687A8;
-}
-
-.submenu a {
-color: #FFF;
-}
-
-.global-menu .active-trail,
-.global-menu a:hover,
-.submenu .active-trail a,
-.submenu a:hover {
-color: #FFD217;
-}
-
-/* NEWS slideshow */
-.view-news-slideshow .views-field-title {
-background-image: -webkit-linear-gradient(top, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
-background-image: -moz-linear-gradient(top, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
-background-image: -o-linear-gradient(top, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
-background-image: linear-gradient(to bottom, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
-}
-
-.view-news-slideshow .jcarousel-skin-default .jcarousel-navigation {
-background: rgba(0, 56, 113, 0.7);
-}
-
-/* TABBED MENU on homepage */
-ul.quicktabs-tabs.quicktabs-style-basic {
-background: #F9F9F9;
-}
-
-ul.quicktabs-tabs.quicktabs-style-basic li.active,
-ul.quicktabs-tabs.quicktabs-style-basic li.active:hover {
-border-top: 4px solid #FFD116;
-}
-/* end colour theme for CMS portal */
-

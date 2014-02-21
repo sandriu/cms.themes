@@ -6,10 +6,10 @@ background: url("../images/header_wave_ascobans.png") 100% 0% no-repeat;
 }
 
 .global-menu {
-border-bottom: 3px solid #FEF1D8;
+border-bottom: 1px solid #00B9F0;
 }
 
-.global-menu li {
+.global-menu > li {
 background: #00B9F0;
 }
 
@@ -18,7 +18,7 @@ color: #FFF;
 }
 
 .global-menu > .active-trail {
-background: #00B9F0 url("../images/arrow_hexFEF1D8.png") 49% 122% no-repeat;
+background: #00B9F0 url("../images/arrow_hexFFE6B5.png") 49% 110% no-repeat;
 color: #444;
 }
 
@@ -28,15 +28,30 @@ border: 1px solid #C6B099;
 border-top: 0;
 }
 
-.submenu a {
-color: #00ADED;
+.global-menu .dropdown-menu a {
+color: #00B9F0; /* low contrast */
+color: #03A8DA;
 }
 
-.global-menu .active-trail a,
-.global-menu a:hover,
-.submenu .active-trail a,
-.submenu a:hover {
+.global-menu .active-trail,
+.global-menu a:hover {
 color: #444;
+}
+
+.global-menu .dropdown-menu .active-trail {
+color: #7E6C55;
+}
+
+.global-menu > li > ul {
+background-color: #FFE6B5;
+}
+
+.global-menu > li > ul > li > ul {
+background-color: #FEF1D8;
+}
+
+.global-menu > li > ul .active-trail.dropdown-submenu {
+background: #FFE6B5 url("../images/arrow_hexFEF1D8.png") 49% 110% no-repeat;
 }
 
 
@@ -52,6 +67,15 @@ background-image: linear-gradient(to bottom, rgba(141, 216, 247, 0), rgba(141, 2
 background: rgba(141, 216, 247, 0.7);
 }
 
+.view-news-slideshow .jcarousel-skin-default .jcarousel-navigation li a:hover {
+background: url("../images/ascobans_news_hover.png") no-repeat;
+}
+
+.view-news-slideshow .views-field-title a:hover,
+.view-news-slideshow .view-footer a:hover {
+color: #575859;
+}
+
 
 /* TABBED MENU on homepage */
 ul.quicktabs-tabs.quicktabs-style-basic {
@@ -61,4 +85,31 @@ background: #FEF1D8;
 ul.quicktabs-tabs.quicktabs-style-basic li.active,
 ul.quicktabs-tabs.quicktabs-style-basic li.active:hover {
 border-top: 4px solid #42C7F3;
+}
+
+
+/* RIGHT COLUMN */
+body .well {
+background-color: #FEF1D8;
+border: 0;
+}
+
+body .right-column section {
+border-bottom: 1px solid #C6B099;
+}
+
+
+/* homepage CALENDAR */
+body .calendar-calendar td,
+body .calendar-calendar table.mini td.empty,
+body .calendar-calendar th.days {
+background-color: #FEF1D8;
+}
+
+body .view-calendar table .mini-day-on a {
+border: 2px solid #FDC378;
+}
+
+body .view-calendar table .mini-day-on a:hover {
+border: 2px solid #575859;
 }
