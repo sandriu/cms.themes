@@ -1,5 +1,5 @@
 <p class="text-center">
-    <img src="/sites/all/images/<?php echo strtoupper($node->field_country_iso2[$node->language][0]['value']); ?>.gif"
+    <img src="<?php echo $node->country_flag_path; ?>"
          alt="<?php echo $node->title; ?>"/>
 </p>
 <table class="table table-condensed table-hover two-columns">
