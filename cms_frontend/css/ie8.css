@@ -70,6 +70,11 @@ width: 485px;
 float: left;
 }
 
+.center-column.col-md-12,
+.center-column.col-md-12 .region-content {
+width: 970px;
+}
+
 .region-sidebar-second.well,
 .region-sidebar-first.well {
 width: 213px;
