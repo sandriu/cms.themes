@@ -283,3 +283,14 @@ width: 970px;
 .instruments-slideshow .view-content {
 height: 140px;
 }
+
+
+/* AMMAP */
+#states_ammap,
+#drupal_ammap {
+height: 25px !important;
+}
+
+.view-display-id-party_range_states_page {
+color: red; /* for warning text about IE8 not supporting SVG maps */
+}
