@@ -1,4 +1,6 @@
 /* FIXES for Internet Explorer 10 */
 
-/* so far, everything good in IE10 */
+.view-news-slideshow .view-footer a {
+right: 35px;
+}
 
