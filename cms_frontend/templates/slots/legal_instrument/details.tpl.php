@@ -13,9 +13,9 @@
 ?>
 
 <?php if ($node->ammap_data) { ?>
-<h4>
+<h3>
     <?php echo t('Countries'); ?>
-</h4>
+</h3>
 <?php
     echo drupal_ammap_render_map($node->ammap_data, array('legend' => true));
     echo views_embed_view('front_end_countries', 'instrument_list', $node->nid);
