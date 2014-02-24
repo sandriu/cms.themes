@@ -1153,6 +1153,13 @@ display: none;
 background: transparent;
 }
 
+.badge {
+background-color: #0066C0;
+border-radius: 3px;
+margin-left: 5px;
+margin-top: 1px;
+}
+
 .profile #related-content-tabs a {
 font-weight: bold;
 text-transform: uppercase;
