@@ -70,6 +70,11 @@ width: 485px;
 float: left;
 }
 
+.center-column.col-md-12,
+.center-column.col-md-12 .region-content {
+width: 970px;
+}
+
 .region-sidebar-second.well,
 .region-sidebar-first.well {
 width: 213px;
@@ -277,4 +282,15 @@ width: 970px;
 
 .instruments-slideshow .view-content {
 height: 140px;
+}
+
+
+/* AMMAP */
+#states_ammap,
+#drupal_ammap {
+height: 25px !important;
+}
+
+.view-display-id-party_range_states_page {
+color: red; /* for warning text about IE8 not supporting SVG maps */
 }
