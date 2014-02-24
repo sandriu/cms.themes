@@ -115,7 +115,7 @@
 
     <div class="tab-pane" id="related-content-contacts">
         <?php
-            if (isset($node->experts) && (!empty($node->experts))) {
+            if (!empty($node->experts)) {
 //                foreach ($node->experts as $expert) {
 //                    echo '<a href="/' . ADMINISTRATION_PATH . 'contacts/item/' . $expert['uid'][0] . '/' . $expert['conventions'][0] . '/view">' . $expert['cn'][0]  . '</a>';
 //                    echo '<br />';
