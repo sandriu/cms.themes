@@ -1153,7 +1153,11 @@ display: none;
 background: transparent;
 }
 
-.read-more,
+.read-more {
+margin-left: 5px;
+font-size: 13px;
+}
+
 .read-less {
 display: block;
 font-size: 13px;
