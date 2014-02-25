@@ -520,6 +520,15 @@ height: 112px;
 padding: 0px 20px;
 }
 
+.view-news-slideshow .views-field-title .field-content {
+display: block;
+width: 100%;
+margin-top: 40px;
+padding-bottom: 6px;
+border-bottom: 1px solid #FFF;
+min-height: 71px;
+}
+
 .view-news-slideshow .jcarousel-skin-default .jcarousel-navigation {
 position: absolute;
 bottom: 0px;
@@ -538,13 +547,11 @@ font-size: 23px; /* fallback size in case news item has a very long title - avoi
 font-weight: bold;
 line-height: 32px;
 color: #fff;
-display: block;
-width: 100%;
-margin-top: 40px;
-padding-bottom: 6px;
-border-bottom: 1px solid #FFF;
 text-align: left;
-min-height: 71px;
+position: absolute;
+bottom: 7px;
+left: 20px;
+padding-right: 20px;
 }
 
 .view-news-slideshow .views-field-title a:hover,
@@ -629,10 +636,13 @@ color: #fff;
   height: 101px;
   }
 
+  .view-news-slideshow .views-field-title .field-content {
+  min-height: 60px;
+  }
+
   .view-news-slideshow .views-field-title a {
   font-size: 19px;
   line-height: 26px;
-  min-height: 60px;
   }
 
   .jcarousel-skin-default .jcarousel-item {
