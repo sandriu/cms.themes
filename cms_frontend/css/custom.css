@@ -1153,6 +1153,12 @@ display: none;
 background: transparent;
 }
 
+.read-more,
+.read-less {
+display: block;
+font-size: 13px;
+}
+
 .badge {
 background-color: #0066C0;
 border-radius: 3px;
