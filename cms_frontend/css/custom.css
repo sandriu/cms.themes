@@ -1291,23 +1291,19 @@ color: #333;
 text-transform: uppercase;
 }
 
-.view-front-end-news .views-row {
-border-top: 1px dotted #ccc;
-}
-
 .view-front-end-news .article-body .text-muted {
 display: inline-block;
 width: 13%;
 margin-top: 24px;
 text-align: right;
-margin-right: 10px;
 }
 
 .view-front-end-news .article-body .field-name-body,
 .view-front-end-news .links,
 .view-front-end-news h2 {
-width: 84%;
+width: 85%;
 float: right;
+padding-right: 14%;
 }
 
 
