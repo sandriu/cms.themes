@@ -27,13 +27,16 @@
       </div>
   </div>
 
-  <div class="row">
-    <div class="instrument-full-width profile col-md-12">
-      <?php
-        render_slot($node, 'related-content', 'legal_instrument', $content);
-      ?>
+    <?php if (CMSUtils::get_current_profile() == 'cms') { ?>
+    <div class="row">
+        <div class="instrument-full-width profile col-md-12">
+        <?php
+            render_slot($node, 'related-content', 'legal_instrument', $content);
+        ?>
+        </div>
     </div>
-  </div>
+    <?php } ?>
+
 </div>
 
 
