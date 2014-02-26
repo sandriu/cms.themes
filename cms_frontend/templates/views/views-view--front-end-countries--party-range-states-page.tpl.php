@@ -50,4 +50,5 @@
 //Render the view list for the current MoU - pass the instrument nid as view contextual arg
 $arg = (isset($view->args) && !empty($view->args)) ? $view->args[0] : null;
 echo drupal_ammap_render_map($view->range_states_ammap, array('legend' => true));
+echo views_embed_view('front_end_countries', 'party_range_states_list', $arg);
 ?>
