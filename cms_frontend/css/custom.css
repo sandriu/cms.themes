@@ -315,7 +315,6 @@ color: #555;
 }
 
 
-
 /* RIGHT COLUMN */
 #feedback .btn,
 .right-column #members .btn {
@@ -1261,4 +1260,52 @@ background-image: url('../images/asc.png'); /* replaces asc.gif from Bootstrap 2
 
 .views-table.table > tbody > tr > td.active {
 background-color: #fff;
+}
+
+
+/* NEWS page */
+.view-front-end-news h2 {
+font-size: 20px;
+font-weight: bold;
+line-height: 25px;
+}
+
+.view-front-end-news h2 a {
+color: #5E9732;
+}
+
+.view-front-end-news .field-items {
+color: #555;
+}
+
+.view-front-end-news .node-readmore {
+background: #CCD7E2;
+margin-top: 5px;
+border-radius: 4px;
+font-size: 11px;
+padding: 3px 7px;
+}
+
+.view-front-end-news .node-readmore a {
+color: #333;
+text-transform: uppercase;
+}
+
+.view-front-end-news .views-row {
+border-top: 1px dotted #ccc;
+}
+
+.view-front-end-news .article-body .text-muted {
+display: inline-block;
+width: 13%;
+margin-top: 24px;
+text-align: right;
+margin-right: 10px;
+}
+
+.view-front-end-news .article-body .field-name-body,
+.view-front-end-news .links,
+.view-front-end-news h2 {
+width: 84%;
+float: right;
 }
