@@ -32,8 +32,9 @@ function cms_frontend_preprocess_html(&$variables) {
   
   //Domain specific css
   $domain_css = theme_get_setting('scheme');    
-  if(!empty($domain_css))
-      drupal_add_css(path_to_theme(). '/css/'. $domain_css, array('weight'=>'999'));  
+  if(empty($domain_css))
+      $domain_css = 'cms.css';  
+  drupal_add_css(path_to_theme(). '/css/'. $domain_css, array('weight'=>'999'));  
 }
 
 /*
