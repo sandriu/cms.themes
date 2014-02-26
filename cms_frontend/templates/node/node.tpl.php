@@ -114,8 +114,8 @@
       hide($content['comments']);
       hide($content['links']);
       print render($content);      
-    ?>
-      <span class="text-muted">Last updated on <?php print format_date($node->changed,'custom','d F Y'); ?></span>
+    ?>      
+      <span class="text-muted"><?php if(!$teaser)print 'Last updated on'; ?> <?php print format_date($node->changed,'custom','d F Y'); ?></span>
   </div>
 
   <?php print render($content['links']); ?>
