@@ -116,13 +116,13 @@
     <div class="tab-pane" id="related-content-contacts">
         <?php
             if (!empty($node->experts)) {
-//                foreach ($node->experts as $expert) {
-//                    echo '<a href="/' . ADMINISTRATION_PATH . 'contacts/item/' . $expert['uid'][0] . '/' . $expert['conventions'][0] . '/view">' . $expert['cn'][0]  . '</a>';
-//                    echo '<br />';
-//                }
+                foreach ($node->experts as $expert) {
+                    echo $expert['cn'][0];
+                    echo '<br />';
+                }
         ?>
         <?php
-            }else {
+            } else {
         ?>
         <p class="text-warning">
         <?php
