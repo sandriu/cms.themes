@@ -1349,6 +1349,7 @@ font-size: 12px;
 border-radius: 3px;
 }
 
+.node-news .field-name-field-featured-image .field-label,
 .node-news .field-item:empty {
 display: none;
 }
