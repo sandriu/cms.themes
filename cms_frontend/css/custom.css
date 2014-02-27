@@ -235,7 +235,6 @@ padding-top: 0;
 margin-bottom: 0;
 border-radius: 0;
 border: 0;
-background-color: rgb(102,135,168);
 }
 
 .global-menu > li > ul li {
@@ -252,6 +251,7 @@ text-decoration: none;
 .navbar.submenu {
 min-height: 0;
 }
+
 .global-menu > li > ul > li > ul {
 margin-top: 0;
 margin-bottom: 0;
@@ -259,24 +259,10 @@ padding-bottom: 0;
 padding-top: 0;
 border-radius: 0;
 border: 0;
-background-color: rgb(153, 175, 198);
-}
-.global-menu > li > ul .active-trail.dropdown-submenu {
-background: #6687A8 url("../images/arrow_hex99AFC6.png") 49% 106% no-repeat;
-}
-
-.region-tertiary-menu {
-background-color: rgb(153, 175, 198);
 }
 
 .region-tertiary-menu ul {
 padding-left: 12px;
-}
-
-.submenu .region-tertiary-menu .active-trail a,
-.submenu .region-tertiary-menu a:hover {
-color: #FFD217; /* 'CMS yellow' colour does not offer enough contrast on a rgb(153, 175, 198) background  */
-color: #FFE473;
 }
 
 
@@ -327,7 +313,6 @@ box-shadow: 0px 0px 0px;
 font-weight: bold;
 color: #555;
 }
-
 
 
 /* RIGHT COLUMN */
@@ -526,10 +511,6 @@ border-radius: 6px;
 }
 
 .view-news-slideshow .views-field-title {
-background-image: -webkit-linear-gradient(top, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
-background-image: -moz-linear-gradient(top, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
-background-image: -o-linear-gradient(top, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
-background-image: linear-gradient(to bottom, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
 display: block;
 position: absolute;
 top: 236px;
@@ -538,8 +519,16 @@ height: 112px;
 padding: 0px 20px;
 }
 
+.view-news-slideshow .views-field-title .field-content {
+display: block;
+width: 100%;
+margin-top: 40px;
+padding-bottom: 6px;
+border-bottom: 1px solid #FFF;
+min-height: 71px;
+}
+
 .view-news-slideshow .jcarousel-skin-default .jcarousel-navigation {
-background: rgba(0, 56, 113, 0.7);
 position: absolute;
 bottom: 0px;
 width: 100%;
@@ -557,13 +546,11 @@ font-size: 23px; /* fallback size in case news item has a very long title - avoi
 font-weight: bold;
 line-height: 32px;
 color: #fff;
-display: block;
-width: 100%;
-margin-top: 40px;
-padding-bottom: 6px;
-border-bottom: 1px solid #FFF;
 text-align: left;
-min-height: 71px;
+position: absolute;
+bottom: 7px;
+left: 20px;
+padding-right: 20px;
 }
 
 .view-news-slideshow .views-field-title a:hover,
@@ -648,10 +635,13 @@ color: #fff;
   height: 101px;
   }
 
+  .view-news-slideshow .views-field-title .field-content {
+  min-height: 60px;
+  }
+
   .view-news-slideshow .views-field-title a {
   font-size: 19px;
   line-height: 26px;
-  min-height: 60px;
   }
 
   .jcarousel-skin-default .jcarousel-item {
@@ -766,7 +756,6 @@ border-bottom-right-radius: 6px;
 
 ul.quicktabs-tabs.quicktabs-style-basic {
 height: 50px;
-background: #F9F9F9;
 border: 1px solid #E3E3E3;
 border-bottom: 0px;
 border-top-left-radius: 6px;
@@ -792,7 +781,6 @@ font-family: Lato !important; /* overrides basic.css */
 ul.quicktabs-tabs.quicktabs-style-basic li.active,
 ul.quicktabs-tabs.quicktabs-style-basic li.active:hover {
 border: 1px solid #E3E3E3;
-border-top: 4px solid #FFD116;
 border-bottom: 0px;
 border-top-left-radius: 6px;
 border-top-right-radius: 6px;
@@ -824,7 +812,98 @@ margin-top: 0;
 }
 
 
-/* ARTICLES */
+/* CALENDAR on homepage */
+.view-calendar.view .date-nav-wrapper .date-nav {
+height: 0px;
+min-height: 70px;
+}
+
+.view-calendar.view .date-nav-wrapper .date-nav {
+margin-bottom: -26px;
+}
+
+.view-calendar.view .date-nav-wrapper .date-heading h3 {
+font-size: 15px;
+font-weight: bold;
+}
+
+.view-calendar.view .date-nav-wrapper .date-heading h3 a {
+color: #444;
+}
+
+.view-calendar.view .date-nav-wrapper .date-prev,
+.view-calendar.view .date-nav-wrapper .date-next {
+background: none;
+}
+
+.view-calendar .pager li > a {
+border: 1px solid #ddd;
+background-color: transparent;
+width: 22px;
+height: 24px;
+border-radius: 0;
+padding: 0px 6px 0px 0px;
+}
+
+.view-calendar .pager li > a:hover {
+background-color: #ddd;
+border: 1px solid #aaa;
+color: #aaa;
+}
+
+.view-calendar.view .date-nav-wrapper .date-prev a {
+margin-left: 0;
+}
+
+.view-calendar.view .date-nav-wrapper .date-prev a,
+.view-calendar.view .date-nav-wrapper .date-next a {
+font-size: 15px;
+}
+
+.calendar-calendar td,
+.calendar-calendar table.mini td.empty {
+background-color: #F5F5F5;
+text-align: center;
+}
+
+.calendar-calendar th.days {
+border: 0;
+background-color: #F5F5F5;
+color: #444;
+}
+
+.view-calendar table .mini-day-on a {
+text-decoration: none;
+border: 2px solid #ddd;
+border-radius: 16px;
+padding: 4px;
+}
+
+.view-calendar table td.mini {
+padding: 5px;
+}
+
+
+/* "LEARN ABOUT" section */
+#block-block-3,
+#block-menu-block-3 {
+border-bottom: 0;
+padding-bottom: 0;
+}
+
+#block-menu-block-3 .menu {
+padding-left: 0;
+}
+
+#block-menu-block-3 .menu a {
+width: 100%;
+text-transform: uppercase;
+font-size: 13px;
+font-weight: bold;
+}
+
+
+/* BASIC PAGES */
 .article-body .glyphicon-zoom-in {
 font-size: 30px;
 color: #F5F2F2;
@@ -837,31 +916,9 @@ padding-bottom: 10px;
 width: 44px;
 }
 
-.region-tag a,
-.instrument-tag a {
-color: #fff;
-text-decoration: none;
-}
-
-#article-tags li {
-margin-bottom: 10px;
-margin-right: 5px;
-}
-
-.glossary-term,
-.glossary-term:hover {
-background: #eee;
-color: rgb(233,94,39);
-}
-
 .author-date .media-heading,
 .author-date .user-picture {
 display: none;
-}
-
-.article-photo,
-.article-photo:hover {
-text-decoration: none;
 }
 
 .article-body img.article-photo-magnifier {
@@ -882,6 +939,12 @@ margin-left: 40px;
 
 #node-3916 dt {
 padding: 5px 0px;
+}
+
+.node .text-muted {
+display: block;
+margin-top: 20px;
+font-size: 13px;
 }
 
 
@@ -1099,6 +1162,23 @@ display: none;
 background: transparent;
 }
 
+.read-more {
+margin-left: 5px;
+font-size: 13px;
+}
+
+.read-less {
+display: block;
+font-size: 13px;
+}
+
+.badge {
+background-color: #0066C0;
+border-radius: 3px;
+margin-left: 5px;
+margin-top: 1px;
+}
+
 .profile #related-content-tabs a {
 font-weight: bold;
 text-transform: uppercase;
@@ -1183,39 +1263,100 @@ background-color: #fff;
 }
 
 
-/* Colour theme for CMS portal.
-    To be moved in a different stylesheet */
-/* HEADER */
-.search-area-and-logos {
-background: url("../images/header_wave_cms.png") 100% 0% no-repeat;
+/* NEWS page */
+.view-front-end-news h2 {
+font-size: 20px;
+font-weight: bold;
+line-height: 25px;
 }
 
-.global-menu > li {
-background: #003871;
+.view-front-end-news h2 a {
+color: #5E9732;
 }
 
-.global-menu a {
-color: #FFF;
+.view-front-end-news .field-items {
+color: #555;
 }
 
-.global-menu > .active-trail {
-background: #003871 url("../images/arrow_hex6687A8.png") 49% 106% no-repeat;
-color: #FFD217;
+.view-front-end-news .node-readmore {
+background: #CCD7E2;
+margin-top: 5px;
+border-radius: 4px;
+font-size: 11px;
+padding: 3px 7px;
 }
 
-.region-secondary-menu {
-background-color: #6687A8;
+.view-front-end-news .node-readmore a {
+color: #333;
+text-transform: uppercase;
 }
 
-.submenu a {
-color: #FFF;
+.view-front-end-news .article-body .text-muted {
+display: inline-block;
+width: 13%;
+margin-top: 24px;
+text-align: right;
 }
 
-.global-menu .active-trail,
-.global-menu a:hover,
-.submenu .active-trail a,
-.submenu a:hover {
-color: #FFD217;
+.view-front-end-news .article-body .field-name-body,
+.view-front-end-news .links,
+.view-front-end-news h2 {
+width: 85%;
+float: right;
+padding-right: 14%;
 }
-/* end colour theme for CMS portal */
 
+
+/* NEWS item */
+.node-news .field {
+margin-bottom: 20px;
+}
+
+.node-news.node-teaser .field {
+margin-bottom: 0px;
+}
+
+.node-news .field-label {
+display: inline;
+}
+
+.node-news .field-name-field-featured-image .field-items {
+display: block;
+}
+
+.node-news .field-item {
+display: inline-block;
+background: #DDD;
+margin: 5px;
+padding: 2px 5px;
+font-size: 12px;
+border-radius: 3px;
+}
+
+.node-news .field-item:empty {
+display: none;
+}
+
+.node-news .field-name-body .field-item,
+.node-news .field-name-field-featured-image .field-item,
+.node-news.node-teaser .field-item {
+display: block;
+background: #FFF;
+margin: 0;
+padding: 0;
+font-size: 15px;
+border-radius: 0;
+}
+
+.node-news blockquote p {
+color: #5E9732;
+font-size: 14px;
+font-style: italic;
+border-left: 3px solid #5E9732;
+padding-left: 5px;
+}
+
+.node-news blockquote {
+border-left: 0;
+padding: 6px 0px;
+}

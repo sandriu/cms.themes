@@ -1,4 +1,11 @@
 /* FIXES for Internet Explorer 9 */
 
-/* so far, everything is ok in IE9 */
+/* NEWS slideshow, skin Default */
+.view-news-slideshow .views-field-title {
+background: url("../images/slideshow-title-bkg.png") repeat-x;
+}
+
+.view-news-slideshow .jcarousel-skin-default .jcarousel-navigation {
+background: url("../images/slideshow-controls-bkg.png") repeat-x;
+}
 

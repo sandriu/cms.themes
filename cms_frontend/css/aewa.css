@@ -6,10 +6,10 @@ background: url("../images/header_wave_aewa.png") 100% 0% no-repeat;
 }
 
 .global-menu {
-border-bottom: 3px solid #FDDFAF;
+border-bottom: 1px solid #FBAF38;
 }
 
-.global-menu li {
+.global-menu > li {
 background: #FBAF38;
 }
 
@@ -18,7 +18,7 @@ color: #FFF;
 }
 
 .global-menu > .active-trail {
-background: #FBAF38 url("../images/arrow_hex6687A8.png") 49% 122% no-repeat;
+background: #FBAF38 url("../images/arrow_hexFDCF88.png") 49% 110% no-repeat;
 color: #4D4D4D;
 }
 
@@ -26,13 +26,72 @@ color: #4D4D4D;
 background-color: #FDDFAF;
 }
 
-.submenu a {
+.global-menu .dropdown-menu a {
 color: #B07B27;
 }
 
-.global-menu .active-trail a,
+.global-menu .active-trail,
 .global-menu a:hover,
-.submenu .active-trail a,
+.global-menu .dropdown-menu .active-trail,
 .submenu a:hover {
 color: #4D4D4D;
+}
+
+.global-menu > li > ul {
+background-color: #FDCF88;
+}
+
+.global-menu > li > ul > li > ul {
+background-color: #FDDFAF;
+}
+
+.global-menu > li > ul .active-trail.dropdown-submenu {
+background: #FDCF88 url("../images/arrow_hexFDDFAF.png") 49% 110% no-repeat;
+}
+
+
+/* NEWS slideshow */
+.view-news-slideshow .views-field-title {
+background-image: -webkit-linear-gradient(top, rgba(29, 93, 145, 0), rgba(29, 93, 145, 0.7));
+background-image: -moz-linear-gradient(top, rgba(29, 93, 145, 0), rgba(29, 93, 145, 0.7));
+background-image: -o-linear-gradient(top, rgba(29, 93, 145, 0), rgba(29, 93, 145, 0.7));
+background-image: linear-gradient(to bottom, rgba(29, 93, 145, 0), rgba(29, 93, 145, 0.7));
+}
+
+.view-news-slideshow .jcarousel-skin-default .jcarousel-navigation {
+background: rgba(29, 93, 145, 0.7);
+}
+
+.view-news-slideshow .jcarousel-skin-default .jcarousel-navigation li a:hover {
+background: url("../images/aewa_news_hover.png") no-repeat;
+}
+
+.view-news-slideshow .views-field-title a:hover,
+.view-news-slideshow .view-footer a:hover {
+color: #FBAF38;
+}
+
+
+/* TABBED MENU on homepage */
+ul.quicktabs-tabs.quicktabs-style-basic li.active,
+ul.quicktabs-tabs.quicktabs-style-basic li.active:hover {
+border-top: 4px solid #FBAF38;
+}
+
+
+/* homepage CALENDAR  */
+.view-calendar table .mini-day-on a:hover {
+border: 2px solid #00BCE4;
+}
+
+
+/* "LEARN ABOUT" section */
+#block-menu-block-3 .btn-primary {
+background-color: #47C7E9;
+border-color: #47C7E9;
+}
+
+#block-menu-block-3 .btn-primary:hover {
+background-color: #1D5D91;
+border-color: #1D5D91;
 }

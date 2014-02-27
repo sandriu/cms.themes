@@ -66,11 +66,11 @@ function cms_frontend_menu_link__menu_block__menu_contact(array $variables){
 /*
  * List members link
  */
-function cms_frontend_menu_link__menu_block__menu_members(array $variables){  
+function cms_frontend_menu_link__menu_block__menu_learn_about_cms(array $variables){  
   $link_content = '';
   $element = $variables['element'];  
   
-  $link_content = '<button type="button" class="btn btn-info">'.$element['#title'].'</button>';
-  return l($link_content, $element['#href'], array('attributes'=>array('id'=>'members'), 'html'=>TRUE));
+  $link_content = $element['#title'];
+  return l($link_content, $element['#href'], array('attributes'=>array('id'=>'about-cms', 'class'=>'btn btn-primary'), 'html'=>TRUE));
    
 }

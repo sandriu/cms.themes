@@ -1,7 +1,7 @@
 /* FIXES for Internet Explorer 8 */
 
-/* IE8 does not support HTML5 and media queries, 
-so the interface will be UNresponsive 
+/* IE8 does not support HTML5 and media queries,
+so the interface will be UNresponsive
 and optimised for 1024x768px */
 
 
@@ -60,15 +60,19 @@ width: 955px;
 }
 
 
-/* Introduction page CONTENT */
-.center-column.col-md-9 {
-width: 728px;
-float: left;
+/* CENTER COLUMN */
+.center-column .region-content {
+width: 647px;
 }
 
 .center-column.col-md-6 {
 width: 485px;
 float: left;
+}
+
+.center-column.col-md-12,
+.center-column.col-md-12 .region-content {
+width: 970px;
 }
 
 .region-sidebar-second.well,
@@ -88,9 +92,20 @@ float: right;
 padding: 5px;
 }
 
-.region-sidebar-second .block-title {  /* horizontal line for separating various portlets; section tags are not seen by IE8 */
-border-top: 1px solid #ddd;
-padding-top:10px;
+
+/* RIGHT COLUMN */
+.center-column {
+float: left;
+}
+
+.right-column {
+float: right;
+margin-right: -15px;
+}
+
+.well.region-sidebar-second {
+float: right;
+width: 293px;
 }
 
 
@@ -154,6 +169,11 @@ margin-top: 10px;
 }
 
 
+/* fixes for menu level 2 */
+.global-menu .dropdown-menu {
+width: 955px !important;
+}
+
 /* fixes for menu level 3 */
 .submenu .secondary,
 .submenu .tertiary {
@@ -209,4 +229,68 @@ width: 627px;
 .container .col-md-4.instrument-right,
 .container .col-md-4.meeting-right {
 width: 313px;
+}
+
+
+/* NEWS slideshow, skin Default */
+.view-news-slideshow .views-field-title {
+background: url("../images/slideshow-title-bkg.png") 0% 9% repeat-x;
+}
+
+.view-news-slideshow .jcarousel-skin-default .jcarousel-navigation {
+background: url("../images/slideshow-controls-bkg.png") repeat-x;
+height: 36px;
+padding-top: 5px;
+}
+
+.view-news-slideshow img {
+width: 647px;
+height: 337px;
+}
+
+.jcarousel-skin-default .jcarousel-container-horizontal,
+.jcarousel-skin-default .jcarousel-clip-horizontal,
+.jcarousel-skin-default .jcarousel-item  {
+height: 337px;
+}
+
+.view-news-slideshow .views-field-title {
+width: 647px;
+top: 194px;
+height: 107px;
+}
+
+.view-news-slideshow .views-field-title a {
+font-size: 18px;
+line-height: 26px;
+min-height: 60px;
+}
+
+.jcarousel-skin-default .jcarousel-item {
+border-radius: 6px;
+}
+
+.view-news-slideshow .view-footer a {
+top: 305px;
+}
+
+
+/* INSTRUMENTS slideshow, skin Default */
+.instruments-slideshow {
+width: 970px;
+}
+
+.instruments-slideshow .view-content {
+height: 140px;
+}
+
+
+/* AMMAP */
+#states_ammap,
+#drupal_ammap {
+height: 25px !important;
+}
+
+.view-display-id-party_range_states_page {
+color: red; /* for warning text about IE8 not supporting SVG maps */
 }

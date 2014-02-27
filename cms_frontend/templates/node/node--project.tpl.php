@@ -21,11 +21,13 @@
         ?>
       </div>
 
-      <br />
-      <?php
-        render_slot($node, 'activity', 'project', $content);
-        echo render($content['field_project_file']);
-      ?>
+      <label>Project activity</label>
+      <div class="section">
+        <?php
+          render_slot($node, 'activity', 'project', $content);
+          echo render($content['field_project_file']);
+        ?>
+      </div>
     </div>
 
 

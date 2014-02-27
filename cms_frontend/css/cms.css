@@ -6,10 +6,10 @@ background: url("../images/header_wave_cms.png") 100% 0% no-repeat;
 }
 
 .global-menu {
-border-bottom: 3px solid #6687A8;
+border-bottom: 1px solid #003871;
 }
 
-.global-menu li {
+.global-menu > li {
 background: #003871;
 }
 
@@ -18,7 +18,7 @@ color: #FFF;
 }
 
 .global-menu > .active-trail {
-background: #003871 url("../images/arrow_hex6687A8.png") 49% 122% no-repeat;
+background: #003871 url("../images/arrow_hex6687A8.png") 49% 110% no-repeat;
 color: #FFD217;
 }
 
@@ -30,9 +30,73 @@ background-color: #6687A8;
 color: #FFF;
 }
 
-.global-menu .active-trail a,
+.global-menu .active-trail,
 .global-menu a:hover,
 .submenu .active-trail a,
 .submenu a:hover {
 color: #FFD217;
+}
+
+.global-menu > li > ul {
+background-color: rgb(102,135,168);
+}
+
+.global-menu > li > ul > li > ul {
+background-color: rgb(153, 175, 198);
+}
+
+.global-menu > li > ul .active-trail.dropdown-submenu {
+background: #6687A8 url("../images/arrow_hex99AFC6.png") 49% 110% no-repeat;
+}
+
+.submenu .region-tertiary-menu .active-trail a,
+.submenu .region-tertiary-menu a:hover {
+color: #FFD217; /* 'CMS yellow' colour does not offer enough contrast on a rgb(153, 175, 198) background  */
+color: #FFE473;
+}
+
+.front {
+
+}
+
+
+/* NEWS slideshow */
+.view-news-slideshow .views-field-title {
+background-image: -webkit-linear-gradient(top, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
+background-image: -moz-linear-gradient(top, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
+background-image: -o-linear-gradient(top, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
+background-image: linear-gradient(to bottom, rgba(0, 56, 113, 0), rgba(0, 56, 113, 0.7));
+}
+
+.view-news-slideshow .jcarousel-skin-default .jcarousel-navigation {
+background: rgba(0, 56, 113, 0.7);
+}
+
+.view-news-slideshow .jcarousel-skin-default .jcarousel-navigation li a:hover {
+background: url("../images/cms_news_hover.png") no-repeat;
+}
+
+
+/* TABBED MENU on homepage */
+ul.quicktabs-tabs.quicktabs-style-basic {
+background: #F9F9F9;
+}
+
+ul.quicktabs-tabs.quicktabs-style-basic li.active,
+ul.quicktabs-tabs.quicktabs-style-basic li.active:hover {
+border-top: 4px solid #FFD116;
+}
+
+
+/* homepage CALENDAR  */
+.view-calendar table .mini-day-on a:hover {
+border: 2px solid #FFD116;
+}
+
+
+/* "LEARN ABOUT" section */
+#block-menu-block-3 .btn-primary:hover {
+background-color: #FFD116;
+border-color: #FFD116;
+color: #444;
 }

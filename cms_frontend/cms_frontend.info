@@ -23,8 +23,6 @@ regions[footer_second_row_left] = 'FooterSecondRowLeft'
 regions[footer_second_row_right] = 'FooterSecondRowRight'
 
 ; Stylesheets
-stylesheets[all][] = css/style.css
-stylesheets[all][] = css/custom.css
 stylesheets[all][] = css/mobile.css
 
 ;**********************************
