@@ -62,7 +62,7 @@ render_simple_slot('filters', 'contacts',
 
 <div class="btn-toolbar">
     <div class="btn-group">
-        <a href="/<?php echo ADMINISTRATION_PATH; ?>contacts/add"
+        <a href="contacts/add"
            class="btn"
            title="<?php echo t('Add new contact'); ?>">
             <?php echo t('Add contact'); ?>

@@ -18,7 +18,7 @@
 
         <div id="contacts-filters-holder" class="accordion-body collapse in">
             <div class="accordion-inner">
-                <form class="form-inline" id="contacts-instrument-filter" method="GET" action="/<?php echo ADMINISTRATION_PATH; ?>contacts/listing">
+                <form class="form-inline" id="contacts-instrument-filter" method="GET" action="">
                     <?php if(!empty($data['sort'][0])) : ?>
                     <input type="hidden" id="iSortCol_0" name="iSortCol_0" value="<?php echo $data['sort'][0]['column']; ?>" />
                     <input type="hidden" id="sSortDir_0" name="sSortDir_0" value="<?php echo $data['sort'][0]['direction']; ?>" />
