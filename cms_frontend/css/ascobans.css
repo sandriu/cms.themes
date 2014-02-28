@@ -77,7 +77,8 @@ color: #575859;
 }
 
 
-/* TABBED MENU on homepage */
+/* TABBED MENU on homepage
+  Quicktabs plugin uses Style:Basic */
 ul.quicktabs-tabs.quicktabs-style-basic {
 background: #FEF1D8;
 }
