@@ -55,10 +55,6 @@ color: #FFD217; /* 'CMS yellow' colour does not offer enough contrast on a rgb(1
 color: #FFE473;
 }
 
-.front {
-
-}
-
 
 /* NEWS slideshow */
 .view-news-slideshow .views-field-title {
@@ -77,7 +73,8 @@ background: url("../images/cms_news_hover.png") no-repeat;
 }
 
 
-/* TABBED MENU on homepage */
+/* TABBED MENU on homepage
+  Quicktabs plugin uses Style:Basic */
 ul.quicktabs-tabs.quicktabs-style-basic {
 background: #F9F9F9;
 }
