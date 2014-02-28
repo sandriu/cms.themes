@@ -283,7 +283,7 @@ $css_path = drupal_get_path('module', 'datatables') . '/dataTables/media/css/dem
 <script type="text/javascript" src="/<?php echo $DT_js_path; ?>"></script>
 <link type="text/css" rel="stylesheet" href="/<?php echo $css_path; ?>" />
 <script type="text/javascript">
-    var administration_path = '<?php echo ADMINISTRATION_PATH; ?>';
+    var administration_path = '/<?php echo ADMINISTRATION_PATH; ?>';
 </script>
 <?php
 drupal_add_js(drupal_get_path('theme', 'cms_theme') . '/js/meetings.js');

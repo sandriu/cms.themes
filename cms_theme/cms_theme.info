@@ -2,7 +2,7 @@ name = CMS_theme
 description = Theme for the <a href="http://www.cms.int">CMS website</a>
 core = 7.x
 base theme = twitter_bootstrap
-version = 7.x-2.0-rc1
+version = 7.x-3.25
 
 regions[header]         = 'Top Bar'
 regions[highlighted]    = 'Highlighted'
@@ -16,12 +16,5 @@ regions[promo]        = 'Promo'
 
 settings[toggle_name] = 1
 
-;
 stylesheets[all][] = styles.css
 
-; Information added by fserver
-core = "7.x"
-datestamp = "1384876119"
-project = "cms_theme"
-project status url = "http://fserver.eaudeweb.ro/fserver"
-version = "7.x-2.1"
