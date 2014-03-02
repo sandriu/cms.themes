@@ -15,7 +15,7 @@
         <tbody>
           <?php
             echo render($content['field_document_number']);
-            echo render($content['field_document_instrument']);
+            echo render($content['field_instrument']);
             echo render($content['field_document_type']);
             echo render($content['field_document_status']);
             echo render($content['field_document_publish_date']);

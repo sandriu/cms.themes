@@ -109,7 +109,7 @@
 
     <div class="span5">
     <?php
-        echo drupal_render($form['field_publication_instrument']);
+        echo drupal_render($form['field_instrument']);
     ?>
     </div>
 

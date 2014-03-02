@@ -13,7 +13,7 @@
 
     <div class="span3">
     <?php
-        echo drupal_render($form['field_document_instrument']);
+        echo drupal_render($form['field_instrument']);
     ?>
     </div>
 

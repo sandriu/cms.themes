@@ -17,7 +17,7 @@
 
     <div class="span3">
     <?php
-        echo drupal_render($form['field_meeting_instrument']);
+        echo drupal_render($form['field_instrument']);
     ?>
     </div>
 
