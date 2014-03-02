@@ -42,7 +42,7 @@
                 echo render($content['field_project_collab_agency']);
                 echo render($content['field_project_start_date']);
                 echo render($content['field_project_end_date']);
-                echo render($content['field_project_instrument']);
+                echo render($content['field_instrument']);
                 echo render($content['field_project_appendix']);
                 echo render($content['field_project_taxonomic_group']);
                 echo render($content['field_project_region']);

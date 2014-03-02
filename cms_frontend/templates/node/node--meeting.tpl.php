@@ -20,7 +20,7 @@
             echo render($content['field_meeting_reg_deadline']);
             echo render($content['field_meeting_organizer']);
             echo render($content['field_meeting_coorganizer']);
-            echo render($content['field_meeting_instrument']);
+            echo render($content['field_instrument']);
             echo render($content['field_meeting_type']);
             echo render($content['field_meeting_kind']);
             echo render($content['field_meeting_status']);
