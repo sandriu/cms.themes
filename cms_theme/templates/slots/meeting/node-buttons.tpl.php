@@ -10,7 +10,7 @@
                 ); ?>
             </div>
             <div class="btn-group">
-                <?php print l(t('Manage documents'), '/' . ADMINISTRATION_PATH . 'meeting/' . $node->nid . '/manage_documents',
+                <?php print l(t('Manage documents'), 'meeting/' . $node->nid . '/manage_documents',
                     array('attributes' => array('class' => 'btn'))
                 ); ?>
             </div>
