@@ -157,7 +157,7 @@
 
             $.ajax({
                 type: 'POST',
-                url: '/' + administration_path + 'meeting/' + meeting_id + '/add_documents',
+                url: administration_path + 'meeting/' + meeting_id + '/add_documents',
                 async: true,
                 data: 'documents=' + documents,
                 dataType: 'JSON',
