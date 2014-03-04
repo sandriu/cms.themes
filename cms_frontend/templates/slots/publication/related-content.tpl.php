@@ -23,13 +23,13 @@
         $first_tab = '';
     }
 
-    $lang = field_language('node', $node, 'field_publication_regions');
-    if (!empty($node->field_publication_regions[$lang])) {
+    $lang_reg = field_language('node', $node, 'field_publication_regions');
+    if (!empty($node->field_publication_regions[$lang_reg])) {
         render_tab_view(t('Regions'), 'related-content-regions', $first_tab, count($node->field_publication_regions[$lang]));
     }
 
-    $lang = field_language('node', $node, 'field_publication_threats');
-    if (!empty($node->field_publication_threats[$lang])) {
+    $lang_th = field_language('node', $node, 'field_publication_threats');
+    if (!empty($node->field_publication_threats[$lang_th])) {
         render_tab_view(t('Threats'), 'related-content-threats', $first_tab, count($node->field_publication_threats[$lang]));
     }
     ?>
@@ -58,14 +58,14 @@
     }
 ?>
 
-    <?php if (!empty($node->field_publication_regions[$lang])) { ?>
+    <?php if (!empty($node->field_publication_regions[$lang_reg])) { ?>
         <div class="tab-pane <?php echo $first_tab; ?>" id="related-content-regions">
             <?php echo render($content['field_publication_regions']); ?>
         </div>
         <?php $first_tab = '' ?>
     <?php } ?>
 
-    <?php if (!empty($node->field_publication_threats[$lang])) { ?>
+    <?php if (!empty($node->field_publication_threats[$lang_th])) { ?>
         <div class="tab-pane <?php echo $first_tab; ?>" id="related-content-threats">
             <?php echo render($content['field_publication_threats']); ?>
         </div>
