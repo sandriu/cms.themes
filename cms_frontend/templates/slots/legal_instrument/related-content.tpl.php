@@ -20,8 +20,8 @@
         render_tab_view(t('Projects'), 'related-content-projects', $first_tab, $node->related_data['projects']['count']);
         $first_tab = '';
     }
-    if ($node->publications_count > 0) {
-        render_tab_view(t('Publications'), 'related-content-publications', $first_tab, $node->publications_count);
+    if (!empty($node->related_data['publications']['count'])) {
+        render_tab_view(t('Publications'), 'related-content-publications', $first_tab, $node->related_data['publications']['count']);
         $first_tab = '';
     }
     if (!empty($node->related_data['national_reports']['count'])) {
@@ -111,5 +111,6 @@
             </tbody>
         </table>
     </div>
+    <?php $first_tab = '' ?>
 <?php } ?>
 </div>

@@ -49,7 +49,7 @@
 
   <div class="row">
     <div class="meeting-full-width profile col-md-12">
-      <?php
+        <?php
         if (!empty($node->field_meeting_document[$node->language])) {
             $types = array();
             foreach ($node->field_meeting_document[$node->language] as $document) {
@@ -66,7 +66,7 @@
         ?>
                 <h4><?php echo $type_term->name; ?></h4>
         <?php
-                print views_embed_view('meeting_documents_list_reorder','m_d_list', $node->nid, $tid);
+                print views_embed_view('meeting_documents_list_reorder','m_d_list_fe', $node->nid, $tid);
             }
         }
       ?>

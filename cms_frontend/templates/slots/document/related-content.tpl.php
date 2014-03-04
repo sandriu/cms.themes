@@ -66,20 +66,9 @@
 ?>
 
     <?php if (!empty($node->field_document_threats[$lang])) { ?>
-    <div class="tab-pane" id="related-content-threats">
-        <?php
-            if (check_display_field($content, 'field_document_threats')) {
-                echo render($content['field_document_threats']);
-            }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related threats');
-        ?>
-        </p>
-        <?php
-            }
-        ?>
-    </div>
+        <div class="tab-pane <?php echo $first_tab; ?>" id="related-content-threats">
+            <?php echo render($content['field_document_threats']); ?>
+        </div>
+        <?php $first_tab = ''; ?>
     <?php } ?>
 </div>
