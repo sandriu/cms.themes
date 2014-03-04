@@ -1,43 +1,52 @@
-<h3 class="muted">
+<?php if (!empty($node->related_data)) { ?>
+    <h3 class="muted">
+        <?php
+            echo t('Related content');
+        ?>
+    </h3>
+
+    <ul class="nav nav-tabs" id="related-content-tabs">
+        <?php
+
+        $first_tab = 'active';
+        if (!empty($node->related_data['species']['count'])) {
+            render_tab_view(t('Species'), 'related-content-species', $first_tab, $node->related_data['species']['count']);
+            $first_tab = '';
+        }
+
+        if (!empty($node->related_data['meetings']['count'])) {
+            render_tab_view(t('Meetings'), 'related-content-meetings', $first_tab, $node->related_data['meetings']['count']);
+            $first_tab = '';
+        }
+
+        if (!empty($node->related_data['projects']['count'])) {
+            render_tab_view(t('Projects'), 'related-content-projects', $first_tab, $node->related_data['projects']['count']);
+            $first_tab = '';
+        }
+
+        ?>
+    </ul>
+    <div class="tab-content">
     <?php
-        echo t('Related content');
+        $first_tab = 'active loaded';
+        if (!empty($node->related_data['species']['count'])) {
+            render_tab_content_view('related-content-species', $first_tab,
+                $node->related_data['species']['view_name'], $node->related_data['species']['view_display'], $node->nid);
+            $first_tab = '';
+        }
+
+        if (!empty($node->related_data['meetings']['count'])) {
+            render_tab_content_view('related-content-meetings', $first_tab,
+                $node->related_data['meetings']['view_name'], $node->related_data['meetings']['view_display'], $node->nid);
+            $first_tab = '';
+        }
+
+
+        if (!empty($node->related_data['projects']['count'])) {
+            render_tab_content_view('related-content-projects', $first_tab,
+                $node->related_data['projects']['view_name'], $node->related_data['projects']['view_display'], $node->nid);
+            $first_tab = '';
+        }
     ?>
-</h3>
-
-<ul class="nav nav-tabs" id="related-content-tabs">
-    <?php
-
-        render_tab(t('Meetings'), 'related-content-meetings', 'active', 'meetings', TRUE, $content);
-
-    if($node->projects_count > 0) {
-        render_tab_view(t('Projects'), 'related-content-projects', '', $node->projects_count);
-    }
-
-    if($node->species_count > 0) {
-        render_tab_view(t('Species'), 'related-content-species', '', $node->species_count);
-    }
-    ?>
-</ul>
-<div class="tab-content">
-    <div class="tab-pane active loaded" id="related-content-meetings">
-        <?php
-            echo views_embed_view('meetings', 'country_meetings', $node->nid);
-        ?>
     </div>
-
-    <?php if($node->projects_count > 0) { ?>
-    <div class="tab-pane" id="related-content-projects">
-        <?php
-            echo views_embed_view('project_admin', 'country_projects', $node->nid);
-        ?>
-    </div>
-    <?php } ?>
-
-    <?php if($node->species_count > 0) { ?>
-    <div class="tab-pane" id="related-content-species">
-        <?php
-            echo views_embed_view('species_admin', 'country_species', $node->nid);
-        ?>
-    </div>
-    <?php } ?>
-</div>
+<?php } ?>

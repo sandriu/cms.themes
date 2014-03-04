@@ -5,67 +5,104 @@
 </h3>
 
 <ul class="nav nav-tabs" id="related-content-tabs">
-    <?php
-        render_tab(t('Species'), 'related-content-species', 'active', 'field_project_species', TRUE, $content);
-        render_tab(t('National Plans'), 'related-content-national-plans', '', 'field_project_nat_plan', TRUE, $content);
-        render_tab(t('National Reports'), 'related-content-national-reports', '', 'field_project_national_reports', TRUE, $content);
-        render_tab(t('Other documents'), 'related-content-documents', '', 'field_project_document', TRUE, $content);
-        render_tab(t('Publications'), 'related-content-publications', '', 'field_project_publication', TRUE, $content);
-        render_tab(t('Meetings'), 'related-content-meetings', '', 'field_project_meeting', TRUE, $content);
-        render_tab(t('Threats'), 'related-content-threats', '', 'field_project_threat', TRUE, $content);
-    ?>
+<?php
+    $first_tab = 'active';
+    if (!empty($node->related_data['species']['count'])) {
+        render_tab_view(t('Species'), 'related-content-species', $first_tab, $node->related_data['species']['count']);
+        $first_tab = '';
+    }
+
+    if (!empty($node->related_data['meetings']['count'])) {
+        render_tab_view(t('Meetings'), 'related-content-meetings', $first_tab, $node->related_data['meetings']['count']);
+        $first_tab = '';
+    }
+
+    if (!empty($node->related_data['publications']['count'])) {
+        render_tab_view(t('Publications'), 'related-content-publications', $first_tab, $node->related_data['publications']['count']);
+        $first_tab = '';
+    }
+
+    if (!empty($node->related_data['national_reports']['count'])) {
+        render_tab_view(t('National reports'), 'related-content-national-reports', $first_tab, $node->related_data['national_reports']['count']);
+        $first_tab = '';
+    }
+
+    if (!empty($node->related_data['plans']['count'])) {
+        render_tab_view(t('National plans'), 'related-content-plans', $first_tab, $node->related_data['plans']['count']);
+        $first_tab = '';
+    }
+
+    if (!empty($node->related_data['other_documents']['count'])) {
+        render_tab_view(t('Other documents'), 'related-content-other-documents', $first_tab, $node->related_data['other_documents']['count']);
+        $first_tab = '';
+    }
+
+    $lang = field_language('node', $node, 'field_project_threats');
+    if (!empty($node->field_project_threats[$lang])) {
+        render_tab_view(t('Threats'), 'related-content-threats', $first_tab, count($node->field_project_threats[$lang]));
+    }
+
+?>
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane active loaded" id="related-content-species">
-        <?php
-            echo views_embed_view('species_admin', 'project_species', $node->nid);
-        ?>
-    </div>
+<?php
+    $first_tab = 'active loaded';
+    if (!empty($node->related_data['species']['count'])) {
+        render_tab_content_view('related-content-species', $first_tab,
+            $node->related_data['species']['view_name'], $node->related_data['species']['view_display'], $node->nid);
+        $first_tab = '';
+    }
 
-    <div class="tab-pane" id="related-content-national-plans">
-        <?php
-            echo views_embed_view('documents', 'project_national_plans', $node->nid);
-        ?>
-    </div>
+    if (!empty($node->related_data['meetings']['count'])) {
+        render_tab_content_view('related-content-meetings', $first_tab,
+            $node->related_data['meetings']['view_name'], $node->related_data['meetings']['view_display'], $node->nid);
+        $first_tab = '';
+    }
 
-    <div class="tab-pane" id="related-content-national-reports">
-        <?php
-            echo views_embed_view('documents', 'project_national_reports', $node->nid);
-        ?>
-    </div>
 
-    <div class="tab-pane" id="related-content-documents">
-        <?php
-            echo views_embed_view('documents', 'project_other_documents', $node->nid);
-        ?>
-    </div>
+    if (!empty($node->related_data['publications']['count'])) {
+        render_tab_content_view('related-content-publications', $first_tab,
+            $node->related_data['publications']['view_name'], $node->related_data['publications']['view_display'], $node->nid);
+        $first_tab = '';
+    }
 
-    <div class="tab-pane" id="related-content-publications">
-        <?php
-            echo views_embed_view('publications_admin', 'project_publications', $node->nid);
-        ?>
-    </div>
+    if (!empty($node->related_data['national_reports']['count'])) {
+        render_tab_content_view('related-content-national-reports', $first_tab,
+            $node->related_data['national_reports']['view_name'], $node->related_data['national_reports']['view_display'], $node->nid);
+        $first_tab = '';
+    }
 
-    <div class="tab-pane" id="related-content-meetings">
-        <?php
-            echo views_embed_view('meetings', 'project_meetings', $node->nid);
-        ?>
-    </div>
+    if (!empty($node->related_data['plans']['count'])) {
+        render_tab_content_view('related-content-plans', $first_tab,
+            $node->related_data['plans']['view_name'], $node->related_data['plans']['view_display'], $node->nid);
+        $first_tab = '';
+    }
+
+    if (!empty($node->related_data['other_documents']['count'])) {
+        render_tab_content_view('related-content-other-documents', $first_tab,
+            $node->related_data['other_documents']['view_name'], $node->related_data['other_documents']['view_display'], $node->nid);
+        $first_tab = '';
+    }
+
+?>
+
+    <?php if (!empty($node->field_project_threats[$lang])) { ?>
         <div class="tab-pane" id="related-content-threats">
-        <?php
-            if (check_display_field($content, 'field_project_threat')) {
-                echo render($content['field_project_threat']);
+            <?php
+            if (check_display_field($content, 'field_project_threats')) {
+                echo render($content['field_project_threats']);
             }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related threats');
-        ?>
-        </p>
-        <?php
+                ?>
+                <p class="text-warning">
+                    <?php
+                    echo t('No related threats');
+                    ?>
+                </p>
+            <?php
             }
-        ?>
-    </div>
+            ?>
+        </div>
+    <?php } ?>
 
 </div>

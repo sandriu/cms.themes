@@ -1,66 +1,76 @@
-<h3 class="muted">
+<?php if (!empty($node->related_data) || !empty($node->field_publication_threats) || !empty($node->field_publication_regions)) { ?>
+    <h3 class="muted">
+        <?php
+            echo t('Related content');
+        ?>
+    </h3>
+
+    <ul class="nav nav-tabs" id="related-content-tabs">
+        <?php
+
+        $first_tab = 'active';
+        if (!empty($node->related_data['species']['count'])) {
+            render_tab_view(t('Species'), 'related-content-species', $first_tab, $node->related_data['species']['count']);
+            $first_tab = '';
+        }
+
+        if (!empty($node->related_data['meetings']['count'])) {
+            render_tab_view(t('Meetings'), 'related-content-meetings', $first_tab, $node->related_data['meetings']['count']);
+            $first_tab = '';
+        }
+
+        if (!empty($node->related_data['projects']['count'])) {
+            render_tab_view(t('Projects'), 'related-content-projects', $first_tab, $node->related_data['projects']['count']);
+            $first_tab = '';
+        }
+
+        $lang_reg = field_language('node', $node, 'field_publication_regions');
+        if (!empty($node->field_publication_regions[$lang_reg])) {
+            render_tab_view(t('Regions'), 'related-content-regions', $first_tab, count($node->field_publication_regions[$lang]));
+        }
+
+        $lang_th = field_language('node', $node, 'field_publication_threats');
+        if (!empty($node->field_publication_threats[$lang_th])) {
+            render_tab_view(t('Threats'), 'related-content-threats', $first_tab, count($node->field_publication_threats[$lang]));
+        }
+        ?>
+    </ul>
+
+    <div class="tab-content">
     <?php
-        echo t('Related content');
+        $first_tab = 'active loaded';
+        if (!empty($node->related_data['species']['count'])) {
+        render_tab_content_view('related-content-species', $first_tab,
+        $node->related_data['species']['view_name'], $node->related_data['species']['view_display'], $node->nid);
+        $first_tab = '';
+        }
+
+        if (!empty($node->related_data['meetings']['count'])) {
+        render_tab_content_view('related-content-meetings', $first_tab,
+        $node->related_data['meetings']['view_name'], $node->related_data['meetings']['view_display'], $node->nid);
+        $first_tab = '';
+        }
+
+
+        if (!empty($node->related_data['projects']['count'])) {
+        render_tab_content_view('related-content-projects', $first_tab,
+        $node->related_data['projects']['view_name'], $node->related_data['projects']['view_display'], $node->nid);
+        $first_tab = '';
+        }
     ?>
-</h3>
 
-<ul class="nav nav-tabs" id="related-content-tabs">
-    <?php
-        render_tab(t('Species'), 'related-content-species', 'active', 'field_publication_species', TRUE, $content);
-        render_tab(t('Meetings'), 'related-content-meetings', '', 'field_publication_meeting', TRUE, $content);
-        render_tab(t('Projects'), 'related-content-projects', '', 'field_publication_project', TRUE, $content);
-        render_tab(t('Regions'), 'related-content-regions', '', 'field_publication_regions', TRUE, $content);
-        render_tab(t('Threats'), 'related-content-threats', '', 'field_publication_threats', TRUE, $content);
-    ?>
-</ul>
+        <?php if (!empty($node->field_publication_regions[$lang_reg])) { ?>
+            <div class="tab-pane <?php echo $first_tab; ?>" id="related-content-regions">
+                <?php echo render($content['field_publication_regions']); ?>
+            </div>
+            <?php $first_tab = '' ?>
+        <?php } ?>
 
-<div class="tab-content">
-    <div class="tab-pane active loaded" id="related-content-species">
-        <?php
-            echo views_embed_view('species_admin', 'publication_species', $node->nid);
-        ?>
+        <?php if (!empty($node->field_publication_threats[$lang_th])) { ?>
+            <div class="tab-pane <?php echo $first_tab; ?>" id="related-content-threats">
+                <?php echo render($content['field_publication_threats']); ?>
+            </div>
+            <?php $first_tab = '' ?>
+        <?php } ?>
     </div>
-
-    <div class="tab-pane loaded" id="related-content-meetings">
-        <?php
-            echo views_embed_view('meetings', 'publication_meetings', $node->nid);
-        ?>
-    </div>
-
-    <div class="tab-pane loaded" id="related-content-projects">
-        <?php
-            echo views_embed_view('project_admin', 'publication_projects', $node->nid);
-        ?>
-    </div>
-
-    <div class="tab-pane loaded" id="related-content-regions">
-        <?php
-            if (check_display_field($content, 'field_publication_regions')) {
-                echo render($content['field_publication_regions']);
-            }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related regions');
-        ?>
-        </p>
-        <?php
-            }
-        ?>
-    </div>
-    <div class="tab-pane loaded" id="related-content-threats">
-        <?php
-            if (check_display_field($content, 'field_publication_threats')) {
-                echo render($content['field_publication_threats']);
-            }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related threats');
-        ?>
-        </p>
-        <?php
-            }
-        ?>
-    </div>
-</div>
+<?php } ?>
