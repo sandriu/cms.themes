@@ -6,83 +6,85 @@
 
 <ul class="nav nav-tabs" id="related-content-tabs">
 <?php
+
     $first_tab = 'active';
-    if ($node->species_count > 0) {
-        render_tab_view(t('Species'), 'related-content-species', $first_tab, $node->species_count);
+    if (!empty($node->related_data['species']['count'])) {
+        render_tab_view(t('Species'), 'related-content-species', $first_tab, $node->related_data['species']['count']);
         $first_tab = '';
     }
-    if ($node->meetings_count > 0) {
-        render_tab_view(t('Meetings'), 'related-content-meetings', $first_tab, $node->meetings_count);
+    if (!empty($node->related_data['meetings']['count'])) {
+        render_tab_view(t('Meetings'), 'related-content-meetings', $first_tab, $node->related_data['meetings']['count']);
+        $first_tab = '';
     }
-    if ($node->projects_count > 0) {
-        render_tab_view(t('Projects'), 'related-content-projects', $first_tab, $node->projects_count);
+    if (!empty($node->related_data['projects']['count'])) {
+        render_tab_view(t('Projects'), 'related-content-projects', $first_tab, $node->related_data['projects']['count']);
         $first_tab = '';
     }
     if ($node->publications_count > 0) {
         render_tab_view(t('Publications'), 'related-content-publications', $first_tab, $node->publications_count);
         $first_tab = '';
     }
-    if ($node->national_reports_count > 0) {
-        render_tab_view(t('National reports'), 'related-content-national-reports', $first_tab, $node->national_reports_count);
+    if (!empty($node->related_data['national_reports']['count'])) {
+        render_tab_view(t('National reports'), 'related-content-national-reports', $first_tab, $node->related_data['national_reports']['count']);
         $first_tab = '';
     }
-    if ($node->plans_count > 0) {
-        render_tab_view(t('Plans'), 'related-content-plans', $first_tab, $node->plans_count);
+    if (!empty($node->related_data['plans']['count'])) {
+        render_tab_view(t('Plans'), 'related-content-plans', $first_tab, $node->related_data['plans']['count']);
         $first_tab = '';
     }
-    render_tab(t('Contacts'), 'related-content-contacts', '', 'contacts', TRUE, $content);
+    if (!empty($node->contacts)) {
+        render_tab(t('Contacts'), 'related-content-contacts', $first_tab, 'contacts', TRUE, $content);
+        $first_tab = '';
+    }
 ?>
 </ul>
 
 <div class="tab-content">
-    <?php if ($node->species_count > 0) { ?>
-    <div class="tab-pane active loaded" id="related-content-species">
-        <?php
-            echo views_embed_view('species_admin', 'instrument_species', $node->nid);
-        ?>
-    </div>
-    <?php } ?>
+<?php
+    $first_tab = 'active loaded';
+    if (!empty($node->related_data['species']['count'])) {
+        render_tab_content_view('related-content-species', $first_tab,
+            $node->related_data['species']['view_name'], $node->related_data['species']['view_display'], $node->nid);
+        $first_tab = '';
+    }
 
-    <?php if ($node->meetings_count > 0) { ?>
-    <div class="tab-pane" id="related-content-meetings">
-        <?php
-            echo views_embed_view('meetings', 'instrument_meetings', $node->nid);
-        ?>
-    </div>
-    <?php } ?>
+    if (!empty($node->related_data['meetings']['count'])) {
+        render_tab_content_view('related-content-meetings', $first_tab,
+            $node->related_data['meetings']['view_name'], $node->related_data['meetings']['view_display'], $node->nid);
+        $first_tab = '';
+    }
 
-    <?php if ($node->projects_count > 0) { ?>
-    <div class="tab-pane" id="related-content-projects">
-        <?php
-            echo views_embed_view('project_admin', 'instrument_projects', $node->nid);
-        ?>
-    </div>
-    <?php } ?>
 
-    <?php if ($node->publications_count > 0) { ?>
-    <div class="tab-pane" id="related-content-publications">
-        <?php
-            echo views_embed_view('publications_admin', 'instrument_publications', $node->nid);
-        ?>
-    </div>
-    <?php } ?>
+    if (!empty($node->related_data['projects']['count'])) {
+        render_tab_content_view('related-content-projects', $first_tab,
+            $node->related_data['projects']['view_name'], $node->related_data['projects']['view_display'], $node->nid);
+        $first_tab = '';
+    }
 
-    <?php if ($node->national_reports_count > 0) { ?>
-    <div class="tab-pane" id="related-content-national-reports">
-        <?php
-            echo views_embed_view('documents', 'instrument_national_reports', $node->nid);
-        ?>
-    </div>
-    <?php } ?>
 
-    <?php if ($node->plans_count > 0) { ?>
-    <div class="tab-pane" id="related-content-plans">
-        <?php
-            echo views_embed_view('documents', 'instrument_plans', $node->nid);
-        ?>
-    </div>
-    <?php } ?>
-    <div class="tab-pane" id="related-content-contacts">
+    if (!empty($node->related_data['publications']['count'])) {
+        render_tab_content_view('related-content-publications', $first_tab,
+            $node->related_data['publications']['view_name'], $node->related_data['publications']['view_display'], $node->nid);
+        $first_tab = '';
+    }
+
+
+    if (!empty($node->related_data['national_reports']['count'])) {
+        render_tab_content_view('related-content-national-reports', $first_tab,
+            $node->related_data['national_reports']['view_name'], $node->related_data['national_reports']['view_display'], $node->nid);
+        $first_tab = '';
+    }
+
+
+    if (!empty($node->related_data['plans']['count'])) {
+        render_tab_content_view('related-content-plans', $first_tab,
+            $node->related_data['plans']['view_name'], $node->related_data['plans']['view_display'], $node->nid);
+        $first_tab = '';
+    }
+?>
+
+<?php if (!empty($node->contacts)) { ?>
+    <div class="tab-pane <?php echo $first_tab; ?>" id="related-content-contacts">
         <table class="table table-striped table-bordered dataTable">
             <thead>
                 <tr>
@@ -94,8 +96,7 @@
 
             <tbody>
                 <?php
-                    if (isset($node->contacts) && (!empty($node->contacts))) {
-                        foreach ($node->contacts as $contact) {
+                    foreach ($node->contacts as $contact) {
                 ?>
                 <tr>
                     <td>
@@ -105,10 +106,10 @@
                     </td>
                 </tr>
                 <?php
-                        }
                     }
                 ?>
             </tbody>
         </table>
     </div>
+<?php } ?>
 </div>
