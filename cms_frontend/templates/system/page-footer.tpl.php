@@ -24,8 +24,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8">
-            <?php print render($page['footer_second_row_left']); ?>
-            &copy; <?php echo date('Y'); ?>
+            <?php print render($page['footer_second_row_left']); ?>            
         </div>
         <div class="col-md-4">
           <?php print render($page['footer_second_row_right']); ?>
