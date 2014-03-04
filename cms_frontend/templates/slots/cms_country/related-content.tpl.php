@@ -15,7 +15,7 @@
         }
 
         if (!empty($node->related_data['meetings']['count'])) {
-            render_tab_view(t('Species'), 'related-content-meetings', $first_tab, $node->related_data['meetings']['count']);
+            render_tab_view(t('Meetings'), 'related-content-meetings', $first_tab, $node->related_data['meetings']['count']);
             $first_tab = '';
         }
 
