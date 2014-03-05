@@ -1,4 +1,4 @@
-<?php if (!empty($node->related_data) || !empty($node->field_publication_threats) || !empty($node->field_publication_regions)) { ?>
+<?php if (!empty($node->related_data) || !empty($node->contacts)) { ?>
     <h3 class="muted">
         <?php
             echo t('Related content');
@@ -26,12 +26,12 @@
 
         $lang_reg = field_language('node', $node, 'field_publication_regions');
         if (!empty($node->field_publication_regions[$lang_reg])) {
-            render_tab_view(t('Regions'), 'related-content-regions', $first_tab, count($node->field_publication_regions[$lang]));
+            render_tab_view(t('Regions'), 'related-content-regions', $first_tab, count($node->field_publication_regions[$lang_reg]));
         }
 
         $lang_th = field_language('node', $node, 'field_publication_threats');
         if (!empty($node->field_publication_threats[$lang_th])) {
-            render_tab_view(t('Threats'), 'related-content-threats', $first_tab, count($node->field_publication_threats[$lang]));
+            render_tab_view(t('Threats'), 'related-content-threats', $first_tab, count($node->field_publication_threats[$lang_th]));
         }
         ?>
     </ul>
@@ -40,22 +40,22 @@
     <?php
         $first_tab = 'active loaded';
         if (!empty($node->related_data['species']['count'])) {
-        render_tab_content_view('related-content-species', $first_tab,
-        $node->related_data['species']['view_name'], $node->related_data['species']['view_display'], $node->nid);
-        $first_tab = '';
+            render_tab_content_view('related-content-species', $first_tab,
+            $node->related_data['species']['view_name'], $node->related_data['species']['view_display'], $node->nid);
+            $first_tab = '';
         }
 
         if (!empty($node->related_data['meetings']['count'])) {
-        render_tab_content_view('related-content-meetings', $first_tab,
-        $node->related_data['meetings']['view_name'], $node->related_data['meetings']['view_display'], $node->nid);
-        $first_tab = '';
+            render_tab_content_view('related-content-meetings', $first_tab,
+            $node->related_data['meetings']['view_name'], $node->related_data['meetings']['view_display'], $node->nid);
+            $first_tab = '';
         }
 
 
         if (!empty($node->related_data['projects']['count'])) {
-        render_tab_content_view('related-content-projects', $first_tab,
-        $node->related_data['projects']['view_name'], $node->related_data['projects']['view_display'], $node->nid);
-        $first_tab = '';
+            render_tab_content_view('related-content-projects', $first_tab,
+            $node->related_data['projects']['view_name'], $node->related_data['projects']['view_display'], $node->nid);
+            $first_tab = '';
         }
     ?>
 
