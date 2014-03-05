@@ -794,10 +794,7 @@ ul.quicktabs-tabs.quicktabs-style-basic li:hover {
 border: 0;
 }
 
-ul.quicktabs-tabs.quicktabs-style-basic li a:hover {
-color: #444;
-}
-
+ul.quicktabs-tabs.quicktabs-style-basic li a:hover,
 ul.quicktabs-tabs.quicktabs-style-basic li.active a {
 color: #444;
 }
@@ -809,6 +806,35 @@ padding: 30px;
 .quicktabs_main.quicktabs-style-basic h2 {
 font-size: 20px;
 margin-top: 0;
+}
+
+#quicktabs-tabpage-homepage_tabs-0 .row,
+#quicktabs-tabpage-homepage_tabs-0 h2,
+#quicktabs-tabpage-homepage_tabs-0 .text-muted {
+display: none;
+}
+
+#quicktabs-tabpage-homepage_tabs-0 ul {
+padding-left: 0;
+list-style-type: none;
+}
+
+#quicktabs-tabpage-homepage_tabs-0 ul li {
+border-bottom: 1px solid #DDD;
+overflow: hidden;
+margin-bottom: 18px;
+}
+
+#quicktabs-tabpage-homepage_tabs-0 ul li a {
+display: inline-block;
+width: 67%;
+padding: 10px;
+float: left;
+font-size: 20px;
+}
+
+#quicktabs-tabpage-homepage_tabs-0 ul li img {
+float: left;
 }
 
 
