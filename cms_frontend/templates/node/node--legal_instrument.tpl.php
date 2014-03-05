@@ -19,6 +19,7 @@
                 echo render($content['field_instrument_signature']);
                 echo render($content['field_instrument_in_effect']);
                 echo render($content['field_instrument_actual_effect']);
+                echo render($content['field_instrument_website']);
                 echo render($content['field_instrument_other']);
                 render_slot($node, 'attachments', 'legal_instrument', $content);
               ?>
