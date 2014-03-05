@@ -45,8 +45,8 @@
                 echo render($content['field_instrument']);
                 echo render($content['field_project_appendix']);
                 echo render($content['field_project_taxonomic_group']);
-                echo render($content['field_project_region']);
-                echo render($content['field_project_country']);
+                echo render($content['field_region']);
+                echo render($content['field_country']);
                 echo render($content['field_project_summary']);
                 echo render($content['field_project_conservation']);
                 echo render($content['field_project_objective']);

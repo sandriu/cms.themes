@@ -103,7 +103,7 @@
     <div class="span5">
     <?php
         echo drupal_render($form['field_publication_city']);
-        echo drupal_render($form['field_publication_country']);
+        echo drupal_render($form['field_country']);
     ?>
     </div>
 
@@ -181,7 +181,7 @@
 
     <div class="span11">
     <?php
-        echo drupal_render($form['field_publication_regions']);
+        echo drupal_render($form['field_region']);
     ?>
     </div>
 

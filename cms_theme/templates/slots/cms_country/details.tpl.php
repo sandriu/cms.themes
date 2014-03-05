@@ -4,7 +4,7 @@
         <?php echo render($content['field_country_iso2']); ?>
         <?php echo render($content['field_country_iso3']); ?>
         <?php echo render($content['field_country_party_number']); ?>
-        <?php echo render($content['field_country_region']); ?>
+        <?php echo render($content['field_region']); ?>
         <?php echo render($content['field_country_entry_into_force']); ?>
     </tbody>
 </table>

@@ -11,7 +11,7 @@
         render_tab(t('Plans'), 'related-content-plans', '', 'field_publication_plans', TRUE, $content);
         render_tab(t('National Reports'), 'related-content-national-reports', '', 'field_publication_nat_report', TRUE, $content);
         render_tab(t('Projects'), 'related-content-projects', '', 'field_publication_project', TRUE, $content);
-        render_tab(t('Regions'), 'related-content-regions', '', 'field_publication_regions', TRUE, $content);
+        render_tab(t('Regions'), 'related-content-regions', '', 'field_region', TRUE, $content);
         render_tab(t('Threats'), 'related-content-threats', '', 'field_publication_threats', TRUE, $content);
     ?>
 </ul>
@@ -49,8 +49,8 @@
 
     <div class="tab-pane loaded" id="related-content-regions">
         <?php
-            if (check_display_field($content, 'field_publication_regions')) {
-                echo render($content['field_publication_regions']);
+            if (check_display_field($content, 'field_region')) {
+                echo render($content['field_region']);
             }else {
         ?>
         <p class="text-warning">

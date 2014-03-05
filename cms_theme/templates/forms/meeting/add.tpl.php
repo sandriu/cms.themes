@@ -108,7 +108,7 @@
 
     <div class="span4">
     <?php
-        echo drupal_render($form['field_meeting_country']);
+        echo drupal_render($form['field_country']);
         echo drupal_render($form['field_meeting_city']);
     ?>
     </div>

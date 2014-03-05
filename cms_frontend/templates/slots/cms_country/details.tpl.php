@@ -6,7 +6,7 @@
     <tbody>
         <?php echo render($content['field_country_official_name']); ?>
         <?php echo render($content['field_country_party_number']); ?>
-        <?php echo render($content['field_country_region']); ?>
+        <?php echo render($content['field_region']); ?>
         <?php echo render($content['field_country_entry_into_force']); ?>
         <?php echo render($content['field_country_entry_into_force']); ?>
         <?php echo render($content['national_focal_points']); ?>

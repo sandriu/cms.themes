@@ -50,7 +50,7 @@
             <?php echo render($content['field_publication_language']); ?>
             <?php echo render($content['field_publication_publisher']); ?>
             <?php echo render($content['field_publication_city']); ?>
-            <?php echo render($content['field_publication_country']); ?>
+            <?php echo render($content['field_country']); ?>
             <?php echo render($content['field_publication_type']); ?>
             <?php echo render($content['field_publication_edition']); ?>
             <?php echo render($content['field_publication_order_code']); ?>

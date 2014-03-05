@@ -1,7 +1,7 @@
 <?php
     if (check_display_field($content, 'title') ||
         check_display_field($content, 'field_instrument_name') ||
-        check_display_field($content, 'field_instrument_host_country') ||
+        check_display_field($content, 'field_country') ||
         check_display_field($content, 'field_instrument_depositary') ||
         check_display_field($content, 'field_instrument_secretariat') ||
         check_display_field($content, 'field_instrument_sponsor')) {

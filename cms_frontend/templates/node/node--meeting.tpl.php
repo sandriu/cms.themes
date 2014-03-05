@@ -26,7 +26,7 @@
             echo render($content['field_meeting_status']);
             echo render($content['field_meeting_languages']);
             #echo render($content['field_meeting_url']);
-            echo render($content['field_meeting_country']);
+            echo render($content['field_country']);
             echo render($content['field_meeting_city']);
           ?>
         </tbody>
