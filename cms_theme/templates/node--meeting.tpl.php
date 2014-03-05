@@ -37,7 +37,7 @@
                 <table class="table table-condensed table-hover two-columns">
                     <tbody>
                     <?php
-                        echo render($content['field_meeting_country']);
+                        echo render($content['field_country']);
                         echo render($content['field_meeting_city']);
                         echo render($content['field_meeting_address']);
                     ?>

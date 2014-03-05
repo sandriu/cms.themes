@@ -69,13 +69,13 @@
 
     <div class="span3">
     <?php
-        echo drupal_render($form['field_project_region']);
+        echo drupal_render($form['field_region']);
     ?>
     </div>
 
     <div class="span3">
     <?php
-        echo drupal_render($form['field_project_country']);
+        echo drupal_render($form['field_country']);
     ?>
     </div>
 

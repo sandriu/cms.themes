@@ -45,7 +45,7 @@
 
     <div class="span6">
         <?php
-        echo drupal_render($form['field_document_country']);
+        echo drupal_render($form['field_country']);
         ?>
     </div>
 
