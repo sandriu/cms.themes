@@ -40,7 +40,7 @@
 
         $lang_th = field_language('node', $node, 'field_species_threats');
         if (!empty($node->field_species_threats[$lang_th])) {
-            render_tab_view(t('Threats'), 'related-content-threats', $first_tab, count($node->field_species_threats[$lang]));
+            render_tab_view(t('Threats'), 'related-content-threats', $first_tab, count($node->field_species_threats[$lang_th]));
         }
 
         if (!empty($node->experts)) {
@@ -94,7 +94,7 @@
 
     <?php if (!empty($node->field_species_threats[$lang_th])) { ?>
         <div class="tab-pane <?php echo $first_tab; ?>" id="related-content-threats">
-            <table class="table table-condensed table-hover table-bordered table-striped">
+            <table class="table">
                 <thead>
                     <tr>
                         <th><?php echo t('Threat'); ?></th>
@@ -109,7 +109,7 @@
         <?php $first_tab = ''; ?>
     <?php } ?>
     <?php if (!empty($node->experts)) { ?>
-        <div class="tab-pane" id="related-content-contacts">
+        <div class="tab-pane <?php echo $first_tab; ?> " id="related-content-contacts">
             <?php
                 foreach ($node->experts as $expert) {
                     echo $expert['cn'][0];

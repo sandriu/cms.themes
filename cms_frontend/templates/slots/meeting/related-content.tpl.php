@@ -64,43 +64,21 @@
     ?>
 
     <?php if (!empty($node->field_meeting_threats[$lang])) { ?>
-    <div class="tab-pane" id="related-content-threats">
-        <?php
-            if (check_display_field($content, 'field_meeting_threats')) {
-                echo render($content['field_meeting_threats']);
-            }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No related threats');
-        ?>
-        </p>
-        <?php
-            }
-        ?>
-    </div>
+        <div class="tab-pane <?php echo $first_tab; ?>" id="related-content-threats">
+            <?php echo render($content['field_meeting_threats']); ?>
+        </div>
+        <?php $first_tab = ''; ?>
     <?php } ?>
 
     <?php if (!empty($node->participants)) { ?>
-    <div class="tab-pane" id="related-content-participants">
-        <?php
-            if (isset($node->participants) && (!empty($node->participants))) {
+        <div class="tab-pane <?php echo $first_tab; ?>" id="related-content-participants">
+            <?php
                 foreach ($node->participants as $participant) {
                     echo '<a href="/contacts/item/' . $participant['uid'][0] . '/' . $participant['conventions'][0] . '/view">' . $participant['cn'][0]  . '</a>';
                     echo '<br />';
                 }
-        ?>
-        <?php
-            }else {
-        ?>
-        <p class="text-warning">
-        <?php
-                echo t('No participants from Contacts database.');
-        ?>
-        </p>
-        <?php
-            }
-        ?>
-    </div>
+            ?>
+        </div>
+        <?php $first_tab = ''; ?>
     <?php } ?>
 </div>

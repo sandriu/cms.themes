@@ -1,11 +1,11 @@
 <h3 class="muted">
     <?php
-        echo t('Related content');
+    echo t('Related content');
     ?>
 </h3>
 
 <ul class="nav nav-tabs" id="related-content-tabs">
-<?php
+    <?php
     $first_tab = 'active';
     if (!empty($node->related_data['species']['count'])) {
         render_tab_view(t('Species'), 'related-content-species', $first_tab, $node->related_data['species']['count']);
@@ -37,16 +37,17 @@
         $first_tab = '';
     }
 
-    $lang = field_language('node', $node, 'field_project_threats');
-    if (!empty($node->field_project_threats[$lang])) {
-        render_tab_view(t('Threats'), 'related-content-threats', $first_tab, count($node->field_project_threats[$lang]));
-    }
+    /*$lang = field_language('node', $node, 'field_project_threat');
+    if (!empty($node->field_project_threat[$lang])) {
+        render_tab_view(t('Threats'), 'related-content-threats', $first_tab, count($node->field_project_threat[$lang]));
+        $first_tab = '';
+    }*/
 
-?>
+    ?>
 </ul>
 
 <div class="tab-content">
-<?php
+    <?php
     $first_tab = 'active loaded';
     if (!empty($node->related_data['species']['count'])) {
         render_tab_content_view('related-content-species', $first_tab,
@@ -85,24 +86,14 @@
         $first_tab = '';
     }
 
-?>
+    ?>
 
-    <?php if (!empty($node->field_project_threats[$lang])) { ?>
-        <div class="tab-pane" id="related-content-threats">
-            <?php
-            if (check_display_field($content, 'field_project_threats')) {
-                echo render($content['field_project_threats']);
-            }else {
-                ?>
-                <p class="text-warning">
-                    <?php
-                    echo t('No related threats');
-                    ?>
-                </p>
-            <?php
-            }
-            ?>
+    <?php /*
+    <?php if (!empty($node->field_project_threat[$lang])) { ?>
+        <div class="tab-pane <?php echo $first_tab;?>" id="related-content-threats">
+            <?php echo render($content['field_project_threat']); ?>
         </div>
+        <?php $first_tab = ''; ?>
     <?php } ?>
-
+    */?>
 </div>

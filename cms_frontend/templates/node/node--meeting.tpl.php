@@ -50,11 +50,18 @@
   <div class="row">
     <div class="meeting-full-width profile col-md-12">
         <?php
-        if (!empty($node->field_meeting_document[$node->language])) {
+        $lang = field_language('node', $node, 'field_meeting_document');
+        if (!empty($node->field_meeting_document[$lang])) { ?>
+            <p class="text-center">
+                <a class="btn btn-primary" href="/meeting/download-all-files/<?php echo $node->nid; ?>" target="_blank">
+                    <?php echo t('Download all files as .zip'); ?>
+                </a>
+            </p>
+        <?php
             $types = array();
-            foreach ($node->field_meeting_document[$node->language] as $document) {
+            foreach ($node->field_meeting_document[$lang] as $document) {
                 if ($document['entity']->status == 1) {
-                    foreach ($document['entity']->field_document_type[$node->language] as $term) {
+                    foreach ($document['entity']->field_document_type[$lang] as $term) {
                         if(!in_array($term['tid'], $types)) {
                             $types []= $term['tid'];
                         }
@@ -64,12 +71,12 @@
             foreach ($types as $tid) {
                 $type_term = taxonomy_term_load($tid);
         ?>
-                <h4><?php echo $type_term->name; ?></h4>
+                <h4><?php echo t($type_term->name); ?></h4>
         <?php
                 print views_embed_view('meeting_documents_list_reorder','m_d_list_fe', $node->nid, $tid);
             }
         }
-      ?>
+        ?>
     </div>
   </div>
 </div>

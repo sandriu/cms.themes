@@ -28,6 +28,9 @@
           echo render($content['field_project_file']);
         ?>
       </div>
+        <?php
+            echo render_slot($node, 'related-content', 'project', $content);
+        ?>
     </div>
 
 
