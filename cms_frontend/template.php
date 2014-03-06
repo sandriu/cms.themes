@@ -67,10 +67,10 @@ function cms_frontend_form_alter(&$form, &$form_state, $form_id) {
  */
 
 function cms_frontend_links__locale_block(&$variables) {
-  global $language_content, $front_page;
+  global $language_content, $_domain;
 
   //current path
-  $path = $front_page ? $front_page : $_GET['q'];
+  $path = $_GET['q'];
 
   $content = '<span class="btn-group language-menu">';
   $content .= '<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">';
@@ -83,10 +83,12 @@ function cms_frontend_links__locale_block(&$variables) {
     $lang = $variables['links'][$language]['language']->language;
     //skip displaying current language
     if($language_content->language == $lang)
-      continue;
-
-    $link = $lang.'/'.drupal_get_path_alias($path, $lang);
-    $string = '<li class="%1$s"><a href="/%3$s" class="language-link" lang="%1$s">%2$s</a></li>';
+      continue;    
+    
+    $subdomain = $_domain['subdomain'] . '/' . $lang. '/';
+    
+    $link = drupal_is_front_page()? $subdomain : $subdomain . drupal_get_path_alias($path, $lang);
+    $string = '<li class="%1$s"><a href="http://%3$s" class="language-link" lang="%1$s">%2$s</a></li>';
     $content .= sprintf($string, $lang, strtoupper($lang), $link);
   }
 
