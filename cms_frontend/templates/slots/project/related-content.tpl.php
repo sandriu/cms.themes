@@ -37,11 +37,11 @@
         $first_tab = '';
     }
 
-    $lang = field_language('node', $node, 'field_project_threat');
+    /*$lang = field_language('node', $node, 'field_project_threat');
     if (!empty($node->field_project_threat[$lang])) {
         render_tab_view(t('Threats'), 'related-content-threats', $first_tab, count($node->field_project_threat[$lang]));
         $first_tab = '';
-    }
+    }*/
 
     ?>
 </ul>
@@ -88,11 +88,12 @@
 
     ?>
 
+    <?php /*
     <?php if (!empty($node->field_project_threat[$lang])) { ?>
         <div class="tab-pane <?php echo $first_tab;?>" id="related-content-threats">
             <?php echo render($content['field_project_threat']); ?>
         </div>
         <?php $first_tab = ''; ?>
     <?php } ?>
-
+    */?>
 </div>
