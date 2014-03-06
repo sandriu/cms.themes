@@ -34,6 +34,9 @@ function cms_frontend_form_system_theme_settings_alter(&$form, &$form_state) {
       'ascobans.css' => t('ASCOBANS'),
       'aewa.css' => t('AEWA'),
       'eurobats.css' => t('EUROBATS'),
+      'aquatic.css' => t('AQUATIC'),
+      'avian.css' => t('AVIAN'),
+      'terrestrial.css' => t('TERRESTRIAL'),  
     ),
   );
 }
