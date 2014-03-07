@@ -1,4 +1,4 @@
-/* Colour theme for AEWA portal */
+/* Colour theme for avian MOU portals */
 
 /* HEADER */
 .search-area-and-logos {
@@ -95,4 +95,14 @@ border-color: #47C7E9;
 #block-menu-block-3 .btn-primary:hover {
 background-color: #1D5D91;
 border-color: #1D5D91;
+}
+
+
+/* FIXES */
+.global-menu.nav-show-level-2 {
+margin-bottom: 36px;
+}
+
+.global-menu.nav-show-level-3 {
+margin-bottom: 74px;
 }
