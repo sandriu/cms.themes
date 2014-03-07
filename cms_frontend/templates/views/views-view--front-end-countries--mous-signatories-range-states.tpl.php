@@ -80,7 +80,7 @@
 <?php
 
     //Render the view list for the current MoU - pass the instrument nid as view contextual arg
-    $arg = cms_current_domain_instrument_id();
+    $arg = cms_domain_instrument_id();
     if ($arg) {
         foreach ($view->range_states_statuses as $tid => $status) { ?>
             <h4><?php echo t($status); ?></h4>
