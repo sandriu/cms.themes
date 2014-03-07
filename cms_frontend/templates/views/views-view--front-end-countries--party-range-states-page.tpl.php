@@ -26,29 +26,64 @@
  *
  * @ingroup views_templates
  */
-
 ?>
-
 <div class="<?php print $classes; ?>">
-<?php print render($title_prefix); ?>
-<?php if ($title): ?>
-    <?php print $title; ?>
-<?php endif; ?>
-<?php print render($title_suffix); ?>
-<?php if ($header): ?>
-    <div class="view-header">
-        <?php print $header; ?>
-    </div>
-<?php endif; ?>
+    <?php print render($title_prefix); ?>
+    <?php if ($title): ?>
+        <?php print $title; ?>
+    <?php endif; ?>
+    <?php print render($title_suffix); ?>
+    <?php if ($header): ?>
+        <div class="view-header">
+            <?php print $header; ?>
+        </div>
+    <?php endif; ?>
 
-<?php if ($exposed): ?>
-    <div class="view-filters">
-        <?php print $exposed; ?>
-    </div>
-<?php endif; ?>
+    <?php if ($exposed): ?>
+        <div class="view-filters">
+            <?php print $exposed; ?>
+        </div>
+    <?php endif; ?>
+
+    <?php if ($attachment_before): ?>
+        <div class="attachment attachment-before">
+            <?php print $attachment_before; ?>
+        </div>
+    <?php endif; ?>
+
+    <?php echo drupal_ammap_render_map($view->range_states_ammap, array('legend' => true)); ?>
+
+    <?php if ($attachment_after): ?>
+        <div class="attachment attachment-after">
+            <?php print $attachment_after; ?>
+        </div>
+    <?php endif; ?>
+
+    <?php if ($more): ?>
+        <?php print $more; ?>
+    <?php endif; ?>
+
+    <?php if ($footer): ?>
+        <div class="view-footer">
+            <?php print $footer; ?>
+        </div>
+    <?php endif; ?>
+
+    <?php if ($feed_icon): ?>
+        <div class="feed-icon">
+            <?php print $feed_icon; ?>
+        </div>
+    <?php endif; ?>
+
+</div><?php /* class view */ ?>
+
 <?php
-//Render the view list for the current MoU - pass the instrument nid as view contextual arg
-$arg = (isset($view->args) && !empty($view->args)) ? $view->args[0] : null;
-echo drupal_ammap_render_map($view->range_states_ammap, array('legend' => true));
-echo views_embed_view('front_end_countries', 'party_range_states_list', $arg);
+    //Render the view of countries list grouped by status type
+    //  - "Group by" functionality from views not working ok with pagination
+    if( isset ($view->range_states_statuses)) {
+        foreach ($view->range_states_statuses as $tid => $status) { ?>
+            <h4><?php echo t($status); ?></h4>
+            <?php echo views_embed_view('front_end_countries', 'party_range_states_list', $tid); ?>
+<?php   }
+    }
 ?>
