@@ -2,6 +2,7 @@
 <div class="container">
   <div class="row">
     <div class="country-profile-left profile col-md-8">
+      <?php echo render($content['body']); ?>
       <div id="gmap" style="height: 300px;"></div>
       <?php
         render_slot($node, 'national_reports', 'cms_country', $content);
