@@ -328,7 +328,6 @@ text-transform: uppercase;
 .right-column section {
 padding-bottom: 15px;
 padding-top: 15px;
-border-bottom: 1px solid #ddd;
 }
 
 .right-column .last {
@@ -337,6 +336,11 @@ border-bottom: 0px;
 
 .right-column .first {
 padding-top: 0px;
+}
+
+#block-views-calendar-block-1,
+#block-random-species-random-species {
+border-bottom: 1px solid #DDD;
 }
 
 
