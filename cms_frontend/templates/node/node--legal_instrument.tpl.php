@@ -10,8 +10,9 @@
 
       <div class="instrument-right well profile col-md-4">
         <table class="table table-condensed table-hover two-columns">
-          <tbody>
-              <?php
+          <tbody>                
+              <?php                
+                echo render($content['node_list']);
                 echo render($content['field_instrument_name']);
                 echo render($content['field_instrument_type']);
                 echo render($content['field_languages']);
