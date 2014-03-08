@@ -1331,10 +1331,12 @@ background-color: #fff;
 
 /* NEWS page (with thumbnails),
     WORKING GROUPS page (no thumbnails),
-    CAMPAIGNS page (no thumbnails) */
+    CAMPAIGNS page (no thumbnails),
+    AWARDS page (no thumbnails) */
 .view-front-end-news h2,
 .view-front-end-working-groups h2,
-.view-front-end-campaigns h2 {
+.view-front-end-campaigns h2,
+.view-front-end-awards h2 {
 font-size: 18px;
 font-weight: bold;
 line-height: 24px;
@@ -1343,19 +1345,22 @@ border-bottom: 1px solid #DDD;
 
 .view-front-end-news h2 a,
 .view-front-end-working-groups h2 a,
-.view-front-end-campaigns h2 a {
+.view-front-end-campaigns h2 a,
+.view-front-end-awards h2 a {
 color: #5E9732;
 }
 
 .view-front-end-news .field-items,
 .view-front-end-working-groups .field-items,
-.view-front-end-campaigns .field-items {
+.view-front-end-campaigns .field-items,
+.view-front-end-awards .field-items {
 color: #555;
 }
 
 .view-front-end-news .node-readmore,
 .view-front-end-working-groups .node-readmore,
-.view-front-end-campaigns .node-readmore {
+.view-front-end-campaigns .node-readmore,
+.view-front-end-awards .node-readmore {
 background: #CCD7E2;
 margin-top: 0px;
 border-radius: 4px;
@@ -1365,7 +1370,8 @@ padding: 3px 7px;
 
 .view-front-end-news .node-readmore a,
 .view-front-end-working-groups .node-readmore a,
-.view-front-end-campaigns .node-readmore a {
+.view-front-end-campaigns .node-readmore a,
+.view-front-end-awards .node-readmore a {
 color: #333;
 text-transform: uppercase;
 }
@@ -1378,7 +1384,8 @@ padding-right: 30px;
 
 .view-front-end-news .article-body .text-muted,
 .view-front-end-working-groups .article-body .text-muted,
-.view-front-end-campaigns .article-body .text-muted {
+.view-front-end-campaigns .article-body .text-muted,
+.view-front-end-awards .article-body .text-muted {
 display: inline-block;
 margin-top: 8px;
 position: absolute;
@@ -1392,13 +1399,15 @@ width: 77%;
 
 .node-teaser blockquote,
 .view-front-end-news .links .fr,
-.view-front-end-news .article-body .field-name-body img {
+.view-front-end-news .article-body .field-name-body img,
+.view-front-end-awards .article-body .field-name-body img {
 display: none;
 }
 
 .view-front-end-news .views-row,
 .view-front-end-working-groups .views-row,
-.view-front-end-campaigns .views-row {
+.view-front-end-campaigns .views-row,
+.view-front-end-awards .views-row {
 margin-bottom: 20px;
 }
 
@@ -1413,7 +1422,10 @@ padding-left: 250px;
 .view-front-end-working-groups .article-body .field-name-body,
 .view-front-end-campaigns h2,
 .view-front-end-campaigns .links,
-.view-front-end-campaigns .article-body .field-name-body {
+.view-front-end-campaigns .article-body .field-name-body,
+.view-front-end-awards h2,
+.view-front-end-awards .links,
+.view-front-end-awards .article-body .field-name-body {
 width: 100%;
 padding-left: 138px;
 }
