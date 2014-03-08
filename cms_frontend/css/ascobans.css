@@ -95,10 +95,6 @@ background-color: #FEF1D8;
 border: 0;
 }
 
-body .right-column section {
-border-bottom: 1px solid #C6B099;
-}
-
 
 /* homepage CALENDAR */
 body .calendar-calendar td,
@@ -116,13 +112,13 @@ border: 2px solid #575859;
 }
 
 
-/* "LEARN ABOUT" section */
-#block-menu-block-3 .btn-primary {
+/* buttons */
+.btn-primary {
 background-color: #42C7F3;
 border-color: #999;
 }
 
-#block-menu-block-3 .btn-primary:hover {
+.btn-primary:hover {
 background-color: #FDC378;
 border-color: #FDC378;
 }

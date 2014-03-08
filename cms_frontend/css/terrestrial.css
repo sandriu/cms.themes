@@ -86,13 +86,13 @@ border: 2px solid #FFD116;
 }
 
 
-/* "LEARN ABOUT" section */
-#block-menu-block-3 .btn-primary {
+/* buttons */
+.btn-primary {
 background-color: #6D9933;
 border-color: #6D9933;
 }
 
-#block-menu-block-3 .btn-primary:hover {
+.btn-primary:hover {
 background-color: #0D5601;
 border-color: #0D5601;
 }
