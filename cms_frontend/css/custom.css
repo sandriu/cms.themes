@@ -1056,7 +1056,7 @@ overflow: hidden;
 }
 
 
-/* USER PROFILE */
+/* USER profile */
 .profile2-nfp-profile .field .field-label,
 .field-name-field-practice-ex-contact-person .field-label {
 display: inline-block;
@@ -1097,20 +1097,24 @@ text-align: left;
 }
 
 
-/* SPECIES PROFILE,
-  COUNTRY PROFILE,
-  PROJECT PROFILE,
-  MEETING PROFILE,
-  INSTRUMENT PROFILE,
-  PUBLICATION PROFILE and
-  DOCUMENT PROFILE*/
+/* SPECIES profile,
+  COUNTRY profile,
+  PROJECT profile,
+  MEETING profile,
+  INSTRUMENT profile,
+  PUBLICATION profile,
+  DOCUMENT profile,
+  WORKING GROUP profile */
 .profile .table tbody > tr > th,
-.profile .table tbody > tr > td {
+.profile .table tbody > tr > td,
+.working-group-profile-right .field-label,
+.working-group-profile-right .field-item {
 border-top: 0px;
 font-size: 13px;
 }
 
-.profile .table tbody > tr > th {
+.profile .table tbody > tr > th,
+.working-group-profile-right .field-label {
 color: #aaa;
 font-weight: normal;
 width: 130px;
@@ -1281,6 +1285,15 @@ body .document-right tr:first-of-type th,
 body .document-right tr:first-of-type td {
 font-weight: bold;
 font-size: 16px;
+}
+
+.working-group-profile-right .field {
+margin-bottom: 20px;
+}
+
+.working-group-profile-right .field-item {
+background: url("../images/gray_square.png") 0px 6px no-repeat;
+padding-left: 12px;
 }
 
 
