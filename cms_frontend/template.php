@@ -20,21 +20,21 @@ function cms_frontend_preprocess_html(&$variables) {
   drupal_add_css(path_to_theme() . '/css/ie9.css', array('media'=>'screen','group' => CSS_THEME, 'browsers' => array('IE' => 'IE 9', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
   // Add conditional CSS for IE10
   drupal_add_css(path_to_theme() . '/css/ie10.css', array('media'=>'screen','group' => CSS_THEME, 'browsers' => array('IE' => 'IE 10', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
-  
-  //Ierarhic menu 
+
+  //Ierarhic menu
   drupal_add_js(path_to_theme() . '/js/menu.js');
-  
+
   drupal_add_css(path_to_theme(). '/css/style.css', array('weight'=>'1'));
   //Custom css that override default style.css
   drupal_add_css(path_to_theme(). '/css/custom.css', array('weight'=>'2'));
   //mobile styles
   drupal_add_css(path_to_theme(). '/css/mobile.css', array('weight'=>'3'));
-  
+
   //Domain specific css
-  $domain_css = theme_get_setting('scheme');    
+  $domain_css = theme_get_setting('scheme');
   if(empty($domain_css))
-      $domain_css = 'cms.css';  
-  drupal_add_css(path_to_theme(). '/css/'. $domain_css, array('weight'=>'999'));  
+      $domain_css = 'cms.css';
+  drupal_add_css(path_to_theme(). '/css/'. $domain_css, array('weight'=>'999'));
 }
 
 /*
@@ -83,10 +83,10 @@ function cms_frontend_links__locale_block(&$variables) {
     $lang = $variables['links'][$language]['language']->language;
     //skip displaying current language
     if($language_content->language == $lang)
-      continue;    
-    
+      continue;
+
     $subdomain = $_domain['subdomain'] . '/' . $lang. '/';
-    
+
     $link = drupal_is_front_page()? $subdomain : $subdomain . drupal_get_path_alias($path, $lang);
     $string = '<li class="%1$s"><a href="http://%3$s" class="language-link" lang="%1$s">%2$s</a></li>';
     $content .= sprintf($string, $lang, strtoupper($lang), $link);
@@ -215,7 +215,7 @@ function cms_frontend_preprocess_node(&$variables){
  * Preprocess page load
  */
 function cms_frontend_preprocess_page(&$variables, $hook){
-    
+
     //use page--forum template for content type forum
     if (isset($variables['node']) && $variables['node']->type == 'forum')
         $variables['theme_hook_suggestions'][] = 'page__forum';
@@ -223,21 +223,21 @@ function cms_frontend_preprocess_page(&$variables, $hook){
     //remove user picture from account page
     if (arg(0)=="user" || arg(0)=="users" ) {
         unset ($variables['page']['content']['system_main']['user_picture']);
-    }        
-    
+    }
+
     //set theme for primary menu
-    $variables['page']['primary_menu']['domain_menu_block_front_end_main_menus']['#content']['#theme_wrappers'] = 
+    $variables['page']['primary_menu']['domain_menu_block_front_end_main_menus']['#content']['#theme_wrappers'] =
             array('menu_tree__menu_frontend_main_menu');
     $variables['page']['primary_menu']['menu_menu-frontend-main-menu']['#theme_wrappers'] =
             array('menu_tree__menu_frontend_main_menu');
-    
+
     //set theme for footer menu
     $variables['page']['footer_menu']['menu_block_2']['#content']['#theme_wrappers'] =
             array('menu_tree__menu_front_end_footer_menu');
-    
-    $variables['page']['footer_second_row_right']['menu_menu-footer-second-menu']['#theme_wrappers'] = 
+
+    $variables['page']['footer_second_row_right']['menu_menu-footer-second-menu']['#theme_wrappers'] =
             array('menu_tree__menu_footer_second_menu');
-    
+
     //remove frontpage message that appear when there is not content
     if(drupal_is_front_page())
         unset($variables['page']['content']['system_main']['default_message']);
@@ -250,7 +250,7 @@ function cms_frontend_cms_project_activity_formatter($variables) {
     extract($variables); // $item
     $ret = '';
     $in = '';
-    if(!empty($item['#items'])) {        
+    if(!empty($item['#items'])) {
         foreach($item['#items'] as $idx => $st) {
             $ob = $item[$idx];
             $description = $ob['description'];
@@ -258,7 +258,7 @@ function cms_frontend_cms_project_activity_formatter($variables) {
             $end_date = $ob['end_date'];
             $responsibility = $ob['responsibility'];
             $output = $reference = $ob['output'];
-            
+
             $in = $idx == 0? 'in':'';
 
             $body = '<table>';
@@ -268,7 +268,7 @@ function cms_frontend_cms_project_activity_formatter($variables) {
             $body .= sprintf('<tr><td>'.t('Responsability').':</td><td>%s</td></tr>',$responsibility);
             $body .= sprintf('<tr><td>'.t('Output').':</td><td>%s</td></tr>',$output);
             $body .= '</table>';
-            
+
             $ret .= '<div class="panel panel-default">';
             $ret .= sprintf('<div class="panel-heading">
                         <h4 class="panel-title">
@@ -277,14 +277,18 @@ function cms_frontend_cms_project_activity_formatter($variables) {
                             </a>
                         </h4>
                      </div>', ++$idx, $idx);
-            
-            $ret .= sprintf('<div id="collapse%d" class="panel-collapse collapse %s">            
+
+            $ret .= sprintf('<div id="collapse%d" class="panel-collapse collapse %s">
                         <div class="panel-body">
                             %s
                         </div>
                     </div>', $idx, $in, $body);
-            $ret .= '</div>';            
+            $ret .= '</div>';
         }
         return $ret;
     }
+}
+
+function cms_frontend_preprocess_views_view_table(&$vars) {
+    $vars['classes_array'][] = 'table table-striped';
 }
