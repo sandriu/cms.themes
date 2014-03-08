@@ -56,17 +56,22 @@ render_simple_slot('filters', 'contacts',
         // 'species' => $species,
         // 'meeting' => $meeting,
         'form_reset_url' => $form_reset_url,
-        'sort' => $sort
+        'sort' => $sort,
+        'button_clear_filters' => array(
+            '#theme' => 'link',
+            '#text' => t('Clear filters'),
+            '#path' => 'contacts/listing',
+            '#options' => array(
+                'html' => TRUE, 'attributes' => array('class' => 'btn', 'title' => 'Clear filters')
+            ),
+        )
     )
 ); ?>
 
 <div class="btn-toolbar">
     <div class="btn-group">
-        <a href="contacts/add"
-           class="btn"
-           title="<?php echo t('Add new contact'); ?>">
-            <?php echo t('Add contact'); ?>
-        </a>
+
+        <?php echo render($button_add_contact); ?>
     </div>
 
     <div class="btn-group pull-right">

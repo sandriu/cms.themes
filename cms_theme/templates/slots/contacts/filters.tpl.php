@@ -204,7 +204,7 @@
                                     <button class="btn btn-primary form-submit" name="" value="Search" type="submit">
                                         Search
                                     </button>
-                                    <a class="btn" id="edit-reset" name="op" href="<?php echo $data['form_reset_url']; ?>">Clear filters</a>
+                                    <?php echo render($data['button_clear_filters']); ?>
                                     <button class="btn btn-danger form-submit pull-right" name="clear_cache"
                                             title="WARNING: Really slow! Bypass cache and refresh from LDAP server. Use it if you suspect data is stale (Data was edited from another website)"
                                             value="Search" type="submit">
