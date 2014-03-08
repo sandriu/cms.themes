@@ -82,16 +82,23 @@ border: 2px solid #FFD116;
 }
 
 
-/* "LEARN ABOUT" section */
-#block-menu-block-3 .btn-primary {
+/* buttons */
+.btn-primary {
 background-color: #1baacf;
 border-color: #1baacf;
 }
 
-#block-menu-block-3 .btn-primary:hover {
-background-color: #a4ddec;
-border-color: #a4ddec;
+.btn-primary:hover {
+background-color: rgb(207, 192, 172);
+border-color: rgb(207, 192, 172);
 color: #777;
+}
+
+
+/* SPECIES slideshow */
+.carousel-control.right,
+.carousel-control.left {
+background: #1BAACF;
 }
 
 

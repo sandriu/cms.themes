@@ -84,7 +84,8 @@ background-color: #ddd;
 border: 0;
 }
 
-body .right-column section {
+#block-views-calendar-block-1,
+#block-random-species-random-species {
 border-bottom: 1px solid #AAA;
 }
 
@@ -138,15 +139,22 @@ color: #0066C0;
 }
 
 
-/* "LEARN ABOUT" section */
-#block-menu-block-3 .btn-primary {
+/* buttons */
+.btn-primary {
 background-color: #037CC1;
 border-color: #037CC1;
 }
 
-#block-menu-block-3 .btn-primary:hover {
+.btn-primary:hover {
 background-color: #0F235B;
 border-color: #0F235B;
+}
+
+
+/* SPECIES slideshow */
+.carousel-control.right,
+.carousel-control.left {
+background: #79A5D6;
 }
 
 
