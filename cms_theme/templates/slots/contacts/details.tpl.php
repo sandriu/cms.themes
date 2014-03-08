@@ -337,8 +337,8 @@
 
                 <td>
                     <?php
-                    if (isset($data['iso2']) && !empty($data['iso2'])) {
-                        echo countries_get_country($data['iso2'][0])->name;
+                    if (!empty($data['country_name'])) {
+                        echo $data['country_name'];
                     }
                     ?>
                 </td>
@@ -353,8 +353,8 @@
 
                 <td>
                     <?php
-                    if (isset($data['cpiso2']) && !empty($data['cpiso2'])) {
-                        echo countries_get_country($data['cpiso2'][0])->name;
+                    if (!empty($data['country_post_name'])) {
+                        echo $data['country_post_name'];
                     }
                     ?>
                 </td>

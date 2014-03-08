@@ -63,7 +63,7 @@
     </div>
 </div>
 
-<a href="/<?php echo ADMINISTRATION_PATH; ?>contacts/organizations/add" class="btn btn-primary" title="<?php echo t('Add'); ?>">
+<a href="contacts/organizations/add" class="btn btn-primary" title="<?php echo t('Add'); ?>">
     <?php echo t('Add organization'); ?>
 </a>
 
