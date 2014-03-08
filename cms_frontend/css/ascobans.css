@@ -95,6 +95,11 @@ background-color: #FEF1D8;
 border: 0;
 }
 
+.profile .table tbody > tr > th,
+.working-group-profile-right .field-label {
+color: #888;
+}
+
 
 /* homepage CALENDAR */
 body .calendar-calendar td,

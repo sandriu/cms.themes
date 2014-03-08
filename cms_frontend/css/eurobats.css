@@ -89,6 +89,11 @@ border: 0;
 border-bottom: 1px solid #AAA;
 }
 
+.profile .table tbody > tr > th,
+.working-group-profile-right .field-label {
+color: #777;
+}
+
 
 /* homepage CALENDAR */
 body .calendar-calendar td,
