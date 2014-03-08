@@ -1104,11 +1104,14 @@ text-align: left;
   INSTRUMENT profile,
   PUBLICATION profile,
   DOCUMENT profile,
-  WORKING GROUP profile */
+  WORKING GROUP profile,
+  NEWS profile */
 .profile .table tbody > tr > th,
 .profile .table tbody > tr > td,
 .working-group-profile-right .field-label,
-.working-group-profile-right .field-item {
+.working-group-profile-right .field-item,
+.news-profile-right .field-label,
+.news-profile-right .field-item {
 border-top: 0px;
 font-size: 13px;
 }
@@ -1287,11 +1290,13 @@ font-weight: bold;
 font-size: 16px;
 }
 
-.working-group-profile-right .field {
+.working-group-profile-right .field,
+.news-profile-right .field {
 margin-bottom: 20px;
 }
 
-.working-group-profile-right .field-item {
+.working-group-profile-right .field-item,
+.news-profile-right .field-item {
 background: url("../images/gray_square.png") 0px 6px no-repeat;
 padding-left: 12px;
 }
