@@ -30,7 +30,7 @@
         </div> 
         <div class="row">
             <div class="working-group-full-width profile col-md-12">
-                <?php echo render($content['field_wg_members']); ?>
+                <?php if(check_display_field($content, 'field_wg_members')) echo render($content['field_wg_members']); ?>
             </div>
         </div>
     </div>
