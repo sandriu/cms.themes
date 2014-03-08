@@ -20,12 +20,9 @@ if(check_display_field($content, 'field_species_range_states') || check_display_
 	    */
 
         ?>
-        <tr>
-            <td colspan="2"><?php echo drupal_ammap_render_map($node->ammap_data, array('legend'=>false)); ?></td>
-        </tr>
-
         </tbody>
     </table>
+    <?php echo drupal_ammap_render_map($node->ammap_data, array('legend'=>false)); ?>
 <?php
 }
 ?>
