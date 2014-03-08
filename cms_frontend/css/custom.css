@@ -1056,7 +1056,7 @@ overflow: hidden;
 }
 
 
-/* USER PROFILE */
+/* USER profile */
 .profile2-nfp-profile .field .field-label,
 .field-name-field-practice-ex-contact-person .field-label {
 display: inline-block;
@@ -1097,20 +1097,27 @@ text-align: left;
 }
 
 
-/* SPECIES PROFILE,
-  COUNTRY PROFILE,
-  PROJECT PROFILE,
-  MEETING PROFILE,
-  INSTRUMENT PROFILE,
-  PUBLICATION PROFILE and
-  DOCUMENT PROFILE*/
+/* SPECIES profile,
+  COUNTRY profile,
+  PROJECT profile,
+  MEETING profile,
+  INSTRUMENT profile,
+  PUBLICATION profile,
+  DOCUMENT profile,
+  WORKING GROUP profile,
+  NEWS profile */
 .profile .table tbody > tr > th,
-.profile .table tbody > tr > td {
+.profile .table tbody > tr > td,
+.working-group-profile-right .field-label,
+.working-group-profile-right .field-item,
+.news-profile-right .field-label,
+.news-profile-right .field-item {
 border-top: 0px;
 font-size: 13px;
 }
 
-.profile .table tbody > tr > th {
+.profile .table tbody > tr > th,
+.working-group-profile-right .field-label {
 color: #aaa;
 font-weight: normal;
 width: 130px;
@@ -1140,8 +1147,7 @@ padding-top: 15px;
 }
 
 .view-front-end-species .col-md-12,
-.view-front-end-projects .col-md-12,
-.view-front-end-meetings {
+.view-front-end-projects .col-md-12 {
 margin-top: 30px;
 }
 
@@ -1284,6 +1290,17 @@ font-weight: bold;
 font-size: 16px;
 }
 
+.working-group-profile-right .field,
+.news-profile-right .field {
+margin-bottom: 20px;
+}
+
+.working-group-profile-right .field-item,
+.news-profile-right .field-item {
+background: url("../images/gray_square.png") 0px 6px no-repeat;
+padding-left: 12px;
+}
+
 
 /* TABLES for listings */
 .views-table {
@@ -1331,10 +1348,12 @@ background-color: #fff;
 
 /* NEWS page (with thumbnails),
     WORKING GROUPS page (no thumbnails),
-    CAMPAIGNS page (no thumbnails) */
+    CAMPAIGNS page (no thumbnails),
+    AWARDS page (no thumbnails) */
 .view-front-end-news h2,
 .view-front-end-working-groups h2,
-.view-front-end-campaigns h2 {
+.view-front-end-campaigns h2,
+.view-front-end-awards h2 {
 font-size: 18px;
 font-weight: bold;
 line-height: 24px;
@@ -1343,19 +1362,22 @@ border-bottom: 1px solid #DDD;
 
 .view-front-end-news h2 a,
 .view-front-end-working-groups h2 a,
-.view-front-end-campaigns h2 a {
+.view-front-end-campaigns h2 a,
+.view-front-end-awards h2 a {
 color: #5E9732;
 }
 
 .view-front-end-news .field-items,
 .view-front-end-working-groups .field-items,
-.view-front-end-campaigns .field-items {
+.view-front-end-campaigns .field-items,
+.view-front-end-awards .field-items {
 color: #555;
 }
 
 .view-front-end-news .node-readmore,
 .view-front-end-working-groups .node-readmore,
-.view-front-end-campaigns .node-readmore {
+.view-front-end-campaigns .node-readmore,
+.view-front-end-awards .node-readmore {
 background: #CCD7E2;
 margin-top: 0px;
 border-radius: 4px;
@@ -1365,7 +1387,8 @@ padding: 3px 7px;
 
 .view-front-end-news .node-readmore a,
 .view-front-end-working-groups .node-readmore a,
-.view-front-end-campaigns .node-readmore a {
+.view-front-end-campaigns .node-readmore a,
+.view-front-end-awards .node-readmore a {
 color: #333;
 text-transform: uppercase;
 }
@@ -1378,7 +1401,8 @@ padding-right: 30px;
 
 .view-front-end-news .article-body .text-muted,
 .view-front-end-working-groups .article-body .text-muted,
-.view-front-end-campaigns .article-body .text-muted {
+.view-front-end-campaigns .article-body .text-muted,
+.view-front-end-awards .article-body .text-muted {
 display: inline-block;
 margin-top: 8px;
 position: absolute;
@@ -1392,13 +1416,15 @@ width: 77%;
 
 .node-teaser blockquote,
 .view-front-end-news .links .fr,
-.view-front-end-news .article-body .field-name-body img {
+.view-front-end-news .article-body .field-name-body img,
+.view-front-end-awards .article-body .field-name-body img {
 display: none;
 }
 
 .view-front-end-news .views-row,
 .view-front-end-working-groups .views-row,
-.view-front-end-campaigns .views-row {
+.view-front-end-campaigns .views-row,
+.view-front-end-awards .views-row {
 margin-bottom: 20px;
 }
 
@@ -1413,7 +1439,10 @@ padding-left: 250px;
 .view-front-end-working-groups .article-body .field-name-body,
 .view-front-end-campaigns h2,
 .view-front-end-campaigns .links,
-.view-front-end-campaigns .article-body .field-name-body {
+.view-front-end-campaigns .article-body .field-name-body,
+.view-front-end-awards h2,
+.view-front-end-awards .links,
+.view-front-end-awards .article-body .field-name-body {
 width: 100%;
 padding-left: 138px;
 }
