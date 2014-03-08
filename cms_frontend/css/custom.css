@@ -829,7 +829,8 @@ padding-left: 0;
 list-style-type: none;
 }
 
-#quicktabs-tabpage-homepage_tabs-0 ul li {
+#quicktabs-tabpage-homepage_tabs-0 ul li,
+#quicktabs-tabpage-homepage_tabs-1 .views-row {
 border-bottom: 1px solid #DDD;
 overflow: hidden;
 margin-bottom: 18px;
@@ -843,8 +844,28 @@ float: left;
 font-size: 20px;
 }
 
-#quicktabs-tabpage-homepage_tabs-0 ul li img {
+#quicktabs-tabpage-homepage_tabs-0 ul li img,
+#quicktabs-tabpage-homepage_tabs-1 .views-field-field-publication-image {
 float: left;
+}
+
+#quicktabs-tabpage-homepage_tabs-1 .views-row .views-field-title {
+display: inline-block;
+float: left;
+padding: 0px 10px 10px 10px;
+font-size: 20px;
+line-height: 24px;
+width: 82%;
+}
+
+#quicktabs-tabpage-homepage_tabs-1 .views-field-created {
+display: inline-block;
+width: 67%;
+float: left;
+padding: 10px;
+font-size: 15px;
+margin-top: -15px;
+color: #444;
 }
 
 
