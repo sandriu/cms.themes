@@ -148,3 +148,13 @@ border-color: #037CC1;
 background-color: #0F235B;
 border-color: #0F235B;
 }
+
+
+/* FIXES */
+.global-menu.nav-show-level-2 {
+margin-bottom: 36px;
+}
+
+.global-menu.nav-show-level-3 {
+margin-bottom: 74px;
+}

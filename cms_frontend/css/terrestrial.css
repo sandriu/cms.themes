@@ -1,16 +1,16 @@
-/* Colour theme for AEWA portal */
+/* Colour theme for terrestrial MOU portals */
 
 /* HEADER */
 .search-area-and-logos {
-background: url("../images/header_wave_aewa.png") 100% 0% no-repeat;
+background: url("../images/header_wave_terrestrial.png") 100% 0% no-repeat;
 }
 
 .global-menu {
-border-bottom: 1px solid #FBAF38;
+border-bottom: 1px solid #0D5601;
 }
 
 .global-menu > li {
-background: #FBAF38;
+background: #0D5601;
 }
 
 .global-menu a {
@@ -18,57 +18,57 @@ color: #FFF;
 }
 
 .global-menu > .active-trail {
-background: #FBAF38 url("../images/arrow_hexFDCF88.png") 49% 110% no-repeat;
-color: #4D4D4D;
-}
-
-.region-secondary-menu {
-background-color: #FDDFAF;
+background: #0D5601 url("../images/arrow_hex6D9933.png") 49% 110% no-repeat;
 }
 
 .global-menu .dropdown-menu a {
-color: #B07B27;
+color: #FFF;
 }
 
 .global-menu .active-trail,
 .global-menu a:hover,
 .global-menu .dropdown-menu .active-trail,
 .submenu a:hover {
-color: #4D4D4D;
+color: #FFD200;
+}
+
+.global-menu .dropdown-menu ul .active-trail,
+.global-menu .dropdown-menu ul a:hover {
+color: #0D5601;
 }
 
 .global-menu > li > ul {
-background-color: #FDCF88;
+background-color: #6D9933;
 }
 
 .global-menu > li > ul > li > ul {
-background-color: #FDDFAF;
+background-color: #A7C285;
 }
 
 .global-menu > li > ul .active-trail.dropdown-submenu {
-background: #FDCF88 url("../images/arrow_hexFDDFAF.png") 49% 110% no-repeat;
+background: #6D9933 url("../images/arrow_hexA7C285.png") 49% 110% no-repeat;
 }
 
 
 /* NEWS slideshow */
 .view-news-slideshow .views-field-title {
-background-image: -webkit-linear-gradient(top, rgba(29, 93, 145, 0), rgba(29, 93, 145, 0.7));
-background-image: -moz-linear-gradient(top, rgba(29, 93, 145, 0), rgba(29, 93, 145, 0.7));
-background-image: -o-linear-gradient(top, rgba(29, 93, 145, 0), rgba(29, 93, 145, 0.7));
-background-image: linear-gradient(to bottom, rgba(29, 93, 145, 0), rgba(29, 93, 145, 0.7));
+background-image: -webkit-linear-gradient(top, rgba(13, 86, 1, 0), rgba(13, 86, 1, 0.7));
+background-image: -moz-linear-gradient(top, rgba(13, 86, 1, 0), rgba(13, 86, 1, 0.7));
+background-image: -o-linear-gradient(top, rgba(13, 86, 1, 0), rgba(13, 86, 1, 0.7));
+background-image: linear-gradient(to bottom, rgba(13, 86, 1, 0), rgba(13, 86, 1, 0.7));
 }
 
 .view-news-slideshow .jcarousel-skin-default .jcarousel-navigation {
-background: rgba(29, 93, 145, 0.7);
+background: rgba(13, 86, 1, 0.7);
 }
 
 .view-news-slideshow .jcarousel-skin-default .jcarousel-navigation li a:hover {
-background: url("../images/aewa_news_hover.png") no-repeat;
+background: url("../images/cms_news_hover.png") no-repeat;
 }
 
 .view-news-slideshow .views-field-title a:hover,
 .view-news-slideshow .view-footer a:hover {
-color: #FBAF38;
+color: #FFD116;
 }
 
 
@@ -76,23 +76,33 @@ color: #FBAF38;
   Quicktabs plugin uses Style:Basic */
 ul.quicktabs-tabs.quicktabs-style-basic li.active,
 ul.quicktabs-tabs.quicktabs-style-basic li.active:hover {
-border-top: 4px solid #FBAF38;
+border-top: 4px solid #FFD116;
 }
 
 
 /* homepage CALENDAR  */
 .view-calendar table .mini-day-on a:hover {
-border: 2px solid #00BCE4;
+border: 2px solid #FFD116;
 }
 
 
 /* "LEARN ABOUT" section */
 #block-menu-block-3 .btn-primary {
-background-color: #47C7E9;
-border-color: #47C7E9;
+background-color: #6D9933;
+border-color: #6D9933;
 }
 
 #block-menu-block-3 .btn-primary:hover {
-background-color: #1D5D91;
-border-color: #1D5D91;
+background-color: #0D5601;
+border-color: #0D5601;
+}
+
+
+/* FIXES */
+.global-menu.nav-show-level-2 {
+margin-bottom: 36px;
+}
+
+.global-menu.nav-show-level-3 {
+margin-bottom: 74px;
 }
