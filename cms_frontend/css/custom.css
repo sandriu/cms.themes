@@ -1220,6 +1220,10 @@ border-bottom: 0;
 display: none;
 }
 
+.field-name-field-meeting-image img {
+margin-left: 25%;
+}
+
 .instrument-full-width tr.odd {
 background: transparent;
 }
