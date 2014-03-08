@@ -1171,12 +1171,10 @@ display: inline-block;
 opacity: 1;
 }
 
+.carousel-control.right,
 .carousel-control.left {
-background: url("../images/gallery_previous.png") no-repeat;
-}
-
-.carousel-control.right {
-background: url("../images/gallery_next.png") no-repeat;
+border-radius: 4px;
+font-weight: bold;
 }
 
 .profile hr {

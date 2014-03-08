@@ -98,6 +98,13 @@ border-color: #1D5D91;
 }
 
 
+/* SPECIES slideshow */
+.carousel-control.right,
+.carousel-control.left {
+background: #47C7E9;
+}
+
+
 /* FIXES */
 .global-menu.nav-show-level-2 {
 margin-bottom: 36px;
