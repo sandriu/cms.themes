@@ -1105,7 +1105,8 @@ text-align: left;
   PUBLICATION profile,
   DOCUMENT profile,
   WORKING GROUP profile,
-  NEWS profile */
+  NEWS profile,
+  CAMPAIGNS profile */
 .profile .table tbody > tr > th,
 .profile .table tbody > tr > td,
 .working-group-profile-right .field-label,
@@ -1117,8 +1118,10 @@ font-size: 13px;
 }
 
 .profile .table tbody > tr > th,
-.working-group-profile-right .field-label {
-color: #aaa;
+.news-profile-right .field-label,
+.working-group-profile-right .field-label,
+.campaign-profile-right .field-label {
+color: #888;
 font-weight: normal;
 width: 130px;
 }
@@ -1290,7 +1293,8 @@ font-size: 16px;
 }
 
 .working-group-profile-right .field,
-.news-profile-right .field {
+.news-profile-right .field,
+.campaign-profile-right .field {
 margin-bottom: 20px;
 }
 
@@ -1298,6 +1302,27 @@ margin-bottom: 20px;
 .news-profile-right .field-item {
 background: url("../images/gray_square.png") 0px 6px no-repeat;
 padding-left: 12px;
+}
+
+.campaign-profile-right .field-label,
+.campaign-profile-right .field-items {
+display: inline-block;
+font-size: 13px;
+}
+
+.campaign-profile-right .field-label {
+vertical-align: top;
+padding-top: 2px;
+}
+
+.campaign-profile-right .field-items {
+max-width: 143px;
+}
+
+@media screen and (min-width: 1200px) {
+  .campaign-profile-right .field-items {
+  max-width: 210px;
+  }
 }
 
 
