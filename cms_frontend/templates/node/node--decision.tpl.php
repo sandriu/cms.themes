@@ -1,38 +1,47 @@
-<?php
-    render_slot($node, 'node-buttons', 'general');
-?>
+<?php if($teaser): ?>
+    <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>  
+        <?php print render($title_prefix); ?>
+        <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+        <?php print render($title_suffix); ?>  
 
-<div class="row">
-    <div class="span6">
-        <table class="table table-condensed table-hover two-columns">
-            <tbody>
+        <div class="content article-body"<?php print $content_attributes; ?>>
             <?php
-                echo render($content['field_decision_publish_date']);
-                echo render($content['field_decision_type']);
-                echo render($content['field_decision_status']);
-                echo render($content['field_decision_number']);
-            ?>
-            </tbody>
-        </table>
-        <hr />
+              // We hide the comments and links now so that we can render them later.
+              hide($content['comments']);
+              hide($content['links']);
+              print render($content);      
+            ?>      
+            <span class="text-muted"><?php print format_date($node->changed,'custom','d F Y'); ?></span>
+        </div>
+    </div>
+<?php else: ?>
+    <?php render_slot($node, 'node-buttons', 'general'); ?>
+
+    <div class="row">
+        <div class="span6">
+            <table class="table table-condensed table-hover two-columns">
+                <tbody>
+                <?php
+                    echo render($content['field_decision_publish_date']);
+                    echo render($content['field_decision_type']);
+                    echo render($content['field_decision_status']);
+                    echo render($content['field_decision_number']);
+                ?>
+                </tbody>
+            </table>
+            <hr />
+        </div>
+        <div class="span6">
+            <?php echo render($content['field_decision_summary']); ?>
+        </div>
+        <div class="clearfix"></div>
+        <div class="span12">
+            <?php echo render_slot($node, 'related-content', 'decision', $content); ?>
+        </div>
     </div>
 
-    <div class="span6">
     <?php
-        echo render($content['field_decision_summary']);
+        hide($content['links']);
+        hide($content['comments']);
     ?>
-    </div>
-
-    <div class="clearfix"></div>
-
-    <div class="span12">
-    <?php
-        echo render_slot($node, 'related-content', 'decision', $content);
-    ?>
-    </div>
-</div>
-
-<?php
-    hide($content['links']);
-    hide($content['comments']);
-?>
+<?php endif; ?>
