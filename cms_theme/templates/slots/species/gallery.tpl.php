@@ -7,14 +7,15 @@
         <div class="carousel-inner">
             <div class="active item">
                 <?php
+                    $langcode = field_language('node', $node, 'field_species_images');
                     if (isset($node->field_species_images) && (!empty($node->field_species_images))) {
                 ?>
-                <img src="<?php echo file_create_url($node->field_species_images[$node->language][0]['uri']); ?>" alt="" title="" class="species-custom-image" />
+                <img src="<?php echo file_create_url($node->field_species_images[$langcode][0]['uri']); ?>" alt="" title="" class="species-custom-image" />
                 <p class="species-custom-image-author">
-                    <?php echo $node->field_species_images[$node->language][0]['title']; ?>
+                    <?php echo $node->field_species_images[$langcode][0]['title']; ?>
                 </p>
                 <?php
-                    unset($node->field_species_images[$node->language][0]);
+                    unset($node->field_species_images[$langcode][0]);
                     }elseif (count($node->gallery)) {
                         echo $node->gallery[0];
                         unset($node->gallery[0]);
@@ -23,7 +24,7 @@
             </div>
         <?php
             if (isset($node->field_species_images) && (!empty($node->field_species_images))) {
-                foreach ($node->field_species_images[$node->language] as $index => $image) {
+                foreach ($node->field_species_images[$langcode] as $index => $image) {
         ?>
             <div class="item">
                 <img src="<?php echo file_create_url($image['uri']); ?>" alt="" title="" class="species-custom-image" />
