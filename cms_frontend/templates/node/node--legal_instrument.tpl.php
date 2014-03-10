@@ -16,14 +16,13 @@
     </div>
 <?php else: ?>
     <div class="container">
-          <div class="row">
-              <div class="instrument-left profile col-md-8">
-                <?php
-                  echo render($content['field_instrument_description']);
-                  render_slot($node, 'details', 'legal_instrument', $content);
-                ?>
-              </div>
-
+      <div class="row">
+          <div class="instrument-left profile col-md-8">
+            <?php
+              echo render($content['field_instrument_description']);
+              render_slot($node, 'details', 'legal_instrument', $content);
+            ?>
+          </div>
           <div class="instrument-right well profile col-md-4">
             <table class="table table-condensed table-hover two-columns">
               <tbody>
@@ -44,17 +43,17 @@
               </tbody>
             </table>
           </div>
+      </div>
 
-            <?php if (CMSUtils::get_current_profile() == 'cms') { ?>
-            <div class="row">
-                <div class="instrument-full-width profile col-md-12">
-                <?php
-                    render_slot($node, 'related-content', 'legal_instrument', $content);
-                ?>
-                </div>
+        <?php if (CMSUtils::get_current_profile() == 'cms') { ?>
+        <div class="row">
+            <div class="instrument-full-width profile col-md-12">
+            <?php
+                render_slot($node, 'related-content', 'legal_instrument', $content);
+            ?>
             </div>
-            <?php } ?>
         </div>
-    </div>
+        <?php } ?>
 
+    </div>
 <?php endif; ?>
