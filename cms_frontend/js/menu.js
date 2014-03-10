@@ -28,7 +28,7 @@
         var $global_menu = $('.global-menu');
         var $container = $('.global-menu-bar .container');
         //get li parents of the active link
-        $li_parents = $('.global-menu a.active').parents('li').addClass('active');
+        $li_parents = $('.global-menu a.active-trail').parents('li').addClass('active');
 
         //Add classes to the menu to give a margin-bottom to push all content under menu
         switch ($li_parents.length) {
