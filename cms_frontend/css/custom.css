@@ -1120,7 +1120,8 @@ font-size: 13px;
 .profile .table tbody > tr > th,
 .news-profile-right .field-label,
 .working-group-profile-right .field-label,
-.campaign-profile-right .field-label {
+.campaign-profile-right .field-label,
+.project-profile-left .panel-body td:first-of-type {
 color: #888;
 font-weight: normal;
 width: 130px;
@@ -1310,7 +1311,8 @@ display: inline-block;
 font-size: 13px;
 }
 
-.campaign-profile-right .field-label {
+.campaign-profile-right .field-label,
+.project-profile-left .panel-body td:first-of-type {
 vertical-align: top;
 padding-top: 2px;
 }
