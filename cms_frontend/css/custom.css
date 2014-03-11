@@ -1303,7 +1303,8 @@ font-size: 16px;
 
 .working-group-profile-right .field,
 .news-profile-right .field,
-.campaign-profile-right .field {
+.campaign-profile-right .field,
+.field-name-field-species-description {
 margin-bottom: 20px;
 }
 
