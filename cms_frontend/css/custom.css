@@ -1462,6 +1462,10 @@ display: none;
 margin-bottom: 20px;
 }
 
+.view-front-end-news .views-row {
+position: relative;
+}
+
 .view-front-end-news h2,
 .view-front-end-news .links {
 width: 100%;
