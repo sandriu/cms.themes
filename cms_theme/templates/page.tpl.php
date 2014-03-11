@@ -37,7 +37,7 @@
 
             <?php print $messages; ?>
 
-            <?php
+            <?php /*
             $match = FALSE;
             $types = get_cms_types();
             if (arg(0) == 'node' && is_numeric(arg(1))) {
@@ -53,8 +53,11 @@
 
             if ($tabs and !$match) {
                 print render($tabs);
-            }
+            }*/
             ?>
+			<?php if (!empty($tabs)): ?>
+				<?php print render($tabs); ?>
+			<?php endif; ?>
 
             <?php if ($page['help']): ?>
                 <div class="well">
