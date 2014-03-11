@@ -94,6 +94,10 @@ border-color: rgb(207, 192, 172);
 color: #777;
 }
 
+.search-results h3 a {
+color: #1baacf;
+}
+
 
 /* SPECIES slideshow */
 .carousel-control.right,
