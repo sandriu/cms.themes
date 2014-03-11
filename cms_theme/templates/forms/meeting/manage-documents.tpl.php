@@ -256,8 +256,9 @@
 <div class="tab-pane" id="reorder-docs">
     <?php
         $types = array();
+        $langcode = field_language('node', $node, 'field_document_type');
         foreach ($meeting_documents as $document_id => $document) {
-            foreach ($document->field_document_type[$node->language] as $term) {
+            foreach ($document->field_document_type[$langcode] as $term) {
                 if(!in_array($term['tid'], $types)) {
                     $types []= $term['tid'];
                 }

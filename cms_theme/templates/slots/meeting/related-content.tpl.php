@@ -87,11 +87,12 @@
     <?php } ?>
     <div class="tab-pane <?php echo $first_tab; ?>" id="related-content-documents">
         <?php
-        if (!empty($node->field_meeting_document[$node->language])) {
+        $langcode = field_language('node', $node, 'field_meeting_document');
+        if (!empty($node->field_meeting_document[$langcode])) {
             $types = array();
-            foreach ($node->field_meeting_document[$node->language] as $document) {
+            foreach ($node->field_meeting_document[$langcode] as $document) {
                 if ($document['entity']->status == 1) {
-                    foreach ($document['entity']->field_document_type[$node->language] as $term) {
+                    foreach ($document['entity']->field_document_type[$langcode] as $term) {
                         if(!in_array($term['tid'], $types)) {
                             $types []= $term['tid'];
                         }
