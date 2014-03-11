@@ -17,10 +17,7 @@
     <div class="container">
         <div class="row">
             <div class="working-group-profile-left profile col-md-8">
-                <?php echo render($content['body']); ?>                 
-                <span class="text-muted">
-                    <?php print t('Last updated on').' '.format_date($node->changed, 'custom', 'd F Y'); ?>
-                </span>      
+                <?php echo render($content['body']); ?>                      
             </div>
 
             <div class="working-group-profile-right profile well col-md-4">
@@ -32,5 +29,9 @@
                 <?php if(check_display_field($content, 'field_wg_members')) echo render($content['field_wg_members']); ?>
             </div>
         </div>
+        
+        <span class="text-muted">
+            <?php print t('Last updated on').' '.format_date($node->changed, 'custom', 'd F Y'); ?>
+        </span>
     </div>
 <?php endif; ?>
