@@ -25,6 +25,7 @@
       <div class="row">
         <div class="species-left-column profile col-md-8">
         <?php
+            echo render($content['field_species_description']);
             render_slot($node, 'assessment', 'species', $content);
             render_slot($node, 'geographic-range', 'species', $content);
             render_slot($node, 'country-status', 'species', $content);
