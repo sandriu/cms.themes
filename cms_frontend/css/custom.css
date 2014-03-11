@@ -1384,7 +1384,8 @@ background-color: #fff;
 /* NEWS page (with thumbnails),
     WORKING GROUPS page (no thumbnails),
     CAMPAIGNS page (no thumbnails),
-    AWARDS page (no thumbnails) */
+    AWARDS page (no thumbnails),
+    SEARCH page  */
 .view-front-end-news h2,
 .view-front-end-working-groups h2,
 .view-front-end-campaigns h2,
@@ -1416,7 +1417,8 @@ color: #555;
 .view-front-end-news .node-readmore,
 .view-front-end-working-groups .node-readmore,
 .view-front-end-campaigns .node-readmore,
-.view-front-end-awards .node-readmore {
+.view-front-end-awards .node-readmore,
+.page-search-site .facetapi-limit-link {
 background: #CCD7E2;
 margin-top: 0px;
 border-radius: 4px;
@@ -1494,7 +1496,6 @@ border-radius: 4px;
 width: 100%;
 }
 
-
 .view-front-end-campaigns h2,
 .view-front-end-campaigns .links,
 .view-front-end-campaigns .article-body .field-name-body,
@@ -1508,6 +1509,56 @@ padding-left: 138px;
 .view-front-end-working-groups .node-teaser .article-body h3 {
 font-size: 16px;
 color: #888;
+}
+
+.page-search-site #edit-keys {
+margin-bottom: 10px;
+width: 80%;
+display: inline-block;
+}
+
+.page-search-site .form-item-keys label {
+font-weight: normal;
+color: #888;
+display: block;
+}
+
+.page-search-site #edit-submit {
+margin-top: -10px;
+}
+
+.page-search-site .center-column h2 {
+font-size: 24px;
+color: #999;
+}
+
+.page-search-site .right-column h2 {
+font-size: 16px;
+color: #777;
+}
+
+.page-search-site .facetapi-limit-link {
+display: inline-block;
+margin-left: 20px;
+}
+
+.search-results {
+padding-left: 0;
+}
+
+.search-results h3 a {
+font-size: 18px;
+font-weight: bold;
+}
+
+.search-snippet {
+color: #555;
+margin-bottom: 3px;
+}
+
+.search-info {
+color: #999;
+font-size: 13px;
 }
 
 
