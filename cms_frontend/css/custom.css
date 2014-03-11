@@ -862,7 +862,7 @@ line-height: 24px;
 width: 82%;
 }
 
-#quicktabs-tabpage-homepage_tabs-1 .views-field-created {
+#quicktabs-tabpage-homepage_tabs-1 .views-field-field-publication-published-date {
 display: inline-block;
 width: 67%;
 float: left;
@@ -1057,6 +1057,10 @@ margin-top: 10px;
 
 .article-body p {
 overflow: hidden;
+}
+
+.profile .field-label-inline .field-items {
+width: 100%;  /* fixes bug: section got width 0px when expanded */
 }
 
 
@@ -1460,6 +1464,10 @@ display: none;
 .view-front-end-campaigns .views-row,
 .view-front-end-awards .views-row {
 margin-bottom: 20px;
+}
+
+.view-front-end-news .views-row {
+position: relative;
 }
 
 .view-front-end-news h2,
