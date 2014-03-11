@@ -10,8 +10,7 @@
               hide($content['comments']);
               hide($content['links']);
               print render($content);      
-            ?>      
-            <span class="text-muted"><?php print format_date($node->changed,'custom','d F Y'); ?></span>
+            ?>
         </div>
     </div>
 <?php else: ?>
