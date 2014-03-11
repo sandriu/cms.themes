@@ -1059,6 +1059,10 @@ margin-top: 10px;
 overflow: hidden;
 }
 
+.profile .field-label-inline .field-items {
+width: 100%;  /* fixes bug: section got width 0px when expanded */
+}
+
 
 /* USER profile */
 .profile2-nfp-profile .field .field-label,
