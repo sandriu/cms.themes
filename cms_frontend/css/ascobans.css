@@ -128,6 +128,10 @@ background-color: #FDC378;
 border-color: #FDC378;
 }
 
+.search-results h3 a {
+color: #42C7F3;
+}
+
 
 /* SPECIES slideshow */
 .carousel-control.right,

@@ -97,6 +97,10 @@ background-color: #1D5D91;
 border-color: #1D5D91;
 }
 
+.search-results h3 a {
+color: #47C7E9;
+}
+
 
 /* SPECIES slideshow */
 .carousel-control.right,
