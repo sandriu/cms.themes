@@ -37,18 +37,15 @@
         //get li parents of the active link
         $li_parents = $('.global-menu a.active-trail').parents('li').addClass('active');
 
-        //Set teaser image menu styles in Homepage
+        //Set Homepage menu styles
         if (is_front_page) {
             $global_menu.children('li').each(function(index, value) {
-                //console.log($(this).data('image-url'));
-                if (typeof $(this).data('image-url') != 'undefined') {
-                    var $this = $(this);
-
-                    $this.children('ul').wrap('<div class="submenu-teaser"></div>');
-                    $div = $this.children('div');
-                    $div.append('<img class="menu-teaser-img" src="' + $this.data('image-url') + '"/>');
-                    $div.width($div.children('ul').width() + $div.children('img').width());
-                }
+            var $this = $(this);
+            $this.children('ul').wrap('<div class="submenu-teaser"></div>');
+            $div = $this.children('div');
+            if (typeof $(this).data('image-url') != 'undefined') {
+                $div.append('<img class="menu-teaser-img" src="' + $this.data('image-url') + '"/>');
+            }
             });
         }
 
@@ -82,14 +79,27 @@
         if ($second_level_li_active.length > 0) {
             $second_level_li_active.children('ul').width($container.width()).show();
         }
+
         //Submenu hover effect (show/hide level2)
-        //On Homepage where menu with teaser image - different actions
         $('.global-menu > li').not($first_level_li_active).hover(function() {
             $first_level_li_active.removeClass('active-trail').children('ul').hide();
             $(this).addClass('active-trail');
             position_menu($(this).children('ul')).show();
+
+            //On Homepage, menu acts different
             if ($(this).children('div.submenu-teaser').length > 0) {
-                $(this).children('div.submenu-teaser').show();
+                $div = $(this).children('div.submenu-teaser');
+                $div.show();
+                //initial width
+                width = $div.children('ul').width() + 40;
+                if ($div.children('img').length > 0) {
+                    //if image, enlarge width
+                    width += 20;
+                    width += parseInt($div.children('img').css('max-width').substr(
+                        0, $div.children('img').css('max-width').length - 2)
+                    );
+                }
+                $div.width(width);
             }
         }, function() {
             $first_level_li_active.addClass('active-trail').children('ul').show();
@@ -102,9 +112,9 @@
             }
         });
 
-        //On Homepage where menu with teaser image - different actions
+        //Sub-submenu hover effect (show/hide level3)
+        //On Homepage level 3 is not shown
         if (!is_front_page) {
-            //Sub-submenu hover effect (show/hide level3)
             $('.global-menu > li > ul > li').not($second_level_li_active).hover(function() {
                 $second_level_li_active.removeClass('active-trail').children('ul').hide();
                 $(this).addClass('active-trail');
