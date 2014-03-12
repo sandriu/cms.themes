@@ -12,6 +12,7 @@
               print render($content);      
             ?>
         </div>
+        <?php print render($content['links']); ?>        
     </div>
 <?php else: ?>
     <div class="container">
