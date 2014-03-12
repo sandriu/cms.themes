@@ -10,7 +10,7 @@
 function cms_frontend_menu_link(array $variables) {
   $element = $variables['element'];
   $sub_menu = '';
-  
+
   if ($element['#below']) {
     // Prevent dropdown functions from being added to management menu so it
     // does not affect the navbar module.
@@ -44,9 +44,18 @@ function cms_frontend_menu_link(array $variables) {
   // On primary navigation menu, class 'active' is not set on active menu item.
   // @see https://drupal.org/node/1896674
   if (($element['#href'] == $_GET['q'] || ($element['#href'] == '<front>' && drupal_is_front_page())) && (empty($element['#localized_options']['language']))) {
-    $element['#attributes']['class'][] = 'active';    
-  }           
-  
+    $element['#attributes']['class'][] = 'active';
+  }
+  // Add image from menuimage module to the menu
+  if (drupal_is_front_page() && !empty($element['#localized_options']['content']['image'])) {
+      $fid = $element['#localized_options']['content']['image'];
+      $file = file_load($fid);
+      if ($file) {
+          $image_url = file_create_url($file->uri);
+      }
+      $element['#attributes']['data-image-url'] = $image_url;
+  }
+
   $output = '<h2>'.l($element['#title'], $element['#href'], $element['#localized_options']).'</h2>';
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
@@ -54,23 +63,23 @@ function cms_frontend_menu_link(array $variables) {
 /*
  * Block Contact Menu link
  */
-function cms_frontend_menu_link__menu_block__menu_contact(array $variables){  
+function cms_frontend_menu_link__menu_block__menu_contact(array $variables){
   $link_content = '';
-  $element = $variables['element'];  
-  
+  $element = $variables['element'];
+
   $link_content = '<button type="button" class="btn btn-primary">'.$element['#title'].'</button>';
   return l($link_content, $element['#href'], array('attributes'=>array('id'=>'feedback'), 'html'=>TRUE));
-   
+
 }
 
 /*
  * List members link
  */
-function cms_frontend_menu_link__menu_block__menu_learn_about_cms(array $variables){  
+function cms_frontend_menu_link__menu_block__menu_learn_about_cms(array $variables){
   $link_content = '';
-  $element = $variables['element'];  
-  
+  $element = $variables['element'];
+
   $link_content = $element['#title'];
   return l($link_content, $element['#href'], array('attributes'=>array('id'=>'about-cms', 'class'=>'btn btn-primary'), 'html'=>TRUE));
-   
+
 }

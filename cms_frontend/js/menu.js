@@ -7,6 +7,7 @@
      * function to position the submenu
      * @param $ul - the jQuery obj that represents the submenu
      */
+
     function position_menu($ul) {
         if ($ul.length > 0) {
             var $container = $('.global-menu-bar .container');
@@ -24,11 +25,32 @@
         return $ul;
     }
 
-    $(document).ready(function(){
+    $(document).ready(function() {
+        //check if front_page
+        var is_front_page = false;
+        if (typeof Drupal.settings.cms_front_end.is_front_page != 'undefined') {
+            is_front_page = Drupal.settings.cms_front_end.is_front_page;
+        }
+
         var $global_menu = $('.global-menu');
         var $container = $('.global-menu-bar .container');
         //get li parents of the active link
         $li_parents = $('.global-menu a.active-trail').parents('li').addClass('active');
+
+        //Set teaser image menu styles in Homepage
+        if (is_front_page) {
+            $global_menu.children('li').each(function(index, value) {
+                //console.log($(this).data('image-url'));
+                if (typeof $(this).data('image-url') != 'undefined') {
+                    var $this = $(this);
+
+                    $this.children('ul').wrap('<div class="submenu-teaser"></div>');
+                    $div = $this.children('div');
+                    $div.append('<img class="menu-teaser-img" src="' + $this.data('image-url') + '"/>');
+                    $div.width($div.children('ul').width() + $div.children('img').width());
+                }
+            });
+        }
 
         //Add classes to the menu to give a margin-bottom to push all content under menu
         switch ($li_parents.length) {
@@ -61,32 +83,41 @@
             $second_level_li_active.children('ul').width($container.width()).show();
         }
         //Submenu hover effect (show/hide level2)
+        //On Homepage where menu with teaser image - different actions
         $('.global-menu > li').not($first_level_li_active).hover(function() {
             $first_level_li_active.removeClass('active-trail').children('ul').hide();
             $(this).addClass('active-trail');
             position_menu($(this).children('ul')).show();
-
+            if ($(this).children('div.submenu-teaser').length > 0) {
+                $(this).children('div.submenu-teaser').show();
+            }
         }, function() {
             $first_level_li_active.addClass('active-trail').children('ul').show();
             $(this).removeClass('active-trail');
             if ($(this).children('ul').length > 0) {
                 $(this).children('ul').hide();
             }
+            if ($(this).children('div.submenu-teaser').length > 0) {
+                $(this).children('div.submenu-teaser').hide();
+            }
         });
 
-        //Sub-submenu hover effect (show/hide level3)
-        $('.global-menu > li > ul > li').not($second_level_li_active).hover(function() {
-            $second_level_li_active.removeClass('active-trail').children('ul').hide();
-            $(this).addClass('active-trail');
-            if ($(this).children('ul').length > 0) {
-                $(this).children('ul').width($container.width()).show();
-            }
-        }, function() {
-            $second_level_li_active.addClass('active-trail').children('ul').show();
-            $(this).removeClass('active-trail');
-            if ($(this).children('ul').length > 0) {
-                $(this).children('ul').hide();
-            }
-        });
+        //On Homepage where menu with teaser image - different actions
+        if (!is_front_page) {
+            //Sub-submenu hover effect (show/hide level3)
+            $('.global-menu > li > ul > li').not($second_level_li_active).hover(function() {
+                $second_level_li_active.removeClass('active-trail').children('ul').hide();
+                $(this).addClass('active-trail');
+                if ($(this).children('ul').length > 0) {
+                    $(this).children('ul').width($container.width()).show();
+                }
+            }, function() {
+                $second_level_li_active.addClass('active-trail').children('ul').show();
+                $(this).removeClass('active-trail');
+                if ($(this).children('ul').length > 0) {
+                    $(this).children('ul').hide();
+                }
+            });
+        }
     });
 })(jQuery);
