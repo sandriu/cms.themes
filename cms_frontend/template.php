@@ -37,6 +37,11 @@ function cms_frontend_preprocess_html(&$variables) {
   if(empty($domain_css))
       $domain_css = 'cms.css';
   drupal_add_css(path_to_theme(). '/css/'. $domain_css, array('weight'=>'999'));
+  
+  //Add conditional IE8 css for domaine
+  drupal_add_css(path_to_theme() . '/css/ie/ie8_'.$domain_css, array('media'=>'screen','group' => CSS_THEME, 'browsers' => array('IE' => 'IE 8', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
+  // Add conditional CSS for IE9 for domaine
+  drupal_add_css(path_to_theme() . '/css/ie/ie9_'.$domain_css, array('media'=>'screen','group' => CSS_THEME, 'browsers' => array('IE' => 'IE 9', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
 }
 
 /*
