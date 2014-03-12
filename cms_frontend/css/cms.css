@@ -17,7 +17,7 @@ background: #003871;
 color: #FFF;
 }
 
-.global-menu > .active-trail {
+.not-front .global-menu > .active-trail {
 background: #003871 url("../images/arrow_hex6687A8.png") 49% 110% no-repeat;
 color: #FFD217;
 }
@@ -47,18 +47,6 @@ background-color: rgb(153, 175, 198);
 
 .global-menu > li > ul .active-trail.dropdown-submenu {
 background: #6687A8 url("../images/arrow_hex99AFC6.png") 49% 110% no-repeat;
-}
-
-/*Teaser Submenu */
-.global-menu > li > div.submenu-teaser {
-    background-color: #FFF;
-    border: 1px solid #DDD;
-}
-.global-menu > li > div.submenu-teaser a {
-    color: #0066C0;
-}
-.global-menu > li > div.submenu-teaser a:hover {
-    color: #003871;
 }
 
 .submenu .region-tertiary-menu .active-trail a,
