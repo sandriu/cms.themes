@@ -873,17 +873,18 @@ color: #444;
 }
 
 
-/* CALENDAR on homepage */
-.view-calendar.view .date-nav-wrapper .date-nav {
+/* CALENDAR on homepage,
+   EVENT CALENDAR page */
+.front .view-calendar.view .date-nav-wrapper .date-nav {
 height: 0px;
 min-height: 70px;
 }
 
-.view-calendar.view .date-nav-wrapper .date-nav {
+.front .view-calendar.view .date-nav-wrapper .date-nav {
 margin-bottom: -26px;
 }
 
-.view-calendar.view .date-nav-wrapper .date-heading h3 {
+.front .view-calendar.view .date-nav-wrapper .date-heading h3 {
 font-size: 15px;
 font-weight: bold;
 }
@@ -921,13 +922,13 @@ margin-left: 0;
 font-size: 15px;
 }
 
-.calendar-calendar td,
-.calendar-calendar table.mini td.empty {
+.front .calendar-calendar td,
+.front .calendar-calendar table.mini td.empty {
 background-color: #F5F5F5;
 text-align: center;
 }
 
-.calendar-calendar th.days {
+.front .calendar-calendar th.days {
 border: 0;
 background-color: #F5F5F5;
 color: #444;
@@ -942,6 +943,43 @@ padding: 4px;
 
 .view-calendar table td.mini {
 padding: 5px;
+}
+
+.page-event-created .calendar-calendar th.days {
+background-color: #FFF;
+border: 0;
+}
+
+.page-event-created .pager {
+margin-top: -29px;
+height: 30px;
+}
+
+.page-event-created .view .date-nav-wrapper .date-prev {
+right: auto;
+left: 0;
+}
+
+.page-event-created .view-calendar.view .date-nav-wrapper .date-prev a {
+width: 60px;
+background: #EEE;
+border-top-left-radius: 4px;
+border-bottom-left-radius: 4px;
+}
+
+.page-event-created .view-calendar.view .date-nav-wrapper .date-next a {
+width: 60px;
+background: #EEE;
+border-top-right-radius: 4px;
+border-bottom-right-radius: 4px;
+}
+
+.page-event-created .calendar-calendar .year-view td table td {
+padding: 5px 20px 5px 5px;
+}
+
+.page-event-created .calendar-calendar .year-view td table td.has-events {
+padding: 5px 11px 5px 5px;
 }
 
 
