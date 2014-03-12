@@ -5,17 +5,20 @@ function initialize() {
     var marker = Drupal.settings.gmap.marker;
     var address = {};
     var center = new google.maps.LatLng(-34.397, 150.644);
-    var zoom = 1;
+    var zoom = 2;
     if (marker.lat == null) {
         if (typeof marker.country != 'undefined') {
             address.country = marker.country;
+            zoom = 6;
         }
         if (typeof marker.iso2 != 'undefined') {
             address.iso2 = marker.iso2;
-        }if (typeof marker.city != 'undefined') {
-            address.city = marker.city;
+            zoom = 6;
         }
-        zoom = 12
+        if (typeof marker.city != 'undefined') {
+            address.city = marker.city;
+            zoom = 12;
+        }
     } else {
         center.d = marker.lat;
         center.e = marker.lng;
@@ -34,7 +37,7 @@ function initialize() {
 
 function codeAddress(location) {
     if (location.length == 0) {
-        //alert("Couldn't find the location");
+        map.setZoom(1);
     }
     components = {};
     if (typeof location.city != 'undefined') {
@@ -54,7 +57,7 @@ function codeAddress(location) {
                 position: results[0].geometry.location
             });
         } else {
-            //alert("Couldn't find the location");
+            map.setZoom(1);
         }
     });
 }
