@@ -1180,6 +1180,16 @@ font-weight: bold;
 text-align: left;
 }
 
+.profile.col-md-8 img {
+max-width: 627px;
+height: auto;
+}
+
+.profile.col-md-4 img {
+max-width: 313px;
+height: auto;
+}
+
 .species-left-column tbody,
 .profile label {
 margin-top: 10px;
