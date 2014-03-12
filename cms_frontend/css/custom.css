@@ -246,41 +246,70 @@ padding: 0px 8px;
 .global-menu > li > ul a:hover {
 text-decoration: none;
 }
+
+/* Teaser Submenu */
 .global-menu > li > div.submenu-teaser {
-    display: none;
-    position: absolute;
-    min-width: 450px;
-    max-width: 450px;
-    padding: 20px;
-    margin-left: -15px;
-    border-radius: 6px;
-    z-index: 999;
+display: none;
+position: absolute;
+top: 38px;
+min-width: 450px;
+max-width: 450px;
+padding: 20px;
+margin-left: -15px;
+border-radius: 6px;
+z-index: 999;
+box-shadow: 1px 1px 2px #888;
 }
+
 .global-menu > li > div.submenu-teaser > ul {
-    position: relative;
-    display: block;
-    float: left;
-    max-width: 200px;
-    padding: 0;
-    margin: 0;
-    border: 0;
-    text-align: left;
+position: relative;
+display: block;
+float: left;
+max-width: 200px;
+padding: 0;
+margin: 0;
+border: 0;
+text-align: left;
 }
+
 .global-menu > li > div.submenu-teaser li {
-    display: inline-block;
-    float: none;
-    height: auto;
-    margin-left: 0;
+display: inline-block;
+float: none;
+height: auto;
+margin-left: 0;
 }
+
 .global-menu > li > div.submenu-teaser li > h2 {
-    margin: 0;
-    padding: .3em 0;
+margin: 0;
+padding: .3em 0;
 }
+
 .global-menu .menu-teaser-img {
-    display: block;
-    float: right;
-    max-width: 200px;
+display: block;
+float: right;
+max-width: 200px;
 }
+
+.global-menu > li > div.submenu-teaser {
+background-color: #FFF;
+border: 1px solid #DDD;
+border-top: 0;
+}
+
+.global-menu > li > div.submenu-teaser a {
+color: #0066C0;
+}
+
+.global-menu > li > div.submenu-teaser a:hover {
+color: #003871;
+}
+
+.front .global-menu > .active-trail {
+background-image: url("../images/arrow_hexFFF.png");
+background-position: 49% 110%;
+background-repeat: no-repeat;
+}
+
 
 /* GLOBAL SUBMENU level 2 */
 .navbar.submenu {
@@ -1214,6 +1243,16 @@ font-weight: bold;
 text-align: left;
 }
 
+.profile.col-md-8 img {
+max-width: 627px;
+height: auto;
+}
+
+.profile.col-md-4 img {
+max-width: 313px;
+height: auto;
+}
+
 .species-left-column tbody,
 .profile label {
 margin-top: 10px;
@@ -1464,6 +1503,7 @@ background-color: #fff;
     WORKING GROUPS page (no thumbnails),
     CAMPAIGNS page (no thumbnails),
     AWARDS page (no thumbnails),
+    MEDIA WATCH page (no thumbnails),
     SEARCH page  */
 .view-front-end-news h2,
 .view-front-end-working-groups h2,
@@ -1537,7 +1577,9 @@ width: 77%;
 .node-teaser blockquote,
 .view-front-end-news .links .fr,
 .view-front-end-news .article-body .field-name-body img,
-.view-front-end-awards .article-body .field-name-body img {
+.view-front-end-awards .article-body .field-name-body img,
+.view-display-id-media_watch .node-teaser .field-name-field-featured-image,
+.view-display-id-notifications .field-name-field-featured-image {
 display: none;
 }
 
@@ -1556,6 +1598,13 @@ position: relative;
 .view-front-end-news .links {
 width: 100%;
 padding-left: 250px;
+}
+
+.view-display-id-media_watch h2,
+.view-display-id-media_watch .article-body .field-name-body,
+.view-display-id-notifications h2,
+.view-display-id-notifications .article-body .field-name-body {
+padding-left: 140px;
 }
 
 .view-front-end-working-groups .views-row {
