@@ -13,6 +13,7 @@
             ?>      
             <span class="text-muted"><?php print format_date($node->changed,'custom','d F Y'); ?></span>
         </div>
+        <?php print render($content['links']); ?>        
     </div>
 <?php else: ?>
     <?php
