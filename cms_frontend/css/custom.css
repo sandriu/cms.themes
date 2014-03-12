@@ -246,7 +246,41 @@ padding: 0px 8px;
 .global-menu > li > ul a:hover {
 text-decoration: none;
 }
-
+.global-menu > li > div.submenu-teaser {
+    display: none;
+    position: absolute;
+    min-width: 450px;
+    max-width: 450px;
+    padding: 20px;
+    margin-left: -15px;
+    border-radius: 6px;
+    z-index: 999;
+}
+.global-menu > li > div.submenu-teaser > ul {
+    position: relative;
+    display: block;
+    float: left;
+    max-width: 200px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    text-align: left;
+}
+.global-menu > li > div.submenu-teaser li {
+    display: inline-block;
+    float: none;
+    height: auto;
+    margin-left: 0;
+}
+.global-menu > li > div.submenu-teaser li > h2 {
+    margin: 0;
+    padding: .3em 0;
+}
+.global-menu .menu-teaser-img {
+    display: block;
+    float: right;
+    max-width: 200px;
+}
 
 /* GLOBAL SUBMENU level 2 */
 .navbar.submenu {

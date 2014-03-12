@@ -49,6 +49,18 @@ background-color: rgb(153, 175, 198);
 background: #6687A8 url("../images/arrow_hex99AFC6.png") 49% 110% no-repeat;
 }
 
+/*Teaser Submenu */
+.global-menu > li > div.submenu-teaser {
+    background-color: #FFF;
+    border: 1px solid #DDD;
+}
+.global-menu > li > div.submenu-teaser a {
+    color: #0066C0;
+}
+.global-menu > li > div.submenu-teaser a:hover {
+    color: #003871;
+}
+
 .submenu .region-tertiary-menu .active-trail a,
 .submenu .region-tertiary-menu a:hover {
 color: #FFD217; /* 'CMS yellow' colour does not offer enough contrast on a rgb(153, 175, 198) background  */
