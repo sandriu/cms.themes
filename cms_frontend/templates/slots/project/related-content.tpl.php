@@ -38,9 +38,9 @@
             $first_tab = '';
         }
 
-        /*$lang = field_language('node', $node, 'field_project_threat');
-        if (!empty($node->field_project_threat[$lang])) {
-            render_tab_view(t('Threats'), 'related-content-threats', $first_tab, count($node->field_project_threat[$lang]));
+        /*$lang = field_language('node', $node, 'field_threats');
+        if (!empty($node->field_threats[$lang])) {
+            render_tab_view(t('Threats'), 'related-content-threats', $first_tab, count($node->field_threats[$lang]));
             $first_tab = '';
         }*/
 
@@ -90,9 +90,9 @@
         ?>
 
         <?php /*
-        <?php if (!empty($node->field_project_threat[$lang])) { ?>
+        <?php if (!empty($node->field_threats[$lang])) { ?>
             <div class="tab-pane <?php echo $first_tab;?>" id="related-content-threats">
-                <?php echo render($content['field_project_threat']); ?>
+                <?php echo render($content['field_threats']); ?>
             </div>
             <?php $first_tab = ''; ?>
         <?php } ?>

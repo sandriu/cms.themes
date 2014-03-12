@@ -84,7 +84,7 @@
 
             <div class="span11">
             <?php
-                echo drupal_render($form['field_document_threats']);
+                echo drupal_render($form['field_threats']);
             ?>
             </div>
 

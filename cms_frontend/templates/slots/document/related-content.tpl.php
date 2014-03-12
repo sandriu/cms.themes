@@ -1,4 +1,4 @@
-<?php if (!empty($node->related_data) || !empty($node->field_document_threats)) { ?>
+<?php if (!empty($node->related_data) || !empty($node->field_threats)) { ?>
     <h3 class="muted">
         <?php
             echo t('Related content');
@@ -29,9 +29,9 @@
             $first_tab = '';
         }
 
-        $lang = field_language('node', $node, 'field_document_threats');
-        if (!empty($node->field_document_threats[$lang])) {
-            render_tab_view(t('Threats'), 'related-content-threats', $first_tab, count($node->field_document_threats[$lang]));
+        $lang = field_language('node', $node, 'field_threats');
+        if (!empty($node->field_threats[$lang])) {
+            render_tab_view(t('Threats'), 'related-content-threats', $first_tab, count($node->field_threats[$lang]));
         }
         ?>
     </ul>
@@ -66,9 +66,9 @@
         }
     ?>
 
-        <?php if (!empty($node->field_document_threats[$lang])) { ?>
+        <?php if (!empty($node->field_threats[$lang])) { ?>
             <div class="tab-pane <?php echo $first_tab; ?>" id="related-content-threats">
-                <?php echo render($content['field_document_threats']); ?>
+                <?php echo render($content['field_threats']); ?>
             </div>
             <?php $first_tab = ''; ?>
         <?php } ?>
