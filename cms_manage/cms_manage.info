@@ -15,6 +15,7 @@ regions[footer]         = 'Footer'
 
 ; Stylesheets
 stylesheets[all][] = css/style.css
+stylesheets[all][] = css/bootstrap-chosen.css
 
 ; Settings
 settings[bootstrap_breadcrumb_home] = 1
