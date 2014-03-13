@@ -13,6 +13,7 @@
             ?>      
             <span class="text-muted"><?php print format_date($node->changed,'custom','d F Y'); ?></span>
         </div>
+        <?php print render($content['links']); ?>        
     </div>
 <?php else: ?>
     <div class="container">
@@ -28,6 +29,7 @@
             <div class="news-profile-right profile well col-md-4">
                 <?php
                 render_slot($node, 'details', 'news', $content);
+                render_slot($node, 'attachments', 'news', $content);
                 ?>
             </div>
         </div> 

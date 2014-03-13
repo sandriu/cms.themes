@@ -145,7 +145,7 @@
 
     <div class="span11">
     <?php
-        echo drupal_render($form['field_publication_threats']);
+        echo drupal_render($form['field_threats']);
     ?>
     </div>
 

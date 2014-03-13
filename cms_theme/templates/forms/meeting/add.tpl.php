@@ -41,7 +41,7 @@
 
     <div class="span12">
     <?php
-        echo drupal_render($form['field_meeting_description']);
+        echo drupal_render($form['field_body']);
     ?>
     </div>
 
@@ -154,7 +154,7 @@
         </div>
         <div class="span3">
         <?php
-            echo drupal_render($form['field_meeting_threats']);
+            echo drupal_render($form['field_threats']);
         ?>
         </div>
 

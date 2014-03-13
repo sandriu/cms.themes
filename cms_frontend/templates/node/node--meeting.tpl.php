@@ -13,12 +13,13 @@
             ?>      
             <span class="text-muted"><?php print format_date($node->changed,'custom','d F Y'); ?></span>
         </div>
+        <?php print render($content['links']); ?>        
     </div>
 <?php else: ?>
     <div class="container">
       <div class="row">
         <div class="meeting-left profile col-md-8">
-          <?php echo render($content['field_meeting_description']); ?>
+          <?php echo render($content['field_body']); ?>
           <div id="gmap" style="height: 300px;"></div>
         </div>
 

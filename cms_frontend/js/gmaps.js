@@ -3,15 +3,21 @@ var map;
 
 function initialize() {
     var marker = Drupal.settings.gmap.marker;
-    var address = null;
+    var address = {};
     var center = new google.maps.LatLng(-34.397, 150.644);
-    var zoom = 5;
+    var zoom = 2;
     if (marker.lat == null) {
-        if (marker.city == null) {
-            address = marker.country;
-        } else {
-            address = marker.city;
-            zoom = 12
+        if (typeof marker.country != 'undefined') {
+            address.country = marker.country;
+            zoom = 6;
+        }
+        if (typeof marker.iso2 != 'undefined') {
+            address.iso2 = marker.iso2;
+            zoom = 6;
+        }
+        if (typeof marker.city != 'undefined') {
+            address.city = marker.city;
+            zoom = 12;
         }
     } else {
         center.d = marker.lat;
@@ -29,8 +35,21 @@ function initialize() {
     }
 }
 
-function codeAddress(address) {
-    geocoder.geocode( { 'address': address}, function(results, status) {
+function codeAddress(location) {
+    if (location.length == 0) {
+        map.setZoom(1);
+    }
+    components = {};
+    if (typeof location.city != 'undefined') {
+        components.locality = location.city;
+    }
+    if (typeof location.iso2 != 'undefined') {
+        components.country = location.iso2;
+    } else if (typeof location.country != 'undefined') {
+        components.country = location.country;
+    }
+
+    geocoder.geocode( { 'componentRestrictions': components }, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
             map.setCenter(results[0].geometry.location);
             var marker = new google.maps.Marker({
@@ -38,7 +57,7 @@ function codeAddress(address) {
                 position: results[0].geometry.location
             });
         } else {
-            alert('Geocode was not successful for the following reason: ' + status);
+            map.setZoom(1);
         }
     });
 }

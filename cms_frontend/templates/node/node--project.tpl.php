@@ -13,6 +13,7 @@
             ?>      
             <span class="text-muted"><?php print format_date($node->changed,'custom','d F Y'); ?></span>
         </div>
+        <?php print render($content['links']); ?>        
     </div>
 <?php else: ?>
     <div class="container">
@@ -104,8 +105,8 @@
           <div class="threats">
             <label>Threats</label>
             <?php
-              if (check_display_field($content, 'field_project_threat')) {
-                echo render($content['field_project_threat']);
+              if (check_display_field($content, 'field_threats')) {
+                echo render($content['field_threats']);
               } else {
             ?>
             <p class="text-warning">

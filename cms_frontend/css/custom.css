@@ -247,6 +247,68 @@ padding: 0px 8px;
 text-decoration: none;
 }
 
+/* Teaser Submenu */
+.global-menu > li > div.submenu-teaser {
+display: none;
+position: absolute;
+top: 38px;
+padding: 20px;
+margin-left: -15px;
+border-radius: 6px;
+z-index: 999;
+box-shadow: 1px 1px 2px #888;
+}
+
+.global-menu > li > div.submenu-teaser > ul {
+position: relative;
+display: inline-block;
+float: left;
+max-width: 300px;
+padding: 0;
+margin: 0;
+border: 0;
+background: none;
+}
+
+.global-menu > li > div.submenu-teaser li {
+display: block;
+float: none;
+height: auto;
+margin-left: 0;
+text-align: left;
+}
+
+.global-menu > li > div.submenu-teaser li > h2 {
+margin: 0;
+padding: .3em 0;
+}
+
+.global-menu .menu-teaser-img {
+display: block;
+float: right;
+max-width: 200px;
+}
+
+.global-menu > li > div.submenu-teaser {
+background-color: #FFF;
+border: 1px solid #DDD;
+border-top: 0;
+}
+
+.global-menu > li > div.submenu-teaser a {
+color: #0066C0;
+}
+
+.global-menu > li > div.submenu-teaser a:hover {
+color: #003871;
+}
+
+.front .global-menu > .active-trail {
+background-image: url("../images/arrow_hexFFF.png");
+background-position: 49% 110%;
+background-repeat: no-repeat;
+}
+
 
 /* GLOBAL SUBMENU level 2 */
 .navbar.submenu {
@@ -873,17 +935,18 @@ color: #444;
 }
 
 
-/* CALENDAR on homepage */
-.view-calendar.view .date-nav-wrapper .date-nav {
+/* CALENDAR on homepage,
+   EVENT CALENDAR page */
+.front .view-calendar.view .date-nav-wrapper .date-nav {
 height: 0px;
 min-height: 70px;
 }
 
-.view-calendar.view .date-nav-wrapper .date-nav {
+.front .view-calendar.view .date-nav-wrapper .date-nav {
 margin-bottom: -26px;
 }
 
-.view-calendar.view .date-nav-wrapper .date-heading h3 {
+.front .view-calendar.view .date-nav-wrapper .date-heading h3 {
 font-size: 15px;
 font-weight: bold;
 }
@@ -921,13 +984,13 @@ margin-left: 0;
 font-size: 15px;
 }
 
-.calendar-calendar td,
-.calendar-calendar table.mini td.empty {
+.front .calendar-calendar td,
+.front .calendar-calendar table.mini td.empty {
 background-color: #F5F5F5;
 text-align: center;
 }
 
-.calendar-calendar th.days {
+.front .calendar-calendar th.days {
 border: 0;
 background-color: #F5F5F5;
 color: #444;
@@ -942,6 +1005,43 @@ padding: 4px;
 
 .view-calendar table td.mini {
 padding: 5px;
+}
+
+.page-event-created .calendar-calendar th.days {
+background-color: #FFF;
+border: 0;
+}
+
+.page-event-created .pager {
+margin-top: -29px;
+height: 30px;
+}
+
+.page-event-created .view .date-nav-wrapper .date-prev {
+right: auto;
+left: 0;
+}
+
+.page-event-created .view-calendar.view .date-nav-wrapper .date-prev a {
+width: 60px;
+background: #EEE;
+border-top-left-radius: 4px;
+border-bottom-left-radius: 4px;
+}
+
+.page-event-created .view-calendar.view .date-nav-wrapper .date-next a {
+width: 60px;
+background: #EEE;
+border-top-right-radius: 4px;
+border-bottom-right-radius: 4px;
+}
+
+.page-event-created .calendar-calendar .year-view td table td {
+padding: 5px 20px 5px 5px;
+}
+
+.page-event-created .calendar-calendar .year-view td table td.has-events {
+padding: 5px 11px 5px 5px;
 }
 
 
@@ -1142,6 +1242,16 @@ font-weight: bold;
 text-align: left;
 }
 
+.profile.col-md-8 img {
+max-width: 627px;
+height: auto;
+}
+
+.profile.col-md-4 img {
+max-width: 313px;
+height: auto;
+}
+
 .species-left-column tbody,
 .profile label {
 margin-top: 10px;
@@ -1243,6 +1353,13 @@ margin-left: 25%;
 
 .instrument-full-width tr.odd {
 background: transparent;
+}
+
+.profile select {
+position: absolute;
+top: -30px;
+left: 0;
+width: 100%;
 }
 
 .read-more {
@@ -1385,6 +1502,7 @@ background-color: #fff;
     WORKING GROUPS page (no thumbnails),
     CAMPAIGNS page (no thumbnails),
     AWARDS page (no thumbnails),
+    MEDIA WATCH page (no thumbnails),
     SEARCH page  */
 .view-front-end-news h2,
 .view-front-end-working-groups h2,
@@ -1458,7 +1576,9 @@ width: 77%;
 .node-teaser blockquote,
 .view-front-end-news .links .fr,
 .view-front-end-news .article-body .field-name-body img,
-.view-front-end-awards .article-body .field-name-body img {
+.view-front-end-awards .article-body .field-name-body img,
+.view-display-id-media_watch .node-teaser .field-name-field-featured-image,
+.view-display-id-notifications .field-name-field-featured-image {
 display: none;
 }
 
@@ -1477,6 +1597,13 @@ position: relative;
 .view-front-end-news .links {
 width: 100%;
 padding-left: 250px;
+}
+
+.view-display-id-media_watch h2,
+.view-display-id-media_watch .article-body .field-name-body,
+.view-display-id-notifications h2,
+.view-display-id-notifications .article-body .field-name-body {
+padding-left: 140px;
 }
 
 .view-front-end-working-groups .views-row {

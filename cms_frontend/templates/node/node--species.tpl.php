@@ -13,6 +13,7 @@
             ?>
             <span class="text-muted"><?php print format_date($node->changed,'custom','d F Y'); ?></span>
         </div>
+        <?php print render($content['links']); ?>        
     </div>
 <?php else: ?>
     <?php
@@ -25,7 +26,7 @@
       <div class="row">
         <div class="species-left-column profile col-md-8">
         <?php
-            echo render($content['field_species_description']);
+            echo render($content['field_body']);
             render_slot($node, 'assessment', 'species', $content);
             render_slot($node, 'geographic-range', 'species', $content);
             render_slot($node, 'country-status', 'species', $content);

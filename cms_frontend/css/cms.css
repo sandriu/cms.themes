@@ -17,7 +17,7 @@ background: #003871;
 color: #FFF;
 }
 
-.global-menu > .active-trail {
+.not-front .global-menu > .active-trail {
 background: #003871 url("../images/arrow_hex6687A8.png") 49% 110% no-repeat;
 color: #FFD217;
 }

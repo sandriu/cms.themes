@@ -26,7 +26,7 @@
         <?php echo render($content['field_instrument_secretariat']); ?>
         <?php echo render($content['field_instrument_financing']); ?>
         <?php echo render($content['field_instrument_reservations']); ?>
-        <?php echo render($content['field_instrument_description']); ?>
+        <?php echo render($content['field_body']); ?>
         <?php echo render($content['field_instrument_species_ex']); ?>
         <?php echo render($content['field_instrument_other']); ?>
         <?php echo render($content['field_instrument_amendments']); ?>

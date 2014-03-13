@@ -248,7 +248,7 @@
     <div id="related-content-fields" class="collapse out">
         <div class="span11">
         <?php
-            echo drupal_render($form['field_project_threat']);
+            echo drupal_render($form['field_threats']);
         ?>
         </div>
 
