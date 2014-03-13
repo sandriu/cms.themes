@@ -1527,13 +1527,6 @@ border-bottom: 1px solid #DDD;
 border-bottom: 1px solid #999;
 }
 
-.view-front-end-news h2 a,
-.view-front-end-working-groups h2 a,
-.view-front-end-campaigns h2 a,
-.view-front-end-awards h2 a {
-color: #5E9732;
-}
-
 .view-front-end-news .field-items,
 .view-front-end-working-groups .field-items,
 .view-front-end-campaigns .field-items,

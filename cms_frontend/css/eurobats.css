@@ -155,7 +155,11 @@ background-color: #0F235B;
 border-color: #0F235B;
 }
 
-.search-results h3 a {
+.search-results h3 a,
+.view-front-end-news h2 a,
+.view-front-end-working-groups h2 a,
+.view-front-end-campaigns h2 a,
+.view-front-end-awards h2 a {
 color: #037CC1;
 }
 

@@ -99,7 +99,11 @@ background-color: #20C6D9;
 border-color: #20C6D9;
 }
 
-.search-results h3 a {
+.search-results h3 a,
+.view-front-end-news h2 a,
+.view-front-end-working-groups h2 a,
+.view-front-end-campaigns h2 a,
+.view-front-end-awards h2 a {
 color: #006D8C;
 }
 
