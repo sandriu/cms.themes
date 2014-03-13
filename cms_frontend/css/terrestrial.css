@@ -105,6 +105,14 @@ border-color: #0D5601;
 color: #6D9933;
 }
 
+.view-front-end-news .node-readmore,
+.view-front-end-working-groups .node-readmore,
+.view-front-end-campaigns .node-readmore,
+.view-front-end-awards .node-readmore,
+.page-search-site .facetapi-limit-link {
+background: #deeaad;
+}
+
 
 /* SPECIES slideshow */
 .carousel-control.right,

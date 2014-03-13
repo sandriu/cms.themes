@@ -115,6 +115,14 @@ color: #0066c0;
 color: #5E9732;
 }
 
+.view-front-end-news .node-readmore,
+.view-front-end-working-groups .node-readmore,
+.view-front-end-campaigns .node-readmore,
+.view-front-end-awards .node-readmore,
+.page-search-site .facetapi-limit-link {
+background: #CCD7E2;
+}
+
 
 /* SPECIES slideshow */
 .carousel-control.right,
