@@ -1362,6 +1362,10 @@ left: 0;
 width: 100%;
 }
 
+.profile.well {
+margin-top: 30px;
+}
+
 .read-more {
 margin-left: 5px;
 font-size: 13px;
