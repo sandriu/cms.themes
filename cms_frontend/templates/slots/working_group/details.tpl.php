@@ -6,5 +6,10 @@
         <?php echo render($content['field_wg_publication']); ?>
         <?php echo render($content['field_wg_species']); ?>
         <?php echo render($content['field_wg_project']); ?>
+        <?php if(check_display_field($content, 'field_wg_members')) { ?>
+            <div class="field-label"><?php echo t('Documents'); ?> :</div>
+            <?php print views_embed_view('working_group_documents_reorder','fe_list', $node->nid); ?>
+            </div>
+        <?php } ?>
     </tbody>
 </table>

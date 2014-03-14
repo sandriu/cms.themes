@@ -25,14 +25,6 @@
                 <?php render_slot($node, 'details', 'working_group', $content); ?>
             </div>
         </div>
-        <?php if(check_display_field($content, 'field_wg_members')) { ?>
-        <div class="row">
-            <h4><?php echo t('Documents');?></h4>
-            <div class="working-group-full-width profile col-md-12">
-                <?php print views_embed_view('working_group_documents_reorder','fe_list', $node->nid); ?>
-            </div>
-        </div>
-        <?php } ?>
         <div class="row">
             <div class="working-group-full-width profile col-md-12">
                 <?php if(check_display_field($content, 'field_wg_members')) echo render($content['field_wg_members']); ?>
