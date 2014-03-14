@@ -1,11 +1,12 @@
-/* FIXES for Internet Explorer 9 */
+/* FIXES for Internet Explorer 9
+    for TERRESTRIAL colour theme */
 
 /* NEWS slideshow, skin Default */
 .view-news-slideshow .views-field-title {
-background: url("../images/slideshow-title-bkg.png") repeat-x;
+background: url("../../images/terrestrial-slideshow-title-bkg.png") repeat-x;
 }
 
 .view-news-slideshow .jcarousel-skin-default .jcarousel-navigation {
-background: url("../images/slideshow-controls-bkg.png") repeat-x;
+background: url("../../images/terrestrial-slideshow-controls-bkg.png") repeat-x;
 }
 
