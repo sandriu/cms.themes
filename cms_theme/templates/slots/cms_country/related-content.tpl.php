@@ -70,14 +70,14 @@
 ?>
 
     <?php if (!empty($node->field_country_instrument_status)) { ?>
-        <div class="tab-pane" id="ratification-status">
+        <div class="tab-pane <?php echo $first_tab ?>" id="ratification-status">
             <?php echo render($content['field_country_instrument_status']); ?>
         </div>
         <?php $first_tab = ''; ?>
     <?php } ?>
 
     <?php if (!empty($node->national_focal_points)) { ?>
-        <div class="tab-pane" id="related-content-nfp">
+        <div class="tab-pane <?php echo $first_tab ?>" id="related-content-nfp">
             <?php echo render($content['national_focal_points']); ?>
         </div>
         <?php $first_tab = ''; ?>
