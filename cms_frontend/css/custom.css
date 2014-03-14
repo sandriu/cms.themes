@@ -1308,11 +1308,6 @@ font-weight: bold;
 border-color: #ddd;
 }
 
-.threats .field-item {
-background: url("../images/gray_square.png") 0px 6px no-repeat;
-padding-left: 18px;
-}
-
 .meeting-full-width h4 {
 font-size: 20px;
 font-weight: bold;
@@ -1414,10 +1409,11 @@ width: 100%;
 }
 
 .document-left thead {
-display: none; /* temporary */
+display: none;
 }
 
-.document-left .field_document_file_language div {
+.document-left .field_document_file_language div,
+.working-group-profile-right .field-item {
 padding-bottom: 6px;
 }
 
@@ -1434,7 +1430,14 @@ font-size: 16px;
 margin-bottom: 20px;
 }
 
-.working-group-profile-right .field-item,
+.working-group-profile-right ul {
+list-style-type: none;
+padding-left: 2px;
+}
+
+.working-group-profile-right ul li,
+.working-group-profile-right .field-name-field-wg-meeting .field-item,
+.threats .field-item,
 .news-profile-right .field-item {
 background: url("../images/gray_square.png") 0px 6px no-repeat;
 padding-left: 12px;
