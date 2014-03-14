@@ -19,7 +19,7 @@
     <div class="container">
       <div class="row">
         <div class="meeting-left profile col-md-8">
-          <?php echo render($content['field_body']); ?>
+          <?php echo render($content['body']); ?>
           <div id="gmap" style="height: 300px;"></div>
         </div>
 

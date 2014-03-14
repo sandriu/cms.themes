@@ -20,7 +20,7 @@
       <div class="row">
           <div class="instrument-left profile col-md-8">
             <?php
-              echo render($content['field_body']);
+              echo render($content['body']);
               render_slot($node, 'details', 'legal_instrument', $content);
             ?>
           </div>

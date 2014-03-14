@@ -24,7 +24,7 @@
             </tbody>
         </table>
         <div class="clearfix">&nbsp;</div>
-        <?php echo render($content['field_body']); ?>
+        <?php echo render($content['body']); ?>
     </div>
 
     <div class="span4">

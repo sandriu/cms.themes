@@ -41,7 +41,7 @@
 
     <div class="span12">
     <?php
-        echo drupal_render($form['field_body']);
+        echo drupal_render($form['body']);
     ?>
     </div>
 
