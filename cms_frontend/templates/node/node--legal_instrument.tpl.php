@@ -13,7 +13,7 @@
             ?>
             <span class="text-muted"><?php print format_date($node->changed,'custom','d F Y'); ?></span>
         </div>
-        <?php print render($content['links']); ?>        
+        <?php print render($content['links']); ?>
     </div>
 <?php else: ?>
     <div class="container">
@@ -27,7 +27,7 @@
           <div class="instrument-right well profile col-md-4">
             <table class="table table-condensed table-hover two-columns">
               <tbody>
-                  <?php                  
+                  <?php
                     echo render($content['instrument_list']);
                     echo render($content['field_instrument_name']);
                     echo render($content['field_instrument_type']);
