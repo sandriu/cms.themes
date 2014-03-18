@@ -1475,6 +1475,59 @@ max-width: 143px;
   }
 }
 
+.node-news .field {
+margin-bottom: 20px;
+}
+
+.node-news.node-teaser .field {
+margin-bottom: 0px;
+}
+
+.node-news .field-label {
+display: inline;
+}
+
+.node-news .field-name-field-featured-image .field-items {
+display: block;
+}
+
+.node-news .field-item {
+display: inline-block;
+background: #DDD;
+margin: 5px;
+padding: 2px 5px;
+font-size: 12px;
+border-radius: 3px;
+}
+
+.node-news .field-name-field-featured-image .field-label,
+.node-news .field-item:empty {
+display: none;
+}
+
+.node-news .field-name-body .field-item,
+.node-news .field-name-field-featured-image .field-item,
+.node-news.node-teaser .field-item {
+display: block;
+background: #FFF;
+margin: 0;
+padding: 0;
+font-size: 15px;
+border-radius: 0;
+}
+
+.profile blockquote p {
+color: #5E9732;
+font-size: 14px;
+font-style: italic;
+padding-left: 5px;
+}
+
+.profile blockquote {
+border-left: 0;
+padding: 6px 0px;
+}
+
 
 /* TABLES for listings */
 .views-table {
@@ -1700,60 +1753,4 @@ margin-bottom: 3px;
 .search-info {
 color: #999;
 font-size: 13px;
-}
-
-
-/* NEWS item */
-.node-news .field {
-margin-bottom: 20px;
-}
-
-.node-news.node-teaser .field {
-margin-bottom: 0px;
-}
-
-.node-news .field-label {
-display: inline;
-}
-
-.node-news .field-name-field-featured-image .field-items {
-display: block;
-}
-
-.node-news .field-item {
-display: inline-block;
-background: #DDD;
-margin: 5px;
-padding: 2px 5px;
-font-size: 12px;
-border-radius: 3px;
-}
-
-.node-news .field-name-field-featured-image .field-label,
-.node-news .field-item:empty {
-display: none;
-}
-
-.node-news .field-name-body .field-item,
-.node-news .field-name-field-featured-image .field-item,
-.node-news.node-teaser .field-item {
-display: block;
-background: #FFF;
-margin: 0;
-padding: 0;
-font-size: 15px;
-border-radius: 0;
-}
-
-.node-news blockquote p {
-color: #5E9732;
-font-size: 14px;
-font-style: italic;
-border-left: 3px solid #5E9732;
-padding-left: 5px;
-}
-
-.node-news blockquote {
-border-left: 0;
-padding: 6px 0px;
 }
