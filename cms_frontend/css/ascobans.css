@@ -102,9 +102,9 @@ color: #888;
 
 
 /* homepage CALENDAR */
-body .calendar-calendar td,
-body .calendar-calendar table.mini td.empty,
-body .calendar-calendar th.days {
+body .region-sidebar-second .calendar-calendar td,
+body .region-sidebar-second .calendar-calendar table.mini td.empty,
+body .region-sidebar-second .calendar-calendar th.days {
 background-color: #FEF1D8;
 }
 
@@ -159,4 +159,10 @@ margin-bottom: 36px;
 
 .global-menu.nav-show-level-3 {
 margin-bottom: 74px;
+}
+
+
+/* NEWS profile */
+.profile blockquote p {
+color: #aac177;
 }
