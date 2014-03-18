@@ -19,8 +19,8 @@
     <div class="container">
         <div class="row">
             <div class="news-profile-left profile col-md-8">
-                <?php echo render($content['body']); ?> 
-                <?php echo render($content['field_featured_image']); ?> 
+                <?php echo render($content['field_featured_image']); ?>
+                <?php echo render($content['body']); ?>                  
                 <span class="text-muted">
                     <?php if (!$teaser) print 'Last updated on'; ?> <?php print format_date($node->changed, 'custom', 'd F Y'); ?>
                 </span>      
