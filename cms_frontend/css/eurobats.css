@@ -96,9 +96,9 @@ color: #777;
 
 
 /* homepage CALENDAR */
-body .calendar-calendar td,
-body .calendar-calendar table.mini td.empty,
-body .calendar-calendar th.days {
+body .region-sidebar-second .calendar-calendar td,
+body .region-sidebar-second .calendar-calendar table.mini td.empty,
+body .region-sidebar-second .calendar-calendar th.days {
 background-color: #DDD;
 }
 
