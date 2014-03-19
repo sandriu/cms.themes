@@ -1584,7 +1584,7 @@ background-color: #fff;
 
 /* NEWS page (with thumbnails),
     WORKING GROUPS page (no thumbnails),
-    CAMPAIGNS page (no thumbnails),
+    CAMPAIGNS page (with thumbnails),
     AWARDS page (no thumbnails),
     MEDIA WATCH page (no thumbnails),
     SEARCH page  */
@@ -1628,7 +1628,8 @@ color: #333;
 text-transform: uppercase;
 }
 
-.node-teaser .field-name-field-featured-image {
+.node-teaser .field-name-field-featured-image,
+.node-teaser .field-name-field-campaign-picture {
 display: inline-block;
 float: left;
 padding-right: 30px;
@@ -1637,12 +1638,18 @@ padding-right: 30px;
 .view-front-end-news .article-body .text-muted,
 .view-front-end-working-groups .article-body .text-muted,
 .view-front-end-campaigns .article-body .text-muted,
-.view-front-end-awards .article-body .text-muted {
+.view-front-end-awards .article-body .text-muted,
+.view-front-end-campaigns .field-name-field-campaign-duration {
 display: inline-block;
 margin-top: 8px;
 position: absolute;
 left: 0;
 top: 15px;
+}
+
+.view-front-end-campaigns .field-name-field-campaign-duration .field-items {
+color: #999;
+font-size: 13px;
 }
 
 .view-front-end-news .article-body .field-name-body {
@@ -1670,7 +1677,10 @@ position: relative;
 }
 
 .view-front-end-news h2,
-.view-front-end-news .links {
+.view-front-end-news .links,
+.view-front-end-campaigns h2,
+.view-front-end-campaigns .links,
+.view-front-end-campaigns .article-body .field-name-body {
 width: 100%;
 padding-left: 250px;
 }
@@ -1699,9 +1709,6 @@ border-radius: 4px;
 width: 100%;
 }
 
-.view-front-end-campaigns h2,
-.view-front-end-campaigns .links,
-.view-front-end-campaigns .article-body .field-name-body,
 .view-front-end-awards h2,
 .view-front-end-awards .links,
 .view-front-end-awards .article-body .field-name-body {
