@@ -29,6 +29,7 @@
               <tbody>
                   <?php
                     echo render($content['instrument_list']);
+                    echo render($content['field_picture']);
                     echo render($content['field_instrument_name']);
                     echo render($content['field_instrument_type']);
                     echo render($content['field_languages']);
