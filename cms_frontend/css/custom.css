@@ -1526,8 +1526,15 @@ border-left: 0;
 padding: 6px 0px;
 }
 
+.instrument-right .field-name-field-picture,
 .publication-right .publication-thumbnail {
 text-align: center;
+}
+
+.instrument-right .field-name-field-picture {
+padding-bottom: 15px;
+border-bottom: 1px solid #DDD;
+margin-bottom: 10px;
 }
 
 
