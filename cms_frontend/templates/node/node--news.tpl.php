@@ -11,7 +11,7 @@
               hide($content['links']);
               print render($content);      
             ?>      
-            <span class="text-muted"><?php print format_date($node->changed,'custom','d F Y'); ?></span>
+            <span class="text-muted"><?php print format_date($node->created,'custom','d F Y'); ?></span>
         </div>
         <?php print render($content['links']); ?>        
     </div>
