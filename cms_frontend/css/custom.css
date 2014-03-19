@@ -1243,12 +1243,12 @@ text-align: left;
 }
 
 .profile.col-md-8 img {
-max-width: 627px;
+max-width: 597px;
 height: auto;
 }
 
 .profile.col-md-4 img {
-max-width: 313px;
+max-width: 273px;
 height: auto;
 }
 
@@ -1526,6 +1526,17 @@ border-left: 0;
 padding: 6px 0px;
 }
 
+.instrument-right .field-name-field-picture,
+.publication-right .publication-thumbnail {
+text-align: center;
+}
+
+.instrument-right .field-name-field-picture {
+padding-bottom: 15px;
+border-bottom: 1px solid #DDD;
+margin-bottom: 10px;
+}
+
 
 /* TABLES for listings */
 .views-table {
@@ -1698,9 +1709,10 @@ width: 100%;
 padding-left: 138px;
 }
 
-.view-front-end-working-groups .node-teaser .article-body h3 {
-font-size: 16px;
-color: #888;
+.node-teaser .article-body h3 {
+font-size: 15px;
+color: #555;
+line-height: 21px;
 }
 
 .page-search-site #edit-keys {
