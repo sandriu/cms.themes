@@ -61,25 +61,39 @@ function cms_frontend_menu_link(array $variables) {
 }
 
 /*
- * Block Contact Menu link
+ * Learn About CMS link
  */
-function cms_frontend_menu_link__menu_block__menu_contact(array $variables){
-  $link_content = '';
-  $element = $variables['element'];
-
-  $link_content = '<button type="button" class="btn btn-primary">'.$element['#title'].'</button>';
-  return l($link_content, $element['#href'], array('attributes'=>array('id'=>'feedback'), 'html'=>TRUE));
-
+function cms_frontend_menu_link__menu_block__menu_learn_about_cms(array $variables){
+    return learn_about($variables, 'about-cms');
 }
 
 /*
- * List members link
+ * Learn About AEWA link
  */
-function cms_frontend_menu_link__menu_block__menu_learn_about_cms(array $variables){
-  $link_content = '';
-  $element = $variables['element'];
-
-  $link_content = $element['#title'];
-  return l($link_content, $element['#href'], array('attributes'=>array('id'=>'about-cms', 'class'=>'btn btn-primary'), 'html'=>TRUE));
-
+function cms_frontend_menu_link__menu_block__menu_learn_about_aewa(array $variables){
+    return learn_about($variables, 'about-aewa');  
 }
+
+/*
+ * Learn About ASCOBANS link
+ */
+function cms_frontend_menu_link__menu_block__menu_learn_about_ascobans(array $variables){
+    return learn_about($variables, 'about-ascobans');  
+}
+
+/*
+ * Learn About EUROBATS link
+ */
+function cms_frontend_menu_link__menu_block__menu_learn_about_eurobats(array $variables){
+    return learn_about($variables, 'about-eurobats');  
+}
+
+function learn_about(array $variables, $id){
+    $link_content = '';
+    $element = $variables['element'];
+
+    $link_content = $element['#title'];
+    return l($link_content, $element['#href'], array('attributes'=>array('id' => $id, 'class'=>'btn btn-primary'), 'html'=>TRUE));
+}
+
+
