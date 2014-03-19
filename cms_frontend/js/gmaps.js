@@ -48,12 +48,12 @@ function codeAddress(location) {
     }
 
     components = {};
-    if (typeof location.city != 'undefined') {
+    if (typeof location.city != 'undefined' && location.city != null) {
         components.locality = location.city;
     }
-    if (typeof location.iso2 != 'undefined') {
+    if (typeof location.iso2 != 'undefined' && location.iso2 != null) {
         components.country = location.iso2;
-    } else if (typeof location.country != 'undefined') {
+    } else if (typeof location.country != 'undefined' && location.country != null) {
         components.country = location.country;
     }
 
