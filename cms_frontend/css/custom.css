@@ -1526,6 +1526,10 @@ border-left: 0;
 padding: 6px 0px;
 }
 
+.publication-right .publication-thumbnail {
+text-align: center;
+}
+
 
 /* TABLES for listings */
 .views-table {
