@@ -31,32 +31,19 @@
           </div>
 
       <div class="publication-right profile well col-md-4">
-        <div class="publication-thumbnail">
+            <div class="publication-thumbnail">
             <?php
               $langcode = field_language('node', $node, 'field_publication_image');
-              if (!empty($node->field_publication_image) && count($node->field_publication_image[$langcode])) {
-                ?>
-                <div id="myCarousel" class="carousel slide img-polaroid publication-carousel">
-                    <?php
-                    echo render($content['field_publication_image']);
-                    ?>
-
-                    <?php if (count($node->field_publication_image[$node->language]) > 1) { ?>
-                        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-                        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-                    <?php } ?>
-                </div>
-            <?php
-            } else {
-                ?>
+              
+              if (!empty($node->field_publication_image) && count($node->field_publication_image[$langcode])): ?>
+                  <?php echo render($content['field_publication_image']); ?>                                            
+              <?php else: ?>
                 <div class="alert alert-info species-alert">
                     <p>
                         <?php echo t('No pictures for ') . $node->title; ?>
                     </p>
                 </div>
-            <?php
-            }
-            ?>
+            <?php endif; ?>
             </div>
             <hr />
 
