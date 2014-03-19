@@ -1698,9 +1698,10 @@ width: 100%;
 padding-left: 138px;
 }
 
-.view-front-end-working-groups .node-teaser .article-body h3 {
-font-size: 16px;
-color: #888;
+.node-teaser .article-body h3 {
+font-size: 15px;
+color: #555;
+line-height: 21px;
 }
 
 .page-search-site #edit-keys {
