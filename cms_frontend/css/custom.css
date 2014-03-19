@@ -22,7 +22,7 @@ color: #0066C0;
 
 /*  HEADER */
 .site-identity {
-margin-top: 5px;
+margin-top: 40px;
 width: 100%;
 }
 
@@ -37,7 +37,12 @@ padding: 10px 20px 0px;
 }
 
 .down-area {
-margin-top: -17px;
+margin-top: -22px;
+overflow: hidden;
+}
+
+.up-area {
+overflow: hidden;
 }
 
 .search-area-and-logos {
@@ -66,8 +71,16 @@ padding-top: 5px;
 .portal-title {
 font-size: 25px;
 padding: 0;
-margin-top: 13px;
+margin-top: 1px;
+margin-bottom: 5px;
 font-weight: 700;
+width: 100%;
+color: #555;
+}
+
+.portal-subtitle {
+padding: 0px 5px 15px 0px;
+color: #555;
 }
 
 .top-user-menu {
