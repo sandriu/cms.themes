@@ -47,10 +47,10 @@
 
             <div class="down-area">
                 <?php if (!empty($site_name)): ?>
-                    <h1 class="portal-title"><?php print $site_name; ?></h1>
+                    <h1 class="portal-title"><?php print t($site_name); ?></h1>
                 <?php endif; ?>
                 <?php if (!empty($site_slogan)): ?>
-                    <p class="portal-subtitle"><?php print $site_slogan; ?></p>
+                    <p class="portal-subtitle"><?php print t($site_slogan); ?></p>
                 <?php endif; ?>
             </div>
 
