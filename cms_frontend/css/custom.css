@@ -38,11 +38,10 @@ padding: 10px 0px 0px;
 
 .down-area {
 margin-top: -22px;
-overflow: hidden;
 }
 
 .up-area {
-overflow: hidden;
+min-height: 69px;
 }
 
 .search-area-and-logos {
