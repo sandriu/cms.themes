@@ -80,10 +80,11 @@
 <?php
     //Render the view of countries list grouped by status type
     //  - "Group by" functionality from views not working ok with pagination
-    if( isset ($view->range_states_statuses)) {
+    $arg = cms_domain_instrument_id();
+    if ($arg) {
         foreach ($view->range_states_statuses as $tid => $status) { ?>
             <h4><?php echo t($status); ?></h4>
-            <?php echo views_embed_view('front_end_countries', 'party_range_states_list', $tid); ?>
+            <?php echo views_embed_view('front_end_countries', 'mous_range_states_list', $arg, $tid); ?>
 <?php   }
     }
 ?>
