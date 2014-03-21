@@ -8,7 +8,10 @@
         <?php echo render($content['field_country_party_number']); ?>
         <?php echo render($content['field_region']); ?>
         <?php echo render($content['field_country_entry_into_force']); ?>
-        <?php echo render($content['field_country_entry_into_force']); ?>
-        <?php echo render($content['national_focal_points']); ?>
+        <?php if(check_display_field($content, 'field_country_member_to_stc')):?>
+            <?php echo t('Member to StC'); ?>
+        <?php endif; ?>
+        <?php echo render($content['field_country_date_of_accession']); ?>
+        <?php echo render($content['field_country_date_of_acceptance']); ?>                
     </tbody>
 </table>
