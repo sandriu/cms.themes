@@ -344,7 +344,7 @@ padding-left: 12px;
 /* BREADCRUMBS */
 .breadcrumb {
 background-color: #fff;
-padding: 8px 15px 8px 6px;
+padding: 8px 0px 8px 6px;
 }
 
 .breadcrumb li {
