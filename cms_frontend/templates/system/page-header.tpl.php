@@ -68,41 +68,7 @@
           <?php endif; ?>
         </nav>
       </div>
-    <?php endif; ?>
-
-    <!-- row for sub-menu -->
-    <?php if(!empty($page['secondary_menu'])): ?>
-    <div class="navbar navbar-inverse submenu">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand mobile" href="#">CMS</a>
-        </div>
-        <?php print render($page['secondary_menu']); ?>
-      </div>
-    </div>
-    <?php endif; ?>
-
-    <!-- row for sub-sub-menu -->
-    <?php if(!empty($page['tertiary_menu'])): ?>
-    <div class="navbar navbar-inverse submenu">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand mobile" href="#">CMS</a>
-        </div>
-        <?php print render($page['tertiary_menu']); ?>
-      </div>
-    </div>
-    <?php endif; ?>
+    <?php endif; ?>   
 
 </header>
 
