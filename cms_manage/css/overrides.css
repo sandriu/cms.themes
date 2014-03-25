@@ -23,40 +23,6 @@ body.navbar-is-fixed-top {
   padding-top: 64px !important;
 }
 
-body.navbar-is-fixed-top .main-container h1[name],
-body.navbar-is-fixed-top .main-container h2[name],
-body.navbar-is-fixed-top .main-container h3[name],
-body.navbar-is-fixed-top .main-container h4[name],
-body.navbar-is-fixed-top .main-container h5[name],
-body.navbar-is-fixed-top .main-container h6[name],
-body.navbar-is-fixed-top .main-container a[name],
-body.navbar-is-fixed-top .main-container h1[id],
-body.navbar-is-fixed-top .main-container h2[id],
-body.navbar-is-fixed-top .main-container h3[id],
-body.navbar-is-fixed-top .main-container h4[id],
-body.navbar-is-fixed-top .main-container h5[id],
-body.navbar-is-fixed-top .main-container h6[id] {
-  display: inline-block;
-  margin-top: -59px;
-  padding-top: 59px;
-}
-
-body.navbar-is-fixed-top .main-container h1[name],
-body.navbar-is-fixed-top .main-container h2[name],
-body.navbar-is-fixed-top .main-container h3[name],
-body.navbar-is-fixed-top .main-container h4[name],
-body.navbar-is-fixed-top .main-container h5[name],
-body.navbar-is-fixed-top .main-container h6[name],
-body.navbar-is-fixed-top .main-container h1[id],
-body.navbar-is-fixed-top .main-container h2[id],
-body.navbar-is-fixed-top .main-container h3[id],
-body.navbar-is-fixed-top .main-container h4[id],
-body.navbar-is-fixed-top .main-container h5[id],
-body.navbar-is-fixed-top .main-container h6[id] {
-  position: relative;
-  z-index: -1;
-}
-
 body.navbar-is-fixed-bottom {
   padding-bottom: 64px !important;
 }
@@ -69,117 +35,12 @@ body.toolbar .navbar-fixed-top {
   top: 30px;
 }
 
-body.toolbar .main-container h1[name],
-body.toolbar .main-container h2[name],
-body.toolbar .main-container h3[name],
-body.toolbar .main-container h4[name],
-body.toolbar .main-container h5[name],
-body.toolbar .main-container h6[name],
-body.toolbar .main-container a[name],
-body.toolbar .main-container h1[id],
-body.toolbar .main-container h2[id],
-body.toolbar .main-container h3[id],
-body.toolbar .main-container h4[id],
-body.toolbar .main-container h5[id],
-body.toolbar .main-container h6[id],
-body.toolbar .main-container a[id] {
-  display: inline-block;
-  margin-top: -25px;
-  padding-top: 25px;
-}
-
-body.toolbar .main-container h1[name],
-body.toolbar .main-container h2[name],
-body.toolbar .main-container h3[name],
-body.toolbar .main-container h4[name],
-body.toolbar .main-container h5[name],
-body.toolbar .main-container h6[name],
-body.toolbar .main-container h1[id],
-body.toolbar .main-container h2[id],
-body.toolbar .main-container h3[id],
-body.toolbar .main-container h4[id],
-body.toolbar .main-container h5[id],
-body.toolbar .main-container h6[id] {
-  position: relative;
-  z-index: -1;
-}
-
 body.toolbar.navbar-is-fixed-top {
   padding-top: 94px !important;
 }
 
-body.toolbar.navbar-is-fixed-top .main-container h1[name],
-body.toolbar.navbar-is-fixed-top .main-container h2[name],
-body.toolbar.navbar-is-fixed-top .main-container h3[name],
-body.toolbar.navbar-is-fixed-top .main-container h4[name],
-body.toolbar.navbar-is-fixed-top .main-container h5[name],
-body.toolbar.navbar-is-fixed-top .main-container h6[name],
-body.toolbar.navbar-is-fixed-top .main-container a[name],
-body.toolbar.navbar-is-fixed-top .main-container h1[id],
-body.toolbar.navbar-is-fixed-top .main-container h2[id],
-body.toolbar.navbar-is-fixed-top .main-container h3[id],
-body.toolbar.navbar-is-fixed-top .main-container h4[id],
-body.toolbar.navbar-is-fixed-top .main-container h5[id],
-body.toolbar.navbar-is-fixed-top .main-container h6[id],
-body.toolbar.navbar-is-fixed-top .main-container a[id] {
-  display: inline-block;
-  margin-top: -89px;
-  padding-top: 89px;
-}
-
-body.toolbar.navbar-is-fixed-top .main-container h1[name],
-body.toolbar.navbar-is-fixed-top .main-container h2[name],
-body.toolbar.navbar-is-fixed-top .main-container h3[name],
-body.toolbar.navbar-is-fixed-top .main-container h4[name],
-body.toolbar.navbar-is-fixed-top .main-container h5[name],
-body.toolbar.navbar-is-fixed-top .main-container h6[name],
-body.toolbar.navbar-is-fixed-top .main-container h1[id],
-body.toolbar.navbar-is-fixed-top .main-container h2[id],
-body.toolbar.navbar-is-fixed-top .main-container h3[id],
-body.toolbar.navbar-is-fixed-top .main-container h4[id],
-body.toolbar.navbar-is-fixed-top .main-container h5[id],
-body.toolbar.navbar-is-fixed-top .main-container h6[id] {
-  position: relative;
-  z-index: -1;
-}
-
 body.toolbar.navbar-is-fixed-bottom {
   padding-top: 50px !important;
-}
-
-body.toolbar.navbar-is-fixed-bottom .main-container h1[name],
-body.toolbar.navbar-is-fixed-bottom .main-container h2[name],
-body.toolbar.navbar-is-fixed-bottom .main-container h3[name],
-body.toolbar.navbar-is-fixed-bottom .main-container h4[name],
-body.toolbar.navbar-is-fixed-bottom .main-container h5[name],
-body.toolbar.navbar-is-fixed-bottom .main-container h6[name],
-body.toolbar.navbar-is-fixed-bottom .main-container a[name],
-body.toolbar.navbar-is-fixed-bottom .main-container h1[id],
-body.toolbar.navbar-is-fixed-bottom .main-container h2[id],
-body.toolbar.navbar-is-fixed-bottom .main-container h3[id],
-body.toolbar.navbar-is-fixed-bottom .main-container h4[id],
-body.toolbar.navbar-is-fixed-bottom .main-container h5[id],
-body.toolbar.navbar-is-fixed-bottom .main-container h6[id],
-body.toolbar.navbar-is-fixed-bottom .main-container a[id] {
-  display: inline-block;
-  margin-top: -45px;
-  padding-top: 45px;
-}
-
-body.toolbar.navbar-is-fixed-bottom .main-container h1[name],
-body.toolbar.navbar-is-fixed-bottom .main-container h2[name],
-body.toolbar.navbar-is-fixed-bottom .main-container h3[name],
-body.toolbar.navbar-is-fixed-bottom .main-container h4[name],
-body.toolbar.navbar-is-fixed-bottom .main-container h5[name],
-body.toolbar.navbar-is-fixed-bottom .main-container h6[name],
-body.toolbar.navbar-is-fixed-bottom .main-container h1[id],
-body.toolbar.navbar-is-fixed-bottom .main-container h2[id],
-body.toolbar.navbar-is-fixed-bottom .main-container h3[id],
-body.toolbar.navbar-is-fixed-bottom .main-container h4[id],
-body.toolbar.navbar-is-fixed-bottom .main-container h5[id],
-body.toolbar.navbar-is-fixed-bottom .main-container h6[id] {
-  position: relative;
-  z-index: -1;
 }
 
 body.toolbar-drawer {
@@ -190,195 +51,20 @@ body.toolbar-drawer .navbar-fixed-top {
   top: 64px;
 }
 
-body.toolbar-drawer .main-container h1[name],
-body.toolbar-drawer .main-container h2[name],
-body.toolbar-drawer .main-container h3[name],
-body.toolbar-drawer .main-container h4[name],
-body.toolbar-drawer .main-container h5[name],
-body.toolbar-drawer .main-container h6[name],
-body.toolbar-drawer .main-container a[name],
-body.toolbar-drawer .main-container h1[id],
-body.toolbar-drawer .main-container h2[id],
-body.toolbar-drawer .main-container h3[id],
-body.toolbar-drawer .main-container h4[id],
-body.toolbar-drawer .main-container h5[id],
-body.toolbar-drawer .main-container h6[id],
-body.toolbar-drawer .main-container a[id] {
-  display: inline-block;
-  margin-top: -59px;
-  padding-top: 59px;
-}
-
-body.toolbar-drawer .main-container h1[name],
-body.toolbar-drawer .main-container h2[name],
-body.toolbar-drawer .main-container h3[name],
-body.toolbar-drawer .main-container h4[name],
-body.toolbar-drawer .main-container h5[name],
-body.toolbar-drawer .main-container h6[name],
-body.toolbar-drawer .main-container h1[id],
-body.toolbar-drawer .main-container h2[id],
-body.toolbar-drawer .main-container h3[id],
-body.toolbar-drawer .main-container h4[id],
-body.toolbar-drawer .main-container h5[id],
-body.toolbar-drawer .main-container h6[id] {
-  position: relative;
-  z-index: -1;
-}
-
 body.toolbar-drawer.navbar-is-fixed-top {
   padding-top: 128px !important;
-}
-
-body.toolbar-drawer.navbar-is-fixed-top .main-container h1[name],
-body.toolbar-drawer.navbar-is-fixed-top .main-container h2[name],
-body.toolbar-drawer.navbar-is-fixed-top .main-container h3[name],
-body.toolbar-drawer.navbar-is-fixed-top .main-container h4[name],
-body.toolbar-drawer.navbar-is-fixed-top .main-container h5[name],
-body.toolbar-drawer.navbar-is-fixed-top .main-container h6[name],
-body.toolbar-drawer.navbar-is-fixed-top .main-container a[name],
-body.toolbar-drawer.navbar-is-fixed-top .main-container h1[id],
-body.toolbar-drawer.navbar-is-fixed-top .main-container h2[id],
-body.toolbar-drawer.navbar-is-fixed-top .main-container h3[id],
-body.toolbar-drawer.navbar-is-fixed-top .main-container h4[id],
-body.toolbar-drawer.navbar-is-fixed-top .main-container h5[id],
-body.toolbar-drawer.navbar-is-fixed-top .main-container h6[id],
-body.toolbar-drawer.navbar-is-fixed-top .main-container a[id] {
-  display: inline-block;
-  margin-top: -123px;
-  padding-top: 123px;
-}
-
-body.toolbar-drawer.navbar-is-fixed-top .main-container h1[name],
-body.toolbar-drawer.navbar-is-fixed-top .main-container h2[name],
-body.toolbar-drawer.navbar-is-fixed-top .main-container h3[name],
-body.toolbar-drawer.navbar-is-fixed-top .main-container h4[name],
-body.toolbar-drawer.navbar-is-fixed-top .main-container h5[name],
-body.toolbar-drawer.navbar-is-fixed-top .main-container h6[name],
-body.toolbar-drawer.navbar-is-fixed-top .main-container h1[id],
-body.toolbar-drawer.navbar-is-fixed-top .main-container h2[id],
-body.toolbar-drawer.navbar-is-fixed-top .main-container h3[id],
-body.toolbar-drawer.navbar-is-fixed-top .main-container h4[id],
-body.toolbar-drawer.navbar-is-fixed-top .main-container h5[id],
-body.toolbar-drawer.navbar-is-fixed-top .main-container h6[id] {
-  position: relative;
-  z-index: -1;
 }
 
 body.toolbar-drawer.navbar-is-fixed-bottom {
   padding-top: 84px !important;
 }
 
-body.toolbar-drawer.navbar-is-fixed-bottom .main-container h1[name],
-body.toolbar-drawer.navbar-is-fixed-bottom .main-container h2[name],
-body.toolbar-drawer.navbar-is-fixed-bottom .main-container h3[name],
-body.toolbar-drawer.navbar-is-fixed-bottom .main-container h4[name],
-body.toolbar-drawer.navbar-is-fixed-bottom .main-container h5[name],
-body.toolbar-drawer.navbar-is-fixed-bottom .main-container h6[name],
-body.toolbar-drawer.navbar-is-fixed-bottom .main-container a[name],
-body.toolbar-drawer.navbar-is-fixed-bottom .main-container h1[id],
-body.toolbar-drawer.navbar-is-fixed-bottom .main-container h2[id],
-body.toolbar-drawer.navbar-is-fixed-bottom .main-container h3[id],
-body.toolbar-drawer.navbar-is-fixed-bottom .main-container h4[id],
-body.toolbar-drawer.navbar-is-fixed-bottom .main-container h5[id],
-body.toolbar-drawer.navbar-is-fixed-bottom .main-container h6[id],
-body.toolbar-drawer.navbar-is-fixed-bottom .main-container a[id] {
-  display: inline-block;
-  margin-top: -79px;
-  padding-top: 79px;
-}
-
-body.toolbar-drawer.navbar-is-fixed-bottom .main-container h1[name],
-body.toolbar-drawer.navbar-is-fixed-bottom .main-container h2[name],
-body.toolbar-drawer.navbar-is-fixed-bottom .main-container h3[name],
-body.toolbar-drawer.navbar-is-fixed-bottom .main-container h4[name],
-body.toolbar-drawer.navbar-is-fixed-bottom .main-container h5[name],
-body.toolbar-drawer.navbar-is-fixed-bottom .main-container h6[name],
-body.toolbar-drawer.navbar-is-fixed-bottom .main-container h1[id],
-body.toolbar-drawer.navbar-is-fixed-bottom .main-container h2[id],
-body.toolbar-drawer.navbar-is-fixed-bottom .main-container h3[id],
-body.toolbar-drawer.navbar-is-fixed-bottom .main-container h4[id],
-body.toolbar-drawer.navbar-is-fixed-bottom .main-container h5[id],
-body.toolbar-drawer.navbar-is-fixed-bottom .main-container h6[id] {
-  position: relative;
-  z-index: -1;
-}
-
 body.admin-menu {
   padding-top: 93px !important;
 }
 
-body.admin-menu .main-container h1[name],
-body.admin-menu .main-container h2[name],
-body.admin-menu .main-container h3[name],
-body.admin-menu .main-container h4[name],
-body.admin-menu .main-container h5[name],
-body.admin-menu .main-container h6[name],
-body.admin-menu .main-container a[name],
-body.admin-menu .main-container h1[id],
-body.admin-menu .main-container h2[id],
-body.admin-menu .main-container h3[id],
-body.admin-menu .main-container h4[id],
-body.admin-menu .main-container h5[id],
-body.admin-menu .main-container h6[id],
-body.admin-menu .main-container a[id] {
-  display: inline-block;
-  margin-top: -88px;
-  padding-top: 88px;
-}
-
-body.admin-menu .main-container h1[name],
-body.admin-menu .main-container h2[name],
-body.admin-menu .main-container h3[name],
-body.admin-menu .main-container h4[name],
-body.admin-menu .main-container h5[name],
-body.admin-menu .main-container h6[name],
-body.admin-menu .main-container h1[id],
-body.admin-menu .main-container h2[id],
-body.admin-menu .main-container h3[id],
-body.admin-menu .main-container h4[id],
-body.admin-menu .main-container h5[id],
-body.admin-menu .main-container h6[id] {
-  position: relative;
-  z-index: -1;
-}
-
 body.admin-menu .navbar-fixed-top {
   top: 29px;
-}
-
-body.admin-menu.navbar-is-fixed-top .main-container h1[name],
-body.admin-menu.navbar-is-fixed-top .main-container h2[name],
-body.admin-menu.navbar-is-fixed-top .main-container h3[name],
-body.admin-menu.navbar-is-fixed-top .main-container h4[name],
-body.admin-menu.navbar-is-fixed-top .main-container h5[name],
-body.admin-menu.navbar-is-fixed-top .main-container h6[name],
-body.admin-menu.navbar-is-fixed-top .main-container a[name],
-body.admin-menu.navbar-is-fixed-top .main-container h1[id],
-body.admin-menu.navbar-is-fixed-top .main-container h2[id],
-body.admin-menu.navbar-is-fixed-top .main-container h3[id],
-body.admin-menu.navbar-is-fixed-top .main-container h4[id],
-body.admin-menu.navbar-is-fixed-top .main-container h5[id],
-body.admin-menu.navbar-is-fixed-top .main-container h6[id],
-body.admin-menu.navbar-is-fixed-top .main-container a[id] {
-  display: inline-block;
-  margin-top: -24px;
-  padding-top: 24px;
-}
-
-body.admin-menu.navbar-is-fixed-top .main-container h1[name],
-body.admin-menu.navbar-is-fixed-top .main-container h2[name],
-body.admin-menu.navbar-is-fixed-top .main-container h3[name],
-body.admin-menu.navbar-is-fixed-top .main-container h4[name],
-body.admin-menu.navbar-is-fixed-top .main-container h5[name],
-body.admin-menu.navbar-is-fixed-top .main-container h6[name],
-body.admin-menu.navbar-is-fixed-top .main-container h1[id],
-body.admin-menu.navbar-is-fixed-top .main-container h2[id],
-body.admin-menu.navbar-is-fixed-top .main-container h3[id],
-body.admin-menu.navbar-is-fixed-top .main-container h4[id],
-body.admin-menu.navbar-is-fixed-top .main-container h5[id],
-body.admin-menu.navbar-is-fixed-top .main-container h6[id] {
-  position: relative;
-  z-index: -1;
 }
 
 body div#admin-toolbar {
