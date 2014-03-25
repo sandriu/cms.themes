@@ -2,36 +2,43 @@ var geocoder = new google.maps.Geocoder();
 var map;
 
 function initialize() {
-    var marker = Drupal.settings.gmap.marker;
+    var point = Drupal.settings.gmap.marker;
     var address = {};
-    var center = new google.maps.LatLng(-34.397, 150.644);
-    var zoom = 2;
-    if (marker.lat == null) {
-        if (typeof marker.country != 'undefined') {
-            address.country = marker.country;
+    var center = null;
+    var zoom = 1;
+
+    if (point.lat == null || point.lng == null) {
+        if (typeof point.country != 'undefined') {
+            address.country = point.country;
             zoom = 6;
         }
-        if (typeof marker.iso2 != 'undefined') {
-            address.iso2 = marker.iso2;
+        if (typeof point.iso2 != 'undefined') {
+            address.iso2 = point.iso2;
             zoom = 6;
         }
-        if (typeof marker.city != 'undefined') {
-            address.city = marker.city;
+        if (typeof point.city != 'undefined') {
+            address.city = point.city;
             zoom = 12;
         }
     } else {
-        center.d = marker.lat;
-        center.e = marker.lng;
+        center = new google.maps.LatLng(point.lng, point.lat);
         zoom = 15;
     }
+
     var mapOptions = {
-        center: center,
         zoom: zoom
     };
     map = new google.maps.Map(document.getElementById("gmap"),
         mapOptions);
-    if (address != null) {
+
+    if (!jQuery.isEmptyObject(address)) {
         codeAddress(address);
+    } else {
+        map.setCenter(center);
+        var marker = new google.maps.Marker({
+            map: map,
+            position: center
+        });
     }
 }
 
@@ -39,13 +46,14 @@ function codeAddress(location) {
     if (location.length == 0) {
         map.setZoom(1);
     }
+
     components = {};
-    if (typeof location.city != 'undefined') {
+    if (typeof location.city != 'undefined' && location.city != null) {
         components.locality = location.city;
     }
-    if (typeof location.iso2 != 'undefined') {
+    if (typeof location.iso2 != 'undefined' && location.iso2 != null) {
         components.country = location.iso2;
-    } else if (typeof location.country != 'undefined') {
+    } else if (typeof location.country != 'undefined' && location.country != null) {
         components.country = location.country;
     }
 

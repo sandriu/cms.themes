@@ -97,8 +97,20 @@ background-color: #0D5601;
 border-color: #0D5601;
 }
 
-.search-results h3 a {
+.search-results h3 a,
+.view-front-end-news h2 a,
+.view-front-end-working-groups h2 a,
+.view-front-end-campaigns h2 a,
+.view-front-end-awards h2 a {
 color: #6D9933;
+}
+
+.view-front-end-news .node-readmore,
+.view-front-end-working-groups .node-readmore,
+.view-front-end-campaigns .node-readmore,
+.view-front-end-awards .node-readmore,
+.page-search-site .facetapi-limit-link {
+background: #deeaad;
 }
 
 
@@ -116,4 +128,10 @@ margin-bottom: 36px;
 
 .global-menu.nav-show-level-3 {
 margin-bottom: 74px;
+}
+
+
+/* NEWS profile */
+.profile blockquote p {
+color: #5E9732;
 }

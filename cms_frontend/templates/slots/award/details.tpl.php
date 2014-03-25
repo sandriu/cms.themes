@@ -4,10 +4,9 @@
         <?php echo render($content['field_instrument']); ?>
         <?php echo render($content['field_award_recipient']); ?>
         <?php echo render($content['field_award_sponsor']); ?>
-        <?php echo render($content['field_award_eligibility']); ?>
-        <?php echo render($content['field_award_application']); ?>
         <?php echo render($content['field_award_species']); ?>
         <?php echo render($content['field_award_meetings']); ?>
-        <?php echo render($content['field_award_documents']); ?>        
+        <?php echo render($content['field_award_documents']); ?>
+        <?php echo render($content['field_related_publications']); ?>
     </tbody>
 </table>

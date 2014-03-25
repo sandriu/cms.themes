@@ -22,7 +22,7 @@ color: #0066C0;
 
 /*  HEADER */
 .site-identity {
-margin-top: 5px;
+margin-top: 40px;
 width: 100%;
 }
 
@@ -33,11 +33,15 @@ padding: 0;
 display: inline-block;
 float: left;
 overflow: hidden;
-padding: 10px 20px 0px;
+padding: 10px 0px 0px;
 }
 
 .down-area {
-margin-top: -17px;
+margin-top: -22px;
+}
+
+.up-area {
+min-height: 69px;
 }
 
 .search-area-and-logos {
@@ -66,8 +70,16 @@ padding-top: 5px;
 .portal-title {
 font-size: 25px;
 padding: 0;
-margin-top: 13px;
+margin-top: 1px;
+margin-bottom: 5px;
 font-weight: 700;
+width: 100%;
+color: #555;
+}
+
+.portal-subtitle {
+padding: 0px 5px 15px 0px;
+color: #555;
 }
 
 .top-user-menu {
@@ -332,7 +344,7 @@ padding-left: 12px;
 /* BREADCRUMBS */
 .breadcrumb {
 background-color: #fff;
-padding: 8px 15px 8px 6px;
+padding: 8px 0px 8px 6px;
 }
 
 .breadcrumb li {
@@ -1243,12 +1255,12 @@ text-align: left;
 }
 
 .profile.col-md-8 img {
-max-width: 627px;
+max-width: 597px;
 height: auto;
 }
 
 .profile.col-md-4 img {
-max-width: 313px;
+max-width: 273px;
 height: auto;
 }
 
@@ -1275,7 +1287,8 @@ color: #888;
 
 .view-front-end-species .col-md-12,
 .view-front-end-projects .col-md-12,
-.meeting-full-width.col-md-12 {
+.meeting-full-width.col-md-12,
+.working-group-full-width {
 margin-top: 30px;
 }
 
@@ -1306,11 +1319,6 @@ font-weight: bold;
 
 .profile hr {
 border-color: #ddd;
-}
-
-.threats .field-item {
-background: url("../images/gray_square.png") 0px 6px no-repeat;
-padding-left: 18px;
 }
 
 .meeting-full-width h4 {
@@ -1414,10 +1422,11 @@ width: 100%;
 }
 
 .document-left thead {
-display: none; /* temporary */
+display: none;
 }
 
-.document-left .field_document_file_language div {
+.document-left .field_document_file_language div,
+.working-group-profile-right .field-item {
 padding-bottom: 6px;
 }
 
@@ -1434,7 +1443,23 @@ font-size: 16px;
 margin-bottom: 20px;
 }
 
-.working-group-profile-right .field-item,
+.working-group-profile-right ul {
+list-style-type: none;
+padding-left: 2px;
+}
+
+.view-working-group-members table.views-table > caption {
+font-size: 16px;
+}
+
+.field-name-field-wg-members .field-label {
+font-size: 24px;
+font-weight: normal;
+}
+
+.working-group-profile-right ul li,
+.working-group-profile-right .field-name-field-wg-meeting .field-item,
+.threats .field-item,
 .news-profile-right .field-item {
 background: url("../images/gray_square.png") 0px 6px no-repeat;
 padding-left: 12px;
@@ -1460,6 +1485,68 @@ max-width: 143px;
   .campaign-profile-right .field-items {
   max-width: 210px;
   }
+}
+
+.node-news .field {
+margin-bottom: 20px;
+}
+
+.node-news.node-teaser .field {
+margin-bottom: 0px;
+}
+
+.node-news .field-label {
+display: inline;
+}
+
+.node-news .field-name-field-featured-image .field-items {
+display: block;
+}
+
+.node-news .field-item {
+display: inline-block;
+background: #DDD;
+margin: 5px;
+padding: 2px 5px;
+font-size: 12px;
+border-radius: 3px;
+}
+
+.node-news .field-name-field-featured-image .field-label,
+.node-news .field-item:empty {
+display: none;
+}
+
+.node-news .field-name-body .field-item,
+.node-news .field-name-field-featured-image .field-item,
+.node-news.node-teaser .field-item {
+display: block;
+background: #FFF;
+margin: 0;
+padding: 0;
+font-size: 15px;
+border-radius: 0;
+}
+
+.profile blockquote p {
+font-size: 14px;
+padding-left: 5px;
+}
+
+.profile blockquote {
+border-left: 0;
+padding: 6px 0px;
+}
+
+.instrument-right .field-name-field-picture,
+.publication-right .publication-thumbnail {
+text-align: center;
+}
+
+.instrument-right .field-name-field-picture {
+padding-bottom: 15px;
+border-bottom: 1px solid #DDD;
+margin-bottom: 10px;
 }
 
 
@@ -1509,7 +1596,7 @@ background-color: #fff;
 
 /* NEWS page (with thumbnails),
     WORKING GROUPS page (no thumbnails),
-    CAMPAIGNS page (no thumbnails),
+    CAMPAIGNS page (with thumbnails),
     AWARDS page (no thumbnails),
     MEDIA WATCH page (no thumbnails),
     SEARCH page  */
@@ -1527,13 +1614,6 @@ border-bottom: 1px solid #DDD;
 border-bottom: 1px solid #999;
 }
 
-.view-front-end-news h2 a,
-.view-front-end-working-groups h2 a,
-.view-front-end-campaigns h2 a,
-.view-front-end-awards h2 a {
-color: #5E9732;
-}
-
 .view-front-end-news .field-items,
 .view-front-end-working-groups .field-items,
 .view-front-end-campaigns .field-items,
@@ -1546,7 +1626,6 @@ color: #555;
 .view-front-end-campaigns .node-readmore,
 .view-front-end-awards .node-readmore,
 .page-search-site .facetapi-limit-link {
-background: #CCD7E2;
 margin-top: 0px;
 border-radius: 4px;
 font-size: 11px;
@@ -1561,7 +1640,8 @@ color: #333;
 text-transform: uppercase;
 }
 
-.node-teaser .field-name-field-featured-image {
+.node-teaser .field-name-field-featured-image,
+.node-teaser .field-name-field-campaign-picture {
 display: inline-block;
 float: left;
 padding-right: 30px;
@@ -1570,12 +1650,18 @@ padding-right: 30px;
 .view-front-end-news .article-body .text-muted,
 .view-front-end-working-groups .article-body .text-muted,
 .view-front-end-campaigns .article-body .text-muted,
-.view-front-end-awards .article-body .text-muted {
+.view-front-end-awards .article-body .text-muted,
+.view-front-end-campaigns .field-name-field-campaign-duration {
 display: inline-block;
 margin-top: 8px;
 position: absolute;
 left: 0;
 top: 15px;
+}
+
+.view-front-end-campaigns .field-name-field-campaign-duration .field-items {
+color: #999;
+font-size: 13px;
 }
 
 .view-front-end-news .article-body .field-name-body {
@@ -1603,7 +1689,10 @@ position: relative;
 }
 
 .view-front-end-news h2,
-.view-front-end-news .links {
+.view-front-end-news .links,
+.view-front-end-campaigns h2,
+.view-front-end-campaigns .links,
+.view-front-end-campaigns .article-body .field-name-body {
 width: 100%;
 padding-left: 250px;
 }
@@ -1624,6 +1713,7 @@ background-color: #F5F5F5;
 border: 1px solid #E3E3E3;
 padding: 10px 20px 20px 20px;
 border-radius: 4px;
+min-height: 310px;
 }
 
 .view-front-end-working-groups h2,
@@ -1632,9 +1722,6 @@ border-radius: 4px;
 width: 100%;
 }
 
-.view-front-end-campaigns h2,
-.view-front-end-campaigns .links,
-.view-front-end-campaigns .article-body .field-name-body,
 .view-front-end-awards h2,
 .view-front-end-awards .links,
 .view-front-end-awards .article-body .field-name-body {
@@ -1642,9 +1729,10 @@ width: 100%;
 padding-left: 138px;
 }
 
-.view-front-end-working-groups .node-teaser .article-body h3 {
-font-size: 16px;
-color: #888;
+.node-teaser .article-body h3 {
+font-size: 15px;
+color: #555;
+line-height: 21px;
 }
 
 .page-search-site #edit-keys {
@@ -1695,60 +1783,4 @@ margin-bottom: 3px;
 .search-info {
 color: #999;
 font-size: 13px;
-}
-
-
-/* NEWS item */
-.node-news .field {
-margin-bottom: 20px;
-}
-
-.node-news.node-teaser .field {
-margin-bottom: 0px;
-}
-
-.node-news .field-label {
-display: inline;
-}
-
-.node-news .field-name-field-featured-image .field-items {
-display: block;
-}
-
-.node-news .field-item {
-display: inline-block;
-background: #DDD;
-margin: 5px;
-padding: 2px 5px;
-font-size: 12px;
-border-radius: 3px;
-}
-
-.node-news .field-name-field-featured-image .field-label,
-.node-news .field-item:empty {
-display: none;
-}
-
-.node-news .field-name-body .field-item,
-.node-news .field-name-field-featured-image .field-item,
-.node-news.node-teaser .field-item {
-display: block;
-background: #FFF;
-margin: 0;
-padding: 0;
-font-size: 15px;
-border-radius: 0;
-}
-
-.node-news blockquote p {
-color: #5E9732;
-font-size: 14px;
-font-style: italic;
-border-left: 3px solid #5E9732;
-padding-left: 5px;
-}
-
-.node-news blockquote {
-border-left: 0;
-padding: 6px 0px;
 }

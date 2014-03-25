@@ -38,6 +38,7 @@
             <?php
                 }
 
+                echo render($content['field_project_type']);
                 echo render($content['field_project_ia_no_id']);
                 echo render($content['field_project_collab_agency']);
                 echo render($content['field_project_start_date']);

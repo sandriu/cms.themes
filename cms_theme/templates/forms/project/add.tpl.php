@@ -13,6 +13,12 @@
 
     <div class="span3">
     <?php
+        echo drupal_render($form['field_project_type']);
+    ?>
+    </div>
+
+    <div class="span3">
+    <?php
         echo drupal_render($form['field_project_agency_contact']);
     ?>
     </div>

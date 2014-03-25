@@ -1,6 +1,5 @@
 <?php echo render($content['title_field']); ?>
 <?php echo render($content['field_news_type']); ?>
-<?php echo render($content['field_news_expiration_date']); ?>                
 <?php if(check_display_field($content, 'field_feature_in_common_portal')):?>
     <?php echo t('Feature in common portal'); ?>
 <?php endif; ?>

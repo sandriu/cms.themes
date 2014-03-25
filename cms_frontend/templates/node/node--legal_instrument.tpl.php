@@ -13,22 +13,23 @@
             ?>
             <span class="text-muted"><?php print format_date($node->changed,'custom','d F Y'); ?></span>
         </div>
-        <?php print render($content['links']); ?>        
+        <?php print render($content['links']); ?>
     </div>
 <?php else: ?>
     <div class="container">
       <div class="row">
           <div class="instrument-left profile col-md-8">
             <?php
-              echo render($content['field_body']);
+              echo render($content['body']);
               render_slot($node, 'details', 'legal_instrument', $content);
             ?>
           </div>
           <div class="instrument-right well profile col-md-4">
             <table class="table table-condensed table-hover two-columns">
               <tbody>
-                  <?php                  
+                  <?php
                     echo render($content['instrument_list']);
+                    echo render($content['field_picture']);
                     echo render($content['field_instrument_name']);
                     echo render($content['field_instrument_type']);
                     echo render($content['field_languages']);

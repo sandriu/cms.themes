@@ -15,9 +15,9 @@ function cms_frontend_preprocess_html(&$variables) {
           'http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic', array('type' => 'external')
   );
   // Add conditional CSS for IE8
-  drupal_add_css(path_to_theme() . '/css/ie/ie8_custom.css', array('media'=>'screen','group' => CSS_THEME, 'browsers' => array('IE' => 'IE 8', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
+  drupal_add_css(path_to_theme() . '/css/ie/ie8-custom.css', array('media'=>'screen','group' => CSS_THEME, 'browsers' => array('IE' => 'IE 8', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
   // Add conditional CSS for IE9
-  drupal_add_css(path_to_theme() . '/css/ie/ie9_custom.css', array('media'=>'screen','group' => CSS_THEME, 'browsers' => array('IE' => 'IE 9', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
+  drupal_add_css(path_to_theme() . '/css/ie/ie9-custom.css', array('media'=>'screen','group' => CSS_THEME, 'browsers' => array('IE' => 'IE 9', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
   // Add conditional CSS for IE10
   drupal_add_css(path_to_theme() . '/css/ie/ie10.css', array('media'=>'screen','group' => CSS_THEME, 'browsers' => array('IE' => 'IE 10', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
 
@@ -39,9 +39,9 @@ function cms_frontend_preprocess_html(&$variables) {
   drupal_add_css(path_to_theme(). '/css/'. $domain_css, array('weight'=>'999'));
   
   //Add conditional IE8 css for domaine
-  drupal_add_css(path_to_theme() . '/css/ie/ie8_'.$domain_css, array('media'=>'screen','group' => CSS_THEME, 'browsers' => array('IE' => 'IE 8', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
+  drupal_add_css(path_to_theme() . '/css/ie/ie8-'.$domain_css, array('media'=>'screen','group' => CSS_THEME, 'browsers' => array('IE' => 'IE 8', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
   // Add conditional CSS for IE9 for domaine
-  drupal_add_css(path_to_theme() . '/css/ie/ie9_'.$domain_css, array('media'=>'screen','group' => CSS_THEME, 'browsers' => array('IE' => 'IE 9', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
+  drupal_add_css(path_to_theme() . '/css/ie/ie9-'.$domain_css, array('media'=>'screen','group' => CSS_THEME, 'browsers' => array('IE' => 'IE 9', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
 }
 
 /*
