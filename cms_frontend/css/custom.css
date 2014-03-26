@@ -895,9 +895,9 @@ font-size: 20px;
 margin-top: 0;
 }
 
-#quicktabs-tabpage-homepage_tabs-0 .row,
-#quicktabs-tabpage-homepage_tabs-0 h2,
-#quicktabs-tabpage-homepage_tabs-0 .text-muted {
+.quicktabs-tabpage > .row,
+.quicktabs-tabpage h2,
+.quicktabs-tabpage .article-body .text-muted {
 display: none;
 }
 
