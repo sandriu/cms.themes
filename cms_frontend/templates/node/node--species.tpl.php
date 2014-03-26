@@ -13,7 +13,7 @@
             ?>
             <span class="text-muted"><?php print format_date($node->changed,'custom','d F Y'); ?></span>
         </div>
-        <?php print render($content['links']); ?>        
+        <?php print render($content['links']); ?>
     </div>
 <?php else: ?>
     <?php
@@ -30,7 +30,6 @@
             render_slot($node, 'assessment', 'species', $content);
             render_slot($node, 'geographic-range', 'species', $content);
             render_slot($node, 'country-status', 'species', $content);
-            render_slot($node, 'related-content', 'species', $content);
         ?>
         </div>
 
@@ -52,5 +51,9 @@
         ?>
         </div>
       </div>
+        <div class="row">
+            <?php render_slot($node, 'related-content', 'species', $content); ?>
+        </div>
+
     </div>
 <?php endif; ?>
