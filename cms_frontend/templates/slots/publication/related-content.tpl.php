@@ -27,11 +27,13 @@
         $lang_reg = field_language('node', $node, 'field_region');
         if (!empty($node->field_region[$lang_reg])) {
             render_tab_view(t('Regions'), 'related-content-regions', $first_tab, count($node->field_region[$lang_reg]));
+            $first_tab = '';
         }
 
         $lang_th = field_language('node', $node, 'field_threats');
         if (!empty($node->field_threats[$lang_th])) {
             render_tab_view(t('Threats'), 'related-content-threats', $first_tab, count($node->field_threats[$lang_th]));
+            $first_tab = '';
         }
         ?>
     </ul>
