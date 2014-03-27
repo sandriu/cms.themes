@@ -1767,6 +1767,12 @@ margin-left: 20px;
 
 .search-results {
 padding-left: 0;
+list-style-type: none;
+}
+
+.search-results h3,
+.spelling-suggestions dl {
+margin-bottom: 0;
 }
 
 .search-results h3 a {
@@ -1782,4 +1788,15 @@ margin-bottom: 3px;
 .search-info {
 color: #999;
 font-size: 13px;
+}
+
+.facetapi-facetapi-links li.leaf,
+.page-search ul {
+list-style-type: square;
+color: #999;
+}
+
+.spelling-suggestions {
+border-bottom: 1px dashed #DDD;
+width: 90%;
 }
