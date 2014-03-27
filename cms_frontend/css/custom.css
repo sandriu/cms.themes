@@ -831,7 +831,7 @@ border-bottom-left-radius: 6px;
 
 
 /* TABBED MENU on homepage */
-#block-quicktabs-homepage-tabs {
+.block-quicktabs {
 margin-bottom: 10px;
 }
 
@@ -895,25 +895,25 @@ font-size: 20px;
 margin-top: 0;
 }
 
-#quicktabs-tabpage-homepage_tabs-0 .row,
-#quicktabs-tabpage-homepage_tabs-0 h2,
-#quicktabs-tabpage-homepage_tabs-0 .text-muted {
+.quicktabs-tabpage .row,
+.quicktabs-tabpage h2,
+body .quicktabs-tabpage .text-muted {
 display: none;
 }
 
-#quicktabs-tabpage-homepage_tabs-0 .article-body ul {
+.quicktabs-tabpage .article-body ul {
 padding-left: 0;
 list-style-type: none;
 }
 
-#quicktabs-tabpage-homepage_tabs-0 .article-body ul li,
-#quicktabs-tabpage-homepage_tabs-1 .views-row {
+.quicktabs-tabpage .article-body ul li,
+.quicktabs-tabpage .views-row {
 border-bottom: 1px solid #DDD;
 overflow: hidden;
 margin-bottom: 18px;
 }
 
-#quicktabs-tabpage-homepage_tabs-0 .article-body ul li a {
+.quicktabs-tabpage .article-body ul li a {
 display: inline-block;
 width: 67%;
 padding: 10px;
@@ -921,12 +921,12 @@ float: left;
 font-size: 20px;
 }
 
-#quicktabs-tabpage-homepage_tabs-0 ul li img,
-#quicktabs-tabpage-homepage_tabs-1 .views-field-field-publication-image {
+.quicktabs-tabpage ul li img,
+.quicktabs-tabpage .views-field-field-publication-image {
 float: left;
 }
 
-#quicktabs-tabpage-homepage_tabs-1 .views-row .views-field-title {
+.quicktabs-tabpage .views-field-title {
 display: inline-block;
 float: left;
 padding: 0px 10px 10px 10px;
@@ -935,7 +935,7 @@ line-height: 24px;
 width: 82%;
 }
 
-#quicktabs-tabpage-homepage_tabs-1 .views-field-field-publication-published-date {
+.quicktabs-tabpage .views-field-field-publication-published-date {
 display: inline-block;
 width: 67%;
 float: left;
