@@ -1,5 +1,6 @@
 var geocoder = new google.maps.Geocoder();
 var map;
+var components = {};
 
 function initialize() {
     var point = Drupal.settings.gmap.marker;
@@ -47,7 +48,6 @@ function codeAddress(location) {
         map.setZoom(1);
     }
 
-    components = {};
     if (typeof location.city != 'undefined' && location.city != null) {
         components.locality = location.city;
     }
@@ -56,7 +56,10 @@ function codeAddress(location) {
     } else if (typeof location.country != 'undefined' && location.country != null) {
         components.country = location.country;
     }
+    geocode_try(components);
+}
 
+function geocode_try(components) {
     geocoder.geocode( { 'componentRestrictions': components }, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
             map.setCenter(results[0].geometry.location);
@@ -65,7 +68,16 @@ function codeAddress(location) {
                 position: results[0].geometry.location
             });
         } else {
-            map.setZoom(1);
+            //if cannot find the city
+            if (typeof  components.locality != 'undefined') {
+                delete components.locality;
+                map.setZoom(6);
+                geocode_try(components);
+                //if cannot find the country
+            } else {
+                delete components.country;
+                map.setZoom(1);
+            }
         }
     });
 }

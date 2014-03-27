@@ -256,21 +256,31 @@
 <div class="tab-pane" id="reorder-docs">
     <?php
         $types = array();
-        $langcode = field_language('node', $node, 'field_document_type');
-        foreach ($meeting_documents as $document_id => $document) {
-            foreach ($document->field_document_type[$langcode] as $term) {
-                if(!in_array($term['tid'], $types)) {
-                    $types []= $term['tid'];
+        if (!empty($meeting_documents)) {
+            foreach ($meeting_documents as $document_id => $document) {
+                foreach ($document->field_document_type as $lang_terms) {
+                    foreach ($lang_terms as $term) {
+                        if(!in_array($term['tid'], $types)) {
+                            $types []= $term['tid'];
+                        }
+                    }
                 }
             }
-        }
-        foreach ($types as $tid) {
-            $type_term = taxonomy_term_load($tid);
-    ?>
-            <h4><?php echo $type_term->name; ?></h4>
+            foreach ($types as $tid) {
+                $type_term = taxonomy_term_load($tid);
+        ?>
+                <h4><?php echo $type_term->name; ?></h4>
     <?php   print views_embed_view('meeting_documents_list_reorder','m_d_reorder', $node->nid, $tid);
+            }
+        } else { ?>
+    <p class="text-warning">
+            <?php echo t('No documents'); ?>
+    </p>
+    <?php
         }
     ?>
+
+
 </div>
 </div>
 

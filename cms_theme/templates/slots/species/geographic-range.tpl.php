@@ -1,4 +1,4 @@
- <?php
+<?php
     if(check_display_field($content, 'field_species_range_states') || check_display_field($content, 'field_species_range_states_notes')) {
 ?>
 <table class="table table-condensed table-hover two-columns">

@@ -1,4 +1,4 @@
- <?php
+<?php
     if(check_display_field($content, 'field_species_status_per_country')) {
 ?>
 <?php

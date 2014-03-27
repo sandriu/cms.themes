@@ -51,7 +51,7 @@
         </div>
     <?php endif; ?>
 
-    <?php echo drupal_ammap_render_map($view->range_states_ammap, array('legend' => true)); ?>
+    <?php echo drupal_ammap_render_map($view->range_states_ammap['data'], array('legend' => true, 'show_default_legend' => true, ), $view->range_states_ammap['legend']); ?>
 
     <?php if ($attachment_after): ?>
         <div class="attachment attachment-after">
@@ -80,10 +80,11 @@
 <?php
     //Render the view of countries list grouped by status type
     //  - "Group by" functionality from views not working ok with pagination
-    if( isset ($view->range_states_statuses)) {
-        foreach ($view->range_states_statuses as $tid => $status) { ?>
-            <h4><?php echo t($status); ?></h4>
-            <?php echo views_embed_view('front_end_countries', 'party_range_states_list', $tid); ?>
+    $arg = cms_domain_instrument_id();
+    if ($arg) {
+        foreach ($view->range_states_statuses as $idx => $status) { ?>
+            <h4><?php echo t($status->name); ?></h4>
+            <?php echo views_embed_view('front_end_countries', 'party_range_states_list', $arg, $status->tid); ?>
 <?php   }
     }
 ?>
