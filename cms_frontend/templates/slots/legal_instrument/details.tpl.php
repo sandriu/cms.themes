@@ -17,7 +17,7 @@
     <?php echo t('Countries'); ?>
 </h3>
 <?php
-    echo drupal_ammap_render_map($node->ammap_data, array('legend' => true));
+    echo drupal_ammap_render_map($node->ammap_data['data'], array('legend' => true), $node->ammap_data['legend'] );
     echo views_embed_view('front_end_countries', 'instrument_list', $node->nid);
 }
 ?>

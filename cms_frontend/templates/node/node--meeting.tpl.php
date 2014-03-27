@@ -19,8 +19,8 @@
     <div class="container">
       <div class="row">
         <div class="meeting-left profile col-md-8">
-          <div id="gmap" style="height: 300px;"></div>
           <?php echo render($content['body']); ?>
+          <div id="gmap" style="height: 300px;"></div>
         </div>
 
         <div class="meeting-right well profile col-md-4">
