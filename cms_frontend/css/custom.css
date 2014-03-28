@@ -1673,7 +1673,8 @@ width: 77%;
 .view-front-end-news .article-body .field-name-body img,
 .view-front-end-awards .article-body .field-name-body img,
 .view-display-id-media_watch .node-teaser .field-name-field-featured-image,
-.view-display-id-notifications .field-name-field-featured-image {
+.view-display-id-notifications .field-name-field-featured-image,
+.view-display-id-working_groups img {
 display: none;
 }
 
