@@ -174,6 +174,12 @@ margin-top: 10px;
 width: 955px !important;
 }
 
+.global-menu > li > div.submenu-teaser li,
+.navbar-nav.nav.menu.global-menu div.submenu-teaser li {
+display: block;
+clear: both;
+}
+
 /* fixes for menu level 3 */
 .submenu .secondary,
 .submenu .tertiary {
