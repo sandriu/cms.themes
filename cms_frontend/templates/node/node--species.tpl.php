@@ -37,12 +37,7 @@
         <?php
             render_slot($node, 'gallery', 'species');
             render_slot($node, 'common-names', 'species', $content);
-            render_slot($node, 'taxonomy', 'species', $content);
-
-            #render_slot($node, 'population', 'species', $content);
-            #render_slot($node, 'population-size', 'species', $content);
-            #render_slot($node, 'population-status', 'species', $content);
-            #render_slot($node, 'notes', 'species', $content);
+            render_slot($node, 'taxonomy', 'species', $content);           
 
             hide($content['links']);
             hide($content['comments']);
@@ -51,9 +46,13 @@
         ?>
         </div>
       </div>
-        <div class="row">
+        <div class="row">            
+            <?php render_slot($node, 'population', 'species', $content); ?>
+            <?php render_slot($node, 'population-size', 'species', $content); ?>
+            <?php render_slot($node, 'population-status', 'species', $content); ?>
+            <?php render_slot($node, 'notes', 'species', $content); ?>
+            
             <?php render_slot($node, 'related-content', 'species', $content); ?>
         </div>
-
     </div>
 <?php endif; ?>
