@@ -1,7 +1,7 @@
 <?php
     if(check_display_field($content, 'field_species_pop')) {
 ?>
-<table class="table table-condensed table-hover table-bordered table-striped">
+<table class="table table-condensed table-hover table-bordered table-striped views-table">
     <caption><?php echo t('Population per instrument'); ?></caption>
     <thead>
         <tr>

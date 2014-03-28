@@ -1211,8 +1211,9 @@ table.views-table > caption {
 /*from bootstrap h4*/
 margin-bottom: 10px;
 margin-top: 10px;
-font-size: 18px;
+font-size: 20px;
 text-align: left;
+font-weight: bold;
 }
 
 
@@ -1261,6 +1262,12 @@ height: auto;
 .profile.col-md-4 img {
 max-width: 273px;
 height: auto;
+}
+
+.profile h3 {
+font-size: 20px;
+font-weight: bold;
+margin-top: 35px;
 }
 
 .species-left-column tbody,
