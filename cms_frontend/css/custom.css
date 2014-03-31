@@ -389,6 +389,10 @@ font-weight: bold;
 color: #555;
 }
 
+.not-front .region-before-content {
+margin-bottom: 40px;
+}
+
 
 /* RIGHT COLUMN */
 #feedback .btn,
