@@ -119,7 +119,8 @@ color: #5E9732;
 .view-front-end-working-groups .node-readmore,
 .view-front-end-campaigns .node-readmore,
 .view-front-end-awards .node-readmore,
-.page-search-site .facetapi-limit-link {
+.page-search-site .facetapi-limit-link,
+.page-taxonomy .node-teaser .node-readmore {
 background: #CCD7E2;
 }
 
