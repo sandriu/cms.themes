@@ -40,6 +40,14 @@ float: right;
 margin: 0;
 }
 
+.global-menu.menu.nav.navbar-nav.nav-show-level-2 {
+margin-bottom: 18px;
+}
+
+.global-menu.menu.nav.navbar-nav.nav-show-level-3 {
+margin-bottom: 36px;
+}
+
 .global-menu.menu.nav.navbar-nav li {
 display: inline-block;
 }
@@ -172,6 +180,12 @@ margin-top: 10px;
 /* fixes for menu level 2 */
 .global-menu .dropdown-menu {
 width: 955px !important;
+}
+
+.global-menu > li > div.submenu-teaser li,
+.navbar-nav.nav.menu.global-menu div.submenu-teaser li {
+display: block;
+clear: both;
 }
 
 /* fixes for menu level 3 */

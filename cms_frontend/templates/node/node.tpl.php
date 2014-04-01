@@ -83,25 +83,7 @@
 
 <?php $user_picture = theme('user_picture',array('account'=>$node)); ?>
 
-<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>  
-  <?php if(!$teaser): ?>
-  <div class="row">    
-    <div class="author-date pull-left col-md-12">                   
-      <div class="media">
-        <span class="pull-left"><?php print $user_picture; ?></span>        
-        <div class="media-body">
-          <h6 class="media-heading">
-            <span class="text-muted">by</span>
-            <?php print !empty($uid)? l($name,'user/'.$uid,array('attributes'=>array('class'=>array('bold')),'html'=>TRUE)):
-              $name; ?>
-            <?php print (!empty($country))? ' - '.$country:''; ?>
-          </h6>          
-        </div>
-      </div>
-    </div>    
-  </div>  
-  <?php endif; ?>
-
+<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <?php print render($title_prefix); ?>
   <?php if (!$page): ?>
     <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>

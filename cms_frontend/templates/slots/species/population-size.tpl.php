@@ -1,7 +1,7 @@
 <?php
     if(check_display_field($content, 'field_species_pop_size')) {
 ?>
-<table class="table table-condensed table-bordered">
+<table class="table table-condensed table-bordered views-table">
     <caption><?php echo t('Population size and trend'); ?></caption>
 
     <thead>

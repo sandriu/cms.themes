@@ -22,7 +22,7 @@ function initialize() {
             zoom = 12;
         }
     } else {
-        center = new google.maps.LatLng(point.lng, point.lat);
+        center = new google.maps.LatLng(point.lat, point.lng);
         zoom = 15;
     }
 

@@ -389,6 +389,10 @@ font-weight: bold;
 color: #555;
 }
 
+.not-front .region-before-content {
+margin-bottom: 40px;
+}
+
 
 /* RIGHT COLUMN */
 #feedback .btn,
@@ -1211,8 +1215,9 @@ table.views-table > caption {
 /*from bootstrap h4*/
 margin-bottom: 10px;
 margin-top: 10px;
-font-size: 18px;
+font-size: 20px;
 text-align: left;
+font-weight: bold;
 }
 
 
@@ -1225,7 +1230,8 @@ text-align: left;
   DOCUMENT profile,
   WORKING GROUP profile,
   NEWS profile,
-  CAMPAIGNS profile */
+  CAMPAIGNS profile,
+  AWARDS profile */
 .profile .table tbody > tr > th,
 .profile .table tbody > tr > td,
 .working-group-profile-right .field-label,
@@ -1240,7 +1246,8 @@ font-size: 13px;
 .news-profile-right .field-label,
 .working-group-profile-right .field-label,
 .campaign-profile-right .field-label,
-.project-profile-left .panel-body td:first-of-type {
+.project-profile-left .panel-body td:first-of-type,
+.award-profile-right .field-label {
 color: #888;
 font-weight: normal;
 width: 130px;
@@ -1261,6 +1268,12 @@ height: auto;
 .profile.col-md-4 img {
 max-width: 273px;
 height: auto;
+}
+
+.profile h3 {
+font-size: 20px;
+font-weight: bold;
+margin-top: 35px;
 }
 
 .species-left-column tbody,
@@ -1438,7 +1451,8 @@ font-size: 16px;
 .working-group-profile-right .field,
 .news-profile-right .field,
 .campaign-profile-right .field,
-.field-name-field-species-description {
+.field-name-field-species-description,
+.award-profile-right .field {
 margin-bottom: 20px;
 }
 
@@ -1465,7 +1479,9 @@ padding-left: 12px;
 }
 
 .campaign-profile-right .field-label,
-.campaign-profile-right .field-items {
+.campaign-profile-right .field-items,
+.award-profile-right .field-items,
+.award-profile-right .field-label {
 display: inline-block;
 font-size: 13px;
 }
@@ -1476,12 +1492,14 @@ vertical-align: top;
 padding-top: 2px;
 }
 
-.campaign-profile-right .field-items {
+.campaign-profile-right .field-items,
+.award-profile-right .field-items {
 max-width: 143px;
 }
 
 @media screen and (min-width: 1200px) {
-  .campaign-profile-right .field-items {
+  .campaign-profile-right .field-items,
+  .award-profile-right .field-items {
   max-width: 210px;
   }
 }
@@ -1673,7 +1691,8 @@ width: 77%;
 .view-front-end-news .article-body .field-name-body img,
 .view-front-end-awards .article-body .field-name-body img,
 .view-display-id-media_watch .node-teaser .field-name-field-featured-image,
-.view-display-id-notifications .field-name-field-featured-image {
+.view-display-id-notifications .field-name-field-featured-image,
+.view-display-id-working_groups img {
 display: none;
 }
 
