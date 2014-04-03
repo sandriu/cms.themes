@@ -4,11 +4,11 @@
  * Display Suite Publications template.
  */
 ?>
-<div id="accordion" class="panel-group">
-  <?php if (isset($title_suffix['contextual_links'])): ?>
-    <?php print render($title_suffix['contextual_links']); ?>
-  <?php endif; ?>
+<?php if (isset($title_suffix['contextual_links'])): ?>
+  <?php print render($title_suffix['contextual_links']); ?>
+<?php endif; ?>
 
+<div id="accordion" class="panel-group">
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
