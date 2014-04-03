@@ -1,0 +1,16 @@
+/* Table Styles */
+
+table caption {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 10px 0;
+  text-align: left;
+}
+
+
+/* CMS Instruments */
+
+.view-legal-instrument-listing.view-display-id-legal_instrument_listing th.views-field-field-instrument-status {
+  width: 30%;
+}
