@@ -39,19 +39,22 @@
         </div>
     <?php endif; ?>
 
-    <?php if ($exposed): ?>
-        <div class="view-filters">
-            <?php print $exposed; ?>
-        </div>
-    <?php endif; ?>
-
     <?php if ($attachment_before): ?>
         <div class="attachment attachment-before">
             <?php print $attachment_before; ?>
         </div>
     <?php endif; ?>
 
-    <?php echo drupal_ammap_render_map($view->range_states_ammap['data'], array('legend' => true, 'show_default_legend' => true, ), $view->range_states_ammap['legend']); ?>
+    <?php
+    global $base_path;
+    echo drupal_ammap_render_map(
+        $view->range_states_ammap['data'],
+        array('legend' => true, 'show_default_legend' => true, 'steps' => true,
+              'ajax_endpoint' => $base_path . 'country/party_range_states/party_range_states_page?year[value][date]='
+        ),
+        $view->range_states_ammap['legend'],
+        $view->range_states_ammap['steps']
+    ); ?>
 
     <?php if ($attachment_after): ?>
         <div class="attachment attachment-after">
