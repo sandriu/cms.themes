@@ -162,6 +162,7 @@
             <?php print $related_content_1_2; ?>
           </div><!-- .col-md-6 -->
         </div><!-- .row -->
+        <hr>
         <div class="row">
           <div class="col-md-12">
             <?php print $related_content_2_1; ?>
