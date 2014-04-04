@@ -53,7 +53,14 @@ function codeAddress(location) {
     }
     if (typeof location.iso2 != 'undefined' && location.iso2 != null) {
         components.country = location.iso2;
-    } else if (typeof location.country != 'undefined' && location.country != null) {
+
+        //there is a bug in Google Geocoder for iso2 AO
+        //https://code.google.com/p/gmaps-api-issues/issues/detail?can=2&start=0&num=100&q=&colspec=ID%20Type%20Status%20Introduced%20Fixed%20Summary%20Stars%20ApiType%20Internal&groupby=&sort=&id=5388
+        if (location.iso2 == 'ao') {
+            delete components.country;
+        }
+    }
+    if (typeof components.country == 'undefined' && typeof location.country != 'undefined' && location.country != null) {
         components.country = location.country;
     }
     geocode_try(components);

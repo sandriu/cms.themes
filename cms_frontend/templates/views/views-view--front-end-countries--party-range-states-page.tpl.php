@@ -39,19 +39,22 @@
         </div>
     <?php endif; ?>
 
-    <?php if ($exposed): ?>
-        <div class="view-filters">
-            <?php print $exposed; ?>
-        </div>
-    <?php endif; ?>
-
     <?php if ($attachment_before): ?>
         <div class="attachment attachment-before">
             <?php print $attachment_before; ?>
         </div>
     <?php endif; ?>
 
-    <?php echo drupal_ammap_render_map($view->range_states_ammap['data'], array('legend' => true, 'show_default_legend' => true, ), $view->range_states_ammap['legend']); ?>
+    <?php
+    global $base_path;
+    echo drupal_ammap_render_map(
+        $view->range_states_ammap['data'],
+        array('legend' => true, 'show_default_legend' => true, 'steps' => true,
+              'ajax_endpoint' => $base_path . 'country/party_range_states/party_range_states_page?year[value][date]='
+        ),
+        $view->range_states_ammap['legend'],
+        $view->range_states_ammap['steps']
+    ); ?>
 
     <?php if ($attachment_after): ?>
         <div class="attachment attachment-after">
@@ -81,10 +84,17 @@
     //Render the view of countries list grouped by status type
     //  - "Group by" functionality from views not working ok with pagination
     $arg = cms_domain_instrument_id();
-    if ($arg) {
+    if (!empty($view->range_states_statuses)) {
         foreach ($view->range_states_statuses as $idx => $status) { ?>
             <h4><?php echo t($status->name); ?></h4>
-            <?php echo views_embed_view('front_end_countries', 'party_range_states_list', $arg, $status->tid); ?>
+            <?php
+            if ($arg) {
+                echo views_embed_view('front_end_countries', 'party_range_states_list', $arg, $status->tid);
+            } else {
+                echo views_embed_view('front_end_countries', 'party_range_states_list', $status->tid);
+            }
+
+            ?>
 <?php   }
     }
 ?>
