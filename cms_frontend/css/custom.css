@@ -1732,6 +1732,10 @@ width: 100%;
 padding-left: 250px;
 }
 
+.view-front-end-campaigns .node-teaser {
+position: relative;
+}
+
 .view-display-id-media_watch h2,
 .view-display-id-media_watch .article-body .field-name-body,
 .view-display-id-notifications h2,
