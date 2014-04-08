@@ -1,45 +1,129 @@
 /* MOBILE DEVICES */
 
-
+/* smartphones TODO */
 @media (max-width: 480px) {
 
-.global-menu-bar,
-.site-identity,
-.breadcrumb  {
+  .global-menu-bar,
+  .site-identity,
+  .breadcrumb  {
+    display: none;
+  }
+
+  .navbar-brand.mobile {
+  display: block;
+  background: url("../images/CMS_logo_50x66px.png") 0% 0% no-repeat;
+  padding-left: 50px;
+  }
+
+  .navbar-inverse.submenu {
+  /*background-color: rgb(0,56,112);*/
+  background-color: rgb(32, 81, 130);
+  border-color: #fff;
+  }
+
+  .navbar-inverse.submenu .navbar-toggle {
+  border-color: #fff;
+  }
+
+  body .navbar-default .navbar-brand {
+  color: #fff;
+  }
+
+  #views-exposed-form-funding-programmes-page .views-exposed-widget label,
+  #views-exposed-form-training-events-view-page-4 .views-exposed-widget label {
+  text-align: left;
+  }
+
+  #funding-programmes-filters .help-block,
+  #training-events-filters .help-block {
+  margin-top: -53px;
+  margin-left: 90px;
+  position: absolute;
+  }
+}
+
+
+/* tablets */
+@media (max-width: 1023px) {
+
+  .logo {
+  padding-top: 0;
+  }
+
+  .site-identity {
+  margin-top: 32px;
+  }
+
+  .right-header.col-sm-11 {
+  padding-right: 0;
+  }
+
+  body .search-area-and-logos {
+  background-image: none;
+  }
+
+  .region-header {
+  width: 70%;
+  }
+
+  form#search-block-form {
+  margin-left: 10px;
+  float: left;
+  }
+
+  .small-logos img {
   display: none;
-}
+  }
 
-.navbar-brand.mobile {
-display: block;
-background: url("../images/CMS_logo_50x66px.png") 0% 0% no-repeat;
-padding-left: 50px;
-}
+  .small-logos .CMS-logo-small {
+  display: inline-block;
+  background: url("../images/CMS_logo_32x34px.png") 100% 0% no-repeat;
+  height: 34px;
+  width: 32px;
+  }
 
-.navbar-inverse.submenu {
-/*background-color: rgb(0,56,112);*/
-background-color: rgb(32, 81, 130);
-border-color: #fff;
-}
+  .small-logos .UNEP-logo {
+  background: url("../images/UNEP_logo_32x34px.png") 100% 0% no-repeat;
+  height: 34px;
+  width: 32px;
+  }
 
-.navbar-inverse.submenu .navbar-toggle {
-border-color: #fff;
-}
+  .global-menu {
+  padding-left: 0;
+  }
 
-body .navbar-default .navbar-brand {
-color: #fff;
-}
+  .view-news-slideshow img,
+  .view-news-slideshow .views-field-title  {
+  width: 720px;
+  }
 
-#views-exposed-form-funding-programmes-page .views-exposed-widget label, 
-#views-exposed-form-training-events-view-page-4 .views-exposed-widget label {
-text-align: left;
-}
+  .view-news-slideshow img {
+  height: 374px;
+  }
 
-#funding-programmes-filters .help-block, 
-#training-events-filters .help-block {
-margin-top: -53px;
-margin-left: 90px;
-position: absolute;
-}
+  .view-news-slideshow .view-footer a {
+  right: 33px;
+  }
 
+  .species-custom-image-author {
+  text-align: center;
+  }
+
+  #block-random-species-random-species p a {
+  padding-left: 0;
+  }
+
+  .footer-menu ul li {
+  width: 17%;
+  }
+
+  .footer-menu .dropdown-menu {
+  min-width: 120px;
+  }
+
+  .region-footer-second-row-right ul .leaf {
+  background: none;
+  display: block;
+  }
 
 }

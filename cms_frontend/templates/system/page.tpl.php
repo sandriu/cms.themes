@@ -3,10 +3,10 @@
 
 <!-- page container -->
 <div class="container">
-  <div class="row">  
-        
-    <!-- center column --> 
-    <div class="region col-md-12 center-column">            
+  <div class="row">
+
+    <!-- center column -->
+    <div class="region col-md-12 center-column">
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted hero-unit"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
@@ -40,7 +40,7 @@
       ?>
     </div>
 
-  </div>  
+  </div>
 </div>
 
 <!-- page footer -->
