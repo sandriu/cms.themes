@@ -50,6 +50,10 @@
   padding-top: 0;
   }
 
+  .site-identity {
+  margin-top: 32px;
+  }
+
   .right-header.col-sm-11 {
   padding-right: 0;
   }
@@ -82,5 +86,9 @@
   background: url("../images/UNEP_logo_32x34px.png") 100% 0% no-repeat;
   height: 34px;
   width: 32px;
+  }
+
+  .global-menu {
+  padding-left: 0;
   }
 }
