@@ -8,7 +8,7 @@ function ds_countries() {
   return array(
     'label' => t('Countries'),
     'regions' => array(
-      'ungrouped' => t('Ungrouped')
+      'region_1' => t('Region 1')
     ),
     'image' => TRUE
   );

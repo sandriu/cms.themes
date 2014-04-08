@@ -10,35 +10,37 @@
 
 <div class="row">
   <div class="col-md-6">
-    <?php print $ungrouped_1_1; ?>
+    <?php print $region_1_1_1; ?>
   </div><!-- .col-md-6 -->
   <div class="col-md-6">
-    <?php print $ungrouped_1_2; ?>
+    <?php print $region_1_1_2; ?>
   </div><!-- .col-md-6 -->
 </div><!-- .row -->
+
 <div class="row">
   <div class="col-md-12">
-    <?php print $ungrouped_2_1; ?>
+    <?php print $region_1_2_1; ?>
   </div><!-- .col-md-12 -->
 </div><!-- .row -->
+
 <div class="row">
   <div class="col-md-4">
-    <?php print $ungrouped_3_1; ?>
+    <?php print $region_1_3_1; ?>
   </div><!-- .col-md-4 -->
   <div class="col-md-4">
-    <?php print $ungrouped_3_2; ?>
+    <?php print $region_1_3_2; ?>
   </div><!-- .col-md-4 -->
   <div class="col-md-4">
-    <?php print $ungrouped_3_3; ?>
+    <?php print $region_1_3_3; ?>
   </div><!-- .col-md-4 -->
 </div><!-- .row -->
 <hr>
 <div class="row">
   <div class="col-md-6">
-    <?php print $ungrouped_4_1; ?>
+    <?php print $region_1_4_1; ?>
   </div><!-- .col-md-6 -->
   <div class="col-md-6">
-    <?php print $ungrouped_4_2; ?>
+    <?php print $region_1_4_2; ?>
   </div><!-- .col-md-6 -->
 </div><!-- .row -->
 

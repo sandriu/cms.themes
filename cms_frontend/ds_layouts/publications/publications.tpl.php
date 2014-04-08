@@ -108,8 +108,6 @@
   </div><!-- .panel .panel-default -->
 </div><!-- #accordion .panel-group -->
 
-<?php print $ungrouped; ?>
-
 <?php if (!empty($drupal_render_children)): ?>
   <?php print $drupal_render_children ?>
 <?php endif; ?>

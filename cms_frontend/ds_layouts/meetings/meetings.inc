@@ -21,7 +21,7 @@ function ds_meetings() {
       'region_5_1_2' => t('Region 5 (row 1, column 2)'),
       'region_6' => t('Region 6'),
       'related_content_1_1' => t('Related content (row 1, column 1)'),
-      'related_content_1_2' => t('Related content (row 1, column 2)'),
+      'related_content_1_2' => t('Related content (row 1, column 2)')
     ),
     'image' => TRUE
   );

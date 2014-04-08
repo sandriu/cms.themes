@@ -10,10 +10,10 @@
 
 <div class="row">
   <div class="col-md-6">
-    <?php print $ungrouped_1_1; ?>
+    <?php print $region_1_1_1; ?>
   </div><!-- .col-md-6 -->
   <div class="col-md-6">
-    <?php print $ungrouped_1_2; ?>
+    <?php print $region_1_1_2; ?>
   </div><!-- .col-md-6 -->
 </div><!-- .row -->
 
@@ -55,8 +55,6 @@
     </div><!-- #collapseRelatedContent .panel-collapse .collapse -->
   </div><!-- .panel .panel-default -->
 </div><!-- #accordion .panel-group -->
-
-<?php print $ungrouped; ?>
 
 <?php if (!empty($drupal_render_children)): ?>
   <?php print $drupal_render_children ?>

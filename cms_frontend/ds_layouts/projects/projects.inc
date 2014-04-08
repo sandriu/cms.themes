@@ -24,7 +24,7 @@ function ds_projects() {
       'activity' => t('Activity'),
       'schedule_of_payments' => t('Schedule of payments'),
       'related_content_1_1' => t('Related content (row 1, column 1)'),
-      'related_content_1_2' => t('Related content (row 1, column 2)'),
+      'related_content_1_2' => t('Related content (row 1, column 2)')
     ),
     'image' => TRUE
   );

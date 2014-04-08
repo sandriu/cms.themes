@@ -18,8 +18,7 @@ function ds_publications() {
       'details_1_2' => t('Details (row 1, column 2)'),
       'details_1_3' => t('Details (row 1, column 3)'),
       'related_content_1_1' => t('Related content (row 1, column 1)'),
-      'related_content_1_2' => t('Related content (row 1, column 2)'),
-      'ungrouped' => t('Ungrouped')
+      'related_content_1_2' => t('Related content (row 1, column 2)')
     ),
     'image' => TRUE
   );
