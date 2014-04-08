@@ -26,7 +26,7 @@ function ds_species() {
       'related_content_1_1' => t('Related content (row 1, column 1)'),
       'related_content_1_2' => t('Related content (row 1, column 2)'),
       'related_content_2_1' => t('Related content (row 2, column 1)'),
-      'ungrouped' => t('Ungrouped')
+      'region_1' => t('Region 1')
     ),
     'image' => TRUE
   );
