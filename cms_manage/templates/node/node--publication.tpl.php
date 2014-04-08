@@ -3,7 +3,7 @@
 ?>
 
 <div class="row">
-    <div class="span8">
+    <div class="col-md-8">
         <table class="table table-condensed table-hover two-columns">
             <caption><?php echo t('Bibliographic information'); ?></caption>
             <tbody>
@@ -28,19 +28,23 @@
 
     </div>
 
-    <div class="span3 pull-right">
+    <div class="col-md-3 pull-right">
         <?php
             $langcode = field_language('node', $node, 'field_publication_image');
             if (!empty($node->field_publication_image) && count($node->field_publication_image[$langcode])) {
         ?>
-        <div id="myCarousel" class="carousel slide img-polaroid publication-carousel">
+        <div id="myCarousel" class="carousel slide publication-carousel">
             <?php
             echo render($content['field_publication_image']);
             ?>
 
             <?php if (count($node->field_publication_image[$langcode]) > 1) { ?>
-            <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
             <?php } ?>
           </div>
         <?php

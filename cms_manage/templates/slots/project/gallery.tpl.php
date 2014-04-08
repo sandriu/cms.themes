@@ -1,8 +1,8 @@
-<div class="span5">
+<div class="col-md-5">
     <?php
         if (isset($node->field_project_images) && !empty($node->field_project_images)) {
     ?>
-    <div id="myCarousel" class="carousel slide img-polaroid project-carousel">
+    <div id="myCarousel" class="carousel slide project-carousel">
         <!-- Carousel items -->
         <div class="carousel-inner">
             <div class="active item">
@@ -29,8 +29,12 @@
         ?>
         </div>
 
-        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
     </div>
     <?php
         }else {

@@ -5,7 +5,7 @@
     if (user_access('create contacts content', $user)) {
 ?>
 <div class="row">
-    <div class="span12">
+    <div class="col-md-12">
         <?php
             if ((!isset($data['cmsavailability'])) || ($data['cmsavailability'][0] == "TRUE")) {
         ?>
@@ -19,7 +19,7 @@
         ?>
     </div>
 
-    <div class="span12">
+    <div class="col-md-12">
         <div class="btn-toolbar">
             <a href="/<?php echo ADMINISTRATION_PATH; ?>contacts/item/<?php echo $data['uid'][0]; ?>/edit" class="btn btn-primary">
                 <?php

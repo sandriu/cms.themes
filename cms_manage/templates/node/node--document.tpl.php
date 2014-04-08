@@ -3,7 +3,7 @@
 ?>
 
 <div class="row">
-    <div class="span8">
+    <div class="col-md-8">
         <table class="table table-condensed table-hover two-columns">
             <tbody>
             <?php
@@ -19,13 +19,13 @@
         </table>
     </div>
 
-    <div class="span12">
+    <div class="col-md-12">
     <?php
         echo render($content['field_document_files']);
     ?>
     </div>
 
-    <div class="span12">
+    <div class="col-md-12">
     <?php
         render_slot($node, 'related-content', 'document', $content);
     ?>

@@ -3,7 +3,7 @@
 ?>
 
 <div class="row">
-    <div class="span6">
+    <div class="col-md-6">
         <table class="table table-condensed table-hover two-columns">
             <tbody>
             <?php
@@ -16,7 +16,7 @@
         </table>
     </div>
 
-    <div class="span6">
+    <div class="col-md-6">
     <?php
         echo render($content['field_nat_report_remarks']);
     ?>
@@ -24,7 +24,7 @@
 
     <div class="clearfix"></div>
 
-    <div class="span12">
+    <div class="col-md-12">
     <?php
         echo render_slot($node, 'related-content', 'national_report', $content);
     ?>

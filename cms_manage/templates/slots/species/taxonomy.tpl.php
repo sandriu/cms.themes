@@ -1,4 +1,4 @@
-<div class="row span7">
+<div class="col-md-7">
     <table class="table table-condensed table-hover two-columns">
         <caption><?php echo t('Taxonomy'); ?></caption>
         <?php
@@ -9,11 +9,11 @@
         if(check_display_field($content, 'field_species_class')) {
             echo render($content['field_species_class']);
         }
-        
+
         if(check_display_field($content, 'field_species_order')) {
             echo render($content['field_species_order']);
         }
-        
+
         if(check_display_field($content, 'field_species_family')) {
             echo render($content['field_species_family']);
         }
@@ -29,11 +29,11 @@
         if(check_display_field($content, 'field_species_author')) {
             echo render($content['field_species_author']);
         }
-        
+
         if(check_display_field($content, 'field_species_standard_reference')) {
             echo render($content['field_species_standard_reference']);
         }
-        
+
         if(check_display_field($content, 'field_species_synonyms')) {
             echo render($content['field_species_synonyms']);
         }

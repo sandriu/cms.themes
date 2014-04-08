@@ -5,11 +5,11 @@
     <caption><?php echo t('Project activity'); ?></caption>
     <thead>
         <tr>
-            <th class="span2"><?php echo t('Description'); ?></th>
-            <th class="span2"><?php echo t('Start date'); ?></th>
-            <th class="span2"><?php echo t('End date'); ?></th>
-            <th class="span2"><?php echo t('Responsibility'); ?></th>
-            <th class="span3"><?php echo t('Output'); ?></th>
+            <th class="col-md-2"><?php echo t('Description'); ?></th>
+            <th class="col-md-2"><?php echo t('Start date'); ?></th>
+            <th class="col-md-2"><?php echo t('End date'); ?></th>
+            <th class="col-md-2"><?php echo t('Responsibility'); ?></th>
+            <th class="col-md-3"><?php echo t('Output'); ?></th>
         </tr>
     </thead>
     <tbody>

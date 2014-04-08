@@ -1,5 +1,5 @@
 <?php if (!empty($node->related_data) || !empty($node->field_species_threats) || !empty($node->experts) ) { ?>
-    <h3 class="muted">
+    <h3 class="text-muted">
         <?php
         echo t('Related content');
         ?>

@@ -1,4 +1,4 @@
-<h3 class="muted">
+<h3 class="text-muted">
     <?php
         echo t('Related content');
     ?>

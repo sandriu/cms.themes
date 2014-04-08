@@ -3,7 +3,7 @@
 ?>
 
 <div class="row">
-    <div class="span7">
+    <div class="col-md-7">
     <?php
         echo render($content['body']);
     ?>
@@ -15,7 +15,7 @@
 </div>
 
 <div class="row">
-    <div class="span12">
+    <div class="col-md-12">
         <table class="table table-condensed table-hover two-columns">
             <tbody>
             <?php
@@ -72,7 +72,7 @@
         </table>
     </div>
 
-    <div class="span12">
+    <div class="col-md-12">
     <?php
         render_slot($node, 'activity', 'project', $content);
         render_slot($node, 'payments', 'project', $content);

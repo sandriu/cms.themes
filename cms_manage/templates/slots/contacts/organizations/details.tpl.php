@@ -4,10 +4,10 @@
 ?>
 
 <div class="row">
-    <table class="table table-bordered span6">
+    <table class="table table-bordered col-md-6">
         <tbody>
             <tr>
-                <th class="span2">
+                <th class="col-md-2">
                     <?php
                         echo t('Name');
                     ?>
@@ -21,7 +21,7 @@
             </tr>
 
             <tr>
-                <th class="span2">
+                <th class="col-md-2">
                     <?php
                         echo t('Department');
                     ?>
@@ -35,7 +35,7 @@
             </tr>
 
             <tr>
-                <th class="span2">
+                <th class="col-md-2">
                     <?php
                         echo t('Status organization');
                     ?>
@@ -58,7 +58,7 @@
             </tr>
 
             <tr>
-                <th class="span2">
+                <th class="col-md-2">
                     <?php
                         echo t('Website');
                     ?>
@@ -84,7 +84,7 @@
             </tr>
 
             <tr>
-                <th class="span2">
+                <th class="col-md-2">
                     <?php
                         echo t('Email');
                     ?>
@@ -106,7 +106,7 @@
             </tr>
 
             <tr>
-                <th class="span2">
+                <th class="col-md-2">
                     <?php
                         echo t('Phone');
                     ?>
@@ -126,7 +126,7 @@
             </tr>
 
             <tr>
-                <th class="span2">
+                <th class="col-md-2">
                     <?php
                         echo t('Mobile');
                     ?>
@@ -146,7 +146,7 @@
             </tr>
 
             <tr>
-                <th class="span2">
+                <th class="col-md-2">
                     <?php
                         echo t('Fax');
                     ?>
@@ -166,7 +166,7 @@
             </tr>
 
             <tr>
-                <th class="span2">
+                <th class="col-md-2">
                     <?php
                         echo t('Skype ID');
                     ?>
@@ -180,7 +180,7 @@
             </tr>
 
             <tr>
-                <th class="span2">
+                <th class="col-md-2">
                     <?php
                         echo t('Additional emails');
                     ?>
@@ -203,7 +203,7 @@
             </tr>
 
             <tr>
-                <th class="span2">
+                <th class="col-md-2">
                     <?php
                         echo t('Mailing lists');
                     ?>
@@ -226,7 +226,7 @@
             </tr>
 
             <tr>
-                <th class="span2">
+                <th class="col-md-2">
                     <?php
                         echo t('Preferred language');
                     ?>
@@ -246,7 +246,7 @@
             </tr>
 
             <tr>
-                <th class="span2">
+                <th class="col-md-2">
                     <?php
                         echo t('Region');
                     ?>
@@ -262,7 +262,7 @@
             </tr>
 
             <tr>
-                <th class="span2">
+                <th class="col-md-2">
                     <?php
                         echo t('Country');
                     ?>
@@ -278,7 +278,7 @@
             </tr>
 
             <tr>
-                <th class="span2">
+                <th class="col-md-2">
                     <?php
                         echo t('Country post');
                     ?>
@@ -294,7 +294,7 @@
             </tr>
 
             <tr>
-                <th class="span2">
+                <th class="col-md-2">
                     <?php
                         echo t('Town/City');
                     ?>
@@ -309,7 +309,7 @@
 
 
             <tr>
-                <th class="span2">
+                <th class="col-md-2">
                     <?php
                         echo t('Description');
                     ?>
@@ -323,7 +323,7 @@
             </tr>
 
             <tr>
-                <th class="span2">
+                <th class="col-md-2">
                     <?php
                         echo t('CMS Instruments');
                     ?>
@@ -349,7 +349,7 @@
             </tr>
 
             <tr>
-                <th class="span2">
+                <th class="col-md-2">
                     <?php
                         echo t('Postal code');
                     ?>
@@ -363,7 +363,7 @@
             </tr>
 
             <tr>
-                <th class="span2">
+                <th class="col-md-2">
                     <?php
                         echo t('Address');
                     ?>

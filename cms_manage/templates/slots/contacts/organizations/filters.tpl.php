@@ -12,7 +12,7 @@
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle" data-toggle="collapse" data-parent="#contacts-filters" href="#contacts-filters-holder" id="contacts-filters-toggle">
-                <i class="icon-filter"></i> Show/Hide filters
+                <i class="glyphicon glyphicon-filter"></i> Show/Hide filters
             </a>
         </div>
 
