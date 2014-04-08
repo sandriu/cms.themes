@@ -28,8 +28,7 @@
 
             <div class="news-profile-right profile well col-md-4">
                 <?php
-                render_slot($node, 'details', 'news', $content);
-                render_slot($node, 'attachments', 'news', $content);
+                render_slot($node, 'details', 'news', $content);                
                 ?>
             </div>
         </div> 

@@ -20,10 +20,12 @@
             <div class="working-group-profile-left profile col-md-8">
                 <?php echo render($content['body']); ?>
             </div>
-
-            <div class="working-group-profile-right profile well col-md-4">
-                <?php render_slot($node, 'details', 'working_group', $content); ?>
-            </div>
+            <?php ob_start(); render_slot($node, 'details', 'working_group', $content); $details = ob_get_contents(); ob_end_clean(); ?>
+            <?php if(!empty($details)): ?>
+                <div class="working-group-profile-right profile well col-md-4">
+                    <?php echo $details; ?>
+                </div>
+            <?php endif; ?>
         </div>
         <div class="row">
             <div class="working-group-full-width profile col-md-12">
