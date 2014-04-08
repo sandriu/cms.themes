@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Display Suite Species template.
+ * Display Suite Projects template.
  */
 ?>
 <?php if (isset($title_suffix['contextual_links'])): ?>
@@ -63,11 +63,11 @@
         </a>
       </h4><!-- .panel-title -->
     </div><!-- .panel-heading -->
-    <div id="collapseBudgetLineBac" class="panel-collapse collapse">
+    <div id="collapseBudgetLineBac" class="panel-collapse collapse in">
       <div class="panel-body">
         <?php print $budget_line_bac; ?>
       </div><!-- .panel-body -->
-    </div><!-- #collapseBudgetLineBac .panel-collapse .collapse -->
+    </div><!-- #collapseBudgetLineBac .panel-collapse .collapse .in -->
   </div><!-- .panel .panel-default -->
 
   <div class="panel panel-default">
