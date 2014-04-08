@@ -3,7 +3,7 @@
   <div class="container">
       <div class="row">
 
-        <div class="left-header col-md-1">
+        <div class="left-header col-md-1 col-sm-1">
 
 
 
@@ -25,7 +25,7 @@
 
         </div>
 
-        <div class="right-header col-md-11">
+        <div class="right-header col-md-11 col-sm-11">
 
           <div class="up-area">
             <div class="top-user-menu">
@@ -68,7 +68,7 @@
           <?php endif; ?>
         </nav>
       </div>
-    <?php endif; ?>   
+    <?php endif; ?>
 
 </header>
 
