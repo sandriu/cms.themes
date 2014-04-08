@@ -91,4 +91,13 @@
   .global-menu {
   padding-left: 0;
   }
+
+  .view-news-slideshow img,
+  .view-news-slideshow .views-field-title  {
+  width: 720px;
+  }
+
+  .view-news-slideshow img {
+  height: 374px;
+  }
 }
