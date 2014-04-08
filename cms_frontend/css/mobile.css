@@ -100,4 +100,18 @@
   .view-news-slideshow img {
   height: 374px;
   }
+
+  .footer-menu ul li {
+  width: 17%;
+  }
+
+  .footer-menu .dropdown-menu {
+  min-width: 120px;
+  }
+
+  .region-footer-second-row-right ul .leaf {
+  background: none;
+  display: block;
+  }
+
 }
