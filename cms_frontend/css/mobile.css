@@ -145,6 +145,14 @@
   border-bottom: 1px solid #ddd;
   }
 
+  .down-area {
+  margin-top: 0;
+  }
+
+  .logo-title {
+  margin-top: 0;
+  }
+
   .top-user-menu,
   .search-area-and-logos {
   width: 100%;
