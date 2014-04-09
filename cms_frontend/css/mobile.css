@@ -117,6 +117,10 @@
   body .global-menu.nav-show-level-2 .dropdown-menu {
   width: 100% !important;
   }
+
+  .footer-menu ul li {
+  width: 100%;
+  }
 }
 
 
