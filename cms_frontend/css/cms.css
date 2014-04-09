@@ -2,7 +2,13 @@
 
 /* HEADER */
 .search-area-and-logos {
-background: url("../images/header_wave_cms.png") 100% 0% no-repeat;
+background: url("../images/header_wave_cms.png") 80% 0% no-repeat;
+}
+
+@media (max-width: 800px) {
+  body .search-area-and-logos {
+  background-image: none;
+  }
 }
 
 .global-menu {

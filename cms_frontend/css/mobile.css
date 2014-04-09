@@ -1,48 +1,5 @@
 /* MOBILE DEVICES */
 
-/* smartphones TODO */
-@media (max-width: 480px) {
-
-  .global-menu-bar,
-  .site-identity,
-  .breadcrumb  {
-    display: none;
-  }
-
-  .navbar-brand.mobile {
-  display: block;
-  background: url("../images/CMS_logo_50x66px.png") 0% 0% no-repeat;
-  padding-left: 50px;
-  }
-
-  .navbar-inverse.submenu {
-  /*background-color: rgb(0,56,112);*/
-  background-color: rgb(32, 81, 130);
-  border-color: #fff;
-  }
-
-  .navbar-inverse.submenu .navbar-toggle {
-  border-color: #fff;
-  }
-
-  body .navbar-default .navbar-brand {
-  color: #fff;
-  }
-
-  #views-exposed-form-funding-programmes-page .views-exposed-widget label,
-  #views-exposed-form-training-events-view-page-4 .views-exposed-widget label {
-  text-align: left;
-  }
-
-  #funding-programmes-filters .help-block,
-  #training-events-filters .help-block {
-  margin-top: -53px;
-  margin-left: 90px;
-  position: absolute;
-  }
-}
-
-
 /* tablets */
 @media (max-width: 1023px) {
 
@@ -50,42 +7,16 @@
   padding-top: 0;
   }
 
-  .site-identity {
-  margin-top: 32px;
-  }
-
   .right-header.col-sm-11 {
   padding-right: 0;
   }
 
-  body .search-area-and-logos {
-  background-image: none;
-  }
-
   .region-header {
-  width: 70%;
+  width: 76%;
   }
 
   form#search-block-form {
   margin-left: 10px;
-  float: left;
-  }
-
-  .small-logos img {
-  display: none;
-  }
-
-  .small-logos .CMS-logo-small {
-  display: inline-block;
-  background: url("../images/CMS_logo_32x34px.png") 100% 0% no-repeat;
-  height: 34px;
-  width: 32px;
-  }
-
-  .small-logos .UNEP-logo {
-  background: url("../images/UNEP_logo_32x34px.png") 100% 0% no-repeat;
-  height: 34px;
-  width: 32px;
   }
 
   .global-menu {
@@ -139,4 +70,138 @@
   background-image: none;
   }
 
+}
+
+
+/* low resolutions tablets */
+@media (max-width: 800px) {
+  .down-area {
+  margin-top: 0;
+  }
+
+  .region-header {
+  width: 70%;
+  }
+
+  .small-logos img {
+  display: none;
+  }
+
+  .small-logos .CMS-logo-small {
+  display: inline-block;
+  background: url("../images/CMS_logo_32x34px.png") 100% 0% no-repeat;
+  height: 34px;
+  width: 32px;
+  }
+
+  .small-logos .UNEP-logo {
+  background: url("../images/UNEP_logo_32x34px.png") 100% 0% no-repeat;
+  height: 34px;
+  width: 32px;
+  }
+
+  .global-menu-bar {
+  background: #003871;
+  }
+
+  .global-menu > li {
+  border-right: 0;
+  display: block;
+  text-align: left;
+  }
+
+  .front .global-menu > li > div.submenu-teaser > ul {
+  display: none;
+  }
+
+  body .global-menu.nav-show-level-2 .dropdown-menu {
+  width: 100% !important;
+  }
+
+  .footer-menu ul li {
+  width: 100%;
+  }
+}
+
+
+
+/* smartphones TODO */
+@media (max-width: 480px) {
+
+  .breadcrumb  {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0px;
+  }
+
+  .navbar-brand.mobile {
+  display: block;
+  background: url("../images/CMS_logo_50x66px.png") 0% 0% no-repeat;
+  padding-left: 50px;
+  }
+
+  .left-header {
+  margin-top: -30px;
+  border-bottom: 1px solid #ddd;
+  }
+
+  .right-header {
+  border-bottom: 1px solid #ddd;
+  }
+
+  .down-area {
+  margin-top: 0;
+  }
+
+  .logo-title {
+  margin-top: 0;
+  }
+
+  .top-user-menu,
+  .search-area-and-logos {
+  width: 100%;
+  }
+
+  body .search-area-and-logos {
+  height: 40px;
+  background-image: none;
+  }
+
+  .region-header {
+  width: 98%;
+  }
+
+  form#search-block-form {
+  float: right;
+  }
+
+  .navbar-collapse {
+  border-top: 0;
+  }
+
+  .navbar-inverse.submenu {
+  /*background-color: rgb(0,56,112);*/
+  background-color: rgb(32, 81, 130);
+  border-color: #fff;
+  }
+
+  .navbar-inverse.submenu .navbar-toggle {
+  border-color: #fff;
+  }
+
+  body .navbar-default .navbar-brand {
+  color: #fff;
+  }
+
+  #views-exposed-form-funding-programmes-page .views-exposed-widget label,
+  #views-exposed-form-training-events-view-page-4 .views-exposed-widget label {
+  text-align: left;
+  }
+
+  #funding-programmes-filters .help-block,
+  #training-events-filters .help-block {
+  margin-top: -53px;
+  margin-left: 90px;
+  position: absolute;
+  }
 }
