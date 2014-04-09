@@ -4,11 +4,11 @@
  * Display Suite Species template.
  */
 ?>
-<div id="accordion" class="panel-group">
-  <?php if (isset($title_suffix['contextual_links'])): ?>
-    <?php print render($title_suffix['contextual_links']); ?>
-  <?php endif; ?>
+<?php if (isset($title_suffix['contextual_links'])): ?>
+  <?php print render($title_suffix['contextual_links']); ?>
+<?php endif; ?>
 
+<div id="accordion" class="panel-group">
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
@@ -162,6 +162,7 @@
             <?php print $related_content_1_2; ?>
           </div><!-- .col-md-6 -->
         </div><!-- .row -->
+        <hr>
         <div class="row">
           <div class="col-md-12">
             <?php print $related_content_2_1; ?>
@@ -172,7 +173,7 @@
   </div><!-- .panel .panel-default -->
 </div><!-- #accordion .panel-group -->
 
-<?php print $ungrouped; ?>
+<?php print $region_1; ?>
 
 <?php if (!empty($drupal_render_children)): ?>
   <?php print $drupal_render_children ?>
