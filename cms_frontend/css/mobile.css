@@ -113,6 +113,10 @@
   .front .global-menu > li > div.submenu-teaser > ul {
   display: none;
   }
+
+  body .global-menu.nav-show-level-2 .dropdown-menu {
+  width: 100% !important;
+  }
 }
 
 
@@ -121,7 +125,9 @@
 @media (max-width: 480px) {
 
   .breadcrumb  {
-  display: none;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0px;
   }
 
   .navbar-brand.mobile {
