@@ -93,10 +93,12 @@
                     echo render($content['field_project_taxonomic_group']);
                     echo render($content['field_region']);
                     echo render($content['field_country']);
-                    echo render($content['field_project_tech_report']);
-                    echo render($content['field_project_file']);
+                    echo render($content['field_project_tech_report']);                    
                     ?>
                 </table>
+                
+                <?php echo render($content['field_project_file']); ?>
+                
                 <hr />
 
                 <!-- to be implemented -->
