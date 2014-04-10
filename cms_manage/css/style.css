@@ -16,6 +16,12 @@ table caption {
 }
 
 
+/* Chosen Styles */
+.chosen-container {
+  width: 100% !important;
+}
+
+
 /* Panel Styles */
 
 .panel-group .panel {

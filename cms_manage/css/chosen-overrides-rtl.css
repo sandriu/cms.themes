@@ -1,0 +1,16 @@
+.chosen-rtl .chosen-single div {
+  left: 7px;
+}
+
+.chosen-rtl .chosen-choices li.search-choice {
+  margin-top: 6px;
+}
+
+.chosen-rtl .chosen-choices li.search-choice .search-choice-close {
+  background-position: right top;
+}
+
+.chosen-rtl .chosen-search input[type="text"] {
+  background-image: url(../images/chosen-sprite.png);
+  background-position: -28px -20px;
+}
