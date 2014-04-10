@@ -25,12 +25,13 @@
                     <?php if (!$teaser) print 'Last updated on'; ?> <?php print format_date($node->changed, 'custom', 'd F Y'); ?>
                 </span>      
             </div>
-
-            <div class="news-profile-right profile well col-md-4">
-                <?php
-                render_slot($node, 'details', 'news', $content);                
-                ?>
-            </div>
+            
+            <?php ob_start(); render_slot($node, 'details', 'news', $content); $details = ob_get_contents(); ob_end_clean(); ?>
+            <?php if(!empty($details)): ?>
+                <div class="news-profile-right profile well col-md-4">
+                    <?php echo $details; ?>
+                </div>
+            <?php endif; ?>
         </div> 
     </div>
 <?php endif; ?>
