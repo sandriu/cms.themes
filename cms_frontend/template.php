@@ -62,9 +62,9 @@ function cms_frontend_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'search_block_form') {
     // Prevent user from searching the default text
     $form['#attributes']['onsubmit'] =
-            "if(this.search_block_form.value=='".t('Search on this site')."'){ alert('".t('Please enter a search')."'); return false; }";
+            "if(this.search_block_form.value=='".t('Search site')."'){ alert('".t('Please enter a search')."'); return false; }";
     // Alternative (HTML5) placeholder attribute instead of using the javascript
-    $form['search_block_form']['#attributes']['placeholder'] = t('Search on this site');
+    $form['search_block_form']['#attributes']['placeholder'] = t('Search site');
     $form['search_block_form']['#attributes']['class'][] = 'input-sm';
   }
 }
