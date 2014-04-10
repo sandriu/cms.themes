@@ -1269,6 +1269,10 @@ font-weight: bold;
 margin-top: 35px;
 }
 
+.working-group-profile-left.profile h3 {
+margin-top: 0;
+}
+
 .species-left-column tbody,
 .profile label {
 margin-top: 10px;
