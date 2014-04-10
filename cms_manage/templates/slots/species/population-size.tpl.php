@@ -6,20 +6,20 @@
 
     <thead>
         <tr>
-            <th class="span2" rowspan="2" style="vertical-align: middle;"><?php echo t('Population'); ?></th>
-            <th class="span2"><?php echo t('Size interval'); ?></th>
-            <th class="span2"><?php echo t('Size quality'); ?></th>
-            <th class="span2"><?php echo t('Estimated population size'); ?></th>
-            <th class="span3"><?php echo t('Size reference'); ?></th>
-            <th class="span3"><?php echo t('Size notes'); ?></th>
+            <th class="col-md-2" rowspan="2" style="vertical-align: middle;"><?php echo t('Population'); ?></th>
+            <th class="col-md-2"><?php echo t('Size interval'); ?></th>
+            <th class="col-md-2"><?php echo t('Size quality'); ?></th>
+            <th class="col-md-2"><?php echo t('Estimated population size'); ?></th>
+            <th class="col-md-3"><?php echo t('Size reference'); ?></th>
+            <th class="col-md-3"><?php echo t('Size notes'); ?></th>
         </tr>
 
         <tr>
-            <th class="span2"><?php echo t('Trend interval'); ?></th>
-            <th class="span2"><?php echo t('Trend  quality'); ?></th>
-            <th class="span2"><?php echo t('Trend'); ?></th>
-            <th class="span3"><?php echo t('Trend reference'); ?></th>
-            <th class="span3"><?php echo t('Trend notes'); ?></th>
+            <th class="col-md-2"><?php echo t('Trend interval'); ?></th>
+            <th class="col-md-2"><?php echo t('Trend  quality'); ?></th>
+            <th class="col-md-2"><?php echo t('Trend'); ?></th>
+            <th class="col-md-3"><?php echo t('Trend reference'); ?></th>
+            <th class="col-md-3"><?php echo t('Trend notes'); ?></th>
         </tr>
     </thead>
 

@@ -8,22 +8,25 @@
     $current_profile = CMSUtils::get_current_profile();
 ?>
 
-<div class="accordion" id="contacts-filters">
-    <div class="accordion-group">
-        <div class="accordion-heading">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#contacts-filters" href="#contacts-filters-holder" id="contacts-filters-toggle">
-                <i class="icon-filter"></i> Show/Hide filters
-            </a>
-        </div>
+<div id="accordion" class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFilters">
+                    <i class="glyphicon glyphicon-filter"></i>
+                    <?php print t('Show/Hide filters'); ?>
+                </a>
+            </h4><!-- .panel-title -->
+        </div><!-- .panel-heading -->
 
-        <div id="contacts-filters-holder" class="accordion-body collapse in">
-            <div class="accordion-inner">
+        <div id="collapseFilters" class="panel-collapse collapse in">
+            <div class="panel-body">
                 <form class="form-inline" id="contacts-instrument-filter" method="GET" action="">
                     <?php if(!empty($data['sort'][0])) : ?>
                     <input type="hidden" id="iSortCol_0" name="iSortCol_0" value="<?php echo $data['sort'][0]['column']; ?>" />
                     <input type="hidden" id="sSortDir_0" name="sSortDir_0" value="<?php echo $data['sort'][0]['direction']; ?>" />
                     <?php endif; ?>
-                    <div class="views-exposed-form well well-small">
+                    <div class="views-exposed-form">
                         <div class="views-exposed-widgets clearfix">
                             <div class="views-exposed-widget">
                                 <label for="per_field_operator">
@@ -214,7 +217,7 @@
                         </div>
                     </div>
                 </form>
-            </div>
-        </div>
-    </div>
-</div>
+            </div><!-- .panel-body -->
+        </div><!-- #collapseFilters .panel-collapse .collapse .in -->
+    </div><!-- .panel .panel-default -->
+</div><!-- #accordion .panel-group -->

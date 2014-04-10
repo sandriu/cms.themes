@@ -9,6 +9,38 @@ table caption {
 }
 
 
+/* Form Styles */
+
+.form-required {
+  color: #ff0000;
+}
+
+
+/* Panel Styles */
+
+.panel-group .panel {
+  overflow: visible;
+}
+
+
+/* Carousel Styles */
+
+.project-carousel,
+.publication-carousel,
+.species-carousel {
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+
+.project-carousel img,
+.publication-carousel img,
+.species-carousel img {
+  margin: 0 auto;
+}
+
+
 /* CMS Instruments */
 
 .view-legal-instrument-listing.view-display-id-legal_instrument_listing th.views-field-field-instrument-status {

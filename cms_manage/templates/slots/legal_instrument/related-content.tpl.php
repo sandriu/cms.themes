@@ -1,5 +1,5 @@
 <?php if (!empty($node->related_data) || !empty($node->contacts)) { ?>
-    <h3 class="muted">
+    <h3 class="text-muted">
         <?php
         echo t('Related content');
         ?>

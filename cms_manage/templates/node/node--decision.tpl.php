@@ -3,7 +3,7 @@
 ?>
 
 <div class="row">
-    <div class="span6">
+    <div class="col-md-6">
         <table class="table table-condensed table-hover two-columns">
             <tbody>
             <?php
@@ -17,7 +17,7 @@
         <hr />
     </div>
 
-    <div class="span6">
+    <div class="col-md-6">
     <?php
         echo render($content['field_decision_summary']);
     ?>
@@ -25,7 +25,7 @@
 
     <div class="clearfix"></div>
 
-    <div class="span12">
+    <div class="col-md-12">
     <?php
         echo render_slot($node, 'related-content', 'decision', $content);
     ?>

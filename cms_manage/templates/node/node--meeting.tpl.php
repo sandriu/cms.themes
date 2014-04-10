@@ -3,7 +3,7 @@
 ?>
 
 <div class="row">
-    <div class="span8">
+    <div class="col-md-8">
         <table class="table table-condensed table-hover two-columns">
             <tbody>
             <?php
@@ -27,7 +27,7 @@
         <?php echo render($content['body']); ?>
     </div>
 
-    <div class="span4">
+    <div class="col-md-4">
         <?php
             echo render($content['field_meeting_image']);
         ?>
@@ -48,7 +48,7 @@
 
     </div>
 
-    <div class="span12">
+    <div class="col-md-12">
         <?php echo render_slot($node, 'related-content', 'meeting', $content); ?>
     </div>
 

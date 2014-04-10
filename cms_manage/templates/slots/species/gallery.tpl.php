@@ -1,8 +1,8 @@
-<div class="span5">
+<div class="col-md-5">
     <?php
         if ((isset($node->field_species_images) && (!empty($node->field_species_images))) || count($node->gallery)) {
     ?>
-    <div id="myCarousel" class="carousel slide img-polaroid species-carousel">
+    <div id="myCarousel" class="carousel slide species-carousel">
         <!-- Carousel items -->
         <div class="carousel-inner">
             <div class="active item">
@@ -11,9 +11,11 @@
                     if (isset($node->field_species_images) && (!empty($node->field_species_images))) {
                 ?>
                 <img src="<?php echo file_create_url($node->field_species_images[$langcode][0]['uri']); ?>" alt="" title="" class="species-custom-image" />
-                <p class="species-custom-image-author">
-                    <?php echo $node->field_species_images[$langcode][0]['title']; ?>
-                </p>
+                <div class="carousel-caption">
+                    <p class="species-custom-image-author">
+                        <?php echo $node->field_species_images[$langcode][0]['title']; ?>
+                    </p>
+                </div>
                 <?php
                     unset($node->field_species_images[$langcode][0]);
                     }elseif (count($node->gallery)) {
@@ -28,9 +30,11 @@
         ?>
             <div class="item">
                 <img src="<?php echo file_create_url($image['uri']); ?>" alt="" title="" class="species-custom-image" />
-                <p class="species-custom-image-author">
-                    <?php echo $image['title']; ?>
-                </p>
+                <div class="carousel-caption">
+                    <p class="species-custom-image-author">
+                        <?php echo $image['title']; ?>
+                    </p>
+                </div>
             </div>
         <?php
                 }
@@ -50,8 +54,12 @@
         ?>
         </div>
 
-        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
     </div>
     <?php
         }else {

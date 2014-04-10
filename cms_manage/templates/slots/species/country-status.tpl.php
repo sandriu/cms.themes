@@ -22,7 +22,7 @@
 <br />
 
 <div class="row">
-    <div class="span7">
+    <div class="col-md-7">
         <h4>
             <?php echo t('AEWA Country status'); ?>
         </h4>
@@ -32,8 +32,8 @@
         <table cellpadding="0" cellspacing="0" border="0" id="country-status-listing" class="cols-2 table table-striped table-hover table-bordered dataTable">
             <thead>
                 <tr>
-                    <th class="span2"><?php echo t('Country'); ?></th>
-                    <th class="span2"><?php echo t('Status'); ?></th>
+                    <th class="col-md-2"><?php echo t('Country'); ?></th>
+                    <th class="col-md-2"><?php echo t('Status'); ?></th>
                 </tr>
             </thead>
 

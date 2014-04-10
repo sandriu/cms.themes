@@ -5,10 +5,10 @@
     <caption><?php echo t('Schedule of payments'); ?></caption>
     <thead>
         <tr>
-            <th class="span2"><?php echo t('Amount'); ?></th>
-            <th class="span2"><?php echo t('Date'); ?></th>
-            <th class="span2"><?php echo t('Comments'); ?></th>
-            <th class="span2"><?php echo t('Payment document (PYIN)'); ?></th>
+            <th class="col-md-2"><?php echo t('Amount'); ?></th>
+            <th class="col-md-2"><?php echo t('Date'); ?></th>
+            <th class="col-md-2"><?php echo t('Comments'); ?></th>
+            <th class="col-md-2"><?php echo t('Payment document (PYIN)'); ?></th>
         </tr>
     </thead>
 
