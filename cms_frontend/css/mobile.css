@@ -173,4 +173,19 @@
   border-top: 0;
   }
 
+
+  /* homepage */
+  .view-news-slideshow .views-field-title {
+  width: 425px;
+  }
+
+  .view-news-slideshow img {
+  height: auto;
+  }
+
+  .view-news-slideshow .views-field-title .field-content {
+  min-height: 86px;
+  margin-top: 15px;
+  }
+
 }
