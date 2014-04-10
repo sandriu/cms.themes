@@ -63,6 +63,14 @@
 
 
   /* footer */
+  .well-footer {
+  padding: 10px;
+  }
+
+  .subscribe-social .col-sm-6 {
+  margin-bottom: 20px;
+  }
+
   .footer-menu ul li {
   width: 17%;
   }
