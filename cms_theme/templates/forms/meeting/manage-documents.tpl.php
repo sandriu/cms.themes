@@ -198,6 +198,7 @@
         <?php
         $documents = node_load_multiple(array(), array('type' => 'document'));
         foreach ($documents as $document_id => $document) {
+            $fields_lang = field_language('node', $document);
             if (!in_array($document_id, array_keys($meeting_documents))) {
                 ?>
                 <tr>
