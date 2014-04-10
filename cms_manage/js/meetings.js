@@ -183,7 +183,7 @@
 
             $.ajax({
                 type: 'POST',
-                url: administration_path + 'meeting/' + meeting_id + '/delete_documents',
+                url: '/' + administration_path + 'meeting/' + meeting_id + '/delete_documents',
                 async: true,
                 data: 'documents=' + documents,
                 dataType: 'JSON',
