@@ -11,6 +11,10 @@ table caption {
 
 /* Form Styles */
 
+input[type="file"] {
+  display: inline-block;
+}
+
 .form-required {
   color: #ff0000;
 }
