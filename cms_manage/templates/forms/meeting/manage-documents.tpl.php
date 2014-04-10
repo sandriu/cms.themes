@@ -300,5 +300,5 @@ $css2_path = drupal_get_path('module', 'datatables') . '/dataTables/media/css/da
     var administration_path = '/<?php echo ADMINISTRATION_PATH; ?>';
 </script>
 <?php
-drupal_add_js(drupal_get_path('theme', 'cms_theme') . '/js/meetings.js');
+drupal_add_js(drupal_get_path('theme', 'cms_manage') . '/js/meetings.js');
 ?>
