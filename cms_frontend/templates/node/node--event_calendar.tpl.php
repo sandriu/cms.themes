@@ -10,26 +10,26 @@
               hide($content['comments']);
               hide($content['links']);
               print render($content);      
-            ?>            
+            ?>      
+            <span class="text-muted"><?php print format_date($node->created,'custom','d F Y'); ?></span>
         </div>
         <?php print render($content['links']); ?>        
     </div>
 <?php else: ?>
     <div class="container">
         <div class="row">
-            <div class="campaign-profile-left profile col-md-8">
-                <?php echo render($content['body']); ?>   
-                <?php echo render($content['field_campaign_picture']); ?>
+            <div class="news-profile-left profile col-md-8">                
+                <?php echo render($content['body']); ?>                  
                 <span class="text-muted">
-                    <?php print t('Last updated on').' '.format_date($node->changed, 'custom', 'd F Y'); ?>
+                    <?php if (!$teaser) print 'Last updated on'; ?> <?php print format_date($node->changed, 'custom', 'd F Y'); ?>
                 </span>      
             </div>
-            <?php ob_start(); render_slot($node, 'details', 'campaign', $content); $details = ob_get_contents(); ob_end_clean(); ?>
-            <?php if(!empty($details)): ?>
-                <div class="campaign-profile-right profile well col-md-4">
-                    <?php echo $details; ?>
+                        
+            <?php if(check_display_field($content, 'event_calendar_date')): ?>
+                <div class="news-profile-right profile well col-md-4">
+                    <?php echo render($content['event_calendar_date']); ?>
                 </div>
             <?php endif; ?>
-        </div>        
+        </div> 
     </div>
 <?php endif; ?>

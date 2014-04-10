@@ -198,7 +198,6 @@
         <?php
         $documents = node_load_multiple(array(), array('type' => 'document'));
         foreach ($documents as $document_id => $document) {
-            $fields_lang = field_language('node', $document);
             if (!in_array($document_id, array_keys($meeting_documents))) {
                 ?>
                 <tr>
@@ -301,5 +300,5 @@ $css2_path = drupal_get_path('module', 'datatables') . '/dataTables/media/css/da
     var administration_path = '/<?php echo ADMINISTRATION_PATH; ?>';
 </script>
 <?php
-drupal_add_js(drupal_get_path('theme', 'cms_theme') . '/js/meetings.js');
+drupal_add_js(drupal_get_path('theme', 'cms_manage') . '/js/meetings.js');
 ?>

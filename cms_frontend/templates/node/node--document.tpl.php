@@ -23,21 +23,16 @@
                 <?php render_slot($node, 'related-content', 'document', $content); ?>
             </div>
 
-            <div class="document-right profile well col-md-4">
-                <table class="table table-condensed table-hover two-columns">
-                    <tbody>
-                        <?php
-                        echo render($content['field_document_number']);
-                        echo render($content['field_instrument']);
-                        echo render($content['field_document_type']);
-                        echo render($content['field_document_status']);
-                        echo render($content['field_document_publish_date']);
-                        echo render($content['field_document_submitted_by']);
-                        echo render($content['field_country']);
-                        ?>
-                    </tbody>
-                </table>
-            </div>
+            <?php ob_start(); render_slot($node, 'details', 'document', $content); $details = ob_get_contents(); ob_end_clean(); ?>
+            <?php if(!empty($details)): ?>
+                <div class="document-right profile well col-md-4">
+                    <table class="table table-condensed table-hover two-columns">
+                        <tbody>
+                            <?php echo $details; ?>
+                        </tbody>
+                    </table>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 

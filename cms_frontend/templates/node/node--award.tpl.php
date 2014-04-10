@@ -24,10 +24,12 @@
                     <?php print t('Last updated on').' '.format_date($node->changed, 'custom', 'd F Y'); ?>
                 </span>      
             </div>
-
-            <div class="award-profile-right profile well col-md-4">
-                <?php render_slot($node, 'details', 'award', $content); ?>
-            </div>
+            <?php ob_start(); render_slot($node, 'details', 'award', $content); $details = ob_get_contents(); ob_end_clean(); ?>
+            <?php if(!empty($details)): ?>
+                <div class="award-profile-right profile well col-md-4">
+                    <?php echo $details; ?>
+                </div>
+            <?php endif; ?>
         </div>        
     </div>
 <?php endif; ?>
