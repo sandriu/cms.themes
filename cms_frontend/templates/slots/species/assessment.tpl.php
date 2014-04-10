@@ -9,12 +9,12 @@
        if (check_display_field($content, 'field_species_iucn_status')) {
             echo render($content['field_species_iucn_status']);
         }
-
+        /*
         if (check_display_field($content, 'field_species_iucn_web_srv')) {
             echo render($content['field_species_iucn_web_srv']);
         }
 
-       /* if (check_display_field($content, 'field_species_concerted_action')) {
+        if (check_display_field($content, 'field_species_concerted_action')) {
            echo render($content['field_species_concerted_action']);
         }
 
