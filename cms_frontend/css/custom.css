@@ -227,14 +227,6 @@ border: 0px;
 display: none;
 }
 
-.top-right-header div {
-float: right;
-}
-
-.top-right-header .language-menu {
-float: left;
-}
-
 
 /* GLOBAL SUBMENU level 1 */
 .navbar-inverse.submenu {

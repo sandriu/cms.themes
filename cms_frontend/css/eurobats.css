@@ -193,3 +193,15 @@ margin-bottom: 74px;
 .profile blockquote p {
 color: #0F235B;
 }
+
+
+/* MOBILE */
+@media (max-width: 800px) {
+  body .search-area-and-logos {
+  background-image: none;
+  }
+
+  .global-menu-bar {
+  background: #0F235B;
+  }
+}

@@ -5,12 +5,6 @@
 background: url("../images/header_wave_cms.png") 80% 0% no-repeat;
 }
 
-@media (max-width: 800px) {
-  body .search-area-and-logos {
-  background-image: none;
-  }
-}
-
 .global-menu {
 border-bottom: 1px solid #003871;
 }
@@ -141,4 +135,16 @@ background: #0066c0;
 /* NEWS profile */
 .profile blockquote p {
 color: #5E9732;
+}
+
+
+/* MOBILE */
+@media (max-width: 800px) {
+  body .search-area-and-logos {
+  background-image: none;
+  }
+
+  .global-menu-bar {
+  background: #003871;
+  }
 }
