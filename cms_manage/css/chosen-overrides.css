@@ -1,0 +1,142 @@
+.chosen-container .chosen-results {
+  color: #555;
+}
+
+.chosen-container .chosen-results li {
+  line-height: 1.428571429;
+}
+
+.chosen-container .chosen-results li.disabled-result {
+  color: #999;
+}
+
+.chosen-container .chosen-results li.highlighted {
+  background-color: #428bca;
+}
+
+.chosen-container .chosen-results li.no-results {
+  background: #eee;
+}
+
+.chosen-container .chosen-results li.group-result {
+  color: #999;
+  font-weight: 700;
+}
+
+.chosen-container .chosen-results li em {
+  background: #feffde;
+}
+
+.chosen-container-single .chosen-single {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  background-image: -webkit-linear-gradient(top, #fff 0%, #eee 100%);
+  background-image: linear-gradient(to bottom, #fff 0%, #eee 100%);
+  background-repeat: repeat-x;
+  border-color: #ccc;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  color: #555;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffeeeeee', GradientType=0);
+  height: 34px;
+  line-height: 34px;
+}
+
+.chosen-container-single .chosen-single abbr {
+  background-image: url(../images/chosen-sprite.png);
+  background-position: right top;
+  height: 12px;
+  top: 6px;
+}
+
+.chosen-container-single .chosen-single abbr:hover,
+.chosen-container-single.chosen-disabled .chosen-single abbr:hover {
+  background-position: right -11px;
+}
+
+.chosen-container-single .chosen-single div b {
+  background-image: url(../images/chosen-sprite.png);
+  background-position: left 7px;
+}
+
+.chosen-container-single .chosen-search input[type="text"] {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  background-image: url(../images/chosen-sprite.png);
+  background-position: right -20px;
+  border-color: #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+
+.chosen-container-multi .chosen-choices {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  border-color: #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+
+.chosen-container-multi .chosen-choices li.search-field input[type="text"] {
+  color: #555;
+  height: 32px;
+  margin: 0;
+  padding: 4px;
+}
+
+.chosen-container-multi .chosen-choices li.search-choice {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  background-color: #eee;
+  background-image: -webkit-linear-gradient(top, #fff 0%, #eee 100%);
+  background-image: linear-gradient(to bottom, #fff 0%, #eee 100%);
+  background-repeat: repeat-x;
+  border-color: #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  color: #333;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffeeeeee', GradientType=0);
+  margin-top: 6px;
+}
+
+.chosen-container-multi .chosen-choices li.search-choice .search-choice-close {
+  background-image: url(../images/chosen-sprite.png);
+  background-position: right top;
+  height: 10px;
+  right: 4px;
+  top: 5px;
+}
+
+.chosen-container-multi .chosen-choices li.search-choice .search-choice-close:hover,
+.chosen-container-multi .chosen-choices li.search-choice-focus .search-choice-close {
+  background-position: right -11px;
+}
+
+.chosen-container-active .chosen-single {
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .075) inset, 0 0 8px rgba(82, 168, 236, .6);
+  -webkit-transition: border linear .2s, box-shadow linear .2s;
+  border-color: rgba(82, 168, 236, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .075) inset, 0 0 8px rgba(82, 168, 236, .6);
+  transition: border linear .2s, box-shadow linear .2s;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single {
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .075) inset, 0 0 8px rgba(82, 168, 236, .6);
+  -webkit-transition: border linear .2s, box-shadow linear .2s;
+  background-color: #eee;
+  border-color: rgba(82, 168, 236, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .075) inset, 0 0 8px rgba(82, 168, 236, .6);
+  transition: border linear .2s, box-shadow linear .2s;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single div b {
+  background-position: -18px 7px;
+}
+
+.chosen-container-active .chosen-choices {
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .075) inset, 0 0 8px rgba(82, 168, 236, .6);
+  -webkit-transition: border linear .2s,box-shadow linear .2s;
+  border-color: rgba(82, 168, 236, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .075) inset, 0 0 8px rgba(82, 168, 236, .6);
+  transition: border linear .2s, box-shadow linear .2s;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-choices {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
