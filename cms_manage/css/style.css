@@ -11,8 +11,18 @@ table caption {
 
 /* Form Styles */
 
+input[type="file"] {
+  display: inline-block;
+}
+
 .form-required {
   color: #ff0000;
+}
+
+
+/* Chosen Styles */
+.chosen-container {
+  width: 100% !important;
 }
 
 

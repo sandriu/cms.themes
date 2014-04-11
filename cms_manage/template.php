@@ -52,3 +52,33 @@ function cms_manage_menu_local_tasks_alter(&$data, $router_item, $root_path) {
       break;
   }
 }
+
+/**
+ * Alter the element type information returned from modules.
+ *
+ * @param $type
+ *   All element type defaults as collected by hook_element_info().
+ *
+ * @return
+ *   Nothing.
+ */
+function cms_manage_element_info_alter(&$type) {
+  foreach ($type as &$element) {
+    if (!empty($element['#input'])) {
+      $element['#process'][] = '_cms_manage_process_input';
+    }
+  }
+}
+
+/**
+ * Process input elements.
+ */
+function _cms_manage_process_input(&$element, &$form_state) {
+  if ($element['#type'] == 'managed_file') {
+    $key = array_search('form-control', $element['#attributes']['class']);
+
+    unset($element['#attributes']['class'][$key]);
+  }
+
+  return $element;
+}
