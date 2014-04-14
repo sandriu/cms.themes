@@ -141,6 +141,13 @@
   .footer-menu ul li {
   width: 100%;
   }
+
+
+  /* News profile */
+  .profile.col-md-8 img {
+  max-width: 690px;
+  height: auto;
+  }
 }
 
 
@@ -199,6 +206,13 @@
   .view-news-slideshow .views-field-title .field-content {
   min-height: 86px;
   margin-top: 15px;
+  }
+
+
+  /* News profile */
+  .profile.col-md-8 img {
+  max-width: 393px;
+  height: auto;
   }
 
 }
