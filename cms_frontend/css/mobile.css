@@ -63,6 +63,14 @@
 
 
   /* footer */
+  .well-footer {
+  padding: 10px;
+  }
+
+  .subscribe-social .col-sm-6 {
+  margin-bottom: 20px;
+  }
+
   .footer-menu ul li {
   width: 17%;
   }
@@ -71,9 +79,14 @@
   min-width: 120px;
   }
 
+  .region-footer-second-row-right ul {
+  margin-top: 20px;
+  }
+
   .region-footer-second-row-right ul .leaf {
   background: none;
   display: block;
+  text-align: left;
   }
 
 }
@@ -127,6 +140,13 @@
   /* footer */
   .footer-menu ul li {
   width: 100%;
+  }
+
+
+  /* News profile */
+  .profile.col-md-8 img {
+  max-width: 690px;
+  height: auto;
   }
 }
 
@@ -186,6 +206,13 @@
   .view-news-slideshow .views-field-title .field-content {
   min-height: 86px;
   margin-top: 15px;
+  }
+
+
+  /* News profile */
+  .profile.col-md-8 img {
+  max-width: 393px;
+  height: auto;
   }
 
 }

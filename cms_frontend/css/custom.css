@@ -52,7 +52,7 @@ width: 80%;
 display: inline-block;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1200px) {
   .region-header {
   width: 76%;
   }
@@ -351,7 +351,7 @@ margin-bottom: 20px; /* useful for the last portlets */
 }
 
 .page-header {
-font-size: 30px;
+font-size: 26px;
 font-weight: 700;
 color: rgb(68,68,68);
 margin-top: 5px;
@@ -1253,20 +1253,14 @@ font-weight: bold;
 text-align: left;
 }
 
-.profile.col-md-8 img {
-max-width: 597px;
-height: auto;
-}
-
-.profile.col-md-4 img {
-max-width: 273px;
-height: auto;
-}
-
 .profile h3 {
 font-size: 20px;
 font-weight: bold;
 margin-top: 35px;
+}
+
+.working-group-profile-left.profile h3 {
+margin-top: 0;
 }
 
 .species-left-column tbody,
@@ -1557,6 +1551,31 @@ text-align: center;
 padding-bottom: 15px;
 border-bottom: 1px solid #DDD;
 margin-bottom: 10px;
+}
+
+/* synchronise image width with text width */
+@media (min-width: 1201px) {
+  .profile.col-md-8 img {
+  max-width: 730px;
+  height: auto;
+  }
+
+  .profile.col-md-4 img {
+  max-width: 340px;
+  height: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .profile.col-md-8 img {
+  max-width: 596px;
+  height: auto;
+  }
+
+  .profile.col-md-4 img {
+  max-width: 273px;
+  height: auto;
+  }
 }
 
 
