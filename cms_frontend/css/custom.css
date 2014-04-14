@@ -52,7 +52,7 @@ width: 80%;
 display: inline-block;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1200px) {
   .region-header {
   width: 76%;
   }
