@@ -97,18 +97,18 @@ render_simple_slot('filters', 'contacts',
 </div>
 
 <div class="row">
-    <div class="span12">
+    <div class="col-md-12">
         <table id="contacts-listing" class="cols-6 table table-striped table-hover table-bordered dataTable">
             <thead>
                 <tr>
-                    <th class="span1">#</th>
-                    <th class="span2"><?php echo t('First name'); ?></th>
-                    <th class="span2"><?php echo t('Last name'); ?></th>
-                    <th class="span3"><?php echo t('Organization'); ?></th>
-                    <th class="span2"><?php echo t('Country'); ?></th>
-                    <th class="span1"><?php echo t('Country post'); ?></th>
-                    <th class="span2"><?php echo t('Instruments'); ?></th>
-                    <th class="span1"><?php echo t('Actions'); ?></th>
+                    <th class="col-md-1">#</th>
+                    <th class="col-md-2"><?php echo t('First name'); ?></th>
+                    <th class="col-md-2"><?php echo t('Last name'); ?></th>
+                    <th class="col-md-3"><?php echo t('Organization'); ?></th>
+                    <th class="col-md-2"><?php echo t('Country'); ?></th>
+                    <th class="col-md-1"><?php echo t('Country post'); ?></th>
+                    <th class="col-md-2"><?php echo t('Instruments'); ?></th>
+                    <th class="col-md-1"><?php echo t('Actions'); ?></th>
                 </tr>
             </thead>
         </table>

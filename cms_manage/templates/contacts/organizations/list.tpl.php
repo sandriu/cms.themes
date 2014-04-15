@@ -24,7 +24,7 @@
 
 
 <div class="row">
-    <div class="span12">
+    <div class="col-md-12">
         <table cellpadding="0" cellspacing="0" border="0" id="organizations-listing" class="cols-6 table table-striped table-hover table-bordered dataTable">
             <thead>
                 <tr>
@@ -34,13 +34,13 @@
                         ?>
                     </th>
 
-                    <th class="span6">
+                    <th class="col-md-6">
                         <?php
                             echo t('Name');
                         ?>
                     </th>
 
-                    <th class="span3">
+                    <th class="col-md-3">
                         <?php
                             echo t('Country');
                         ?>

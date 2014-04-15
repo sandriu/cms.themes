@@ -15,7 +15,7 @@
 ?>
 
 <div class="row">
-    <div class="span6">
+    <div class="col-md-6">
         <div class="dataTables_info">
             <p>
                 <?php echo t('Showing') . ' ' . $total_entries . ' ' . t('contacts') . ' (' . $start_displayed . ' to ' . $end_displayed . ')'; ?> &middot; <?php echo $total_pages . ' ' . t('pages'); ?>
@@ -23,7 +23,7 @@
         </div>
     </div>
 
-    <div class="span6">
+    <div class="col-md-6">
         <div class="pagination pull-right dataTables_paginate">
             <ul>
                 <li class="first<?php echo ($page == 1) ? ' disabled': ''; ?>">
