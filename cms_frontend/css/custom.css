@@ -1579,6 +1579,33 @@ margin-bottom: 10px;
   }
 }
 
+/* news gallery */
+.news-profile-left .field-name-field-gallery {
+margin-top: 20px;
+margin-bottom: 20px;
+padding: 20px;
+border-radius: 4px;
+border: 1px solid #DDD;
+}
+
+.news-profile-left .field-name-field-gallery .field-item {
+display: inline-block;
+margin-right: 15px;
+margin-bottom: 15px;
+padding: 5px;
+border: 1px solid #EEE;
+box-shadow: 2px 2px 2px #CCC;
+}
+
+.news-profile-left .field-name-field-gallery .field-item:hover {
+border: 1px solid #888;
+box-shadow: 2px 2px 2px #999;
+}
+
+.news-profile-left .field-name-field-gallery .field-label {
+margin-bottom: 10px;
+}
+
 
 /* TABLES for listings */
 .views-table {
