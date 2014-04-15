@@ -14,6 +14,5 @@
 <?php if (check_display_field($content, 'field_news_attachments')): ?>
     <?php echo render($content['field_news_attachments']); ?>
 <?php endif; ?>
-<?php $block = module_invoke('widgets', 'block_view', 's_addthis-share'); ?>
 <?php print render($block['content']); ?>
 
