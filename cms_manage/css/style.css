@@ -56,3 +56,23 @@ input[type="file"] {
 .view-legal-instrument-listing.view-display-id-legal_instrument_listing th.views-field-field-instrument-status {
   width: 30%;
 }
+
+i.loading-image {
+    background: transparent url('../images/ajax-loader.gif') no-repeat scroll center center;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+
+span.published-icon, span.unpublished-icon {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: 0 auto;
+}
+
+span.published-icon { background: url(../images/icon_ok.gif) center no-repeat; }
+
+span.unpublished-icon { background: url(../images/icon_no.gif) center no-repeat; }
