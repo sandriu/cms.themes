@@ -5,6 +5,24 @@
 
 
 /**
+ * Controls access to a node.
+ *
+ * @param $node
+ *   Either a node object or the machine name of the content type on which to
+ *   perform the access check.
+ *
+ * @return
+ *   Nothing.
+ */
+function cms_manage_node_access($node) {
+  if (user_is_anonymous()) {
+    drupal_access_denied();
+    drupal_exit();
+  }
+}
+
+
+/**
  * Implements template_preprocess_views_view_table().
  *
  * @param $vars
