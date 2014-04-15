@@ -1606,6 +1606,17 @@ box-shadow: 2px 2px 2px #999;
 margin-bottom: 10px;
 }
 
+/* news share area */
+.news-profile-right .share-area {
+margin-top: 40px;
+}
+
+.news-profile-right .share-area a {
+display: inline-block;
+margin-right: 20px;
+vertical-align: top;
+}
+
 
 /* TABLES for listings */
 .views-table {
