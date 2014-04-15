@@ -1,8 +1,6 @@
 <?php echo render($content['title_field']); ?>
 <?php echo render($content['field_news_type']); ?>
-<?php if(check_display_field($content, 'field_feature_in_common_portal')):?>
-    <?php echo t('Feature in common portal'); ?>
-<?php endif; ?>
+
 <?php echo render($content['field_source_url']); ?>
 <?php echo render($content['field_instruments']); ?>
 <?php echo render($content['field_country']); ?>
