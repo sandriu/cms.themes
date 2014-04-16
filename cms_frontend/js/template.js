@@ -2,7 +2,7 @@
     $(document).ready(function(){
 
         // event handler for window resize
-        $(window).resize(function(e){
+        $(window).resize(function(){
             updateUI();
         });
         updateUI();

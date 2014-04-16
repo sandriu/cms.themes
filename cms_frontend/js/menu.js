@@ -40,12 +40,12 @@
         //Set Homepage menu styles
         if (is_front_page) {
             $global_menu.children('li').each(function(index, value) {
-            var $this = $(this);
-            $this.children('ul').wrap('<div class="submenu-teaser"></div>');
-            $div = $this.children('div');
-            if (typeof $(this).data('image-url') != 'undefined') {
-                $div.append('<img class="menu-teaser-img" src="' + $this.data('image-url') + '"/>');
-            }
+                var $this = $(this);
+                $this.children('ul').wrap('<div class="submenu-teaser"></div>');
+                $div = $this.children('div');
+                if (typeof $(this).data('image-url') != 'undefined') {
+                    $div.append('<img class="menu-teaser-img" src="' + $this.data('image-url') + '"/>');
+                }
             });
         }
 
@@ -91,9 +91,7 @@
                 } else {
                     $first_level_li_active.addClass('active-trail').children('ul').show();
                     $this_li.removeClass('active-trail');
-                    if ($this_li.children('ul').length > 0) {
-                        $this_li.children('ul').hide();
-                    }
+                    $this_li.children('ul').hide();
                 }
             }
         });
@@ -120,15 +118,9 @@
                     $div.width(width);
                 }
             }, function() {
-
                 $(this).removeClass('active-trail');
-                if ($(this).children('ul').length > 0) {
-                    $(this).children('ul').hide();
-                }
-
-                if ($(this).children('div.submenu-teaser').length > 0) {
-                    $(this).children('div.submenu-teaser').hide();
-                }
+                $(this).children('ul').hide();
+                $(this).children('div.submenu-teaser').hide();
             });
         }
 
@@ -143,11 +135,9 @@
                     $(this).children('ul').width($container.width()).show();
                 }
             }, function() {
-                $second_level_li_active.addClass('active-trail').children('ul').show();
                 $(this).removeClass('active-trail');
-                if ($(this).children('ul').length > 0) {
-                    $(this).children('ul').hide();
-                }
+                $(this).children('ul').hide();
+                $second_level_li_active.addClass('active-trail').children('ul').show();
             });
         }
 
