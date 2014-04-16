@@ -6,12 +6,14 @@
  * drupal_add_js and drupal_add_css not working here
 */
     $js_path = drupal_get_path('module', 'datatables') . '/dataTables/media/js/jquery.dataTables.min.js';
-    $DT_js_path = drupal_get_path('module', 'datatables') . '/js/DT_bootstrap.js';
+    $DT_js_path = drupal_get_path('module', 'datatables') . '/dataTables/media/js/dataTables.bootstrap.js';
     $css_path = drupal_get_path('module', 'datatables') . '/dataTables/media/css/demo_table.css';
+    $DT_css_path = drupal_get_path('module', 'datatables') . '/dataTables/media/css/dataTables.bootstrap.css';
 ?>
 <script type="text/javascript" src="/<?php echo $js_path; ?>"></script>
 <script type="text/javascript" src="/<?php echo $DT_js_path; ?>"></script>
-<link type="text/css" rel="stylesheet" href="/<?php echo $css_path; ?>" />
+<link type="text/css" rel="stylesheet" href="/<?php echo $css_path; ?>">
+<link type="text/css" rel="stylesheet" href="/<?php echo $DT_css_path; ?>">
 
 <style>
 .dataTables_info {

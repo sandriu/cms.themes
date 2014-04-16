@@ -28,5 +28,5 @@
     hide($content['links']);
     hide($content['comments']);
 
-    drupal_add_js(drupal_get_path('theme', 'cms_theme') . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR . 'species.js');
+    drupal_add_js(drupal_get_path('theme', 'cms_manage') . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR . 'species.js');
 ?>
