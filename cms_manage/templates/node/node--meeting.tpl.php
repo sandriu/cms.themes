@@ -1,7 +1,3 @@
-<?php
-    render_slot($node, 'node-buttons', 'meeting');
-?>
-
 <div class="row">
     <div class="col-md-8">
         <table class="table table-condensed table-hover two-columns">
@@ -19,19 +15,16 @@
                 echo render($content['field_meeting_status']);
                 echo render($content['field_meeting_languages']);
                 echo render($content['field_meeting_url']);
-
             ?>
             </tbody>
         </table>
         <div class="clearfix">&nbsp;</div>
         <?php echo render($content['body']); ?>
     </div>
-
     <div class="col-md-4">
         <?php
             echo render($content['field_meeting_image']);
         ?>
-
         <div class="thumbnail">
             <div class="caption">
                 <table class="table table-condensed table-hover two-columns">
@@ -45,16 +38,12 @@
                 </table>
             </div>
         </div>
-
     </div>
-
     <div class="col-md-12">
         <?php echo render_slot($node, 'related-content', 'meeting', $content); ?>
     </div>
-
 </div>
-
 <?php
-    hide($content['links']);
-    hide($content['comments']);
+hide($content['links']);
+hide($content['comments']);
 ?>
