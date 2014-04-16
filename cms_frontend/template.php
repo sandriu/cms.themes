@@ -22,6 +22,12 @@ function cms_frontend_preprocess_html(&$variables) {
   drupal_add_css(path_to_theme() . '/css/ie/ie10.css', array('media'=>'screen','group' => CSS_THEME, 'browsers' => array('IE' => 'IE 10', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
 
   drupal_add_js(array('cms_front_end' => array('is_front_page' => drupal_is_front_page() )), 'setting');
+
+  drupal_add_library('system', 'ui.accordion');
+
+  //Add custom template js
+  drupal_add_js(path_to_theme() . '/js/template.js');
+
   //Ierarhic menu
   drupal_add_js(path_to_theme() . '/js/menu.js');
 
@@ -37,7 +43,7 @@ function cms_frontend_preprocess_html(&$variables) {
   if(empty($domain_css))
       $domain_css = 'cms.css';
   drupal_add_css(path_to_theme(). '/css/'. $domain_css, array('weight'=>'999'));
-  
+
   //Add conditional IE8 css for domaine
   drupal_add_css(path_to_theme() . '/css/ie/ie8-'.$domain_css, array('media'=>'screen','group' => CSS_THEME, 'browsers' => array('IE' => 'IE 8', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
   // Add conditional CSS for IE9 for domaine
@@ -241,6 +247,12 @@ function cms_frontend_preprocess_page(&$variables, $hook){
     //set theme for footer menu
     $variables['page']['footer_menu']['menu_block_2']['#content']['#theme_wrappers'] =
             array('menu_tree__menu_front_end_footer_menu');
+
+    //add mobile menu
+    if (!empty($variables['page']['primary_menu']['domain_menu_block_front_end_main_menus'])) {
+        $menu_name = $variables['page']['primary_menu']['domain_menu_block_front_end_main_menus']['#config']['menu_name'];
+    }
+    $variables['page']['mobile_menu'] = menu_tree($menu_name);
 
     $variables['page']['footer_second_row_right']['menu_menu-footer-second-menu']['#theme_wrappers'] =
             array('menu_tree__menu_footer_second_menu');

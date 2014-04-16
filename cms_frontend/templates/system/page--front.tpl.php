@@ -3,10 +3,20 @@
 
 <!-- page container -->
 <div class="container">
-  <div class="row">  
-        
-    <!-- center column --> 
-    <div class="region col-md-8 center-column">            
+  <div class="row row-offcanvas row-offcanvas-left">
+
+    <?php if (!empty($page['mobile_menu'])): ?>
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" role="navigation">
+            <nav role="navigation">
+                <?php if (!empty($page['mobile_menu'])): ?>
+                    <?php print render($page['mobile_menu']); ?>
+                <?php endif; ?>
+            </nav>
+        </div>
+    <?php endif; ?>
+
+    <!-- center column -->
+    <div class="region col-md-8 center-column">
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted hero-unit"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
@@ -27,16 +37,16 @@
       <?php if (!empty($action_links)): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
-      <?php print render($page['content']); ?>      
-    </div> 
-    
+      <?php print render($page['content']); ?>
+    </div>
+
     <!-- right column-->
     <?php if (!empty($page['sidebar_second'])): ?>
     <aside class="col-md-4 right-column" role="complementary">
-      <div class="well region region-sidebar-second">                
-        <?php print render($page['sidebar_second']); ?>        
+      <div class="well region region-sidebar-second">
+        <?php print render($page['sidebar_second']); ?>
       </div>
-    </aside>  
+    </aside>
     <?php endif; ?>
 
   </div>
@@ -44,7 +54,7 @@
   <div class="row">
       <?php if (!empty($page['slide_instruments'])): ?>
         <div class="region col-md-12 center-column instruments-slideshow">
-            <?php print render($page['slide_instruments']); ?>          
+            <?php print render($page['slide_instruments']); ?>
         </div>
     <?php endif; ?>
   </div>

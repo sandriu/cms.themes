@@ -342,6 +342,82 @@ padding-left: 12px;
 }
 
 
+/*
+    MOBILE MENU
+*/
+body {
+    overflow-x: hidden;
+}
+.row-offcanvas {
+    position: relative;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+}
+.row-offcanvas-right
+.sidebar-offcanvas {
+    right: -75%;
+}
+
+.row-offcanvas-left
+.sidebar-offcanvas {
+    left: -75%;
+}
+.row-offcanvas-right.active {
+    right: 75%;
+}
+.row-offcanvas-left.active {
+    left: 75%;
+}
+.sidebar-offcanvas {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 75%;
+    padding-right: 0;
+    background: #eee;
+}
+.sidebar-offcanvas nav ul {
+    display: block;
+    float: none;
+    max-width: none;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+.sidebar-offcanvas nav > ul ul {
+    display: none;
+    position: relative;
+    width: 100%;
+    background: #ddd;
+    border: 0;
+}
+.sidebar-offcanvas nav > ul li {
+    display: block;
+}
+.sidebar-offcanvas nav > ul li.opened > h2 > a{
+    font-weight: bold;
+}
+.sidebar-offcanvas nav > ul li h2 {
+    font-size: 1.2em;
+    padding: 0;
+    margin: 0
+}
+.sidebar-offcanvas nav > ul li h2 a{
+    display: block;
+    padding: .8em;
+    border-bottom: 1px solid #777;
+}
+.sidebar-offcanvas nav > ul > li > ul > li h2 a {
+    padding-left: 1.6em;
+}
+.sidebar-offcanvas nav > ul > li > ul > li > ul > li h2 a {
+    padding-left: 2.4em;
+}
+
+
+
+
 /* BREADCRUMBS */
 .breadcrumb {
 background-color: #fff;
