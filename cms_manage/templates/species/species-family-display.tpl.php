@@ -4,7 +4,7 @@
     ?>
 </h2>
 
-<a href="#" class="back-button btn btn-mini btn-info">&laquo; <?php echo t('Go back'); ?></a>
+<a href="#" class="back-button btn btn-sm btn-info">&laquo; <?php echo t('Go back'); ?></a>
 
 <div class="clearfix">&nbsp;</div>
 
