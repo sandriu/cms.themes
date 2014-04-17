@@ -931,12 +931,19 @@ overflow: hidden;
 margin-bottom: 18px;
 }
 
-.ui-tabs-panel .article-body ul li a {
+.ui-tabs-panel .article-body ul li a,
+.ui-tabs-panel .views-field-title {
 display: inline-block;
 width: 67%;
 padding: 10px;
 float: left;
-font-size: 20px;
+font-size: 18px;
+color: #0066C0;
+font-family: Lato, sans-serif;
+}
+
+.ui-widget-content .view-quicktab-publications a {
+color: #0066C0;
 }
 
 .ui-tabs-panel ul li img,
@@ -945,22 +952,24 @@ float: left;
 }
 
 .ui-tabs-panel .views-field-title {
-display: inline-block;
-float: left;
 padding: 0px 10px 10px 10px;
-font-size: 20px;
 line-height: 24px;
 width: 82%;
 }
 
 .ui-tabs-panel .views-field-field-publication-published-date {
-display: inline-block;
 width: 67%;
 float: left;
 padding: 10px;
 font-size: 15px;
 margin-top: -15px;
 color: #444;
+font-family: Lato, sans-serif;
+}
+
+.ui-tabs-panel .view-footer a {
+font-size: 15px;
+font-family: Lato, sans-serif;
 }
 
 
