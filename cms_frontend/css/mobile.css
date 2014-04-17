@@ -233,6 +233,71 @@
   max-width: 690px;
   height: auto;
   }
+
+
+  /* tabbed menu on homepage, transformed into accordion */
+  .ui-accordion-icons .ui-accordion-header a {
+  text-transform: uppercase;
+  padding-top: 12px;
+  }
+
+  .block-quicktabs .ui-accordion-header.ui-state-active {
+  border-color: #DDD;
+  }
+
+  .block-quicktabs .ui-accordion-content {
+  border: 1px solid #DDD;
+  border-top: 0;
+  }
+
+  .block-quicktabs .ui-accordion-content h2,
+  .block-quicktabs .ui-accordion-content .text-muted {
+  display: none;
+  }
+
+  .ui-accordion .ui-accordion-content ul {
+  list-style-type: none;
+  padding-left: 0;
+  }
+
+  .ui-accordion-content .article-body {
+  margin-bottom: 10px;
+  }
+
+  .ui-accordion-content .article-body ul li,
+  .ui-accordion-content .views-row {
+  display: block;
+  border-bottom: 1px solid #DDD;
+  overflow: hidden;
+  margin-bottom: 5px;
+  }
+
+  .ui-accordion-content ul li img,
+  .ui-accordion-content .views-field-field-publication-image {
+  float: left;
+  }
+
+  .ui-accordion-content .article-body ul li a,
+  .ui-accordion-content .views-field-title,
+  .ui-accordion-content .views-field-field-publication-published-date {
+  display: inline-block;
+  width: 77%;
+  padding: 10px;
+  float: left;
+  color: #444;
+  font-family: Lato, sans-serif;
+  font-size: 15px;
+  }
+
+  .ui-accordion-content .views-field-field-publication-published-date {
+  margin-top: -10px;
+  }
+
+  .ui-accordion-content .article-body ul li a {
+  color: #0066C0;
+  font-size: 18px;
+  width: 57%;
+  }
 }
 
 
@@ -298,6 +363,16 @@
   .profile.col-md-8 img {
   max-width: 393px;
   height: auto;
+  }
+
+
+  /* tabbed menu on homepage, transformed into accordion */
+  .ui-accordion-content .article-body ul li a,
+  .ui-accordion-content .views-field-title,
+  .ui-accordion-content .views-field-field-publication-published-date {
+  display: block;
+  width: 100%;
+  padding-left: 0;
   }
 
 }
