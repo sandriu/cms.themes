@@ -1,7 +1,5 @@
 <?php
     $current_profile = CMSUtils::get_current_profile();
-
-    render_slot($node, 'node-buttons-actions', 'general');
 ?>
 
 <div class="row">
