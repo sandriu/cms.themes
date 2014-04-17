@@ -3,9 +3,19 @@
 
 <!-- page container -->
 <div class="container">
-  <div class="row">
+  <div class="row row-offcanvas row-offcanvas-left">
 
-    <!-- center column -->
+      <?php if (!empty($page['mobile_menu'])): ?>
+          <div class="col-xs-6 col-sm-3 sidebar-offcanvas" role="navigation">
+              <nav role="navigation">
+                  <?php if (!empty($page['mobile_menu'])): ?>
+                      <?php print render($page['mobile_menu']); ?>
+                  <?php endif; ?>
+              </nav>
+          </div>
+      <?php endif; ?>
+
+      <!-- center column -->
     <div class="region col-md-12 center-column">
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted hero-unit"><?php print render($page['highlighted']); ?></div>

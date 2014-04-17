@@ -40,12 +40,12 @@
         //Set Homepage menu styles
         if (is_front_page) {
             $global_menu.children('li').each(function(index, value) {
-            var $this = $(this);
-            $this.children('ul').wrap('<div class="submenu-teaser"></div>');
-            $div = $this.children('div');
-            if (typeof $(this).data('image-url') != 'undefined') {
-                $div.append('<img class="menu-teaser-img" src="' + $this.data('image-url') + '"/>');
-            }
+                var $this = $(this);
+                $this.children('ul').wrap('<div class="submenu-teaser"></div>');
+                $div = $this.children('div');
+                if (typeof $(this).data('image-url') != 'undefined') {
+                    $div.append('<img class="menu-teaser-img" src="' + $this.data('image-url') + '"/>');
+                }
             });
         }
 
@@ -73,61 +73,90 @@
         var $second_level_li_active = $('.global-menu > li > ul > li.active:first');
 
         //position current menus - these menus are displayed until hover effect
-        if ($first_level_li_active.length > 0) {
-            position_menu($first_level_li_active.children('ul')).show();
-        }
-        if ($second_level_li_active.length > 0) {
-            $second_level_li_active.children('ul').width($container.width()).show();
-        }
+            if ($first_level_li_active.length > 0) {
+                position_menu($first_level_li_active.children('ul')).show();
+            }
+            if ($second_level_li_active.length > 0) {
+                $second_level_li_active.children('ul').width($container.width()).show();
+            }
 
-        //Submenu hover effect (show/hide level2)
-        $('.global-menu > li').not($first_level_li_active).hover(function() {
-            $first_level_li_active.removeClass('active-trail').children('ul').hide();
-            $(this).addClass('active-trail');
-            position_menu($(this).children('ul')).show();
-
-            //On Homepage, menu acts different
-            if ($(this).children('div.submenu-teaser').length > 0) {
-                $div = $(this).children('div.submenu-teaser');
-                $div.show();
-                //initial width
-                width = $div.children('ul').width() + 40;
-                if ($div.children('img').length > 0) {
-                    //if image, enlarge width
-                    width += 20;
-                    width += parseInt($div.children('img').css('max-width').substr(
-                        0, $div.children('img').css('max-width').length - 2)
-                    );
+        $('.global-menu > li').has('ul').children('h2').children('a').on('click', function(e) {
+            e.preventDefault();
+            if (!is_front_page) {
+                $this_li = $(this).closest('li');
+                if (!$this_li.hasClass('active-trail')) {
+                    $('.global-menu > li').removeClass('active-trail').children('ul').hide();
+                    $this_li.addClass('active-trail');
+                    position_menu($this_li.children('ul')).show();
+                } else {
+                    $first_level_li_active.addClass('active-trail').children('ul').show();
+                    $this_li.removeClass('active-trail');
+                    $this_li.children('ul').hide();
                 }
-                $div.width(width);
-            }
-        }, function() {
-            $first_level_li_active.addClass('active-trail').children('ul').show();
-            $(this).removeClass('active-trail');
-            if ($(this).children('ul').length > 0) {
-                $(this).children('ul').hide();
-            }
-            if ($(this).children('div.submenu-teaser').length > 0) {
-                $(this).children('div.submenu-teaser').hide();
             }
         });
+
+        if (is_front_page) {
+            $('.global-menu > li').hover(function() {
+                //On Homepage, menu acts different
+                if ($(this).children('div.submenu-teaser').length > 0) {
+
+                    $('.global-menu > li').removeClass('active-trail').children('ul').hide();
+                    $(this).addClass('active-trail');
+
+                    $div = $(this).children('div.submenu-teaser');
+                    $div.show();
+                    //initial width
+                    width = $div.children('ul').width() + 40;
+                    if ($div.children('img').length > 0) {
+                        //if image, enlarge width
+                        width += 20;
+                        width += parseInt($div.children('img').css('max-width').substr(
+                            0, $div.children('img').css('max-width').length - 2)
+                        );
+                    }
+                    $div.width(width);
+                }
+            }, function() {
+                $(this).removeClass('active-trail');
+                $(this).children('ul').hide();
+                $(this).children('div.submenu-teaser').hide();
+            });
+        }
 
         //Sub-submenu hover effect (show/hide level3)
         //On Homepage level 3 is not shown
         if (!is_front_page) {
-            $('.global-menu > li > ul > li').not($second_level_li_active).hover(function() {
-                $second_level_li_active.removeClass('active-trail').children('ul').hide();
+            //$('.global-menu > li > ul > li').not($second_level_li_active).hover(function() {
+            $('.global-menu > li > ul > li').hover(function() {
+                $('.global-menu > li > ul > li').removeClass('active-trail').children('ul').hide();
                 $(this).addClass('active-trail');
                 if ($(this).children('ul').length > 0) {
                     $(this).children('ul').width($container.width()).show();
                 }
             }, function() {
-                $second_level_li_active.addClass('active-trail').children('ul').show();
                 $(this).removeClass('active-trail');
-                if ($(this).children('ul').length > 0) {
-                    $(this).children('ul').hide();
-                }
+                $(this).children('ul').hide();
+                $second_level_li_active.addClass('active-trail').children('ul').show();
             });
         }
+
+        //Mobile menu
+        $('.navbar-toggle-main-menu').click(function() {
+            $('.row-offcanvas').toggleClass('active');
+            $('.sidebar-offcanvas').toggle();
+        });
+
+        $('.sidebar-offcanvas nav > ul li').has('ul').children('h2').children('a').on('click', function(e){
+            e.preventDefault();
+            var $current_ul = $(this).closest('li').toggleClass('opened').children('ul').stop(true, true).slideToggle();
+            $(this).closest('ul').find('ul').not($current_ul).slideUp();
+        });
+
+        $(window).resize(function(e){
+            $('.row-offcanvas').removeClass('active');
+            $('.sidebar-offcanvas').hide();
+        });
+
     });
 })(jQuery);

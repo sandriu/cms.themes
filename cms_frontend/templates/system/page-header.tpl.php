@@ -31,7 +31,7 @@
         <?php endif; ?>
 
         <!--.btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle visible-xs" data-toggle="collapse" data-target=".navbar-collapse">
+        <button type="button" class="navbar-toggle navbar-toggle-main-menu visible-xs">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
