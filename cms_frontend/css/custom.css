@@ -872,20 +872,21 @@ display: inline-block;
 }
 
 .ui-tabs .ui-tabs-nav li {
-padding: 12px 20px 2px;
+padding: 10px 20px 4px;
 border-color: #DDD;
+font-weight: bold;
 }
 
-.ui-tabs .ui-state-default.ui-state-active {
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected {
 background: #FFF;
-padding-bottom: 1px;
+padding-bottom: 2px;
 }
 
 .ui-tabs-nav a {
 color: #515866;
 text-transform: uppercase;
-font-size: 15px !important; /* overrides basic.css */
-font-family: Lato !important; /* overrides basic.css */
+font-size: 15px !important;
+font-family: Lato !important;
 }
 
 .ui-tabs-nav li.active,
