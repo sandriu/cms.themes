@@ -77,14 +77,19 @@ color: #575859;
 }
 
 
-/* TABBED MENU on homepage
-  Quicktabs plugin uses Style:Basic */
-ul.quicktabs-tabs.quicktabs-style-basic {
+/* TABBED MENU on homepage */
+.ui-tabs .ui-state-default,
+.block-quicktabs .ui-accordion-header.ui-state-default {
 background: #FEF1D8;
 }
 
-ul.quicktabs-tabs.quicktabs-style-basic li.active,
-ul.quicktabs-tabs.quicktabs-style-basic li.active:hover {
+.ui-tabs .ui-state-default:hover {
+background: #fdc378;
+}
+
+.ui-tabs-nav li.ui-state-active,
+.ui-tabs-nav li.ui-state-active:hover,
+.block-quicktabs .ui-accordion-header.ui-state-active {
 border-top: 4px solid #42C7F3;
 }
 
