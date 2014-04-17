@@ -66,14 +66,17 @@ background: url("../images/eurobats_news_hover.png") no-repeat;
 }
 
 
-/* TABBED MENU on homepage
-  Quicktabs plugin uses Style:Basic */
-ul.quicktabs-tabs.quicktabs-style-basic {
-background: #ddd;
+/* TABBED MENU on homepage */
+.ui-tabs .ui-state-default:hover {
+background: #CCC;
 }
 
-ul.quicktabs-tabs.quicktabs-style-basic li.active,
-ul.quicktabs-tabs.quicktabs-style-basic li.active:hover {
+.ui-tabs .ui-state-default {
+background: #DDD;
+}
+
+.ui-tabs-nav li.ui-state-active,
+.ui-tabs-nav li.ui-state-active:hover {
 border-top: 4px solid #0F235B;
 }
 

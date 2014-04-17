@@ -68,11 +68,18 @@ color: #FFD116;
 }
 
 
-/* TABBED MENU on homepage
-  Quicktabs plugin uses Style:Basic */
-ul.quicktabs-tabs.quicktabs-style-basic li.active,
-ul.quicktabs-tabs.quicktabs-style-basic li.active:hover {
+/* TABBED MENU on homepage */
+.ui-tabs-nav li.ui-state-active,
+.ui-tabs-nav li.ui-state-active:hover {
 border-top: 4px solid #FFD116;
+}
+
+.ui-tabs .ui-state-default:hover {
+background: #DDD;
+}
+
+.ui-tabs .ui-state-default {
+background: #f9f9f9;
 }
 
 

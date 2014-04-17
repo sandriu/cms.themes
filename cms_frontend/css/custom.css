@@ -907,7 +907,7 @@ color: #444;
 }
 
 .ui-tabs .ui-tabs-panel {
-padding: 30px;
+padding: 30px 30px 15px 30px;
 }
 
 .ui-tabs-panel h2 {
