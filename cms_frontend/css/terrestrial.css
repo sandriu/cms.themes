@@ -74,7 +74,8 @@ color: #FFD116;
 
 /* TABBED MENU on homepage */
 .ui-tabs-nav li.ui-state-active,
-.ui-tabs-nav li.ui-state-active:hover {
+.ui-tabs-nav li.ui-state-active:hover,
+.block-quicktabs .ui-accordion-header.ui-state-active {
 border-top: 4px solid #FFD116;
 }
 
@@ -82,7 +83,8 @@ border-top: 4px solid #FFD116;
 background: #DDD;
 }
 
-.ui-tabs .ui-state-default {
+.ui-tabs .ui-state-default,
+.block-quicktabs .ui-accordion-header.ui-state-default {
 background: #f9f9f9;
 }
 

@@ -71,12 +71,14 @@ background: url("../images/eurobats_news_hover.png") no-repeat;
 background: #CCC;
 }
 
-.ui-tabs .ui-state-default {
+.ui-tabs .ui-state-default,
+.block-quicktabs .ui-accordion-header.ui-state-default {
 background: #DDD;
 }
 
 .ui-tabs-nav li.ui-state-active,
-.ui-tabs-nav li.ui-state-active:hover {
+.ui-tabs-nav li.ui-state-active:hover,
+.block-quicktabs .ui-accordion-header.ui-state-active {
 border-top: 4px solid #0F235B;
 }
 
