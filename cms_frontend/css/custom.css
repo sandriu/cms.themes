@@ -838,85 +838,100 @@ border-bottom-left-radius: 6px;
 margin-bottom: 10px;
 }
 
-.quicktabs_main.quicktabs-style-basic {
+.ui-tabs,
+.ui-tabs .ui-tabs-nav {
+padding: 0;
+}
+
+.ui-widget-content {
+border: 0;
+}
+
+.block-quicktabs .ui-tabs .ui-tabs-panel,
+.ui-tabs-nav li:hover {
+border-width: 1px;
+}
+
+.ui-tabs-panel {
 border: 1px solid #E3E3E3;
 border-bottom-left-radius: 6px;
 border-bottom-right-radius: 6px;
 }
 
-ul.quicktabs-tabs.quicktabs-style-basic {
+.ui-tabs-nav {
 height: 50px;
-border: 1px solid #E3E3E3;
+border: 0;
 border-bottom: 0px;
 border-top-left-radius: 6px;
 border-top-right-radius: 6px;
+background: #FFF;
 }
 
 ul.quicktabs-tabs li {
 display: inline-block;
 }
 
-ul.quicktabs-tabs.quicktabs-style-basic li {
-padding: 12px 20px 15px;
-border: 0;
+.ui-tabs .ui-tabs-nav li {
+padding: 12px 20px 2px;
+border-color: #DDD;
 }
 
-ul.quicktabs-tabs.quicktabs-style-basic a {
+.ui-tabs .ui-state-default.ui-state-active {
+background: #FFF;
+padding-bottom: 1px;
+}
+
+.ui-tabs-nav a {
 color: #515866;
 text-transform: uppercase;
 font-size: 15px !important; /* overrides basic.css */
 font-family: Lato !important; /* overrides basic.css */
 }
 
-ul.quicktabs-tabs.quicktabs-style-basic li.active,
-ul.quicktabs-tabs.quicktabs-style-basic li.active:hover {
+.ui-tabs-nav li.active,
+.ui-tabs-nav li.active:hover {
 border: 1px solid #E3E3E3;
 border-bottom: 0px;
 border-top-left-radius: 6px;
 border-top-right-radius: 6px;
 }
 
-ul.quicktabs-tabs.quicktabs-style-basic li.active.first {
+.ui-tabs-nav li.active.first {
 border-left: 0;
 }
 
-ul.quicktabs-tabs.quicktabs-style-basic li:hover {
-border: 0;
-}
-
-ul.quicktabs-tabs.quicktabs-style-basic li a:hover,
-ul.quicktabs-tabs.quicktabs-style-basic li.active a {
+.ui-tabs-nav li a:hover,
+.ui-tabs-nav li.active a {
 color: #444;
 }
 
-.quicktabs_main.quicktabs-style-basic {
+.ui-tabs .ui-tabs-panel {
 padding: 30px;
 }
 
-.quicktabs_main.quicktabs-style-basic h2 {
+.ui-tabs-panel h2 {
 font-size: 20px;
 margin-top: 0;
 }
 
-.quicktabs-tabpage .row,
-.quicktabs-tabpage h2,
-body .quicktabs-tabpage .text-muted {
+.ui-tabs-panel h2,
+.ui-tabs-panel .node .text-muted {
 display: none;
 }
 
-.quicktabs-tabpage .article-body ul {
+.ui-tabs-panel .article-body ul {
 padding-left: 0;
 list-style-type: none;
 }
 
-.quicktabs-tabpage .article-body ul li,
-.quicktabs-tabpage .views-row {
+.ui-tabs-panel .article-body ul li,
+.ui-tabs-panel .views-row {
 border-bottom: 1px solid #DDD;
 overflow: hidden;
 margin-bottom: 18px;
 }
 
-.quicktabs-tabpage .article-body ul li a {
+.ui-tabs-panel .article-body ul li a {
 display: inline-block;
 width: 67%;
 padding: 10px;
@@ -924,12 +939,12 @@ float: left;
 font-size: 20px;
 }
 
-.quicktabs-tabpage ul li img,
-.quicktabs-tabpage .views-field-field-publication-image {
+.ui-tabs-panel ul li img,
+.ui-tabs-panel .views-field-field-publication-image {
 float: left;
 }
 
-.quicktabs-tabpage .views-field-title {
+.ui-tabs-panel .views-field-title {
 display: inline-block;
 float: left;
 padding: 0px 10px 10px 10px;
@@ -938,7 +953,7 @@ line-height: 24px;
 width: 82%;
 }
 
-.quicktabs-tabpage .views-field-field-publication-published-date {
+.ui-tabs-panel .views-field-field-publication-published-date {
 display: inline-block;
 width: 67%;
 float: left;

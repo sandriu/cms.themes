@@ -75,13 +75,15 @@ background: url("../images/cms_news_hover.png") no-repeat;
 
 /* TABBED MENU on homepage
   Quicktabs plugin uses Style:Basic */
-ul.quicktabs-tabs.quicktabs-style-basic {
-background: #F9F9F9;
+.ui-tabs-nav li.ui-state-active,
+.ui-tabs-nav li.ui-state-active:hover {
+border-top: 4px solid #FFD116;
 }
 
-ul.quicktabs-tabs.quicktabs-style-basic li.active,
-ul.quicktabs-tabs.quicktabs-style-basic li.active:hover {
-border-top: 4px solid #FFD116;
+.ui-tabs .ui-state-default/*,
+.ui-tabs .ui-widget-content .ui-state-default,
+.ui-tabs .ui-widget-header .ui-state-default*/ {
+background: #DDD;
 }
 
 
