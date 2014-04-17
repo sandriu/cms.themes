@@ -13,7 +13,7 @@
     function updateUI(){
 
         if($(window).width() <= 800){
-            tabsToAccordions({active: false, collapsible: true});
+            tabsToAccordions({active: false, collapsible: true, autoHeight: false});
         } else {
             accordionsToTabs();
         }
