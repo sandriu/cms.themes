@@ -4,13 +4,17 @@
         </ul>
     </nav>
 </div>
+
 <div class="row-offcanvas row-offcanvas-left">
+
     <!-- page header -->
     <?php require "page-header.tpl.php"; ?>
 
     <!-- page container -->
     <div class="container">
-          <!-- center column -->
+      <div class="row">
+
+        <!-- center column -->
         <div class="region col-md-12 center-column">
           <?php if (!empty($page['highlighted'])): ?>
             <div class="highlighted hero-unit"><?php print render($page['highlighted']); ?></div>
@@ -44,6 +48,8 @@
             }
           ?>
         </div>
+
+      </div>
     </div>
 
     <!-- page footer -->

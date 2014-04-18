@@ -160,7 +160,7 @@
 
     function copy_mobile_menu(is_front_page) {
         if($(window).width() <= 800){
-            $('#mobile-main-menu').html($('.global-menu').html()).find('ul, li, a').removeAttr('style').removeClass('dropdown-menu');
+            $('.global-menu > li').clone().appendTo('#mobile-main-menu').find('ul, li, a').removeAttr('style').removeClass('dropdown-menu');
             if (is_front_page) {
                 $('#mobile-main-menu > li > div > ul').unwrap();
                 $('#mobile-main-menu .menu-teaser-img').remove();
@@ -179,9 +179,7 @@
                 $current_li.siblings('li').removeClass('opened').find('li').removeClass('opened');
             });
         } else {
-            $('#mobile-main-menu li').has('ul').children('h2').children('a').unbind('click');
-            $('#mobile-main-menu').html('');
-
+            $('#mobile-main-menu > li').remove();
         }
 
     }

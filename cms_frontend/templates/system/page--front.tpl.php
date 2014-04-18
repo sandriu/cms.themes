@@ -5,12 +5,15 @@
     </nav>
 </div>
 
-<div class="row row-offcanvas row-offcanvas-left">
+<div class="row-offcanvas row-offcanvas-left">
+
     <!-- page header -->
     <?php require "page-header.tpl.php"; ?>
 
     <!-- page container -->
     <div class="container">
+      <div class="row">
+
         <!-- center column -->
         <div class="region col-md-8 center-column">
           <?php if (!empty($page['highlighted'])): ?>
@@ -54,6 +57,7 @@
             </div>
         <?php endif; ?>
       </div>
+    </div>
 
     <!-- page footer -->
     <?php require "page-footer.tpl.php"; ?>
