@@ -397,6 +397,11 @@ color: #555;
 margin-bottom: 40px;
 }
 
+/* Pagination  FIX*/
+.view .pagination a.progress-disabled {
+    float: left;
+}
+
 
 /* RIGHT COLUMN */
 #feedback .btn,
