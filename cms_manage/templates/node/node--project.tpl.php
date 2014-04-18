@@ -1,7 +1,3 @@
-<?php
-    render_slot($node, 'node-buttons', 'general');
-?>
-
 <div class="row">
     <div class="col-md-7">
     <?php
