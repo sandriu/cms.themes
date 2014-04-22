@@ -152,4 +152,16 @@ color: #5E9732;
   .global-menu-bar {
   background: #003871;
   }
+
+  .navbar-default .navbar-toggle .icon-bar {
+  background: #FFF;
+  }
+
+  .navbar-default .navbar-toggle,
+  .navbar-default .navbar-toggle:hover,
+  .navbar-default .navbar-toggle:focus {
+  background: #003871;
+  border-color: #FFF;
+  }
+
 }

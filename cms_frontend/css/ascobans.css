@@ -182,4 +182,15 @@ color: #aac177;
   .global-menu-bar {
   background: #00B9F0;
   }
+
+  .navbar-default .navbar-toggle .icon-bar {
+  background: #FFF;
+  }
+
+  .navbar-default .navbar-toggle,
+  .navbar-default .navbar-toggle:hover,
+  .navbar-default .navbar-toggle:focus {
+  background: #00B9F0;
+  border-color: #FFF;
+  }
 }
