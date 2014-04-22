@@ -140,6 +140,27 @@
   display: block;
   }
 
+  .navbar-toggle {
+  float: left;
+  }
+
+  .navbar-collapse.collapse {
+  display: none !important;
+  }
+
+  .search-area-and-logos {
+  height: 44px;
+  padding-right: 0;
+  }
+
+  .logo-title {
+  margin-top: 0;
+  }
+
+  .user-menu {
+  padding-left: 10px;
+  }
+
 
   /* mobile menu */
   body {
