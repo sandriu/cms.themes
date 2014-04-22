@@ -179,7 +179,31 @@ color: #aac177;
   background-image: none;
   }
 
-  .global-menu-bar {
+  .global-menu-bar,
+  .sidebar-offcanvas {
   background: #00B9F0;
+  }
+
+  .navbar-default .navbar-toggle .icon-bar {
+  background: #FFF;
+  }
+
+  .navbar-default .navbar-toggle,
+  .navbar-default .navbar-toggle:hover,
+  .navbar-default .navbar-toggle:focus {
+  background: #00B9F0;
+  border-color: #FFF;
+  }
+
+  .sidebar-offcanvas nav > ul ul {
+  background-color: #FFE6B5;
+  }
+
+  .sidebar-offcanvas nav > ul ul li h2 a {
+  color: #03A8DA;
+  }
+
+  .sidebar-offcanvas nav > ul li.opened > h2 > a {
+  color: #444;
   }
 }

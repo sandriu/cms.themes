@@ -149,6 +149,10 @@ background: #fff;
 color: #888;
 }
 
+.visible-800 {
+display: none;
+}
+
 
 /* GLOBAL MENU */
 .global-menu-bar {

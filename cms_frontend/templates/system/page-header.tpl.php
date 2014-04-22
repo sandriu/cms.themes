@@ -4,6 +4,13 @@
     <div class="row admin-search-logos">
 
         <div class="top-user-menu col-md-7">
+        <!--.btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle navbar-toggle-main-menu visible-800">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
           <?php
           $addblock = module_invoke('locale','block_view','language_content');
           print render($addblock['content']);
@@ -29,14 +36,6 @@
           <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
         </a>
         <?php endif; ?>
-
-        <!--.btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle navbar-toggle-main-menu visible-xs">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
       </div>
 
       <div class="down-area col-md-11 hidden-xs">

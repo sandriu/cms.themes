@@ -105,6 +105,10 @@
   width: 70%;
   }
 
+  .logo {
+  margin-top: 5px;
+  }
+
   .small-logos img {
   display: none;
   }
@@ -134,6 +138,45 @@
 
   body .global-menu.nav-show-level-2 .dropdown-menu {
   width: 100% !important;
+  }
+
+  .visible-800 {
+  display: block;
+  }
+
+  .navbar-toggle {
+  float: left;
+  }
+
+  .navbar-collapse.collapse {
+  display: none !important;
+  }
+
+  .search-area-and-logos {
+  height: 44px;
+  padding-right: 0;
+  margin-top: 5px;
+  }
+
+  .logo-title {
+  margin-top: 0;
+  }
+
+  .user-menu {
+  padding-left: 10px;
+  margin-top: 10px;
+  }
+
+  .language-menu {
+  margin-top: 10px;
+  }
+
+  .admin-search-logos {
+  border-bottom: 1px solid #DDD;
+  }
+
+  .portal-title {
+  margin-top: 15px;
   }
 
 
@@ -173,7 +216,6 @@
   top: 0;
   width: 75%;
   padding-right: 0;
-  background: #eee;
   }
 
   .sidebar-offcanvas nav ul {
@@ -197,20 +239,25 @@
   display: block;
   }
 
-  .sidebar-offcanvas nav > ul li.opened > h2 > a{
-  font-weight: bold;
-  }
-
   .sidebar-offcanvas nav > ul li h2 {
   font-size: 1.2em;
   padding: 0;
   margin: 0;
   }
 
-  .sidebar-offcanvas nav > ul li h2 a{
+  .sidebar-offcanvas nav > ul li h2 a {
   display: block;
   padding: .8em;
-  border-bottom: 1px solid #777;
+  border-bottom: 1px solid #888;
+  color: #FFF;
+  }
+
+  .sidebar-offcanvas nav > ul li.last h2 a {
+  border-bottom: 0;
+  }
+
+  .sidebar-offcanvas nav > ul li.last ul h2 a {
+  border-bottom-width: 1px;
   }
 
   .sidebar-offcanvas nav > ul > li > ul > li h2 a {
@@ -302,6 +349,35 @@
 
 
 
+/* smartphones with less than/equal 600px width */
+@media (max-width: 600px) {
+
+  .top-user-menu {
+  padding-right: 0;
+  }
+
+  body .input-group.search-area .form-control {
+  width: 120px;
+  margin-right: 4px;
+  }
+
+  body .input-group.search-area .form-control:focus {
+  width: 440px;
+  margin-right: 10px;
+  }
+
+  .search-area-and-logos {
+  padding-left: 0;
+  }
+
+  #search-block-form {
+  float: none;
+  }
+
+}
+
+
+
 /* smartphones with less than/equal 480px width */
 @media (max-width: 480px) {
 
@@ -341,6 +417,12 @@
 
   .navbar-collapse {
   border-top: 0;
+  }
+
+  body .input-group.search-area .form-control,
+  body .input-group.search-area .form-control:focus {
+  width: 290px;
+  margin-right: 5px;
   }
 
 
