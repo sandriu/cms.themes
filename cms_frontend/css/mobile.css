@@ -136,6 +136,10 @@
   width: 100% !important;
   }
 
+  .visible-800 {
+  display: block;
+  }
+
 
   /* mobile menu */
   body {
