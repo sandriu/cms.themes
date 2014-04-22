@@ -152,7 +152,8 @@ color: #5E9732;
   background-image: none;
   }
 
-  .global-menu-bar {
+  .global-menu-bar,
+  .sidebar-offcanvas {
   background: #0D5601;
   }
 
@@ -166,4 +167,23 @@ color: #5E9732;
   background: #0D5601;
   border-color: #FFF;
   }
+
+  .sidebar-offcanvas nav > ul ul {
+  background-color: #6D9933;
+  }
+
+  .sidebar-offcanvas nav > ul li h2 a {
+  border-bottom: 1px solid #333;
+  }
+
+  .sidebar-offcanvas nav > ul ul li h2 a,
+  .sidebar-offcanvas nav > ul li.last ul h2 a {
+  color: #FFF;
+  border-bottom: 1px solid #555;
+  }
+
+  .sidebar-offcanvas nav > ul li.opened > h2 > a {
+  color: #FFD200;
+  }
+
 }

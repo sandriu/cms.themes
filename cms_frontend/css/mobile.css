@@ -238,6 +238,10 @@
   border-bottom: 0;
   }
 
+  .sidebar-offcanvas nav > ul li.last ul h2 a {
+  border-bottom-width: 1px;
+  }
+
   .sidebar-offcanvas nav > ul > li > ul > li h2 a {
   padding-left: 1.6em;
   }
