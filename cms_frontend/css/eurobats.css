@@ -234,10 +234,23 @@ color: #0F235B;
   .sidebar-offcanvas nav > ul ul li h2 a,
   .sidebar-offcanvas nav > ul li.last ul h2 a  {
   color: #FFF;
-  border-bottom: 1px solid #555;
+  border-bottom: 1px solid #777;
   }
 
   .sidebar-offcanvas nav > ul li.opened > h2 > a {
   color: #FFF;
+  }
+
+  .sidebar-offcanvas nav > ul ul li.opened > h2 > a {
+  color: #0F235B;
+  }
+
+  .sidebar-offcanvas nav > ul ul ul {
+  background-color: #A2BEE3;
+  }
+
+  .sidebar-offcanvas nav > ul ul ul li h2 a {
+  color: #FFF;
+  border-bottom: 1px solid #999;
   }
 }

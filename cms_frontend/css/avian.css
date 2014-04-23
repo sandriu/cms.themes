@@ -176,10 +176,19 @@ color: #1BAACF;
   .sidebar-offcanvas nav > ul ul li h2 a,
   .sidebar-offcanvas nav > ul li.last ul h2 a  {
   color: #888;
-  border-bottom: 1px solid #555;
+  border-bottom: 1px solid #999;
   }
 
   .sidebar-offcanvas nav > ul li.opened > h2 > a {
   color:  #4D4D4D;
+  }
+
+  .sidebar-offcanvas nav > ul ul ul {
+  background-color: #EBEBEB;
+  }
+
+  .sidebar-offcanvas nav > ul ul ul li h2 a {
+  color: #888;
+  border-bottom: 1px solid #ccc;
   }
 }

@@ -206,4 +206,13 @@ color: #aac177;
   .sidebar-offcanvas nav > ul li.opened > h2 > a {
   color: #444;
   }
+
+  .sidebar-offcanvas nav > ul ul ul {
+  background-color: #FEF1D8;
+  }
+
+  .sidebar-offcanvas nav > ul ul ul li h2 a {
+  color: #888;
+  border-bottom: 1px solid #888;
+  }
 }
