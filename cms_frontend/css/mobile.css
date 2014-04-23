@@ -346,6 +346,12 @@
   font-size: 18px;
   width: 57%;
   }
+
+  /* articles */
+  .article-body div,
+  .article-body img {
+  float: none !important; /* cancels the float property for images, so pictures don't overlap anymore the article text */
+  }
 }
 
 
@@ -353,6 +359,7 @@
 /* smartphones with less than/equal 600px width */
 @media (max-width: 600px) {
 
+  /* header */
   .top-user-menu {
   padding-right: 0;
   }
@@ -396,6 +403,7 @@
 
   .logo-title {
   margin-top: 0;
+  margin-bottom: 10px;
   }
 
   .top-user-menu,
