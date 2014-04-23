@@ -183,4 +183,12 @@ color: #5E9732;
   color: #FFD217;
   }
 
+  .sidebar-offcanvas nav > ul ul ul {
+  background-color: #99AFC6;
+  }
+
+  .sidebar-offcanvas nav > ul ul ul li h2 a {
+  border-bottom: 1px solid #888;
+  }
+
 }

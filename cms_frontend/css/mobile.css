@@ -109,7 +109,8 @@
   margin-top: 5px;
   }
 
-  .small-logos img {
+  .small-logos img,
+  .breadcrumb {
   display: none;
   }
 
