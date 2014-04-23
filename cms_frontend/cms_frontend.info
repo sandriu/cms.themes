@@ -2,6 +2,7 @@ name = CMS Frontend
 description = CMS Frontend theme is based on Drupal Twitter Bootstrap 3.0 theme.
 core = 7.x
 base theme = bootstrap
+version = 7.x-7.18
 
 ; Regions
 regions[primary_menu]     = 'Primary Menu'

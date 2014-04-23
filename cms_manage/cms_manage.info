@@ -2,6 +2,7 @@ name = CMS manage
 description = A CMS manage theme based on Bootstrap.
 core = 7.x
 base theme = bootstrap
+version = 7.x-7.18
 
 ; Regions
 regions[navigation]     = 'Navigation'
