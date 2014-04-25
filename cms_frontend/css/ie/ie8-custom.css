@@ -314,3 +314,18 @@ color: red; /* for warning text about IE8 not supporting SVG maps */
 .global-menu-bar.collapse {
 display: block;
 }
+
+.global-menu-bar.navbar-collapse {
+border-top-width: 0px;
+max-width: 970px;
+}
+
+.small-logos {
+width: 71px;
+}
+
+.ui-tabs .ui-tabs-nav li a {
+padding-left: 0;
+padding-right: 0;
+}
+
