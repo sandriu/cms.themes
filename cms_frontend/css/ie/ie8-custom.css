@@ -308,3 +308,9 @@ height: 25px !important;
 .view-display-id-party_range_states_page {
 color: red; /* for warning text about IE8 not supporting SVG maps */
 }
+
+
+/* fixes for 1024px */
+.global-menu-bar.collapse {
+display: block;
+}
