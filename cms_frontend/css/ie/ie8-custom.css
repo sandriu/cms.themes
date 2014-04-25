@@ -308,3 +308,29 @@ height: 25px !important;
 .view-display-id-party_range_states_page {
 color: red; /* for warning text about IE8 not supporting SVG maps */
 }
+
+
+/* fixes for 1024px */
+.global-menu-bar.collapse {
+display: block;
+}
+
+.global-menu-bar.navbar-collapse {
+border-top-width: 0px;
+max-width: 970px;
+}
+
+.small-logos {
+width: 71px;
+}
+
+.ui-tabs .ui-tabs-nav li a {
+padding-left: 0;
+padding-right: 0;
+}
+
+.instrument-full-width.profile li a {
+display: inline-block;
+padding-left: 10px;
+padding-right: 10px;
+}
