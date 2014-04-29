@@ -65,14 +65,19 @@ function cms_frontend_preprocess_block(&$variables) {
  */
 
 function cms_frontend_form_alter(&$form, &$form_state, $form_id) {
-  if ($form_id == 'search_block_form') {
-    // Prevent user from searching the default text
-    $form['#attributes']['onsubmit'] =
-            "if(this.search_block_form.value=='".t('Search site')."'){ alert('".t('Please enter a search')."'); return false; }";
-    // Alternative (HTML5) placeholder attribute instead of using the javascript
-    $form['search_block_form']['#attributes']['placeholder'] = t('Search site');
-    $form['search_block_form']['#attributes']['class'][] = 'input-sm';
-  }
+    switch ($form_id) {
+        case 'search_block_form' :
+            // Prevent user from searching the default text
+            $form['#attributes']['onsubmit'] =
+                    "if(this.search_block_form.value=='".t('Search site')."'){ alert('".t('Please enter a search')."'); return false; }";
+            // Alternative (HTML5) placeholder attribute instead of using the javascript
+            $form['search_block_form']['#attributes']['placeholder'] = t('Search site');
+            $form['search_block_form']['#attributes']['class'][] = 'input-sm';
+            break;
+        case 'views_exposed_form':
+            $form['submit']['#attributes']['class'][] = 'btn-primary';
+            break;
+    }
 }
 
 /*
