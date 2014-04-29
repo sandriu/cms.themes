@@ -1690,6 +1690,18 @@ background-image: url('../images/asc.png'); /* replaces asc.gif from Bootstrap 2
 background-color: #fff;
 }
 
+.view-meeting-documents-list-reorder .views-exposed-form .form-item-items-per-page select{
+position: relative;
+top: 0;
+height: auto;
+padding: 5px;
+font-size: 12px;
+line-height: 12px;
+}
+.view-meeting-documents-list-reorder .views-exposed-form .form-item-items-per-page label{
+    font-size: 12px;
+}
+
 
 /* NEWS page (with thumbnails),
     WORKING GROUPS page (no thumbnails),
