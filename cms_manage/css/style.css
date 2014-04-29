@@ -21,6 +21,7 @@ input[type="file"] {
 
 
 /* Chosen Styles */
+
 .chosen-container {
   width: 100% !important;
 }
@@ -58,21 +59,33 @@ input[type="file"] {
 }
 
 i.loading-image {
-    background: transparent url('../images/ajax-loader.gif') no-repeat scroll center center;
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-    position: relative;
-    vertical-align: middle;
+  background: transparent url(../images/ajax-loader.gif) no-repeat scroll center center;
+  display: inline-block;
+  height: 16px;
+  position: relative;
+  vertical-align: middle;
+  width: 16px;
 }
 
-span.published-icon, span.unpublished-icon {
-    display: block;
-    width: 16px;
-    height: 16px;
-    margin: 0 auto;
+span.published-icon,
+span.unpublished-icon {
+  display: block;
+  height: 16px;
+  margin: 0 auto;
+  width: 16px;
 }
 
-span.published-icon { background: url(../images/icon_ok.gif) center no-repeat; }
+span.published-icon {
+  background: url(../images/icon_ok.gif) center no-repeat;
+}
 
-span.unpublished-icon { background: url(../images/icon_no.gif) center no-repeat; }
+span.unpublished-icon {
+  background: url(../images/icon_no.gif) center no-repeat;
+}
+
+
+/* Contacts */
+
+#contacts-listing_wrapper {
+  margin-top: 10px;
+}
