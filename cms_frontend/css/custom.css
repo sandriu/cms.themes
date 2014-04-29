@@ -403,7 +403,7 @@ margin-bottom: 40px;
 
 /* Pagination  FIX*/
 .view .pagination a.progress-disabled {
-    float: left;
+float: left;
 }
 
 
@@ -1381,6 +1381,11 @@ border-bottom: 0;
 
 .meeting-left .field-label {
 display: none;
+}
+
+.profile table .views-field-title,
+.profile table .views-field-field-document-number {
+width: 200px;
 }
 
 .field-name-field-meeting-image img {
