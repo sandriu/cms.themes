@@ -1388,6 +1388,16 @@ display: none;
 width: 200px;
 }
 
+.profile table .views-field-field-document-files img {
+padding-right: 3px;
+padding-bottom: 2px;
+}
+
+.profile .view-filters label {
+display: inline-block;
+color: #555;
+}
+
 .field-name-field-meeting-image img {
 margin-left: 25%;
 }
@@ -1690,16 +1700,27 @@ background-image: url('../images/asc.png'); /* replaces asc.gif from Bootstrap 2
 background-color: #fff;
 }
 
-.view-meeting-documents-list-reorder .views-exposed-form .form-item-items-per-page select{
+.view-meeting-documents-list-reorder .views-exposed-form .form-item-items-per-page select {
 position: relative;
-top: 0;
+top: -28px;
+left: 88px;
 height: auto;
 padding: 5px;
 font-size: 12px;
 line-height: 12px;
 }
-.view-meeting-documents-list-reorder .views-exposed-form .form-item-items-per-page label{
-    font-size: 12px;
+
+.profile .views-exposed-form .views-exposed-widget .form-submit {
+margin-top: 0;
+margin-left: 85px;
+}
+
+.profile .views-exposed-form .form-item {
+height: 30px;
+}
+
+.view-meeting-documents-list-reorder .views-exposed-form .form-item-items-per-page label {
+font-size: 12px;
 }
 
 
