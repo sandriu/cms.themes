@@ -466,4 +466,9 @@
   padding-left: 0;
   }
 
+
+  /* filters from listing pages */
+  .center-column .dataTables_length {
+  width: 100%;
+  }
 }
