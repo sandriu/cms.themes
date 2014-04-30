@@ -67,6 +67,8 @@
 
       <div class="row">
         <div class="meeting-full-width profile col-md-12">
+
+
             <?php
             $lang = field_language('node', $node, 'field_meeting_document');
             if (!empty($node->field_meeting_document[$lang])) { ?>
@@ -75,6 +77,9 @@
                         <?php echo t('Download all files as .zip'); ?>
                     </a>
                 </p>
+
+                <div class="panel-group" id="accordion">
+
             <?php
                 $types = array();
                 foreach ($node->field_meeting_document[$lang] as $document) {
@@ -89,10 +94,29 @@
                 foreach ($types as $tid) {
                     $type_term = taxonomy_term_load($tid);
             ?>
-                    <h4><?php echo t($type_term->name); ?></h4>
+
+                        <div class="panel panel-default"><div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $tid; ?>" class="collapsed">
+                                        <?php echo t($type_term->name); ?>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse<?php echo $tid; ?>" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <?php print views_embed_view('meeting_documents_list_reorder','m_d_list_fe', $node->nid, $tid); ?>
+                                </div>
+                            </div>
+                        </div>
+
             <?php
-                    print views_embed_view('meeting_documents_list_reorder','m_d_list_fe', $node->nid, $tid);
+
                 }
+            ?>
+
+                </div>
+
+            <?php
             }
             ?>
         </div>
