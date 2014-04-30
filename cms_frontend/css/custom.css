@@ -1158,6 +1158,20 @@ display: none; /* hide the dropdown arrow */
 padding: 5px;
 }
 
+.panel-title .help-text-collapse,
+.panel-title .help-text-expand {
+font-size: 13px;
+}
+.panel-title .help-text-expand{
+display: none;
+}
+.panel-title .collapsed .help-text-expand{
+display: inline;
+}
+.panel-title .collapsed .help-text-collapse{
+display: none;
+}
+
 .block-title {
 font-size: 22px;
 }
