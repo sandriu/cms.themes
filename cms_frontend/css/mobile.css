@@ -358,6 +358,10 @@
   .view-content.col-md-12 {
   padding-left: 0;
   }
+
+  .view-front-end-working-groups .views-row {
+  width: 100%;
+  }
 }
 
 
