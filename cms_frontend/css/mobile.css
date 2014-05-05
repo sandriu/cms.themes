@@ -352,6 +352,12 @@
   .article-body img {
   float: none !important; /* cancels the float property for images, so pictures don't overlap anymore the article text */
   }
+
+
+  /* filters from listing pages */
+  .view-content.col-md-12 {
+  padding-left: 0;
+  }
 }
 
 
@@ -470,5 +476,24 @@
   /* filters from listing pages */
   .center-column .dataTables_length {
   width: 100%;
+  margin-bottom: 10px;
+  }
+
+  .center-column .dataTables_filter {
+  overflow: hidden;
+  width: 100%;
+  }
+
+  body .center-column .dataTables_filter label {
+  float: left;
+  width: auto;
+  }
+
+  div.dataTables_filter input {
+  width: 220px;
+  }
+
+  .view-content.col-md-12 {
+  padding-left: 0;
   }
 }
