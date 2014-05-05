@@ -97,8 +97,14 @@
 
                         <div class="panel panel-default"><div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $tid; ?>" class="collapsed">
+                                    <a data-toggle="collapse" href="#collapse<?php echo $tid; ?>" class="collapsed">
                                         <?php echo t($type_term->name); ?>
+                                        <span class="pull-right text-muted help-text-expand">
+                                            <?php echo t('Expand'); ?>
+                                        </span>
+                                        <span class="pull-right text-muted help-text-collapse">
+                                            <?php echo t('Collapse'); ?>
+                                        </span>
                                     </a>
                                 </h4>
                             </div>
