@@ -502,7 +502,6 @@
   }
 
   .view-front-end-news .views-row,
-  .view-front-end-working-groups .views-row,
   .view-front-end-campaigns .views-row,
   .view-front-end-awards .views-row,
   .page-taxonomy .node-teaser .views-row {
@@ -513,7 +512,6 @@
   }
 
   .view-front-end-news .article-body .text-muted,
-  .view-front-end-working-groups .article-body .text-muted,
   .view-front-end-campaigns .article-body .text-muted,
   .view-front-end-awards .article-body .text-muted,
   .view-front-end-campaigns .field-name-field-campaign-duration,
