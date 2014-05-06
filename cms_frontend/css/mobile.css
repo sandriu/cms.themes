@@ -532,7 +532,8 @@
   padding-left: 0;
   }
 
-  .view-front-end-campaigns .article-body .field-name-body {
+  .view-front-end-campaigns .article-body .field-name-body,
+  .view-front-end-news .field-items {
   display: none;
   }
 
