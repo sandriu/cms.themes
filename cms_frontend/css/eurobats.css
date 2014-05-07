@@ -65,6 +65,11 @@ background: rgba(121, 165, 214, 0.7);
 background: url("../images/eurobats_news_hover.png") no-repeat;
 }
 
+.view-news-slideshow .views-field-title a:hover,
+.view-news-slideshow .view-footer a {
+color: #111;
+}
+
 
 /* TABBED MENU on homepage */
 .ui-tabs .ui-state-default:hover {

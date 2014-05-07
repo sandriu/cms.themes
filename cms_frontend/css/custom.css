@@ -668,9 +668,13 @@ padding-right: 20px;
 }
 
 .view-news-slideshow .views-field-title a:hover,
-.view-news-slideshow .view-footer a:hover {
+.view-news-slideshow .view-footer a {
 text-decoration: none;
 color: #FFD116;
+}
+
+.view-news-slideshow .view-footer a:hover {
+text-decoration: underline;
 }
 
 .jcarousel-skin-default .jcarousel-navigation a {
@@ -728,7 +732,6 @@ background: url("../images/slide-active.png") no-repeat;
 position: absolute;
 top: 357px;
 right: 22px;
-color: #fff;
 }
 
 @media screen and (max-width: 1200px) {

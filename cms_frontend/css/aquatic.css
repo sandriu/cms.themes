@@ -68,8 +68,7 @@ background: rgba(32, 198, 217, 0.7);
 background: url("../images/cms_news_hover.png") no-repeat;
 }
 
-.view-news-slideshow .views-field-title a:hover,
-.view-news-slideshow .view-footer a:hover {
+.view-news-slideshow .views-field-title a:hover {
 color: #FFD116;
 }
 
