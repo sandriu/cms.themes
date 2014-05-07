@@ -513,10 +513,10 @@ dd {
   .dl-horizontal dd:after {
     content: " ";
     /* 1 */
-  
+
     display: table;
     /* 2 */
-  
+
   }
   .dl-horizontal dd:after {
     clear: both;
@@ -525,10 +525,10 @@ dd {
   .dl-horizontal dd:after {
     content: " ";
     /* 1 */
-  
+
     display: table;
     /* 2 */
-  
+
   }
   .dl-horizontal dd:after {
     clear: both;
@@ -2157,8 +2157,8 @@ input[type="button"].btn-block {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('../bootstrap/fonts/glyphicons-halflings-regular.eot');
-  src: url('../bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+  src: url('../bootstrap-3.0.0/fonts/glyphicons-halflings-regular.eot');
+  src: url('../bootstrap-3.0.0/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../bootstrap-3.0.0/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../bootstrap-3.0.0/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../bootstrap-3.0.0/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;

@@ -2,7 +2,7 @@
 
 /* HEADER */
 .search-area-and-logos {
-background: url("../images/header_wave_terrestrial.png") 100% 0% no-repeat;
+background: url("../images/header_wave_terrestrial.png") 80% 0% no-repeat;
 }
 
 .global-menu {
@@ -66,8 +66,7 @@ background: rgba(13, 86, 1, 0.7);
 background: url("../images/cms_news_hover.png") no-repeat;
 }
 
-.view-news-slideshow .views-field-title a:hover,
-.view-news-slideshow .view-footer a:hover {
+.view-news-slideshow .views-field-title a:hover {
 color: #FFD116;
 }
 

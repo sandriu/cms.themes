@@ -117,6 +117,16 @@ padding-right: 8px;
 display: inline-block;
 }
 
+@media (max-width: 1200px) {
+  body .search-area-and-logos {
+  margin-right: 16px;
+  }
+
+  .top-user-menu {
+  margin-left: -16px;
+  }
+}
+
 body .input-group.search-area  .form-control {
 border-radius: 3px;
 width: 235px;
@@ -658,9 +668,13 @@ padding-right: 20px;
 }
 
 .view-news-slideshow .views-field-title a:hover,
-.view-news-slideshow .view-footer a:hover {
+.view-news-slideshow .view-footer a {
 text-decoration: none;
 color: #FFD116;
+}
+
+.view-news-slideshow .view-footer a:hover {
+text-decoration: underline;
 }
 
 .jcarousel-skin-default .jcarousel-navigation a {
@@ -718,7 +732,7 @@ background: url("../images/slide-active.png") no-repeat;
 position: absolute;
 top: 357px;
 right: 22px;
-color: #fff;
+padding-right: 15px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -755,6 +769,11 @@ color: #fff;
   .view-news-slideshow .view-footer a {
   top: 286px;
   }
+}
+
+.view-news-slideshow .view-footer {
+min-height: 1px;
+overflow: hidden;
 }
 
 
@@ -882,7 +901,7 @@ background: #FFF;
 }
 
 .ui-tabs .ui-tabs-nav li {
-padding: 10px 20px 4px;
+padding: 10px 10px 4px;
 border-color: #DDD;
 font-weight: bold;
 }
@@ -1123,6 +1142,10 @@ background: rgba(112, 112, 112, 0.62);
 
 .article-body img.article-photo-magnifier:hover {
 background: rgba(66, 65, 65, 0.62);
+}
+
+.article-changed {
+  margin-top: 10px;
 }
 
 #node-3916 dd,
@@ -1562,7 +1585,6 @@ display: block;
 
 .node-news .field-item {
 display: inline-block;
-background: #DDD;
 margin: 5px;
 padding: 2px 5px;
 font-size: 12px;
@@ -1578,7 +1600,6 @@ display: none;
 .node-news .field-name-field-featured-image .field-item,
 .node-news.node-teaser .field-item {
 display: block;
-background: #FFF;
 margin: 0;
 padding: 0;
 font-size: 15px;
@@ -1643,11 +1664,17 @@ border: 1px solid #DDD;
 
 .news-profile-left .field-name-field-gallery .field-item {
 display: inline-block;
-margin-right: 15px;
-margin-bottom: 15px;
+margin: 0px 32px 15px;
 padding: 5px;
 border: 1px solid #EEE;
 box-shadow: 2px 2px 2px #CCC;
+}
+
+@media (max-width: 1200px) {
+  .news-profile-left .field-name-field-gallery .field-item {
+  margin-left: 10px;
+  margin-right: 10px;
+  }
 }
 
 .news-profile-left .field-name-field-gallery .field-item:hover {

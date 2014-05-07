@@ -55,6 +55,18 @@ color: #FFD217; /* 'CMS yellow' colour does not offer enough contrast on a rgb(1
 color: #FFE473;
 }
 
+@media (max-width: 1200px) {
+  .down-area {
+  padding-left: 25px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .site-identity {
+  padding-bottom: 10px;
+  }
+}
+
 
 /* NEWS slideshow */
 .view-news-slideshow .views-field-title {
