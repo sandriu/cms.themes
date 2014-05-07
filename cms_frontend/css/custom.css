@@ -1643,11 +1643,17 @@ border: 1px solid #DDD;
 
 .news-profile-left .field-name-field-gallery .field-item {
 display: inline-block;
-margin-right: 15px;
-margin-bottom: 15px;
+margin: 0px 32px 15px;
 padding: 5px;
 border: 1px solid #EEE;
 box-shadow: 2px 2px 2px #CCC;
+}
+
+@media (max-width: 1200px) {
+  .news-profile-left .field-name-field-gallery .field-item {
+  margin-left: 10px;
+  margin-right: 10px;
+  }
 }
 
 .news-profile-left .field-name-field-gallery .field-item:hover {
