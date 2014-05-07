@@ -50,6 +50,13 @@ background: #FDCF88 url("../images/arrow_hexFDDFAF.png") 49% 110% no-repeat;
 background: #FDDFAF;
 }
 
+@media (max-width: 1200px) {
+  .down-area {
+  padding-left: 25px;
+  padding-bottom: 10px;
+  }
+}
+
 
 /* NEWS slideshow */
 .view-news-slideshow .views-field-title {
