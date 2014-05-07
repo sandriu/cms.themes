@@ -2,7 +2,7 @@
 
 /* HEADER */
 .search-area-and-logos {
-background: url("../images/header_wave_eurobats.png") 100% 0% no-repeat;
+background: url("../images/header_wave_eurobats.png") 80% 0% no-repeat;
 }
 
 .global-menu {
@@ -63,6 +63,11 @@ background: rgba(121, 165, 214, 0.7);
 
 .view-news-slideshow .jcarousel-skin-default .jcarousel-navigation li a:hover {
 background: url("../images/eurobats_news_hover.png") no-repeat;
+}
+
+.view-news-slideshow .views-field-title a:hover,
+.view-news-slideshow .view-footer a {
+color: #111;
 }
 
 
