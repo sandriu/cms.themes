@@ -37,7 +37,7 @@
 
                     $.ajax({
                         type: 'GET',
-                        url: '/get/species/' + website + '/' + species + '.json',
+                        url: '/manage/get/species/' + website + '/' + species + '.json',
                         async: true,
                         beforeSend: function() {
                             tab_pane.append(loader);
@@ -113,7 +113,7 @@
             if ( (oTable.length > 0) && ( ! $.fn.DataTable.fnIsDataTable( oTable[0] ) ) ) {
                 oTable.dataTable({
                     "bFilter": true,
-                    "sPaginationType": "bootstrap",
+                    "sPaginationType": "bootstrap"
                 });
             }
 
