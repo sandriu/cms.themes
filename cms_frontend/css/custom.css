@@ -732,6 +732,7 @@ background: url("../images/slide-active.png") no-repeat;
 position: absolute;
 top: 357px;
 right: 22px;
+padding-right: 15px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -768,6 +769,11 @@ right: 22px;
   .view-news-slideshow .view-footer a {
   top: 286px;
   }
+}
+
+.view-news-slideshow .view-footer {
+min-height: 1px;
+overflow: hidden;
 }
 
 
