@@ -286,6 +286,8 @@ border-radius: 6px;
 
 .view-news-slideshow .view-footer a {
 top: 305px;
+right: 3px;
+padding-right: 0;
 }
 
 
