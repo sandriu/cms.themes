@@ -1585,7 +1585,6 @@ display: block;
 
 .node-news .field-item {
 display: inline-block;
-background: #DDD;
 margin: 5px;
 padding: 2px 5px;
 font-size: 12px;
@@ -1601,7 +1600,6 @@ display: none;
 .node-news .field-name-field-featured-image .field-item,
 .node-news.node-teaser .field-item {
 display: block;
-background: #FFF;
 margin: 0;
 padding: 0;
 font-size: 15px;
