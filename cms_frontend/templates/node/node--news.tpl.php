@@ -22,9 +22,9 @@
                 <?php echo render($content['field_featured_image']); ?>
                 <?php echo render($content['body']); ?>
                 <?php echo render($content['field_gallery']); ?>
-                <span class="text-muted">
-                    <?php if (!$teaser) print 'Last updated on'; ?> <?php print format_date($node->changed, 'custom', 'd F Y'); ?>
-                </span>
+                <p class="article-changed text-muted">
+                    <?php if (!$teaser) print t('Last updated on %date', array('%date' => format_date($node->changed, 'custom', 'd F Y'))); ?>
+                </p>
             </div>
 
             <?php ob_start(); render_slot($node, 'details', 'news', $content); $details = ob_get_contents(); ob_end_clean(); ?>
