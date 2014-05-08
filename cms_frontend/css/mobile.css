@@ -176,6 +176,14 @@
   margin-top: 15px;
   }
 
+  body .search-area-and-logos {
+  margin-right: 0;
+  }
+
+  .top-user-menu {
+  margin-left: 0;
+  }
+
 
   /* mobile menu */
   body {
