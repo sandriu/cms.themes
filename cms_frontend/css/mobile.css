@@ -369,7 +369,7 @@
 
 
   /* Campaigns listing,
-      News listing  */
+      News listing */
   .view-front-end-news .views-row,
   .view-front-end-campaigns .views-row,
   .view-front-end-awards .views-row,
@@ -405,11 +405,16 @@
   }
 
   .view-front-end-campaigns .article-body .field-name-body,
-  .view-front-end-news .field-items {
+  .view-front-end-news .article-body .field-name-body {
   position: absolute;
   top: 50px;
   left: 230px;
   max-width: 50%;
+  }
+
+  .view-front-end-news .article-body .field-name-body {
+  top: 90px;
+  left: 240px;
   }
 
   .view-front-end-news .links,
@@ -563,5 +568,9 @@
   .view-front-end-campaigns .article-body .field-name-body,
   .view-front-end-news .field-items {
   display: none;
+  }
+
+  .view-front-end-news .views-row {
+  min-height: 370px;
   }
 }
