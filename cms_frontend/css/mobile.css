@@ -400,7 +400,9 @@
   .view-front-end-campaigns .links,
   .view-front-end-campaigns .article-body .field-name-body,
   .page-taxonomy .node-teaser h2,
-  .page-taxonomy .node-teaser .links {
+  .page-taxonomy .node-teaser .links,
+  .view-front-end-awards h2,
+  .view-front-end-awards .links {
   padding-left: 0;
   }
 
@@ -414,7 +416,8 @@
 
   .view-front-end-news .links,
   .view-front-end-campaigns .links,
-  .page-taxonomy .node-teaser .links {
+  .page-taxonomy .node-teaser .links,
+  .view-front-end-awards .links {
   margin-top: 20px;
   }
 }
@@ -561,11 +564,16 @@
   }
 
   .view-front-end-campaigns .article-body .field-name-body,
-  .view-front-end-news .field-items {
+  .view-front-end-news .field-items,
+  .view-front-end-awards .article-body .field-name-body {
   display: none;
   }
 
   .view-front-end-news .views-row {
   min-height: 370px;
+  }
+
+  .view-front-end-awards .views-row {
+  min-height: 100px;
   }
 }
