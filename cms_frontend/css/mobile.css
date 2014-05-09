@@ -426,6 +426,18 @@
   .instrument-right.profile {
   margin-top: 60px;
   }
+
+
+  /* Related content tabs */
+  .center-column .nav-tabs > li a {
+  border: 1px solid #DDD;
+  border-bottom-color: rgba(0, 0, 0, 0);
+  background-color: #F5F5F5;
+  }
+
+  .center-column .nav-tabs > li.active a {
+  background: #fff;
+  }
 }
 
 
@@ -581,5 +593,15 @@
 
   .node.node-award {
   min-height: 100px;
+  }
+
+
+  /* Related content tabs */
+  .center-column .nav-tabs > li {
+  clear: both;
+  }
+
+  .center-column .nav-tabs > li a {
+  min-width: 290px;
   }
 }
