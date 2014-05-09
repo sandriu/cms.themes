@@ -28,27 +28,31 @@
             </div>
 
             <?php ob_start(); render_slot($node, 'details', 'news', $content); $details = ob_get_contents(); ob_end_clean(); ?>
-            <?php $sidebar_blocks = block_get_blocks_by_region('sidebar_second'); ?>
+
+            <?php
+            $sidebar_blocks = block_get_blocks_by_region('sidebar_second');
+            unset($sidebar_blocks['#sorted']);
+            ?>
+
             <?php if(!empty($details) || !empty($sidebar_blocks)): ?>
-                <div class="news-profile-right profile col-md-4">
-                  <?php if(!empty($details)) { ?>
-                  <div class="well">
-                    <?php echo $details; ?>
-                  </div>
-                  <div class="share-area">
-                    <?php $block = module_invoke('widgets', 'block_view', 's_addthis-share'); ?>
-                    <?php print render($block['content']); ?>
-                  </div>
-                  <?php } ?>
+                <div class="col-md-4 profile">
+                    <?php if(!empty($details)) { ?>
+                        <div class="news-profile-right well">
+                            <?php echo $details; ?>
+                        </div>
+                    <?php } ?>
 
                     <!-- Render sidebar blocks -->
                     <?php if (!empty($sidebar_blocks)) { ?>
-                        <div class="well">
-                            <?php print render($sidebar_blocks); ?>
-                        </div>
+                        <?php foreach($sidebar_blocks as $block) { ?>
+                            <div class="well">
+                                <?php print render($block); ?>
+                            </div>
+                        <?php } ?>
                     <?php } ?>
                 </div>
             <?php endif; ?>
+
         </div>
     </div>
 <?php endif; ?>

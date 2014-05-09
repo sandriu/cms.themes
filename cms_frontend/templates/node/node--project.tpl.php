@@ -54,13 +54,13 @@
                 <?php echo render_slot($node, 'related-content', 'project', $content); ?>
             </div>
 
+            <div class="col-md-4 profile">
+                <div class="project-profile-right well">
+                    <?php render_slot($node, 'gallery', 'project'); ?>
+                    <hr />
 
-            <div class="project-profile-right well profile col-md-4">
-                <?php render_slot($node, 'gallery', 'project'); ?>
-                <hr />
-
-                <table class="table table-condensed table-hover two-columns">
-                    <tbody>
+                    <table class="table table-condensed table-hover two-columns">
+                        <tbody>
                         <?php
                         echo render($content['field_project_impl_agency']);
 
@@ -77,59 +77,66 @@
                                     ?>
                                 </td>
                             </tr>
-                            <?php
+                        <?php
                         }
                         echo render($content['field_project_collab_agency']);
                         ?>
-                    </tbody>
-                </table>
-                <hr />
+                        </tbody>
+                    </table>
+                    <hr />
 
-                <table class="table table-condensed table-hover two-columns">
-                    <?php
-                    echo render($content['field_project_start_date']);
-                    echo render($content['field_project_end_date']);
-                    echo render($content['field_project_appendix']);
-                    echo render($content['field_project_taxonomic_group']);
-                    echo render($content['field_region']);
-                    echo render($content['field_country']);
-                    echo render($content['field_project_tech_report']);
-                    ?>
-                </table>
-
-                <?php echo render($content['field_project_file']); ?>
-
-                <hr />
-
-                <!-- to be implemented -->
-                <!--label>Implementing Agency Contacts</label>
-                <div class="section">
-                </div>
-                <hr /-->
-
-                <div class="threats">
-                    <label>Threats</label>
-                    <?php
-                    if (check_display_field($content, 'field_threats')) {
-                        echo render($content['field_threats']);
-                    } else {
-                        ?>
-                        <p class="text-warning">
-                            <?php echo t('No related threats'); ?>
-                        </p>
+                    <table class="table table-condensed table-hover two-columns">
                         <?php
-                    }
-                    ?>
-                </div>
-            </div>
+                        echo render($content['field_project_start_date']);
+                        echo render($content['field_project_end_date']);
+                        echo render($content['field_project_appendix']);
+                        echo render($content['field_project_taxonomic_group']);
+                        echo render($content['field_region']);
+                        echo render($content['field_country']);
+                        echo render($content['field_project_tech_report']);
+                        ?>
+                    </table>
 
-            <?php $sidebar_blocks = block_get_blocks_by_region('sidebar_second'); ?>
-            <!-- Render sidebar blocks -->
-            <?php if (!empty($sidebar_blocks)) { ?>
-                <div class="project-profile-right well profile col-md-4 pull-right">
-                    <?php print render($sidebar_blocks); ?>
+                    <?php echo render($content['field_project_file']); ?>
+
+                    <hr />
+
+                    <!-- to be implemented -->
+                    <!--label>Implementing Agency Contacts</label>
+                    <div class="section">
+                    </div>
+                    <hr /-->
+
+                    <div class="threats">
+                        <label>Threats</label>
+                        <?php
+                        if (check_display_field($content, 'field_threats')) {
+                            echo render($content['field_threats']);
+                        } else {
+                            ?>
+                            <p class="text-warning">
+                                <?php echo t('No related threats'); ?>
+                            </p>
+                        <?php
+                        }
+                        ?>
+                    </div>
                 </div>
-            <?php } ?>
+
+                <?php
+                $sidebar_blocks = block_get_blocks_by_region('sidebar_second');
+                unset($sidebar_blocks['#sorted']);
+                ?>
+
+                <!-- Render sidebar blocks -->
+                <?php if (!empty($sidebar_blocks)) { ?>
+                    <?php foreach($sidebar_blocks as $block) { ?>
+                        <div class="well">
+                            <?php print render($block); ?>
+                        </div>
+                    <?php } ?>
+                <?php } ?>
+            </div>
 
         </div>
     </div>

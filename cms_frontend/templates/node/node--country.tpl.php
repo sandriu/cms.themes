@@ -28,19 +28,29 @@
             </div>
 
             <?php ob_start(); render_slot($node, 'details', 'cms_country', $content); $details = ob_get_contents(); ob_end_clean(); ?>
-            <?php if (!empty($details)): ?>
-                <div class="country-profile-right profile well col-md-4">
-                    <?php echo $details; ?>
+            <?php
+            $sidebar_blocks = block_get_blocks_by_region('sidebar_second');
+            unset($sidebar_blocks['#sorted']);
+            ?>
+
+            <?php if(!empty($details) || !empty($sidebar_blocks)): ?>
+                <div class="col-md-4 profile">
+                    <?php if(!empty($details)) { ?>
+                        <div class="country-profile-right well">
+                            <?php echo $details; ?>
+                        </div>
+                    <?php } ?>
+
+                    <!-- Render sidebar blocks -->
+                    <?php if (!empty($sidebar_blocks)) { ?>
+                        <?php foreach($sidebar_blocks as $block) { ?>
+                            <div class="well">
+                                <?php print render($block); ?>
+                            </div>
+                        <?php } ?>
+                    <?php } ?>
                 </div>
             <?php endif; ?>
-
-            <?php $sidebar_blocks = block_get_blocks_by_region('sidebar_second'); ?>
-            <!-- Render sidebar blocks -->
-            <?php if (!empty($sidebar_blocks)) { ?>
-                <div class="country-profile-right profile well col-md-4 pull-right">
-                    <?php print render($sidebar_blocks); ?>
-                </div>
-            <?php } ?>
 
         </div>
 

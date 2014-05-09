@@ -1420,15 +1420,14 @@ margin-left: 25%;
 background: transparent;
 }
 
-.profile select {
-position: absolute;
-top: -30px;
-left: 0;
+.instrument-sidebar select {
 width: 100%;
+margin-bottom: 10px;
 }
 
-.instrument-right.profile {
-margin-top: 30px;
+.profile.col-md-4 {
+padding-left: 0;
+padding-right: 0;
 }
 
 .read-more {
@@ -1660,11 +1659,7 @@ margin-bottom: 10px;
 }
 
 /* news share area */
-.news-profile-right .share-area {
-margin-top: 40px;
-}
-
-.news-profile-right .share-area a {
+#block-widgets-s-addthis-share a {
 display: inline-block;
 margin-right: 20px;
 vertical-align: top;

@@ -24,54 +24,65 @@
           <?php echo render($content['body']); ?>
         </div>
 
-        <div class="meeting-right well profile col-md-4">
-          <?php
+      <div class="col-md-4 profile">
+          <div class="meeting-right well">
+              <?php
               echo render($content['field_meeting_image']);
-          ?>
-
-          <table class="table table-condensed table-hover two-columns">
-            <tbody>
-              <?php
-                echo render($content['field_meeting_start']);
-                echo render($content['field_meeting_start_time']);
-                echo render($content['field_meeting_end']);
-                echo render($content['field_meeting_reg_deadline']);
-                echo render($content['field_meeting_organizer']);
-                echo render($content['field_meeting_coorganizer']);
-                echo render($content['field_instrument']);
-                echo render($content['field_meeting_type']);
-                echo render($content['field_meeting_kind']);
-                echo render($content['field_meeting_status']);
-                echo render($content['field_meeting_languages']);
-                #echo render($content['field_meeting_url']);
-                echo render($content['field_country']);
-                echo render($content['field_meeting_city']);
               ?>
-            </tbody>
-          </table>
 
-          <table class="table table-condensed table-hover two-columns">
-            <tbody>
-              <?php
+              <table class="table table-condensed table-hover two-columns">
+                  <tbody>
+                  <?php
+                  echo render($content['field_meeting_start']);
+                  echo render($content['field_meeting_start_time']);
+                  echo render($content['field_meeting_end']);
+                  echo render($content['field_meeting_reg_deadline']);
+                  echo render($content['field_meeting_organizer']);
+                  echo render($content['field_meeting_coorganizer']);
+                  echo render($content['field_instrument']);
+                  echo render($content['field_meeting_type']);
+                  echo render($content['field_meeting_kind']);
+                  echo render($content['field_meeting_status']);
+                  echo render($content['field_meeting_languages']);
+                  #echo render($content['field_meeting_url']);
+                  echo render($content['field_country']);
+                  echo render($content['field_meeting_city']);
+                  ?>
+                  </tbody>
+              </table>
+
+              <table class="table table-condensed table-hover two-columns">
+                  <tbody>
+                  <?php
                   echo render($content['field_meeting_address']);
+                  ?>
+                  </tbody>
+              </table>
+
+
+
+              <?php
+              hide($content['links']);
+              hide($content['comments']);
               ?>
-            </tbody>
-          </table>
-
-
+          </div>
 
           <?php
-            hide($content['links']);
-            hide($content['comments']);
+          $sidebar_blocks = block_get_blocks_by_region('sidebar_second');
+          unset($sidebar_blocks['#sorted']);
           ?>
-        </div>
-        <?php $sidebar_blocks = block_get_blocks_by_region('sidebar_second'); ?>
-        <!-- Render sidebar blocks -->
-        <?php if (!empty($sidebar_blocks)) { ?>
-        <div class="meeting-right well profile col-md-4 pull-right">
-            <?php print render($sidebar_blocks); ?>
-        </div>
-        <?php } ?>
+          <!-- Render sidebar blocks -->
+          <?php if (!empty($sidebar_blocks)) { ?>
+              <?php foreach($sidebar_blocks as $block) { ?>
+                  <div class="well">
+                      <?php print render($block); ?>
+                  </div>
+              <?php } ?>
+          <?php } ?>
+      </div>
+
+
+
       </div>
 
       <div class="row">
