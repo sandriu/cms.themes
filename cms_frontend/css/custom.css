@@ -1876,7 +1876,9 @@ width: 100%;
 padding-left: 250px;
 }
 
-.view-front-end-campaigns .node-teaser {
+.view-front-end-campaigns .node-teaser,
+.view-front-end-awards .node-teaser,
+.node.node-award {  /* for award sponsors listing */
 position: relative;
 }
 
