@@ -372,8 +372,8 @@
       News listing */
   .view-front-end-news .views-row,
   .view-front-end-campaigns .views-row,
-  .view-front-end-awards .views-row,
-  .page-taxonomy .node-teaser .views-row {
+  .page-taxonomy .node-teaser .views-row,
+  .node.node-award { /* for both Awards and Sponsors listings */
   background-color: #F5F5F5;
   border: 1px solid #E3E3E3;
   border-radius: 4px;
@@ -565,7 +565,7 @@
 
   .view-front-end-campaigns .article-body .field-name-body,
   .view-front-end-news .field-items,
-  .view-front-end-awards .article-body .field-name-body {
+  .node.node-award .article-body .field-name-body {
   display: none;
   }
 
@@ -573,7 +573,7 @@
   min-height: 370px;
   }
 
-  .view-front-end-awards .views-row {
+  .node.node-award {
   min-height: 100px;
   }
 }

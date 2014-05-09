@@ -1858,7 +1858,8 @@ display: none;
 .view-front-end-working-groups .views-row,
 .view-front-end-campaigns .views-row,
 .view-front-end-awards .views-row,
-.page-taxonomy .node-teaser .views-row {
+.page-taxonomy .node-teaser .views-row,
+.node.node-award {
 margin-bottom: 20px;
 }
 
