@@ -1853,7 +1853,8 @@ width: 77%;
 .view-front-end-awards .article-body .field-name-body img,
 .view-display-id-media_watch .node-teaser .field-name-field-featured-image,
 .view-display-id-notifications .field-name-field-featured-image,
-.view-display-id-working_groups img {
+.view-display-id-working_groups img,
+.node.node-award .field-name-body img {
 display: none;
 }
 
@@ -1861,7 +1862,8 @@ display: none;
 .view-front-end-working-groups .views-row,
 .view-front-end-campaigns .views-row,
 .view-front-end-awards .views-row,
-.page-taxonomy .node-teaser .views-row {
+.page-taxonomy .node-teaser .views-row,
+.node.node-award {
 margin-bottom: 20px;
 }
 
@@ -1880,7 +1882,9 @@ width: 100%;
 padding-left: 250px;
 }
 
-.view-front-end-campaigns .node-teaser {
+.view-front-end-campaigns .node-teaser,
+.view-front-end-awards .node-teaser,
+.node.node-award {  /* for award sponsors listing */
 position: relative;
 }
 
