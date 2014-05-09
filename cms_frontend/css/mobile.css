@@ -576,7 +576,8 @@
 
 
   /* Campaigns listing,
-      News listing */
+      News listing,
+      Media Watch listing */
   .view-front-end-campaigns .field-name-field-campaign-duration {
   max-width: 100%;
   }
@@ -593,6 +594,10 @@
 
   .node.node-award {
   min-height: 100px;
+  }
+
+  .dataTables_paginate {
+  font-size: 13px;
   }
 
 
