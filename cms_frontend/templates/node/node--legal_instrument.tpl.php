@@ -46,6 +46,16 @@
               </tbody>
             </table>
           </div>
+
+          <?php $sidebar_blocks = block_get_blocks_by_region('sidebar_second'); ?>
+          <!-- Render sidebar blocks -->
+          <?php if (!empty($sidebar_blocks)) { ?>
+          <div class="instrument-right well profile col-md-4 pull-right">
+              <?php print render($sidebar_blocks); ?>
+          </div>
+          <?php } ?>
+
+
       </div>
 
         <?php if (CMSUtils::get_current_profile() == 'cms') { ?>

@@ -13,7 +13,7 @@
             ?>
             <span class="text-muted"><?php print format_date($node->changed,'custom','d F Y'); ?></span>
         </div>
-        <?php print render($content['links']); ?>        
+        <?php print render($content['links']); ?>
     </div>
 <?php else: ?>
     <div class="container">
@@ -34,9 +34,9 @@
             <div class="publication-thumbnail">
             <?php
               $langcode = field_language('node', $node, 'field_publication_image');
-              
+
               if (!empty($node->field_publication_image) && count($node->field_publication_image[$langcode])): ?>
-                  <?php echo render($content['field_publication_image']); ?>                                            
+                  <?php echo render($content['field_publication_image']); ?>
               <?php else: ?>
                 <div class="alert alert-info species-alert">
                     <p>
@@ -64,6 +64,15 @@
               </tbody>
             </table>
           </div>
+
+          <?php $sidebar_blocks = block_get_blocks_by_region('sidebar_second'); ?>
+          <!-- Render sidebar blocks -->
+          <?php if (!empty($sidebar_blocks)) { ?>
+              <div class="publication-right profile well col-md-4 pull-right">
+                  <?php print render($sidebar_blocks); ?>
+              </div>
+          <?php } ?>
+
       </div>
     </div>
 

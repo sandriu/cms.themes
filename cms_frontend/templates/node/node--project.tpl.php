@@ -1,8 +1,8 @@
 <?php if ($teaser): ?>
-    <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>  
+    <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
         <?php print render($title_prefix); ?>
         <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-        <?php print render($title_suffix); ?>  
+        <?php print render($title_suffix); ?>
 
         <div class="content article-body"<?php print $content_attributes; ?>>
             <?php
@@ -10,10 +10,10 @@
             hide($content['comments']);
             hide($content['links']);
             print render($content);
-            ?>      
+            ?>
             <span class="text-muted"><?php print format_date($node->changed, 'custom', 'd F Y'); ?></span>
         </div>
-        <?php print render($content['links']); ?>        
+        <?php print render($content['links']); ?>
     </div>
 <?php else: ?>
     <div class="container">
@@ -25,7 +25,7 @@
                     echo render($content['body']);
                 ?>
                 <?php endif; ?>
-                                
+
                 <?php if(check_display_field($content,'field_project_conservation')): ?>
                     <label>Conservation</label>
                     <div class="section">
@@ -34,8 +34,8 @@
                         ?>
                     </div>
                 <?php endif; ?>
-                    
-                <?php if(check_display_field($content,'field_project_objective')): ?>    
+
+                <?php if(check_display_field($content,'field_project_objective')): ?>
                     <label>Objective</label>
                     <div class="section">
                         <?php
@@ -44,13 +44,13 @@
                     </div>
                 <?php endif; ?>
 
-                <?php if(check_display_field($content,'field_project_activity')): ?>        
+                <?php if(check_display_field($content,'field_project_activity')): ?>
                     <label>Project activity</label>
                     <div class="section">
                         <?php render_slot($node, 'activity', 'project', $content); ?>
                     </div>
                 <?php endif; ?>
-                    
+
                 <?php echo render_slot($node, 'related-content', 'project', $content); ?>
             </div>
 
@@ -93,17 +93,17 @@
                     echo render($content['field_project_taxonomic_group']);
                     echo render($content['field_region']);
                     echo render($content['field_country']);
-                    echo render($content['field_project_tech_report']);                    
+                    echo render($content['field_project_tech_report']);
                     ?>
                 </table>
-                
+
                 <?php echo render($content['field_project_file']); ?>
-                
+
                 <hr />
 
                 <!-- to be implemented -->
                 <!--label>Implementing Agency Contacts</label>
-                <div class="section">                    
+                <div class="section">
                 </div>
                 <hr /-->
 
@@ -122,6 +122,15 @@
                     ?>
                 </div>
             </div>
+
+            <?php $sidebar_blocks = block_get_blocks_by_region('sidebar_second'); ?>
+            <!-- Render sidebar blocks -->
+            <?php if (!empty($sidebar_blocks)) { ?>
+                <div class="project-profile-right well profile col-md-4 pull-right">
+                    <?php print render($sidebar_blocks); ?>
+                </div>
+            <?php } ?>
+
         </div>
     </div>
 

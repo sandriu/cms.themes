@@ -28,8 +28,10 @@
             </div>
 
             <?php ob_start(); render_slot($node, 'details', 'news', $content); $details = ob_get_contents(); ob_end_clean(); ?>
-            <?php if(!empty($details)): ?>
+            <?php $sidebar_blocks = block_get_blocks_by_region('sidebar_second'); ?>
+            <?php if(!empty($details) || !empty($sidebar_blocks)): ?>
                 <div class="news-profile-right profile col-md-4">
+                  <?php if(!empty($details)) { ?>
                   <div class="well">
                     <?php echo $details; ?>
                   </div>
@@ -37,6 +39,14 @@
                     <?php $block = module_invoke('widgets', 'block_view', 's_addthis-share'); ?>
                     <?php print render($block['content']); ?>
                   </div>
+                  <?php } ?>
+
+                    <!-- Render sidebar blocks -->
+                    <?php if (!empty($sidebar_blocks)) { ?>
+                        <div class="well">
+                            <?php print render($sidebar_blocks); ?>
+                        </div>
+                    <?php } ?>
                 </div>
             <?php endif; ?>
         </div>

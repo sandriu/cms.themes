@@ -45,6 +45,15 @@
             drupal_add_js(drupal_get_path('theme', $GLOBALS['theme']) . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR . 'species.js');
         ?>
         </div>
+
+          <?php $sidebar_blocks = block_get_blocks_by_region('sidebar_second'); ?>
+          <!-- Render sidebar blocks -->
+          <?php if (!empty($sidebar_blocks)) { ?>
+            <div class="species-right-column profile well col-md-4 pull-right">
+              <?php print render($sidebar_blocks); ?>
+            </div>
+          <?php } ?>
+
       </div>
         <div class="row">
           <div class="full-width profile col-md-12">

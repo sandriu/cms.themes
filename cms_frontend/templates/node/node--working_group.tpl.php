@@ -26,6 +26,15 @@
                     <?php echo $details; ?>
                 </div>
             <?php endif; ?>
+
+            <?php $sidebar_blocks = block_get_blocks_by_region('sidebar_second'); ?>
+            <!-- Render sidebar blocks -->
+            <?php if (!empty($sidebar_blocks)) { ?>
+                <div class="working-group-profile-right profile well col-md-4 pull-right">
+                    <?php print render($sidebar_blocks); ?>
+                </div>
+            <?php } ?>
+
         </div>
         <div class="row">
             <div class="working-group-full-width profile col-md-12">

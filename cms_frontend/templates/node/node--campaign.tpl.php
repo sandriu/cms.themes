@@ -1,28 +1,28 @@
 <?php if($teaser): ?>
-    <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>  
+    <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
         <?php print render($title_prefix); ?>
         <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-        <?php print render($title_suffix); ?>  
+        <?php print render($title_suffix); ?>
 
         <div class="content article-body"<?php print $content_attributes; ?>>
             <?php
               // We hide the comments and links now so that we can render them later.
               hide($content['comments']);
               hide($content['links']);
-              print render($content);      
-            ?>            
+              print render($content);
+            ?>
         </div>
-        <?php print render($content['links']); ?>        
+        <?php print render($content['links']); ?>
     </div>
 <?php else: ?>
     <div class="container">
         <div class="row">
             <div class="campaign-profile-left profile col-md-8">
-                <?php echo render($content['body']); ?>   
+                <?php echo render($content['body']); ?>
                 <?php echo render($content['field_campaign_picture']); ?>
                 <span class="text-muted">
                     <?php print t('Last updated on').' '.format_date($node->changed, 'custom', 'd F Y'); ?>
-                </span>      
+                </span>
             </div>
             <?php ob_start(); render_slot($node, 'details', 'campaign', $content); $details = ob_get_contents(); ob_end_clean(); ?>
             <?php if(!empty($details)): ?>
@@ -30,6 +30,15 @@
                     <?php echo $details; ?>
                 </div>
             <?php endif; ?>
-        </div>        
+
+            <?php $sidebar_blocks = block_get_blocks_by_region('sidebar_second'); ?>
+            <!-- Render sidebar blocks -->
+            <?php if (!empty($sidebar_blocks)) { ?>
+                <div class="campaign-profile-right profile well col-md-4 pull-right">
+                    <?php print render($sidebar_blocks); ?>
+                </div>
+            <?php } ?>
+
+        </div>
     </div>
 <?php endif; ?>
