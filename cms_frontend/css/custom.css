@@ -1694,13 +1694,32 @@ vertical-align: top;
 }
 
 /* avoid attachment file infos to overlap, on news profile edit */
-.node-news-form .form-control {
+.node-news-form .form-control.draggable {
 height: auto;
 margin-top: 3px;
+width: 1140px;
+display: table-row;
+}
+
+.field-name-field-news-attachments .form-control.form-text {
+max-width: 780px;
 }
 
 .node-news-form .checkbox input[type="checkbox"] {
 margin-left: 0;
+}
+
+.node-news-form .fieldset-wrapper table thead {
+background: #999;
+}
+
+.fieldset-wrapper .table tbody > tr > td {
+border-top: 0;
+}
+
+.node-news-form .draggable a.tabledrag-handle {
+width: 36px;
+height: 30px;
 }
 
 
