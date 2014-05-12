@@ -1693,6 +1693,16 @@ margin-right: 20px;
 vertical-align: top;
 }
 
+/* avoid attachment file infos to overlap, on news profile edit */
+.node-news-form .form-control {
+height: auto;
+margin-top: 3px;
+}
+
+.node-news-form .checkbox input[type="checkbox"] {
+margin-left: 0;
+}
+
 
 /* TABLES for listings */
 .views-table {
