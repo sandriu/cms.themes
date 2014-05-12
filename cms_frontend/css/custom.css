@@ -1694,6 +1694,19 @@ vertical-align: top;
 }
 
 /* avoid attachment file infos to overlap, on news profile edit */
+.node-news-form .form-wrapper {
+margin-top: 20px;
+}
+
+.node-news-form .form-wrapper fieldset legend {
+background: #999;
+margin-top: 20px;
+color: #FFF;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+padding: 5px 0px 0px 5px;
+}
+
 .node-news-form .form-control.draggable {
 height: auto;
 margin-top: 3px;
@@ -1710,7 +1723,7 @@ margin-left: 0;
 }
 
 .node-news-form .fieldset-wrapper table thead {
-background: #999;
+background: #ccc;
 }
 
 .fieldset-wrapper .table tbody > tr > td {
