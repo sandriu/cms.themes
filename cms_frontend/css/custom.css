@@ -1714,6 +1714,13 @@ width: 1140px;
 display: table-row;
 }
 
+.chosen-container.form-control {
+height: auto;
+border: 0;
+box-shadow: none;
+padding-left: 0;
+}
+
 .field-name-field-news-attachments .form-control.form-text {
 max-width: 780px;
 }
