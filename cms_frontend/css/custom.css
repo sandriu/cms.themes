@@ -1443,15 +1443,14 @@ margin-left: 25%;
 background: transparent;
 }
 
-.profile select {
-position: absolute;
-top: -30px;
-left: 0;
+.instrument-sidebar select {
 width: 100%;
+margin-bottom: 10px;
 }
 
-.instrument-right.profile {
-margin-top: 30px;
+.profile.col-md-4 {
+padding-left: 0;
+padding-right: 0;
 }
 
 .read-more {
@@ -1585,7 +1584,6 @@ display: block;
 
 .node-news .field-item {
 display: inline-block;
-background: #DDD;
 margin: 5px;
 padding: 2px 5px;
 font-size: 12px;
@@ -1601,7 +1599,6 @@ display: none;
 .node-news .field-name-field-featured-image .field-item,
 .node-news.node-teaser .field-item {
 display: block;
-background: #FFF;
 margin: 0;
 padding: 0;
 font-size: 15px;
@@ -1689,14 +1686,64 @@ margin-bottom: 10px;
 }
 
 /* news share area */
-.news-profile-right .share-area {
-margin-top: 40px;
-}
-
-.news-profile-right .share-area a {
+#block-widgets-s-addthis-share a {
 display: inline-block;
 margin-right: 20px;
 vertical-align: top;
+}
+
+/* News Edit page:
+    avoid attachment file infos to overlap, on news profile edit */
+.node-news-form .form-wrapper {
+margin-top: 20px;
+}
+
+.node-news-form .form-wrapper fieldset legend {
+background: #999;
+margin-top: 20px;
+color: #FFF;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+padding: 5px 0px 0px 5px;
+}
+
+.node-news-form .form-control.draggable {
+height: auto;
+margin-top: 3px;
+width: 1140px;
+display: table-row;
+}
+
+.chosen-container.form-control {
+height: auto;
+border: 0;
+box-shadow: none;
+padding-left: 0;
+}
+
+.field-name-field-news-attachments .form-control.form-text {
+max-width: 780px;
+}
+
+.node-news-form .checkbox input[type="checkbox"] {
+margin-left: 0;
+}
+
+.node-news-form .fieldset-wrapper table thead {
+background: #ccc;
+}
+
+.fieldset-wrapper .table tbody > tr > td {
+border-top: 0;
+}
+
+.node-news-form .draggable a.tabledrag-handle {
+width: 36px;
+height: 30px;
+}
+
+.chosen-container-multi .chosen-choices li.search-field input[type="text"] {
+height: 20px;
 }
 
 
@@ -1855,7 +1902,8 @@ width: 77%;
 .view-front-end-awards .article-body .field-name-body img,
 .view-display-id-media_watch .node-teaser .field-name-field-featured-image,
 .view-display-id-notifications .field-name-field-featured-image,
-.view-display-id-working_groups img {
+.view-display-id-working_groups img,
+.node.node-award .field-name-body img {
 display: none;
 }
 
@@ -1863,7 +1911,8 @@ display: none;
 .view-front-end-working-groups .views-row,
 .view-front-end-campaigns .views-row,
 .view-front-end-awards .views-row,
-.page-taxonomy .node-teaser .views-row {
+.page-taxonomy .node-teaser .views-row,
+.node.node-award {
 margin-bottom: 20px;
 }
 
@@ -1882,7 +1931,9 @@ width: 100%;
 padding-left: 250px;
 }
 
-.view-front-end-campaigns .node-teaser {
+.view-front-end-campaigns .node-teaser,
+.view-front-end-awards .node-teaser,
+.node.node-award {  /* for award sponsors listing */
 position: relative;
 }
 

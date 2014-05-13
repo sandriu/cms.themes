@@ -369,16 +369,16 @@
 
 
   /* Campaigns listing,
-      News listing  */
+      News listing */
   .view-front-end-news .views-row,
   .view-front-end-campaigns .views-row,
-  .view-front-end-awards .views-row,
-  .page-taxonomy .node-teaser .views-row {
+  .page-taxonomy .node-teaser .views-row,
+  .node.node-award { /* for both Awards and Sponsors listings */
   background-color: #F5F5F5;
   border: 1px solid #E3E3E3;
   border-radius: 4px;
   padding: 10px;
-  min-height: 390px;
+  min-height: 400px;
   }
 
   .view-front-end-news .article-body .text-muted,
@@ -400,22 +400,43 @@
   .view-front-end-campaigns .links,
   .view-front-end-campaigns .article-body .field-name-body,
   .page-taxonomy .node-teaser h2,
-  .page-taxonomy .node-teaser .links {
+  .page-taxonomy .node-teaser .links,
+  .view-front-end-awards h2,
+  .view-front-end-awards .links {
   padding-left: 0;
   }
 
   .view-front-end-campaigns .article-body .field-name-body,
-  .view-front-end-news .field-items {
+  .view-front-end-news .article-body .field-name-body {
   position: absolute;
-  top: 50px;
-  left: 230px;
+  top: 90px;
+  left: 240px;
   max-width: 50%;
   }
 
   .view-front-end-news .links,
   .view-front-end-campaigns .links,
-  .page-taxonomy .node-teaser .links {
+  .page-taxonomy .node-teaser .links,
+  .view-front-end-awards .links {
   margin-top: 20px;
+  }
+
+
+  /* instrument profile */
+  .instrument-right.profile {
+  margin-top: 60px;
+  }
+
+
+  /* Related content tabs */
+  .center-column .nav-tabs > li a {
+  border: 1px solid #DDD;
+  border-bottom-color: rgba(0, 0, 0, 0);
+  background-color: #F5F5F5;
+  }
+
+  .center-column .nav-tabs > li.active a {
+  background: #fff;
   }
 }
 
@@ -555,13 +576,37 @@
 
 
   /* Campaigns listing,
-      News listing */
+      News listing,
+      Media Watch listing */
   .view-front-end-campaigns .field-name-field-campaign-duration {
   max-width: 100%;
   }
 
   .view-front-end-campaigns .article-body .field-name-body,
-  .view-front-end-news .field-items {
+  .view-front-end-news .field-items,
+  .node.node-award .article-body .field-name-body {
   display: none;
+  }
+
+  .view-front-end-news .views-row {
+  min-height: 370px;
+  }
+
+  .node.node-award {
+  min-height: 100px;
+  }
+
+  .dataTables_paginate {
+  font-size: 13px;
+  }
+
+
+  /* Related content tabs */
+  .center-column .nav-tabs > li {
+  clear: both;
+  }
+
+  .center-column .nav-tabs > li a {
+  min-width: 290px;
   }
 }

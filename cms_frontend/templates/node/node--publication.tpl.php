@@ -13,7 +13,7 @@
             ?>
             <span class="text-muted"><?php print format_date($node->changed,'custom','d F Y'); ?></span>
         </div>
-        <?php print render($content['links']); ?>        
+        <?php print render($content['links']); ?>
     </div>
 <?php else: ?>
     <div class="container">
@@ -30,40 +30,56 @@
             ?>
           </div>
 
-      <div class="publication-right profile well col-md-4">
-            <div class="publication-thumbnail">
-            <?php
-              $langcode = field_language('node', $node, 'field_publication_image');
-              
-              if (!empty($node->field_publication_image) && count($node->field_publication_image[$langcode])): ?>
-                  <?php echo render($content['field_publication_image']); ?>                                            
-              <?php else: ?>
-                <div class="alert alert-info species-alert">
-                    <p>
-                        <?php echo t('No pictures for ') . $node->title; ?>
-                    </p>
-                </div>
-            <?php endif; ?>
-            </div>
-            <hr />
+          <div class="col-md-4 profile">
+              <div class="publication-right well">
+                  <div class="publication-thumbnail">
+                      <?php
+                      $langcode = field_language('node', $node, 'field_publication_image');
 
-            <table class="table table-condensed table-hover two-columns">
-              <tbody>
-                <?php echo render($content['field_publication_author']); ?>
-                <?php echo render($content['field_publication_co_authors']); ?>
-                <?php echo render($content['field_publication_published_date']); ?>
-                <?php echo render($content['field_publication_language']); ?>
-                <?php echo render($content['field_publication_publisher']); ?>
-                <?php echo render($content['field_publication_city']); ?>
-                <?php echo render($content['field_country']); ?>
-                <?php echo render($content['field_publication_type']); ?>
-                <?php echo render($content['field_publication_edition']); ?>
-                <?php echo render($content['field_publication_order_code']); ?>
-                <?php echo render($content['field_instrument']); ?>
-                <?php echo render($content['field_publication_source']); ?>
-              </tbody>
-            </table>
+                      if (!empty($node->field_publication_image) && count($node->field_publication_image[$langcode])): ?>
+                          <?php echo render($content['field_publication_image']); ?>
+                      <?php else: ?>
+                          <div class="alert alert-info species-alert">
+                              <p>
+                                  <?php echo t('No pictures for ') . $node->title; ?>
+                              </p>
+                          </div>
+                      <?php endif; ?>
+                  </div>
+                  <hr />
+
+                  <table class="table table-condensed table-hover two-columns">
+                      <tbody>
+                      <?php echo render($content['field_publication_author']); ?>
+                      <?php echo render($content['field_publication_co_authors']); ?>
+                      <?php echo render($content['field_publication_published_date']); ?>
+                      <?php echo render($content['field_publication_language']); ?>
+                      <?php echo render($content['field_publication_publisher']); ?>
+                      <?php echo render($content['field_publication_city']); ?>
+                      <?php echo render($content['field_country']); ?>
+                      <?php echo render($content['field_publication_type']); ?>
+                      <?php echo render($content['field_publication_edition']); ?>
+                      <?php echo render($content['field_publication_order_code']); ?>
+                      <?php echo render($content['field_instrument']); ?>
+                      <?php echo render($content['field_publication_source']); ?>
+                      </tbody>
+                  </table>
+              </div>
+
+              <?php
+              $sidebar_blocks = block_get_blocks_by_region('sidebar_second');
+              unset($sidebar_blocks['#sorted']);
+              ?>
+              <!-- Render sidebar blocks -->
+              <?php if (!empty($sidebar_blocks)) { ?>
+                  <?php foreach($sidebar_blocks as $block) { ?>
+                      <div class="well">
+                          <?php print render($block); ?>
+                      </div>
+                  <?php } ?>
+              <?php } ?>
           </div>
+
       </div>
     </div>
 
