@@ -2,7 +2,8 @@
     for CMS colour theme */
 
 /* NEWS slideshow, skin Default */
-.view-news-slideshow .views-field-title {
+.view-news-slideshow .views-field-title,
+.view-news-slideshow .views-field-title-field {
 background: url("../../images/cms-slideshow-title-bkg.png") repeat-x;
 }
 

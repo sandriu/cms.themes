@@ -624,7 +624,8 @@ height: 390px; /*455px;*/
 border-radius: 6px;
 }
 
-.view-news-slideshow .views-field-title {
+.view-news-slideshow .views-field-title,
+.view-news-slideshow .views-field-title-field {
 display: block;
 position: absolute;
 top: 236px;
@@ -633,7 +634,8 @@ height: 112px;
 padding: 0px 20px;
 }
 
-.view-news-slideshow .views-field-title .field-content {
+.view-news-slideshow .views-field-title .field-content,
+.view-news-slideshow .views-field-title-field .field-content {
 display: block;
 width: 100%;
 margin-top: 40px;
@@ -654,7 +656,8 @@ padding-right: 110px;
 text-align: right;
 }
 
-.view-news-slideshow .views-field-title a {
+.view-news-slideshow .views-field-title a,
+.view-news-slideshow .views-field-title-field a {
 font-size: 30px; /* as in the HTML proposal */
 font-size: 23px; /* fallback size in case news item has a very long title - avoid displaying it on 3 rows */
 font-weight: bold;
@@ -668,7 +671,9 @@ padding-right: 20px;
 }
 
 .view-news-slideshow .views-field-title a:hover,
-.view-news-slideshow .view-footer a {
+.view-news-slideshow .view-footer a,
+.view-news-slideshow .views-field-title-field a:hover,
+.view-news-slideshow .view-footer a:hover {
 text-decoration: none;
 color: #FFD116;
 }
@@ -747,17 +752,20 @@ padding-right: 15px;
   height: 319px;
   }
 
-  .view-news-slideshow .views-field-title {
+  .view-news-slideshow .views-field-title,
+  .view-news-slideshow .views-field-title-field {
   width: 616px;
   top: 176px;
   height: 101px;
   }
 
-  .view-news-slideshow .views-field-title .field-content {
+  .view-news-slideshow .views-field-title .field-content,
+  .view-news-slideshow .views-field-title-field .field-content {
   min-height: 60px;
   }
 
-  .view-news-slideshow .views-field-title a {
+  .view-news-slideshow .views-field-title a,
+  .view-news-slideshow .views-field-title-field a {
   font-size: 19px;
   line-height: 26px;
   }
@@ -813,7 +821,8 @@ font-size: 12px;
 line-height: 15px;
 }
 
-.instruments-slideshow .jcarousel-item .views-field-title {
+.instruments-slideshow .jcarousel-item .views-field-title,
+.instruments-slideshow .jcarousel-item .views-field-title-field {
 position: absolute;
 top: 83px;
 width: 136px;
@@ -945,7 +954,8 @@ margin-bottom: 18px;
 }
 
 .ui-tabs-panel .article-body ul li a,
-.ui-tabs-panel .views-field-title {
+.ui-tabs-panel .views-field-title,
+.ui-tabs-panel .views-field-title-field {
 display: inline-block;
 width: 67%;
 padding: 10px;
@@ -964,7 +974,8 @@ color: #0066C0;
 float: left;
 }
 
-.ui-tabs-panel .views-field-title {
+.ui-tabs-panel .views-field-title,
+.ui-tabs-panel .views-field-title-field {
 padding: 0px 10px 10px 10px;
 line-height: 24px;
 width: 82%;
@@ -1421,6 +1432,7 @@ display: none;
 }
 
 .profile table .views-field-title,
+.profile table .views-field-title-field,
 .profile table .views-field-field-document-number {
 width: 200px;
 }

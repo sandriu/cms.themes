@@ -59,7 +59,8 @@ background: #FDDFAF;
 
 
 /* NEWS slideshow */
-.view-news-slideshow .views-field-title {
+.view-news-slideshow .views-field-title,
+.view-news-slideshow .views-field-title-field {
 background-image: -webkit-linear-gradient(top, rgba(29, 93, 145, 0), rgba(29, 93, 145, 0.7));
 background-image: -moz-linear-gradient(top, rgba(29, 93, 145, 0), rgba(29, 93, 145, 0.7));
 background-image: -o-linear-gradient(top, rgba(29, 93, 145, 0), rgba(29, 93, 145, 0.7));
@@ -75,7 +76,9 @@ background: url("../images/aewa_news_hover.png") no-repeat;
 }
 
 .view-news-slideshow .views-field-title a:hover,
-.view-news-slideshow .view-footer a {
+.view-news-slideshow .view-footer a,
+.view-news-slideshow .views-field-title-field a:hover,
+.view-news-slideshow .view-footer a:hover {
 color: #FBAF38;
 }
 
