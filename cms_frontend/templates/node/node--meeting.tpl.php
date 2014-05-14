@@ -47,6 +47,8 @@
                   #echo render($content['field_meeting_url']);
                   echo render($content['field_country']);
                   echo render($content['field_meeting_city']);
+                  echo render($content['field_meeting_location']);
+                  echo render($content['field_meeting_publication']);
                   ?>
                   </tbody>
               </table>
