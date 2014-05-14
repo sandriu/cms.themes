@@ -1693,13 +1693,13 @@ margin-right: 20px;
 vertical-align: top;
 }
 
-/* News Edit page:
-    avoid attachment file infos to overlap, on news profile edit */
-.node-news-form .form-wrapper {
+/* Edit page:
+    avoid attachment file infos to overlap, on news profile edit and other basic pages */
+.node-form .form-wrapper {
 margin-top: 20px;
 }
 
-.node-news-form .form-wrapper fieldset legend {
+.node-form .form-wrapper fieldset legend {
 background: #999;
 margin-top: 20px;
 color: #FFF;
@@ -1708,42 +1708,42 @@ border-top-right-radius: 4px;
 padding: 5px 0px 0px 5px;
 }
 
-.node-news-form .form-control.draggable {
+.node-form .form-control.draggable {
 height: auto;
 margin-top: 3px;
 width: 1140px;
 display: table-row;
 }
 
-.chosen-container.form-control {
+.node-form .chosen-container.form-control {
 height: auto;
 border: 0;
 box-shadow: none;
 padding-left: 0;
 }
 
-.field-name-field-news-attachments .form-control.form-text {
+.field-widget-file-generic .form-control.form-text {
 max-width: 780px;
 }
 
-.node-news-form .checkbox input[type="checkbox"] {
+.node-form .checkbox input[type="checkbox"] {
 margin-left: 0;
 }
 
-.node-news-form .fieldset-wrapper table thead {
+.node-form .fieldset-wrapper table thead {
 background: #ccc;
 }
 
-.fieldset-wrapper .table tbody > tr > td {
+.node-form .fieldset-wrapper .table tbody > tr > td {
 border-top: 0;
 }
 
-.node-news-form .draggable a.tabledrag-handle {
+.node-form .draggable a.tabledrag-handle {
 width: 36px;
 height: 30px;
 }
 
-.chosen-container-multi .chosen-choices li.search-field input[type="text"] {
+.node-form .chosen-container-multi .chosen-choices li.search-field input[type="text"] {
 height: 20px;
 }
 
