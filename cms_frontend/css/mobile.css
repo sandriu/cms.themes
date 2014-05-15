@@ -442,14 +442,7 @@
 
   /* Hide certain columns on big tables;
     Hide filters for hidden columns */
-  .instrument-full-width table .views-field-title-1,
-  .instrument-full-width table .views-field-field-species-family,
-  .instrument-full-width table .views-field-field-species-order,
-  .instrument-full-width table .views-field-field-species-class,
-  .project-profile-left table .views-field-title-1,
-  .project-profile-left table .views-field-field-species-family,
-  .project-profile-left table .views-field-field-species-order,
-  .project-profile-left table .views-field-field-species-class,
+  .view-front-end-species .views-field-title-1,
   .view-front-end-species .views-field-field-species-family,
   .view-front-end-species .views-field-field-species-order,
   .view-front-end-species .views-field-field-species-class,
