@@ -48,7 +48,6 @@
                   echo render($content['field_country']);
                   echo render($content['field_meeting_city']);
                   echo render($content['field_meeting_location']);
-                  echo render($content['field_meeting_publication']);
                   ?>
                   </tbody>
               </table>
@@ -57,10 +56,10 @@
                   <tbody>
                   <?php
                   echo render($content['field_meeting_address']);
+                    echo render($content['field_meeting_publication']);
                   ?>
                   </tbody>
               </table>
-
 
 
               <?php

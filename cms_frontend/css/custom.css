@@ -1312,7 +1312,8 @@ font-size: 13px;
 .working-group-profile-right .field-label,
 .campaign-profile-right .field-label,
 .project-profile-left .panel-body td:first-of-type,
-.award-profile-right .field-label {
+.award-profile-right .field-label,
+.meeting-right .field-label {
 color: #888;
 font-weight: normal;
 width: 130px;
@@ -1555,25 +1556,30 @@ padding-left: 12px;
 .campaign-profile-right .field-label,
 .campaign-profile-right .field-items,
 .award-profile-right .field-items,
-.award-profile-right .field-label {
+.award-profile-right .field-label,
+.meeting-right .field-label,
+.meeting-right .field-items {
 display: inline-block;
 font-size: 13px;
 }
 
 .campaign-profile-right .field-label,
-.project-profile-left .panel-body td:first-of-type {
+.project-profile-left .panel-body td:first-of-type,
+.meeting-right .field-label {
 vertical-align: top;
 padding-top: 2px;
 }
 
 .campaign-profile-right .field-items,
-.award-profile-right .field-items {
+.award-profile-right .field-items,
+.meeting-right .field-items {
 max-width: 143px;
 }
 
 @media screen and (min-width: 1200px) {
   .campaign-profile-right .field-items,
-  .award-profile-right .field-items {
+  .award-profile-right .field-items,
+  .meeting-right .field-items {
   max-width: 210px;
   }
 }
