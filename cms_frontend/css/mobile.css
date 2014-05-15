@@ -451,7 +451,12 @@
   .view-front-end-species .views-field-field-species-appendix-1-date,
   .view-front-end-species .view-filters,
   .view-front-end-meetings .views-field-field-instrument,
-  .view-front-end-meetings .views-field-field-meeting-status {
+  .view-front-end-meetings .views-field-field-meeting-status,
+  .view-front-end-projects .views-field-field-region,
+  .view-front-end-projects .views-field-field-project-status,
+  .view-front-end-projects .views-field-field-project-impl-agency,
+  .view-front-end-projects .views-field-field-project-end-date,
+  .view-front-end-projects .views-field-field-project-start-date {
   display: none;
   }
 }
