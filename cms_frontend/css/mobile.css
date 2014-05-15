@@ -456,7 +456,9 @@
   .view-front-end-species .views-field-field-species-instruments,
   .view-front-end-species .views-field-field-species-appendix-2-date,
   .view-front-end-species .views-field-field-species-appendix-1-date,
-  .view-front-end-species .view-filters {
+  .view-front-end-species .view-filters,
+  .view-front-end-meetings .views-field-field-instrument,
+  .view-front-end-meetings .views-field-field-meeting-status {
   display: none;
   }
 }
