@@ -438,6 +438,30 @@
   .center-column .nav-tabs > li.active a {
   background: #fff;
   }
+
+
+  /* Hide certain columns on big tables;
+    Hide filters for hidden columns */
+  .view-front-end-species .views-field-title-1,
+  .view-front-end-species .views-field-field-species-family,
+  .view-front-end-species .views-field-field-species-order,
+  .view-front-end-species .views-field-field-species-class,
+  .view-front-end-species .views-field-field-species-instruments,
+  .view-front-end-species .views-field-field-species-appendix-2-date,
+  .view-front-end-species .views-field-field-species-appendix-1-date,
+  .view-front-end-species .view-filters,
+  .view-front-end-meetings .views-field-field-instrument,
+  .view-front-end-meetings .views-field-field-meeting-status,
+  .view-front-end-projects .views-field-field-region,
+  .view-front-end-projects .views-field-field-project-status,
+  .view-front-end-projects .views-field-field-project-impl-agency,
+  .view-front-end-projects .views-field-field-project-end-date,
+  .instrument-full-width .view-front-end-projects .views-field-field-project-start-date,
+  .view-front-end-projects .view-filters,
+  .view-front-end-documents .views-field-field-document-number,
+  .view-front-end-documents .views-field-field-instrument {
+  display: none;
+  }
 }
 
 
