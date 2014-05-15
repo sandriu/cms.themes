@@ -456,7 +456,9 @@
   .view-front-end-projects .views-field-field-project-status,
   .view-front-end-projects .views-field-field-project-impl-agency,
   .view-front-end-projects .views-field-field-project-end-date,
-  .view-front-end-projects .views-field-field-project-start-date {
+  .view-front-end-projects .views-field-field-project-start-date,
+  .view-front-end-documents .views-field-field-document-number,
+  .view-front-end-documents .views-field-field-instrument {
   display: none;
   }
 }
