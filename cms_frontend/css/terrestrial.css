@@ -51,7 +51,8 @@ background: #6D9933 url("../images/arrow_hexA7C285.png") 49% 110% no-repeat;
 
 
 /* NEWS slideshow */
-.view-news-slideshow .views-field-title {
+.view-news-slideshow .views-field-title,
+.view-news-slideshow .views-field-title-field {
 background-image: -webkit-linear-gradient(top, rgba(13, 86, 1, 0), rgba(13, 86, 1, 0.7));
 background-image: -moz-linear-gradient(top, rgba(13, 86, 1, 0), rgba(13, 86, 1, 0.7));
 background-image: -o-linear-gradient(top, rgba(13, 86, 1, 0), rgba(13, 86, 1, 0.7));
@@ -66,7 +67,9 @@ background: rgba(13, 86, 1, 0.7);
 background: url("../images/cms_news_hover.png") no-repeat;
 }
 
-.view-news-slideshow .views-field-title a:hover {
+.view-news-slideshow .views-field-title a:hover,
+.view-news-slideshow .views-field-title-field a:hover,
+.view-news-slideshow .view-footer a:hover {
 color: #FFD116;
 }
 
