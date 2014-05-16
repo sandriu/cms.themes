@@ -19,8 +19,8 @@
     <div class="container">
       <div class="row">
         <div class="meeting-left profile col-md-8">
-          <div id="gmap" style="height: 300px;"></div>
-          <small class="text-muted"><strong><?php echo t('The location on the map is approximate!'); ?></strong></small>
+          <div id="gmap"></div>
+          <small class="gmap-help-text text-muted"><strong><?php echo t('The location on the map is approximate!'); ?></strong></small>
           <?php echo render($content['body']); ?>
         </div>
 

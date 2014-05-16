@@ -20,7 +20,7 @@
         <div class="row">
             <div class="country-profile-left profile col-md-8">
                 <?php echo render($content['body']); ?>
-                <div id="gmap" style="height: 300px;"></div>
+                <div id="gmap"></div>
                 <?php
                 render_slot($node, 'national_reports', 'cms_country', $content);
                 render_slot($node, 'ratification_status', 'cms_country', $content);

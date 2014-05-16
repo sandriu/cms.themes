@@ -1287,6 +1287,14 @@ margin: 0 auto 2em auto;
 margin-bottom: 20px;
 }
 
+/* Goolge Maps*/
+#gmap {
+height: 300px;
+}
+#gmap.google_maps_no_map {
+height: auto;
+}
+
 /* VIEWS (DRUPAL) */
 table.views-table > caption {
 /*from bootstrap h4*/
