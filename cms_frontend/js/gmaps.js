@@ -88,4 +88,18 @@ function geocode_try(components) {
         }
     });
 }
-google.maps.event.addDomListener(window, 'load', initialize);
+
+if (typeof WURFL != 'undefined') {
+    if (WURFL.is_mobile && jQuery(window).width() <= 800) {
+        var google_maps_no_map_text = "Sorry, the map is not available on mobile devices.";
+        if (typeof Drupal.settings.cms_front_end.google_maps_no_map_text != 'undefined') {
+            google_maps_no_map_text = Drupal.settings.cms_front_end.google_maps_no_map_text;
+        }
+        jQuery('#gmap').html('asdasd').addClass('google_maps_no_map');
+        jQuery('.gmap-help-text').hide();
+    } else {
+        google.maps.event.addDomListener(window, 'load', initialize);
+    }
+} else {
+        google.maps.event.addDomListener(window, 'load', initialize);
+}
