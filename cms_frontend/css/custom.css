@@ -885,7 +885,7 @@ margin-bottom: 10px;
 padding: 0;
 }
 
-.ui-widget-content {
+.block-quicktabs .quicktabs-ui-wrapper {
 border: 0;
 }
 
