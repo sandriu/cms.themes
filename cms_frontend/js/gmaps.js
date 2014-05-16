@@ -95,7 +95,7 @@ if (typeof WURFL != 'undefined') {
         if (typeof Drupal.settings.cms_front_end.google_maps_no_map_text != 'undefined') {
             google_maps_no_map_text = Drupal.settings.cms_front_end.google_maps_no_map_text;
         }
-        jQuery('#gmap').html('asdasd').addClass('google_maps_no_map');
+        jQuery('#gmap').html(google_maps_no_map_text).addClass('google_maps_no_map');
         jQuery('.gmap-help-text').hide();
     } else {
         google.maps.event.addDomListener(window, 'load', initialize);
