@@ -493,6 +493,18 @@ margin: 6px 0px;
 color: #0066C0;
 }
 
+/*Back to top button*/
+#top-link-block.affix-top {
+position: absolute;
+bottom: -85px;
+right: 10px;
+}
+#top-link-block.affix {
+position: fixed;
+bottom: 18px;
+right: 10px;
+}
+
 /* this block for dropdown-menu to be removed if we remove the class */
 .footer-menu .dropdown-menu {
 position: relative;

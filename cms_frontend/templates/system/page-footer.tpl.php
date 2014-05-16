@@ -32,4 +32,10 @@
       </div>
     </div>
   </div>
+    <span id="top-link-block" class="hidden">
+        <a href="#top" class="well well-sm">
+            <i class="glyphicon glyphicon-chevron-up"></i>
+            <?php echo t('Back to Top'); ?>
+        </a>
+    </span>
 </footer>
