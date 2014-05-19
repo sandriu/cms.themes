@@ -33,7 +33,7 @@
     </div>
   </div>
     <span id="top-link-block" class="hidden">
-        <a href="#top" class="well well-sm">
+        <a href="#top" class="btn btn-primary btn-sm">
             <i class="glyphicon glyphicon-chevron-up"></i>
             <?php echo t('Back to Top'); ?>
         </a>
