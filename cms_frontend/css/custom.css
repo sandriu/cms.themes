@@ -1918,7 +1918,7 @@ text-transform: uppercase;
 .node-teaser .field-name-field-campaign-picture {
 display: inline-block;
 float: left;
-padding-right: 30px;
+padding-right: 40px;
 }
 
 .view-front-end-news .article-body .text-muted,
@@ -1976,7 +1976,7 @@ position: relative;
 .page-taxonomy .node-teaser h2,
 .page-taxonomy .node-teaser .links {
 width: 100%;
-padding-left: 250px;
+padding-left: 260px;
 }
 
 .view-front-end-campaigns .node-teaser,
