@@ -69,8 +69,8 @@
         }
 
         //get active li
-        var $first_level_li_active = $('.global-menu > li.active:first');
-        var $second_level_li_active = $('.global-menu > li > ul > li.active:first');
+        var $first_level_li_active = $('.global-menu > li.active-trail:first');
+        var $second_level_li_active = $('.global-menu > li > ul > li.active-trail:first');
 
         //position current menus - these menus are displayed until hover effect
             if ($first_level_li_active.length > 0) {
@@ -148,10 +148,13 @@
         });
 
         $(window).resize(function(e){
-            $('.row-offcanvas').removeClass('active');
-            $('.sidebar-offcanvas').hide();
+            if ($(window).width() > 800) {
+                $('.row-offcanvas').removeClass('active');
+                $('.sidebar-offcanvas').hide();
+            }
 
             copy_mobile_menu(is_front_page);
+
         });
 
         copy_mobile_menu(is_front_page);
@@ -166,12 +169,19 @@
                     $('#mobile-main-menu > li > div > ul').unwrap();
                     $('#mobile-main-menu .menu-teaser-img').remove();
                 }
-                $('#mobile-main-menu li').has('ul').children('h2').children('a').on('click', function(e){
+
+                $('#mobile-main-menu li').has('ul').children('h2').prepend('<span class="glyphicon glyphicon-expand"></span>');
+                $('#mobile-main-menu li').has('ul').children('h2').children('.glyphicon-expand').on('click', function(e){
                     e.preventDefault();
                     var $current_li = $(this).closest('li');
 
                     //Animation
                     $current_li.toggleClass('opened');
+                    if($current_li.hasClass('opened')) {
+                        $current_li.children('h2').children('span.glyphicon').removeClass('glyphicon-expand').addClass('glyphicon-collapse-down');
+                    } else {
+                        $current_li.children('h2').children('span.glyphicon').removeClass('glyphicon-collapse-down').addClass('glyphicon-expand');
+                    }
                     var $current_ul = $current_li.children('ul').stop(true, true).slideToggle();
                     $(this).closest('ul').find('ul').not($current_ul).slideUp();
 

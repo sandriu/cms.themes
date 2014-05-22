@@ -21,7 +21,9 @@ function cms_frontend_preprocess_html(&$variables) {
   // Add conditional CSS for IE10
   drupal_add_css(path_to_theme() . '/css/ie/ie10.css', array('media'=>'screen','group' => CSS_THEME, 'browsers' => array('IE' => 'IE 10', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
 
+  //Add helpers variables
   drupal_add_js(array('cms_front_end' => array('is_front_page' => drupal_is_front_page() )), 'setting');
+  drupal_add_js(array('cms_front_end' => array('google_maps_no_map_text' => t(theme_get_setting('google_maps_no_map')) )), 'setting');
 
   drupal_add_library('system', 'ui.accordion');
 
@@ -30,6 +32,9 @@ function cms_frontend_preprocess_html(&$variables) {
 
   //Ierarhic menu
   drupal_add_js(path_to_theme() . '/js/menu.js');
+
+  //Device detector helper
+  drupal_add_js("//wurfl.io/wurfl.js", 'external');
 
 
   drupal_add_css(path_to_theme(). '/css/style.css', array('weight'=>'1'));

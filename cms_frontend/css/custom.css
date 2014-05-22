@@ -493,6 +493,28 @@ margin: 6px 0px;
 color: #0066C0;
 }
 
+/* Back to top button */
+#top-link-block.affix-top {
+position: absolute;
+bottom: -85px;
+right: 10px;
+}
+
+#top-link-block.affix {
+position: fixed;
+bottom: 18px;
+right: 10px;
+z-index: 100;
+}
+
+#top-link-block {
+z-index: 100;
+}
+
+#top-link-block .glyphicon {
+padding-right: 5px;
+}
+
 /* this block for dropdown-menu to be removed if we remove the class */
 .footer-menu .dropdown-menu {
 position: relative;
@@ -624,7 +646,8 @@ height: 390px; /*455px;*/
 border-radius: 6px;
 }
 
-.view-news-slideshow .views-field-title {
+.view-news-slideshow .views-field-title,
+.view-news-slideshow .views-field-title-field {
 display: block;
 position: absolute;
 top: 236px;
@@ -633,7 +656,8 @@ height: 112px;
 padding: 0px 20px;
 }
 
-.view-news-slideshow .views-field-title .field-content {
+.view-news-slideshow .views-field-title .field-content,
+.view-news-slideshow .views-field-title-field .field-content {
 display: block;
 width: 100%;
 margin-top: 40px;
@@ -654,7 +678,8 @@ padding-right: 110px;
 text-align: right;
 }
 
-.view-news-slideshow .views-field-title a {
+.view-news-slideshow .views-field-title a,
+.view-news-slideshow .views-field-title-field a {
 font-size: 30px; /* as in the HTML proposal */
 font-size: 23px; /* fallback size in case news item has a very long title - avoid displaying it on 3 rows */
 font-weight: bold;
@@ -668,7 +693,9 @@ padding-right: 20px;
 }
 
 .view-news-slideshow .views-field-title a:hover,
-.view-news-slideshow .view-footer a {
+.view-news-slideshow .view-footer a,
+.view-news-slideshow .views-field-title-field a:hover,
+.view-news-slideshow .view-footer a:hover {
 text-decoration: none;
 color: #FFD116;
 }
@@ -747,17 +774,20 @@ padding-right: 15px;
   height: 319px;
   }
 
-  .view-news-slideshow .views-field-title {
+  .view-news-slideshow .views-field-title,
+  .view-news-slideshow .views-field-title-field {
   width: 616px;
   top: 176px;
   height: 101px;
   }
 
-  .view-news-slideshow .views-field-title .field-content {
+  .view-news-slideshow .views-field-title .field-content,
+  .view-news-slideshow .views-field-title-field .field-content {
   min-height: 60px;
   }
 
-  .view-news-slideshow .views-field-title a {
+  .view-news-slideshow .views-field-title a,
+  .view-news-slideshow .views-field-title-field a {
   font-size: 19px;
   line-height: 26px;
   }
@@ -813,7 +843,8 @@ font-size: 12px;
 line-height: 15px;
 }
 
-.instruments-slideshow .jcarousel-item .views-field-title {
+.instruments-slideshow .jcarousel-item .views-field-title,
+.instruments-slideshow .jcarousel-item .views-field-title-field {
 position: absolute;
 top: 83px;
 width: 136px;
@@ -876,7 +907,7 @@ margin-bottom: 10px;
 padding: 0;
 }
 
-.ui-widget-content {
+.block-quicktabs .quicktabs-ui-wrapper {
 border: 0;
 }
 
@@ -945,7 +976,8 @@ margin-bottom: 18px;
 }
 
 .ui-tabs-panel .article-body ul li a,
-.ui-tabs-panel .views-field-title {
+.ui-tabs-panel .views-field-title,
+.ui-tabs-panel .views-field-title-field {
 display: inline-block;
 width: 67%;
 padding: 10px;
@@ -964,7 +996,8 @@ color: #0066C0;
 float: left;
 }
 
-.ui-tabs-panel .views-field-title {
+.ui-tabs-panel .views-field-title,
+.ui-tabs-panel .views-field-title-field {
 padding: 0px 10px 10px 10px;
 line-height: 24px;
 width: 82%;
@@ -1264,6 +1297,14 @@ margin: 0 auto 2em auto;
 margin-bottom: 20px;
 }
 
+/* Goolge Maps*/
+#gmap {
+height: 300px;
+}
+#gmap.google_maps_no_map {
+height: auto;
+}
+
 /* VIEWS (DRUPAL) */
 table.views-table > caption {
 /*from bootstrap h4*/
@@ -1301,7 +1342,8 @@ font-size: 13px;
 .working-group-profile-right .field-label,
 .campaign-profile-right .field-label,
 .project-profile-left .panel-body td:first-of-type,
-.award-profile-right .field-label {
+.award-profile-right .field-label,
+.meeting-right .field-label {
 color: #888;
 font-weight: normal;
 width: 130px;
@@ -1421,6 +1463,7 @@ display: none;
 }
 
 .profile table .views-field-title,
+.profile table .views-field-title-field,
 .profile table .views-field-field-document-number {
 width: 200px;
 }
@@ -1543,25 +1586,30 @@ padding-left: 12px;
 .campaign-profile-right .field-label,
 .campaign-profile-right .field-items,
 .award-profile-right .field-items,
-.award-profile-right .field-label {
+.award-profile-right .field-label,
+.meeting-right .field-label,
+.meeting-right .field-items {
 display: inline-block;
 font-size: 13px;
 }
 
 .campaign-profile-right .field-label,
-.project-profile-left .panel-body td:first-of-type {
+.project-profile-left .panel-body td:first-of-type,
+.meeting-right .field-label {
 vertical-align: top;
 padding-top: 2px;
 }
 
 .campaign-profile-right .field-items,
-.award-profile-right .field-items {
+.award-profile-right .field-items,
+.meeting-right .field-items {
 max-width: 143px;
 }
 
 @media screen and (min-width: 1200px) {
   .campaign-profile-right .field-items,
-  .award-profile-right .field-items {
+  .award-profile-right .field-items,
+  .meeting-right .field-items {
   max-width: 210px;
   }
 }
@@ -1870,7 +1918,7 @@ text-transform: uppercase;
 .node-teaser .field-name-field-campaign-picture {
 display: inline-block;
 float: left;
-padding-right: 30px;
+padding-right: 40px;
 }
 
 .view-front-end-news .article-body .text-muted,
@@ -1928,7 +1976,7 @@ position: relative;
 .page-taxonomy .node-teaser h2,
 .page-taxonomy .node-teaser .links {
 width: 100%;
-padding-left: 250px;
+padding-left: 260px;
 }
 
 .view-front-end-campaigns .node-teaser,
