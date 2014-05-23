@@ -52,15 +52,8 @@
  */
 ?>
 <?php
-$current_path = realpath(NULL);
-$current_len = strlen($current_path);
-$template_path = realpath(dirname(__FILE__));
-
-if (!strncmp($template_path, $current_path, $current_len)) {
-  $template_path = substr($template_path, $current_len + 1);
-}
-
-$template_url = url($template_path, array('absolute' => TRUE));
+$template_path = drupal_get_path('theme', 'cms_frontend');
+$template_url = url($template_path, array('absolute' => TRUE, 'language' => LANGUAGE_NONE));
 ?>
 <table border="0" width="600" height="100%" style="font-family: Lato, Arial, sans-serif; border-collapse: collapse; margin: auto; @font-face { font-family: 'Lato'; font-style: normal; font-weight: 400; src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/9k-RPmcnxYEPm8CNFsH2gg.woff) format('woff');}">
   <?php if ($key == 'node' || $key == 'test'): ?>
