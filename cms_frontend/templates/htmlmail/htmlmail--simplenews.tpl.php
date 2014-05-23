@@ -82,11 +82,5 @@ $template_url = url($template_path, array('absolute' => TRUE));
         </table>
       </td>
     </tr>
-    <tr>
-      <td colspan="3">
-        <img src="<?php echo $template_url; ?>/images/CMS_logo.png" alt="CMS logo" style="margin-left: 20px;" />
-        <h1 style="display: inline-block; margin-left: 20px; margin-top: 43px; font-size: 21px; color: #003870; margin-bottom: 5px;">CMS E-Newsletter: Issue #45 / May 2014</h1>
-      </td>
-    </tr>
   <?php endif; ?>
   <?php echo $body; ?>
