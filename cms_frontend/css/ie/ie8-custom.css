@@ -147,6 +147,10 @@ float: right;
 float: left;
 }
 
+.view-front-end-species .view-filters select {
+min-width: 170px;
+}
+
 
 /* CHANGES for integrating the old header */
 .left-header {
