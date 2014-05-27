@@ -331,6 +331,10 @@ height: 25px !important;
 color: red; /* for warning text about IE8 not supporting SVG maps */
 }
 
+.drupal_ammap_container {
+display: none;
+}
+
 
 /* fixes for 1024px */
 .global-menu-bar.collapse {
