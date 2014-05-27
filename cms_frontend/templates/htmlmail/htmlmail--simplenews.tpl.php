@@ -55,21 +55,21 @@
 $template_path = drupal_get_path('theme', 'cms_frontend');
 $template_url = url($template_path, array('absolute' => TRUE, 'language' => LANGUAGE_NONE));
 ?>
-<table border="0" width="600" height="100%" style="font-family: Lato, Arial, sans-serif; border-collapse: collapse; margin: auto; @font-face { font-family: 'Lato'; font-style: normal; font-weight: 400; src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/9k-RPmcnxYEPm8CNFsH2gg.woff) format('woff');}">
+<table style="width: 600px; border: 0px; font-family: Lato, Arial, sans-serif; border-collapse: collapse; margin: auto; @font-face { font-family: 'Lato'; font-style: normal; font-weight: 400; src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/9k-RPmcnxYEPm8CNFsH2gg.woff) format('woff'); }">
   <?php if ($key == 'node' || $key == 'test'): ?>
     <tr>
       <td style="width: 183px; font-size: 11px; vertical-align: top; padding-top: 5px; padding-left: 5px;">
         <a href="<?php echo url('node/' . $params['simplenews_source']->getNode()->nid, array('absolute' => TRUE)); ?>" style="color: #0066c0;">View this e-mail in your browser.</a>
       </td>
       <td colspan="2" style="width: 408px; height: 70px; vertical-align: top;">
-        <img src="<?php echo $template_url; ?>/images/header_wave_cms.png" alt="CMS header" />
+      <img src="<?php echo $template_url; ?>/images/header_wave_cms.png" alt="<?php echo t('CMS header'); ?>" />
         <table style="margin-left: 325px; margin-right: 10px; margin-top: -65px;">
           <tr>
             <td>
-              <a href="http://www.unep.org/"><img src="<?php echo $template_url; ?>/images/UNEP_white_logo_32x34.png" alt="UNEP logo" /></a>
+              <a href="http://www.unep.org/"><img src="<?php echo $template_url; ?>/images/UNEP_white_logo_32x34.png" alt="<?php echo t('UNEP logo'); ?>" /></a>
             </td>
             <td>
-              <a href="http://www.cms.int/"><img src="<?php echo $template_url; ?>/images/CMS_white_logo_32x34.png" alt="CMS logo" /></a>
+              <a href="http://www.cms.int/"><img src="<?php echo $template_url; ?>/images/CMS_white_logo_32x34.png" alt="<?php echo t('CMS logo'); ?>" /></a>
             </td>
           </tr>
         </table>

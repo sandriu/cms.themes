@@ -27,14 +27,15 @@
  * @see template_preprocess_simplenews_newsletter_body()
  */
 ?>
-<?php
-$template_path = drupal_get_path('theme', 'cms_frontend');
-$template_url = url($template_path, array('absolute' => TRUE, 'language' => LANGUAGE_NONE));
-?>
-<tr>
-  <td colspan="3">
-    <img src="<?php echo $template_url; ?>/images/CMS_logo.png" alt="CMS logo" style="margin-left: 20px;" />
-    <h1 style="display: inline-block; margin-left: 20px; margin-top: 43px; font-size: 21px; color: #003870; margin-bottom: 5px;"><?php print $title; ?></h1>
-  </td>
-</tr>
+  <?php
+  $template_path = drupal_get_path('theme', 'cms_frontend');
+  $template_url = url($template_path, array('absolute' => TRUE, 'language' => LANGUAGE_NONE));
+  ?>
+  <tr>
+    <td colspan="3">
+      <img src="<?php echo $template_url; ?>/images/CMS_logo.png" alt="<?php echo t('CMS logo'); ?>" style="margin-left: 20px;" />
+      <h1 style="display: inline-block; margin-left: 20px; margin-top: 43px; font-size: 21px; color: #003870; margin-bottom: 5px;"><?php print $title; ?></h1>
+    </td>
+  </tr>
+</table>
 <?php print render($build); ?>
