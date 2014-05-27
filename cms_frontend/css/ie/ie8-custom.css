@@ -67,6 +67,10 @@ display: none;
 width: 955px;
 }
 
+.search-area {
+margin-top: 5px;
+}
+
 
 /* CENTER COLUMN */
 .center-column .region-content {
