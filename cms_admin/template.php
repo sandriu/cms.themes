@@ -17,3 +17,20 @@ function cms_admin_simplenews_field($variables) {
 
   return $output;
 }
+
+/**
+ * Theme the Table of Contents.
+ */
+function cms_admin_scs_toc($vars) {
+  $output = '<h2 style="padding-left: 20px; color: #555; font-size: 14px;">Table of contents:</h2>';
+  $output .= '<ul style="list-style-type: square; color: #888; padding-left: 40px;">';
+
+  $titles = array();
+  foreach ($vars['nodes'] as $node) {
+    $output .= '<li><h2 style="font-size: 14px;"><a href="#node-' . $node->nid . '" style="color: #0066c0;">' .$node->title . '</a></h2></li>';
+  }
+
+  $output .= '</ul>';
+
+  return $output;
+}

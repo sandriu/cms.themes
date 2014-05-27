@@ -20,7 +20,7 @@
 <tr>
   <td colspan="3">
     <?php foreach ($nodes as $node): ?>
-      <table width="100%" style="margin-top: 20px; margin-bottom: 15px;">
+      <table width="100%" style="margin-top: 20px; margin-bottom: 15px;" id="node-<?php echo $node['body']['#object']->nid; ?>">
         <tr>
           <td style="vertical-align: top;">
             <a href="<?php echo url('node/' . $node['body']['#object']->nid, array('absolute' => TRUE)); ?>"><img src="<?php echo file_create_url($node['field_featured_image']['#items'][0]['uri']); ?>" alt="<?php echo $node['field_featured_image']['#items'][0]['alt']; ?>" style="width: 220px;"></a>
