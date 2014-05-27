@@ -10,6 +10,11 @@
  *    render() function.
  */
 ?>
+<tr style="background-color: #003870;">
+  <td colspan="3" style="width: 100%; height: 100%; padding: 0;">
+    <img src="http://lorempixel.com/600/300/animals/" alt="CMS montly banner" width="600">
+  </td>
+</tr>
 <?php if ($toc): ?>
   <tr style="background-color: #d6dfe8;">
     <td colspan="3" style="border-top: 1px solid #003870; padding-right: 25px;">
@@ -20,22 +25,26 @@
 <tr>
   <td colspan="3">
     <?php foreach ($nodes as $node): ?>
-      <table width="100%" style="margin-top: 20px; margin-bottom: 15px;" id="node-<?php echo $node['body']['#object']->nid; ?>">
-        <tr>
-          <td style="vertical-align: top;">
-            <a href="<?php echo url('node/' . $node['body']['#object']->nid, array('absolute' => TRUE)); ?>"><img src="<?php echo file_create_url($node['field_featured_image']['#items'][0]['uri']); ?>" alt="<?php echo $node['field_featured_image']['#items'][0]['alt']; ?>" style="width: 220px;"></a>
-          </td>
-          <td style="vertical-align: top; padding-right: 20px; padding-left: 10px;">
-            <h3 style="margin-top: 0; color: #5E9732; font-size: 16px;"><?php echo $node['body']['#object']->title; ?></h3>
-            <span style="font-size: 13px; color: #555;"><?php echo $node['body']['#items'][0]['summary']; ?></span>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2" style="text-align: right;">
-            <a href="<?php echo url('node/' . $node['body']['#object']->nid, array('absolute' => TRUE)); ?>" style="background-color: #ccd7e2; font-size: 11px; text-decoration: none; color: #555; padding: 3px 7px; margin-right: 20px; border-radius: 4px;"><?php echo t('Read more'); ?></a>
-          </td>
-        </tr>
-      </table>
+      <?php if ($node['#bundle'] == 'newsletter_news_category'): ?>
+        <h2 style="background-color: #003870; color: #fff; font-size: 14px; padding: 6px 10px; border-top-left-radius: 12px; border-top-right-radius: 12px; margin-top: 30px; "><?php echo t('Category: !title', array('!title' => $node['#node']->title)); ?></h2>
+      <?php else: ?>
+        <table width="100%" style="margin-top: 20px; margin-bottom: 15px;" id="node-<?php echo $node['body']['#object']->nid; ?>">
+          <tr>
+            <td style="vertical-align: top;">
+              <a href="<?php echo url('node/' . $node['body']['#object']->nid, array('absolute' => TRUE)); ?>"><img src="<?php echo file_create_url($node['field_featured_image']['#items'][0]['uri']); ?>" alt="<?php echo $node['field_featured_image']['#items'][0]['alt']; ?>" style="width: 220px;"></a>
+            </td>
+            <td style="vertical-align: top; padding-right: 20px; padding-left: 10px;">
+              <h3 style="margin-top: 0; color: #5E9732; font-size: 16px;"><?php echo $node['body']['#object']->title; ?></h3>
+              <span style="font-size: 13px; color: #555;"><?php echo $node['body']['#items'][0]['summary']; ?></span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align: right;">
+              <a href="<?php echo url('node/' . $node['body']['#object']->nid, array('absolute' => TRUE)); ?>" style="background-color: #ccd7e2; font-size: 11px; text-decoration: none; color: #555; padding: 3px 7px; margin-right: 20px; border-radius: 4px;"><?php echo t('Read more'); ?></a>
+            </td>
+          </tr>
+        </table>
+      <?php endif; ?>
     <?php endforeach; ?>
   </td>
 </tr>
