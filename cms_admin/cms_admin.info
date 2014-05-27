@@ -1,0 +1,4 @@
+name = CMS admin
+description = A CMS administration theme based on Seven.
+core = 7.x
+base theme = seven
