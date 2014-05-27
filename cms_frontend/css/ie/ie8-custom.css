@@ -87,6 +87,10 @@ float: left;
 width: 970px;
 }
 
+.center-column.col-md-12.instruments-slideshow {
+width: 1010px;
+}
+
 .region-sidebar-second.well,
 .region-sidebar-first.well {
 width: 213px;
