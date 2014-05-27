@@ -305,6 +305,10 @@ right: 3px;
 padding-right: 0;
 }
 
+.view-news-slideshow .views-field-title .field-content {
+margin-top: 25px;
+}
+
 
 /* INSTRUMENTS slideshow, skin Default */
 .instruments-slideshow {
