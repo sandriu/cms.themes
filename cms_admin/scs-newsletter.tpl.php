@@ -12,7 +12,7 @@
 ?>
 <tr style="background-color: #003870;">
   <td colspan="3" style="width: 100%; height: 100%; padding: 0;">
-    <img src="http://lorempixel.com/600/300/animals/" alt="CMS montly banner" width="600">
+    <img src="http://lorempixel.com/600/300/animals/" alt="<?php echo t('CMS montly banner'); ?>" width="600">
   </td>
 </tr>
 <?php if ($toc): ?>
