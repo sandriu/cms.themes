@@ -430,6 +430,7 @@
   .page-taxonomy .node-teaser .links,
   .view-front-end-awards .links {
   margin-top: 20px;
+  float: left;
   }
 
 

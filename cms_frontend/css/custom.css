@@ -1911,7 +1911,6 @@ padding: 3px 7px;
 .view-front-end-awards .node-readmore a,
 .page-taxonomy .node-teaser .node-readmore a {
 color: #333;
-text-transform: uppercase;
 }
 
 .node-teaser .field-name-field-featured-image,
@@ -1939,11 +1938,6 @@ color: #999;
 font-size: 13px;
 }
 
-.view-front-end-news .article-body .field-name-body,
-.page-taxonomy .node-teaser .article-body .field-name-body {
-width: 77%;
-}
-
 .node-teaser blockquote,
 .view-front-end-news .links .fr,
 .view-front-end-news .article-body .field-name-body img,
@@ -1969,14 +1963,18 @@ position: relative;
 }
 
 .view-front-end-news h2,
-.view-front-end-news .links,
 .view-front-end-campaigns h2,
-.view-front-end-campaigns .links,
 .view-front-end-campaigns .article-body .field-name-body,
-.page-taxonomy .node-teaser h2,
-.page-taxonomy .node-teaser .links {
+.page-taxonomy .node-teaser h2 {
 width: 100%;
 padding-left: 260px;
+}
+
+.view-front-end-news .links,
+.view-front-end-campaigns .links,
+.page-taxonomy .node-teaser .links,
+.view-front-end-awards .links {
+float: right;
 }
 
 .view-front-end-campaigns .node-teaser,
@@ -2011,7 +2009,6 @@ width: 100%;
 }
 
 .view-front-end-awards h2,
-.view-front-end-awards .links,
 .view-front-end-awards .article-body .field-name-body {
 width: 100%;
 padding-left: 138px;
