@@ -67,6 +67,10 @@ display: none;
 width: 955px;
 }
 
+.search-area {
+margin-top: 5px;
+}
+
 
 /* CENTER COLUMN */
 .center-column .region-content {
@@ -81,6 +85,10 @@ float: left;
 .center-column.col-md-12,
 .center-column.col-md-12 .region-content {
 width: 970px;
+}
+
+.center-column.col-md-12.instruments-slideshow {
+width: 1010px;
 }
 
 .region-sidebar-second.well,
@@ -106,7 +114,8 @@ padding: 5px;
 float: left;
 }
 
-.right-column {
+.right-column,
+.col-md-4 {
 float: right;
 margin-right: -15px;
 }
@@ -297,6 +306,10 @@ right: 3px;
 padding-right: 0;
 }
 
+.view-news-slideshow .views-field-title .field-content {
+margin-top: 25px;
+}
+
 
 /* INSTRUMENTS slideshow, skin Default */
 .instruments-slideshow {
@@ -316,6 +329,10 @@ height: 25px !important;
 
 .view-display-id-party_range_states_page {
 color: red; /* for warning text about IE8 not supporting SVG maps */
+}
+
+.drupal_ammap_container {
+display: none;
 }
 
 
