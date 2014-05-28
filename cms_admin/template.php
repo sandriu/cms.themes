@@ -29,7 +29,7 @@ function cms_admin_scs_toc($vars) {
     if ($node->type == 'newsletter_news_category')
       continue;
 
-    $output .= '<li><h2 style="font-size: 14px; margin-top: 11px; margin-bottom: 11px;"><a href="#node-' . $node->nid . '" style="color: #0066c0;">' . $node->title . '</a></h2></li>';
+    $output .= '<li><h2 style="font-size: 14px; margin-top: 11px; margin-bottom: 11px;"><a href="#node-' . $node->nid . '" style="color: #0066C0;">' . $node->title . '</a></h2></li>';
   }
 
   $output .= '</ul>';

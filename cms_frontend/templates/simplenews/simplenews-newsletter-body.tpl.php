@@ -32,10 +32,10 @@
   $template_url = url($template_path, array('absolute' => TRUE, 'language' => LANGUAGE_NONE));
   ?>
   <tr>
-    <td colspan="3">
+    <td colspan="2">
       <img src="<?php echo $template_url; ?>/images/CMS_logo.png" alt="<?php echo t('CMS logo'); ?>" style="margin-left: 20px;" />
       <h1 style="display: inline-block; margin-left: 20px; margin-top: 43px; font-size: 21px; color: #003870; margin-bottom: 5px;"><?php print $title; ?></h1>
     </td>
-  </tr>
+  </tr></tbody>
 </table>
 <?php print render($build); ?>
