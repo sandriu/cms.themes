@@ -219,7 +219,8 @@ max-height: 38px;
   Project profile,
   Country profile,
   Instrument profile,
-  Meeting profile */
+  Meeting profile,
+  Document profile */
 .view-front-end-species .col-md-6 {
 width: 470px;
 }
@@ -229,7 +230,8 @@ width: 470px;
 .project-profile-left,
 .country-profile-left,
 .instrument-left,
-.meeting-left {
+.meeting-left,
+.document-left {
 float: left;
 }
 
