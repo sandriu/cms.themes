@@ -156,7 +156,8 @@ float: right;
 float: left;
 }
 
-.view-front-end-species .view-filters select {
+.view-front-end-species .view-filters select,
+.view-front-end-projects .view-filters select {
 min-width: 170px;
 }
 
@@ -220,8 +221,10 @@ max-height: 38px;
   Country profile,
   Instrument profile,
   Meeting profile,
-  Document profile,
-  Working Group profile */
+  Document profile, Publication profile,
+  Working Group profile,
+  Campaign profile,
+  Awards profile */
 .view-front-end-species .col-md-6 {
 width: 470px;
 }
@@ -233,7 +236,10 @@ width: 470px;
 .instrument-left,
 .meeting-left,
 .document-left,
-.working-group-profile-left {
+.working-group-profile-left,
+.campaign-profile-left,
+.award-profile-left,
+.publication-left {
 float: left;
 }
 
