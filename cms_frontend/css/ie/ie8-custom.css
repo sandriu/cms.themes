@@ -220,7 +220,8 @@ max-height: 38px;
   Country profile,
   Instrument profile,
   Meeting profile,
-  Document profile */
+  Document profile,
+  Working Group profile */
 .view-front-end-species .col-md-6 {
 width: 470px;
 }
@@ -231,7 +232,8 @@ width: 470px;
 .country-profile-left,
 .instrument-left,
 .meeting-left,
-.document-left {
+.document-left,
+.working-group-profile-left {
 float: left;
 }
 
