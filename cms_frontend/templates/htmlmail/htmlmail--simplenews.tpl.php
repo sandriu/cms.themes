@@ -56,24 +56,15 @@ $template_path = drupal_get_path('theme', 'cms_frontend');
 $template_url = url($template_path, array('absolute' => TRUE, 'language' => LANGUAGE_NONE));
 ?>
 <table border="0" cellpadding="0" cellspacing="0" width="600">
-  <?php if ($key == 'node' || $key == 'test'): ?>
-    <tbody><tr>
-      <td style="width: 183px; font-size: 11px; vertical-align: top; padding-top: 5px; padding-left: 5px; font-family: Arial, sans-serif;">
-        <a href="<?php echo url('node/' . $params['simplenews_source']->getNode()->nid, array('absolute' => TRUE)); ?>" style="color: #0066C0;">View this e-mail in your browser.</a>
-      </td>
-      <td style="width: 408px; height: 70px; vertical-align: top;">
-      <img src="<?php echo $template_url; ?>/images/header_wave_cms.png" alt="<?php echo t('CMS header'); ?>" />
-        <table style="margin-left: 325px; margin-right: 10px; margin-top: -65px;">
-          <tbody><tr>
-            <td>
-              <a href="http://www.unep.org/"><img src="<?php echo $template_url; ?>/images/UNEP_white_logo_32x34.png" alt="<?php echo t('UNEP logo'); ?>" /></a>
-            </td>
-            <td>
-              <a href="http://www.cms.int/"><img src="<?php echo $template_url; ?>/images/CMS_white_logo_32x34.png" alt="<?php echo t('CMS logo'); ?>" /></a>
-            </td>
-          </tr></tbody>
-        </table>
-      </td>
-    </tr>
-  <?php endif; ?>
-  <?php echo $body; ?>
+  <tbody>
+    <?php if ($key == 'node' || $key == 'test'): ?>
+      <tr>
+        <td style="width: 183px; font-size: 11px; vertical-align: top; padding-top: 5px; padding-left: 5px; font-family: Arial, sans-serif;">
+          <a href="<?php echo url('node/' . $params['simplenews_source']->getNode()->nid, array('absolute' => TRUE)); ?>" style="color: #0066c0;"><?php echo t('View this e-mail in your browser.'); ?></a>
+        </td>
+        <td style="width: 408px; height: 70px; vertical-align: top;">
+          <img src="<?php echo $template_url; ?>/images/header_wave_cms_with_logos.png" alt="<?php echo t('CMS header'); ?>" style="text-align: right;" />
+        </td>
+      </tr>
+    <?php endif; ?>
+    <?php echo $body; ?>
