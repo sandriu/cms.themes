@@ -161,6 +161,10 @@ float: left;
 min-width: 170px;
 }
 
+.view-front-end-news .views-exposed-form .form-text {
+min-width: 300px;
+}
+
 
 /* CHANGES for integrating the old header */
 .left-header {
