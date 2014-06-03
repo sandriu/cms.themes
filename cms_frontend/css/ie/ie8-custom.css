@@ -161,7 +161,8 @@ float: left;
 }
 
 .view-front-end-species .view-filters select,
-.view-front-end-projects .view-filters select {
+.view-front-end-projects .view-filters select,
+.page-meetings-related-meetings .view-filters select {
 min-width: 170px;
 }
 
