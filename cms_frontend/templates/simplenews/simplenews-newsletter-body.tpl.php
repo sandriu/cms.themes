@@ -32,9 +32,12 @@
   $template_url = url($template_path, array('absolute' => TRUE, 'language' => LANGUAGE_NONE));
   ?>
   <tr>
-    <td colspan="2">
-      <img src="<?php echo $template_url; ?>/images/CMS_logo.png" alt="<?php echo t('CMS logo'); ?>" style="margin-left: 20px;" />
-      <h1 style="display: inline-block; margin-left: 20px; margin-top: 43px; font-size: 21px; color: #003870; margin-bottom: 5px;"><?php print $title; ?></h1>
+    <td colspan="2" style="padding-bottom: 10px;">
+      <table width="100%">
+        <tbody><tr>
+          <td style="padding-left: 20px; vertical-align: bottom;"><img src="<?php echo $template_url; ?>/images/CMS_logo.png" alt="<?php echo t('CMS logo'); ?>" style="margin-left: 20px;" /></td>
+          <td style="font-size: 21px; color: #003870; font-family: Arial, sans-serif; vertical-align: bottom;"><?php print $title; ?></td>
+      </tr></tbody></table>
     </td>
   </tr></tbody>
 </table>
