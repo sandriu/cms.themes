@@ -108,6 +108,10 @@ float: right;
 padding: 5px;
 }
 
+.col-md-8 img {
+max-width: 630px;
+}
+
 
 /* RIGHT COLUMN */
 .center-column {
@@ -157,8 +161,13 @@ float: left;
 }
 
 .view-front-end-species .view-filters select,
-.view-front-end-projects .view-filters select {
+.view-front-end-projects .view-filters select,
+.page-meetings-related-meetings .view-filters select {
 min-width: 170px;
+}
+
+.view-front-end-news .views-exposed-form .form-text {
+min-width: 300px;
 }
 
 
@@ -224,7 +233,8 @@ max-height: 38px;
   Document profile, Publication profile,
   Working Group profile,
   Campaign profile,
-  Awards profile */
+  Awards profile,
+  News profile */
 .view-front-end-species .col-md-6 {
 width: 470px;
 }
@@ -239,7 +249,8 @@ width: 470px;
 .working-group-profile-left,
 .campaign-profile-left,
 .award-profile-left,
-.publication-left {
+.publication-left,
+.news-profile-left {
 float: left;
 }
 
