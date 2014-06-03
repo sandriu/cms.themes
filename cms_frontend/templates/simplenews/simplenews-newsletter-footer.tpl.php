@@ -31,22 +31,22 @@
 $template_path = drupal_get_path('theme', 'cms_frontend');
 $template_url = url($template_path, array('absolute' => TRUE, 'language' => LANGUAGE_NONE));
 ?>
-<table width="600px" style="width: 600px; border: 0px; font-family: Lato, Arial, sans-serif; border-collapse: collapse; margin: auto; @font-face { font-family: 'Lato'; font-style: normal; font-weight: 400; src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/9k-RPmcnxYEPm8CNFsH2gg.woff) format('woff'); }">
+<table border="0" cellpadding="0" cellspacing="0" width="600">
   <tbody>
   <?php if (!$opt_out_hidden): ?>
-    <tr style="background-color: #EEE; font-size: 12px; color: #555; border-bottom: 1px solid #DDD;">
-      <td colspan="2" style="padding: 20px;">
+    <tr style="background-color: #EEEEEE; font-size: 11px; color: #555555; border-bottom: 1px solid #DDDDDD; font-family: Arial, sans-serif;">
+      <td colspan="2" style="padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 20px;">
         <p style="margin-bottom: 5px;"><?php echo t('Thank you for your interest in our E-Newsletter.'); ?></p>
         <p style="margin-top: 0px;">For other related news, please also see: <a href="#" style="color: #0066C0;">All News</a>&nbsp;&nbsp;<a href="#" style="color: #0066C0;">Press releases</a>&nbsp;&nbsp;<a href="#" style="color: #0066C0;">Op eds</a>&nbsp;&nbsp;<a href="#" style="color: #0066C0;">Notifications</a>&nbsp;&nbsp;<a href="#" style="color: #0066C0;">Media Watch</a>&nbsp;&nbsp;</p>
       </td>
     </tr>
     <tr style="background-color: #EEE; font-size: 12px; color: #555; border-bottom: 1px solid #DDD;">
-      <td colspan="2" style="padding: 20px;">
-        <p>Follow us on:&nbsp;&nbsp;<a href="#" style="display: inline-block; margin-right: 10px; vertical-align: middle;"><img src="<?php echo $template_url; ?>/images/facebook_logo_25x25.png" alt="Facebook" /></a> <a href="#" style="display: inline-block; margin-right: 10px; vertical-align: middle;"><img src="<?php echo $template_url; ?>/images/twitter_logo_25x25.png" alt="Twitter" /></a> <a href="#" style="display: inline-block; margin-right: 10px; vertical-align: middle;"><img src="<?php echo $template_url; ?>/images/rss_logo_25x25.png" alt="RSS" /></a></p>
+      <td colspan="2" style="padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 20px;">
+        <p>Follow us on:&nbsp;&nbsp;<a href="#" style="display: inline-block; margin-right: 10px; vertical-align: middle;"><img src="<?php echo $template_url; ?>/images/facebook_logo_25x25.png" alt="Facebook" width="25" height="25"/></a> <a href="#" style="display: inline-block; margin-right: 10px; vertical-align: middle;"><img src="<?php echo $template_url; ?>/images/twitter_logo_25x25.png" alt="Twitter" width="25" height="25"/></a> <a href="#" style="display: inline-block; margin-right: 10px; vertical-align: middle;"><img src="<?php echo $template_url; ?>/images/rss_logo_25x25.png" alt="RSS" width="25" height="25"/></a></p>
       </td>
     </tr>
-    <tr style="background-color: #EEE; font-size: 11px; color: #555;">
-      <td style="width: 470px; padding: 20px; line-height: 1.4;">
+    <tr style="background-color: #EEEEEE; font-size: 11px; color: #555555; font-family: Arial, sans-serif;">
+      <td style="width: 470px; padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 20px; line-height: 1.4;">
         <p>This newsletter is published by the CMS Secretariat &copy; 2014 UNEP / CMS<br />UNEP/CMS Secretariat, Platz der Vereinten Nationen 1, 53113 Bonn, Germany<br />Tel: (+49) 228 815 2413, Fax: (+49) 228 815 2450, E-mail: secretariat@cms.int<br /><a href="#" style="color: #0066C0;">www.cms.int</a></p>
       </td>
       <td style="width: 130px; text-align: right; vertical-align: bottom; padding-bottom: 11px; padding-right: 25px;">
@@ -55,8 +55,8 @@ $template_url = url($template_path, array('absolute' => TRUE, 'language' => LANG
     </tr>
   <?php endif; ?>
   <?php if ($key == 'test'): ?>
-    <tr style="background-color: #EEE; font-size: 11px; color: #555;">
-      <td colspan="2" style="padding-left: 20px; line-height: 1.4;">
+    <tr style="background-color: #EEEEEE; font-size: 11px; color: #555555; font-family: Arial, sans-serif;">
+      <td style="width: 470px; padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 20px; line-height: 1.4;">
         <p><?php print $test_message; ?></p>
       </td>
     </tr>
