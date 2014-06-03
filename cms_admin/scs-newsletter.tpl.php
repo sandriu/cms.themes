@@ -18,7 +18,7 @@
           <tbody>
             <tr>
               <td valign="top" style="padding-right: 0px; padding-left: 0px; padding-top: 0px; padding-bottom: 0px; background-color: #003870;">
-                <img alt="<?php echo t('CMS montly banner'); ?>" src="http://lorempixel.com/600/300/animals/" width="600" />
+                <img alt="<?php echo t('CMS monthly banner'); ?>" src="http://lorempixel.com/600/300/animals/" width="600" />
               </td>
             </tr>
           </tbody>
@@ -51,7 +51,7 @@
                     <table width="100%" style="margin-top: 10px;">
                       <tbody>
                         <tr>
-                          <td style="background-color: #003870; color: #fff; font-size: 14px; padding-top: 6px; padding-bottom: 6px; padding-left:10px; padding-right: 10px; border-top-left-radius: 12px; border-top-right-radius: 12px;">&nbsp;&nbsp;<?php echo $node['#node']->title; ?></td>
+                          <td style="background-color: #003870; color: #FFFFFF; font-size: 14px; padding-top: 6px; padding-bottom: 6px; padding-left:10px; padding-right: 10px; border-top-left-radius: 12px; border-top-right-radius: 12px;">&nbsp;&nbsp;<?php echo $node['#node']->title; ?></td>
                         </tr>
                       </tbody>
                     </table>
@@ -78,7 +78,7 @@
                                 <tr>
                                   <td valign="top">
                                     <h3 style="margin-top: 0; color: #5e9732; font-size: 16px; margin-bottom: 16px; line-height: 1.3;"><?php echo $node['body']['#object']->title; ?></h3>
-                                    <span style="font-size: 13px; color: #555;"><?php echo $node['body']['#items'][0]['summary']; ?></span>
+                                    <span style="font-size: 13px; color: #555555;"><?php echo $node['body']['#items'][0]['summary']; ?></span>
                                   </td>
                                 </tr>
                               </tbody>
@@ -90,8 +90,8 @@
                             <table border="0" cellspacing="0" cellpadding="0" align="right">
                               <tbody>
                                 <tr>
-                                  <td bgcolor="#ccd7e2" style="padding: 5px 10px 5px 10px; -webkit-border-radius:3px; border-radius:3px" align="center">
-                                    <a href="<?php echo url('node/' . $node['body']['#object']->nid, array('absolute' => TRUE)); ?>" style="font-size: 11px; font-family: Arial, sans-serif; font-weight: normal; color: #555; text-decoration: none;"><?php echo t('Read more'); ?></a>
+                                  <td bgcolor="#ccd7e2" style="padding-top: 5px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; -webkit-border-radius:3px; border-radius:3px" align="center">
+                                    <a href="<?php echo url('node/' . $node['body']['#object']->nid, array('absolute' => TRUE)); ?>" style="font-size: 11px; font-family: Arial, sans-serif; font-weight: normal; color: #555555; text-decoration: none;"><?php echo t('Read more'); ?></a>
                                   </td>
                                 </tr>
                               </tbody>
