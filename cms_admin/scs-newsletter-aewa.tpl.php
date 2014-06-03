@@ -78,7 +78,7 @@
                             <table border="0" cellspacing="0" cellpadding="0" align="right">
                               <tbody>
                                 <tr>
-                                  <td bgcolor="#ccd7e2" style="padding: 5px 10px 5px 10px; -webkit-border-radius:3px; border-radius:3px" align="center">
+                                  <td bgcolor="#ffdcaa" style="padding: 5px 10px 5px 10px; -webkit-border-radius:3px; border-radius:3px" align="center">
                                     <a href="<?php echo url('node/' . $node['body']['#object']->nid, array('absolute' => TRUE)); ?>" style="font-size: 11px; font-family: Arial, sans-serif; font-weight: normal; color: #555555; text-decoration: none;"><?php echo t('Read more'); ?></a>
                                   </td>
                                 </tr>
