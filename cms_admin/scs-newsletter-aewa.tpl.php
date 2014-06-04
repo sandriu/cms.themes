@@ -61,10 +61,10 @@
                             </table>
                           </td>
                           <td valign="top">
-                            <table align="right" width="370" border="0" cellpadding="15" cellspacing="0">
+                            <table align="right" width="370" border="0" cellpadding="0" cellspacing="0">
                               <tbody>
                                 <tr>
-                                  <td valign="top">
+                                  <td valign="top" style="padding-left: 15px; padding-right: 15px;">
                                     <h3 style="margin-top: 0; color: #47c7e9; font-size: 16px; margin-bottom: 16px; line-height: 1.3;"><?php echo $node['body']['#object']->title; ?></h3>
                                     <span style="font-size: 13px; color: #555555;"><?php echo $node['body']['#items'][0]['summary']; ?></span>
                                   </td>
@@ -74,7 +74,7 @@
                           </td>
                         </tr>
                         <tr>
-                          <td colspan="2" style="text-align: right;">
+                          <td colspan="2" style="padding-right: 15px; text-align: right;">
                             <table border="0" cellspacing="0" cellpadding="0" align="right">
                               <tbody>
                                 <tr>
