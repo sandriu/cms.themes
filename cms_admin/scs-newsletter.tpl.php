@@ -10,11 +10,10 @@
  *    render() function.
  */
 ?>
-
 <?php
 $scheme = theme_get_setting('scheme');
 
-if (empty($sceheme)) {
+if (empty($scheme)) {
   $scheme = 'default';
 }
 

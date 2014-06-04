@@ -56,7 +56,7 @@ $template_path = drupal_get_path('theme', 'cms_frontend');
 $template_url = url($template_path, array('absolute' => TRUE, 'language' => LANGUAGE_NONE));
 $scheme = theme_get_setting('scheme');
 
-if (empty($sceheme)) {
+if (empty($scheme)) {
   $scheme = 'default';
 }
 
