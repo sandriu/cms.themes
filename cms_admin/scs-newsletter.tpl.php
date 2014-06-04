@@ -11,10 +11,6 @@
  */
 ?>
 <?php
-$scheme = theme_get_setting('scheme');
+$profile = variable_get('current_profile', 'cms');
 
-if (empty($scheme)) {
-  $scheme = 'default';
-}
-
-include 'scs-newsletter-' . $scheme . '.tpl.php';
+include 'scs-newsletter-' . $profile . '.tpl.php';

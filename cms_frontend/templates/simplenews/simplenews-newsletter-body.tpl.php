@@ -30,10 +30,6 @@
 <?php
 $template_path = drupal_get_path('theme', 'cms_frontend');
 $template_url = url($template_path, array('absolute' => TRUE, 'language' => LANGUAGE_NONE));
-$scheme = theme_get_setting('scheme');
+$profile = variable_get('current_profile', 'cms');
 
-if (empty($scheme)) {
-  $scheme = 'default';
-}
-
-include 'simplenews-newsletter-body-' . $scheme . '.tpl.php';
+include 'simplenews-newsletter-body-' . $profile . '.tpl.php';
