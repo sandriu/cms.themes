@@ -74,7 +74,7 @@
                           </td>
                         </tr>
                         <tr>
-                          <td colspan="2" style="text-align: right;">
+                          <td colspan="2" style="padding-right: 15px; text-align: right;">
                             <table border="0" cellspacing="0" cellpadding="0" align="right">
                               <tbody>
                                 <tr>
