@@ -54,10 +54,6 @@
 <?php
 $template_path = drupal_get_path('theme', 'cms_frontend');
 $template_url = url($template_path, array('absolute' => TRUE, 'language' => LANGUAGE_NONE));
-$scheme = theme_get_setting('scheme');
+$profile = variable_get('current_profile', 'cms');
 
-if (empty($sceheme)) {
-  $scheme = 'default';
-}
-
-include 'htmlmail--simplenews-' . $scheme . '.tpl.php';
+include 'htmlmail--simplenews-' . $profile . '.tpl.php';
