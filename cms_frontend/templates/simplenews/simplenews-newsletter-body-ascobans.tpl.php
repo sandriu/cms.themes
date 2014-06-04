@@ -4,7 +4,7 @@
           <tbody>
             <tr>
               <td style="padding-left: 20px; vertical-align: bottom;">
-                <img src="<?php echo $template_url; ?>/images/ASCOBANS_logo.png" alt="<?php echo t('CMS logo'); ?>" />
+                <img src="<?php echo $template_url; ?>/images/ascobans_logo.png" alt="<?php echo t('ASCOBANS logo'); ?>" />
               </td>
               <td style="font-size: 21px; color: #585858; font-family: Arial, sans-serif; vertical-align: bottom;"><?php print $title; ?></td>
             </tr>

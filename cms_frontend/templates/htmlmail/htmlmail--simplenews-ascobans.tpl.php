@@ -6,7 +6,7 @@
           <a href="<?php echo url('node/' . $params['simplenews_source']->getNode()->nid, array('absolute' => TRUE)); ?>" style="color: #0066c0;"><?php echo t('View this e-mail in your browser.'); ?></a>
         </td>
         <td style="width: 408px; height: 70px; vertical-align: top;">
-          <img src="<?php echo $template_url; ?>/images/header_wave_ascobans_with_logos.png" alt="<?php echo t('CMS header'); ?>" style="text-align: right;" />
+          <img src="<?php echo $template_url; ?>/images/header_wave_ascobans_with_logos.png" alt="<?php echo t('ASCOBANS header'); ?>" style="text-align: right;" />
         </td>
       </tr>
     <?php endif; ?>
