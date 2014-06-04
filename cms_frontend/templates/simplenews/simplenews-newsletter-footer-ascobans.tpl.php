@@ -23,7 +23,7 @@
     <?php endif; ?>
     <?php if ($key == 'test'): ?>
       <tr style="font-size: 11px; color: #555555; font-family: Arial, sans-serif;">
-        <td colspan="2" style="padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 20px;">
+        <td colspan="2" style="padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 20px; border-top: 1px solid #dddddd;">
           <p><?php print $test_message; ?></p>
         </td>
       </tr>
