@@ -10,45 +10,103 @@
  *    render() function.
  */
 ?>
-<table width="600px" style="width: 600px; border: 0px; font-family: Lato, Arial, sans-serif; border-collapse: collapse; margin: auto; @font-face { font-family: 'Lato'; font-style: normal; font-weight: 400; src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/9k-RPmcnxYEPm8CNFsH2gg.woff) format('woff'); }">
-  <tbody><tr style="background-color: #003870; width: 600px;">
-    <td style="width: 600px; padding: 0;">
-      <img src="http://lorempixel.com/600/300/animals/" alt="<?php echo t('CMS montly banner'); ?>" width="600">
-    </td>
-  </tr>
-  <?php if ($toc): ?>
-    <tr style="background-color: #D6DFE8;">
-      <td style="width: 600px; border-top: 1px solid #003870; padding-right: 25px; padding-top: 15px; padding-bottom: 15px;">
-        <?php echo $toc; ?>
-      </td>
-    </tr>
-  <?php endif; ?>
-  <tr>
-    <td style="width: 600px;">
-      <?php foreach ($nodes as $node): ?>
-        <?php if ($node['#bundle'] == 'newsletter_news_category'): ?>
-          <h2 style="background-color: #003870; color: #FFF; font-size: 14px; padding: 6px 10px; border-top-left-radius: 12px; border-top-right-radius: 12px; margin-top: 30px;"><?php echo $node['#node']->title; ?></h2>
-        <?php else: ?>
-          <table id="node-<?php echo $node['body']['#object']->nid; ?>" style="margin-top: 20px; width: 100%;">
-            <tbody><tr>
-              <td style="vertical-align: top;">
-                <a href="<?php echo url('node/' . $node['body']['#object']->nid, array('absolute' => TRUE)); ?>">
-                  <img src="<?php echo file_create_url($node['field_featured_image']['#items'][0]['uri']); ?>" alt="<?php echo $node['field_featured_image']['#items'][0]['alt']; ?>" style="width: 220px;" />
-                </a>
-              </td>
-              <td style="vertical-align: top; padding-right: 20px; padding-left: 10px;">
-                <h3 style="margin-top: 0; color: #5E9732; font-size: 16px; margin-bottom: 16px; line-height: 1.3;"><?php echo $node['body']['#object']->title; ?></h3>
-                <span style="font-size: 13px; color: #555;"><?php echo $node['body']['#items'][0]['summary']; ?></span>
+<table border="0" cellpadding="0" cellspacing="0" width="600" style="margin-bottom: 20px;">
+  <tbody>
+    <tr>
+      <td>
+        <table align="left" width="600" border="0" cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td valign="top" style="padding-right: 0px; padding-left: 0px; padding-top: 0px; padding-bottom: 0px; background-color: #003870;">
+                <img alt="<?php echo t('CMS monthly banner'); ?>" src="http://lorempixel.com/600/300/animals/" width="600" />
               </td>
             </tr>
-            <tr>
-              <td colspan="2" style="text-align: right;">
-                <a href="<?php echo url('node/' . $node['body']['#object']->nid, array('absolute' => TRUE)); ?>" style="background-color: #CCD7E2; font-size: 11px; text-decoration: none; color: #555; padding: 3px 7px; margin-right: 20px; border-radius: 4px;"><?php echo t('Read more'); ?></a>
-              </td>
-            </tr></tbody>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    <?php if ($toc): ?>
+      <tr>
+        <td>
+          <table align="left" width="600" border="0" cellpadding="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <td style="background-color: #d6dfe8; border-top: 2px solid #003870; padding-right: 25px; padding-left: 20px; padding-top: 15px; padding-bottom: 15px; font-family: Arial, sans-serif;">
+                  <?php echo $toc; ?>
+                </td>
+              </tr>
+            </tbody>
           </table>
-        <?php endif; ?>
-      <?php endforeach; ?>
-    </td>
-  </tr></tbody>
+        </td>
+      </tr>
+    <?php endif; ?>
+    <tr>
+      <td>
+        <table align="left" width="600" border="0" cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td style="font-family: Arial, sans-serif; padding-top: 20px;">
+                <?php foreach ($nodes as $node): ?>
+                  <?php if ($node['#bundle'] == 'newsletter_news_category'): ?>
+                    <table width="100%" style="margin-top: 10px;">
+                      <tbody>
+                        <tr>
+                          <td style="background-color: #003870; color: #FFFFFF; font-size: 14px; padding-top: 6px; padding-bottom: 6px; padding-left:10px; padding-right: 10px; border-top-left-radius: 12px; border-top-right-radius: 12px;">&nbsp;&nbsp;<?php echo $node['#node']->title; ?></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  <?php else: ?>
+                    <table id="node-<?php echo $node['body']['#object']->nid; ?>" style="margin-top: 20px; width: 100%;">
+                      <tbody>
+                        <tr>
+                          <td valign="top">
+                            <table align="left" width="220" border="0" cellpadding="0" cellspacing="0">
+                              <tbody>
+                                <tr>
+                                  <td valign="top">
+                                    <a href="<?php echo url('node/' . $node['body']['#object']->nid, array('absolute' => TRUE)); ?>">
+                                      <img width="220" alt="<?php echo $node['field_featured_image']['#items'][0]['alt']; ?>" src="<?php echo file_create_url($node['field_featured_image']['#items'][0]['uri']); ?>" />
+                                    </a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                          <td valign="top">
+                            <table align="right" width="370" border="0" cellpadding="15" cellspacing="0">
+                              <tbody>
+                                <tr>
+                                  <td valign="top">
+                                    <h3 style="margin-top: 0; color: #5e9732; font-size: 16px; margin-bottom: 16px; line-height: 1.3;"><?php echo $node['body']['#object']->title; ?></h3>
+                                    <span style="font-size: 13px; color: #555555;"><?php echo $node['body']['#items'][0]['summary']; ?></span>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="2" style="text-align: right;">
+                            <table border="0" cellspacing="0" cellpadding="0" align="right">
+                              <tbody>
+                                <tr>
+                                  <td bgcolor="#ccd7e2" style="padding-top: 5px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; -webkit-border-radius:3px; border-radius:3px" align="center">
+                                    <a href="<?php echo url('node/' . $node['body']['#object']->nid, array('absolute' => TRUE)); ?>" style="font-size: 11px; font-family: Arial, sans-serif; font-weight: normal; color: #555555; text-decoration: none;"><?php echo t('Read more'); ?></a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  <?php endif; ?>
+                <?php endforeach; ?>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
 </table>
