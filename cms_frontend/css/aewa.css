@@ -41,7 +41,7 @@ color: #4D4D4D;
 background-color: #FDCF88;
 }
 
-.global-menu > li > ul .active-trail.dropdown-submenu {
+.global-menu > li > ul > .active-trail.dropdown-submenu {
 background: #FDCF88 url("../images/arrow_hexFDDFAF.png") 49% 110% no-repeat;
 }
 
