@@ -107,6 +107,9 @@
                     if ($document['entity']->status == 1) {
                         foreach ($document['entity']->field_document_type[$lang] as $term) {
                             if(!in_array($term['tid'], $types)) {
+                                if($term['tid'] == 1330) {
+                                    dpm($document);
+                                }
                                 $types []= $term['tid'];
                             }
                         }
@@ -114,6 +117,7 @@
                 }
                 foreach ($types as $tid) {
                     $type_term = taxonomy_term_load($tid);
+                    if (!empty($type_term)) {
             ?>
 
                         <div class="panel panel-default"><div class="panel-heading">
@@ -137,7 +141,7 @@
                         </div>
 
             <?php
-
+                    }
                 }
             ?>
 
