@@ -50,7 +50,8 @@ background: #79A5D6 url("../images/arrow_hexA2BEE3.png") 49% 110% no-repeat;
 
 
 /* NEWS slideshow */
-.view-news-slideshow .views-field-title {
+.view-news-slideshow .views-field-title,
+.view-news-slideshow .views-field-title-field {
 background-image: -webkit-linear-gradient(top, rgba(121, 165, 214, 0), rgba(121, 165, 214, 0.7));
 background-image: -moz-linear-gradient(top, rgba(121, 165, 214, 0), rgba(121, 165, 214, 0.7));
 background-image: -o-linear-gradient(top, rgba(121, 165, 214, 0), rgba(121, 165, 214, 0.7));

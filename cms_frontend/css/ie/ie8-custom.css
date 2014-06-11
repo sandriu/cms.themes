@@ -67,6 +67,10 @@ display: none;
 width: 955px;
 }
 
+.search-area {
+margin-top: 5px;
+}
+
 
 /* CENTER COLUMN */
 .center-column .region-content {
@@ -81,6 +85,10 @@ float: left;
 .center-column.col-md-12,
 .center-column.col-md-12 .region-content {
 width: 970px;
+}
+
+.center-column.col-md-12.instruments-slideshow {
+width: 1010px;
 }
 
 .region-sidebar-second.well,
@@ -100,13 +108,18 @@ float: right;
 padding: 5px;
 }
 
+.col-md-8 img {
+max-width: 630px;
+}
+
 
 /* RIGHT COLUMN */
 .center-column {
 float: left;
 }
 
-.right-column {
+.right-column,
+.col-md-4 {
 float: right;
 margin-right: -15px;
 }
@@ -147,6 +160,16 @@ float: right;
 float: left;
 }
 
+.view-front-end-species .view-filters select,
+.view-front-end-projects .view-filters select,
+.page-meetings-related-meetings .view-filters select {
+min-width: 170px;
+}
+
+.view-front-end-news .views-exposed-form .form-text {
+min-width: 300px;
+}
+
 
 /* CHANGES for integrating the old header */
 .left-header {
@@ -179,7 +202,7 @@ margin-top: 10px;
 
 /* fixes for menu level 2 */
 .global-menu .dropdown-menu {
-width: 955px !important;
+width: 986px !important;
 }
 
 .global-menu > li > div.submenu-teaser li,
@@ -206,7 +229,12 @@ max-height: 38px;
   Project profile,
   Country profile,
   Instrument profile,
-  Meeting profile */
+  Meeting profile,
+  Document profile, Publication profile,
+  Working Group profile,
+  Campaign profile,
+  Awards profile,
+  News profile */
 .view-front-end-species .col-md-6 {
 width: 470px;
 }
@@ -216,7 +244,13 @@ width: 470px;
 .project-profile-left,
 .country-profile-left,
 .instrument-left,
-.meeting-left {
+.meeting-left,
+.document-left,
+.working-group-profile-left,
+.campaign-profile-left,
+.award-profile-left,
+.publication-left,
+.news-profile-left {
 float: left;
 }
 
@@ -240,14 +274,19 @@ width: 627px;
 .container .col-md-4.species-right-column,
 .container .col-md-4.project-profile-right,
 .container .col-md-4.country-profile-right,
-.container .col-md-4.instrument-right,
+.instrument-right,
 .container .col-md-4.meeting-right {
 width: 313px;
 }
 
+.instrument-right .field-name-field-picture {
+width: 280px;
+}
+
 
 /* NEWS slideshow, skin Default */
-.view-news-slideshow .views-field-title {
+.view-news-slideshow .views-field-title,
+.view-news-slideshow .views-field-title-field {
 background: url("../images/slideshow-title-bkg.png") 0% 9% repeat-x;
 }
 
@@ -268,13 +307,15 @@ height: 337px;
 height: 337px;
 }
 
-.view-news-slideshow .views-field-title {
+.view-news-slideshow .views-field-title,
+.view-news-slideshow .views-field-title-field {
 width: 647px;
 top: 194px;
 height: 107px;
 }
 
-.view-news-slideshow .views-field-title a {
+.view-news-slideshow .views-field-title a,
+.view-news-slideshow .views-field-title-field a {
 font-size: 18px;
 line-height: 26px;
 min-height: 60px;
@@ -288,6 +329,10 @@ border-radius: 6px;
 top: 305px;
 right: 3px;
 padding-right: 0;
+}
+
+.view-news-slideshow .views-field-title .field-content {
+margin-top: 25px;
 }
 
 
@@ -309,6 +354,10 @@ height: 25px !important;
 
 .view-display-id-party_range_states_page {
 color: red; /* for warning text about IE8 not supporting SVG maps */
+}
+
+.drupal_ammap_container {
+display: none;
 }
 
 

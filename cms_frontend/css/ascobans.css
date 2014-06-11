@@ -54,9 +54,14 @@ background-color: #FEF1D8;
 background: #FFE6B5 url("../images/arrow_hexFEF1D8.png") 49% 110% no-repeat;
 }
 
+.language-menu {
+display: none;
+}
+
 
 /* NEWS slideshow */
-.view-news-slideshow .views-field-title {
+.view-news-slideshow .views-field-title,
+.view-news-slideshow .views-field-title-field {
 background-image: -webkit-linear-gradient(top, rgba(141, 216, 247, 0), rgba(141, 216, 247, 0.7));
 background-image: -moz-linear-gradient(top, rgba(141, 216, 247, 0), rgba(141, 216, 247, 0.7));
 background-image: -o-linear-gradient(top, rgba(141, 216, 247, 0), rgba(141, 216, 247, 0.7));
@@ -71,7 +76,9 @@ background: rgba(141, 216, 247, 0.7);
 background: url("../images/ascobans_news_hover.png") no-repeat;
 }
 
-.view-news-slideshow .views-field-title a:hover {
+.view-news-slideshow .views-field-title a:hover,
+.view-news-slideshow .views-field-title-field a:hover,
+.view-news-slideshow .view-footer a:hover {
 color: #575859;
 }
 

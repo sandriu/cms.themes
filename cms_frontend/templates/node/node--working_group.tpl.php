@@ -21,11 +21,31 @@
                 <?php echo render($content['body']); ?>
             </div>
             <?php ob_start(); render_slot($node, 'details', 'working_group', $content); $details = ob_get_contents(); ob_end_clean(); ?>
-            <?php if(!empty($details)): ?>
-                <div class="working-group-profile-right profile well col-md-4">
-                    <?php echo $details; ?>
+
+            <?php
+            $sidebar_blocks = block_get_blocks_by_region('sidebar_second');
+            unset($sidebar_blocks['#sorted']);
+            ?>
+
+            <?php if(!empty($details) || !empty($sidebar_blocks)): ?>
+                <div class="col-md-4 profile">
+                    <?php if(!empty($details)) { ?>
+                        <div class="working-group-profile-right well">
+                            <?php echo $details; ?>
+                        </div>
+                    <?php } ?>
+
+                    <!-- Render sidebar blocks -->
+                    <?php if (!empty($sidebar_blocks)) { ?>
+                        <?php foreach($sidebar_blocks as $block) { ?>
+                            <div class="well">
+                                <?php print render($block); ?>
+                            </div>
+                        <?php } ?>
+                    <?php } ?>
                 </div>
             <?php endif; ?>
+
         </div>
         <div class="row">
             <div class="working-group-full-width profile col-md-12">

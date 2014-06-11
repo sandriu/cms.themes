@@ -31,7 +31,6 @@ margin-bottom: 0;
 padding: 0;
 display: inline-block;
 float: left;
-overflow: hidden;
 }
 
 .down-area {
@@ -493,6 +492,28 @@ margin: 6px 0px;
 color: #0066C0;
 }
 
+/* Back to top button */
+#top-link-block.affix-top {
+position: absolute;
+bottom: -85px;
+right: 10px;
+}
+
+#top-link-block.affix {
+position: fixed;
+bottom: 18px;
+right: 10px;
+z-index: 100;
+}
+
+#top-link-block {
+z-index: 100;
+}
+
+#top-link-block .glyphicon {
+padding-right: 5px;
+}
+
 /* this block for dropdown-menu to be removed if we remove the class */
 .footer-menu .dropdown-menu {
 position: relative;
@@ -624,7 +645,8 @@ height: 390px; /*455px;*/
 border-radius: 6px;
 }
 
-.view-news-slideshow .views-field-title {
+.view-news-slideshow .views-field-title,
+.view-news-slideshow .views-field-title-field {
 display: block;
 position: absolute;
 top: 236px;
@@ -633,7 +655,8 @@ height: 112px;
 padding: 0px 20px;
 }
 
-.view-news-slideshow .views-field-title .field-content {
+.view-news-slideshow .views-field-title .field-content,
+.view-news-slideshow .views-field-title-field .field-content {
 display: block;
 width: 100%;
 margin-top: 40px;
@@ -654,7 +677,8 @@ padding-right: 110px;
 text-align: right;
 }
 
-.view-news-slideshow .views-field-title a {
+.view-news-slideshow .views-field-title a,
+.view-news-slideshow .views-field-title-field a {
 font-size: 30px; /* as in the HTML proposal */
 font-size: 23px; /* fallback size in case news item has a very long title - avoid displaying it on 3 rows */
 font-weight: bold;
@@ -668,7 +692,9 @@ padding-right: 20px;
 }
 
 .view-news-slideshow .views-field-title a:hover,
-.view-news-slideshow .view-footer a {
+.view-news-slideshow .view-footer a,
+.view-news-slideshow .views-field-title-field a:hover,
+.view-news-slideshow .view-footer a:hover {
 text-decoration: none;
 color: #FFD116;
 }
@@ -747,17 +773,20 @@ padding-right: 15px;
   height: 319px;
   }
 
-  .view-news-slideshow .views-field-title {
+  .view-news-slideshow .views-field-title,
+  .view-news-slideshow .views-field-title-field {
   width: 616px;
   top: 176px;
   height: 101px;
   }
 
-  .view-news-slideshow .views-field-title .field-content {
+  .view-news-slideshow .views-field-title .field-content,
+  .view-news-slideshow .views-field-title-field .field-content {
   min-height: 60px;
   }
 
-  .view-news-slideshow .views-field-title a {
+  .view-news-slideshow .views-field-title a,
+  .view-news-slideshow .views-field-title-field a {
   font-size: 19px;
   line-height: 26px;
   }
@@ -813,7 +842,8 @@ font-size: 12px;
 line-height: 15px;
 }
 
-.instruments-slideshow .jcarousel-item .views-field-title {
+.instruments-slideshow .jcarousel-item .views-field-title,
+.instruments-slideshow .jcarousel-item .views-field-title-field {
 position: absolute;
 top: 83px;
 width: 136px;
@@ -876,7 +906,7 @@ margin-bottom: 10px;
 padding: 0;
 }
 
-.ui-widget-content {
+.block-quicktabs .quicktabs-ui-wrapper {
 border: 0;
 }
 
@@ -945,7 +975,8 @@ margin-bottom: 18px;
 }
 
 .ui-tabs-panel .article-body ul li a,
-.ui-tabs-panel .views-field-title {
+.ui-tabs-panel .views-field-title,
+.ui-tabs-panel .views-field-title-field {
 display: inline-block;
 width: 67%;
 padding: 10px;
@@ -964,7 +995,8 @@ color: #0066C0;
 float: left;
 }
 
-.ui-tabs-panel .views-field-title {
+.ui-tabs-panel .views-field-title,
+.ui-tabs-panel .views-field-title-field {
 padding: 0px 10px 10px 10px;
 line-height: 24px;
 width: 82%;
@@ -1264,6 +1296,14 @@ margin: 0 auto 2em auto;
 margin-bottom: 20px;
 }
 
+/* Goolge Maps*/
+#gmap {
+height: 300px;
+}
+#gmap.google_maps_no_map {
+height: auto;
+}
+
 /* VIEWS (DRUPAL) */
 table.views-table > caption {
 /*from bootstrap h4*/
@@ -1301,7 +1341,8 @@ font-size: 13px;
 .working-group-profile-right .field-label,
 .campaign-profile-right .field-label,
 .project-profile-left .panel-body td:first-of-type,
-.award-profile-right .field-label {
+.award-profile-right .field-label,
+.meeting-right .field-label {
 color: #888;
 font-weight: normal;
 width: 130px;
@@ -1421,6 +1462,7 @@ display: none;
 }
 
 .profile table .views-field-title,
+.profile table .views-field-title-field,
 .profile table .views-field-field-document-number {
 width: 200px;
 }
@@ -1443,15 +1485,14 @@ margin-left: 25%;
 background: transparent;
 }
 
-.profile select {
-position: absolute;
-top: -30px;
-left: 0;
+.instrument-sidebar select {
 width: 100%;
+margin-bottom: 10px;
 }
 
-.instrument-right.profile {
-margin-top: 30px;
+.profile.col-md-4 {
+padding-left: 0;
+padding-right: 0;
 }
 
 .read-more {
@@ -1544,25 +1585,30 @@ padding-left: 12px;
 .campaign-profile-right .field-label,
 .campaign-profile-right .field-items,
 .award-profile-right .field-items,
-.award-profile-right .field-label {
+.award-profile-right .field-label,
+.meeting-right .field-label,
+.meeting-right .field-items {
 display: inline-block;
 font-size: 13px;
 }
 
 .campaign-profile-right .field-label,
-.project-profile-left .panel-body td:first-of-type {
+.project-profile-left .panel-body td:first-of-type,
+.meeting-right .field-label {
 vertical-align: top;
 padding-top: 2px;
 }
 
 .campaign-profile-right .field-items,
-.award-profile-right .field-items {
+.award-profile-right .field-items,
+.meeting-right .field-items {
 max-width: 143px;
 }
 
 @media screen and (min-width: 1200px) {
   .campaign-profile-right .field-items,
-  .award-profile-right .field-items {
+  .award-profile-right .field-items,
+  .meeting-right .field-items {
   max-width: 210px;
   }
 }
@@ -1687,14 +1733,64 @@ margin-bottom: 10px;
 }
 
 /* news share area */
-.news-profile-right .share-area {
-margin-top: 40px;
-}
-
-.news-profile-right .share-area a {
+#block-widgets-s-addthis-share a {
 display: inline-block;
 margin-right: 20px;
 vertical-align: top;
+}
+
+/* Edit page:
+    avoid attachment file infos to overlap, on news profile edit and other basic pages */
+.node-form .form-wrapper {
+margin-top: 20px;
+}
+
+.node-form .form-wrapper fieldset legend {
+background: #999;
+margin-top: 20px;
+color: #FFF;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+padding: 5px 0px 0px 5px;
+}
+
+.node-form .form-control.draggable {
+height: auto;
+margin-top: 3px;
+width: 1140px;
+display: table-row;
+}
+
+.node-form .chosen-container.form-control {
+height: auto;
+border: 0;
+box-shadow: none;
+padding-left: 0;
+}
+
+.field-widget-file-generic .form-control.form-text {
+max-width: 780px;
+}
+
+.node-form .checkbox input[type="checkbox"] {
+margin-left: 0;
+}
+
+.node-form .fieldset-wrapper table thead {
+background: #ccc;
+}
+
+.node-form .fieldset-wrapper .table tbody > tr > td {
+border-top: 0;
+}
+
+.node-form .draggable a.tabledrag-handle {
+min-width: 36px;
+min-height: 26px;
+}
+
+.node-form .chosen-container-multi .chosen-choices li.search-field input[type="text"] {
+height: 20px;
 }
 
 
@@ -1814,14 +1910,13 @@ padding: 3px 7px;
 .view-front-end-awards .node-readmore a,
 .page-taxonomy .node-teaser .node-readmore a {
 color: #333;
-text-transform: uppercase;
 }
 
 .node-teaser .field-name-field-featured-image,
 .node-teaser .field-name-field-campaign-picture {
 display: inline-block;
 float: left;
-padding-right: 30px;
+padding-right: 40px;
 }
 
 .view-front-end-news .article-body .text-muted,
@@ -1842,18 +1937,14 @@ color: #999;
 font-size: 13px;
 }
 
-.view-front-end-news .article-body .field-name-body,
-.page-taxonomy .node-teaser .article-body .field-name-body {
-width: 77%;
-}
-
 .node-teaser blockquote,
 .view-front-end-news .links .fr,
 .view-front-end-news .article-body .field-name-body img,
 .view-front-end-awards .article-body .field-name-body img,
 .view-display-id-media_watch .node-teaser .field-name-field-featured-image,
 .view-display-id-notifications .field-name-field-featured-image,
-.view-display-id-working_groups img {
+.view-display-id-working_groups img,
+.node.node-award .field-name-body img {
 display: none;
 }
 
@@ -1861,7 +1952,8 @@ display: none;
 .view-front-end-working-groups .views-row,
 .view-front-end-campaigns .views-row,
 .view-front-end-awards .views-row,
-.page-taxonomy .node-teaser .views-row {
+.page-taxonomy .node-teaser .views-row,
+.node.node-award {
 margin-bottom: 20px;
 }
 
@@ -1870,17 +1962,23 @@ position: relative;
 }
 
 .view-front-end-news h2,
-.view-front-end-news .links,
 .view-front-end-campaigns h2,
-.view-front-end-campaigns .links,
 .view-front-end-campaigns .article-body .field-name-body,
-.page-taxonomy .node-teaser h2,
-.page-taxonomy .node-teaser .links {
+.page-taxonomy .node-teaser h2 {
 width: 100%;
-padding-left: 250px;
+padding-left: 260px;
 }
 
-.view-front-end-campaigns .node-teaser {
+.view-front-end-news .links,
+.view-front-end-campaigns .links,
+.page-taxonomy .node-teaser .links,
+.view-front-end-awards .links {
+float: right;
+}
+
+.view-front-end-campaigns .node-teaser,
+.view-front-end-awards .node-teaser,
+.node.node-award {  /* for award sponsors listing */
 position: relative;
 }
 
@@ -1910,7 +2008,6 @@ width: 100%;
 }
 
 .view-front-end-awards h2,
-.view-front-end-awards .links,
 .view-front-end-awards .article-body .field-name-body {
 width: 100%;
 padding-left: 138px;

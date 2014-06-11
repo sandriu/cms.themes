@@ -19,50 +19,71 @@
     <div class="container">
       <div class="row">
         <div class="meeting-left profile col-md-8">
-          <div id="gmap" style="height: 300px;"></div>
-          <small class="text-muted"><strong><?php echo t('The location on the map is approximate!'); ?></strong></small>
+          <div id="gmap"></div>
+          <small class="gmap-help-text text-muted"><strong><?php echo t('The location on the map is approximate!'); ?></strong></small>
           <?php echo render($content['body']); ?>
         </div>
 
-        <div class="meeting-right well profile col-md-4">
-          <?php
+      <div class="col-md-4 profile">
+          <div class="meeting-right well">
+              <?php
               echo render($content['field_meeting_image']);
-          ?>
-
-          <table class="table table-condensed table-hover two-columns">
-            <tbody>
-              <?php
-                echo render($content['field_meeting_start']);
-                echo render($content['field_meeting_start_time']);
-                echo render($content['field_meeting_end']);
-                echo render($content['field_meeting_reg_deadline']);
-                echo render($content['field_meeting_organizer']);
-                echo render($content['field_meeting_coorganizer']);
-                echo render($content['field_instrument']);
-                echo render($content['field_meeting_type']);
-                echo render($content['field_meeting_kind']);
-                echo render($content['field_meeting_status']);
-                echo render($content['field_meeting_languages']);
-                #echo render($content['field_meeting_url']);
-                echo render($content['field_country']);
-                echo render($content['field_meeting_city']);
               ?>
-            </tbody>
-          </table>
 
-          <table class="table table-condensed table-hover two-columns">
-            <tbody>
-              <?php
+              <table class="table table-condensed table-hover two-columns">
+                  <tbody>
+                  <?php
+                  echo render($content['field_meeting_start']);
+                  echo render($content['field_meeting_start_time']);
+                  echo render($content['field_meeting_end']);
+                  echo render($content['field_meeting_reg_deadline']);
+                  echo render($content['field_meeting_organizer']);
+                  echo render($content['field_meeting_coorganizer']);
+                  echo render($content['field_instrument']);
+                  echo render($content['field_meeting_type']);
+                  echo render($content['field_meeting_kind']);
+                  echo render($content['field_meeting_status']);
+                  echo render($content['field_meeting_languages']);
+                  #echo render($content['field_meeting_url']);
+                  echo render($content['field_country']);
+                  echo render($content['field_meeting_city']);
+                  echo render($content['field_meeting_location']);
+                  ?>
+                  </tbody>
+              </table>
+
+              <table class="table table-condensed table-hover two-columns">
+                  <tbody>
+                  <?php
                   echo render($content['field_meeting_address']);
+                    echo render($content['field_meeting_publication']);
+                  ?>
+                  </tbody>
+              </table>
+
+
+              <?php
+              hide($content['links']);
+              hide($content['comments']);
               ?>
-            </tbody>
-          </table>
+          </div>
 
           <?php
-            hide($content['links']);
-            hide($content['comments']);
+          $sidebar_blocks = block_get_blocks_by_region('sidebar_second');
+          unset($sidebar_blocks['#sorted']);
           ?>
-        </div>
+          <!-- Render sidebar blocks -->
+          <?php if (!empty($sidebar_blocks)) { ?>
+              <?php foreach($sidebar_blocks as $block) { ?>
+                  <div class="well">
+                      <?php print render($block); ?>
+                  </div>
+              <?php } ?>
+          <?php } ?>
+      </div>
+
+
+
       </div>
 
       <div class="row">

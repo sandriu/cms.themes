@@ -41,7 +41,7 @@ color: #4D4D4D;
 background-color: #FDCF88;
 }
 
-.global-menu > li > ul .active-trail.dropdown-submenu {
+.global-menu > li > ul > .active-trail.dropdown-submenu {
 background: #FDCF88 url("../images/arrow_hexFDDFAF.png") 49% 110% no-repeat;
 }
 
@@ -59,7 +59,8 @@ background: #FDDFAF;
 
 
 /* NEWS slideshow */
-.view-news-slideshow .views-field-title {
+.view-news-slideshow .views-field-title,
+.view-news-slideshow .views-field-title-field {
 background-image: -webkit-linear-gradient(top, rgba(29, 93, 145, 0), rgba(29, 93, 145, 0.7));
 background-image: -moz-linear-gradient(top, rgba(29, 93, 145, 0), rgba(29, 93, 145, 0.7));
 background-image: -o-linear-gradient(top, rgba(29, 93, 145, 0), rgba(29, 93, 145, 0.7));
@@ -75,7 +76,9 @@ background: url("../images/aewa_news_hover.png") no-repeat;
 }
 
 .view-news-slideshow .views-field-title a:hover,
-.view-news-slideshow .view-footer a {
+.view-news-slideshow .view-footer a,
+.view-news-slideshow .views-field-title-field a:hover,
+.view-news-slideshow .view-footer a:hover {
 color: #FBAF38;
 }
 
