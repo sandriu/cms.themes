@@ -201,7 +201,7 @@ border-right: 1px solid #fff;
 display: none;
 position: absolute;
 overflow: visible !important;
-z-index: 9999;
+z-index: 999;
 }
 
 .global-menu.nav-show-level-2 {
