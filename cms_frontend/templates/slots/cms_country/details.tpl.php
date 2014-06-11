@@ -12,6 +12,7 @@
             <?php echo t('Member to StC'); ?>
         <?php endif; ?>
         <?php echo render($content['field_country_date_of_accession']); ?>
-        <?php echo render($content['field_country_date_of_acceptance']); ?>                
+        <?php echo render($content['field_country_date_of_acceptance']); ?>
     </tbody>
 </table>
+<?php echo render($node->nfp_contacts); ?>
