@@ -107,9 +107,6 @@
                     if ($document['entity']->status == 1) {
                         foreach ($document['entity']->field_document_type[$lang] as $term) {
                             if(!in_array($term['tid'], $types)) {
-                                if($term['tid'] == 1330) {
-                                    dpm($document);
-                                }
                                 $types []= $term['tid'];
                             }
                         }
