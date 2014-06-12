@@ -46,4 +46,3 @@
 <?php
 hide($content['links']);
 hide($content['comments']);
-?>

@@ -83,17 +83,7 @@ span.unpublished-icon {
   background: url(../images/icon_no.gif) center no-repeat;
 }
 
-
-/* Contacts */
-
-#contacts-listing_wrapper {
-  margin-top: 10px;
-}
-
-
-/*
-Menu bootstrap for nolink
-*/
+/* Menu bootstrap for nolink */
 .navbar-default .navbar-nav>li>span {
     position: relative;
     display: block;
@@ -103,3 +93,13 @@ Menu bootstrap for nolink
     background-color: #e7e7e7;
     cursor: pointer;
 }
+
+/* Contacts */
+#contacts-listing_wrapper {
+  margin-top: 10px;
+}
+
+#instrument-fieldset-wrapper .panel-body { padding: 25px; }
+#instrument-fieldset-wrapper .row { margin-top: 25px; border-bottom: 1px dashed #c0c0c0; }
+#instrument-fieldset-wrapper .row:last-child { border: 0; }
+

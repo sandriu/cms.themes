@@ -1,15 +1,9 @@
 <div class="row">
     <div class="col-md-7">
-    <?php
-        echo render($content['body']);
-    ?>
+    <?php echo render($content['body']); ?>
     </div>
-
-    <?php
-        render_slot($node, 'gallery', 'project');
-    ?>
+    <?php render_slot($node, 'gallery', 'project'); ?>
 </div>
-
 <div class="row">
     <div class="col-md-12">
         <table class="table table-condensed table-hover two-columns">
@@ -79,8 +73,6 @@
     ?>
     </div>
 </div>
-
 <?php
     hide($content['links']);
     hide($content['comments']);
-?>

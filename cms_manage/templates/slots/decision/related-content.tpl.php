@@ -3,7 +3,6 @@
         echo t('Related content');
     ?>
 </h3>
-
 <ul class="nav nav-tabs" id="related-content-tabs">
     <?php
         render_tab(t('Species'), 'related-content-species', 'active', 'field_decision_species', TRUE, $content);
@@ -12,7 +11,6 @@
         render_tab(t('Threats'), 'related-content-threats', '', 'field_decision_threats', TRUE, $content);
     ?>
 </ul>
-
 <div class="tab-content">
     <div class="tab-pane active loaded" id="related-content-species">
         <?php
@@ -29,7 +27,6 @@
             }
         ?>
     </div>
-
     <div class="tab-pane" id="related-content-documents">
         <?php
             if (check_display_field($content, 'field_decision_document')) {

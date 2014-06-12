@@ -58,14 +58,8 @@
 </div>
 
 <div class="clearfix">&nbsp;</div>
-
 <?php echo render($content['field_publication_attachment']); ?>
-
-<?php
-    echo render_slot($node, 'related-content', 'publication', $content);
-?>
-
-
+<?php echo render_slot($node, 'related-content', 'publication', $content); ?>
 <?php
     hide($content['links']);
     hide($content['comments']);

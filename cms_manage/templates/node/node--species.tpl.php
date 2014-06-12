@@ -8,7 +8,6 @@
     render_slot($node, 'gallery', 'species');
 ?>
 </div>
-
 <?php
     render_slot($node, 'common-names', 'species', $content);
     render_slot($node, 'assessment', 'species', $content);
@@ -27,4 +26,3 @@
     hide($content['comments']);
 
     drupal_add_js(drupal_get_path('theme', 'cms_manage') . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR . 'species.js');
-?>

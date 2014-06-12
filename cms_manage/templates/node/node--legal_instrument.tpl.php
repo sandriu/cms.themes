@@ -20,4 +20,3 @@
 <link type="text/css" rel="stylesheet" href="/<?php echo $DT_css_path; ?>">
 <?php
     drupal_add_js(drupal_get_path('theme', 'cms_manage') . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR . 'simple_datatables.js');
-?>
