@@ -100,6 +100,5 @@ span.unpublished-icon {
 }
 
 #instrument-fieldset-wrapper .panel-body { padding: 25px; }
-#instrument-fieldset-wrapper .row { margin-top: 25px; border-bottom: 1px dashed #c0c0c0; }
+#instrument-fieldset-wrapper .row { border-bottom: 1px dashed #c0c0c0; }
 #instrument-fieldset-wrapper .row:last-child { border: 0; }
-
