@@ -114,6 +114,7 @@
                 }
                 foreach ($types as $tid) {
                     $type_term = taxonomy_term_load($tid);
+                    if (!empty($type_term)) {
             ?>
 
                         <div class="panel panel-default"><div class="panel-heading">
@@ -137,7 +138,7 @@
                         </div>
 
             <?php
-
+                    }
                 }
             ?>
 
