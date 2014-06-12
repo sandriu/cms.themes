@@ -49,8 +49,12 @@
             });
         }
 
+        //Remove a duplicate menu container in CMS (source unknown)
+        $('#navbar .global-menu.menu.nav.navbar-nav').eq(1).closest('.container').remove();
         //Add classes to the menu to give a margin-bottom to push all content under menu
         switch ($li_parents.length) {
+            case 0:
+                break;
             case 1:
                 $global_menu.addClass('nav-show-level-2');
                 break;
@@ -61,10 +65,8 @@
                     $global_menu.addClass('nav-show-level-3');
                 }
                 break;
-            case 3:
-                $global_menu.addClass('nav-show-level-3');
-                break;
             default:
+                $global_menu.addClass('nav-show-level-3');
                 break;
         }
 
