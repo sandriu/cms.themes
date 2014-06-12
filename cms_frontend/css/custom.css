@@ -443,6 +443,12 @@ padding-top: 0px;
 border-bottom: 1px solid #DDD;
 }
 
+/* Fix for calendar */
+.calendar-calendar .week-view #multi-day-container, .calendar-calendar .day-view #multi-day-container{
+min-height: 50px;
+height: auto;
+}
+
 #block-random-species-random-species p a {
 padding-left: 73px;
 display: block;
