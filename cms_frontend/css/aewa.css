@@ -49,28 +49,29 @@ background: #FDCF88 url("../images/arrow_hexFDDFAF.png") 49% 110% no-repeat;
 background: #FDDFAF url("../images/arrow_hexFFEFD5.png") 49% 110% no-repeat;
 }
 
-.menu-block-4 ul {
+.menu-level-4 ul {
 background: #FFEFD5;
 padding-left: 11px;
 }
 
-.menu-block-4 ul li {
+.menu-level-4 ul li {
 float: left;
 padding: 0px 8px;
 min-width: 10px;
 }
 
-.menu-block-4 h2 {
+.menu-level-4 h2 {
 font-size: 15px;
 font-weight: 400;
 margin-top: 11px;
 }
 
-.menu-block-4 h2 a {
+.menu-level-4 h2 a {
 color: #B07B27;
 }
 
-.menu-block-4 h2 a:hover {
+.menu-level-4 h2 a:hover,
+.menu-level-4 .active-trail {
 color: #4D4D4D;
 text-decoration: none;
 }
