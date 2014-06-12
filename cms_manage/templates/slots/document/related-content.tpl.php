@@ -35,7 +35,6 @@
         }
         ?>
     </ul>
-
     <div class="tab-content">
         <?php
         $first_tab = 'active loaded';
