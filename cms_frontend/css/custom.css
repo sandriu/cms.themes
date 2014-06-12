@@ -1084,6 +1084,8 @@ text-decoration: none;
 border: 2px solid #ddd;
 border-radius: 16px;
 padding: 4px;
+min-width: 33px;
+display: inline-block;
 }
 
 .view-calendar table td.mini {
@@ -1128,7 +1130,7 @@ padding: 5px 11px 5px 5px;
 }
 
 .calendar-calendar tr td.today {
-background-color: transparent;
+background-color: #F5F5F5;
 }
 
 .calendar-calendar tr td.today a {
