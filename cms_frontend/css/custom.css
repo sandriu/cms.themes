@@ -1127,6 +1127,15 @@ padding: 5px 20px 5px 5px;
 padding: 5px 11px 5px 5px;
 }
 
+.calendar-calendar tr td.today {
+background-color: transparent;
+}
+
+.calendar-calendar tr td.today a {
+background-color: #C3D6E4;
+border-color: #9DBDD5;
+}
+
 
 /* "LEARN ABOUT" section */
 #block-block-3,
