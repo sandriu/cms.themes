@@ -70,7 +70,8 @@ margin-top: 11px;
 color: #B07B27;
 }
 
-.menu-level-4 h2 a:hover {
+.menu-level-4 h2 a:hover,
+.menu-level-4 .active-trail {
 color: #4D4D4D;
 text-decoration: none;
 }
