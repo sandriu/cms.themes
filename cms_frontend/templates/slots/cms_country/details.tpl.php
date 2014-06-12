@@ -15,4 +15,8 @@
         <?php echo render($content['field_country_date_of_acceptance']); ?>
     </tbody>
 </table>
-<?php echo render($node->nfp_contacts); ?>
+<?php
+    if (!empty($node->nfp_contacts)) {
+        print render($node->nfp_contacts);
+    }
+?>
