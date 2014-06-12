@@ -45,6 +45,36 @@ background-color: #FDCF88;
 background: #FDCF88 url("../images/arrow_hexFDDFAF.png") 49% 110% no-repeat;
 }
 
+.global-menu > li > ul ul > .active-trail.dropdown-submenu {
+background: #FDDFAF url("../images/arrow_hexFFEFD5.png") 49% 110% no-repeat;
+}
+
+.menu-block-4 ul {
+background: #FFEFD5;
+padding-left: 11px;
+}
+
+.menu-block-4 ul li {
+float: left;
+padding: 0px 8px;
+min-width: 10px;
+}
+
+.menu-block-4 h2 {
+font-size: 15px;
+font-weight: 400;
+margin-top: 11px;
+}
+
+.menu-block-4 h2 a {
+color: #B07B27;
+}
+
+.menu-block-4 h2 a:hover {
+color: #4D4D4D;
+text-decoration: none;
+}
+
 .global-menu > li > ul > li > ul,
 .global-menu > li > li > ul .active-trail.dropdown-submenu {
 background: #FDDFAF;
