@@ -13,7 +13,7 @@
     </tr>
     <tr style="font-size: 11px; color: #555555; font-family: Arial, sans-serif;">
       <td style="width: 470px; padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 20px; line-height: 1.4;">
-        <p><?php echo t('This newsletter is published by the CMS Secretariat &copy; 2014 UNEP / CMS'); ?><br /><?php echo t('UNEP/CMS Secretariat, Platz der Vereinten Nationen 1, 53113 Bonn, Germany'); ?><br /><?php echo t('Tel: (+49) 228 815 2413, Fax: (+49) 228 815 2450, E-mail: secretariat@cms.int'); ?><br /><a href="<?php echo t('http://www.ascobans.org/'); ?>" style="color: #0066c0;"><?php echo t('www.ascobans.org'); ?></a></p>
+        <p><?php echo t('This newsletter is published by the UNEP/ASCOBANS Secretariat &copy; 2014'); ?><br /><?php echo t('UNEP/ASCOBANS Secretariat, Platz der Vereinten Nationen 1, 53113 Bonn, Germany'); ?><br /><?php echo t('Tel. (+49 228) 815 2416, Fax. (+49 228) 815 2440, E-mail: <a href="mailto:ascobans@ascobans.org">ascobans@ascobans.org</a>'); ?><br /><a href="<?php echo t('http://www.ascobans.org/'); ?>" style="color: #0066c0;"><?php echo t('www.ascobans.org'); ?></a></p>
       </td>
       <td style="width: 130px; height: 100%; text-align: right; vertical-align: bottom; padding-bottom: 11px; padding-right: 25px;">
         <a href="[simplenews-subscriber:unsubscribe-url]" style="color: #0066c0;"><?php print $unsubscribe_text ?></a>
