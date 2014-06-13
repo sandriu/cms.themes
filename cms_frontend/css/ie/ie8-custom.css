@@ -71,6 +71,10 @@ width: 955px;
 margin-top: 5px;
 }
 
+.not-front .region.center-column {
+margin-top: 15px;
+}
+
 
 /* CENTER COLUMN */
 .center-column .region-content {
