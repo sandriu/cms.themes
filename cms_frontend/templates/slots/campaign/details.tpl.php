@@ -10,10 +10,12 @@
         check_display_field($content, 'field_campaign_projects') ||
         check_display_field($content, 'field_campaign_publications') ||
         check_display_field($content, 'field_campaign_meetings') ||
+        check_display_field($content, 'field_campaign_picture') ||
         check_display_field($content, 'field_campaign_documents')): ?>
     <table class="table table-condensed table-hover two-columns">
         <tbody>
-            <?php echo render($content['title_field']); ?>        
+            <?php echo render($content['field_campaign_picture']); ?>
+            <?php echo render($content['title_field']); ?>
             <?php echo render($content['field_campaign_sponsor']); ?>
             <?php echo render($content['field_campaign_patron']); ?>
             <?php echo render($content['field_campaign_type']); ?>
