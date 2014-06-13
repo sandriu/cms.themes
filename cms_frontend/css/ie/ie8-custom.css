@@ -283,6 +283,11 @@ width: 313px;
 width: 280px;
 }
 
+.profile.col-md-4 .field-label {
+width: 130px;
+vertical-align: top;
+}
+
 
 /* NEWS slideshow, skin Default */
 .view-news-slideshow .views-field-title,
