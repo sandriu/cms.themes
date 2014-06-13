@@ -16,7 +16,7 @@
         <p><?php echo t('This newsletter is published by the UNEP/AEWA Secretariat &copy; 2014'); ?><br /><?php echo t('UNEP/AEWA Secretariat, Platz der Vereinten Nationen 1, 53113 Bonn, Germany'); ?><br /><?php echo t('Tel. (+49 228) 815 2413, Fax. (+49 228) 815 2450, E-mail: <a href="mailto:aewa@unep.de">aewa@unep.de</a>'); ?><br /><a href="<?php echo t('http://www.unep-aewa.org/'); ?>" style="color: #0066c0;"><?php echo t('www.unep-aewa.org'); ?></a></p>
       </td>
       <td style="width: 130px; height: 100%; text-align: right; vertical-align: bottom; padding-bottom: 11px; padding-right: 25px;">
-        <a href="[simplenews-subscriber:unsubscribe-url]" style="color: #0066c0;"><?php print $unsubscribe_text ?></a>
+        <a href="[simplenews-subscriber:unsubscribe-url]" style="color: #0066c0;"><?php print t('Unsubscribe'); ?></a>
       </td>
     </tr>
     <?php if ($key == 'test'): ?>
