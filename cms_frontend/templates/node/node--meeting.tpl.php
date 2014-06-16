@@ -112,14 +112,16 @@
                         }
                     }
                 }
-                foreach ($types as $tid) {
-                    $type_term = taxonomy_term_load($tid);
+                $terms = taxonomy_term_load_multiple($types);
+                if (function_exists('cms_compare_term_weight')) {
+                    usort($terms, 'cms_compare_term_weight');
+                }
+                foreach ($terms as $type_term) {
                     if (!empty($type_term)) {
             ?>
-
                         <div class="panel panel-default"><div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse<?php echo $tid; ?>" class="collapsed">
+                                    <a data-toggle="collapse" href="#collapse<?php echo $type_term->tid; ?>" class="collapsed">
                                         <?php echo t($type_term->name); ?>
                                         <span class="pull-right text-muted help-text-expand">
                                             <?php echo t('Expand'); ?>
@@ -130,9 +132,9 @@
                                     </a>
                                 </h4>
                             </div>
-                            <div id="collapse<?php echo $tid; ?>" class="panel-collapse collapse">
+                            <div id="collapse<?php echo $type_term->tid; ?>" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    <?php print views_embed_view('meeting_documents_list_reorder','m_d_list_fe', $node->nid, $tid); ?>
+                                    <?php print views_embed_view('meeting_documents_list_reorder','m_d_list_fe', $node->nid, $type_term->tid); ?>
                                 </div>
                             </div>
                         </div>
