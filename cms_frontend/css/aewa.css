@@ -52,12 +52,17 @@ background: #FDDFAF url("../images/arrow_hexFFEFD5.png") 49% 110% no-repeat;
 .menu-level-4 ul {
 background: #FFEFD5;
 padding-left: 11px;
+border-bottom: 0;
+margin-left: -15px;
+width: 1140px;
 }
 
 .menu-level-4 ul li {
+background: #FFEFD5;
 float: left;
 padding: 0px 8px;
 min-width: 10px;
+border-right: 0;
 }
 
 .menu-level-4 h2 {
