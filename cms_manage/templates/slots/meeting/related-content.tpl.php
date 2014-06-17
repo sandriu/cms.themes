@@ -91,11 +91,9 @@
         if (!empty($node->field_meeting_document[$langcode])) {
             $types = array();
             foreach ($node->field_meeting_document[$langcode] as $document) {
-                if ($document['entity']->status == 1) {
-                    foreach ($document['entity']->field_document_type[$langcode] as $term) {
-                        if(!in_array($term['tid'], $types)) {
-                            $types []= $term['tid'];
-                        }
+                foreach ($document['entity']->field_document_type[$langcode] as $term) {
+                    if(!in_array($term['tid'], $types)) {
+                        $types []= $term['tid'];
                     }
                 }
             }

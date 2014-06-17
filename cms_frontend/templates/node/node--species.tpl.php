@@ -44,6 +44,10 @@
                   hide($content['comments']);
 
                   drupal_add_js(drupal_get_path('theme', $GLOBALS['theme']) . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR . 'species.js');
+
+                  if (!empty($node->experts_contacts)) {
+                      print render($node->experts_contacts);
+                  }
                   ?>
               </div>
 

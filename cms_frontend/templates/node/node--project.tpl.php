@@ -121,6 +121,11 @@
                         }
                         ?>
                     </div>
+                    <?php
+                    if (!empty($node->impl_ag_contacts)) {
+                        print render($node->impl_ag_contacts);
+                    }
+                    ?>
                 </div>
 
                 <?php

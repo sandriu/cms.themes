@@ -19,7 +19,6 @@
         <div class="row">
             <div class="campaign-profile-left profile col-md-8">
                 <?php echo render($content['body']); ?>
-                <?php echo render($content['field_campaign_picture']); ?>
                 <span class="text-muted">
                     <?php print t('Last updated on').' '.format_date($node->changed, 'custom', 'd F Y'); ?>
                 </span>

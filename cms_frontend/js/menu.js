@@ -32,7 +32,7 @@
             is_front_page = Drupal.settings.cms_front_end.is_front_page;
         }
 
-        var $global_menu = $('.global-menu');
+        var $global_menu = $('#navbar .global-menu');
         var $container = $('.global-menu-bar .container');
         //get li parents of the active link
         $li_parents = $('.global-menu a.active-trail').parents('li').addClass('active');
