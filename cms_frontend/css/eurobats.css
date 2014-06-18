@@ -122,39 +122,6 @@ border: 2px solid #221F20;
 }
 
 
-/* FOOTER */
-body .subscribe-social,
-body .footer-menu,
-body .disclaimers,
-body .footer-menu .dropdown-menu {
-background: #0F235B;
-}
-
-.subscribe-social {
-border-top: 0;
-}
-
-.footer-menu .container,
-.subscribe-social .container {
-border-bottom: 1px solid #A1BDE2;
-padding-bottom: 25px;
-}
-
-.disclaimers {
-padding-top: 0;
-color: #A1BDE2;
-}
-
-.footer-menu h2 a,
-.subscribe-social h2 {
-color: #A1BDE2;
-}
-
-.region-footer-second-row-right a {
-color: #0066C0;
-}
-
-
 /* buttons */
 .btn-primary {
 background-color: #037CC1;
