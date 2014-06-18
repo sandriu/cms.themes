@@ -14,7 +14,7 @@ background: #0F235B;
 }
 
 .global-menu a {
-color: #79A5D6;
+color: #FFF;
 }
 
 .global-menu > .active-trail {
@@ -28,7 +28,7 @@ color: #FFF;
 
 .global-menu .active-trail,
 .global-menu a:hover {
-color: #FFF;
+color: #79A5D6;
 }
 
 .global-menu .dropdown-menu .active-trail,
