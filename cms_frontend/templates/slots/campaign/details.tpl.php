@@ -27,7 +27,7 @@
             <?php echo render($content['field_campaign_projects']); ?>
             <?php echo render($content['field_campaign_publications']); ?>
             <?php echo render($content['field_campaign_meetings']); ?>
-            <?php echo render($content['field_campaign_documents']); ?>        
+            <?php echo render($content['field_campaign_documents']); ?>
         </tbody>
     </table>
 <?php endif; ?>
