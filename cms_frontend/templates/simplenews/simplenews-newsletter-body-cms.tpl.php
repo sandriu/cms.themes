@@ -1,3 +1,9 @@
+    <?php
+    $languages = language_list();
+    $langcodes = $build['body']['#object']->translations->data;
+
+    unset($langcodes[language_default()->language]);
+    ?>
     <tr>
       <td colspan="2" style="padding-bottom: 10px;">
         <table width="100%">
@@ -7,6 +13,11 @@
                 <img src="<?php echo $template_url; ?>/images/CMS_logo.png" alt="<?php echo t('CMS logo'); ?>" />
               </td>
               <td style="font-size: 21px; color: #003870; font-family: Arial, sans-serif; vertical-align: bottom;"><?php print $title; ?></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: right;">
+                <?php foreach (array_keys($langcodes) as $langcode): ?> <a href="<?php echo url('node/' . $build['body']['#object']->nid, array('absolute' => TRUE, 'language' => $languages[$langcode])); ?>" style="color: #0066c0;"><?php echo $languages[$langcode]->name ?></a><?php endforeach; ?>
+              </td>
             </tr>
           </tbody>
         </table>
