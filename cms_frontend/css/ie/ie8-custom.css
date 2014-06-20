@@ -305,6 +305,7 @@ padding-top: 5px;
 
 .view-news-slideshow img {
 width: 647px;
+max-width: 647px;
 height: 337px;
 }
 
@@ -328,17 +329,13 @@ line-height: 26px;
 min-height: 60px;
 }
 
-.jcarousel-skin-default .jcarousel-item {
-border-radius: 6px;
-}
-
 .view-news-slideshow .view-footer a {
 top: 305px;
 right: 3px;
 padding-right: 0;
 }
 
-.view-news-slideshow .views-field-title .field-content {
+.view-news-slideshow .views-field-title-field .field-content {
 margin-top: 25px;
 }
 
