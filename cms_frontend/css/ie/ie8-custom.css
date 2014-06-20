@@ -295,6 +295,10 @@ width: 130px;
 vertical-align: top;
 }
 
+.profile.col-md-8 {
+margin-left: -15px;
+}
+
 
 /* NEWS slideshow, skin Default */
 .view-news-slideshow .views-field-title,
