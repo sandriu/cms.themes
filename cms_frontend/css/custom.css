@@ -1647,6 +1647,10 @@ max-width: 143px;
   }
 }
 
+.campaign-profile-right .field-name-field-campaign-picture .field-items {
+max-width: 100%;
+}
+
 .node-news .field {
 margin-bottom: 20px;
 }
