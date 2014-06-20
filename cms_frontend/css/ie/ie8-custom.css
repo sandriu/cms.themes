@@ -73,6 +73,11 @@ width: 955px;
 margin-top: 5px;
 }
 
+.breadcrumb {
+width: 985px;
+margin-left: -15px;
+}
+
 
 /* CENTER COLUMN */
 .center-column .region-content {
