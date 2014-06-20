@@ -122,6 +122,15 @@ margin-left: -15px;
 width: 275px;
 }
 
+.region-sidebar-second .calendar-calendar .month-view table {
+margin-left: -8px;
+}
+
+.view-calendar table td.mini,
+.view-calendar table .mini-day-on a {
+padding: 2px;
+}
+
 
 /* article page content */
 .article-date {
