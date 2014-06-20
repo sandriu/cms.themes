@@ -13,7 +13,8 @@
         check_display_field($content, 'field_campaign_documents')): ?>
     <table class="table table-condensed table-hover two-columns">
         <tbody>
-            <?php echo render($content['title_field']); ?>        
+            <?php echo render($content['field_campaign_picture']); ?>
+            <?php echo render($content['title_field']); ?>
             <?php echo render($content['field_campaign_sponsor']); ?>
             <?php echo render($content['field_campaign_patron']); ?>
             <?php echo render($content['field_campaign_type']); ?>
@@ -25,7 +26,7 @@
             <?php echo render($content['field_campaign_projects']); ?>
             <?php echo render($content['field_campaign_publications']); ?>
             <?php echo render($content['field_campaign_meetings']); ?>
-            <?php echo render($content['field_campaign_documents']); ?>        
+            <?php echo render($content['field_campaign_documents']); ?>
         </tbody>
     </table>
 <?php endif; ?>

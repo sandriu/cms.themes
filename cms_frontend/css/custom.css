@@ -1481,8 +1481,18 @@ background: #fff;
 border-bottom: 0;
 }
 
-.meeting-left .field-label {
+.meeting-left .field-label,
+.campaign-profile-right .field-name-field-campaign-picture .field-label {
 display: none;
+}
+
+.campaign-profile-right .field-name-field-campaign-picture {
+text-align: center;
+}
+
+.campaign-profile-right .field-name-field-campaign-picture blockquote,
+.campaign-profile-right .field-name-field-campaign-picture blockquote p {
+margin-bottom: 0;
 }
 
 .profile table .views-field-title,
