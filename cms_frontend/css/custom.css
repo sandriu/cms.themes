@@ -1201,7 +1201,7 @@ background: rgba(66, 65, 65, 0.62);
 }
 
 .article-changed {
-  margin-top: 10px;
+margin-top: 10px;
 }
 
 #node-3916 dd,
@@ -1278,10 +1278,6 @@ padding-left: 15px;
 
 .field-collection-container {
 margin-top: 10px;
-}
-
-.article-body p {
-overflow: hidden;
 }
 
 .profile .field-label-inline .field-items {
