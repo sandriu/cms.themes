@@ -53,6 +53,14 @@
     <?php print $region_6_1_3; ?>
   </div><!-- .col-md-4 -->
 </div><!-- .row -->
+<div class="row">
+    <div class="col-md-6">
+        <?php print $region_7_1_1; ?>
+    </div><!-- .col-md-4 -->
+    <div class="col-md-6">
+        <?php print $region_7_1_2; ?>
+    </div><!-- .col-md-4 -->
+</div><!-- .row -->
 
 <div id="accordion" class="panel-group">
   <div class="panel panel-default">
