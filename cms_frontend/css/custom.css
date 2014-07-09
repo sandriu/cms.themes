@@ -449,9 +449,10 @@ border-bottom: 1px solid #DDD;
 min-height: 50px;
 height: auto;
 }
-
+.species-custom-image-author {
+text-align: center;
+}
 #block-random-species-random-species p a {
-padding-left: 73px;
 display: block;
 }
 
@@ -1421,6 +1422,13 @@ margin-left: 12%;
 width: 170px;
 margin: 0 auto;
 }
+.carousel-inner div.item {
+    width: auto;
+    text-align: center;
+}
+.carousel-inner div.item img{
+    margin: 0 auto;
+}
 
 .carousel-control {
 top: 50px;
@@ -1434,6 +1442,15 @@ opacity: 1;
 .carousel-control.left {
 border-radius: 4px;
 font-weight: bold;
+}
+
+.col-md-4.profile .carousel .carousel-caption{
+left: 0;
+right: 0;
+width: 100%;
+bottom: 0;
+padding: 0;
+background: rgba(100,100,100,0.5);
 }
 
 .profile hr {
