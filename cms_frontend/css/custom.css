@@ -1768,10 +1768,18 @@ margin-bottom: 10px;
 }
 
 /* news share area */
-#block-widgets-s-addthis-share a {
+#block-widgets-s-addthis-share a.addthis_button_facebook_like,
+#block-widgets-s-addthis-share a.addthis_button_google_plusone,
+#block-widgets-s-addthis-share a.addthis_counter {
 display: inline-block;
 margin-right: 20px;
 vertical-align: top;
+}
+#block-widgets-s-addthis-share .addthis_counter{
+    display: block;
+}
+#block-widgets-s-addthis-share .addthis_button_expanded{
+    height: auto;
 }
 
 /* Edit page:
