@@ -33,9 +33,7 @@
               <table class="table table-condensed table-hover two-columns">
                   <tbody>
                   <?php
-                  echo render($content['field_meeting_start']);
-                  echo render($content['field_meeting_start_time']);
-                  echo render($content['field_meeting_end']);
+                  echo render($content['event_calendar_date']);
                   echo render($content['field_meeting_reg_deadline']);
                   echo render($content['field_meeting_organizer']);
                   echo render($content['field_meeting_coorganizer']);
