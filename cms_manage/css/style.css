@@ -96,8 +96,12 @@ span.unpublished-icon {
 
 /* Contacts */
 #contacts-listing_wrapper {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 #instrument-fieldset-wrapper .panel-body { padding: 25px; }
 #instrument-fieldset-wrapper .row:last-child { border: 0; }
+
+.node-meeting-form .form-item-event-calendar-date-und-0-value2-time {
+    display: none;
+}

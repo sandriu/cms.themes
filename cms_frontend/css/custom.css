@@ -1777,10 +1777,10 @@ margin-right: 20px;
 vertical-align: top;
 }
 #block-widgets-s-addthis-share .addthis_counter{
-    display: block;
+display: block;
 }
 #block-widgets-s-addthis-share .addthis_button_expanded{
-    height: auto;
+height: auto;
 }
 
 /* Edit page:
@@ -1837,6 +1837,16 @@ min-height: 26px;
 height: 20px;
 }
 
+div.view-header {
+padding-bottom: 10px;
+}
+
+div.view-header p{
+margin: 0 0 10px 0;
+}
+.views-exposed-form .views-exposed-widget {
+padding: 0;
+}
 
 /* TABLES for listings */
 .views-table {
