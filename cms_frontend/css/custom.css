@@ -1411,6 +1411,7 @@ color: #888;
 .meeting-full-width.col-md-12,
 .working-group-full-width {
 margin-top: 30px;
+padding-left: 0;
 }
 
 body .carousel-inner {
