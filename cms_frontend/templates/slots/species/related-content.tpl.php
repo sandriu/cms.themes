@@ -29,7 +29,7 @@
         }
 
         if (!empty($node->related_data['plans']['count'])) {
-            render_tab_view(t('National Plans'), 'related-content-plans', $first_tab, $node->related_data['plans']['count']);
+            render_tab_view(t('Plans'), 'related-content-plans', $first_tab, $node->related_data['plans']['count']);
             $first_tab = '';
         }
 
