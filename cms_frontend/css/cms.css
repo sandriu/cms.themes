@@ -205,3 +205,18 @@ color: #5E9732;
   }
 
 }
+
+
+/* homepage right column */
+#block-menu-block-3,
+.right-column section {
+padding-bottom: 30px;
+}
+
+#block-block-9 {
+padding-bottom: 5px;
+}
+
+#block-random-species-random-species {
+border-bottom: 0;
+}
