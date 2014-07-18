@@ -81,20 +81,10 @@
 </div><?php /* class view */ ?>
 
 <?php
-    //Render the view of countries list grouped by status type
-    //  - "Group by" functionality from views not working ok with pagination
     $arg = cms_domain_instrument_id();
-    if (!empty($view->range_states_statuses)) {
-        foreach ($view->range_states_statuses as $idx => $status) { ?>
-            <h4><?php echo t($status->name); ?></h4>
-            <?php
-            if ($arg) {
-                echo views_embed_view('front_end_countries', 'party_range_states_list', $arg, $status->tid);
-            } else {
-                echo views_embed_view('front_end_countries', 'party_range_states_list', $status->tid);
-            }
-
-            ?>
-<?php   }
+    if ($arg) {
+        echo views_embed_view('front_end_countries', 'party_range_states_list', $arg);
+    } else {
+        echo views_embed_view('front_end_countries', 'party_range_states_list');
     }
 ?>
