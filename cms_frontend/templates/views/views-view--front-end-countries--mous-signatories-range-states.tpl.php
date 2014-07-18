@@ -81,13 +81,9 @@
 </div><?php /* class view */ ?>
 
 <?php
-
     //Render the view list for the current MoU - pass the instrument nid as view contextual arg
     $arg = cms_domain_instrument_id();
     if ($arg) {
-        foreach ($view->range_states_statuses as $idx => $status) { ?>
-            <h4><?php echo t($status->name); ?></h4>
-            <?php echo views_embed_view('front_end_countries', 'mous_range_states_list', $arg, $status->tid); ?>
-<?php   }
+        echo views_embed_view('front_end_countries', 'mous_range_states_list', $arg);
     }
 ?>

@@ -1845,7 +1845,7 @@ div.view-header p{
 margin: 0 0 10px 0;
 }
 .views-exposed-form .views-exposed-widget {
-padding: 0;
+padding: 10px 10px 10px 0;
 }
 
 /* TABLES for listings */
