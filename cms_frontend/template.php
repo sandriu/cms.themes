@@ -294,7 +294,7 @@ function cms_frontend_cms_project_activity_formatter($variables) {
             $body .= sprintf('<tr><td>'.t('Description').':</td><td>%s</td></tr>',$description);
             $body .= sprintf('<tr><td>'.t('Start date').':</td><td>%s</td></tr>',$start_date);
             $body .= sprintf('<tr><td>'.t('End date').':</td><td>%s</td></tr>',$end_date);
-            $body .= sprintf('<tr><td>'.t('Responsability').':</td><td>%s</td></tr>',$responsibility);
+            $body .= sprintf('<tr><td>'.t('Responsibility').':</td><td>%s</td></tr>',$responsibility);
             $body .= sprintf('<tr><td>'.t('Output').':</td><td>%s</td></tr>',$output);
             $body .= '</table>';
 
