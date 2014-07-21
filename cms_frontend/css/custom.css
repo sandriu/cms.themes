@@ -211,7 +211,6 @@ margin-bottom: 36px;
 margin-bottom: 74px;
 }
 
-
 body ul.secondary {
 float: left;
 }
@@ -2147,4 +2146,10 @@ margin-bottom: 25px;
 
 .site-map-menu li li {
 margin-bottom: 0px;
+}
+
+
+/* ALIGN all elements to left */
+.node-type-legal-instrument .region-content .container {
+padding-left: 0;
 }
