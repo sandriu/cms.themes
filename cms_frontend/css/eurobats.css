@@ -88,6 +88,18 @@ background: #DDD;
 border-top: 4px solid #0F235B;
 }
 
+.quicktabs-ui-wrapper .views-row {
+color: #444;
+font-size: 12px;
+}
+
+.block-quicktabs.ui-widget-content a {
+color: #0066C0;
+display: block;
+font-size: 16px;
+padding-bottom: 5px;
+}
+
 
 /* RIGHT COLUMN */
 body .well {
