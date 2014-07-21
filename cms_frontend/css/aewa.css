@@ -241,4 +241,9 @@ color: #80a32b;
   .sidebar-offcanvas nav > ul ul ul li h2 a {
   border-bottom: 1px solid #888;
   }
+
+  /*support for menu level 4 */
+  .sidebar-offcanvas nav > ul ul ul ul {
+  background: #FCECD4;
+  }
 }
