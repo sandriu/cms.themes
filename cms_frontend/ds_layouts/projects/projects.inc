@@ -20,6 +20,8 @@ function ds_projects() {
       'region_6_1_1' => t('Region 6 (row 1, column 1)'),
       'region_6_1_2' => t('Region 6 (row 1, column 2)'),
       'region_6_1_3' => t('Region 6 (row 1, column 3)'),
+      'region_7_1_1' => t('Region 7 (row 1, column 1)'),
+      'region_7_1_2' => t('Region 7 (row 1, column 2)'),
       'budget_line_bac' => t('Budget line (BAC)'),
       'activity' => t('Activity'),
       'schedule_of_payments' => t('Schedule of payments'),
