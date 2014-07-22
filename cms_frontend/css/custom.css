@@ -2181,3 +2181,33 @@ padding-left: 0;
 .page-node-1 .instrument-full-width {
 margin-left: 15px;
 }
+
+
+/* ALIGN full-width images and text to right margin */
+@media (max-width: 1200px) {
+  .region-content img {
+  max-width: 940px !important;
+  height: auto !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .region-content img {
+  max-width: 720px !important;
+  height: auto !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .region-content img {
+  max-width: 543px !important;
+  height: auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .region-content img {
+  max-width: 423px !important;
+  height: auto !important;
+  }
+}
