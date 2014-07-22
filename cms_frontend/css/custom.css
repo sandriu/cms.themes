@@ -1315,7 +1315,7 @@ margin: 0 auto 2em auto;
 margin-bottom: 20px;
 }
 
-/* Goolge Maps*/
+/* Google Maps*/
 #gmap {
 height: 300px;
 }
@@ -1963,6 +1963,10 @@ margin-top: 8px;
 position: absolute;
 left: 0;
 top: 15px;
+}
+
+.page-taxonomy .node-news.node-teaser {
+position: relative;
 }
 
 .view-front-end-campaigns .field-name-field-campaign-duration .field-items {
