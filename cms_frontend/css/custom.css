@@ -1901,7 +1901,8 @@ font-size: 12px;
     MEDIA WATCH page (no thumbnails),
     SEARCH page,
     Error 404 page,
-    TAXONOMY page */
+    TAXONOMY page,
+    RELATED Meetings */
 .view-front-end-news h2,
 .view-front-end-working-groups h2,
 .view-front-end-campaigns h2,
@@ -2128,6 +2129,14 @@ margin-bottom: 15px;
 
 .spelling-suggestions dl {
 margin-bottom: 10px;
+}
+
+.page-meetings-related-meetings .view-filters {
+padding: 15px;
+margin-bottom: 20px;
+background-color: #F5F5F5;
+border: 1px solid #E3E3E3;
+border-radius: 4px;
 }
 
 
