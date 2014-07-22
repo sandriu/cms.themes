@@ -93,7 +93,7 @@ color: #444;
 font-size: 12px;
 }
 
-.block-quicktabs.ui-widget-content a {
+.block-quicktabs .ui-widget-content a {
 color: #0066C0;
 display: block;
 font-size: 16px;
