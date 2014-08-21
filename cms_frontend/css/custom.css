@@ -1707,31 +1707,6 @@ border-bottom: 1px solid #DDD;
 margin-bottom: 10px;
 }
 
-/* synchronise image width with text width */
-@media (min-width: 1201px) {
-  .profile.col-md-8 img {
-  max-width: 730px;
-  height: auto;
-  }
-
-  .profile.col-md-4 img {
-  max-width: 340px;
-  height: auto;
-  }
-}
-
-@media (max-width: 1200px) {
-  .profile.col-md-8 img {
-  max-width: 596px;
-  height: auto;
-  }
-
-  .profile.col-md-4 img {
-  max-width: 273px;
-  height: auto;
-  }
-}
-
 /* news gallery */
 .news-profile-left .field-name-field-gallery {
 margin-top: 20px;
@@ -2183,31 +2158,64 @@ margin-left: 15px;
 }
 
 
-/* ALIGN full-width images and text to right margin */
-@media (max-width: 1200px) {
-  .region-content img {
-  max-width: 940px !important;
+/* synchronise image width with page width, for 1-column pages */
+@media (min-width: 1201px) {
+  .no-sidebars .article-body img {
+  width: 1140px !important;
+  max-width: 1140px;
   height: auto !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .no-sidebars img {
+  max-width: 940px;
+  height: auto;
   }
 }
 
 @media (max-width: 800px) {
-  .region-content img {
-  max-width: 720px !important;
-  height: auto !important;
+  .no-sidebars img {
+  max-width: 720px;
+  height: auto;
   }
 }
 
 @media (max-width: 600px) {
-  .region-content img {
-  max-width: 543px !important;
-  height: auto !important;
+  .no-sidebars img {
+  max-width: 543px;
+  height: auto;
   }
 }
 
 @media (max-width: 480px) {
-  .region-content img {
-  max-width: 423px !important;
-  height: auto !important;
+  .no-sidebars img {
+  max-width: 423px;
+  height: auto;
+  }
+}
+
+/* synchronise image width with page width, for 2-column pages */
+@media (min-width: 1201px) {
+  .one-sidebar .col-md-8 img {
+  max-width: 730px;
+  height: auto;
+  }
+
+  .one-sidebar .col-md-4 img {
+  max-width: 340px;
+  height: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .one-sidebar .col-md-8 img {
+  max-width: 596px;
+  height: auto;
+  }
+
+  .one-sidebar .col-md-4 img {
+  max-width: 273px;
+  height: auto;
   }
 }
