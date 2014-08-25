@@ -1743,8 +1743,26 @@ margin-bottom: 10px;
 /* news share area */
 #block-widgets-s-addthis-share a {
 display: inline-block;
-margin-right: 20px;
+margin-right: 10px;
 vertical-align: top;
+}
+
+@media (max-width: 1200px) {
+  #block-widgets-s-addthis-share a {
+  margin-right: 3px;
+  }
+}
+
+#block-widgets-s-addthis-share a.addthis_button_expanded {
+display: block;
+}
+
+body .addthis_counter .addthis_button_expanded {
+height: 37px;
+}
+
+.vertical body #PinItButton {
+top: 39px;
 }
 
 /* Edit page:
