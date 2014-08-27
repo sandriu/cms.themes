@@ -2178,10 +2178,9 @@ margin-left: 15px;
 
 /* synchronise image width with page width, for 1-column pages */
 @media (min-width: 1201px) {
-  .no-sidebars .article-body img {
-  width: 1140px !important;
+  .no-sidebars img {
   max-width: 1140px;
-  height: auto !important;
+  height: auto;
   }
 }
 
