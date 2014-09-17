@@ -2219,6 +2219,10 @@ margin-left: 15px;
   height: auto;
   }
 
+  .one-sidebar .col-md-8 .view-news-slideshow img {
+  max-width: 750px;
+  }
+
   .one-sidebar .col-md-4 img {
   max-width: 340px;
   height: auto;
@@ -2231,8 +2235,18 @@ margin-left: 15px;
   height: auto;
   }
 
+  .one-sidebar .col-md-8 .view-news-slideshow img {
+  max-width: 613px;
+  }
+
   .one-sidebar .col-md-4 img {
   max-width: 273px;
   height: auto;
+  }
+}
+
+@media (max-width: 800px) {
+  .one-sidebar .col-md-8 .view-news-slideshow img {
+  max-width: 720px;
   }
 }
