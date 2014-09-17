@@ -48,11 +48,16 @@
                       <tbody>
                         <tr>
                           <td valign="top">
+                            <?php
+                            $current_langcode = $node['#language'];
+                            $all_languages = language_list();
+                            $current_language = (isset($all_languages[$current_langcode])) ? $all_languages[$current_langcode] : $language;
+                            ?>
                             <table align="left" width="220" border="0" cellpadding="0" cellspacing="0">
                               <tbody>
                                 <tr>
                                   <td valign="top">
-                                    <a href="<?php echo url('node/' . $node['body']['#object']->nid, array('absolute' => TRUE)); ?>">
+                                    <a href="<?php echo url('node/' . $node['body']['#object']->nid, array('absolute' => TRUE, 'language' => $current_language)); ?>">
                                       <img width="220" alt="<?php echo $node['field_featured_image']['#items'][0]['alt']; ?>" src="<?php echo file_create_url($node['field_featured_image']['#items'][0]['uri']); ?>" />
                                     </a>
                                   </td>
@@ -79,7 +84,7 @@
                               <tbody>
                                 <tr>
                                   <td bgcolor="#ffe6b5" style="padding: 5px 10px 5px 10px; -webkit-border-radius:3px; border-radius:3px" align="center">
-                                    <a href="<?php echo url('node/' . $node['body']['#object']->nid, array('absolute' => TRUE)); ?>" style="font-size: 11px; font-family: Arial, sans-serif; font-weight: normal; color: #555555; text-decoration: none;"><?php echo t('Read more'); ?></a>
+                                    <a href="<?php echo url('node/' . $node['body']['#object']->nid, array('absolute' => TRUE, 'language' => $current_language)); ?>" style="font-size: 11px; font-family: Arial, sans-serif; font-weight: normal; color: #555555; text-decoration: none;"><?php echo t('Read more'); ?></a>
                                   </td>
                                 </tr>
                               </tbody>
