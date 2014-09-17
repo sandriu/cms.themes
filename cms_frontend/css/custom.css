@@ -444,7 +444,8 @@ border-bottom: 1px solid #DDD;
 }
 
 /* Fix for calendar */
-.calendar-calendar .week-view #multi-day-container, .calendar-calendar .day-view #multi-day-container{
+.calendar-calendar .week-view #multi-day-container,
+.calendar-calendar .day-view #multi-day-container {
 min-height: 50px;
 height: auto;
 }
@@ -452,6 +453,12 @@ height: auto;
 #block-random-species-random-species p a {
 padding-left: 73px;
 display: block;
+}
+
+@media (max-width: 1200px) and (min-width: 1025px) {
+  .calendar-calendar .month-view table {
+  margin-left: -14px;
+  }
 }
 
 
@@ -2219,6 +2226,10 @@ margin-left: 15px;
   height: auto;
   }
 
+  .one-sidebar .col-md-8 .view-news-slideshow img {
+  max-width: 750px;
+  }
+
   .one-sidebar .col-md-4 img {
   max-width: 340px;
   height: auto;
@@ -2231,8 +2242,18 @@ margin-left: 15px;
   height: auto;
   }
 
+  .one-sidebar .col-md-8 .view-news-slideshow img {
+  max-width: 613px;
+  }
+
   .one-sidebar .col-md-4 img {
   max-width: 273px;
   height: auto;
+  }
+}
+
+@media (max-width: 800px) {
+  .one-sidebar .col-md-8 .view-news-slideshow img {
+  max-width: 720px;
   }
 }
