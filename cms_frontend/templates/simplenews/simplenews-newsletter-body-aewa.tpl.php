@@ -12,7 +12,7 @@
               <td style="padding-left: 20px; vertical-align: bottom;">
                 <img src="<?php echo $template_url; ?>/images/AEWA_logo.png" alt="<?php echo t('AEWA logo'); ?>" />
               </td>
-              <td style="font-size: 21px; color: #00467f; font-family: Arial, sans-serif; vertical-align: bottom;"><?php print $title; ?></td>
+              <td style="font-size: 21px; color: #00467f; font-family: Arial, sans-serif; vertical-align: middle;"><?php print $title; ?></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: right;">

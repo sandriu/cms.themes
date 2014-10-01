@@ -12,7 +12,7 @@
               <td style="padding-left: 20px; vertical-align: bottom;">
                 <img src="<?php echo $template_url; ?>/images/CMS_logo.png" alt="<?php echo t('CMS logo'); ?>" />
               </td>
-              <td style="font-size: 21px; color: #003870; font-family: Arial, sans-serif; vertical-align: bottom;"><?php print $title; ?></td>
+              <td style="font-size: 21px; color: #003870; font-family: Arial, sans-serif; vertical-align: middle;"><?php print $title; ?></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: right;">
