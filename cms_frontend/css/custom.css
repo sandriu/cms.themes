@@ -2257,3 +2257,37 @@ margin-left: 15px;
   max-width: 720px;
   }
 }
+
+
+/* print-friendly pages */
+@media print {
+  .survey-link,
+  .admin-search-logos,
+  .logo:after,
+  footer {
+  display: none;
+  }
+
+  .navbar-collapse.collapse {
+  display: none !important;
+  }
+
+  .logo-title {
+  margin-top: 20px;
+  }
+
+  .portal-title,
+  .portal-subtitle {
+  display: block;
+  color: #555;
+  }
+
+  .down-area {
+  margin-top: 0;
+  }
+
+  a:after {
+  color: #0066C0;
+  font-size: 11pt;
+  }
+}
