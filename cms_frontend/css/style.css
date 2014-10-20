@@ -168,7 +168,7 @@ table {
 @media print {
   * {
     text-shadow: none !important;
-    color: #000 !important;
+    color: #555 !important;
     background: transparent !important;
     box-shadow: none !important;
   }
@@ -203,7 +203,7 @@ table {
     max-width: 100% !important;
   }
   @page  {
-    margin: 2cm .5cm;
+    margin: 1cm .5cm;
   }
   p,
   h2,

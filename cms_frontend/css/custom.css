@@ -2264,7 +2264,10 @@ margin-left: 15px;
   .survey-link,
   .admin-search-logos,
   .logo:after,
-  footer {
+  footer,
+  .view-news-slideshow a:after,
+  .right-column a:after,
+  .instruments-slideshow a:after {
   display: none;
   }
 
@@ -2279,7 +2282,6 @@ margin-left: 15px;
   .portal-title,
   .portal-subtitle {
   display: block;
-  color: #555;
   }
 
   .down-area {
@@ -2289,5 +2291,15 @@ margin-left: 15px;
   a:after {
   color: #0066C0;
   font-size: 11pt;
+  }
+
+  .view-news-slideshow .views-field-title-field a,
+  .view-news-slideshow .view-footer a {
+  color: #FFF !important;
+  }
+
+  .view-news-slideshow .view-footer a {
+  left: 25px;
+  top: 350px;
   }
 }
