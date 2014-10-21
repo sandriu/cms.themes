@@ -2273,7 +2273,16 @@ margin-left: 15px;
   .view-front-end-countries a:after,
   .instrument-sidebar #item_list,
   .instrument-full-width a:after,
-  .breadcrumb {
+  .breadcrumb,
+  .node-type-country a:after,
+  .page-meetings-conference-of-parties a:after,
+  .page-meetings-conference-of-parties .dataTables_length,
+  .page-meetings-conference-of-parties .dataTables_filter,
+  .dataTables_paginate,
+  #gmap a:after,
+  .meeting-right a:after,
+  .meeting-full-width .btn,
+  .meeting-full-width .panel-collapse .view-footer {
   display: none;
   }
 
