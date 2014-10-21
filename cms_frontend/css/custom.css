@@ -2282,6 +2282,7 @@ margin-left: 15px;
   #gmap a:after,
   .meeting-right a:after,
   .meeting-full-width .btn,
+  .meeting-full-width a:after,
   .meeting-full-width .panel-collapse .view-footer,
   .view-front-end-meetings a:after {
   display: none;
