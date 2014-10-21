@@ -2276,13 +2276,14 @@ margin-left: 15px;
   .breadcrumb,
   .node-type-country a:after,
   .page-meetings-conference-of-parties a:after,
-  .page-meetings-conference-of-parties .dataTables_length,
-  .page-meetings-conference-of-parties .dataTables_filter,
+  .page-meetings .dataTables_length,
+  .page-meetings .dataTables_filter,
   .dataTables_paginate,
   #gmap a:after,
   .meeting-right a:after,
   .meeting-full-width .btn,
-  .meeting-full-width .panel-collapse .view-footer {
+  .meeting-full-width .panel-collapse .view-footer,
+  .view-front-end-meetings a:after {
   display: none;
   }
 
