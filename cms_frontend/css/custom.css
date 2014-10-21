@@ -2268,7 +2268,12 @@ margin-left: 15px;
   .view-news-slideshow a:after,
   .right-column a:after,
   .instruments-slideshow a:after,
-  .social-plugins {
+  .social-plugins,
+  .drupal_ammap_container a:after,
+  .view-front-end-countries a:after,
+  .instrument-sidebar #item_list,
+  .instrument-full-width a:after,
+  .breadcrumb {
   display: none;
   }
 
