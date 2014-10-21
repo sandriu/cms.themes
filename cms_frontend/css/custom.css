@@ -2257,3 +2257,64 @@ margin-left: 15px;
   max-width: 720px;
   }
 }
+
+
+/* print-friendly pages */
+@media print {
+  .survey-link,
+  .admin-search-logos,
+  .logo:after,
+  footer,
+  .view-news-slideshow a:after,
+  .right-column a:after,
+  .instruments-slideshow a:after,
+  .social-plugins,
+  .drupal_ammap_container a:after,
+  .view-front-end-countries a:after,
+  .instrument-sidebar #item_list,
+  .instrument-full-width a:after,
+  .breadcrumb,
+  .node-type-country a:after,
+  .page-meetings-conference-of-parties a:after,
+  .page-meetings-conference-of-parties .dataTables_length,
+  .page-meetings-conference-of-parties .dataTables_filter,
+  .dataTables_paginate,
+  #gmap a:after,
+  .meeting-right a:after,
+  .meeting-full-width .btn,
+  .meeting-full-width .panel-collapse .view-footer {
+  display: none;
+  }
+
+  .navbar-collapse.collapse {
+  display: none !important;
+  }
+
+  .logo-title {
+  margin-top: 20px;
+  }
+
+  .portal-title,
+  .portal-subtitle {
+  display: block;
+  }
+
+  .down-area {
+  margin-top: 0;
+  }
+
+  a:after {
+  color: #0066C0;
+  font-size: 11pt;
+  }
+
+  .view-news-slideshow .views-field-title-field a,
+  .view-news-slideshow .view-footer a {
+  color: #FFF !important;
+  }
+
+  .view-news-slideshow .view-footer a {
+  left: 25px;
+  top: 350px;
+  }
+}
