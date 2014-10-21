@@ -45,7 +45,7 @@
                     <!-- Render sidebar blocks -->
                     <?php if (!empty($sidebar_blocks)) { ?>
                         <?php foreach($sidebar_blocks as $block) { ?>
-                            <div class="well">
+                            <div class="well social-plugins">
                                 <?php print render($block); ?>
                             </div>
                         <?php } ?>

@@ -189,7 +189,6 @@ table {
   }
   pre,
   blockquote {
-    border: 1px solid #999;
     page-break-inside: avoid;
   }
   thead {
@@ -203,7 +202,7 @@ table {
     max-width: 100% !important;
   }
   @page  {
-    margin: 1cm .5cm;
+    margin: 2cm .5cm;
   }
   p,
   h2,

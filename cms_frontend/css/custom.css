@@ -2267,7 +2267,8 @@ margin-left: 15px;
   footer,
   .view-news-slideshow a:after,
   .right-column a:after,
-  .instruments-slideshow a:after {
+  .instruments-slideshow a:after,
+  .social-plugins {
   display: none;
   }
 
