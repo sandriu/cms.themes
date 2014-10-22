@@ -2285,7 +2285,7 @@ margin-left: 15px;
   .meeting-full-width a:after,
   .meeting-full-width .panel-collapse .view-footer,
   .view-front-end-meetings a:after,
-  .page-documents .view-filters,
+  .view-filters,
   .view-front-end-documents a:after,
   .document-right a:after,
   .working-group-profile-right a:after,
@@ -2293,7 +2293,6 @@ margin-left: 15px;
   .document-left .tab-content a:after,
   .view-front-end-working-groups a:after,
   .view-front-end-working-groups .links,
-  .view-front-end-projects .view-filters,
   .view-front-end-projects a:after,
   .project-profile-left a:after,
   .project-profile-right a:after,
@@ -2304,7 +2303,9 @@ margin-left: 15px;
   .view-front-end-awards .fr,
   .view-front-end-awards .es,
   .view-front-end-awards .en,
-  .award-profile-right a:after {
+  .award-profile-right a:after,
+  .view-front-end-species a:after,
+  .species-left-column a:after {
   display: none;
   }
 
@@ -2353,5 +2354,11 @@ margin-left: 15px;
 
   body .node.node-award {
   min-height: 10px;
+  }
+
+  .row-offcanvas header .container,
+  .row-offcanvas .container {
+  margin-left: 0;
+  max-width: 100%;
   }
 }
