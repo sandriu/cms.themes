@@ -2297,11 +2297,14 @@ margin-left: 15px;
   .view-front-end-projects a:after,
   .project-profile-left a:after,
   .project-profile-right a:after,
-  .read-less {
+  .read-less,
+  .view-front-end-campaigns a:after,
+  .campaign-profile-right .field-name-field-instrument a:after {
   display: none;
   }
 
-  .navbar-collapse.collapse {
+  .navbar-collapse.collapse,
+  .node-readmore {
   display: none !important;
   }
 
@@ -2331,5 +2334,14 @@ margin-left: 15px;
   .view-news-slideshow .view-footer a {
   left: 25px;
   top: 350px;
+  }
+
+  .col-md-4.profile .field-items {
+  max-width: 62%;
+  }
+
+  .col-md-4.profile .field,
+  .col-md-4.profile table {
+  margin-bottom: 5px;
   }
 }
