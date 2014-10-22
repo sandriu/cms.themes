@@ -2276,15 +2276,20 @@ margin-left: 15px;
   .breadcrumb,
   .node-type-country a:after,
   .page-meetings-conference-of-parties a:after,
-  .page-meetings .dataTables_length,
-  .page-meetings .dataTables_filter,
+  .dataTables_length,
+  .dataTables_filter,
   .dataTables_paginate,
   #gmap a:after,
   .meeting-right a:after,
   .meeting-full-width .btn,
   .meeting-full-width a:after,
   .meeting-full-width .panel-collapse .view-footer,
-  .view-front-end-meetings a:after {
+  .view-front-end-meetings a:after,
+  .page-documents .view-filters,
+  .view-front-end-documents a:after,
+  .document-right a:after,
+  .working-group-profile-right a:after,
+  .working-group-full-width a:after {
   display: none;
   }
 
