@@ -2299,7 +2299,12 @@ margin-left: 15px;
   .project-profile-right a:after,
   .read-less,
   .view-front-end-campaigns a:after,
-  .campaign-profile-right .field-name-field-instrument a:after {
+  .campaign-profile-right .field-name-field-instrument a:after,
+  .view-front-end-awards a:after,
+  .view-front-end-awards .fr,
+  .view-front-end-awards .es,
+  .view-front-end-awards .en,
+  .award-profile-right a:after {
   display: none;
   }
 
@@ -2308,7 +2313,8 @@ margin-left: 15px;
   display: none !important;
   }
 
-  .logo-title {
+  .logo-title,
+  .col-md-4.profile {
   margin-top: 20px;
   }
 
@@ -2343,5 +2349,9 @@ margin-left: 15px;
   .col-md-4.profile .field,
   .col-md-4.profile table {
   margin-bottom: 5px;
+  }
+
+  body .node.node-award {
+  min-height: 10px;
   }
 }
