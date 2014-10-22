@@ -2289,7 +2289,15 @@ margin-left: 15px;
   .view-front-end-documents a:after,
   .document-right a:after,
   .working-group-profile-right a:after,
-  .working-group-full-width a:after {
+  .working-group-full-width a:after,
+  .document-left .tab-content a:after,
+  .view-front-end-working-groups a:after,
+  .view-front-end-working-groups .links,
+  .view-front-end-projects .view-filters,
+  .view-front-end-projects a:after,
+  .project-profile-left a:after,
+  .project-profile-right a:after,
+  .read-less {
   display: none;
   }
 
