@@ -114,9 +114,12 @@
   margin-bottom: 5px;
   }
 
-  body .node.node-award,
-  body .view-front-end-news .views-row {
+  body .view-front-end-news .views-row,
+  body .view-front-end-campaigns .views-row,
+  body .page-taxonomy .node-teaser .views-row,
+  body .node.node-award {
   min-height: 10px;
+  border: 0;
   }
 
   .row-offcanvas header .container,
@@ -131,10 +134,6 @@
 
   body .view-front-end-news .article-body .field-name-body {
   top: 63px;
-  }
-
-  body .view-front-end-news .views-row {
-  border: 0;
   }
 
   body .view-front-end-news .article-body .field-name-body {
