@@ -227,3 +227,10 @@ color: #aac177;
   border-bottom: 1px solid #888;
   }
 }
+
+
+/* print website's URL */
+.down-area:after {
+content: "www.ascobans.org";
+color: #0066C0;
+}

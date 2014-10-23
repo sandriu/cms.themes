@@ -48,6 +48,8 @@ function cms_frontend_preprocess_html(&$variables) {
   if(empty($domain_css))
       $domain_css = 'cms.css';
   drupal_add_css(path_to_theme(). '/css/'. $domain_css, array('weight'=>'999'));
+  //print styles
+  drupal_add_css(path_to_theme(). '/css/print.css', array('weight'=>'1000'));
 
   //Add conditional IE8 css for domaine
   drupal_add_css(path_to_theme() . '/css/ie/ie8-'.$domain_css, array('media'=>'screen','group' => CSS_THEME, 'browsers' => array('IE' => 'IE 8', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));

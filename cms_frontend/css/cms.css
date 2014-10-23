@@ -220,3 +220,10 @@ padding-bottom: 5px;
 #block-random-species-random-species {
 border-bottom: 0;
 }
+
+
+/* print website's URL */
+.down-area:after {
+content: "www.cms.int";
+color: #0066C0;
+}
