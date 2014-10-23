@@ -52,7 +52,8 @@
   .news-profile-left .field-name-field-gallery a:after,
   .view-front-end-news .fr,
   .view-front-end-news .es,
-  .view-front-end-news .en {
+  .view-front-end-news .en,
+  #site-map a:after {
   display: none;
   }
 
