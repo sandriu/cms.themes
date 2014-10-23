@@ -2305,7 +2305,12 @@ margin-left: 15px;
   .view-front-end-awards .en,
   .award-profile-right a:after,
   .view-front-end-species a:after,
-  .species-left-column a:after {
+  .species-left-column a:after,
+  .view-front-end-publications a:after,
+  .publication-right a:after,
+  .view-front-end-cms-instruments a:after,
+  .view-front-end-news a:after,
+  .news-profile-left .field-name-field-gallery a:after {
   display: none;
   }
 
@@ -2324,7 +2329,8 @@ margin-left: 15px;
   display: block;
   }
 
-  .down-area {
+  .down-area,
+  .view-front-end-news h2 {
   margin-top: 0;
   }
 
@@ -2360,5 +2366,9 @@ margin-left: 15px;
   .row-offcanvas .container {
   margin-left: 0;
   max-width: 100%;
+  }
+
+  .view-front-end-news .article-body .text-muted {
+  top: -4px;
   }
 }
