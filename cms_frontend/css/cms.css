@@ -223,7 +223,9 @@ border-bottom: 0;
 
 
 /* print website's URL */
-.down-area:after {
-content: "www.cms.int";
-color: #0066C0;
+@media print {
+  .down-area:after {
+  content: "www.cms.int";
+  color: #0066C0;
+  }
 }

@@ -230,7 +230,9 @@ color: #aac177;
 
 
 /* print website's URL */
-.down-area:after {
-content: "www.ascobans.org";
-color: #0066C0;
+@media print {
+  .down-area:after {
+  content: "www.ascobans.org";
+  color: #0066C0;
+  }
 }

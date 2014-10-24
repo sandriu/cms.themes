@@ -251,7 +251,9 @@ color: #80a32b;
 
 
 /* print website's URL */
-.down-area:after {
-content: "www.unep-aewa.org";
-color: #0066C0;
+@media print {
+  .down-area:after {
+  content: "www.unep-aewa.org";
+  color: #0066C0;
+  }
 }
