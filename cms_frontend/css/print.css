@@ -45,6 +45,7 @@
   .award-profile-right a:after,
   .view-front-end-species a:after,
   .species-left-column a:after,
+  .species-right-column .carousel a:after,
   .view-front-end-publications a:after,
   .publication-right a:after,
   .view-front-end-cms-instruments a:after,
@@ -57,7 +58,9 @@
   .nav-tabs,
   .page-user a:after,
   .action-links,
-  .field_collection_item_operations {
+  .field_collection_item_operations,
+  .country-profile-left .sticky-header th:nth-child(5n),
+  .country-profile-left .sticky-table th:nth-child(5n) {
   display: none;
   }
 
