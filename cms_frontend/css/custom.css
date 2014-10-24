@@ -1444,6 +1444,16 @@ border-radius: 4px;
 font-weight: bold;
 }
 
+.carousel-caption {
+position: relative;
+left: 0;
+padding-bottom: 0;
+text-shadow: none;
+color: #888;
+text-align: left;
+font-size: 13px;
+}
+
 .profile hr {
 border-color: #ddd;
 }
