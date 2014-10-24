@@ -107,11 +107,6 @@ background-color: #ddd;
 border: 0;
 }
 
-#block-views-calendar-block-1,
-#block-random-species-random-species {
-border-bottom: 1px solid #AAA;
-}
-
 .profile .table tbody > tr > th,
 .working-group-profile-right .field-label {
 color: #777;

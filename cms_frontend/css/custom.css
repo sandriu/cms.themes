@@ -438,10 +438,6 @@ border-bottom: 0px;
 padding-top: 0px;
 }
 
-#block-views-calendar-block-1,
-#block-random-species-random-species {
-border-bottom: 1px solid #DDD;
-}
 
 /* Fix for calendar */
 .calendar-calendar .week-view #multi-day-container,
