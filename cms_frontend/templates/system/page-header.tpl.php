@@ -1,22 +1,3 @@
-<?php
-$profile = variable_get('current_profile', 'cms');
-
-if ($profile == 'cms'){?>
-<div class="survey-link" style="width: 100%; background-color: #FDC8DD; text-align: center; padding: 6px;"><a href="https://docs.google.com/forms/d/1ABLz_pSygBlBDQG_A1IhurAwBbE6hzp1PBWac5Gy518/viewform">Please take our survey!</a></div>
-<?php
-} else {
-  if ($profile == 'aewa'){?>
-    <div class="survey-link" style="width: 100%; background-color: #FDC8DD; text-align: center; padding: 6px;"><a href="https://docs.google.com/forms/d/14JtBfCCtxr6AAE69jjxehZITd_Ij2byr_0uylQabhtI/viewform">Please take our survey!</a></div>
-    <?php
-  } else {
-    if ($profile == 'ascobans'){?>
-    <div class="survey-link" style="width: 100%; background-color: #FDC8DD; text-align: center; padding: 6px;"><a href="https://docs.google.com/forms/d/1fMIwx6PCr5JqYFSCaujXkBf7Wg1SRRpxSE0gj_jg9dw/viewform">Please take our survey!</a></div>
-    <?php
-    }
-  }
-}
-?>
-
 <header id="navbar" role="banner" class="navbar-default">
 
   <div class="container">
